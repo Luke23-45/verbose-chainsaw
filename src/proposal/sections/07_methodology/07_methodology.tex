@@ -13,8 +13,9 @@ share ($\mathit{MPS}^{post}$).
 
 \msub{1.1.2 Population and sampling procedure}
 The target population of the study comprises all 20 commercial banks operating
-in Nepal as of mid-2023, following the extensive regulatory consolidation that
-reduced the sector from 32 commercial banks in 2014. From this population, a
+in Nepal as of mid-2023 \citep{dongol2024}, following the extensive regulatory
+consolidation that reduced the sector from a peak of 32 commercial banks
+\citep{adhikari2023}. From this population, a
 sample of 5 commercial banks is selected using a purposive (judgmental) sampling
 technique. The selection criteria require: (i) representation of the prominent
 commercial bank mergers that defined the early 2023 consolidation wave, (ii)
@@ -29,10 +30,10 @@ banks.
 The sampled commercial banks, identified by their current legal corporate names,
 are:
 \begin{enumerate}
-  \item Global IME Bank Limited (absorbed Bank of Kathmandu; joint operation commenced 9 January 2023; swap ratio 1:1)
-  \item Himalayan Bank Limited (acquired Civil Bank; joint operation commenced 24 February 2023; swap ratio 100:80.28)
-  \item Kumari Bank Limited (absorbed Nepal Credit and Commerce Bank; joint operation commenced 1 January 2023; swap ratio 1:1)
-  \item Nepal Investment Mega Bank Limited (merger of Nepal Investment Bank and Mega Bank; joint operation commenced 11 January 2023; swap ratio 100:90)
+  \item Global IME Bank Limited (absorbed Bank of Kathmandu, joint operation commenced 9 January 2023, swap ratio 1:1)
+  \item Himalayan Bank Limited (acquired Civil Bank, joint operation commenced 24 February 2023, swap ratio 100:80.28)
+  \item Kumari Bank Limited (absorbed Nepal Credit and Commerce Bank, joint operation commenced 1 January 2023, swap ratio 1:1)
+  \item Nepal Investment Mega Bank Limited (merger of Nepal Investment Bank and Mega Bank, joint operation commenced 11 January 2023, swap ratio 100:90)
   \item NMB Bank Limited (maintained independent operations without merger during the period)
 \end{enumerate}
 For merged banks, pre-merger observations represent the acquiring institution,
@@ -51,16 +52,16 @@ observations for the dependent variable ($\mathit{MPS}^{post}$) and the four
 independent variables (EPS, DPS, BVPS, and ROA) are obtained from authoritative
 official sources, including:
 \begin{itemize}
-  \item Audited annual reports and published financial statements of the sampled commercial banks;
-  \item \textit{Banking and Financial Statistics} and supervision reports published by Nepal Rastra Bank (NRB);
-  \item Trading records, official share price bulletins, and annual publications of the Nepal Stock Exchange (NEPSE) and the Securities Board of Nepal (SEBON);
+  \item Audited annual reports and published financial statements of the sampled commercial banks.
+  \item \textit{Banking and Financial Statistics} and supervision reports published by Nepal Rastra Bank (NRB).
+  \item Trading records, official share price bulletins, and annual publications of the Nepal Stock Exchange (NEPSE) and the Securities Board of Nepal (SEBON).
   \item \textit{Economic Survey} published by the Ministry of Finance (MoF), Government of Nepal.
 \end{itemize}
 All extracted figures are systematically cross-checked across published sources
 to verify numerical accuracy and consistency before statistical processing.
 
 \msub{1.1.4 Research framework and definition of variables}
-The conceptual framework illustrating the functional relationship between the
+The research framework illustrating the functional relationship between the
 explanatory accounting fundamentals and the dependent variable is depicted in
 Figure~\ref{fig:framework}. Post-disclosure market price per share
 ($\mathit{MPS}^{post}$) serves as the dependent variable, while earnings per share
@@ -82,7 +83,7 @@ fiscal years.
   \node[box, right=of dps] (bvps) {BVPS};
   \node[box, right=of bvps] (roa) {ROA};
   \path (dps) -- (bvps) coordinate[midway] (mid);
-  \node[dep, below=1.2cm of mid] (mps) {$\text{MPS}^{\text{post}}$};
+  \node[dep, below=1.2cm of mid] (mps) {$\mathit{MPS}^{\mathit{post}}$};
   \draw[arrow] (eps.south)  -- ([xshift=-24pt]mps.north);
   \draw[arrow] (dps.south)  -- ([xshift=-8pt]mps.north);
   \draw[arrow] (bvps.south) -- ([xshift=8pt]mps.north);
@@ -90,7 +91,7 @@ fiscal years.
   \node[above=0.25cm of mid, font=\small\itshape] {Independent variables};
   \node[below=0.25cm of mps, font=\small\itshape] {Dependent variable};
 \end{tikzpicture}
-\caption{Theoretical framework}
+\caption{Research framework (Source: adapted from Pradhan and Dahal, 2016)}
 \label{fig:framework}
 \end{figure}
 
@@ -106,7 +107,7 @@ study are summarized in Table~\ref{tab:variables}.
 \toprule
 Code & Variable & Operational Measurement \\
 \midrule
-$\text{MPS}^{post}$ & Market price per share & Closing market price on the first NEPSE trading day following public disclosure of the corresponding audited annual financial statements through NEPSE \\
+$\mathit{MPS}^{\mathit{post}}$ & Market price per share & Closing market price on the first NEPSE trading day following public disclosure of the corresponding audited annual financial statements through NEPSE \\
 EPS & Earnings per share & Profit attributable to ordinary equity holders / weighted average number of ordinary shares outstanding during the period (audited report) \\
 DPS & Dividend per share & Dividend per share reported for the corresponding fiscal year in the audited annual report \\
 BVPS & Book value per share & Reported book value per share from the audited annual report \\
@@ -130,7 +131,7 @@ linear regression model is estimated:
 \end{equation}
 where $\mathit{MPS}^{post}_{it}$ represents the closing market price observed
 at the pre-specified post-disclosure trading date for bank $i$ in fiscal year
-$t$; $\mathit{EPS}_{it}$, $\mathit{DPS}_{it}$, $\mathit{BVPS}_{it}$, and
+$t$. $\mathit{EPS}_{it}$, $\mathit{DPS}_{it}$, $\mathit{BVPS}_{it}$, and
 $\mathit{ROA}_{it}$ denote earnings per share, dividend per share, book value
 per share, and return on assets, respectively. The parameter $\beta_0$ represents
 the intercept, $\beta_1$ through $\beta_4$ represent regression slope coefficients
@@ -141,33 +142,27 @@ $\varepsilon_{it}$ is the stochastic disturbance term.
 \textbf{Statistical Tools and Estimation Procedure:}
 The empirical analysis follows a structured analytical plan:
 \begin{enumerate}
-  \item \textbf{Descriptive Statistics:} Measures of central tendency and
-    dispersion---including the mean, standard deviation, minimum, and
-    maximum---are computed to examine the distributional properties, baseline
-    levels, and variations of all variables across the panel.
-  \item \textbf{Correlation Analysis:} Pearson correlation coefficients are
-    estimated to determine the direction and degree of bivariate linear
-    association between each accounting fundamental and $\mathit{MPS}^{post}$, and to
-    provide preliminary inspection of collinearity among explanatory regressors.
+    \item \textbf{Descriptive Statistics:} The mean, standard deviation, minimum
+    and maximum of all variables are computed to examine distributional
+    properties across the panel.
+  \item \textbf{Correlation Analysis:} Pearson correlations measure bivariate
+    association between each fundamental and $\mathit{MPS}^{post}$ and screen
+    for collinearity among regressors.
   \item \textbf{Multiple Regression Analysis:} The multiple linear regression
     model (Eq.~\ref{eq:main}) is estimated using Ordinary Least Squares (OLS).
     The overall explanatory power is evaluated via the coefficient of
-    determination ($R^2$) and adjusted $R^2$. Although the hypotheses specify
-    positive directional associations, two-tailed $t$-tests at the 5\%
-    significance level are used for conservative statistical inference, while
-    the joint statistical significance of the regression model is tested using
-    the $F$-test at the 5\% level of significance ($\alpha = 0.05$).
+    determination ($R^2$) and adjusted $R^2$. Directional hypotheses
+    notwithstanding, two-tailed $t$-tests at 5\% give conservative inference,
+    and the $F$-test at 5\% ($\alpha = 0.05$) tests joint significance.
   \item \textbf{Diagnostic Tests:} Model assumptions are examined through
-    diagnostic checks. Multicollinearity among regressors is evaluated using
-    Variance Inflation Factors (VIF) and tolerance statistics, interpreted in
-    conjunction with the correlation matrix rather than relying on an arbitrary
-    single cutoff. Residual diagnostics include examinations for
+    diagnostic checks. Multicollinearity is evaluated with variance inflation
+    factors and tolerance statistics alongside the correlation matrix.
+    Residual diagnostics include examinations for
     heteroskedasticity and screening for influential observations using Cook's
-    distance. Given the very small number of sampled banks and short time
-    dimension ($N=5, T=6$), pooled OLS is used as a baseline exploratory
-    specification. Because observations are repeated within banks, inference is
-    interpreted cautiously, and the dependence structure and small-sample
-    limitations are explicitly acknowledged.
+    distance. With $N=5$ banks and $T=6$ years, pooled OLS serves as the
+    baseline exploratory specification, inference is interpreted cautiously
+    given repeated within-bank observations, and small-sample limitations are
+    explicitly acknowledged.
 \end{enumerate}
 
 All data organization, coding, and econometric estimations are conducted using
