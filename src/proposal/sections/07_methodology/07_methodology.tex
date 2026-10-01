@@ -43,11 +43,11 @@ Dependent variable: MPS. Independent variables: EPS, DPS, P/E, BVPS, ROA.
   \node[box, right=of pe] (bvps)  {BVPS};
   \node[box, right=of bvps] (roa) {ROA};
   \node[dep, below=1.0cm of pe] (mps) {MPS};
-  \draw[arrow] (eps.south)  -- (mps.150);
+  \draw[arrow] (eps.south)  -- (mps.145);
   \draw[arrow] (dps.south)  -- (mps.160);
   \draw[arrow] (pe.south)   -- (mps.north);
   \draw[arrow] (bvps.south) -- (mps.20);
-  \draw[arrow] (roa.south)  -- (mps.30);
+  \draw[arrow] (roa.south)  -- (mps.35);
   \node[above=0.2cm of pe, font=\small\itshape] {Independent variables};
   \node[below=0.2cm of mps, font=\small\itshape] {Dependent variable};
 \end{tikzpicture}
@@ -68,8 +68,8 @@ MPS & Market price per share & Closing price at fiscal year-end \\
 EPS & Earnings per share & (Net income -- pref.\ dividend)/outstanding shares \\
 DPS & Dividend per share & Total dividends/outstanding shares \\
 P/E & Price-earnings ratio & MPS/EPS \\
-ROA & Return on assets & Net income/total assets \\
 BVPS & Book value per share & (Total equity -- pref.\ equity)/common shares outstanding \\
+ROA & Return on assets & Net income/total assets \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -90,7 +90,7 @@ $\beta_5$ capture marginal effects. The term $e$ is the stochastic error.
 
 Descriptive statistics (mean, SD, min, max), Pearson correlation, and OLS
 multiple regression (SPSS) with t-tests and F-test at 5\% significance.
-Collected figures are edited, coded and tabulated before estimation.
+Collected figures are organized, coded and tabulated before estimation.
 Missing annual-report figures are cross-checked against NRB Banking and
 Financial Statistics. Variance inflation factors are examined for
 multicollinearity and the Durbin--Watson statistic for autocorrelation. The
