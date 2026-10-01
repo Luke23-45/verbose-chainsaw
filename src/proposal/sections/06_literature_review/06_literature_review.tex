@@ -2,51 +2,73 @@
 
 \subsection{Conceptual review}
 
-A share price is the price at which a unit of ownership in a company changes
-hands on an organized exchange. It fluctuates with the balance between buying
-and selling pressure, market volatility, macroeconomic conditions and investor
-perception of the firm \citep{mosley2008,bhattarai2014}. Returns from equity
-investment vary with firm performance and with market sentiment
-\citep{bhattarai2014}.
+A share price represents the financial value at which a unit of ownership in a
+publicly traded firm is exchanged on an organized stock market. In financial
+economics, share price behavior is examined through several foundational
+valuation paradigms. Under dividend-based valuation frameworks, expected future
+cash distributions form an essential component of equity valuation.
+Concurrently, accounting-based valuation approaches emphasize the fundamental
+information contained in balance-sheet net asset backing (book value) and
+earnings performance. In markets characterized by information asymmetry,
+signaling theory suggests that published earnings and dividend distributions
+convey credible signals regarding an institution's underlying financial
+condition. Empirical studies on NEPSE suggest that equity returns and price
+movements reflect a combination of these firm-specific financial fundamentals
+and broader market dynamics \citep{bhattarai2014,mosley2008}.
 
-This study examines the following five firm-specific measures as
-determinants of market price per share.
+Guided by these theoretical frameworks, this study examines four core
+firm-specific accounting fundamentals as explanatory variables of market price
+per share (MPS): earnings per share (EPS), dividend per share (DPS), book value
+per share (BVPS), and return on assets (ROA). While earlier empirical studies
+frequently incorporated the price-earnings (P/E) ratio as a regressor, P/E is
+mathematically constructed using the dependent variable itself ($\text{P/E} =
+\text{MPS} / \text{EPS}$). Including a regressor that embeds the dependent
+variable creates a mechanical dependence on the dependent variable and is
+therefore inappropriate as an explanatory regressor when MPS is the dependent
+variable. Consequently, this study deliberately restricts its explanatory
+regressors to financial accounting measures that exist independently of
+secondary market price.
 
 \subsubsection{Earnings per share}
-Earnings per share (EPS) indicates profitability attributable to each ordinary
-share, computed as profit after preference dividend divided by the number of
-ordinary shares outstanding. It is widely reported as positive and significant in
-the Nepalese banking literature \citep{malhotra2013,almumani2014,gyawali2022,niroula2021}.
-Bank-level regulation also matters: Bhattarai \citeyearpar{bhattarai2024} found
-that weighted average spread rate and bank capital raise EPS, while base rate,
-loan loss provision and broad money supply reduce it.
+Earnings per share (EPS) reflects the net profitability attributable to each
+ordinary equity share, calculated as profit attributable to ordinary equity
+holders divided by the weighted average number of ordinary shares outstanding
+during the period. As a direct indicator of earning power, EPS is theoretically
+expected to have a strong positive association with stock prices. This positive
+relationship is widely corroborated both in international equity markets
+\citep{malhotra2013,almumani2014} and across Nepalese commercial banking
+literature \citep{gyawali2022,niroula2021}. At the regulatory level, Bhattarai
+\citeyearpar{bhattarai2024} established that interest spread rates and capital
+adequacy enhance bank EPS, while loan loss provisions and broad money growth
+constrain it.
 
 \subsubsection{Dividend per share}
-Dividend per share (DPS) is total dividends paid divided by the number of shares
-outstanding. It signals profitability, growth and the distribution policy of the
-firm, and is frequently found significant in Nepalese studies
-\citep{joshi2023,gyawali2022}.
-
-\subsubsection{Price-earnings ratio}
-The price-earnings (P/E) ratio is market price relative to earnings per share. It
-is a valuation measure and a common pricing anchor for bank shares. It emerges
-as positive and significant in several studies
-\citep{malhotra2013,almumani2014,gyawali2022,niroula2021,chhetri2023}.
+Dividend per share (DPS) represents the actual cash return distributed to
+shareholders per ordinary share. Under signaling theory, consistent dividend
+payouts reduce information asymmetry and convey management's confidence in the
+bank's sustained solvency and cash generation. Empirical studies of the Nepalese
+banking sector frequently confirm DPS as a primary positive correlate of stock
+prices \citep{joshi2023,gyawali2022}.
 
 \subsubsection{Book value per share}
-Book value per share (BVPS) is the net asset value per ordinary share of a
-bank, computed as total equity less preference equity divided by the number of
-common shares outstanding. Joshi et al.\
-\citeyearpar{joshi2023} report BVPS as significant though the weakest of the
-four measures in their model, and Chhetri \citeyearpar{chhetri2023} finds it a
-major positive determinant.
+Book value per share (BVPS) indicates the net asset value attributable to each
+ordinary share, calculated as total shareholders' equity divided by the number of
+common shares outstanding. In banking institutions, BVPS provides an essential
+measure of capital safety, asset backing, and downside protection. While Joshi et
+al.\ \citeyearpar{joshi2023} observed BVPS to be a statistically significant
+positive determinant, Chhetri \citeyearpar{chhetri2023} identified it as a
+dominant valuation factor, whereas Pant et al.\ \citeyearpar{pant2024} documented
+an insignificant association.
 
 \subsubsection{Return on assets}
-Return on assets (ROA) measures net income relative to total assets and indicates
-the efficiency with which a bank uses its asset base. Findings on ROA are the
-least consistent in the literature: Gyawali \citeyearpar{gyawali2022} reports a
-positive but insignificant effect, while Chaudhari \citeyearpar{chaudhari2025}
-finds a statistically significant negative effect.
+Return on assets (ROA) measures net income generated per unit of total assets,
+serving as an operational indicator of managerial and asset-utilization
+efficiency. Despite its theoretical prominence in corporate finance, empirical
+evidence regarding ROA in the Nepalese banking sector remains highly
+contradictory: Gyawali \citeyearpar{gyawali2022} found a positive but
+statistically insignificant relationship, whereas Chaudhari
+\citeyearpar{chaudhari2025} reported a statistically significant negative
+coefficient, highlighting the necessity for further empirical resolution.
 
 \subsection{Empirical review}
 
@@ -99,21 +121,23 @@ EPS and DPS were statistically unchanged \citep{adhikari2023,adhikari2023cbr}.
 
 \subsection{Research gap}
 
-The existing literature has three key limitations. First, most studies are
-confined to periods ending no later than 2021/22, and even the studies whose
-windows cover the merger wave of 2013--2020 do not account for the structural
-break in their specifications \citep{adhikari2023,chaudhari2025}. Second,
-results on ROA and BVPS are directly contradictory: Chhetri
-\citeyearpar{chhetri2023} reports ROA as a significant positive determinant,
-whereas Chaudhari \citeyearpar{chaudhari2025} reports it as significantly
-negative and Gyawali \citeyearpar{gyawali2022} as positive but insignificant.
-On BVPS, Joshi et al.\ \citeyearpar{joshi2023} find it significant while Pant
-et al.\ \citeyearpar{pant2024} find it negative and insignificant. Third,
-samples are small and inconsistent, ranging from four to eighteen banks, making
-the results difficult to generalize.
+The existing literature exhibits three key limitations. First, most studies are
+confined to periods ending prior to the major 2023 consolidation wave, leaving
+valuation behavior across the recent restructuring unexamined
+\citep{adhikari2023,chaudhari2025}. Second, empirical results on ROA and BVPS
+are directly contradictory: Chhetri \citeyearpar{chhetri2023} reports ROA as a
+significant positive correlate, whereas Chaudhari \citeyearpar{chaudhari2025}
+reports it as significantly negative, and Gyawali \citeyearpar{gyawali2022} as
+positive but insignificant. On BVPS, Joshi et al.\ \citeyearpar{joshi2023} find
+it significant while Pant et al.\ \citeyearpar{pant2024} find it negative and
+insignificant. Third, several earlier specifications incorporate valuation
+multiples such as P/E alongside MPS as regressors
+\citep{bhattarai2014,chhetri2023,sharma2011}, creating mechanical dependence
+between the dependent variable and explanatory measures.
 
-This study uses a sample of banks that exist as single legal entities through
-the merger period, an observation window extending to the most recent fiscal
-year, and a jointly estimated model retaining all five firm-specific measures
-to resolve the conflicting ROA and BVPS findings within a single
-specification.
+This study addresses these gaps by examining a purposively selected sample of
+commercial banks across a six-year period spanning the pre- and
+post-consolidation phases (FY 2076/77 to FY 2081/82), employing an econometric
+model that evaluates the four core accounting fundamentals (EPS, DPS, BVPS, and
+ROA) without circular valuation regressors to resolve empirical contradictions
+within a unified specification.
