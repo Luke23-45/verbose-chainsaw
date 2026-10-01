@@ -142,27 +142,28 @@ $\varepsilon_{it}$ is the stochastic disturbance term.
 \textbf{Statistical Tools and Estimation Procedure:}
 The empirical analysis follows a structured analytical plan:
 \begin{enumerate}
-    \item \textbf{Descriptive Statistics:} The mean, standard deviation, minimum
+  \item \textbf{Descriptive Statistics:} The mean, standard deviation, minimum,
     and maximum of all variables are computed to examine distributional
     properties across the panel.
   \item \textbf{Correlation Analysis:} Pearson correlations measure bivariate
-    association between each fundamental and $\mathit{MPS}^{post}$ and screen
+    associations between each fundamental and $\mathit{MPS}^{post}$ and screen
     for collinearity among regressors.
   \item \textbf{Multiple Regression Analysis:} The multiple linear regression
     model (Eq.~\ref{eq:main}) is estimated using Ordinary Least Squares (OLS).
     The overall explanatory power is evaluated via the coefficient of
-    determination ($R^2$) and adjusted $R^2$. Directional hypotheses
-    notwithstanding, two-tailed $t$-tests at 5\% give conservative inference,
-    and the $F$-test at 5\% ($\alpha = 0.05$) tests joint significance.
+    determination ($R^2$) and adjusted $R^2$. Although the research hypotheses
+    specify positive directional associations, two-tailed $t$-tests at the 5\%
+    significance level are used for conservative statistical inference, while
+    the $F$-test at 5\% ($\alpha = 0.05$) evaluates overall model significance.
   \item \textbf{Diagnostic Tests:} Model assumptions are examined through
     diagnostic checks. Multicollinearity is evaluated with variance inflation
     factors and tolerance statistics alongside the correlation matrix.
-    Residual diagnostics include examinations for
-    heteroskedasticity and screening for influential observations using Cook's
-    distance. With $N=5$ banks and $T=6$ years, pooled OLS serves as the
-    baseline exploratory specification, inference is interpreted cautiously
-    given repeated within-bank observations, and small-sample limitations are
-    explicitly acknowledged.
+    Residual diagnostics include examinations for heteroskedasticity and
+    screening for influential observations using Cook's distance. With $N=5$
+    banks and $T=6$ years, pooled OLS serves as the baseline exploratory
+    specification, inference is interpreted cautiously given repeated
+    within-bank observations, and small-sample limitations are explicitly
+    acknowledged.
 \end{enumerate}
 
 All data organization, coding, and econometric estimations are conducted using
