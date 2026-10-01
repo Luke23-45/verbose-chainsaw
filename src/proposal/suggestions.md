@@ -1,312 +1,373 @@
-I would **not lock this exact diff yet**.
+This version is **very close, but I would still not lock this exact diff**. I would lock it after **four targeted changes**. The core research design is now coherent.
 
-It is now close. The major methodological problems have been fixed, and I would keep most of what you have. But there are **four remaining patches I consider necessary**, plus a couple of minor cleanup points. I checked the internal consistency of the diff and also verified the key P/E literature issue against the cited Nepalese studies. For example, Bhattarai (2014) and Chhetri (2023) do in fact use P/E as a regressor with MPS as the dependent variable. ([Paperzz][1])
+I also checked the P/E claim against the cited literature. Bhattarai (2014) explicitly models market price as a function including P/E, and Chhetri (2023) likewise uses MPS as the dependent variable and P/E as an explanatory variable. ([Paperzz][1])
 
-## 1. MUST FIX: your MPS timing is still internally inconsistent
+## 1. The MPS timing rule is now good — but define the disclosure event precisely
 
-This is the biggest remaining problem.
+Your new definition is much better:
 
-You now say:
+> “the closing market price on the first NEPSE trading day following the public disclosure...”
 
-> MPS is measured at a pre-specified trading date following publication ... of the audited statements. 
+That solves the previous ambiguity.
 
-Good.
+But **“public disclosure” needs an operational source**. Otherwise, later you could have arguments over whether the disclosure date means:
 
-But then your model is still:
-
-$$
-MPS_{it}=\beta_0+\beta_1EPS_{it}+\cdots+\epsilon_{it}
-$$
-
-and you add:
-
-> “In supplementary sensitivity checks, time-aligned specifications pairing fiscal-year fundamentals with subsequent market prices are evaluated...” 
-
-That is contradictory.
-
-You have already made the **main MPS variable time-aligned**. It should not also be presented as a later sensitivity specification.
+* the bank's website,
+* NEPSE filing,
+* annual report upload,
+* press release,
+* newspaper publication,
+* or some other date.
 
 ### Patch
 
-I recommend defining a clearly labeled post-disclosure MPS:
-
-```diff
-- MPS_{it}
-+ MPS^{post}_{it}
-```
-
-and:
-
-```latex
-where $\mathit{MPS}^{post}_{it}$ represents the closing market price
-observed at the pre-specified post-disclosure trading date for fiscal
-year $t$.
-```
-
-Then **delete**:
-
-```diff
-- In supplementary sensitivity checks, time-aligned
-- specifications pairing fiscal-year fundamentals with subsequent market
-- prices are evaluated to account for disclosure-lag effects.
-```
-
-### Why
-
-Now the timing is part of the primary design rather than an unexplained secondary analysis.
-
-Also, “pre-specified trading date” still needs to be concretely defined in your data protocol. For example, the first closing price on the first trading day after public disclosure. The exact rule should be fixed before collecting the observations.
-
----
-
-# 2. MUST FIX: “spanning the pre- and post-consolidation phases” ignores the transition year
-
-Your period is FY 2076/77–2081/82.
-
-The early-2023 mergers fall within this window, so at least one fiscal year is effectively a **transition/consolidation year**, not cleanly “pre” or “post.”
-
-Your wording:
-
-> “pre- and post-consolidation phases” 
-
-is not terribly wrong, but it is less precise than it could be.
-
-### Patch
-
-Use:
-
-```diff
-- spanning the pre- and post-consolidation phases
-+ spanning the period before, during, and after the major 2023 consolidation
-```
-
-Then use the same wording in the background, research gap, and objectives.
-
-### Why
-
-It accurately describes your actual observation window and makes the temporal structure explicit.
-
----
-
-# 3. MUST FIX: don't say the model “accounts for” the consolidation
-
-This appears in your research-gap framing:
-
-> “explicitly spans the pre- and post-consolidation phases.” 
-
-That's fine.
-
-But elsewhere the language implies that the econometric model itself incorporates the consolidation.
-
-It doesn't.
-
-You are **sampling across the consolidation**, not statistically estimating a consolidation effect or structural break.
-
-### Keep this
-
-```latex
-... across a six-year period spanning the period before, during,
-and after the major 2023 consolidation ...
-```
-
-### Avoid this
-
-```text
-accounts for the consolidation
-```
-
-unless you actually add a consolidation dummy, interaction, structural-break model, or similar specification.
-
----
-
-# 4. MUST FIX: the P/E criticism is now supported, but the phrasing should be slightly more precise
-
-You now say:
-
-> “several earlier specifications incorporate valuation multiples such as P/E alongside MPS as regressors \citep{bhattarai2014,chhetri2023,sharma2011}” 
-
-The underlying claim is supportable. Bhattarai's Nepal commercial-bank study uses P/E as an explanatory variable with share price as the dependent variable, and Chhetri's 2023 panel specification likewise includes P/E_RATIO alongside MPS. ([Paperzz][1])
-
-However, I would **not call this a “research gap.”** It is a methodological distinction in your proposed specification.
-
-### Better wording
-
-```diff
-- Third, several earlier specifications incorporate valuation
-- multiples such as P/E alongside MPS as regressors
-- \citep{bhattarai2014,chhetri2023,sharma2011}, creating mechanical dependence
-- between the dependent variable and explanatory measures.
-+ Third, several earlier specifications include P/E as an explanatory
-+ variable alongside MPS \citep{bhattarai2014,chhetri2023}.
-+ Because P/E is mechanically defined as MPS/EPS, the present study
-+ excludes P/E from the regression specification to avoid direct
-+ mathematical dependence between the dependent and explanatory variables.
-```
-
-### Why
-
-This is harder to challenge. You are not declaring prior studies “wrong”; you're explaining why **your specification differs**.
-
-Also, I would remove `sharma2011` from that sentence unless you have personally confirmed that its exact model has MPS as the dependent variable and P/E on the right-hand side.
-
----
-
-# 5. SHOULD FIX: “fundamental valuation metrics” is not the best terminology
-
-Your research questions say:
-
-> “evaluate the consistency of fundamental valuation metrics” 
-
-EPS, DPS, BVPS and ROA are better described as **accounting fundamentals / firm-specific accounting measures**, not all as valuation metrics.
-
-### Patch
-
-```diff
-- evaluate the consistency of fundamental valuation metrics
-+ examine the consistency of the associations between accounting fundamentals
-```
-
-This is a small wording correction, but it improves conceptual precision.
-
----
-
-# 6. SHOULD FIX: “primary determinants” is too strong for the literature sentence
-
-You write:
-
-> “are widely recognized as primary determinants of equity valuation...” 
-
-I would change that to:
-
-```diff
-- are widely recognized as primary determinants of equity valuation
-+ have been widely examined as firm-specific factors associated with equity valuation
-```
-
-### Why
-
-Your own proposal is explicitly moving away from deterministic/causal language. This sentence should follow the same standard.
-
----
-
-# 7. SHOULD FIX: your rationale contains uncited factual claims
-
-This paragraph says:
-
-> “The structural consolidation ... reshaped the competitive landscape, asset concentration, and capital structures...”
-> “the equity base ... expanded substantially while secondary market prices adjusted sharply downwards.” 
-
-Those are factual claims and should have the relevant citation.
-
-### Patch
-
-Something like:
-
-```latex
-The structural consolidation of the Nepalese banking sector between
-2013 and 2023 fundamentally reshaped the structure and capital base
-of commercial banks \citep{adhikari2023,adhikari2023cbr}. Following
-extensive mergers and share swaps, secondary market prices also
-experienced substantial adjustment \citep{adhikari2023,adhikari2023cbr}.
-```
-
-Use only the source(s) that actually support each claim.
-
----
-
-# 8. MAIN.TEX: this part is fine
-
-Your new bibliography block:
-
-```latex
-\begingroup
-\singlespacing
-\renewcommand{\bibliographytypesize}{\small}
-\bibliography{references}
-\endgroup
-```
-
-is valid for `apacite`; `\bibliographytypesize` is specifically provided for controlling the bibliography font size. ([MIT SIPB Mirrors][2])
-
-So **I would keep that patch**.
-
-One minor point: `apacite` already controls spacing in its bibliography environment, so `\singlespacing` is not necessarily needed. It is not a methodological problem and can remain if the rendered output is what your institution requires.
-
----
-
-# One thing I would NOT change
-
-Your current pooled-OLS wording is now much more honest:
-
-> “baseline exploratory specification”
-> “inference is interpreted cautiously”
-> “small-sample panel limitations...” 
-
-I would **keep this rather than forcing a fixed-effects/random-effects model** merely because the data have a panel structure.
-
-With only five sampled bank series and six periods, adding a more parameter-heavy panel specification without a strong justification could make the proposal look more sophisticated while making the empirical design less stable.
-
----
-
-# One important methodological distinction
-
-There is another thing I want to make very clear.
-
-Your proposal is now studying:
-
-$$
-\boxed{\text{Accounting fundamentals} \rightarrow \text{association with MPS}}
-$$
-
-It is **not** studying:
-
-$$
-\boxed{\text{Effect of mergers on stock prices}}
-$$
-
-and it is **not** studying:
-
-$$
-\boxed{\text{Whether fundamentals cause stock prices}}
-$$
-
-That is exactly the right boundary for the design you currently have.
-
----
-
-# Final verdict
-
-### **Would I lock this exact diff?**
-
-**No — not quite yet.**
-
-But I would be comfortable locking it **after these targeted changes**:
-
-**Must-fix**
-
-1. Make the MPS timing definition part of the primary model and remove the redundant “time-aligned sensitivity check.”
-2. Change “pre- and post-consolidation” to **“before, during, and after the major 2023 consolidation.”**
-3. Do not imply that the regression statistically models the consolidation itself.
-4. Reword the P/E literature-gap paragraph to a precise methodological justification and remove `sharma2011` unless verified.
-
-**Recommended**
-5. Replace “fundamental valuation metrics” with “accounting fundamentals.”
-6. Replace “primary determinants” with less deterministic wording.
-7. Add citations to the substantive consolidation/price claims in the rationale.
-
-After those patches, **yes, I would regard the proposal structure and core econometric specification as reasonable to lock**, subject to the actual data construction being carried out exactly as specified.
-
-The most important remaining sentence is the MPS definition. I'd make it something as concrete as:
+I would use:
 
 ```latex
 For each fiscal-year observation, $\mathit{MPS}^{post}_{it}$ is defined
 as the closing market price on the first NEPSE trading day following
 the public disclosure of the corresponding audited annual financial
-statements. This rule is applied consistently across all sampled banks
-and fiscal years.
+statements through NEPSE. The same rule is applied consistently across
+all sampled banks and fiscal years.
 ```
 
-That removes the last major ambiguity in the design.
+And then **remove**:
+
+```latex
+ensuring that published accounting information is fully available to
+the secondary market.
+```
+
+That last clause is too absolute. Public disclosure does not prove that every market participant has processed or incorporated the information.
+
+This is the cleanest version:
+
+```latex
+For each fiscal-year observation, $\mathit{MPS}^{post}_{it}$ is defined
+as the closing market price on the first NEPSE trading day following
+the public disclosure of the corresponding audited annual financial
+statements through NEPSE. The same rule is applied consistently across
+all sampled banks and fiscal years.
+```
+
+---
+
+# 2. DPS still needs one important clarification
+
+This is the remaining methodological issue I would definitely fix.
+
+You now define:
+
+```text
+DPS = Reported dividend per share from the audited annual report
+```
+
+But a bank's annual report can contain a proposed/recommended dividend rather than a dividend that was already finally approved and paid.
+
+Your model is supposed to use **accounting information available at the disclosure date**.
+
+So you need to decide what exactly DPS means.
+
+### If your intention is the dividend attributable to that fiscal year
+
+Use:
+
+```latex
+DPS & Dividend per share &
+Dividend per share reported for the fiscal year in the audited annual report
+```
+
+and specify whether it is **declared/recommended** or **approved/distributed**.
+
+I would prefer:
+
+```latex
+DPS & Dividend per share &
+Dividend per share reported for the corresponding fiscal year in the audited annual report
+```
+
+Then in your data protocol, record the exact reported figure and its status.
+
+### Why this matters
+
+You don't want one bank-year observation using a proposed dividend and another using a final dividend. That would make the variable construction inconsistent.
+
+---
+
+# 3. Your research-gap sentence is now good
+
+This is a substantial improvement:
+
+> “several earlier specifications include P/E as an explanatory variable alongside MPS...”
+
+and:
+
+> “Because P/E is mechanically defined as MPS/EPS...”
+
+That is supportable. Bhattarai's published model explicitly has:
+
+$$
+MP_{it}=\beta_0+\cdots+\beta_4P/E_{it}+\cdots
+$$
+
+with market price as the dependent variable. ([Paperzz][1])
+
+Chhetri's 2023 model similarly specifies:
+
+$$
+MPS=\beta_0+\beta_1EPS+\beta_2P/E+\beta_3BVPS+\beta_4ROA+\cdots
+$$
+
+and reports P/E as an explanatory variable. ([NepJOL][2])
+
+So I **would keep this change**.
+
+One refinement, though:
+
+```diff
+- This study addresses these gaps by ...
++ This study addresses the identified empirical and specification
++ issues by ...
+```
+
+because excluding P/E is not really a “literature gap” in the same sense as the post-2023 evidence gap. It is **your methodological design choice motivated by a specification problem**.
+
+---
+
+# 4. The biggest remaining conceptual issue: you are not actually modelling the consolidation
+
+Your wording now correctly says:
+
+> before, during, and after the major 2023 consolidation.
+
+Good.
+
+But the proposal sometimes makes the consolidation sound like the analytical object of the study.
+
+It isn't.
+
+Your regression is:
+
+$$
+\mathit{MPS}^{post}_{it}
+=
+\beta_0+
+\beta_1EPS_{it}+
+\beta_2DPS_{it}+
+\beta_3BVPS_{it}+
+\beta_4ROA_{it}
++\epsilon_{it}.
+$$
+
+There is **no consolidation dummy, interaction, structural-break test, or difference-in-differences specification**.
+
+Therefore your actual contribution is:
+
+> studying associations between accounting fundamentals and post-disclosure share prices using observations that span the consolidation period.
+
+That is defensible.
+
+### Change the research-gap ending to:
+
+```latex
+This study addresses the identified empirical and specification issues
+by examining a purposively selected sample of commercial banks across
+a six-year period spanning before, during, and after the major 2023
+consolidation (FY 2076/77 to FY 2081/82). The study estimates a unified
+model of the associations between EPS, DPS, BVPS, and ROA and
+post-disclosure equity prices, while excluding valuation multiples
+that are mechanically constructed from market price.
+```
+
+That is probably the strongest framing for the actual design you have.
+
+---
+
+# 5. One wording change I strongly recommend in the problem statement
+
+You currently say:
+
+> “it is essential to determine whether the relationships ... remain consistent...”
+
+This is okay, but your six-year sample doesn't actually perform a **formal consistency test across regimes**.
+
+You are not estimating:
+
+$$
+\beta_{pre} \quad vs \quad \beta_{post}
+$$
+
+or testing a structural break.
+
+So say:
+
+```diff
+- it is essential to determine whether the relationships previously
+- documented between bank accounting fundamentals and equity prices remain
+- consistent across the period ...
++ it is important to examine the associations between bank accounting
++ fundamentals and equity prices across a period that includes the
++ major 2023 consolidation.
+```
+
+This is more faithful to your actual analysis.
+
+---
+
+# 6. Your current hypothesis wording is acceptable
+
+The four hypotheses:
+
+* EPS → MPSpost
+* DPS → MPSpost
+* BVPS → MPSpost
+* ROA → MPSpost
+
+are internally consistent with your model.
+
+And your methodology says you use **two-tailed tests despite directional hypotheses**, which is perfectly reasonable as a conservative choice.
+
+I would keep that.
+
+---
+
+# 7. The regression specification itself is now coherent
+
+This part is now good:
+
+$$
+\boxed{
+\mathit{MPS}^{post}_{it}
+=
+\beta_0+
+\beta_1\mathit{EPS}_{it}+
+\beta_2\mathit{DPS}_{it}+
+\beta_3\mathit{BVPS}_{it}+
+\beta_4\mathit{ROA}_{it}
++\varepsilon_{it}
+}
+$$
+
+The important improvement is that the dependent variable is no longer used to construct one of the regressors.
+
+Your P/E exclusion is mathematically justified rather than arbitrary. Bhattarai (2014) and Chhetri (2023) provide clear examples of the prior specification you are intentionally avoiding. ([Paperzz][1])
+
+---
+
+# 8. The 5 × 6 data issue is handled reasonably
+
+I agree with:
+
+> “30 bank-year observations”
+
+rather than calling it a clean panel of five unchanged firms.
+
+And your acknowledgement that merger observations change the economic scale/composition of the bank series is important.
+
+I would **keep this**.
+
+The pooled OLS language is also appropriately cautious now. You are not pretending the 30 observations are 30 independent firms.
+
+---
+
+# 9. One small citation problem remains
+
+You have:
+
+> “Commercial banks historically account for the predominant share of market capitalization and trading activity on NEPSE \citep{bhattarai2014}.”
+
+I would **not use Bhattarai (2014) for that sentence**.
+
+Your source is a 2006–2014 study. It does document the importance of commercial banks in that period, but your statement is broader than the evidence attached to it. ([Paperzz][1])
+
+There are better sources. For example, an NRB report documents commercial banks occupying the top position in annual turnover and market capitalization in its historical sector analysis. ([Nepal Central Bank][3]) The NRB's 2022/23 annual report also reports commercial banks' substantial share of listed securities by amount. ([Nepal Central Bank][4])
+
+### Easiest patch
+
+Either cite an appropriate NRB/NEPSE source, or simplify:
+
+```latex
+Commercial banks constitute a major segment of the Nepal Stock Exchange
+(NEPSE) in terms of market capitalization and trading activity
+\citep{appropriate_nepse_or_nrb_source}.
+```
+
+Do not use an old individual share-price study as the primary authority for a current sector-composition claim.
+
+---
+
+# 10. One unrelated thing: `main.txt`
+
+This is the only non-research red flag in the diff:
+
+```text
+diff --git a/main.txt b/main.txt
+index 6dcba7b..e69de29 100644
+Binary files a/main.txt and b/main.txt differ
+```
+
+That appears unrelated to the proposal changes and may indicate that `main.txt` has accidentally become an empty/binary file.
+
+**Do not lock/commit that part without checking it.**
+
+If the proposal build does not need `main.txt`, it should probably not be part of this commit.
+
+---
+
+# Final decision
+
+### I would classify the current state as:
+
+**Core methodology: ✅**
+
+**Research questions/objectives/hypotheses: ✅**
+
+**P/E treatment: ✅**
+
+**Causal-language correction: ✅**
+
+**Consolidation framing: ✅**
+
+**MPS timing: ✅ conceptually, but operational definition needs one final tightening**
+
+**DPS measurement: ⚠️ clarify**
+
+**Citation support: ⚠️ replace the Bhattarai citation for the NEPSE-sector-size claim**
+
+**`main.txt`: ⚠️ inspect before commit**
+
+So:
+
+> **Do not lock this exact diff.**
+
+But you are no longer in a stage where the research design needs another major rethink. I would make the **three substantive patches** below and then freeze the research structure:
+
+```diff
+1. MPS timing
+- following the public disclosure ...
++ following the public disclosure of the corresponding audited annual
++ financial statements through NEPSE
+```
+
+```diff
+2. Problem statement
+- determine whether the relationships ... remain consistent
++ examine the associations ... across a period that includes the
++ major 2023 consolidation
+```
+
+```diff
+3. DPS
+- Reported dividend per share from the audited annual report
++ Dividend per share reported for the corresponding fiscal year
++ in the audited annual report
+```
+
+Then replace the unsupported/current-sector citation and remove the accidental `main.txt` change.
+
+**After those, yes: I would lock the research design.** The remaining work should be data verification, literature/source verification, actual variable collection, and eventually checking whether the chosen regression/inference procedure behaves adequately with \(N=5,T=6\)—not another conceptual rewrite.
 
 [1]: https://paperzz.com/doc/9168268/determinants-of-share-price-of-nepalese-commercial-banks?utm_source=chatgpt.com "Determinants of Share Price of Nepalese Commercial Banks"
-[2]: https://mirrors.mit.edu/CTAN/macros/latex/contrib/apacite/apacite.pdf?utm_source=chatgpt.com "The apacite package: Citation and reference list with LaTeX and BibTeX according to the rules of the American Psychological Association"
+[2]: https://www.nepjol.info/index.php/qjmss/article/download/56298/42368/167903?utm_source=chatgpt.com "Quest Journal of"
+[3]: https://www.nrb.org.np/contents/uploads/2022/07/vol13_art1.pdf?utm_source=chatgpt.com "Capital Market Development and Stock Price Behaviour in Nepal"
+[4]: https://www.nrb.org.np/red/annual-report-2022-23-english/?utm_source=chatgpt.com "An Unofficial TranslationAnnual Report"
