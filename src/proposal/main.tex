@@ -1,0 +1,82 @@
+% MBS Thesis Proposal - TU Faculty of Management
+% Topic: Fundamental Determinants of Share Prices: Evidence from Nepalese Commercial Banks
+% Format source: Master's Degree Dissertation Guidelines 2019, Office of the Dean FOM TU
+%   -> proposal = flat sections i-vii, 8-12 pages, APA 6th, TNR 12pt, 1.5 spacing
+% Engine: pdflatex + bibtex
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}      % Times New Roman-like
+\usepackage{newtxmath}
+
+% Guideline p.20-21: top/bottom/right 2.54 cm, LEFT 3.18 cm
+\usepackage[top=2.54cm,bottom=2.54cm,right=2.54cm,left=3.18cm]{geometry}
+
+\usepackage{setspace}
+\onehalfspacing                 % guideline: 1.5 spacing
+
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{needspace}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+% Guideline: APA sixth edition (explicit in Ch. I and Appendix C)
+\usepackage[natbibapa]{apacite}
+\bibliographystyle{apacite}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+
+% Proposal structure: roman numerals i-vii (guideline pp. 8-9)
+\renewcommand{\thesection}{\roman{section}}
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
+\titlespacing*{\section}{0pt}{18pt}{8pt}
+
+% Sub-headings carry no number (guideline lists none)
+\titleformat{\subsection}{\normalfont\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+\titleformat{\subsubsection}{\normalfont\bfseries}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
+
+% Methodology sub-headings are prescribed as 1.1.1 - 1.1.5 (guideline p.9),
+% which does not nest under roman numeral vii. Reproduced verbatim.
+\newcommand{\msub}[1]{\par\vspace{10pt}\noindent\textbf{#1}\par\vspace{2pt}}
+
+% Page numbers centered at the foot (campus requirement; note FOM 2019
+% specifies top right, but the campus expects bottom centre).
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+
+% --- Title page: counted, but unnumbered (guideline p.21).
+% NOTE: \thispagestyle{empty} lives INSIDE front/titlepage.tex -- it must run
+% before the titlepage environment issues its page break, or it blanks p.2.
+\input{front/titlepage}
+
+\pagenumbering{arabic}
+\setcounter{page}{2}   % title page = 1 (counted, unnumbered)
+
+% --- Proposal structure i-vii ---
+\input{sections/01_background/01_background}
+\input{sections/02_problem_statement/02_problem_statement}
+\input{sections/03_objectives/03_objectives}
+\input{sections/04_hypothesis/04_hypothesis}
+\input{sections/05_rationale/05_rationale}
+\input{sections/06_literature_review/06_literature_review}
+\input{sections/07_methodology/07_methodology}
+
+% --- References (apacite prints its own heading) ---
+% References always start on a fresh page.
+\clearpage
+\bibliography{references}
+
+\end{document}

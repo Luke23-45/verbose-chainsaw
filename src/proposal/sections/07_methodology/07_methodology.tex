@@ -1,0 +1,104 @@
+\section{Research methodology}
+
+\msub{1.1.1 Research design}
+The study employs descriptive and causal-comparative research designs. The
+descriptive design establishes the distributional characteristics of bank
+fundamentals. The causal-comparative design tests the effects of EPS, DPS,
+P/E, BVPS and ROA on MPS.
+
+\msub{1.1.2 Population and sampling procedure}
+The population comprises all 20 commercial banks operating in Nepal as of
+mid-2023, following the consolidation that reduced the count from 32 in 2014.
+The sample consists of 5 banks selected by convenience sampling, identified
+under their current legal names:
+\begin{enumerate}
+  \item Global IME Bank Limited (absorbing Bank of Kathmandu, joint operation from 9 January 2023, swap 1:1)
+  \item Himalayan Bank Limited (acquiring Civil Bank, joint operation from 24 February 2023, swap 100:80.28)
+  \item Kumari Bank Limited (absorbing Nepal Credit and Commerce Bank, joint operation from 1 January 2023, swap 1:1)
+  \item Nepal Investment Mega Bank Limited (merger of Nepal Investment Bank and Mega Bank, joint operation from 11 January 2023, swap 100:90)
+  \item NMB Bank Limited (no merger in the period)
+\end{enumerate}
+For fiscal years preceding each merger, observations use the acquiring bank's
+audited annual-report series.
+Study period: FY 2076/77 to FY 2081/82 (6 years $\times$ 5 banks = 30
+observations).
+
+\msub{1.1.3 Nature and sources of data collection}
+Secondary data: EPS, DPS, P/E, BVPS, ROA, MPS from Banking and Financial
+Statistics (NRB), NEPSE trading reports, Economic Survey (MoF), and annual
+reports of the sampled banks.
+
+\msub{1.1.4 Research framework and definition of variables}
+Dependent variable: MPS. Independent variables: EPS, DPS, P/E, BVPS, ROA.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance=0.3cm,
+  box/.style={rectangle, draw, minimum width=1.9cm, minimum height=0.75cm, text centered, font=\small},
+  dep/.style={rectangle, draw, minimum width=1.9cm, minimum height=0.75cm, text centered, font=\small, fill=gray!10},
+  arrow/.style={thick,->,>=stealth}]
+  \node[box] (eps)  {EPS};
+  \node[box, right=of eps] (dps)  {DPS};
+  \node[box, right=of dps] (pe)   {P/E};
+  \node[box, right=of pe] (bvps)  {BVPS};
+  \node[box, right=of bvps] (roa) {ROA};
+  \node[dep, below=1.0cm of pe] (mps) {MPS};
+  \draw[arrow] (eps.south)  -- (mps.150);
+  \draw[arrow] (dps.south)  -- (mps.160);
+  \draw[arrow] (pe.south)   -- (mps.north);
+  \draw[arrow] (bvps.south) -- (mps.20);
+  \draw[arrow] (roa.south)  -- (mps.30);
+  \node[above=0.2cm of pe, font=\small\itshape] {Independent variables};
+  \node[below=0.2cm of mps, font=\small\itshape] {Dependent variable};
+\end{tikzpicture}
+\caption{Theoretical framework}
+\label{fig:framework}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\small
+\caption{Description of variables}
+\label{tab:variables}
+\begin{tabular}{lll}
+\toprule
+Code & Variable & Measurement \\
+\midrule
+MPS & Market price per share & Closing price at fiscal year-end \\
+EPS & Earnings per share & (Net income -- pref.\ dividend)/outstanding shares \\
+DPS & Dividend per share & Total dividends/outstanding shares \\
+P/E & Price-earnings ratio & MPS/EPS \\
+ROA & Return on assets & Net income/total assets \\
+BVPS & Book value per share & (Total equity -- pref.\ equity)/common shares outstanding \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Keep the 1.1.5 heading glued to the equation.
+\needspace{5\baselineskip}
+\msub{1.1.5 Methods of analysis}
+\begin{equation}
+MPS_{it} = \alpha + \beta_1 EPS_{it} + \beta_2 DPS_{it} + \beta_3 PE_{it} + \beta_4 BVPS_{it} + \beta_5 ROA_{it} + e_{it}
+\label{eq:main}
+\end{equation}
+
+Here MPS denotes market price per share. EPS, DPS, P/E, BVPS and ROA are
+earnings per share, dividend per share, the price-earnings ratio, book value
+per share and return on assets. Subscripts $i$ and $t$ index bank and fiscal
+year. The intercept is $\alpha$. Slope coefficients $\beta_1$ through
+$\beta_5$ capture marginal effects. The term $e$ is the stochastic error.
+
+Descriptive statistics (mean, SD, min, max), Pearson correlation, and OLS
+multiple regression (SPSS) with t-tests and F-test at 5\% significance.
+Collected figures are edited, coded and tabulated before estimation.
+Missing annual-report figures are cross-checked against NRB Banking and
+Financial Statistics. Variance inflation factors are examined for
+multicollinearity and the Durbin--Watson statistic for autocorrelation. The
+joint test of all five slopes uses the F-test. Results are reported with
+coefficient estimates, standard errors, t-statistics and p-values for every
+variable.
+
+Analysis plan: Step 1: descriptive statistics. Step 2: correlation matrix.
+Step 3: simple regressions per variable. Step 4: multiple regression
+(Eq.~\ref{eq:main}). Step 5: hypothesis tests, interpretation and summary for
+Chapters IV--V.
