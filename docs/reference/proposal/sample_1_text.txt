@@ -1,0 +1,378 @@
+Impact of Credit Performance on the Profitability of
+            Commercial Banks in Nepal
+
+
+
+
+              A Dissertation Proposal
+
+
+
+
+                     Submitted by
+                  ... … … Name … … …
+                   T U Rgd. No. … … …
+                 Campus Roll No. … … …
+                  Exam Roll No. … … …
+
+
+
+
+                     Submitted to
+                 Research Department
+             …… …… …… …… Campus/College
+                 …………………
+                  ………………
+
+
+
+
+                     Month, Year
+                       Place
+Table of Contents
+1. Background of the study
+
+Modern banking is an essential industry that operates within the periphery of the national
+as well as the international financial system. Financial systems allow funds to be
+allocated, invested, or moved between economic sectors. These are the core subjects of
+the credit performances and that activity involves credit risk to the financial institutions.
+Therefore, the health of national as well as global economy largely depends on a highly
+regulated financial system. Banking as a vital section of such system, Rose (2002)
+mentioned that it is one of the most heavily regulated businesses in the world.
+
+Commonly, it can be argued that commercial banks are among the most important
+financial institution in the economy. Many authors use to argue that no institution has
+shaped the economic development of the world more than the bank. The general role of
+commercial banks is to provide financial services to general public, business, and
+companies, ensuring economic and social stability and sustainable growth of the
+economy. Therefore, bankers must have to work within the financial system to supply
+loans, accept deposits, and provide many other financial services to their customers.
+They must do so within a climate of extensive regulation, design primarily to protect the
+public interest (Rose, 2002). Regulation of banks aims at increasing the safety of the
+banking sector. One of the most important instruments is a capital adequacy regulation
+which relates a bank’s equity to its exposure to risk on the asset side of the balance sheet.
+
+The primary function of a commercial bank is the credit management. The activities
+associated with lending by the commercial banks relate to their credit performance. The
+Management of credit performance is not an easy job. There are incredible risks
+associated with the credit performance of commercial banks. Such risk is popular as
+“Credit Risk” in the banking industry. It is a situation of unexpected changes in the credit
+quality of counterparty. It is by far the most significant risk faced by banks and the
+success of their business depends on accurate measurement and efficient management of
+this risk. It is a risk of financial loss if a borrower or counterparty fails to honor
+commitments under an agreement and any such failure has an adverse effect on the
+financial performance of the bank. The capital adequacy is important to strengthen
+solvency of the banks and their protection from the adverse events. These frames of
+references are widely researched issues in the academia.
+2. Statement of the problem
+
+Different researchers have examined the impact of credit performances and related risks
+of the commercial banks on their return in varying dimensions with the sample from
+different country context. It is apparent that there are different measures of credit
+performances as well as banks return or profitability. Accordingly, the use of variables in
+the available work addressing credit performances and banks’ profitability is also not
+consistent. As a result, there is a scant of unanimity in findings.
+
+For instance, Kithinji (2010) found the bulk of the profits of commercial banks are not
+influenced by the credit risk, suggesting that additional variables other than the credit
+risk related variables impact on profits. On the other hand, based on the data from 2010
+to 2015 of the selected sample commercial banks in Nepal, Bhattarai (2016) concluded
+that there is a significant relationship between bank performance and credit risk
+indicators. These are some of the examples of contrasting results that are available in the
+academia.
+
+Furthermore, there is no evidence of study by taking the recent data, specifically related
+to the credit performances, of privately owned Nepalese commercial banks. Such a
+situation is the main reason of motivation for this study and basis of the identification of
+the problem. Hence, this study focuses to fill a gap, examining the impact of credit
+performances and their impact on the return of privately owned commercial banks in
+Nepal. Accordingly, following will be the specific research questions of this study.
+
+    I.   What is the position of credit performance in the privately owned commercial
+         banks operating in Nepal?
+   II.   What is the existing status of profitability among the privately owned
+         commercial banks of Nepal?
+  III.   Does credit performance really matter to the commercial banks’ profitability?
+
+
+3. Objectives of the study
+
+The main objective of this study will be to investigate the impact of credit performance
+on the return of commercial banks in Nepal. Accordingly, the specific objectives will be
+as follows:
+    I.    To assess the credit performance of the privately owned commercial banks
+          operating in Nepal.
+   II.    To examine the status of profitability that privately owned commercial banks of
+          Nepal are enjoying as a return.
+  III.    To analyze the impact of credit performance factors, like, credit-deposit ratio
+          (CDR), non-performing loan (NPL), and capital adequacy ratio (CAR) on the
+          profitability of the commercial banks of Nepal.
+
+
+4. Hypotheses
+
+Based on the preliminary survey of literature on the subject, this study will be oriented
+toward testing the hypothesis as mentioned below:
+
+H1: Credit deposit ratio has a significant and positive effect on profitability of
+commercial banks.
+
+H2: Non-performing loan ratio has a significant and negative effect on profitability of
+commercial banks.
+
+H1: Capital adequacy ratio has a significant and positive effect on profitability of
+commercial banks.
+
+
+5. Rationale of the Study
+
+This study will help to extend the current knowledge and elimination of a gap in the
+corresponding literature. In particular, the study will make a good contribution to the
+existing knowledge in the academia. In addition, it will address on the subject of
+financial matters to solve the specific problem on the applied field of the banking
+industry. Therefore, the rationales of the study are listed as follows:
+
+        Students are one of the important sections of the society. It is expected that the
+         study report gives good insight to them, specifically to the students of business
+         management and economics.
+        Investors are good actors in the field of overall economy. They are much
+         concerned with the risk and return of organizations. Therefore, this study can
+         provide reliable information to them.
+      There is a greater role of professionals in the banking industry. This study will
+       closely associate to the part of their professional activities. Hence, the final report
+       can serve as a reliable reference in their respective decision-making works.
+
+
+6. Review of Literature
+
+Tarbert (2001) had discussed in wider perspective about capital adequacy and Basel
+Capital Accord and stated that adequate capital is a necessary condition of solvent banks
+and solvent banks are fundamental to the world economy. Adequate bank capital is thus
+essential for a sound economy. Bank capital is a vital component of economic stability; it
+has become a subject of concern for financial regulatory bodies around the world.
+
+As stated by Rose (2002), banks are financial service firms, producing and selling
+professional management of the public funds and performing many other roles in the
+economy. Basically, they try to maximize profits through loans and advances from the
+deposits. These activities are popularly known as bank credit. Commercial banks create
+credit by advancing loans and purchasing securities. However, commercial banks cannot
+use the entire amount of public deposits for lending purposes. They are required to keep
+a certain amount as reserve with the central bank. This is commonly known as cash
+reserve ratio (CRR). The higher the cash reserve ratio, the lesser is the amount of money
+available to banks for lending and investing activities.
+
+On the other hand, the capital adequacy ratio (CAR) sets standards for banks by looking
+at a bank’s ability to pay liabilities, and respond to credit risks and operational risks.
+Capital adequacy plays an important role in determining banking activities. There are
+many empirical evidences on the subject of the relationship between capital requirements
+and bank credit performances. Capital adequacy plays an important role in reducing the
+number of banks failures and losses to depositors. It plays a crucial role in reducing
+different risk components in the banking industry, and it is necessary to reduce a moral
+hazard and competitiveness.
+
+Rose (2002) mentioned that credit risk is the danger of default by borrower to whom a
+bank has extended credit. Therefore, among others, non performing loan ratio and credit
+to deposit ratio are widely used indicators of bank credit risk. Bank capital and risk are
+intimately related each other. The main sources of credit risk include limited institutional
+capacity, inappropriate credit policies, volatile interest rates, low capital and liquidity
+levels, massive licensing of banks, poor credit assessment.
+
+Using the ROA and the ROE as proxies for bank profitability for the period of 1998 to
+2007 from Kenyan banks, Mathuva (2009) revealed that bank profitability is positively
+related to the core capital ratio and the tier 1 risk-based capital ratio. This implies that an
+increase in the capital may raise expected earnings by reducing the expected costs of
+financial distress, including bankruptcy. While on the other hand, the study also found
+that there exist a negative relationship between the equity capital ratio and profitability.
+Therefore, the most important finding of Mathuva (2009) was that there were different
+effects of the various measures of capital adequacy on the profitability of the bank.
+
+Bhattarai (2016) examined the effect of credit risk on the performance of Nepalese
+Commercial Banks using pooled data of 14 commercial banks for the period of 2010 to
+2015. The author found that non-performing loan ratio has a negative effect on bank
+performance, whereas the cost per asset has a positive effect on bank performance.
+Moreover, the author concluded that there is a significant relationship between bank
+performance and credit risk indicators.
+
+Pradhan and Shrestha (2017) examined the impact of capital adequacy and bank
+operating efficiency of the financial performance of Nepalese commercial banks using
+data from the period of 2005/06 to 2012/13. The result showed that total deposits to total
+asset and banks operating efficiency was the major variables determinant of financial
+performance of commercial banks in Nepal. Similarly, bank operating efficiency, loan
+ratio, total deposit to total assets, loan loss provision to total equity have a significantly
+positive impact on financial performance of commercial banks. Loan loss provisions to
+total loan, core capital ratio, risk-weighted ratio, total capital ratio have negative impact
+on financial performance of Nepalese commercial banks.
+
+In the study, about the effect of capital adequacy and cost income ratio on the
+performance of Nepalese commercial banks by Pradhan and Parajuli (2017) found
+evidence for a positive relationship of bank size with ROA. It means, larger the banks,
+higher would be the ROA. Similarly, the study revealed that there was a positive
+relationship of debt to equity ratio with ROA. On the other hand, the study observed that
+there was a negative relationship of capital adequacy, cost income ratio, equity capital to
+total assets ratio and liquidity ratio with ROA. This means that the higher the capital
+adequacy lower would be ROA. Similarly, the study observed that the higher the equity
+capital to total assets, lower would be the ROA. The result also showed that there is a
+positive relationship of capital adequacy, equity capital to total assets, bank size and debt
+to equity ratio with ROE. The study also indicated that higher the equity capital to assets,
+higher would be return on equity. Similarly, the study found that larger the bank, higher
+would be the ROE.
+
+The aforesaid review represents only a preliminary survey of the relevant issue. On the
+basis of a review, it can be concluded that still there are some unsolved research issues
+on the proposed subject. Moreover, there is a scant of studies based on recent data. As
+many researchers emphasized the effects of credit performances relating the credit risk in
+different country context or with different variables. Hence, there exists a research gap
+and this study focuses to contribute to the existing knowledge in the subject based on the
+recent data. However, the previous studies cannot be ignored because they provide the
+foundation for the present study.
+
+7. Research Methodology
+
+The research methodology is a way to solve the research problem systematically and to
+fulfill the research objectives accordingly. This study plans the following methodological
+aspects.
+
+7.1 Research design
+A research design is the logical and systematic planning that specifies the procedures for
+collecting and analyzing data and information. To attain the purpose of this study,
+descriptive research design will be considered as an appropriate one. On the other hand,
+causal-comparative research method will be followed. The overall study plan will based
+on the quantitative approach of research.
+
+7.2 Population and sampling procedure
+This study will be based on the data collected from the annual reports of the sample
+commercial banks. The population of the study will be the “A” class commercial banks
+licensed by Nepal Rastra Bank. It is at present twenty-seven. Whereas, the study focuses
+on the purely private-sector commercial banks listed in the NEPSE. Presently, it is
+twenty-four, and the sampling frame will be considered accordingly. Based on the non-
+random purposive sampling, twenty banks will be selected as a sample to collect data
+from the fiscal year 2015/016 to 2019/020 for each. The rationale behind the purposive
+sampling is to assure the heterogeneity in the sample.
+
+7.3 Nature and sources of data collection
+To fulfill the research objectives, most of the data will be collected from the secondary
+sources. The required data, as demanded by the study, will be collected through the
+published annual reports of the sample banks. On the other hand, some supporting
+information has been collected from the website of Nepal Rastra Bank and other official
+websites. The negligible information will be acquired from the primary sources.
+
+The data will include time-series and cross-sectional data, i.e. pooled data set. The 5-
+years data (fiscal year 2072/2073 to 2076/2077) of sample banks will be considered, as a
+balanced panel data, for the study. Therefore, the total number of observation for the
+study will be one hundred.
+
+7.4 Research framework and definition of variables
+This study will be based on the schematic diagram as presented in Figure 1.
+
+
+                                                         Credit Deposit Ratio
+           Profitability
+             (I) ROA                               Non-Performing Loan Ratio
+             (II) EPS
+
+                                                      Capital Adequacy Ratio
+
+      Dependent Variable                              Independent Variables
+
+   Figure 1. Schematic diagram of the theoretical framework.
+
+Dependent variables
+The important aspect of the study will be to analyze an impact of credit performance on
+the profitability. Therefore, dependent variables will be the proxies of profitability.
+Among the different aspects of profitability, as proxies, earnings per share and return on
+assets will be considered.
+
+Return on assets (ROA): Return on assets is an indicator of how profitable a company
+is relative to its total assets. It gives a manager, investor, or analyst an idea as to how
+efficient a company's management is using its assets to generate earnings. Thus, ROA is
+primarily an indicator of managerial efficiency.
+
+Earnings per share (EPS): Earnings per share (EPS) are a company's net profit divided
+by the number of common shares it has outstanding. It indicates how much money a
+company makes for each share of its stock.
+
+Independent variables
+Credit deposit ratio (CDR): It is also known as the loan-to-deposit ratio. It is used to
+assess a bank's credit risk as well as liquidity by comparing a bank's total loan to its total
+deposits for the same period.
+
+Non-performing loan ratio (NPLR): A nonperforming loan ratio is the ratio of the
+amount of nonperforming loans in a bank's loan portfolio to the total amount of
+outstanding loans the bank holds. A nonperforming loan is a loan in which the borrower
+is the default and hasn't made any scheduled payments of principal or interest for some
+time. Any definition of a nonperforming loan will depend on the loan's particular terms
+and agreement.
+
+Capital Adequacy Ratio (CAR): Capital adequacy ratios are a measure of the amount
+of a bank's capital expressed as a percentage of its risk weighted credit exposures. In
+other words, it is the ratio of a bank’s capital in relation to its risk weighted assets and
+current liabilities.
+
+7.5 Methods of analysis
+To analyze the data of the variables, descriptive statistics will be used. Under the
+descriptive statistics, the central tendency will be measure through arithmetic mean. To
+understand the consistency, standard deviation and coefficient of variation will be used.
+Similarly, to observe the data nature in terms of normality, skewness and kurtosis will be
+considered. In addition, to analyze the phenomena, statistical graphics will also use as
+per the data nature. Correlation coefficients between the variables will also examine
+through the correlation matrix.
+
+Similarly, to draw the statistical inferences multiple regressions will be applied. It is
+because; this study intends to draw the inferences about the effects of credit performance
+on the return of the privately owned commercial banks in Nepal. All the statistical works
+will be performed through Microsoft Excel and SPSS version 20.0.
+
+Models
+The study will intend toward analyzing the effect of credit performances on profitability
+of the selected group of commercial banks in Nepal. Therefore, to analyze the impact and
+basic relationship functions, the regression equation will base on the model specified as:
+
+Y = β0 + β Xit+εit
+
+Where Y represents the dependent variable; β0 is the constant; β represents the
+coefficient of explanatory variables; Xit is the vector of explanatory variables, and εit is
+the error term. Adapting the basic model, following equations will be estimated.
+
+EPSit = β0 + β1CDRit + β2NPLit + β3CARit + εit
+ROAit = β0 + β1CDRit + β2NPLit + β3CARit + εit
+
+Where,
+EPSit represents earning per share of bank i in year t;
+ROAit represents Return on assets of bank i in year t;
+CDRit represents credit deposit ratio of bank i in year t;
+NPLit represents non performing loan of bank i in year t;
+CARit represents capital adequacy ratio of bank i in year t;
+β0 is the intercept (constant); β1, β2, and β3 represent the corresponding slope which
+addresses the impact coefficients and εit represents the error term..
+                                       References
+
+Bhattarai, Y. R. (2016). Effect of Credit Risk on the Performance of Nepalese
+        Commercial Banks. NRB Economic Review, 28(1), 41-64.
+
+Kinthinji, A. M. (2010). Credit risk management and profitability of commercial banks
+        in Kenya. Nairobi: Acts Press. Retrieved from http://erepository.uonbi.ac.ke/
+        bitstream/handle/11295/40437/aibuma2011submission232.pdf?sequence=1&isAl
+        lowed=y
+
+Mathuva, D. M. (2009). Capital adequacy, cost income ratio and the performance of
+        commercial banks: The Kenyan scenario. The International Journal of Applied
+        Economics and Finance, 3(2), 35-47. https://doi.org/doi/10.3923/ijaef.2009.35.47
+
+Nepal    Rastra Bank. (n.d.). BFI’s List in English (Mid                      Jan      2021).
+        https://www.nrb.org.np/bfr/bfis-list-in-english-mid-jan-2021/
+
+Pradhan, R. S. & Parajuli, P. (2017). Impact of capital adequacy and cost income ratio on
+        performance of Nepalese commercial banks.            International Journal of
+        Management              Research,             8             (1),                6-18.
+        https://doi.org/doi/10.14445/23939125/IJEMS-V6I7P112
+
+Pradhan, R. S. & Shrestha D. (11 Jun 2016). Re: Impact of liquidity on bank profitability
+        in Nepalese commercial banks. https://doi.org/doi/10.2139/SSRN.2793458
+
+Rose, P. S. (2002). Commercial Bank Management. NewYork: McGraw-Hill/Irwin
+        Publishing.
+
+Tarbert, H. P. (2001). Rethinking capital adequacy: The Basle accord and the new
+        framework.    The   Business    Lawyer,   56(2),   767-836.        Retrieved    from
+        https://www.jstor.org/stable/40687994?seq=1#metadata_info_tab_contents
+
