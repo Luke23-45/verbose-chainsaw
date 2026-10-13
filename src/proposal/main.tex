@@ -29,6 +29,8 @@
 % Guideline: APA sixth edition (explicit in Ch. I and Appendix C)
 \usepackage[natbibapa]{apacite}
 \bibliographystyle{apacite}
+\usepackage{caption}
+\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
 
@@ -43,7 +45,7 @@
 \titlespacing*{\section}{0pt}{18pt}{8pt}
 
 % Sub-headings carry no number (guideline lists none)
-\titleformat{\subsection}{\normalfont\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalfont\bfseries\large}{}{0pt}{}
 \titlespacing*{\subsection}{0pt}{12pt}{4pt}
 \titleformat{\subsubsection}{\normalfont\bfseries}{}{0pt}{}
 \titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
@@ -112,6 +114,7 @@
 \addcontentsline{toc}{section}{References}
 \begingroup
 \singlespacing
+\interlinepenalty=10000 % Keep each bibliography entry together across page breaks.
 \bibliography{references}
 \endgroup
 

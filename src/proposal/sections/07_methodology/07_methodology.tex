@@ -97,7 +97,7 @@ Figure~\ref{fig:framework}. Post-disclosure market price per share
 \centering
 \begin{tikzpicture}[node distance=0.45cm,
   ind/.style={rectangle, draw, minimum width=4.2cm, minimum height=0.7cm, text centered, font=\normalsize},
-  dep/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.7cm, text centered, font=\normalsize, fill=gray!10},
+  dep/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.7cm, text centered, font=\normalsize},
   arrow/.style={thick,->,>=stealth}]
   \node[ind] (eps)  {EPS};
   \node[ind, below=of eps] (dps)  {DPS};
@@ -109,8 +109,8 @@ Figure~\ref{fig:framework}. Post-disclosure market price per share
   \draw[arrow] (dps.east)  -- ([yshift=6pt]mps.west);
   \draw[arrow] (bvps.east) -- ([yshift=-6pt]mps.west);
   \draw[arrow] (roa.east)  -- ([yshift=-18pt]mps.west);
-  \node[above=0.2cm of eps, font=\normalsize\itshape] {Independent variables};
-  \node[below=0.25cm of mps, font=\normalsize\itshape] {Dependent variable};
+  \node[above=0.2cm of eps, font=\normalsize\bfseries] {Independent variables};
+  \node[below=0.25cm of mps, font=\normalsize\bfseries] {Dependent variable};
 \end{tikzpicture}
 \caption{Research framework (Source: adapted from Pradhan and Dahal, 2016)}
 \label{fig:framework}
