@@ -46,7 +46,15 @@
 
 % Methodology sub-headings are prescribed as 1.1.1 - 1.1.5 (guideline p.9),
 % which does not nest under roman numeral vii. Reproduced verbatim.
-\newcommand{\msub}[1]{\par\vspace{10pt}\noindent\textbf{#1}\par\vspace{2pt}}
+% Each \msub also drops a subsection-level line into the TOC so the
+% Table of Contents mirrors the guideline structure vii + 1.1.1-1.1.5.
+\newcommand{\msub}[1]{\par\vspace{10pt}\phantomsection\addcontentsline{toc}{subsection}{#1}\noindent\textbf{#1}\par\vspace{2pt}}
+
+% TOC shows sections (i-vii, References) + msub lines only.
+% secnumdepth=1 keeps \subsection/\subsubsection unnumbered in the body;
+% the lit-review file uses starred forms so they stay out of the TOC entirely.
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{2}
 
 % Page numbers centered at the foot (campus requirement; note FOM 2019
 % specifies top right, but the campus expects bottom centre).
@@ -62,8 +70,25 @@
 % before the titlepage environment issues its page break, or it blanks p.2.
 \input{front/titlepage}
 
+% --- Front matter (FOM 2019 p.9: Table of contents, List of tables,
+% List of figures; p.20: single spacing inside TOC/LOT/LOF).
+% Title page = i (counted, unnumbered). Front matter = ii, iii, ... bottom centre.
+\pagenumbering{roman}
+\setcounter{page}{2}
+\begingroup
+\singlespacing
+\tableofcontents
+\clearpage
+\listoftables
+\clearpage
+\listoffigures
+\clearpage
+\endgroup
+
+% --- Main body i-vii ---
+% Body restarts at arabic 1 per FOM p.21 (front matter counted separately).
 \pagenumbering{arabic}
-\setcounter{page}{2}   % title page = 1 (counted, unnumbered)
+\setcounter{page}{1}
 
 % --- Proposal structure i-vii ---
 \input{sections/01_background/01_background}
@@ -75,8 +100,10 @@
 \input{sections/07_methodology/07_methodology}
 
 % --- References (apacite prints its own heading) ---
-% References always start on a fresh page.
+% References always start on a fresh page. Listed in the TOC (thesis-style).
 \clearpage
+\phantomsection
+\addcontentsline{toc}{section}{References}
 \begingroup
 \singlespacing
 \renewcommand{\bibliographytypesize}{\small}
