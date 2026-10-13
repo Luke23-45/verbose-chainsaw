@@ -14,6 +14,7 @@
 
 \usepackage{setspace}
 \onehalfspacing                 % guideline: 1.5 spacing
+\setlength{\parindent}{0pt}    % paragraphs start flush left
 
 \usepackage{titlesec}
 \usepackage{fancyhdr}
@@ -39,31 +40,24 @@
 \renewcommand{\listtablename}{List of Tables}
 \renewcommand{\listfigurename}{List of Figures}
 
-% Proposal structure: roman numerals i-vii (guideline pp. 8-9)
-\renewcommand{\thesection}{\roman{section}}
+% Section and subsection labels follow the active LaTeX counters.
+\renewcommand{\thesection}{\arabic{section}}
 \titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
 \titlespacing*{\section}{0pt}{18pt}{8pt}
 
-% Sub-headings carry no number (guideline lists none)
-\titleformat{\subsection}{\normalfont\bfseries\large}{}{0pt}{}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\titleformat{\subsection}{\normalfont\bfseries\normalsize}{\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{12pt}{4pt}
 \titleformat{\subsubsection}{\normalfont\bfseries}{}{0pt}{}
 \titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
 
-% Methodology sub-headings are prescribed as 1.1.1 - 1.1.5 (guideline p.9),
-% which does not nest under roman numeral vii. Reproduced verbatim.
-% Each \msub also drops a subsection-level line into the TOC so the
-% Table of Contents mirrors the guideline structure vii + 1.1.1-1.1.5.
-\newcommand{\msub}[1]{\par\vspace{10pt}\phantomsection\addcontentsline{toc}{subsection}{#1}\noindent\textbf{#1}\par\vspace{2pt}}
-
-% TOC shows sections (i-vii, References) + msub lines only.
-% secnumdepth=1 keeps \subsection/\subsubsection unnumbered in the body;
-% the lit-review file uses starred forms so they stay out of the TOC entirely.
-\setcounter{secnumdepth}{1}
+% The literature review uses starred subheadings; methodology uses numbered
+% subsections, which LaTeX adds to the TOC automatically.
+\setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 
-% TU p.21: front matter roman bottom-centre; body arabic top-right.
-% Front matter keeps bottom-centre; body switches to top-right below.
+% Page numbering: front matter uses Roman numerals; body uses Arabic numerals.
+% This proposal places both in the bottom centre.
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
@@ -89,16 +83,16 @@
 \clearpage
 \endgroup
 
-% --- Main body i-vii ---
-% Body restarts at arabic 1 per FOM p.21, numbers at top right.
+% --- Main body sections 1-7 ---
+% Body restarts at Arabic 1; page numbers remain bottom-centred.
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \fancyhf{}
-\fancyhead[R]{\thepage}
+\fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \setlength{\headheight}{15pt}
 
-% --- Proposal structure i-vii ---
+% --- Proposal structure 1-7 ---
 \input{sections/01_background/01_background}
 \input{sections/02_problem_statement/02_problem_statement}
 \input{sections/03_objectives/03_objectives}

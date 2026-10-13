@@ -1,6 +1,6 @@
 \section{Research methodology}
 
-\msub{1.1.1 Research design}
+\subsection{Research design}
 This study uses a quantitative, descriptive and correlational design with
 secondary data \citep{pant2016}. This design fits the questions because they
 describe observed values and estimate associations; the study does not
@@ -14,17 +14,19 @@ longitudinal bank-year dataset, not a panel of five unchanged legal entities:
 four series cross a merger boundary, with earlier observations referring to
 an acquiring institution and later observations referring to the consolidated
 institution. Before finalizing the sample and estimating the model, a
-bank-by-year feasibility screen will document whether each accounting value,
-disclosure date, and trading price can be verified for every study year,
-including FY 2081/82. The target is 30 observations; the realized sample will
-include only bank-years complete for all model variables. Unavailable or
-unverifiable observations will be identified and reported, not imputed, and
-the regression sample size will be stated. Pooled OLS
+bank-by-year feasibility screen will document, for every study year including
+FY 2081/82, the audited financial-statement source, its NEPSE disclosure date,
+the first subsequent trading date and closing price, each accounting measure,
+the source and status of any dividend recommendation, and any share-capital
+action affecting per-share comparability. The target is 30 observations; the
+realized sample will include only bank-years complete for all model variables.
+Unavailable or unverifiable observations will be identified and reported, not
+imputed, and the regression sample size will be stated. Pooled OLS
 is an exploratory summary. Conventional OLS tests do not account for possible
 within-series dependence or changes in reporting boundaries and will not be
 treated as confirmatory evidence or as causal effects.
 
-\msub{1.1.2 Population and sampling procedure}
+\subsection{Population and sampling procedure}
 The target population for the post-consolidation sample frame is the 20
 commercial banks listed by Nepal Rastra Bank as of mid-October 2023
 \citep{nrb2023list}. From this population, a
@@ -67,7 +69,7 @@ descriptive and pooled analyses as the unmerged reference series. Because the
 model includes no merger indicator or interaction, it does not estimate a
 merger-versus-non-merger comparison.
 
-\msub{1.1.3 Nature and sources of data collection}
+\subsection{Nature and sources of data collection}
 This study relies entirely on secondary financial and market data. Bank
 financial statements provide the accounting measures; NEPSE trading records
 provide market prices. NRB, SEBON, and Ministry of Finance publications
@@ -85,7 +87,7 @@ independent source reports the same measure, cross-checked before processing.
 Differences are recorded and resolved using the originating audited report for
 accounting measures and the NEPSE record for trading prices.
 
-\msub{1.1.4 Research framework and definition of variables}
+\subsection{Research framework and definition of variables}
 The research framework illustrating the functional relationship between the
 explanatory accounting fundamentals and the dependent variable is depicted in
 Figure~\ref{fig:framework}. Post-disclosure market price per share
@@ -150,16 +152,21 @@ when its share basis is clear and otherwise calculating it from the audited
 statement. Return on assets (ROA), in percent, is profit after tax divided by
 average total assets, where average total assets is the arithmetic mean of
 opening and closing total assets, multiplied by 100. The numerator and both
-asset balances are recorded for each bank-year. All explanatory variables use
-these common definitions; reported ratios using different definitions are
-retained only as source checks and are not substituted into the analysis.
+asset balances are recorded for each bank-year. In a merger transition year,
+the reporting entity and any restatement of opening assets are recorded from
+the audited financial statements; a value is treated as unavailable if the
+numerator and denominator cannot be matched to the same reporting boundary.
+All explanatory variables use these common definitions; reported ratios using
+different definitions are retained only as source checks and are not
+substituted into the analysis.
 
 \needspace{6\baselineskip}
-\msub{1.1.5 Methods of analysis}
-To examine the empirical relationships and evaluate the hypotheses formulated in
-this study, both descriptive and inferential econometric techniques are applied.
+\subsection{Methods of analysis}
+The analysis describes the observations and estimates the specified
+associations. Because the sample contains repeated observations for only five
+bank series, the regression and its conventional significance tests are
+treated as exploratory rather than confirmatory.
 
-\textbf{Model Specification:}
 To examine the joint and conditional associations of all four accounting
 fundamentals with post-disclosure market price per share, the following multiple
 linear regression model is specified:
@@ -176,7 +183,6 @@ $\beta_1$ through $\beta_4$ are slope coefficients for the estimated conditional
 associations, holding the other included variables constant. $\varepsilon_{it}$
 is the stochastic disturbance term.
 
-\textbf{Statistical Tools and Estimation Procedure:}
 The empirical analysis follows this protocol. Data suitability and model
 assumptions are assessed before coefficient tests are interpreted:
 \begin{enumerate}
@@ -195,8 +201,12 @@ assumptions are assessed before coefficient tests are interpreted:
     at the 5\% level. These conventional tests are nominal because they do
     not adjust for possible within-series dependence. With only five series,
     bank-clustered standard errors are not used as an automatic correction.
-    Coefficient signs and p-values are exploratory and do not establish causal
-    effects, stable relationships, or sector-wide findings.
+    Coefficient signs, confidence intervals, and p-values are reported as
+    exploratory summaries. The nominal tests do not establish causal effects,
+    stable relationships, or sector-wide findings; hypotheses are not accepted
+    or rejected as confirmatory conclusions. Prices are observed on bank-specific
+    dates, so unmodeled market-wide conditions at those dates may also contribute
+    to the estimated associations.
   \item \textbf{Diagnostic Tests:} Model assumptions are examined before interpreting results.
     Multicollinearity is evaluated with variance inflation factors (VIF) and tolerance statistics alongside the correlation matrix.
     Residual diagnostics include checks for heteroskedasticity (White or
@@ -210,9 +220,12 @@ assumptions are assessed before coefficient tests are interpreted:
     but cannot establish independence or validate inference for this short,
     merger-affected dataset. The small sample, transition-year reporting
     boundaries, and limits of conventional OLS inference are stated with the
-    results. If diagnostics indicate serious violations, coefficient tests
-    will be omitted and the coefficients will be presented only as exploratory
-    estimates.
+    results. If data checks or diagnostics identify unresolved comparability,
+    multicollinearity, heteroskedasticity, or influential-observation concerns,
+    the affected coefficient tests will be omitted and the estimates will be
+    presented descriptively with the concern stated. These checks cannot
+    establish independence across repeated observations or validate inference
+    for this short, merger-affected dataset.
 \end{enumerate}
 
 Data organization, coding, descriptive statistics, correlations, pooled OLS,
