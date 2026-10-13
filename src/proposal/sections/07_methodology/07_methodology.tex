@@ -1,15 +1,7 @@
 \section{Research methodology}
 
 \msub{1.1.1 Research design}
-To address the research questions and achieve the stated objectives, this study
-employs a descriptive and explanatory quantitative research design using
-secondary panel data, in accordance with established social science methodology
-\citep{pant2016}. The descriptive research design is utilized to describe the
-distributional characteristics, central tendencies, and historical variations of
-the study variables. Correlation and multiple regression analyses are employed
-to examine the empirical associations between firm-specific accounting
-fundamentals (EPS, DPS, BVPS, and ROA) and post-disclosure market price per
-share ($\mathit{MPS}^{post}$).
+This study employs a descriptive and explanatory quantitative research design using secondary panel data, in accordance with established social science methodology \citep{pant2016}. The design follows directly from the research questions: description answers what the levels and trends are (Q1), while explanation tests how each fundamental links to price and how well they jointly explain it (Q2--Q3). The descriptive component reports distributional characteristics, central tendencies, and historical variations of EPS, DPS, BVPS, ROA, and $\mathit{MPS}^{post}$. The explanatory component estimates bivariate correlations and the multiple regression in Eq.~\ref{eq:main} for conditional associations. The data are a panel: the same $N=5$ banks observed over the same $T=6$ fiscal years (FY 2076/77 to FY 2081/82), yielding $5 \times 6 = 30$ bank-year observations. Pooled OLS is the baseline exploratory specification; inference is interpreted cautiously given repeated within-bank observations and the small sample, with diagnostic checks in 1.1.5.
 
 \msub{1.1.2 Population and sampling procedure}
 The target population of the study comprises all 20 commercial banks operating
@@ -42,7 +34,7 @@ Consequently, the merger alters the economic scale and composition of the
 bank-level observation, and this study does not interpret regression
 coefficients as direct estimates of the causal effect of the mergers themselves.
 The study covers a six-year observation period from FY 2076/77 to FY 2081/82,
-spanning the period before, during, and after the major 2023 consolidation of
+spanning the periods before, during, and after the major 2023 consolidation of
 Nepal's commercial banking sector, yielding 30 bank-year observations
 ($5\text{ sampled bank series} \times 6\text{ fiscal years} = 30\text{ observations}$).
 
@@ -66,55 +58,32 @@ explanatory accounting fundamentals and the dependent variable is depicted in
 Figure~\ref{fig:framework}. Post-disclosure market price per share
 ($\mathit{MPS}^{post}$) serves as the dependent variable, while earnings per share
 (EPS), dividend per share (DPS), book value per share (BVPS), and return on assets
-(ROA) serve as explanatory independent variables. For each fiscal-year observation, $\mathit{MPS}^{post}_{it}$ is defined as the
-closing market price on the first NEPSE trading day following the public
-disclosure of the corresponding audited annual financial statements through
-NEPSE. The same rule is applied consistently across all sampled banks and
-fiscal years.
+(ROA) serve as explanatory independent variables.
 
 \begin{figure}[h]
 \centering
-\begin{tikzpicture}[node distance=0.4cm,
-  box/.style={rectangle, draw, minimum width=2.2cm, minimum height=0.75cm, text centered, font=\small},
-  dep/.style={rectangle, draw, minimum width=2.4cm, minimum height=0.8cm, text centered, font=\small, fill=gray!10},
+\begin{tikzpicture}[node distance=0.45cm,
+  ind/.style={rectangle, draw, minimum width=3.4cm, minimum height=0.7cm, text centered, font=\small},
+  dep/.style={rectangle, draw, minimum width=3.6cm, minimum height=1.7cm, text centered, font=\small, fill=gray!10},
   arrow/.style={thick,->,>=stealth}]
-  \node[box] (eps)  {EPS};
-  \node[box, right=of eps] (dps)  {DPS};
-  \node[box, right=of dps] (bvps) {BVPS};
-  \node[box, right=of bvps] (roa) {ROA};
+  \node[ind] (eps)  {EPS};
+  \node[ind, below=of eps] (dps)  {DPS};
+  \node[ind, below=of dps] (bvps) {BVPS};
+  \node[ind, below=of bvps] (roa) {ROA};
   \path (dps) -- (bvps) coordinate[midway] (mid);
-  \node[dep, below=1.2cm of mid] (mps) {$\mathit{MPS}^{\mathit{post}}$};
-  \draw[arrow] (eps.south)  -- ([xshift=-24pt]mps.north);
-  \draw[arrow] (dps.south)  -- ([xshift=-8pt]mps.north);
-  \draw[arrow] (bvps.south) -- ([xshift=8pt]mps.north);
-  \draw[arrow] (roa.south)  -- ([xshift=24pt]mps.north);
-  \node[above=0.25cm of mid, font=\small\itshape] {Independent variables};
+  \node[dep, right=2.2cm of mid] (mps) {$\mathit{MPS}^{\mathit{post}}$};
+  \draw[arrow] (eps.east)  -- ([yshift=18pt]mps.west);
+  \draw[arrow] (dps.east)  -- ([yshift=6pt]mps.west);
+  \draw[arrow] (bvps.east) -- ([yshift=-6pt]mps.west);
+  \draw[arrow] (roa.east)  -- ([yshift=-18pt]mps.west);
+  \node[above=0.2cm of eps, font=\small\itshape] {Independent variables};
   \node[below=0.25cm of mps, font=\small\itshape] {Dependent variable};
 \end{tikzpicture}
 \caption{Research framework (Source: adapted from Pradhan and Dahal, 2016)}
 \label{fig:framework}
 \end{figure}
 
-The operational measurements and descriptions of all variables analyzed in this
-study are summarized in Table~\ref{tab:variables}.
-
-\begin{table}[h]
-\centering
-\small
-\caption{Description of variables}
-\label{tab:variables}
-\begin{tabular}{>{\raggedright\arraybackslash}p{1.2cm}>{\raggedright\arraybackslash}p{3.6cm}>{\raggedright\arraybackslash}p{9.0cm}}
-\toprule
-Code & Variable & Operational Measurement \\
-\midrule
-$\mathit{MPS}^{\mathit{post}}$ & Market price per share & Closing market price on the first NEPSE trading day following public disclosure of the corresponding audited annual financial statements through NEPSE \\
-EPS & Earnings per share & Profit attributable to ordinary equity holders / weighted average number of ordinary shares outstanding during the period (audited report) \\
-DPS & Dividend per share & Dividend per share reported for the corresponding fiscal year in the audited annual report \\
-BVPS & Book value per share & Reported book value per share from the audited annual report \\
-ROA & Return on assets & Reported return on assets (net profit after tax / total assets $\times$ 100) from the audited annual report \\
-\bottomrule
-\end{tabular}
-\end{table}
+Post-disclosure market price per share ($\mathit{MPS}^{\mathit{post}}$) is defined as the closing market price on the first NEPSE trading day following public disclosure of the corresponding audited annual financial statements through NEPSE, applied consistently across all sampled banks and fiscal years. Earnings per share (EPS) is profit attributable to ordinary equity holders divided by weighted average ordinary shares outstanding during the period from the audited report. Dividend per share (DPS) is dividend per share reported for the corresponding fiscal year in the audited annual report. Book value per share (BVPS) is reported book value per share from the audited annual report. Return on assets (ROA) is reported return on assets (net profit after tax divided by total assets, multiplied by 100) from the audited annual report.
 
 \needspace{6\baselineskip}
 \msub{1.1.5 Methods of analysis}
@@ -140,7 +109,7 @@ $\mathit{MPS}^{post}$ holding the other included variables constant, and
 $\varepsilon_{it}$ is the stochastic disturbance term.
 
 \textbf{Statistical Tools and Estimation Procedure:}
-The empirical analysis follows a structured analytical plan:
+The empirical analysis follows a structured analytical plan, applied only after the data qualify for each test:
 \begin{enumerate}
   \item \textbf{Descriptive Statistics:} The mean, standard deviation, minimum,
     and maximum of all variables are computed to examine distributional
@@ -155,15 +124,14 @@ The empirical analysis follows a structured analytical plan:
     specify positive directional associations, two-tailed $t$-tests at the 5\%
     significance level are used for conservative statistical inference, while
     the $F$-test at 5\% ($\alpha = 0.05$) evaluates overall model significance.
-  \item \textbf{Diagnostic Tests:} Model assumptions are examined through
-    diagnostic checks. Multicollinearity is evaluated with variance inflation
-    factors and tolerance statistics alongside the correlation matrix.
-    Residual diagnostics include examinations for heteroskedasticity and
-    screening for influential observations using Cook's distance. With $N=5$
-    banks and $T=6$ years, pooled OLS serves as the baseline exploratory
+  \item \textbf{Diagnostic Tests:} Model assumptions are examined before interpreting results.
+    Multicollinearity is evaluated with variance inflation factors and tolerance statistics alongside the correlation matrix.
+    Residual diagnostics include examinations for heteroskedasticity (White / Breusch-Pagan) and
+    screening for influential observations using Cook's distance. Normality of residuals is inspected via Q-Q plots.
+    With $N=5$ banks and $T=6$ years, pooled OLS serves as the baseline exploratory
     specification, inference is interpreted cautiously given repeated
     within-bank observations, and small-sample limitations are explicitly
-    acknowledged.
+    acknowledged. If diagnostics show assumptions are not fulfilled, robust or clustered-by-bank standard errors are reported and the limitation is stated explicitly.
 \end{enumerate}
 
 All data organization, coding, and econometric estimations are conducted using

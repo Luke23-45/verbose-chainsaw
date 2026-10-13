@@ -33,6 +33,11 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
 
+% TU-strict front-matter headings (guideline p.9)
+\renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\listtablename}{List of Tables}
+\renewcommand{\listfigurename}{List of Figures}
+
 % Proposal structure: roman numerals i-vii (guideline pp. 8-9)
 \renewcommand{\thesection}{\roman{section}}
 \titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
@@ -56,8 +61,8 @@
 \setcounter{secnumdepth}{1}
 \setcounter{tocdepth}{2}
 
-% Page numbers centered at the foot (campus requirement; note FOM 2019
-% specifies top right, but the campus expects bottom centre).
+% TU p.21: front matter roman bottom-centre; body arabic top-right.
+% Front matter keeps bottom-centre; body switches to top-right below.
 \pagestyle{fancy}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
@@ -86,9 +91,12 @@
 \endgroup
 
 % --- Main body i-vii ---
-% Body restarts at arabic 1 per FOM p.21 (front matter counted separately).
+% Body restarts at arabic 1 per FOM p.21, numbers at top right.
 \pagenumbering{arabic}
 \setcounter{page}{1}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 
 % --- Proposal structure i-vii ---
 \input{sections/01_background/01_background}
