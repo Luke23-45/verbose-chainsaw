@@ -83,17 +83,17 @@ Figure~\ref{fig:framework}. Post-disclosure market price per share
 \label{fig:framework}
 \end{figure}
 
-Post-disclosure market price per share ($\mathit{MPS}^{\mathit{post}}$) is defined as the closing market price on the first NEPSE trading day following public disclosure of the corresponding audited annual financial statements through NEPSE, applied consistently across all sampled banks and fiscal years. Earnings per share (EPS) is profit attributable to ordinary equity holders divided by weighted average ordinary shares outstanding during the period from the audited report. Dividend per share (DPS) is dividend per share reported for the corresponding fiscal year in the audited annual report. Book value per share (BVPS) is reported book value per share from the audited annual report. Return on assets (ROA) is reported return on assets (net profit after tax divided by total assets, multiplied by 100) from the audited annual report.
+Post-disclosure market price per share ($\mathit{MPS}^{\mathit{post}}$), measured in Nepalese Rupees (NPR), is defined as the closing market price on the first NEPSE trading day following public disclosure of the corresponding audited annual financial statements through NEPSE, applied consistently across all sampled banks and fiscal years. Earnings per share (EPS), expressed in NPR, is profit attributable to ordinary equity holders divided by the weighted average number of ordinary shares outstanding during the period from the audited report. Dividend per share (DPS), expressed in NPR, is dividend per share reported for the corresponding fiscal year in the audited annual report. Book value per share (BVPS), expressed in NPR, is reported book value per share from the audited annual report. Return on assets (ROA), expressed as a percentage (\%), is reported return on assets (net profit after tax divided by total assets, multiplied by 100) from the audited annual report.
 
 \needspace{6\baselineskip}
 \msub{1.1.5 Methods of analysis}
 To examine the empirical relationships and evaluate the hypotheses formulated in
-this study, both descriptive and inferential statistical techniques are applied.
+this study, both descriptive and inferential econometric techniques are applied.
 
 \textbf{Model Specification:}
 To examine the joint and conditional associations of all four accounting
 fundamentals with post-disclosure market price per share, the following multiple
-linear regression model is estimated:
+linear regression model is specified:
 \begin{equation}
 \mathit{MPS}^{post}_{it} = \beta_0 + \beta_1 \mathit{EPS}_{it} + \beta_2 \mathit{DPS}_{it} + \beta_3 \mathit{BVPS}_{it} + \beta_4 \mathit{ROA}_{it} + \varepsilon_{it}
 \label{eq:main}
@@ -109,7 +109,7 @@ $\mathit{MPS}^{post}$ holding the other included variables constant, and
 $\varepsilon_{it}$ is the stochastic disturbance term.
 
 \textbf{Statistical Tools and Estimation Procedure:}
-The empirical analysis follows a structured analytical plan, applied only after the data qualify for each test:
+The empirical analysis follows a structured analytical protocol, applied only after the data qualify for each test:
 \begin{enumerate}
   \item \textbf{Descriptive Statistics:} The mean, standard deviation, minimum,
     and maximum of all variables are computed to examine distributional
@@ -117,22 +117,20 @@ The empirical analysis follows a structured analytical plan, applied only after 
   \item \textbf{Correlation Analysis:} Pearson correlations measure bivariate
     associations between each fundamental and $\mathit{MPS}^{post}$ and screen
     for collinearity among regressors.
-  \item \textbf{Multiple Regression Analysis:} The multiple linear regression
-    model (Eq.~\ref{eq:main}) is estimated using Ordinary Least Squares (OLS).
-    The overall explanatory power is evaluated via the coefficient of
-    determination ($R^2$) and adjusted $R^2$. Although the research hypotheses
-    specify positive directional associations, two-tailed $t$-tests at the 5\%
-    significance level are used for conservative statistical inference, while
-    the $F$-test at 5\% ($\alpha = 0.05$) evaluates overall model significance.
+  \item \textbf{Panel Regression Analysis:} The empirical specification (Eq.~\ref{eq:main}) is evaluated through alternative panel modeling techniques:
+    \begin{itemize}
+      \item \textit{Pooled OLS:} Estimated as the baseline exploratory benchmark assuming cross-sectional homogeneity.
+      \item \textit{Fixed Effects Model (FEM):} Accounts for unobserved, time-invariant bank-specific characteristics ($\alpha_i$).
+      \item \textit{Random Effects Model (REM):} Assumes bank-specific variations are random disturbances uncorrelated with regressors.
+    \end{itemize}
+    The Breusch-Pagan Lagrange Multiplier (LM) test evaluates the presence of random individual heterogeneity (Pooled OLS vs.\ REM). The Hausman specification test evaluates whether individual bank effects correlate with the explanatory variables, determining whether Fixed Effects or Random Effects yields consistent and efficient estimates. The overall explanatory power is evaluated via $R^2$ and adjusted $R^2$, while two-tailed $t$-tests at the 5\% level ($\alpha = 0.05$) evaluate individual coefficient significance, and the $F$-test evaluates overall model significance.
   \item \textbf{Diagnostic Tests:} Model assumptions are examined before interpreting results.
-    Multicollinearity is evaluated with variance inflation factors and tolerance statistics alongside the correlation matrix.
+    Multicollinearity is evaluated with variance inflation factors (VIF) and tolerance statistics alongside the correlation matrix.
     Residual diagnostics include examinations for heteroskedasticity (White / Breusch-Pagan) and
     screening for influential observations using Cook's distance. Normality of residuals is inspected via Q-Q plots.
-    With $N=5$ banks and $T=6$ years, pooled OLS serves as the baseline exploratory
-    specification, inference is interpreted cautiously given repeated
+    With $N=5$ banks and $T=6$ years, inference is interpreted cautiously given repeated
     within-bank observations, and small-sample limitations are explicitly
-    acknowledged. If diagnostics show assumptions are not fulfilled, robust or clustered-by-bank standard errors are reported and the limitation is stated explicitly.
+    acknowledged. If diagnostics show that classical spherical disturbance assumptions are violated, Huber-White robust standard errors or clustered standard errors by bank are reported and the limitation is explicitly stated.
 \end{enumerate}
 
-All data organization, coding, and econometric estimations are conducted using
-the Statistical Package for the Social Sciences (SPSS) and Microsoft Excel.
+Data organization, coding, and descriptive statistics are conducted using Microsoft Excel and the Statistical Package for the Social Sciences (SPSS). Panel econometric estimations, diagnostic specification tests (Breusch-Pagan LM and Hausman tests), and panel regression models are estimated using EViews and Stata.

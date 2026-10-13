@@ -75,18 +75,15 @@
 % before the titlepage environment issues its page break, or it blanks p.2.
 \input{front/titlepage}
 
-% --- Front matter (FOM 2019 p.9: Table of contents, List of tables,
-% List of figures; p.20: single spacing inside TOC/LOT/LOF).
-% Title page = i (counted, unnumbered). Front matter = ii, iii, ... bottom centre.
+% --- Front matter (FOM 2019: Table of contents; p.20: single spacing)
+% Title page = i (counted, unnumbered). Front matter = ii bottom centre.
+% NOTE: LOT/LOF removed -- proposal contains zero tables and one figure;
+% a blank LOT page and one-line LOF page read as padding. TOC only.
 \pagenumbering{roman}
 \setcounter{page}{2}
 \begingroup
 \singlespacing
 \tableofcontents
-\clearpage
-\listoftables
-\clearpage
-\listoffigures
 \clearpage
 \endgroup
 
