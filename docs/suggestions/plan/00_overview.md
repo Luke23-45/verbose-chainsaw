@@ -13,6 +13,7 @@ Rule: `detail/` is FROZEN (professor's words). `plan/` holds our proposed new wo
 7. `07_figure_framework.md` — standard-form Fig.1 (matches `../detail/16_*` sketch). Target: methodology file figure. Source: `../detail/14_*`.
 8. `08_table2_paragraph.md` — Table 2 converted to paragraph. Target: same file. Source: `../detail/14_*`.
 9. `09_assumption_checks.md` — qualify-for-test wording (VIF, heteroskedasticity, Cook's, N=5/T=6). Targets: methodology + stats. Sources: `../detail/15_*`, `../detail/16_*`.
+10. `10_cover_lists_refs.md` — exemplar/online alignment (16 pt cover title, bold cover lines except degree block, roman RQ/objective lists, 12 pt references, unbulleted H-lines). Sources: `docs/reference/EXTRACTED_SPEC.md` + online FOM-2019 cross-check. Professor orders (degree italic, approved wording) overruled against exemplar where they conflict.
 
 ## Status
 

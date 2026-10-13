@@ -1,13 +1,12 @@
 % MBS Thesis Proposal - TU Faculty of Management
-% Topic: Accounting Fundamentals and Share Prices: Evidence from Selected Nepalese Commercial Banks
+% Topic: Accounting Fundamentals and Post-Disclosure Share Prices: Evidence from Selected Nepalese Commercial Banks
 % Format source: Master's Degree Dissertation Guidelines 2019, Office of the Dean FOM TU
 %   -> proposal = flat sections i-vii, 8-12 pages, APA 6th, TNR 12pt, 1.5 spacing
-% Engine: pdflatex + bibtex
+% Engine: xelatex + bibtex (uses the actual Times New Roman system font)
 \documentclass[12pt,a4paper,oneside]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{newtxtext}      % Times New Roman-like
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
 \usepackage{newtxmath}
 
 % Guideline p.20-21: top/bottom/right 2.54 cm, LEFT 3.18 cm
@@ -67,6 +66,7 @@
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{15pt}
 
 \begin{document}
 
@@ -94,6 +94,7 @@
 \fancyhf{}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{15pt}
 
 % --- Proposal structure i-vii ---
 \input{sections/01_background/01_background}
@@ -111,7 +112,6 @@
 \addcontentsline{toc}{section}{References}
 \begingroup
 \singlespacing
-\renewcommand{\bibliographytypesize}{\small}
 \bibliography{references}
 \endgroup
 
