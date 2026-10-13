@@ -17,6 +17,7 @@
 \setlength{\parindent}{0pt}    % paragraphs start flush left
 
 \usepackage{titlesec}
+\usepackage{titletoc}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -40,10 +41,26 @@
 \renewcommand{\listtablename}{List of Tables}
 \renewcommand{\listfigurename}{List of Figures}
 
+% Match TOC entry typography to the corresponding body headings.
+\titlecontents{section}
+  [1.1em]
+  {\addvspace{12pt}\normalfont\large\bfseries}
+  {\contentslabel[\thecontentslabel.]{1.1em}}
+  {\hspace*{-1.1em}}
+  {\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{subsection}
+  [2.5em]
+  {\addvspace{5pt}\normalfont\normalsize}
+  {\contentslabel{1.4em}}
+  {}
+  {\titlerule*[0.5pc]{.}\contentspage}
+
 % Section and subsection labels follow the active LaTeX counters.
 \renewcommand{\thesection}{\arabic{section}}
 \titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
+\titleformat{name=\section,numberless}{\normalfont\bfseries\fontsize{16pt}{20pt}\selectfont\centering}{}{0pt}{}
 \titlespacing*{\section}{0pt}{18pt}{8pt}
+\titlespacing*{name=\section,numberless}{0pt}{18pt}{14pt}
 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \titleformat{\subsection}{\normalfont\bfseries\normalsize}{\thesubsection}{0.5em}{}
