@@ -189,13 +189,16 @@ Bottom-to-top gaps: title→proposal 103 pt (3.6 cm); proposal→Submitted by 78
   `Accounting Fundamentals and Post-Disclosure Share Prices: Evidence from
   Selected Nepalese Commercial Banks`
 - Proposal line → `\underline{A Dissertation Proposal}`, 18 pt bold.
-- Submitted-**by** block first (sample order), 12 pt: Asmita Subedi / Triveni
-  International College / Exam Roll No: 67514/24 / T.U. Regd. No: 7-2-48-1060-2018.
+- Submitted-**to** block first (SWAPPED 2026-10-13 per professor's handwritten order;
+  confirmed by official TU proposal template + recent FoM covers, which all use
+  to-before-by; the sample's by-first is the older convention):
+  `Research Department` / `Triveni International College`, 12 pt.
+- Submitted-**by** block, 12 pt: Asmita Subedi / Triveni International College /
+  Exam Roll No: 67514/24 / T.U. Regd. No: 7-2-48-1060-2018.
   (No Campus Roll No. line — do not invent one.)
-- Submitted-**to** block: see decision D1.
-- Bottom block, sample order (date then place): `October, 2026` / `Pokhara, Nepal`,
-  14 pt regular (current file has them bold + reversed — fix both).
-- DELETE the `In partial fulfillment… (M.B.S.)` block (absent from sample).
+- Bottom block, date-then-place: `October, 2026` / `Pokhara, Nepal`, 14 pt regular.
+- KEEP the `In partial fulfillment… (M.B.S.)` block in italic regular 14 pt
+  (user decision 2026-10-13; professor ordered un-bold + italic — complied).
 
 ### A4.2 Layout recipe (`front/titlepage.tex` rewrite)
 
