@@ -7,14 +7,17 @@
 
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
-\usepackage{newtxmath}
 
-% Guideline p.20-21: top/bottom/right 2.54 cm, LEFT 3.18 cm
-\usepackage[top=2.54cm,bottom=2.54cm,right=2.54cm,left=3.18cm]{geometry}
+% Sample wins over FOM 2019 here (see FORMAT_GAP_PLAN.md A3):
+% top/bottom 2.54 cm, LEFT 3.3 cm, RIGHT 2.4 cm (measured from sample PDF).
+\usepackage[top=2.54cm,bottom=2.54cm,right=2.4cm,left=3.3cm]{geometry}
 
 \usepackage{setspace}
-\onehalfspacing                 % guideline: 1.5 spacing
+\setstretch{1.5}                % true 1.5 spacing (sample: 20.66 pt pitch); NOT \onehalfspacing
 \setlength{\parindent}{0pt}    % paragraphs start flush left
+\setlength{\parskip}{10pt}     % sample: +10 pt after each paragraph (gap plan A2)
+\usepackage{enumitem}           % keep list items at single pitch (sample has no extra item gap)
+\setlist{itemsep=0pt,topsep=0pt,parsep=0pt}
 
 \usepackage{titlesec}
 \usepackage{titletoc}
@@ -25,12 +28,24 @@
 \usepackage{longtable}
 \usepackage{needspace}
 \usepackage{amsmath}
+% Times-clone math under XeLaTeX (sample is all-Times; gap plan A10).
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
 
 % Guideline: APA sixth edition (explicit in Ch. I and Appendix C)
 \usepackage[natbibapa]{apacite}
 \bibliographystyle{apacite}
+% References hanging indent: continuation +36 pt (0.5 in, sample §13; gap plan A12).
+% With natbibapa, natbib's list is in force, driven by \bibhang. apacite's style hook
+% runs ONCE at package load (setting 2.5em) and never again — so a direct length set
+% here, after \usepackage{apacite}, sticks. Verified 2026-10-13.
+\setlength{\bibhang}{36pt}
+% Sample refs: ~6 pt between entries (gap plan refs-style). natbib's list sets
+% \itemsep=\bibsep at bibliography time; apacite's load-time hook resets \bibsep
+% to 0, so set it here, after \usepackage{apacite} (same class as A12 \bibhang).
+\setlength{\bibsep}{6pt}
 \usepackage{caption}
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \usepackage{hyperref}
@@ -50,26 +65,29 @@
   {\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{subsection}
   [2.5em]
-  {\addvspace{5pt}\normalfont\normalsize}
+  {\addvspace{6pt}\normalfont\normalsize}
   {\contentslabel{1.4em}}
   {}
   {\titlerule*[0.5pc]{.}\contentspage}
 
 % Section and subsection labels follow the active LaTeX counters.
 \renewcommand{\thesection}{\arabic{section}}
-\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
-\titleformat{name=\section,numberless}{\normalfont\bfseries\fontsize{16pt}{20pt}\selectfont\centering}{}{0pt}{}
-\titlespacing*{\section}{0pt}{18pt}{8pt}
-\titlespacing*{name=\section,numberless}{0pt}{18pt}{14pt}
+\titleformat{\section}{\normalfont\bfseries\setstretch{1}\large}{\thesection.}{0.5em}{} % keep: measured -9 pt on before-gaps vs without (reason not fully traced, effect reproducible)
+\titleformat{name=\section,numberless}{\normalfont\fontsize{16pt}{20pt}\selectfont\centering}{}{0pt}{}
+% Calibrated 2026-10-13 from probe builds (see checkgaps): heading line box is a
+% fixed 23.4 pt and \parskip fires after headings, so: after = target - 33.4,
+% before = target - 26.1. SEC targets 31/34, SUB targets 30/23.5 (sample §6).
+\titlespacing*{\section}{0pt}{5pt}{1pt}
+\titlespacing*{name=\section,numberless}{0pt}{18pt}{0pt}
 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\titleformat{\subsection}{\normalfont\bfseries\large}{\thesubsection}{0.5em}{}
-\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+\titleformat{\subsection}{\normalfont\bfseries\setstretch{1}\large}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{4pt}{-10pt}
 \titleformat{\subsubsection}{\normalfont\bfseries}{}{0pt}{}
 \titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
 
-% The literature review uses starred subheadings; methodology uses numbered
-% subsections, which LaTeX adds to the TOC automatically.
+% Both the literature review and the methodology use numbered subsections,
+% which LaTeX adds to the TOC automatically.
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 
@@ -96,6 +114,7 @@
 \setcounter{page}{2}
 \begingroup
 \singlespacing
+\setlength{\parskip}{0pt} % TOC is single-spaced per FOM p.20: no paragraph gaps between entries
 \tableofcontents
 \clearpage
 \endgroup
@@ -124,9 +143,14 @@
 \phantomsection
 \addcontentsline{toc}{section}{References}
 \begingroup
-\singlespacing
-\interlinepenalty=10000 % Keep each bibliography entry together across page breaks.
+\setstretch{1.5} % Sample refs: 1.5 line spacing within entries (gap plan refs-style)
+% References heading: 14 pt bold centered (sample; TOC keeps 16 pt regular) — gap plan A5.
+\titleformat{name=\section,numberless}{\normalfont\bfseries\setstretch{1}\large\centering}{}{0pt}{}
+% URLs in Times, not monospace (sample §13; gap plan A11): apacite asserts its APACtt
+% style at begin-document, so (re-)assert APACsame here, after that hook has run.
+\urlstyle{APACsame}
 \bibliography{references}
+\titleformat{name=\section,numberless}{\normalfont\fontsize{16pt}{20pt}\selectfont\centering}{}{0pt}{}
 \endgroup
 
 \end{document}

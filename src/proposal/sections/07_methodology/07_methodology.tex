@@ -1,9 +1,9 @@
-\section{Research methodology}
+\section{Research Methodology}
 
 \subsection{Research design}
 This study uses a quantitative, descriptive and correlational design with
 secondary data \citep{pant2016}. The design fits the research questions because
-they describe observed values and estimate associations; the study does not
+they describe observed values and estimate associations, and the study does not
 manipulate variables or identify causal effects.
 
 Descriptive statistics summarize EPS, DPS, BVPS, ROA, and
@@ -63,7 +63,7 @@ transition year: the audited statement's reporting boundary will be recorded for
 each bank-year, and that observation will be flagged rather than described as a
 clean pre-merger or post-merger year. A source record will identify the
 reporting institution and listed security for every observation. The merger
-changes the scale and composition of a series; regression coefficients are not
+changes the scale and composition of a series. Regression coefficients are not
 interpreted as estimates of merger effects.
 
 The study covers FY 2076/77--2081/82, spanning years before, during, and after
@@ -74,7 +74,7 @@ interaction, it does not estimate a merger-versus-non-merger comparison.
 
 \subsection{Nature and sources of data collection}
 This study relies entirely on secondary financial and market data. Bank
-financial statements provide the accounting measures; NEPSE trading records
+financial statements provide the accounting measures, while NEPSE trading records
 provide market prices. NRB, SEBON, and Ministry of Finance publications provide
 regulatory and sector context and are used for cross-checking where they report
 the same observation. Sources for each bank-year are recorded in the data file.
@@ -82,7 +82,7 @@ The principal sources are:
 \begin{itemize}
   \item Audited annual reports and published financial statements of the sampled commercial banks.
   \item \textit{Banking and Financial Statistics} and supervision reports published by Nepal Rastra Bank (NRB).
-  \item NEPSE trading records and official share-price bulletins; SEBON annual reports and publications for market and regulatory context.
+  \item NEPSE trading records and official share-price bulletins. SEBON annual reports and publications provide market and regulatory context.
   \item \textit{Economic Survey} published by the Ministry of Finance (MoF), Government of Nepal.
 \end{itemize}
 Extracted figures are checked against the originating report and, where an
@@ -100,6 +100,9 @@ assets (ROA) are the explanatory variables.
 
 \begin{figure}[h]
 \centering
+% Figure-only caption style (sample §9; gap plan A9): 11 pt italic, "Figure 1." label,
+% 18 pt left indent. Global captionsetup (for future tables) is untouched.
+\captionsetup{font={small,it},labelsep=period,margin={18pt,0pt},singlelinecheck=false,justification=justified}
 \begin{tikzpicture}[node distance=0.45cm,
   ind/.style={rectangle, draw, minimum width=4.2cm, minimum height=0.7cm, text centered, font=\normalsize},
   dep/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.7cm, text centered, font=\normalsize},
@@ -114,8 +117,8 @@ assets (ROA) are the explanatory variables.
   \draw[arrow] (dps.east)  -- ([yshift=6pt]mps.west);
   \draw[arrow] (bvps.east) -- ([yshift=-6pt]mps.west);
   \draw[arrow] (roa.east)  -- ([yshift=-18pt]mps.west);
-  \node[above=0.2cm of eps, font=\normalsize\bfseries] {Independent variables};
-  \node[below=0.25cm of mps, font=\normalsize\bfseries] {Dependent variable};
+  \node[below=0.25cm of roa, font=\normalsize] {Independent variables};
+  \node[below=0.25cm of mps, font=\normalsize] {Dependent variable};
 \end{tikzpicture}
 \caption{Research framework (Source: adapted from Pradhan and Dahal, 2016)}
 \label{fig:framework}
@@ -127,7 +130,7 @@ trading day with a calendar date strictly later than the NEPSE disclosure date
 for the corresponding audited annual financial statements. The same rule is
 applied to every sampled bank series and fiscal year. The filing date, trading
 date, listed security, and source records are logged for each observation. The
-NEPSE closing price recorded for that date is used; a retrospectively adjusted
+NEPSE closing price recorded for that date is used. A retrospectively adjusted
 price series is not substituted.
 
 Any bonus issue, rights issue, split, or other share-capital action between
@@ -146,7 +149,7 @@ share split is retained.
 Dividend per share (DPS), in NPR per ordinary share, is the cash dividend per
 share recommended for the corresponding fiscal year and publicly disclosed by
 the MPS observation date. The recommendation is used whether or not it has
-subsequently received shareholder approval or been distributed; later approval
+subsequently received shareholder approval or been distributed. Later approval
 or payment is not used because it was not necessarily known at the observation
 date. A documented decision not to recommend a cash dividend is recorded as
 zero. If the recommendation or its amount cannot be established by the MPS
@@ -154,17 +157,17 @@ date, DPS is unavailable. The source and recommendation status are logged.
 
 Book value per share (BVPS), in NPR per ordinary share, is ordinary
 shareholders' equity at fiscal year-end divided by ordinary shares outstanding
-at that date. The audited reported value is used when its share basis is clear;
-otherwise it is calculated from the audited statement.
+at that date. The audited reported value is used when its share basis is clear.
+Otherwise, it is calculated from the audited statement.
 
 Return on assets (ROA), in percent, is profit after tax divided by average
 total assets (the arithmetic mean of opening and closing total assets),
 multiplied by 100. The numerator and both asset balances are recorded for each
 bank-year. In a merger transition year, the reporting entity and any
 restatement of opening assets are recorded from the audited financial
-statements; a value is treated as unavailable if the numerator and denominator
+statements. A value is treated as unavailable if the numerator and denominator
 cannot be matched to the same reporting boundary. All explanatory variables use
-these definitions; reported ratios using different definitions are retained only
+these definitions. Reported ratios using different definitions are retained only
 as source checks and are not substituted into the analysis.
 
 \needspace{6\baselineskip}
@@ -181,11 +184,18 @@ linear regression model is specified:
 \mathit{MPS}^{post}_{it} = \beta_0 + \beta_1 \mathit{EPS}_{it} + \beta_2 \mathit{DPS}_{it} + \beta_3 \mathit{BVPS}_{it} + \beta_4 \mathit{ROA}_{it} + \varepsilon_{it}
 \label{eq:main}
 \end{equation}
+% Force the page break HERE (fills the previous page, which stranded ~270 pt).
+% Must be [4]: with fully rigid vertical glue every short page has badness 10000,
+% which caps cost at 100000 and swallows any milder penalty ([3] verified inert).
+% -10000 forces unconditionally, but only at feasible points: equation-end sits
+% ~46 pt above page goal, so this holds. If 7.x edits push it past the goal this
+% produces an overfull page instead — re-run checkbottoms.py after any 7.x edit.
+\pagebreak[4]
 where $\mathit{MPS}^{post}_{it}$ is the closing price for bank series $i$ in
 fiscal year $t$, recorded on the pre-specified post-disclosure trading date.
 $\mathit{EPS}_{it}$, $\mathit{DPS}_{it}$, $\mathit{BVPS}_{it}$, and
 $\mathit{ROA}_{it}$ denote earnings per share, dividend per share, book value
-per share, and return on assets, respectively. $\beta_0$ is the intercept;
+per share, and return on assets, respectively. $\beta_0$ is the intercept.
 $\beta_1$ through $\beta_4$ are slope coefficients for the conditional
 associations, holding the other included variables constant.
 $\varepsilon_{it}$ is the stochastic disturbance term.
@@ -210,7 +220,7 @@ assumptions are assessed before coefficient tests are interpreted:
     standard errors are not used as an automatic correction. Coefficient signs,
     confidence intervals, and p-values are reported as exploratory summaries.
     The nominal tests do not establish causal effects, stable relationships, or
-    sector-wide findings; hypotheses are not accepted or rejected as
+    sector-wide findings. Hypotheses are not accepted or rejected as
     confirmatory conclusions. Prices are observed on bank-specific dates, so
     unmodeled market-wide conditions at those dates may also contribute to the
     estimated associations.
@@ -236,4 +246,3 @@ assumptions are assessed before coefficient tests are interpreted:
 Data organization, coding, descriptive statistics, correlations, pooled OLS,
 and the specified diagnostic checks are conducted using Microsoft Excel and the
 Statistical Package for the Social Sciences (SPSS).
-\n
