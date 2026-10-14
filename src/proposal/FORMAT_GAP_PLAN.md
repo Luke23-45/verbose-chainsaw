@@ -188,8 +188,8 @@ Bottom-to-top gaps: title→proposal 103 pt (3.6 cm); proposal→Submitted by 78
 - Title → title case, 18 pt bold, natural line breaks (no manual `\\`):
   `Accounting Fundamentals and Post-Disclosure Share Prices: Evidence from
   Selected Nepalese Commercial Banks`
-- Proposal line → `\underline{A Proposal}`, 18 pt bold (shortened 2026-10-13 per user;
-  matches TU portal template; sample + professor's tick had `A Dissertation Proposal`).
+- Proposal line → `A Proposal`, 18 pt bold, NO underline (underline removed 2026-10-13
+  per user; sample had it underlined).
 - Submitted-**to** block first (SWAPPED 2026-10-13 per professor's handwritten order;
   confirmed by official TU proposal template + recent FoM covers, which all use
   to-before-by; the sample's by-first is the older convention):
