@@ -56,38 +56,37 @@
 \renewcommand{\listtablename}{List of Tables}
 \renewcommand{\listfigurename}{List of Figures}
 
-% Match TOC entry typography to the corresponding body headings.
+% Match TOC entry typography to FOM guidelines (uniform 12pt Times New Roman).
 \titlecontents{section}
-  [1.1em]
-  {\addvspace{12pt}\normalfont\large\bfseries}
-  {\contentslabel[\thecontentslabel.]{1.1em}}
-  {\hspace*{-1.1em}}
-  {\titlerule*[0.5pc]{.}\contentspage}
+  [1.8em]
+  {\addvspace{6pt}\normalfont\normalsize\bfseries}
+  {\contentslabel[\thecontentslabel.]{1.8em}}
+  {\hspace*{-1.8em}}
+  {\enspace\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{subsection}
-  [2.5em]
-  {\addvspace{6pt}\normalfont\normalsize}
-  {\contentslabel{1.4em}}
+  [3.4em]
+  {\addvspace{2pt}\normalfont\normalsize}
+  {\contentslabel{2.2em}}
   {}
-  {\titlerule*[0.5pc]{.}\contentspage}
+  {\enspace\titlerule*[0.5pc]{.}\contentspage}
 
 % Section and subsection labels follow the active LaTeX counters.
+% TU FOM Guideline 2019 p.21: "Use uniform typeface and font size. Use Times New Roman, with 12-point font size."
 \renewcommand{\thesection}{\arabic{section}}
-\titleformat{\section}{\normalfont\bfseries\setstretch{1}\large}{\thesection.}{0.5em}{} % keep: measured -9 pt on before-gaps vs without (reason not fully traced, effect reproducible)
-\titleformat{name=\section,numberless}{\normalfont\fontsize{16pt}{20pt}\selectfont\centering}{}{0pt}{}
-% Calibrated 2026-10-13 from probe builds (see checkgaps): heading line box is a
-% fixed 23.4 pt and \parskip fires after headings, so: after = target - 33.4,
-% before = target - 26.1. SEC targets 31/34, SUB targets 30/23.5 (sample §6).
-\titlespacing*{\section}{0pt}{5pt}{1pt}
-\titlespacing*{name=\section,numberless}{0pt}{18pt}{0pt}
+\titleformat{\section}{\normalfont\normalsize\bfseries\setstretch{1}}{\thesection.}{0.5em}{}
+\titleformat{name=\section,numberless}{\normalfont\normalsize\bfseries\centering}{}{0pt}{}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+\titlespacing*{name=\section,numberless}{0pt}{12pt}{8pt}
 
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\titleformat{\subsection}{\normalfont\bfseries\setstretch{1}\large}{\thesubsection}{0.5em}{}
-\titlespacing*{\subsection}{0pt}{4pt}{-10pt}
-\titleformat{\subsubsection}{\normalfont\bfseries}{}{0pt}{}
-\titlespacing*{\subsubsection}{0pt}{10pt}{4pt}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries\setstretch{1}}{\thesubsection}{0.5em}{}
+\titleformat{name=\subsection,numberless}{\normalfont\normalsize\bfseries\setstretch{1}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\titlespacing*{name=\subsection,numberless}{0pt}{8pt}{2pt}
 
-% Both the literature review and the methodology use numbered subsections,
-% which LaTeX adds to the TOC automatically.
+\titleformat{\subsubsection}{\normalfont\bfseries}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{8pt}{2pt}
+
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{2}
 
