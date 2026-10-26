@@ -2,114 +2,47 @@
 
 \subsection{Theoretical review}
 
-Equity valuation provides a basis for examining reported accounting measures
-in relation to share prices. Miller and Modigliani's dividend-irrelevance
-result holds under restrictive assumptions: fixed investment policy and
-frictionless capital markets. Under those assumptions, changing the payout does
-not by itself change firm value \citep{miller1961}. This result is a benchmark,
-not a direct prediction that a higher dividend per share must correspond to a
-higher market price in Nepal.
+Equity valuation relates share prices to expected future economic benefits and the information available to market participants. \citet{miller1961} provide a benchmark with the dividend-irrelevance proposition: under frictionless capital markets and a fixed investment policy, changing the division between dividends and retained earnings does not change firm value. This is a theoretical result conditional on its assumptions, not a direct prediction for the Nepalese market. Dividend-capitalization models relax some of these assumptions. In Walter's model \citep{walter1963}, payout policy matters according to the expected return on retained earnings relative to the cost of equity ($r$ compared with $k$); $r$ here is not return on assets (ROA). Gordon's growth model relates value to expected dividends and growth under a constant-growth assumption \citep{gordon1959}. These models give reasons why payout and expected profitability may be associated with valuation, but do not establish a universal positive relation between DPS and observed prices.
 
-Signaling theory offers a conditional reason why accounting disclosures and
-dividend decisions may be associated with price. Ross (1977) models
-financial-structure choices as signals when managers hold information
-unavailable to investors. Bhattacharya (1979) develops a separate model in
-which dividends can signal managers' expectations of future profitability under
-specified information and signaling-cost assumptions. These theories do not establish that
-every dividend increase signals stronger performance. They motivate examining
-DPS alongside the other reported measures \citep{ross1977,bhattacharya1979}.
+In markets where information is unevenly distributed between corporate insiders and outside investors, signaling theory offers one mechanism through which disclosures and payout decisions may relate to share prices. Managers may have information about future cash flows that investors do not, and observable financial decisions can convey information when they are costly to imitate \citep{ross1977}. Dividend-signaling models, including \citet{bhattacharya1979} and \citet{john1985}, explain how payout decisions may communicate private information under particular assumptions; they do not imply that every dividend increase is a reliable signal. Bank assets, particularly loans and trading assets, can be difficult for outside parties to assess, which makes the information environment relevant when studying bank valuation \citep{morgan2002}. Agency explanations offer a complementary mechanism: distributions may limit managers' discretion over free cash flow and increase external monitoring \citep{jensen1986}. These theories motivate examining EPS, DPS, BVPS, and ROA, while allowing that each measure can be noisy and that the empirical relation may depend on the institutional setting.
 
-Ohlson's valuation model relates market value to current and future earnings,
-book values, dividends, and other information, with the clean-surplus relation
-as an accounting foundation \citep{ohlson1995}. In the present study, EPS
-represents earnings on a per-share basis, BVPS represents book equity on a
-per-share basis, DPS records the reported distribution for the fiscal year, and
-ROA represents reported asset profitability. EPS and ROA share an earnings
-numerator. DPS and BVPS are also related to earnings and retained earnings. The
-regressors are therefore not assumed to be statistically independent. Their
-overlap is one reason to assess multicollinearity and to interpret conditional
-coefficients cautiously.
+The residual-income valuation framework connects book value and expected earnings to equity value and is developed in accounting valuation research by \citet{ohlson1995} and \citet{feltham1995}. Under the clean-surplus relation ($BV_{t} = BV_{t-1} + NI_{t} - Div_{t}$), with consistent definitions and a suitable terminal condition, equity value can be represented as current book value plus the present value of expected future residual income:
+\begin{equation}
+P_{t} = BV_{t} + \sum_{\tau=1}^{\infty} \frac{E_{t}[\mathit{NI}_{t+\tau} - r \cdot BV_{t+\tau-1}]}{(1+r)^{\tau}}
+\label{eq:ohlson}
+\end{equation}
+where $BV_t$ is book equity at time $t$, $NI_{t+\tau}$ is net income in period $t+\tau$, and $r$ is the cost of equity. BVPS is an accounting measure of equity per share; it is not necessarily a liquidation value or a complete measure of a bank's regulatory capital. EPS measures current earnings per share, while ROA scales profit by assets and provides a related measure of asset profitability. DPS measures distributions per share and, under clean-surplus accounting, distributions reduce retained equity, all else equal. EPS and ROA share a profit numerator, while DPS and BVPS also relate to profit retention and distribution. Their theoretical connections therefore do not imply statistically independent regressors or isolate the distinct contribution of each measure in a small sample.
 
-Several Nepalese studies include the price-earnings ratio (P/E) alongside
-market price per share (MPS) as an explanatory variable
-\citep{bhattarai2014,chhetri2023}. If P/E is calculated using the same MPS
-observation that serves as the dependent variable, it contains that variable by
-definition (P/E = MPS/EPS). The present model therefore excludes P/E to avoid
-that direct mathematical coupling. This rationale applies to a P/E constructed
-from the same price observation. It does not invalidate prior studies that may
-have used a differently dated price.
+The semi-strong form of the Efficient Market Hypothesis provides a benchmark for considering how public disclosures may be reflected in prices \citep{fama1970}. Early studies by \citet{ball1968} and \citet{beaver1968} found evidence that accounting earnings contain information associated with market responses. Later research documented post-earnings-announcement drift: returns after earnings announcements are associated with the prior earnings surprise, which is inconsistent with an assumption of immediate and complete adjustment \citep{bernard1989}. This debate makes observation timing substantively relevant. A fiscal-year-end price predates publication of the corresponding audited statements, so it cannot represent a price observed after investors could access those statements; an annual average may combine prices from before and after disclosure. The present study therefore uses a clearly recorded NEPSE disclosure date and the close on the first later trading day as a consistent operational measure. This rule establishes temporal ordering, but does not by itself isolate the market's response to the disclosure or establish that the price incorporates only the accounting information.
+
+The price-earnings ratio also requires care when the outcome is market price per share. Since $\text{P/E}=\text{MPS}/\text{EPS}$, a model that uses P/E to explain MPS includes a regressor constructed from the outcome itself when the ratio is calculated from the same MPS observation. This creates definitional overlap and complicates interpretation of the coefficient and model fit; it is not, by itself, proof that every such estimate is biased in the same direction. Studies including P/E therefore answer a different specification from one using only accounting measures defined independently of market price. The present study excludes P/E so that its regressors are not algebraically constructed from the observed dependent-variable price.
 
 \subsection{Empirical review}
 
-International studies provide context but are not direct evidence for the
-Nepalese banking sample. Research on NSE 100 firms in India and listed banks in
-Jordan examines combinations of earnings, book value, dividends, and valuation
-multiples, with findings that depend on the market, sample, and specification
-\citep{malhotra2013,almumani2014}. Earlier Nepalese bank studies by Bhattarai
-(2014) and Pradhan and Dahal (2016) also report associations between accounting
-fundamentals and share prices, but their observation periods end before the
-early-2023 merger wave \citep{bhattarai2014,pradhan2016,bajracharya2019}.
+International studies provide comparative evidence that accounting measures can be associated with share prices, although results are specific to their samples and models. Using US firms over 1953--1993, \citet{collins1997} report that the combined value relevance of earnings and book values did not decline over time, while the relative roles of the two measures changed. For Indian listed firms, \citet{sharma2011} reports positive price associations for EPS, DPS, and BVPS and a negative coefficient for dividend yield. \citet{malhotra2013}, studying NSE 100 firms over 2007--2012 with pooled regression, report positive associations for BVPS, EPS, and P/E and an inverse association for dividend yield. In a banking sample from the Amman Stock Exchange over 2005--2011, \citet{almumani2014} report positive associations for EPS, BVPS, and P/E, while size and dividend measures have weaker or insignificant results. Differences in country, sample, variables, and model limit direct comparison with Nepalese commercial banks.
 
-More recent Nepalese studies do not yield a uniform result for all variables.
-Gyawali (2022), using ten banks over 2017--2021, reports a positive but
-statistically insignificant ROA coefficient. Chhetri (2023) studies 13 banks
-over 2012--2022 with pooled cross-sectional analysis and reports positive,
-statistically significant results for BVPS and ROA, and that paper also includes
-P/E in a model with MPS as the outcome. Joshi et al. (2023) report a positive
-BVPS association in their commercial-bank sample. These estimates differ in
-sample, period, variable construction, and model specification, so they should
-not be treated as estimates of one common effect
-\citep{gyawali2022,chhetri2023,joshi2023,niroula2021}.
+Within the Nepalese capital market, empirical investigation into the determinants of share prices has evolved alongside the development of the Nepal Stock Exchange (NEPSE). In an early study of corporate dividend behavior, \citet{pradhan2003} examined listed Nepalese enterprises and reported a stronger association of dividends with stock prices than of retained earnings; the study cautions against assuming that investors are indifferent between the two. \citet{bhattarai2014} investigated commercial banks listed on NEPSE over 2006--2014 using pooled cross-sectional regression, reporting positive, significant EPS and P/E coefficients and an inverse dividend-yield association. \citet{pradhan2016} analyzed 14 commercial banks over 2002/03--2013/14, reporting associations between bank-specific fundamentals and prices and identifying size as the most influential firm-specific measure, with GDP among the macroeconomic variables examined. \citet{bajracharya2019} analyzed ten commercial banks over 2006/07--2015/16, reporting significant EPS, DPS, and P/E results, while ROA was insignificant and inflation was negative. \citet{silwal2019} evaluated ten commercial banks over FY 2065/66--2074/75 and identified BVPS as the most influential measure in its model, with P/E and ROE also positively associated with market price.
 
-Two further Nepalese studies examine market price per share using related
-accounting measures. Giri (2024) analyzes 40 bank-year observations for four
-commercial banks over FY 2070/71--2079/80 using DPS, EPS, P/E, and net worth
-per share. The article reports positive significant correlations of MPS with
-DPS, P/E, and net worth per share, while describing the MPS--EPS association as
-negligible. Gurung and Subedi (2024) analyze 171 yearly observations for 16
-commercial banks over 2007--2023 using stepwise regression with EPS, DPS, BVPS,
-P/E, and total assets. They report EPS, BVPS, and P/E as explanatory of MPS,
-while DPS and total assets are not significant. Both studies add recent
-evidence, again with different samples, periods, and specifications
-\citep{giri2024,gurung2024}.
+Recent empirical inquiries in the Nepalese banking sector demonstrate sharp divergence in findings, particularly regarding the valuation roles of ROA and BVPS. \citet{niroula2021} examined 18 commercial banks over 2015/16--2019/20, reporting that EPS and P/E were significantly positive, whereas BVPS and ROE were negative and statistically insignificant. \citet{gyawali2022} evaluated ten commercial banks over 2017--2021, documenting that EPS, DPS, and P/E were significantly positive, but ROA and GDP growth were statistically insignificant. In contrast, \citet{chhetri2023} analyzed 13 commercial banks over 2012--2022 using a pooled cross-sectional model, finding that BVPS, ROA, P/E, and inflation were all positive and statistically significant, while EPS, bank size, and GDP growth were insignificant. \citet{joshi2023} investigated seven commercial banks over 2012/13--2021/22, reporting that EPS, DPS, BVPS, and P/E all had positive and statistically significant relationships with share prices.
 
-\begin{sloppypar}% Single-paragraph scope: kills a 23.9 pt overfull (unbreakable "post-consolidation" + citations); content untouched.
-Studies with periods extending through FY 2023/24 provide evidence from the
-post-consolidation period. Pant et al. (2024), using seven conveniently
-selected banks, report that BVPS has a weak, slightly negative relationship
-with MPS and does not significantly contribute to price variation. Chaudhari
-(2025), using ten banks, reports a significantly negative ROA coefficient.
-Timalsina (2026), using 13 banks through FY 2023/24, reports that ROA and GDP
-growth are not statistically significant. Results remain mixed across these
-samples, periods, and specifications
-\citep{pant2024,chaudhari2025,timalsina2026}.
+Studies published in 2024 add recent evidence but also illustrate why results must be described by statistic and specification. \citet{lamsal2024}, using seven commercial banks, reports positive bivariate correlations between MPS and EPS, DPS, P/E, and BVPS. Its regression table reports positive, statistically significant EPS, DPS, and P/E coefficients and an insignificant negative BVPS coefficient. The article's discussion contains a sentence describing an inverse MPS--DPS relation, which conflicts with its reported correlation and regression table; that internal inconsistency warrants caution in using its narrative conclusion. \citet{giri2024} analyzes 40 bank-year observations across four banks over FY 2070/71--2079/80, reporting positive significant correlations of MPS with DPS, P/E, and net worth per share, and a negligible bivariate EPS association. \citet{gurung2024} analyzes 171 yearly observations across 16 banks over 2007--2023 using stepwise regression and reports EPS, BVPS, and P/E as significant, while DPS and total assets are insignificant. The estimates are not directly comparable: sample composition, variable definitions, price timing, and estimation procedures differ.
+
+\begin{sloppypar}
+Studies with data through FY 2023/24 provide evidence spanning and following the early-2023 consolidation wave. \citet{pant2024} investigated seven commercial banks over 2013/14--2023/24 and estimated positive, statistically significant EPS and P/E coefficients, alongside negative but statistically insignificant DPS and BVPS coefficients. \citet{chaudhari2025} studied ten commercial banks over 2014/15--2023/24 and reported positive EPS and DPS coefficients and a statistically significant negative ROA coefficient; bank size and macroeconomic variables were insignificant. \citet{timalsina2026} evaluated 13 commercial banks over 2011/12--2023/24 and reported positive associations for EPS, DPS, BVPS, and bank size, while ROA and GDP growth were statistically insignificant. A recent panel study by \citet{gurungdahal2025} uses ten banks over 2013/14--2023/24 and selects fixed effects over random effects using a Hausman test; it reports significant coefficients for dividend payout, P/E, EPS, BVPS, and ROA, with P/E the strongest predictor in that model. Its broader sample and panel specification provide relevant comparison, although its use of P/E and its study window differ from the present model.
+
+Two 2026 studies add recent evidence. \citet{niraula2026} use balanced data for 16 commercial banks over 2019/20--2023/24 and report positive significant associations for capital adequacy, cash reserves, and total assets, a positive but insignificant ROA coefficient, and negative significant associations for interest spread, credit-to-deposit ratio, and non-performing loans. Their OLS specification and broader set of bank-specific variables are relevant to the overlapping period but do not estimate the four accounting-variable specification proposed here. \citet{bhandari2026} examine all 19 NEPSE-listed commercial banks using census sampling and report EPS as the most influential factor, positive effects for DPS and dividend payout, and a negative effect for dividend yield; P/E has limited explanatory power. This study directly addresses price, earnings, and dividends, while the present proposal differs in its exclusion of price-derived ratios and its explicit post-disclosure price-date rule.
+
+In related regulatory research, \citet{bhattarai2024} report positive associations of interest spread rates and capital adequacy ratios with bank EPS, and a negative association for loan-loss provisions. \citet{dongol2024} examine corporate governance and bank performance, reporting positive associations for capital adequacy and dividend payout, and a weak negative association for board independence.
 \end{sloppypar}
 
-Merger evidence must also be distinguished by period and outcome. Adhikari,
-Kavanagh, and Hampson (2023) compare financial ratios before and after mergers
-for seven commercial banks involved in transactions from 2013 to 2020. Their
-reported 46.01\% fall in mean MPS is specific to that sample and period, not an
-estimate for the early-2023 mergers \citep{adhikari2023}. Other work examines
-post-merger financial performance or governance rather than the
-disclosure-timed share-price outcome used here
-\citep{adhikari2023cbr,bhattarai2024,dongol2024}.
+Across these studies, EPS is often positively associated with MPS, but the evidence for DPS, BVPS, and ROA is less uniform. The same accounting measure can have a different bivariate correlation and conditional regression coefficient because the latter holds other, potentially related regressors constant. This matters here because EPS and ROA both reflect profitability, and DPS and BVPS are linked through retained earnings. Reported differences may also reflect distinct bank samples, observation periods, price dates, and model choices; they should not be read as evidence of a single stable sector-wide coefficient. The present model therefore treats its four coefficients as conditional associations and reports the small sample and predictor overlap as limits on interpretation.
+
+Consolidation provides relevant institutional context because mergers and capital changes can alter both the scale of reported fundamentals and the number of shares over which they are measured. For seven banks involved in mergers between 2013 and 2020, \citet{adhikari2023} report a statistically significant 46.01\% decline in the overall mean market price per share in their pre/post comparison, alongside little change in mean EPS and a small, statistically insignificant decline in DPS. The authors discuss capital expansion and share supply as possible explanations; their observational comparison does not establish that these factors alone caused the price decline. A separate comparison examines post-merger financial performance rather than the disclosure-timed price outcome considered here \citep{adhikari2023cbr}. These studies concern earlier merger periods and do not estimate the effect of the early-2023 transactions. NRB records document that the commercial-bank population had declined to 20 by mid-October 2023 \citep{nrb2023list}. This motivates treating merger-related changes in reporting entities and share bases as a comparability issue in the present study, rather than attributing observed price variation to mergers.
 
 \subsection{Research gap}
 
-The reviewed literature includes studies with observations through FY 2023/24,
-so this proposal does not claim that post-consolidation evidence is absent. Its
-bounded contribution is to estimate bivariate and conditional associations for a
-target of five purposively selected bank series over FY 2076/77--2081/82 using a
-pre-specified post-disclosure price rule: the NEPSE closing price on the first
-trading day after the corresponding audited annual financial statements are
-publicly disclosed through NEPSE. This provides a reproducible timing rule for
-the proposed observations. The proposal does not claim that the rule is
-unprecedented, that it resolves conflicting findings, or that it identifies
-merger effects.
+The literature supports a focused study but does not justify claiming that Nepalese bank share-price relationships are wholly unsettled or that earlier designs are uniformly defective. Findings vary across samples, periods, variable definitions, and specifications. For example, ROA is positive in some studies, insignificant in others, and negative in \citet{chaudhari2025}; reported BVPS and DPS associations also differ across studies. Such variation motivates another bounded analysis, while differences in samples and methods caution against treating coefficient contrasts as direct replications.
 
-The analysis estimates bivariate associations and a joint pooled-OLS
-specification for EPS, DPS, BVPS, and ROA with post-disclosure MPS. It excludes
-P/E when that measure would be constructed from the same MPS observation used
-as the dependent variable. Findings will be interpreted for the sampled bank
-series only. The small sample, differing disclosure and price dates, and changes
-in reporting boundaries around mergers limit interpretation.
+A second design consideration is the inclusion of P/E in models whose outcome is MPS. Because the ratio contains MPS in its numerator, this proposal excludes it and defines the explanatory variables using accounting information. A third consideration is timing: the selected first-trading-day-after-disclosure price supplies a reproducible post-disclosure observation rule. It is a design feature, not a claim that prior studies generally used look-ahead information or that this single price identifies a disclosure effect. Finally, the study window FY 2076/77--2081/82 spans the early-2023 consolidation period, so merger-related changes in reporting boundaries and share bases require explicit documentation. The proposal does not estimate merger effects.
+
+Within these limits, the study examines up to five purposively selected bank series over six fiscal years, subject to data verification. It describes the bivariate associations of EPS, DPS, BVPS, and ROA with post-disclosure MPS and estimates a pooled-OLS summary of their joint conditional associations. Its contribution is a clearly specified observation-timing rule and explicit handling of accounting and security comparability in a small, merger-affected sample. The estimates will be interpreted as exploratory associations for the sampled series, not causal effects or sector-wide conclusions.
