@@ -218,9 +218,13 @@ assumptions are assessed before coefficient tests are interpreted:
     for strong pairwise associations among regressors.
   \item \textbf{Multiple Regression Analysis:} Eq.~\ref{eq:main} is estimated
     by pooled OLS as an exploratory baseline. The coefficient of determination
-    ($R^2$) and adjusted $R^2$ describe in-sample fit. Individual coefficients
-    are reported with two-tailed $t$-tests at the 5\% level ($\alpha=0.05$),
-    and joint model significance is reported with an $F$-test at the 5\% level.
+    ($R^2$) and adjusted $R^2$ describe in-sample fit. For each slope
+    coefficient $\beta_j$, $j=1,\ldots,4$, the test is
+    $H_{0j}:\beta_j=0$ against $H_{Aj}:\beta_j\ne 0$. Individual coefficients
+    are evaluated using two-tailed $t$-tests at the 5\% level
+    ($\alpha=0.05$); the corresponding 95\% confidence intervals are also
+    reported. Joint model significance is reported with an $F$-test at the 5\%
+    level.
     These conventional tests are nominal because they do not adjust for
     possible within-series dependence. With only five series, bank-clustered
     standard errors are not used as an automatic correction. Coefficient signs,
