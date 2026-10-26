@@ -8,9 +8,9 @@
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 
-% Sample wins over FOM 2019 here (see FORMAT_GAP_PLAN.md A3):
-% top/bottom 2.54 cm, LEFT 3.3 cm, RIGHT 2.4 cm (measured from sample PDF).
-\usepackage[top=2.54cm,bottom=2.54cm,right=2.4cm,left=3.3cm]{geometry}
+% Strict TU FOM Dissertation Guidelines 2019 (Page 21):
+% Top: 2.54 cm, Bottom: 2.54 cm, Right: 2.54 cm, Left: 3.18 cm (for binding).
+\usepackage[top=2.54cm,bottom=2.54cm,right=2.54cm,left=3.18cm]{geometry}
 
 \usepackage{setspace}
 \setstretch{1.5}                % true 1.5 spacing (sample: 20.66 pt pitch); NOT \onehalfspacing
@@ -144,8 +144,8 @@
 \phantomsection
 \addcontentsline{toc}{section}{References}
 \begingroup
-\setstretch{1.5} % Sample refs: 1.5 line spacing within entries (gap plan refs-style)
-% References heading: 14 pt bold centered (sample; TOC keeps 16 pt regular) — gap plan A5.
+\singlespacing % FOM 2019 Page 20: Single spacing used in references
+% References heading: 14 pt bold centered — FOM APA guideline
 \titleformat{name=\section,numberless}{\normalfont\bfseries\setstretch{1}\large\centering}{}{0pt}{}
 % URLs in Times, not monospace (sample §13; gap plan A11): apacite asserts its APACtt
 % style at begin-document, so (re-)assert APACsame here, after that hook has run.
