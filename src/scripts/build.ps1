@@ -36,7 +36,7 @@ param(
     [string] $File = 'main',
 
     [ValidateSet('pdflatex', 'xelatex', 'lualatex')]
-    [string] $Engine = 'pdflatex',
+    [string] $Engine = 'xelatex',
 
     [ValidateRange(1, 5)]
     [int] $Passes = 3,

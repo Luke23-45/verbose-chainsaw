@@ -1,0 +1,1 @@
+.\src\scripts\build.ps1 -Target proposal
