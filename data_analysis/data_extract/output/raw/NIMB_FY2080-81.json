@@ -1,0 +1,86 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/NIMB/FY2080-81/NIMB_FY2080-81_annual_report.pdf",
+  "sofp_pages": [
+    50,
+    51
+  ],
+  "sopl_pages": [
+    51
+  ],
+  "total_assets": {
+    "group_current": 493326832355.0,
+    "group_previous": 447358176035.0,
+    "bank_current": 491541734093.0,
+    "bank_previous": 446185523464.0
+  },
+  "total_liabilities": {
+    "group_current": 432449542666.0,
+    "group_previous": 391173504641.0,
+    "bank_current": 431369277029.0,
+    "bank_previous": 390584886642.0
+  },
+  "total_equity_attributable": {
+    "group_current": 60877289689.0,
+    "group_previous": 56184671394.0,
+    "bank_current": 60172457064.0,
+    "bank_previous": 55600636822.0
+  },
+  "total_equity": {
+    "group_current": 60877289689.0,
+    "group_previous": 56184671394.0,
+    "bank_current": 60172457064.0,
+    "bank_previous": 55600636822.0
+  },
+  "share_capital": {
+    "group_current": 34128594897.0,
+    "group_previous": 34128594897.0,
+    "bank_current": 34128594897.0,
+    "bank_previous": 34128594897.0
+  },
+  "profit_after_tax": {
+    "group_current": 4235629896.0,
+    "group_previous": 3781671735.0,
+    "bank_current": 4108892124.0,
+    "bank_previous": 3720833395.0
+  },
+  "profit_attributable": {
+    "group_current": 4235629896.0,
+    "group_previous": 3781671735.0,
+    "bank_current": 4108892124.0,
+    "bank_previous": 3720833395.0
+  },
+  "eps_reported": {
+    "group_current": 12.41,
+    "group_previous": 14.15,
+    "bank_current": 12.04,
+    "bank_previous": 13.92
+  },
+  "nav_per_share_reported": {
+    "group_current": 178.0,
+    "group_previous": 165.0,
+    "bank_current": 176.0,
+    "bank_previous": 163.0
+  },
+  "eps_label": "Earning per share Basic earnings per share",
+  "pat_label": "Profit for the year",
+  "series": "NIMB",
+  "fy": "FY2080-81",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "NIMB_FY2080-81_annual_report.pdf",
+    "source_sha256": "c874001c057f13767a1018a9cfbc2c554393500a2dc68792eda54675dee621ba",
+    "cash_percent": 0.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 0.0,
+    "status": "documented-nil",
+    "pdf_page": 155,
+    "printed_page": 154,
+    "quote": "The Bank has not proposed any dividend for fiscal year 2080-81.",
+    "note": "Audited note 5.25; summary table p156 shows '-' for both columns for FY080/81."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "NIMB_FY2080-81_annual_report.pdf"
+}

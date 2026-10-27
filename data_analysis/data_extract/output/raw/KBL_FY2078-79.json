@@ -1,0 +1,91 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/KBL/FY2078-79/KBL_FY2078-79_annual_report.pdf",
+  "sofp_pages": [
+    32
+  ],
+  "sopl_pages": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "total_assets": {
+    "group_current": 212539283876.0,
+    "group_previous": 190003698803.0,
+    "bank_current": 212108438392.0,
+    "bank_previous": 189792403473.0
+  },
+  "total_liabilities": {
+    "group_current": 191191347022.0,
+    "group_previous": 170874397700.0,
+    "bank_current": 191106322395.0,
+    "bank_previous": 170900181414.0
+  },
+  "total_equity_attributable": {
+    "group_current": 21347936854.0,
+    "group_previous": 19129301103.0,
+    "bank_current": 21002115997.0,
+    "bank_previous": 18892222058.0
+  },
+  "total_equity": {
+    "group_current": 21347936854.0,
+    "group_previous": 19129301103.0,
+    "bank_current": 21002115997.0,
+    "bank_previous": 18892222058.0
+  },
+  "share_capital": {
+    "group_current": 14711183326.0,
+    "group_previous": 13878474836.0,
+    "bank_current": 14711183326.0,
+    "bank_previous": 13878474836.0
+  },
+  "profit_after_tax": {
+    "group_current": 2712775752.0,
+    "group_previous": 2074399664.0,
+    "bank_current": 2579809832.0,
+    "bank_previous": 1970730158.0
+  },
+  "profit_attributable": {
+    "group_current": 2712775752.0,
+    "group_previous": 2074399664.0,
+    "bank_current": 2579809832.0,
+    "bank_previous": 1970730158.0
+  },
+  "eps_reported": {
+    "group_current": 18.44,
+    "group_previous": 14.95,
+    "bank_current": 17.54,
+    "bank_previous": 14.2
+  },
+  "nav_per_share_reported": {
+    "group_current": 145.11,
+    "group_previous": 137.83,
+    "bank_current": 142.76,
+    "bank_previous": 136.13
+  },
+  "eps_label": "k|lt z]o/sf] cfDbfgL cfwf/e't k|lt z]o/ cfdbfgL",
+  "pat_label": "o; cjlwsf] d'gfkmf",
+  "series": "KBL",
+  "fy": "FY2078-79",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "KBL_FY2078-79_annual_report.pdf",
+    "source_sha256": "e0be3d80313763da7e286b9548c9f513b2404872bf4cd03f28378e1a5f5b87d5",
+    "cash_percent": 12.5,
+    "bonus_percent": 0.0,
+    "dps_npr": 12.5,
+    "status": "proposed",
+    "pdf_page": 126,
+    "printed_page": 124,
+    "quote": "Bank's BOD meeting held on 30 September 2022 has decided to propose Rs 1,838,897,915.77 (12.50% of the existing paid up capital) as cash dividend (inclusive for tax purpose, if any) from the retained earnings up to FY 2078/79",
+    "note": "No bonus % stated in Note 5.13; the generic 'bonus shares and cash dividend' sentence on p124 states no bonus amount and was not used to infer one. Kumari Capital note (5% cash) on p187 excluded."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "KBL_FY2078-79_annual_report.pdf"
+}

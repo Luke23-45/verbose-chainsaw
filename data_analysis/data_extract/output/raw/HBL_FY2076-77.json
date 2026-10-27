@@ -1,0 +1,103 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/HBL/FY2076-77/HBL_FY2076-77_annual_report.pdf",
+  "sofp_pages": [
+    43
+  ],
+  "sopl_pages": [
+    44
+  ],
+  "total_assets": {
+    "bank_current": 155884918983,
+    "bank_previous": 133151142073,
+    "group_current": 156917788247,
+    "group_previous": 133862215596
+  },
+  "total_liabilities": {
+    "bank_current": 138295665371,
+    "bank_previous": 117156343693,
+    "group_current": 138244649005,
+    "group_previous": 116954034373
+  },
+  "total_equity_attributable": {
+    "bank_current": 17589253612,
+    "bank_previous": 15994798380,
+    "group_current": 18673139242,
+    "group_previous": 16908181223
+  },
+  "total_equity": {
+    "bank_current": 17589253612,
+    "bank_previous": 15994798380,
+    "group_current": 18673139242,
+    "group_previous": 16908181223
+  },
+  "share_capital": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 9372281428,
+    "bank_previous": null
+  },
+  "profit_after_tax": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 2586722710,
+    "bank_previous": null
+  },
+  "profit_attributable": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 2586722710,
+    "bank_previous": null
+  },
+  "eps_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 27.6,
+    "bank_previous": null
+  },
+  "nav_per_share_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 187.72,
+    "bank_previous": null
+  },
+  "eps_label": null,
+  "pat_label": null,
+  "series": "HBL",
+  "fy": "FY2076-77",
+  "visual_extraction": {
+    "method": "visual_page_read",
+    "source_file": "HBL_FY2076-77_annual_report.pdf",
+    "source_sha256": "3b3ed73d00cac45eb1da78ca2ff18a25cced9df37b23d754f37c40dfa7db76ca",
+    "statement": "Consolidated Statement of Financial Position, As on 31 Asar 2077 (15 July 2020)",
+    "sofp_pdf_page": 43,
+    "sofp_printed_page": 41,
+    "sopl_pdf_page": 44,
+    "sopl_printed_page": 42,
+    "identity_check": {
+      "bank_current": "138295665371 + 17589253612 = 155884918983, exact",
+      "bank_previous": "117156343693 + 15994798380 = 133151142073, exact",
+      "group_current": "138244649005 + 18673139242 = 156917788247, exact",
+      "group_previous": "116954034373 + 16908181223 = 133862215596, exact"
+    },
+    "cross_check": "Bank current total assets 155884918983, liabilities 138295665371 and equity 17589253612 are identical to the FY2077-78 report's previous column used for the earlier manual correction, so the visual read confirms that correction. The new value is only the previous column: Bank opening (FY2075-76) total assets 133151142073."
+  },
+  "manual_correction": "Previous column of HBL FY2077-78 report SOFP pp48-49 / SOPL p49; identity 138295665371+17589253612=155884918983 exact; BVPS 17589253612/93722814.28=187.67 vs NAV 187.72 (diff 0.05, flagged for review, identity still exact). Opening assets now supplied by visual extraction (see visual note appended by apply_visual_overrides). VISUAL EXTRACTION (page image, not text layer): Visual read, HBL FY2076-77 SOFP PDF p43 (printed p41): Bank Asar 2076 (FY2075-76) total assets 133151142073; identity 117156343693 + 15994798380 = 133151142073 exact. ROA is now computable from (133151142073 + 155884918983) / 2.",
+  "dividend": {
+    "method": "visual_page_read",
+    "source_file": "HBL_FY2076-77_annual_report.pdf",
+    "source_sha256": "3b3ed73d00cac45eb1da78ca2ff18a25cced9df37b23d754f37c40dfa7db76ca",
+    "cash_percent": 6.0,
+    "bonus_percent": 14.0,
+    "dps_npr": 6.0,
+    "status": "proposed",
+    "pdf_page": 31,
+    "printed_page": 29,
+    "quote": "For fiscal year 2019/020, 14% bonus share and 6% cash dividend (including tax) have been proposed to the shareholders.",
+    "note": "Visual read (legacy font, text layer gibberish). Corroborated by Principal Indicators PDF p32/printed p30 (cash 6.00%, total 20.00%) and by FY2077-78 Principal Indicators FY2019/2020 column (cash 6.00%, total 20.00%), lead-checked."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "HBL_FY2076-77_annual_report.pdf"
+}

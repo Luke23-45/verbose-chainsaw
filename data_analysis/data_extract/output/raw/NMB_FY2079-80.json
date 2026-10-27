@@ -1,0 +1,92 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/NMB/FY2079-80/NMB_FY2079-80_annual_report_NP.pdf",
+  "sofp_pages": [
+    37,
+    38
+  ],
+  "sopl_pages": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "total_assets": {
+    "group_current": 292458465770.0,
+    "group_previous": 260465972511.0,
+    "bank_current": 287777140694.0,
+    "bank_previous": 255150610280.0
+  },
+  "total_liabilities": {
+    "group_current": 262875142964.0,
+    "group_previous": 232437115536.0,
+    "bank_current": 259342719296.0,
+    "bank_previous": 228279648322.0
+  },
+  "total_equity_attributable": {
+    "group_current": 29080702619.0,
+    "group_previous": 27490386599.0,
+    "bank_current": 28434421397.0,
+    "bank_previous": 26870961958.0
+  },
+  "total_equity": {
+    "group_current": 29583322806.0,
+    "group_previous": 28028856975.0,
+    "bank_current": 28434421397.0,
+    "bank_previous": 26870961958.0
+  },
+  "share_capital": {
+    "group_current": 18366705959.0,
+    "group_previous": 18366705959.0,
+    "bank_current": 18366705959.0,
+    "bank_previous": 18366705959.0
+  },
+  "profit_after_tax": {
+    "group_current": 3296678153,
+    "group_previous": null,
+    "bank_current": 3222547292,
+    "bank_previous": null
+  },
+  "profit_attributable": {
+    "group_current": 3296678153,
+    "group_previous": null,
+    "bank_current": 3222547292,
+    "bank_previous": null
+  },
+  "eps_reported": {
+    "group_current": 17.95,
+    "group_previous": 18.9,
+    "bank_current": 17.55,
+    "bank_previous": 17.92
+  },
+  "nav_per_share_reported": {
+    "group_current": 158.33,
+    "group_previous": 149.68,
+    "bank_current": 154.82,
+    "bank_previous": 146.3
+  },
+  "eps_label": "k|lt k|lt z]o/ z]o/ cfDbfgL cfDbfgL cfwf/e't k|lt z]o/ cfDbfgL (Basic EPS)",
+  "pat_label": null,
+  "series": "NMB",
+  "fy": "FY2079-80",
+  "dividend": {
+    "method": "visual_page_read",
+    "source_file": "NMB_FY2079-80_annual_report_NP.pdf",
+    "source_sha256": "ecd7423be79682e73a48a08ba403d65a0211bd003febfa4421c7db512f94cf89",
+    "cash_percent": 0.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 0.0,
+    "status": "documented-nil",
+    "pdf_page": 14,
+    "printed_page": 14,
+    "quote": "\u0906\u0930\u094d\u0925\u093f\u0915 \u0935\u0930\u094d\u0937 \u0968\u0966\u096d\u096f/\u0966\u096e\u0966 \u0915\u094b \u0935\u093f\u0924\u094d\u0924\u0940\u092f \u0935\u093f\u0935\u0930\u0923 \u0905\u0928\u0941\u0938\u093e\u0930 \u0915\u093e\u092f\u092e \u0930\u0939\u0947\u0915\u094b \u0935\u093f\u0924\u0930\u0923 \u092f\u094b\u0917\u094d\u092f \u092e\u0941\u0928\u093e\u092b\u093e\u092c\u093e\u091f \u0932\u093e\u092d\u093e\u0902\u0936 \u0935\u093f\u0924\u0930\u0923 \u0928\u0917\u0930\u0940 \u0938\u091e\u094d\u091a\u093f\u0924 \u0917\u0930\u094d\u0928\u0947 \u0928\u093f\u0930\u094d\u0923\u092f \u092d\u090f\u0915\u094b \u0964",
+    "note": "Nepali edition, read visually by the lead from the rendered Board section 8, PDF p14/printed p14 (evidence image output/manual_review/visual/NMB_FY2079-80_p14.png). AGM notice pp6-7 contains no dividend agenda item, consistent with nil. Not inferred from the English text search, which returns 0 hits for this file."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "NMB_FY2079-80_annual_report_NP.pdf",
+  "manual_correction": "NMB FY2079-80 Nepali SOPL p39 direct text; PAT Bank 3222547292 matches FY2080-81 previous column exactly."
+}

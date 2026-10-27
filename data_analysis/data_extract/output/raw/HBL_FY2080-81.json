@@ -1,0 +1,86 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/HBL/FY2080-81/HBL_FY2080-81_annual_report.pdf",
+  "sofp_pages": [
+    54,
+    55
+  ],
+  "sopl_pages": [
+    55
+  ],
+  "total_assets": {
+    "group_current": 360759455829.0,
+    "group_previous": 341001683767.0,
+    "bank_current": 355735814061.0,
+    "bank_previous": 334269983478.0
+  },
+  "total_liabilities": {
+    "group_current": 322012186848.0,
+    "group_previous": 303543882475.0,
+    "bank_current": 319112733399.0,
+    "bank_previous": 298762530192.0
+  },
+  "total_equity_attributable": {
+    "group_current": 38486280809.0,
+    "group_previous": 37158919066.0,
+    "bank_current": 36623080662.0,
+    "bank_previous": 35507453286.0
+  },
+  "total_equity": {
+    "group_current": 38747268981.0,
+    "group_previous": 37457801292.0,
+    "bank_current": 36623080662.0,
+    "bank_previous": 35507453286.0
+  },
+  "share_capital": {
+    "group_current": 21656615632.0,
+    "group_previous": 21656615632.0,
+    "bank_current": 21656615632.0,
+    "bank_previous": 21656615632.0
+  },
+  "profit_after_tax": {
+    "group_current": 1461390831.0,
+    "group_previous": 1594502981.0,
+    "bank_current": 1238303590.0,
+    "bank_previous": 1562817944.0
+  },
+  "profit_attributable": {
+    "group_current": 1458107826.0,
+    "group_previous": 1600545414.0,
+    "bank_current": 1238303590.0,
+    "bank_previous": 1562817944.0
+  },
+  "eps_reported": {
+    "group_current": 6.75,
+    "group_previous": 9.37,
+    "bank_current": 5.72,
+    "bank_previous": 9.18
+  },
+  "nav_per_share_reported": {
+    "group_current": 177.71,
+    "group_previous": 171.58,
+    "bank_current": 169.11,
+    "bank_previous": 163.96
+  },
+  "eps_label": "Earnings per share Basic earnings per share",
+  "pat_label": "Profit for the year",
+  "series": "HBL",
+  "fy": "FY2080-81",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "HBL_FY2080-81_annual_report.pdf",
+    "source_sha256": "fb3052f302a39b48c1aac3dbda8570aad9866e640433dee5882a07b867f74ab6",
+    "cash_percent": 0.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 0.0,
+    "status": "documented-nil",
+    "pdf_page": 129,
+    "printed_page": 127,
+    "quote": "the Board of Directors has not declared any cash or stock dividend for the year.",
+    "note": "Notes sentence plus Principal Indicators p44/printed p42 showing '-' for both columns in the FY2023/24 column."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "HBL_FY2080-81_annual_report.pdf"
+}

@@ -1,0 +1,13 @@
+# Core extraction stack. Pin versions when the first full run is locked.
+PyMuPDF>=1.24
+pdfplumber>=0.11
+pandas>=2.2
+PyYAML>=6.0
+# Optional, only for Parquet export:
+pyarrow>=15.0
+# OCR fallback only (system package also needed: tesseract-ocr, plus
+# tesseract-ocr-nep if available for Nepali pages):
+pytesseract>=0.3.13
+ocrmypdf>=15.0
+# Tests:
+pytest>=8.0

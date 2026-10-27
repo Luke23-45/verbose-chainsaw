@@ -1,0 +1,90 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/KBL/FY2081-82/KBL_FY2081-82_annual_report.pdf",
+  "sofp_pages": [
+    57,
+    58
+  ],
+  "sopl_pages": [
+    58
+  ],
+  "total_assets": {
+    "group_current": 442634744312.0,
+    "group_previous": 409938440217.0,
+    "bank_current": 441683640272.0,
+    "bank_previous": 409452881793.0
+  },
+  "total_liabilities": {
+    "group_current": 404902913835.0,
+    "group_previous": 374607090104.0,
+    "bank_current": 404566813532.0,
+    "bank_previous": 374649682370.0
+  },
+  "total_equity_attributable": {
+    "group_current": 37731830477.0,
+    "group_previous": 35331350113.0,
+    "bank_current": 37116826740.0,
+    "bank_previous": 34803199422.0
+  },
+  "total_equity": {
+    "group_current": 37731830477.0,
+    "group_previous": 35331350113.0,
+    "bank_current": 37116826740.0,
+    "bank_previous": 34803199422.0
+  },
+  "share_capital": {
+    "group_current": 26225861340.0,
+    "group_previous": 26225861340.0,
+    "bank_current": 26225861340.0,
+    "bank_previous": 26225861340.0
+  },
+  "profit_after_tax": {
+    "group_current": 1968735600.0,
+    "group_previous": 158570108.0,
+    "bank_current": 1819698647.0,
+    "bank_previous": 4608704.0
+  },
+  "profit_attributable": {
+    "group_current": 1968735600.0,
+    "group_previous": 158570108.0,
+    "bank_current": 1819698647.0,
+    "bank_previous": 4608704.0
+  },
+  "eps_reported": {
+    "group_current": 7.51,
+    "group_previous": 0.6,
+    "bank_current": 6.94,
+    "bank_previous": 0.02
+  },
+  "nav_per_share_reported": {
+    "group_current": 143.87,
+    "group_previous": 134.72,
+    "bank_current": 141.53,
+    "bank_previous": 132.71
+  },
+  "eps_label": "Earnings per share Basic earnings per share",
+  "pat_label": "Profit for the year",
+  "series": "KBL",
+  "fy": "FY2081-82",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "KBL_FY2081-82_annual_report.pdf",
+    "source_sha256": "2bf5712f25e0a6e8cec0b9f2a65c9cbd1f19fec0f3d2a7f7db4d88270491a8c0",
+    "cash_percent": 0.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 0.0,
+    "status": "documented-nil",
+    "pdf_page": 148,
+    "printed_page": 146,
+    "quote": "Since the retained earnings up to Fiscal Year 2081/82 is negative balance, no dividend was proposed by Bank's Board of Director's meeting held on 12th November 2025",
+    "note": "Board report p47/printed p45 agrees."
+  },
+  "market": {
+    "status": "pending",
+    "candidate_disclosure_date": "2025-12-14",
+    "candidate_first_trading_date": "2025-12-15",
+    "candidate_price_npr": 181.4,
+    "candidate_price_label": "Close/LTP agree",
+    "note": "HELD as pending by the user's 2026-10-27 decision. Candidate price 181.40 on 2025-12-15 is confirmed in two agreeing sources, but the NEPSE attachment published 2025-12-14 is an AGM-call notice only (no statement tables). A separate full statement was found on aggregators dated 2026-02-11 (NEPSE timestamp unverified; mirrored document is a scanned multi-table annual statement for the year ended 32 Asadh 2082). Unresolved: if 2026-02-11 is the disclosure, the December 15 price falls before disclosure and fails the proposal rule; if it is the post-AGM full-report filing, the pre-AGM summary disclosure is still unfound. Candidate fields are NEVER used as mps_post_npr or disclosure_date."
+  },
+  "source_file_name": "KBL_FY2081-82_annual_report.pdf"
+}

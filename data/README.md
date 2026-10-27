@@ -26,12 +26,12 @@ Source: https://www.globalimebank.com/np/annual-report/ (year dropdown; English 
 
 | FY | Report of | Status |
 |---|---|---|
-| 2076/77 | Global IME Bank Ltd | ⬜ |
-| 2077/78 | Global IME Bank Ltd | ⬜ |
-| 2078/79 | Global IME Bank Ltd | ⬜ |
-| 2079/80 | Global IME Bank (consolidated; absorbed BoK 9 Jan 2023) | ⬜ |
-| 2080/81 | Global IME Bank Ltd (consolidated) | ⬜ |
-| 2081/82 | Global IME Bank Ltd (consolidated) | ⬜ |
+| 2076/77 | Global IME Bank Ltd | ✅ |
+| 2077/78 | Global IME Bank Ltd | ✅ |
+| 2078/79 | Global IME Bank Ltd | ✅ |
+| 2079/80 | Global IME Bank (consolidated; absorbed BoK 9 Jan 2023) | ✅ |
+| 2080/81 | Global IME Bank Ltd (consolidated) | ✅ |
+| 2081/82 | Global IME Bank Ltd (consolidated) | ✅ |
 
 ## 2. Himalayan Bank (HBL) — 6 files
 Source: https://www.himalayanbank.com → Financial Reports.
@@ -42,12 +42,12 @@ Path pattern: `/images/pdf/uploaded/<N>th Annual Report.pdf`
 
 | FY | Report of | Status |
 |---|---|---|
-| 2076/77 | Himalayan Bank Ltd (28th AR) | ⬜ |
-| 2077/78 | Himalayan Bank Ltd (29th AR) | ⬜ |
-| 2078/79 | Himalayan Bank Ltd (30th AR) | ⬜ |
-| 2079/80 | Himalayan Bank (consolidated; acquired Civil Bank 24 Feb 2023) | ⬜ |
-| 2080/81 | Himalayan Bank Ltd (consolidated) | ⬜ |
-| 2081/82 | Himalayan Bank Ltd (consolidated) | ⬜ |
+| 2076/77 | Himalayan Bank Ltd (28th AR) | ✅ |
+| 2077/78 | Himalayan Bank Ltd (29th AR) | ✅ |
+| 2078/79 | Himalayan Bank Ltd (30th AR) | ✅ |
+| 2079/80 | Himalayan Bank (consolidated; acquired Civil Bank 24 Feb 2023) | ✅ |
+| 2080/81 | Himalayan Bank Ltd (consolidated) | ✅ |
+| 2081/82 | Himalayan Bank Ltd (consolidated) | ✅ |
 
 ## 3. Kumari Bank (KBL) — 6 files
 Source: https://www.kumaribank.com → Reports / Financial Reports
@@ -55,12 +55,12 @@ Source: https://www.kumaribank.com → Reports / Financial Reports
 
 | FY | Report of | Status |
 |---|---|---|
-| 2076/77 | Kumari Bank Ltd | ⬜ |
-| 2077/78 | Kumari Bank Ltd | ⬜ |
-| 2078/79 | Kumari Bank Ltd | ⬜ |
-| 2079/80 | Kumari Bank (consolidated; absorbed NCC Bank 1 Jan 2023) | ⬜ |
-| 2080/81 | Kumari Bank Ltd (consolidated) | ⬜ |
-| 2081/82 | Kumari Bank Ltd (consolidated) | ⬜ |
+| 2076/77 | Kumari Bank Ltd | ✅ |
+| 2077/78 | Kumari Bank Ltd | ✅ |
+| 2078/79 | Kumari Bank Ltd | ✅ |
+| 2079/80 | Kumari Bank (consolidated; absorbed NCC Bank 1 Jan 2023) | ✅ |
+| 2080/81 | Kumari Bank Ltd (consolidated) | ✅ |
+| 2081/82 | Kumari Bank Ltd (consolidated) | ✅ |
 
 ## 4. Nepal Investment Mega Bank (NIMB) — 6 files
 Pre-merger years are **Nepal Investment Bank Ltd** reports — try the legacy
@@ -70,12 +70,12 @@ NEPSE/SEBON or the bank directly).
 
 | FY | Report of | Status |
 |---|---|---|
-| 2076/77 | Nepal Investment Bank Ltd | ⬜ |
-| 2077/78 | Nepal Investment Bank Ltd | ⬜ |
-| 2078/79 | Nepal Investment Bank Ltd | ⬜ |
-| 2079/80 | Nepal Investment Mega Bank (merger with Mega Bank 11 Jan 2023) | ⬜ |
-| 2080/81 | Nepal Investment Mega Bank Ltd | ⬜ |
-| 2081/82 | Nepal Investment Mega Bank Ltd | ⬜ |
+| 2076/77 | Nepal Investment Bank Ltd | ✅ |
+| 2077/78 | Nepal Investment Bank Ltd | ✅ |
+| 2078/79 | Nepal Investment Bank Ltd | ✅ |
+| 2079/80 | Nepal Investment Mega Bank (merger with Mega Bank 11 Jan 2023) | ✅ |
+| 2080/81 | Nepal Investment Mega Bank Ltd | ✅ |
+| 2081/82 | Nepal Investment Mega Bank Ltd | ✅ |
 
 ## 5. NMB Bank (NMB) — 6 files — ✅ DONE
 Source: https://www.nmb.com.np/en/report/annual-report
@@ -95,4 +95,12 @@ is wanted, try SEBON/NEPSE or ask the bank; the audited statements are the same.
 
 ---
 
-Count: 30 total — 6 done, 24 to download.
+Count: 30 total — 30 done, 0 to download (downloaded 2026-10-27; see notes below).
+
+
+## Completion note (2026-10-27)
+- GBIME: English editions downloaded from globalimebank.com annual-report page.
+- HBL: live site refused connections, so all six were fetched from Wayback Machine captures of the bank's own annual-report listing.
+- KBL: downloaded from kumaribank.com/reports; the 2076/77 file first returned a blocked-page HTML and was re-fetched successfully.
+- NIMB: downloaded from nimb.com.np financial reports (nibl.com.np redirects there); pre-merger years are Nepal Investment Bank reports.
+- NMB FY 2079/80: the English file in the repo is the bank's dead S3 link (NoSuchKey XML); the usable audited report is the Nepali edition (NMB_FY2079-80_annual_report_NP.pdf), as already noted above.

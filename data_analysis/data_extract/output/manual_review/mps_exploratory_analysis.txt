@@ -1,0 +1,85 @@
+=== EPS restatement audit (prev in next year vs current this year) ===
+GBIME FY2076-77: current EPS 17.99 vs next-year prev 15.33 — RESTATED
+HBL FY2077-78: current EPS 28.07 vs next-year prev 27.6 — RESTATED
+NMB FY2076-77: current EPS 12.62 vs next-year prev  — RESTATED
+NMB FY2077-78: current EPS 16.66 vs next-year prev 14.76 — RESTATED
+
+Ashadh clean sample: 26/30 (excluded gap>5: [('GBIME', 'FY2078-79', '31'), ('HBL', 'FY2077-78', '64'), ('NIMB', 'FY2077-78', '64'), ('NIMB', 'FY2078-79', '36')])
+
+=== Descriptives (Ashadh clean sample) ===
+Price(Ashadh): mean 266.25 sd 104.15 min 153.70 max 540.00
+EPS: mean 13.54 sd 6.48 min 0.02 max 27.60
+BVPS: mean 159.26 sd 17.29 min 132.71 max 190.70
+DPS: mean 3.16 sd 3.80 min 0.00 max 12.50
+ROA: mean 0.95 sd 0.46 min 0.00 max 1.79
+
+=== Pearson correlations with Price ===
+Price vs EPS: 0.530
+Price vs BVPS: 0.242
+Price vs DPS: 0.286
+Price vs ROA: 0.557
+
+=== Correlation matrix ===
+      Price(Ashadh)        EPS       BVPS        DPS        ROA
+Price(Ashadh)      1.000      0.530      0.242      0.286      0.557
+       EPS      0.530      1.000      0.344      0.572      0.974
+      BVPS      0.242      0.344      1.000      0.094      0.225
+       DPS      0.286      0.572      0.094      1.000      0.557
+       ROA      0.557      0.974      0.225      0.557      1.000
+
+OLS: Price ~ EPS + BVPS  n=26 R2=0.285 adjR2=0.223
+      term         coef     HC3 se        t
+     const       90.999    192.775     0.47
+       EPS        8.140      3.576     2.28
+      BVPS        0.409      1.252     0.33
+
+OLS: Price ~ EPS + BVPS + DPS + ROA  n=26 R2=0.348 adjR2=0.224
+      term         coef     HC3 se        t
+     const      -59.940    207.304    -0.29
+       EPS      -13.537     19.485    -0.69
+      BVPS        1.411      1.402     1.01
+       DPS        0.280      6.697     0.04
+       ROA      299.600    240.804     1.24
+
+OLS: Price ~ EPS + BVPS  n=26 R2=0.286 adjR2=0.224
+      term         coef     HC3 se        t
+     const        4.900      0.615     7.96
+       EPS        0.027      0.011     2.41
+      BVPS        0.002      0.004     0.39
+
+=== VIF (extended model) ===
+EPS: VIF 30.87
+BVPS: VIF 1.60
+DPS: VIF 1.52
+ROA: VIF 27.52
+
+=== Share-basis: bonus vs Ashadh->Poush price change ===
+GBIME FY2076-77: bonus 14.0% Ashadh 239.0 -> Poush 295.0 (+23.4%)
+GBIME FY2077-78: bonus 10.0% Ashadh 441.0 -> Poush 339.0 (-23.1%) <-- bonus>=10% and price fell >5%: check ex-date
+GBIME FY2078-79: bonus 3.0% Ashadh 251.4 -> Poush 326.0 (+29.7%)
+GBIME FY2079-80: bonus 1.0% Ashadh 186.0 -> Poush 210.4 (+13.1%)
+GBIME FY2080-81: bonus 5.5% Ashadh 194.2 -> Poush 205.0 (+5.6%)
+GBIME FY2081-82: bonus 0.0% Ashadh 259.57 -> Poush 222.0 (-14.5%)
+HBL FY2076-77: bonus 14.0% Ashadh 540.0 -> Poush 562.0 (+4.1%)
+HBL FY2077-78: bonus 21.38% Ashadh 487.0 -> Poush 576.0 (+18.3%)
+HBL FY2078-79: bonus 8.0% Ashadh 299.2 -> Poush 487.0 (+62.8%)
+HBL FY2079-80: bonus 0.0% Ashadh 212.8 -> Poush 315.0 (+48.0%)
+HBL FY2080-81: bonus 0.0% Ashadh 204.2 -> Poush 209.0 (+2.4%)
+HBL FY2081-82: bonus 0.0% Ashadh 237.3 -> Poush 233.6 (-1.6%)
+KBL FY2076-77: bonus 10.85% Ashadh 186.0 -> Poush 190.0 (+2.2%)
+KBL FY2077-78: bonus 6.0% Ashadh 371.0 -> Poush 284.0 (-23.5%)
+KBL FY2078-79: bonus 0.0% Ashadh 191.0 -> Poush 271.0 (+41.9%)
+KBL FY2079-80: bonus 0.0% Ashadh 165.0 -> Poush 190.0 (+15.2%)
+KBL FY2080-81: bonus 0.0% Ashadh 153.7 -> Poush 159.4 (+3.7%)
+KBL FY2081-82: bonus 0.0% Ashadh 219.77 -> Poush 209.0 (-4.9%)
+NIMB FY2076-77: bonus 13.0% Ashadh 431.0 -> Poush 405.0 (-6.0%) <-- bonus>=10% and price fell >5%: check ex-date
+NIMB FY2077-78: bonus 12.611% Ashadh 453.0 -> Poush 485.0 (+7.1%)
+NIMB FY2078-79: bonus 4.0% Ashadh 265.0 -> Poush 453.0 (+70.9%)
+NIMB FY2080-81: bonus 0.0% Ashadh 175.1 -> Poush 175.7 (+0.3%)
+NIMB FY2081-82: bonus 0.0% Ashadh 231.02 -> Poush 210.9 (-8.7%)
+NMB FY2076-77: bonus 13.0% Ashadh 397.0 -> Poush 359.0 (-9.6%) <-- bonus>=10% and price fell >5%: check ex-date
+NMB FY2077-78: bonus 12.5% Ashadh 440.0 -> Poush 444.0 (+0.9%)
+NMB FY2078-79: bonus 0.0% Ashadh 261.0 -> Poush 353.4 (+35.4%)
+NMB FY2079-80: bonus 0.0% Ashadh 226.0 -> Poush 246.0 (+8.8%)
+NMB FY2080-81: bonus 0.0% Ashadh 218.0 -> Poush 201.5 (-7.6%)
+NMB FY2081-82: bonus 5.0% Ashadh 269.72 -> Poush 238.8 (-11.5%)

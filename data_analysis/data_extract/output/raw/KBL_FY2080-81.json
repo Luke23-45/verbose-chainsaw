@@ -1,0 +1,91 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/KBL/FY2080-81/KBL_FY2080-81_annual_report.pdf",
+  "sofp_pages": [
+    42
+  ],
+  "sopl_pages": [
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "total_assets": {
+    "group_current": 409938440217.0,
+    "group_previous": 380757023115.0,
+    "bank_current": 409452881793.0,
+    "bank_previous": 380524786643.0
+  },
+  "total_liabilities": {
+    "group_current": 374607090104.0,
+    "group_previous": 345006590253.0,
+    "bank_current": 374649682371.0,
+    "bank_previous": 345209984757.0
+  },
+  "total_equity_attributable": {
+    "group_current": 35331350113.0,
+    "group_previous": 35750432862.0,
+    "bank_current": 34803199422.0,
+    "bank_previous": 35314801886.0
+  },
+  "total_equity": {
+    "group_current": 35331350113.0,
+    "group_previous": 35750432862.0,
+    "bank_current": 34803199422.0,
+    "bank_previous": 35314801886.0
+  },
+  "share_capital": {
+    "group_current": 26225861340.0,
+    "group_previous": 26225861340.0,
+    "bank_current": 26225861340.0,
+    "bank_previous": 26225861340.0
+  },
+  "profit_after_tax": {
+    "group_current": 158570107.0,
+    "group_previous": 698022889.0,
+    "bank_current": 4608704.0,
+    "bank_previous": 517921611.0
+  },
+  "profit_attributable": {
+    "group_current": 158570107.0,
+    "group_previous": 698022889.0,
+    "bank_current": 4608704.0,
+    "bank_previous": 517921611.0
+  },
+  "eps_reported": {
+    "group_current": 0.6,
+    "group_previous": 2.66,
+    "bank_current": 0.02,
+    "bank_previous": 1.97
+  },
+  "nav_per_share_reported": {
+    "group_current": 134.72,
+    "group_previous": 136.62,
+    "bank_current": 132.71,
+    "bank_previous": 134.66
+  },
+  "eps_label": "k|lt z]o/sf] cfDbfgL cfwf/e't k|lt z]o/ cfdbfgL",
+  "pat_label": "o; cjlwsf] d'gfkmf",
+  "series": "KBL",
+  "fy": "FY2080-81",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "KBL_FY2080-81_annual_report.pdf",
+    "source_sha256": "53d82ae3bb592d9dfaeaff3badde0217c054ac2b82e7cc0253274e16a8cec728",
+    "cash_percent": 0.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 0.0,
+    "status": "documented-nil",
+    "pdf_page": 141,
+    "printed_page": 139,
+    "quote": "Since the retained earnings up to Fiscal Year 2080/81 is negative balance, no dividend was proposed",
+    "note": "DATE ANOMALY: the printed BOD date (2 January 2024) predates the FY2080/81 year-end and is not quoted as verified; substance (negative retained earnings up to FY2080/81, no dividend proposed) is documented, corroborated by FY2081-82 equity statement showing no bonus issued and no cash paid."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "KBL_FY2080-81_annual_report.pdf"
+}

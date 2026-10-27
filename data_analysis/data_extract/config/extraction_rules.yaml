@@ -1,0 +1,29 @@
+# Keyword anchors for locating statement pages. Anchors are searched
+# case-insensitively; a page matching an anchor is a *candidate* page, and
+# the parser must still verify the statement title and year columns before
+# reading any number. English anchors first; Nepali anchors are a fallback
+# for Nepali-edition PDFs and are matched only after OCR/manual review.
+statement_anchors:
+  statement_of_financial_position:
+    - "statement of financial position"
+    - "balance sheet"
+  statement_of_profit_or_loss:
+    - "statement of profit or loss"
+    - "profit and loss account"
+  statement_of_changes_in_equity:
+    - "statement of changes in equity"
+  statement_of_cash_flows:
+    - "statement of cash flows"
+    - "cash flow statement"
+  dividend_and_agm:
+    - "dividend"
+    - "annual general meeting"
+    - "proposed dividend"
+    - "bonus share"
+
+# Number handling. NFRS statements in this set state money in NPR '000
+# unless the statement header says otherwise; the header wins over this
+# default, and the unit actually read is recorded per value.
+default_money_unit: "NPR '000"
+parentheses_mean_negative: true
+dash_or_blank_means: "not stated, not zero"

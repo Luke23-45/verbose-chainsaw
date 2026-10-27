@@ -1,0 +1,65 @@
+# Model variables, exactly as defined in proposal methodology (section 07).
+# Raw inputs are extracted; derived variables are computed, never copied
+# from a reported ratio without a recomputation cross-check.
+fiscal_years:
+  # Nepali FY -> AD label used on bank websites -> folder code
+  - nepali: "2076/77"
+    ad: "2019/20"
+    folder: "FY2076-77"
+  - nepali: "2077/78"
+    ad: "2020/21"
+    folder: "FY2077-78"
+  - nepali: "2078/79"
+    ad: "2021/22"
+    folder: "FY2078-79"
+  - nepali: "2079/80"
+    ad: "2022/23"
+    folder: "FY2079-80"
+    transition_year: true
+  - nepali: "2080/81"
+    ad: "2023/24"
+    folder: "FY2080-81"
+  - nepali: "2081/82"
+    ad: "2024/25"
+    folder: "FY2081-82"
+
+raw_inputs:
+  # All money inputs are normally stated in NPR '000 in NFRS statements.
+  - profit_after_tax_npr
+  - profit_attributable_to_equity_holders_npr
+  - weighted_avg_ordinary_shares
+  - ordinary_shareholders_equity_npr
+  - ordinary_shares_outstanding_year_end
+  - total_assets_closing_npr
+  - total_assets_opening_npr
+  - total_liabilities_npr
+  - cash_dividend_per_share_npr
+  - cash_dividend_recommended: true  # false = documented nil recommendation -> DPS 0
+  - bonus_share_percent
+
+derived_variables:
+  eps_npr:
+    definition: "Audited basic EPS, or profit attributable / weighted-average ordinary shares"
+    unit: "NPR per share"
+  dps_npr:
+    definition: "Cash dividend per share recommended for the FY and disclosed by the MPS observation date; documented nil = 0; otherwise unavailable"
+    unit: "NPR per share"
+  bvps_npr:
+    definition: "Ordinary shareholders' equity at year-end / ordinary shares outstanding at year-end"
+    unit: "NPR per share"
+  roa_percent:
+    definition: "Profit after tax / average total assets * 100; average = (opening + closing) / 2"
+    unit: "percent"
+
+feasibility_screen_fields:
+  # Recorded per bank-year, from the PDF and (for market fields) from NEPSE.
+  # A bank-year missing any of these for a model variable is unavailable,
+  # not imputed.
+  - audited_source_file
+  - audited_source_sha256
+  - nepse_disclosure_date
+  - first_trading_date_after_disclosure
+  - mps_post_npr
+  - dividend_recommendation_source
+  - dividend_recommendation_status
+  - share_capital_action_between_year_end_and_price_date

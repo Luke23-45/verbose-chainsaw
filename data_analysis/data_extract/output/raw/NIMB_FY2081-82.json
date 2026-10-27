@@ -1,0 +1,94 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/NIMB/FY2081-82/NIMB_FY2081-82_annual_report.pdf",
+  "sofp_pages": [
+    47,
+    48
+  ],
+  "sopl_pages": [
+    48
+  ],
+  "total_assets": {
+    "group_current": 565375610832.0,
+    "group_previous": 493326832355.0,
+    "bank_current": 562905058154.0,
+    "bank_previous": 491541734093.0
+  },
+  "total_liabilities": {
+    "group_current": 499522972074.0,
+    "group_previous": 432449542666.0,
+    "bank_current": 497923009363.0,
+    "bank_previous": 431369277029.0
+  },
+  "total_equity_attributable": {
+    "group_current": 65852638758.0,
+    "group_previous": 60877289689.0,
+    "bank_current": 64982048791.0,
+    "bank_previous": 60172457064.0
+  },
+  "total_equity": {
+    "group_current": 65852638758.0,
+    "group_previous": 60877289689.0,
+    "bank_current": 64982048791.0,
+    "bank_previous": 60172457064.0
+  },
+  "share_capital": {
+    "group_current": 34128594897.0,
+    "group_previous": 34128594897.0,
+    "bank_current": 34128594897.0,
+    "bank_previous": 34128594897.0
+  },
+  "profit_after_tax": {
+    "group_current": 4461627210.0,
+    "group_previous": 4235629896.0,
+    "bank_current": 4332281828.0,
+    "bank_previous": 4108892124.0
+  },
+  "profit_attributable": {
+    "group_current": 4461627210.0,
+    "group_previous": 4235629896.0,
+    "bank_current": 4332281828.0,
+    "bank_previous": 4108892124.0
+  },
+  "eps_reported": {
+    "group_current": 13.07,
+    "group_previous": 12.41,
+    "bank_current": 12.69,
+    "bank_previous": 12.04
+  },
+  "nav_per_share_reported": {
+    "group_current": 193.0,
+    "group_previous": 178.0,
+    "bank_current": 190.0,
+    "bank_previous": 176.0
+  },
+  "eps_label": "Earning per share Basic earnings per share",
+  "pat_label": "Profit for the year",
+  "series": "NIMB",
+  "fy": "FY2081-82",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "NIMB_FY2081-82_annual_report.pdf",
+    "source_sha256": "07911bdcb2c9b930c57e4af25872deda49a96e56cef414d846c32dc7526c3aa0",
+    "cash_percent": 0.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 0.0,
+    "status": "documented-nil",
+    "pdf_page": 143,
+    "printed_page": 141,
+    "quote": "The Bank has not proposed any dividend for fiscal year 2081-82.",
+    "note": "Audited note 5.26; summary table p149 shows '-' for both columns for FY081/82."
+  },
+  "market": {
+    "status": "settled",
+    "disclosure_date": "2025-12-24",
+    "first_trading_date": "2025-12-28",
+    "mps_post_npr": 193.0,
+    "price_label": "Close",
+    "listed_security": "NIMB (Nepal Investment Mega Bank Limited, ordinary share)",
+    "disclosure_source": "NEPSE attachment: 39th AGM and book close notice of NIMB, published 2025-12-24 10:02:00 \u2014 attachment 1 is a single scanned page whose banner is the 39th AGM notice and summary annual financial statement, with large financial tables and an indicators table; corroborated by Merolagani announcement 2025-12-24 explicitly stating the bank published its annual financial statement for FY2081/82",
+    "price_source": "FinancialNotices CLOSE 193 (open 189, high 193, low 188.6, volume 133,425) agrees exactly with Merolagani LTP 193.00, same open/high/low/volume. First trading day 2025-12-28: 2025-12-25 is a Christmas holiday on the NEPSE holiday listing, Friday/Saturday are weekend days",
+    "corporate_action": "No dividend for FY2081/82 (NEPSE dividend declaration 2025-12-22 and NIMB cover letter both state no cash and no bonus); book close from 2026-01-02 until the AGM, after the price date",
+    "note": "Settled on file content and two agreeing price sources. Individual figures inside the scanned summary tables were not reliably legible at viewer zoom and are not quoted; the presence of the tables is unambiguous."
+  },
+  "source_file_name": "NIMB_FY2081-82_annual_report.pdf"
+}

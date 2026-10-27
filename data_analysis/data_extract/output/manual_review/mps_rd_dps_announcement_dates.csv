@@ -1,0 +1,31 @@
+bank,fy,announcement_type,announcement_date,mps_rd_price_date,before_price_date,note
+GBIME,FY2076-77,Dividend declaration,2020-10-28,2021-04-13,yes,2% cash 14% bonus
+GBIME,FY2077-78,Dividend declaration,2021-10-11,2022-04-13,yes,10% bonus 3.5% cash
+GBIME,FY2078-79,Dividend declaration,2022-10-31,2023-04-13,yes,3% bonus 10.6% cash
+GBIME,FY2079-80,Dividend declaration,2023-11-05,2024-04-14,yes,1% bonus 8% cash
+GBIME,FY2080-81,Dividend declaration,2024-10-08,2025-04-13,yes,5.5% bonus only
+GBIME,FY2081-82,Dividend declaration,2025-10-12,2026-04-13,yes,8% cash only
+HBL,FY2076-77,AGM only,2020-12-20,2021-04-13,yes,AGM detail shows 6% cash 14% bonus; no separate declaration title found
+HBL,FY2077-78,Dividend declaration,2021-10-08,2022-04-13,yes,21.38% bonus 4.62% cash
+HBL,FY2078-79,Dividend declaration,2022-12-20,2023-04-13,yes,8% bonus 11.11% cash
+HBL,FY2079-80,Dividend declaration,2023-12-20,2024-04-14,yes,Merolagani % fields blank; panel DPS 0 from annual report
+HBL,FY2080-81,Dividend declaration,2024-12-17,2025-04-13,yes,Merolagani % fields blank; panel DPS 0 from annual report
+HBL,FY2081-82,AGM only,2025-12-24,2026-04-13,yes,Himalayan Distillery HBL entry correctly excluded; panel DPS 0
+KBL,FY2076-77,Dividend declaration,2020-11-08,2021-04-13,yes,Revised 3.15% cash 10.85% bonus
+KBL,FY2077-78,Dividend declaration,2021-09-28,2022-04-13,yes,6% bonus 2.67% cash
+KBL,FY2078-79,Dividend declaration,2022-09-30,2023-04-13,yes,12.5% cash
+KBL,FY2079-80,Dividend declaration,2023-12-15,2024-04-14,yes,Panel DPS 0
+KBL,FY2080-81,Dividend declaration,2025-01-03,2025-04-13,yes,Panel DPS 0; note panel BOD-date note (2024-01-02) is superseded by this 2025 announcement date for timing
+KBL,FY2081-82,Dividend declaration,2025-11-13,2026-04-13,yes,Panel DPS 0
+NIMB,FY2076-77,Dividend declaration,2020-12-20,2021-04-13,yes,As NIB: 13% bonus 5.50% cash
+NIMB,FY2077-78,Dividend declaration,2021-10-04,2022-04-13,yes,First declaration 11.24%/4.76%; corrected 2021-10-20 to 12.611%/3.389% (panel uses corrected); both before price date
+NIMB,FY2078-79,Dividend declaration,2022-11-16,2023-04-13,yes,As NIB: 4% bonus 7% cash
+NIMB,FY2079-80,Dividend declaration,2024-02-02,2024-04-14,yes,Panel DPS 0
+NIMB,FY2080-81,Dividend declaration,2025-01-10,2025-04-13,yes,Panel DPS 0
+NIMB,FY2081-82,AGM only,2025-12-24,2026-04-13,yes,Panel DPS 0 documented by 2025-12-22 no-dividend letter (Merolagani detail field reads 080-081, so not used as the FY81-82 announcement here); AGM date itself is before price date
+NMB,FY2076-77,AGM only,2020-12-23,2021-04-13,yes,AGM detail shows 3.2% cash 13% bonus; no separate declaration title found
+NMB,FY2077-78,Dividend declaration,2021-10-31,2022-04-13,yes,12.5% bonus 3.3% cash
+NMB,FY2078-79,Dividend declaration,2022-12-06,2023-04-13,yes,8.25% cash
+NMB,FY2079-80,Dividend declaration,2023-11-30,2024-04-14,yes,Merolagani % fields blank; panel DPS 0 from annual report
+NMB,FY2080-81,Dividend declaration,2024-12-08,2025-04-13,yes,Merolagani % fields blank; panel DPS 0 from annual report
+NMB,FY2081-82,Dividend declaration,2025-11-23,2026-04-13,yes,5% cash 5% bonus

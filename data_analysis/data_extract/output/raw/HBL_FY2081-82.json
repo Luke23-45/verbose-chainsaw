@@ -1,0 +1,90 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/HBL/FY2081-82/HBL_FY2081-82_annual_report.pdf",
+  "sofp_pages": [
+    51,
+    52
+  ],
+  "sopl_pages": [
+    52
+  ],
+  "total_assets": {
+    "group_current": 376823365340.0,
+    "group_previous": 360759455829.0,
+    "bank_current": 371298729646.0,
+    "bank_previous": 355735814061.0
+  },
+  "total_liabilities": {
+    "group_current": 337674804949.0,
+    "group_previous": 322012186848.0,
+    "bank_current": 334674414848.0,
+    "bank_previous": 319112733399.0
+  },
+  "total_equity_attributable": {
+    "group_current": 38847056039.0,
+    "group_previous": 38486280809.0,
+    "bank_current": 36624314798.0,
+    "bank_previous": 36623080662.0
+  },
+  "total_equity": {
+    "group_current": 39148560391.0,
+    "group_previous": 38747268981.0,
+    "bank_current": 36624314798.0,
+    "bank_previous": 36623080662.0
+  },
+  "share_capital": {
+    "group_current": 21656615632.0,
+    "group_previous": 21656615632.0,
+    "bank_current": 21656615632.0,
+    "bank_previous": 21656615632.0
+  },
+  "profit_after_tax": {
+    "group_current": 547660343.0,
+    "group_previous": 1461390831.0,
+    "bank_current": 129726032.0,
+    "bank_previous": 1238303590.0
+  },
+  "profit_attributable": {
+    "group_current": 507144163.0,
+    "group_previous": 1458107826.0,
+    "bank_current": 129726032.0,
+    "bank_previous": 1238303590.0
+  },
+  "eps_reported": {
+    "group_current": 2.53,
+    "group_previous": 6.75,
+    "bank_current": 0.6,
+    "bank_previous": 5.72
+  },
+  "nav_per_share_reported": {
+    "group_current": 179.38,
+    "group_previous": 177.71,
+    "bank_current": 169.11,
+    "bank_previous": 169.11
+  },
+  "eps_label": "Earnings per share Basic earnings per share",
+  "pat_label": "Profit for the year",
+  "series": "HBL",
+  "fy": "FY2081-82",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "HBL_FY2081-82_annual_report.pdf",
+    "source_sha256": "ea1949d7b95fc556ba612c0d8684aa2eb8a57633f6a6a09004788b2e819d249e",
+    "cash_percent": 0.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 0.0,
+    "status": "documented-nil",
+    "pdf_page": 128,
+    "printed_page": 126,
+    "quote": "the Board of Directors has not declared any cash or stock dividend for the year.",
+    "note": "Notes sentence plus Principal Indicators p41/printed p39 showing '-' for both columns in the FY2024/25 column."
+  },
+  "market": {
+    "status": "pending",
+    "candidate_disclosure_date": "2025-12-24",
+    "candidate_first_trading_date": "2025-12-28",
+    "candidate_price_npr": 191.9,
+    "candidate_price_label": "Close/LTP agree",
+    "note": "HELD as pending by the user's 2026-10-27 decision. Candidate price 191.90 on 2025-12-28 is confirmed in two agreeing sources, and no dividend is confirmed, but the NEPSE attachment published 2025-12-24 is an AGM notice only (1-page newspaper notice, no statement tables or figures). No separate FY2081/82 statement disclosure was found in the sources checked, and the bank-filtered NEPSE search could not be completed, so that negative is limited, not proof of absence. Candidate fields are recorded for the record and are NEVER used as mps_post_npr or disclosure_date."
+  },
+  "source_file_name": "HBL_FY2081-82_annual_report.pdf"
+}

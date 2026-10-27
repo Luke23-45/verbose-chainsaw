@@ -1,0 +1,86 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/NIMB/FY2077-78/NIMB_FY2077-78_annual_report.pdf",
+  "sofp_pages": [
+    43,
+    44
+  ],
+  "sopl_pages": [
+    44
+  ],
+  "total_assets": {
+    "group_current": 230669232645.0,
+    "group_previous": 204187497740.0,
+    "bank_current": 227930126922.0,
+    "bank_previous": 203023897140.0
+  },
+  "total_liabilities": {
+    "group_current": 198023482787.0,
+    "group_previous": 176755568075.0,
+    "bank_current": 195695215294.0,
+    "bank_previous": 175850733409.0
+  },
+  "total_equity_attributable": {
+    "group_current": 32645749858.0,
+    "group_previous": 27431929665.0,
+    "bank_current": 32234911628.0,
+    "bank_previous": 27173163731.0
+  },
+  "total_equity": {
+    "group_current": 32645749858.0,
+    "group_previous": 27431929665.0,
+    "bank_current": 32234911628.0,
+    "bank_previous": 27173163731.0
+  },
+  "share_capital": {
+    "group_current": 16257329500.0,
+    "group_previous": 14248954500.0,
+    "bank_current": 16257329500.0,
+    "bank_previous": 14248954500.0
+  },
+  "profit_after_tax": {
+    "group_current": 3702194730.0,
+    "group_previous": 2457262295.0,
+    "bank_current": 3558605809.0,
+    "bank_previous": 2423186059.0
+  },
+  "profit_attributable": {
+    "group_current": 3702194730.0,
+    "group_previous": 2457262295.0,
+    "bank_current": 3558605809.0,
+    "bank_previous": 2423186059.0
+  },
+  "eps_reported": {
+    "group_current": 22.89,
+    "group_previous": 17.27,
+    "bank_current": 22.0,
+    "bank_previous": 17.03
+  },
+  "nav_per_share_reported": {
+    "group_current": 201.0,
+    "group_previous": 193.0,
+    "bank_current": 198.0,
+    "bank_previous": 191.0
+  },
+  "eps_label": "Earning per share Basic earnings per share",
+  "pat_label": "Profit for the year",
+  "series": "NIMB",
+  "fy": "FY2077-78",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "NIMB_FY2077-78_annual_report.pdf",
+    "source_sha256": "10600b369c50b05fde5eb57b9174d3258745a3675400e58f92245385dd11f42d",
+    "cash_percent": 3.389,
+    "bonus_percent": 12.611,
+    "dps_npr": 3.389,
+    "status": "proposed",
+    "pdf_page": 141,
+    "printed_page": 139,
+    "quote": "The Bank's Board has proposed total dividend of 16.00% (NPR 2,601,172,720) of which, 3.389% cash dividend (NPR 550,960,897) and 12.611% stock dividend (NPR 2,050,211,823) for the fiscal year 2020-21 subject to approval from NRB and annual general meeting.",
+    "note": "Cash % printed to three decimals, recorded exactly as printed (summary tables round it to 3.39%). Summary table p142 agrees."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "NIMB_FY2077-78_annual_report.pdf"
+}

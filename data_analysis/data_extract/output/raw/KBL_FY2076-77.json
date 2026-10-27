@@ -1,0 +1,104 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/KBL/FY2076-77/KBL_FY2076-77_annual_report.pdf",
+  "sofp_pages": [
+    49
+  ],
+  "sopl_pages": [
+    50
+  ],
+  "total_assets": {
+    "bank_current": 153341629610,
+    "bank_previous": 105311485153,
+    "group_current": 153464178691,
+    "group_previous": 105341404409
+  },
+  "total_liabilities": {
+    "bank_current": 136073455939,
+    "bank_previous": 93592399626,
+    "group_current": 136054595483,
+    "group_previous": 93572421031
+  },
+  "total_equity_attributable": {
+    "bank_current": 17268173670,
+    "bank_previous": 11719085527,
+    "group_current": 17409583208,
+    "group_previous": 11768983378
+  },
+  "total_equity": {
+    "bank_current": 17268173670,
+    "bank_previous": 11719085527,
+    "group_current": 17409583208,
+    "group_previous": 11768983378
+  },
+  "share_capital": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 12520049469,
+    "bank_previous": null
+  },
+  "profit_after_tax": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 1158505956,
+    "bank_previous": null
+  },
+  "profit_attributable": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 1158505956,
+    "bank_previous": null
+  },
+  "eps_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 12.08,
+    "bank_previous": null
+  },
+  "nav_per_share_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 137.92,
+    "bank_previous": null
+  },
+  "eps_label": "Earnings per share Basic earnings per share",
+  "pat_label": null,
+  "series": "KBL",
+  "fy": "FY2076-77",
+  "visual_extraction": {
+    "method": "visual_page_read",
+    "source_file": "KBL_FY2076-77_annual_report.pdf",
+    "source_sha256": "a86ac977fc7f6a065baa6aa9b4f3a764672a17abe2605d1c35d96ee695324f43",
+    "statement": "Statement of Financial Position, As on 31st Ashad 2077",
+    "sofp_pdf_page": 49,
+    "sofp_printed_page": 53,
+    "sopl_pdf_page": 50,
+    "sopl_printed_page": 54,
+    "identity_check": {
+      "bank_current": "136073455939 + 17268173670 = 153341629609, 1 NPR below printed total 153341629610 (printed rounding)",
+      "bank_previous": "93592399626 + 11719085527 = 105311485153, exact",
+      "group_current": "136054595483 + 17409583208 = 153464178691, exact",
+      "group_previous": "93572421031 + 11768983378 = 105341404409, exact"
+    },
+    "cross_check": "Bank previous (FY2075-76) total assets 105311485153 is the opening value needed for ROA; it is independent of the current-year restatement, because it comes from the own report's previous column, not from the FY2077-78 report.",
+    "supersedes": "The earlier manual correction took KBL FY2076-77 current total assets (145971942062) and liabilities (128703768392) from the FY2077-78 report's previous column. The visual read of KBL's OWN FY2076-77 SOFP shows different current values: total assets 153341629610 and liabilities 136073455939. The difference is 7369687548 in both cases, exactly the own report's derivative financial instruments lines (assets 7416210368 in the own report vs 46522820 in the FY2077-78 previous column; liabilities 7369687548 in the own report). The FY2077-78 previous column is therefore a restatement, not the own report's figure, and under the panel rule (each year uses its own current column) the own-report values supersede it. All other KBL FY2076-77 panel values are unchanged: share capital, equity, PAT, EPS and NAV match the own report exactly."
+  },
+  "manual_correction": "Original manual entry used the previous column of KBL FY2077-78 report SOFP p34 / SOPL; that entry is SUPERSEDED by the own-report visual read (see visual note appended by apply_visual_overrides): own-report identity 136073455939+17268173670=153341629609, 1 NPR below printed total 153341629610 (rounding); BVPS 17268173670/125200494.69=137.92 exact. VISUAL EXTRACTION (page image, not text layer): Visual read, KBL FY2076-77 SOFP PDF p49 (printed p53): Bank FY2075-76 total assets 105311485153; identity 93592399626 + 11719085527 = 105311485153 exact. Own-report Bank current total assets 153341629610 and liabilities 136073455939 supersede the restated FY2077-78 previous-column figures (145971942062 / 128703768392). ROA is now computable on a consistent own-report basis from (105311485153 + 153341629610) / 2.",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "KBL_FY2076-77_annual_report.pdf",
+    "source_sha256": "a86ac977fc7f6a065baa6aa9b4f3a764672a17abe2605d1c35d96ee695324f43",
+    "cash_percent": 3.15,
+    "bonus_percent": 10.85,
+    "dps_npr": 3.15,
+    "status": "proposed",
+    "pdf_page": 117,
+    "printed_page": 121,
+    "quote": "Bank's BOD meeting held on 6th November 2020 has decided to propose Rs 1,358,425,367.35 (10.85% of the existing paid-up capital) as bonus shares and Rs 394,381,558.26 (3.15% of the existing paid up capital) as cash dividend (inclusive for tax purpose, if any) from the retained earnings upto FY 2076/77",
+    "note": "Board report year label 'FY2075/76' for the same proposal is treated as a mislabel: Note 5.13 date (6 Nov 2020, after FY2076/77 year-end), p35 ('proposed 10.85% share dividends for FY2076/77'), amount checks against panel share capital, and FY2077-78 equity statement (bonus issued 1,358,425,367, cash paid 394,381,558, lead-checked) all assign it to FY2076-77."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "KBL_FY2076-77_annual_report.pdf"
+}

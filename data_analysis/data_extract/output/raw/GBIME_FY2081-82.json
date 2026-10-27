@@ -1,0 +1,94 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/GBIME/FY2081-82/GBIME_FY2081-82_annual_report.pdf",
+  "sofp_pages": [
+    182,
+    183
+  ],
+  "sopl_pages": [
+    183
+  ],
+  "total_assets": {
+    "group_current": 696902968945.0,
+    "group_previous": 611779362196.0,
+    "bank_current": 688080397999.0,
+    "bank_previous": 604518117074.0
+  },
+  "total_liabilities": {
+    "group_current": 628022097850.0,
+    "group_previous": 548625844867.0,
+    "bank_current": 621452990514.0,
+    "bank_previous": 543110969431.0
+  },
+  "total_equity_attributable": {
+    "group_current": 68194559497.0,
+    "group_previous": 62553860416.0,
+    "bank_current": 66627407485.0,
+    "bank_previous": 61407147643.0
+  },
+  "total_equity": {
+    "group_current": 68194559497.0,
+    "group_previous": 62553860416.0,
+    "bank_current": 66627407485.0,
+    "bank_previous": 61407147643.0
+  },
+  "share_capital": {
+    "group_current": 38115852616.0,
+    "group_previous": 36128770252.0,
+    "bank_current": 38115852616.0,
+    "bank_previous": 36128770252.0
+  },
+  "profit_after_tax": {
+    "group_current": 5605810719.0,
+    "group_previous": 6219271751.0,
+    "bank_current": 5076303895.0,
+    "bank_previous": 6137454261.0
+  },
+  "profit_attributable": {
+    "group_current": 5605810719.0,
+    "group_previous": 6219271751.0,
+    "bank_current": 5076303895.0,
+    "bank_previous": 6137454261.0
+  },
+  "eps_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 13.32,
+    "bank_previous": 16.99
+  },
+  "nav_per_share_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 174.8,
+    "bank_previous": 169.97
+  },
+  "eps_label": "Earnings per Share Basic earnings per share",
+  "pat_label": "Profit for the Year",
+  "series": "GBIME",
+  "fy": "FY2081-82",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "GBIME_FY2081-82_annual_report.pdf",
+    "source_sha256": "59c65f10642a2ecaf34ae96a3730dc6e5a3bd14cf9eb21bb5cab26c0b647e7ad",
+    "cash_percent": 8.0,
+    "bonus_percent": 0.0,
+    "dps_npr": 8.0,
+    "status": "proposed",
+    "pdf_page": 108,
+    "printed_page": 102,
+    "quote": "The Board proposes the distribution of a cash dividend for FY 2025. The proposed dividend is 8.00 percent (including tax) of the Bank's paid-up capital of NPR 38,115,852,615.86, amounting to NPR 3,049,268,209.28",
+    "note": "Lead-verified: board p108 and Distribution of Profit p121 agree, cash only, no bonus proposed."
+  },
+  "market": {
+    "status": "settled",
+    "disclosure_date": "2025-10-16",
+    "first_trading_date": "2025-10-19",
+    "mps_post_npr": 240.0,
+    "price_label": "LTP",
+    "listed_security": "GBIME (Global IME Bank Limited, ordinary share)",
+    "disclosure_source": "NEPSE attachment: 19th AGM Notice [GBIME], published 2025-10-16 10:07:09 \u2014 pages 2-3 contain the FY2081/82 summary financial-statement tables; corroborated by ShareSansar announcement 2025-10-16 stating the bank published its FY2081/82 financial highlights",
+    "price_source": "Merolagani datewise, autocomplete-selected GBIME ordinary share: 2025-10-19 LTP 240.00 (open 236.00, high 244.40, low 231.40, qty 285,064). NEPSE Close NOT verified (filter would not apply for GBIME); FinancialNotices window reaches back only to 2025-10-28",
+    "corporate_action": "8% cash only, no bonus (NEPSE entry body and agenda item 4 inside the notice); book close 2025-11-02, after the price date",
+    "note": "Settled on file content. LTP only, not a NEPSE Close \u2014 label stated openly. October 15 alternative rejected: the two NEPSE entries published 2025-10-15 (approved 2025-10-16 morning) contain AGM/book-close information only, no tables; the tables appear only in the October 16 document."
+  },
+  "source_file_name": "GBIME_FY2081-82_annual_report.pdf"
+}

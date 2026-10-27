@@ -1,0 +1,90 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/NMB/FY2081-82/NMB_FY2081-82_annual_report.pdf",
+  "sofp_pages": [
+    37,
+    38
+  ],
+  "sopl_pages": [
+    38
+  ],
+  "total_assets": {
+    "group_current": 370597360630.0,
+    "group_previous": 298985835292.0,
+    "bank_current": 351592507206.0,
+    "bank_previous": 294868161721.0
+  },
+  "total_liabilities": {
+    "group_current": 337211927389.0,
+    "group_previous": 269007453741.0,
+    "bank_current": 319417899049.0,
+    "bank_previous": 265896650469.0
+  },
+  "total_equity_attributable": {
+    "group_current": 32896309442.0,
+    "group_previous": 29519363863.0,
+    "bank_current": 32174608156.0,
+    "bank_previous": 28971511251.0
+  },
+  "total_equity": {
+    "group_current": 33385433241.0,
+    "group_previous": 29978381551.0,
+    "bank_current": 32174608156.0,
+    "bank_previous": 28971511251.0
+  },
+  "share_capital": {
+    "group_current": 18366705959.0,
+    "group_previous": 18366705959.0,
+    "bank_current": 18366705959.0,
+    "bank_previous": 18366705959.0
+  },
+  "profit_after_tax": {
+    "group_current": 3063269190.0,
+    "group_previous": 2239707361.0,
+    "bank_current": 2854638357.0,
+    "bank_previous": 2244395304.0
+  },
+  "profit_attributable": {
+    "group_current": 3028524383.0,
+    "group_previous": 2264432336.0,
+    "bank_current": 2854638357.0,
+    "bank_previous": 2244395304.0
+  },
+  "eps_reported": {
+    "group_current": 16.68,
+    "group_previous": 12.19,
+    "bank_current": 15.54,
+    "bank_previous": 12.22
+  },
+  "nav_per_share_reported": {
+    "group_current": 178.39,
+    "group_previous": 159.89,
+    "bank_current": 174.49,
+    "bank_previous": 156.93
+  },
+  "eps_label": "Earnings per share Basic earnings per share (BEPS)",
+  "pat_label": "Profit for the period",
+  "series": "NMB",
+  "fy": "FY2081-82",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "NMB_FY2081-82_annual_report.pdf",
+    "source_sha256": "fb4ebe0e5111de562e5a9ac2162307cba666e2a3fb93c93298d1b0c992e63da8",
+    "cash_percent": 5.0,
+    "bonus_percent": 5.0,
+    "dps_npr": 5.0,
+    "status": "proposed",
+    "pdf_page": 17,
+    "printed_page": 17,
+    "quote": "10% dividend to be distributed as 5% bonus shares and 5% cash dividend (including tax provisions on cash dividend and bonus share) has been recommended.",
+    "note": "AGM notice p6 (cash 918,335,297.96 = 5% x 18,366,705,959.24) and Chairman p12 agree with Board section 8."
+  },
+  "market": {
+    "status": "pending",
+    "candidate_disclosure_date": "2025-12-16",
+    "candidate_first_trading_date": "2025-12-17",
+    "candidate_price_npr": 256.1,
+    "candidate_price_label": "Close (NEPSE)",
+    "note": "HELD as pending by the user's 2026-10-27 decision. Candidate price 256.10 on 2025-12-17 is confirmed as a NEPSE Close Price and agrees exactly with two other sources, and book close 2025-12-24 is after the price date, but no separate NEPSE disclosure carrying the statement tables was found. The December 16 file contains no readable tables (only a summary-statement heading at the foot of page 2); its cover letter asserts the summary statement was published that day in Nepal Samacharpatra, and the aggregator entry for December 16 states the bank published its annual financial statement, with no attachment. Candidate fields are NEVER used as mps_post_npr or disclosure_date."
+  },
+  "source_file_name": "NMB_FY2081-82_annual_report.pdf"
+}

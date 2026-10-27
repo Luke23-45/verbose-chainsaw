@@ -1,0 +1,87 @@
+{
+  "source_file": "/home/hatch/workspace/verbose-chainsaw/data/reports/NMB/FY2076-77/NMB_FY2076-77_annual_report.pdf",
+  "sofp_pages": [
+    184,
+    185
+  ],
+  "sopl_pages": [
+    185
+  ],
+  "total_assets": {
+    "group_current": null,
+    "group_previous": 138684555985,
+    "bank_current": 179451914903,
+    "bank_previous": 135470409573
+  },
+  "total_liabilities": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 158516529660,
+    "bank_previous": null
+  },
+  "total_equity_attributable": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 20935385243,
+    "bank_previous": null
+  },
+  "total_equity": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 20935385243,
+    "bank_previous": null
+  },
+  "share_capital": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 13950987467,
+    "bank_previous": null
+  },
+  "profit_after_tax": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 1712776521,
+    "bank_previous": null
+  },
+  "profit_attributable": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 1712776521,
+    "bank_previous": null
+  },
+  "eps_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 12.62,
+    "bank_previous": null
+  },
+  "nav_per_share_reported": {
+    "group_current": null,
+    "group_previous": null,
+    "bank_current": 150.06,
+    "bank_previous": null
+  },
+  "eps_label": "Earnings per share Basic earnings per share",
+  "pat_label": null,
+  "series": "NMB",
+  "fy": "FY2076-77",
+  "dividend": {
+    "method": "text_page_read",
+    "source_file": "NMB_FY2076-77_annual_report.pdf",
+    "source_sha256": "2ef3c667e974820dc3e7c84f9998daa636ccd1288637e540b82df78cd0f3f737",
+    "cash_percent": 3.2,
+    "bonus_percent": 13.0,
+    "dps_npr": 3.2,
+    "status": "proposed",
+    "pdf_page": 18,
+    "printed_page": 18,
+    "quote": "distributing 16.20 percent Dividend (13 percent Stock Dividend and 3.20 percent Cash Dividend including Tax)",
+    "note": "AGM notice p7 (cash 462,328,094.94 = 3.20% x paid-up 14,447,752,966.96) and Chairman p11 agree with Board section 8."
+  },
+  "market": {
+    "status": "unavailable",
+    "note": "No MPS_post entry yet \u2014 disclosure date and price not yet collected or verified from NEPSE records."
+  },
+  "source_file_name": "NMB_FY2076-77_annual_report.pdf",
+  "manual_correction": "Previous column of NMB FY2077-78 report SOFP pp40-41; PAT/EPS from NMB FY2076-77 SOPL p46 direct text; opening assets 135470409573 from FY2076-77 SOFP p44 previous column; identity 158516529660+20935385243=179451914903 exact; BVPS 20935385243/139509874.67=150.06 exact."
+}

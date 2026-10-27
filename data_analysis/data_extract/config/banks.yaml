@@ -1,0 +1,45 @@
+# Five bank series. `series` is the folder/file code used in data/reports/.
+# Pre-merger rows name the acquiring institution; post-merger rows name the
+# consolidated institution. FY 2079/80 is the transition year for the four
+# merged series and is flagged, never described as clean pre/post.
+series:
+  - code: GBIME
+    current_name: Global IME Bank Limited
+    pre_merger_name: Global IME Bank Limited
+    post_merger_name: Global IME Bank Limited
+    absorbed: Bank of Kathmandu
+    joint_operation: "2023-01-09"
+    swap_ratio: "1:1"
+    merged: true
+  - code: HBL
+    current_name: Himalayan Bank Limited
+    pre_merger_name: Himalayan Bank Limited
+    post_merger_name: Himalayan Bank Limited
+    absorbed: Civil Bank
+    joint_operation: "2023-02-24"
+    swap_ratio: "100:80.28"
+    merged: true
+  - code: KBL
+    current_name: Kumari Bank Limited
+    pre_merger_name: Kumari Bank Limited
+    post_merger_name: Kumari Bank Limited
+    absorbed: Nepal Credit and Commerce Bank
+    joint_operation: "2023-01-01"
+    swap_ratio: "1:1"
+    merged: true
+  - code: NIMB
+    current_name: Nepal Investment Mega Bank Limited
+    pre_merger_name: Nepal Investment Bank Limited
+    post_merger_name: Nepal Investment Mega Bank Limited
+    absorbed: Mega Bank Nepal Limited
+    joint_operation: "2023-01-11"
+    swap_ratio: "100:90"
+    merged: true
+  - code: NMB
+    current_name: NMB Bank Limited
+    pre_merger_name: NMB Bank Limited
+    post_merger_name: NMB Bank Limited
+    absorbed: null
+    joint_operation: null
+    swap_ratio: null
+    merged: false
