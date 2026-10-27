@@ -117,11 +117,11 @@ The conceptual research framework guiding this study is rooted in the accounting
 
 The operational definitions of all variables are as follows:
 
-\textbf{Market Price per Share at Reporting Deadline ($\mathit{MPS}^{RD}$):} The dependent variable, measured in Nepalese Rupees (NPR), is the closing market price on NEPSE on the first trading session following the statutory nine-month audited-reporting publication deadline specified under Section 59(2) of the Banks and Financial Institutions Act, 2017 \citep{bafia2017}, operationalized at the end of Chaitra (mid-April) of the following fiscal year. The first subsequent NEPSE trading day on which a valid trade is executed establishes $\mathit{MPS}^{RD}$. This fixed reporting-window measurement guarantees that audited accounts were legally required to be public, avoiding the look-ahead error of Ashadh-end prices and the measurement ambiguity of reconstructing 30 unverified corporate announcement timestamps. If a security was suspended from trading or recorded no transactions within a five-day calendar window following the deadline, the observation is coded as missing rather than imputed from stale dates. Two bank-year observations fail this freshness rule due to prolonged merger-related trading suspensions: HBL FY 2077/78 (trading resumed 6 June 2022, 54 days late) and NIMB FY 2077/78 (trading resumed 30 May 2022, 47 days late). Consequently, 28 clean price observations are realized for empirical analysis.
+\textbf{Market Price per Share at Reporting Deadline ($\mathit{MPS}^{RD}$):} The dependent variable, measured in Nepalese Rupees (NPR), is the secondary market closing price for ordinary shares on the first trading session following the statutory nine-month audited-reporting publication deadline specified under Section 59(2) of the Banks and Financial Institutions Act, 2017 \citep{bafia2017}, operationalized at the end of Chaitra (mid-April) of the following fiscal year. Market prices are retrieved from cross-checked capital market data series (ShareSansar, Merolagani, and FinancialNotices) and reconciled against historical trading archives. This fixed reporting-window measurement relies on the statutory mandate that audited annual accounts be made public within this nine-month window, avoiding the look-ahead error of Ashadh-end prices and the measurement ambiguity of reconstructing 30 unverified corporate announcement timestamps. If a security was suspended from trading or recorded no transactions within a five-day calendar window following the deadline, the observation is coded as missing rather than imputed from stale dates. Two bank-year observations fail this freshness rule due to prolonged merger-related trading suspensions: HBL FY 2077/78 (trading resumed 6 June 2022, 54 days late) and NIMB FY 2077/78 (trading resumed 30 May 2022, 47 days late). Consequently, 28 clean price observations are realized for empirical analysis, as presented in Table~\ref{tab:mps_rd}.
 
 \textbf{Earnings per Share (EPS):} Basic earnings per share, in NPR per ordinary share, extracted from each fiscal year's own audited Statement of Profit or Loss (the own-current reported basic EPS rule). EPS reflects net profit attributable to ordinary equity holders divided by the weighted-average number of ordinary shares outstanding during the fiscal year. Retrospective audited restatements reported in subsequent annual reports are retained for sensitivity analysis rather than overwriting original audited figures.
 
-\textbf{Book Value per Share (BVPS):} Net worth per ordinary share, in NPR, calculated as total ordinary shareholders' equity attributable to equity holders of the bank at fiscal year-end divided by the number of ordinary shares outstanding at that date, corresponding to the bank's reported Net Asset Value (NAV) per share. Audited reported figures are verified against balance-sheet components.
+\textbf{Book Value per Share (BVPS):} Net worth per ordinary share, in NPR, calculated as total ordinary shareholders' equity attributable to equity holders of the bank at fiscal year-end divided by the number of ordinary shares outstanding at that date, recomputed from balance-sheet components with printed Net Asset Value (NAV) per share utilized as an audit reconciliation check.
 
 \textbf{Consolidation Period Indicator ($\mathit{Post}_t$):} A binary temporal indicator variable set to $1$ for observations belonging to the post-consolidation period (FY 2079/80, 2080/81, and 2081/82) and $0$ for observations in the pre-consolidation period (FY 2076/77, 2077/78, and 2078/79). This variable interacts with EPS and BVPS to test for parameter shifts across the two periods.
 
@@ -132,6 +132,32 @@ The operational definitions of all variables are as follows:
 \end{itemize}
 
 \textbf{Exclusion of Price-Derived Ratios:} The price-earnings (P/E) ratio is strictly excluded from all specifications because $\text{P/E}=\text{MPS}/\text{EPS}$. Including a variable that embeds the dependent variable directly in its numerator creates artificial correlation and distorts coefficient interpretation.
+
+\begin{table}[!ht]
+\centering
+\small
+\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
+\caption{Realized $MPS^{RD}$ observation dates, market closing prices, and trading status}
+\label{tab:mps_rd}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Fiscal Year} & \textbf{Target Date} & \textbf{GBIME} & \textbf{HBL} & \textbf{KBL} & \textbf{NIMB} & \textbf{NMB} \\
+\midrule
+FY 2076/77 & 13 April 2021 & 450.00 & 520.00 & 328.00 & 466.00 & 437.00 \\
+FY 2077/78 & 13 April 2022 & 299.70 & \textit{Missing}$^a$ & 222.00 & \textit{Missing}$^b$ & 293.00 \\
+FY 2078/79 & 13 April 2023 & 189.00$^c$ & 231.00$^c$ & 176.00$^c$ & 191.00$^c$ & 235.00 \\
+FY 2079/80 & 14 April 2024$^d$ & 179.00 & 183.00 & 136.90 & 156.00 & 176.00 \\
+FY 2080/81 & 13 April 2025 & 218.69 & 231.07 & 206.03 & 211.51 & 251.13 \\
+FY 2081/82 & 13 April 2026 & 238.00 & 208.50 & 229.00 & 210.70 & 248.40 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Prices in NPR per share retrieved from capital market data aggregators (ShareSansar, Merolagani, FinancialNotices). $^a$HBL trading suspended during merger negotiations until 6 June 2022 (54 days late); $^b$NIMB (formerly NIB) suspended until 30 May 2022 (47 days late); both coded as missing under the 5-day freshness rule. $^c$Entity timing transition: fundamentals reflect pre-merger standalone operations, while April 2023 prices reflect post-merger consolidated trading. $^d$Chaitra end fell on Friday, 12 April 2024; Sunday, 14 April 2024 was the first subsequent NEPSE trading session. Realized clean $N = 28$ observations (13 pre-consolidation, 15 post-consolidation).
+\end{minipage}
+\end{table}
 
 \subsection{Methods of analysis}
 Data analysis is structured to describe the properties of the data, assess econometric assumptions, and test the research hypotheses using panel regression methods.
@@ -169,15 +195,16 @@ The analytical protocol proceeds through the following sequential steps:
   \item \textbf{Robustness and Sensitivity Checks:}
   \begin{itemize}
     \item \textit{ROA Specification:} EPS is replaced with ROA in Models~1 and 2 to evaluate sensitivity to an asset-scaled profitability measure.
-    \item \textit{Dividend Specification:} Eligible DPS observations are incorporated into the specification for bank-years where dividend announcements preceded the price window, noting the reduction in degrees of freedom.
+    \item \textit{Dividend Specification:} In supplementary estimation, eligible DPS is included as an explanatory variable in Models~1 and 2 for bank-years where dividend declarations preceded the price window, noting that adding DPS reduces residual degrees of freedom in Model~2 from 14 to 13 on the clean $N = 28$ sample.
     \item \textit{Transition and Entity-Timing Sensitivity:} Model~2 is re-estimated excluding: (a) the transition fiscal year (FY 2079/80) to verify results are not driven by the initial merger shock; and (b) FY 2078/79 to account for entity timing mismatch where pre-merger fundamentals are paired with post-consolidation April 2023 market prices.
     \item \textit{Bonus Share Adjustments:} Models are re-estimated using bonus-adjusted per-share metrics to evaluate parameter stability.
+    \item \textit{Restated EPS Sensitivity:} Specifications are re-estimated using retrospective audited basic EPS restatements from subsequent annual reports to evaluate slope stability against subsequent-year capital adjustments.
   \end{itemize}
   \item \textbf{Econometric Diagnostics and Inferential Caveats:}
   Diagnostic checks include Variance Inflation Factors (VIF) and tolerance statistics for multicollinearity, the Breusch-Pagan/Cook-Weisberg test for heteroskedasticity, Cook's distance for influential outliers, and Q-Q plots for residual normality.
   
   \begin{sloppypar}
-  For the realized clean sample of $N = 28$ observations (comprising 13 pre-consolidation and 15 post-consolidation rows), Model~2 estimates 14 parameters (one constant, 4 bank fixed effects, 5 year fixed effects, and 4 slope coefficients), yielding $28 - 14 = 14$ residual degrees of freedom. Furthermore, econometric literature demonstrates that cluster-robust standard errors are unreliable when the number of clusters is small ($G = 5$) \citep{cameron2008clusters}. Accordingly, hypothesis tests and standard errors are computed using MacKinnon-White HC3 heteroskedasticity-robust standard errors, and inference is interpreted cautiously as exploratory indicators. Results are framed as observed differences in empirical associations across structural periods rather than causal impacts of mergers.
+  Across the realized clean sample of $N = 28$ observations (13 pre-consolidation and 15 post-consolidation rows), Model~2 estimates 14 parameters (one constant, 4 bank fixed effects, 5 year fixed effects, and 4 slope coefficients), yielding $28 - 14 = 14$ residual degrees of freedom. In addition, econometric research demonstrates that cluster-robust standard errors are unreliable when the number of clusters is small ($G = 5$) \citep{cameron2008clusters}. Accordingly, hypothesis tests and standard errors are computed using MacKinnon-White HC3 heteroskedasticity-robust standard errors, and inference is interpreted cautiously as exploratory indicators. Results are framed as observed differences in empirical associations across structural periods rather than causal impacts of mergers.
   \end{sloppypar}
   
   Additionally, because fiscal-year fixed effects absorb the market-wide price level (macroeconomic trends and NEPSE index movements), slope parameters are identified through within-year cross-sectional variation among the sampled banks. To ensure full transparency regarding specification sensitivity, baseline two-way fixed-effects estimates are compared against pooled OLS and bank-only fixed-effects models.
