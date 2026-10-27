@@ -1,39 +1,43 @@
 \section{Problem statement}
 
-Reported findings on the association of accounting fundamentals with bank share
-prices vary across studies, samples, and periods. The problem addressed here is
-that these estimates are not directly comparable without accounting for their
-different samples, periods, variable definitions, and model specifications.
-The early-2023 mergers changed ownership and reporting boundaries of several
-institutions \citep{nrb2023list}, but the present study does not treat that
-consolidation as a causal intervention.
+Existing studies of Nepalese commercial banks have examined associations between
+market prices and accounting indicators such as earnings per share, book value
+per share, dividend measures, and profitability ratios. Findings vary across
+studies, samples, and periods. For example, \citet{chhetri2023} reports a
+positive ROA coefficient, \citet{chaudhari2025} reports a negative one, and
+\citet{gyawali2022} reports a positive but statistically insignificant ROA
+coefficient. For BVPS, \citet{joshi2023} report a positive association while
+\citet{pant2024} report a negative, statistically insignificant coefficient.
+These estimates are not directly comparable because they use different samples,
+periods, variable definitions, and model specifications.
 
-For example, Chhetri (2023) reports a positive ROA coefficient, Chaudhari (2025)
-reports a negative one, and Gyawali (2022) reports a positive but statistically
-insignificant ROA coefficient. For BVPS, Joshi et al. (2023) report a positive
-association while Pant et al. (2024) report a negative, statistically
-insignificant coefficient. These estimates are not directly comparable because
-they use different samples, periods, variable definitions, and model
-specifications. Moreover, Pant et al. (2024), Chaudhari (2025), and Timalsina
-(2026) include observations through FY 2023/24, so the case for this proposal
-is not that all prior evidence predates the consolidation.
+However, conventional pooled models primarily estimate average relationships
+across the observation period. They do not explicitly test whether the
+association between accounting fundamentals and market valuation changed across
+the early-2023 banking consolidation. The consolidation period provides a
+setting in which to examine this question: four of the five largest mergers
+began joint operation in January--February 2023, altering ownership and
+reporting boundaries of several institutions \citep{nrb2023list}.
 
-Recent panel evidence also exists: \citet{gurungdahal2025} analyze ten banks
-through FY 2023/24 and select fixed effects over random effects using a Hausman
-test. A 2026 census study examines all 19 listed commercial banks and reports
-positive EPS, DPS, and payout-ratio findings, while also including price-derived
-ratios \citep{bhandari2026}. The present study therefore does not claim to fill
-an absence of recent evidence on bank share prices. Its narrower extension is
-to apply a stated post-disclosure price-date rule to up to five purposively
-selected bank series through FY 2081/82, while documenting changes in reporting
-boundaries around mergers. It describes associations in those series; it does
-not identify a merger effect or a change in coefficients across periods.
+A second design consideration is the use of price-derived ratios such as P/E as
+explanatory variables. Because $\text{P/E}=\text{MPS}/\text{EPS}$, including
+P/E in a model whose outcome is MPS creates definitional overlap and
+complicates interpretation. This proposal excludes P/E and defines the
+explanatory variables using accounting information that is not algebraically
+constructed from the observed dependent-variable price.
+
+A third consideration is timing. Prior studies have used fiscal-year-end prices,
+annual averages, or unspecified observation dates. This proposal defines the
+dependent variable using a standardized price-measurement rule tied to the
+statutory audited-reporting deadline under the Banks and Financial Institutions
+Act, Section 59(2) \citep{bafia2017}. This provides a reproducible observation
+date rather than requiring individual disclosure timestamps for each bank-year.
 
 The study addresses the following questions:
 {\renewcommand{\theenumi}{\Roman{enumi}}
 \begin{enumerate}[label=\Roman*.,align=right,leftmargin=44.2pt,labelwidth=30pt,labelsep=14.2pt]
-  \item What levels and fiscal-year patterns are observed for EPS, DPS, BVPS, ROA, and post-disclosure share prices in the sampled bank series?
-  \item How is each of EPS, DPS, BVPS, and ROA associated with post-disclosure market price per share?
-  \item How are EPS, DPS, BVPS, and ROA jointly associated with post-disclosure market price per share?
+  \item Are EPS and BVPS associated with the observed market prices of the selected Nepalese commercial banks?
+  \item Did the estimated associations of EPS and BVPS with market prices differ between the pre- and post-consolidation periods?
+  \item Are the principal findings robust to alternative accounting-variable specifications and treatment of the transition year?
 \end{enumerate}
 }

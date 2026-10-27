@@ -36,7 +36,7 @@ The potential contribution, therefore, is not merely using newer data or adding 
 
 PROPOSED THESIS TITLE
 
-# Accounting Value Relevance Across Nepal's 2023 Banking Consolidation: Evidence from Selected Commercial Banks
+# VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS
 
 Research design at a glance
 
@@ -168,7 +168,7 @@ NBER+1
 
 The following is the proposed final wording for your research design, subject to validating the fixed-window price series.
 
-# Accounting Value Relevance Across Nepal's 2023 Banking Consolidation: Evidence from Selected Commercial Banks
+# VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS
 
 ## Research Problem
 

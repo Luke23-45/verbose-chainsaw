@@ -1,258 +1,142 @@
 \section{Research methodology}
 
 \subsection{Research design}
-This study uses a quantitative, descriptive and correlational design with
-secondary data \citep{pant2016}. The design fits the research questions because
-they describe observed values and estimate associations, and the study does not
-manipulate variables or identify causal effects.
+This study adopts a quantitative, correlational, and comparative panel research design utilizing secondary financial and market data \citep{pant2016}. The design is aligned with the research questions and objectives: it describes observed accounting fundamentals and share prices, estimates baseline value-relevance associations, and evaluates whether these associations differed before and after the banking consolidation wave. Because the researcher does not manipulate variables or assign institutions to treatments, the analysis is non-experimental and observational.
 
-Descriptive statistics summarize EPS, DPS, BVPS, ROA, and
-$\mathit{MPS}^{post}$ by bank series and fiscal year. Pearson correlations
-describe pairwise associations. Pooled ordinary least squares (OLS) estimates
-the joint conditional associations specified in Eq.~\ref{eq:main}.
+Descriptive statistics summarize earnings per share (EPS), book value per share (BVPS), supplementary variables (ROA, DPS), and the standardized reporting-deadline market price ($\mathit{MPS}^{RD}$) by bank series and fiscal year. Pearson correlation coefficients describe bivariate associations and screen for pairwise collinearity. The core empirical analysis employs a two-way fixed-effects panel regression framework, estimating a baseline value-relevance model (Model~1) and a consolidation-period interaction model (Model~2) with bank fixed effects ($\mu_i$) and fiscal-year fixed effects ($\lambda_t$).
 
-The target is 30 bank-year observations: five provisional bank series observed
-over six fiscal years, FY 2076/77--2081/82. This is a short longitudinal
-bank-year dataset, not a panel of five unchanged legal entities. Four series
-cross a merger boundary, with earlier observations referring to the acquiring
-institution and later observations referring to the consolidated institution.
-Recent Nepalese panel research uses a fixed-effects specification on a larger
-bank sample \citep{gurungdahal2025}. This proposal retains pooled OLS as an
-exploratory summary for its smaller, merger-affected sample. Pooled OLS does not
-control for unobserved bank-series differences, so estimated conditional
-associations may partly reflect those differences and are not directly
-comparable with fixed-effects estimates.
+The study targets 30 bank-year observations comprising five purposively selected commercial bank series observed over six fiscal years, FY 2076/77--2081/82. This longitudinal dataset covers three pre-consolidation fiscal years (FY 2076/77--2078/79) and three post-consolidation fiscal years (FY 2079/80--2081/82). Four of the five sampled bank series crossed a merger boundary during FY 2079/80 (early 2023), shifting reporting boundaries from the original acquiring entities to the consolidated institutions. Following recent panel research on Nepalese commercial banks \citep{gurungdahal2025}, fixed effects are utilized to account for unobserved time-invariant bank heterogeneity. In this study, the interaction coefficients estimate differences in accounting-price associations across calendar periods rather than identifying causal effects of mergers.
 
-Before finalizing the sample and estimating the model, a bank-by-year
-feasibility screen will document, for every study year including FY 2081/82:
-the audited financial-statement source, its NEPSE disclosure date, the first
-subsequent trading date and closing price, each accounting measure, the source
-and status of any dividend recommendation, and any share-capital action
-affecting per-share comparability. The realized sample will include only
-bank-years complete for all model variables. Unavailable or unverifiable
-observations will be identified and reported, not imputed, and the regression
-sample size will be stated. Pooled OLS is an
-exploratory summary. Conventional OLS tests do not account for possible
-within-series dependence or changes in reporting boundaries and will not be
-treated as confirmatory evidence or as causal effects.
+Before finalizing the sample and estimating the econometric models, a structured bank-by-year data feasibility screen will be executed. For every observation, the protocol documents: the audited annual financial report, the statutory reporting deadline, the first trading day following that deadline with its closing market price, all accounting fundamental measures, corporate actions affecting share bases, and the disclosure status of any cash dividend recommendation. Unverifiable or trading-suspended observations are explicitly documented and excluded rather than replaced with stale prices. Because the target sample comprises 30 observations across five institutions, statistical inference is treated as exploratory, with full disclosure of estimation uncertainty and degrees of freedom.
 
 \subsection{Population and sampling procedure}
-The target population for the post-consolidation sample frame is the 20
-commercial banks listed by Nepal Rastra Bank as of mid-October 2023
-\citep{nrb2023list}. From this population, a provisional
-sample of five banks is specified using purposive (judgmental) sampling. The
-selection criteria are: (i) representation of the prominent commercial bank
-mergers that defined the early-2023 consolidation wave, (ii) inclusion of an
-unmerged reference bank (NMB Bank) for descriptive context, and (iii)
-verifiable audited annual financial statements, NEPSE trading records, and
-accounting measures by their relevant observation dates across the entire
-study period, subject to the feasibility screen described above.
+The target population for this study is defined by the commercial banking sector of Nepal following the early-2023 consolidation wave. Nepal Rastra Bank records list 20 commercial banks licensed as Class `A' financial institutions as of mid-October 2023 \citep{nrb2023list}. From this population, a purposive (judgmental) sample of five commercial bank series is selected. Purposive sampling is appropriate because the research focuses specifically on examining accounting value relevance across the prominent commercial bank mergers that reshaped the sector in early 2023, while maintaining longitudinal data availability.
 
-If the screen shows that a selected series does not meet these criteria, the
-final sample and the reason for any change will be reported before analysis.
-Because the sample is non-probabilistic and comprises at most five institutions,
-findings are interpreted for the sampled banks only.
-
-The five candidate bank series, identified by their current legal corporate
-names and subject to the feasibility screen, are:
-\begin{enumerate}
-  \item Global IME Bank Limited (absorbed Bank of Kathmandu, joint operation began 9 January 2023, swap ratio 1:1) \citep{gbime2022agm,nrb2023list}
-  \item Himalayan Bank Limited (acquired Civil Bank, joint operation commenced 24 February 2023, swap ratio 100:80.28) \citep{hbl2023report}
-  \item Kumari Bank Limited (absorbed Nepal Credit and Commerce Bank, joint operation commenced 1 January 2023, swap ratio 1:1) \citep{kumari2022sgm,nrb2023list}
-  \item Nepal Investment Mega Bank Limited (merger of Nepal Investment Bank and Mega Bank, joint operation commenced 11 January 2023, swap ratio 100:90) \citep{nimb2023report}
-  \item NMB Bank Limited (maintained independent operations without merger during the period) \citep{nrb2023list}
+The specific selection criteria for the sampled banks are:
+\begin{enumerate}[label=(\roman*)]
+  \item Prominent commercial bank series involved in the major early-2023 consolidation wave;
+  \item Inclusion of an established, continuously operating unmerged commercial bank to provide an independent reference series; and
+  \item Availability of complete audited annual financial reports and active NEPSE trading records across all six fiscal years (FY 2076/77--2081/82).
 \end{enumerate}
-For each merged bank series, pre-merger observations represent the acquiring
-institution and post-merger observations represent the consolidated
-institution. The fiscal year in which a merger began joint operation is a
-transition year: the audited statement's reporting boundary will be recorded for
-each bank-year, and that observation will be flagged rather than described as a
-clean pre-merger or post-merger year. A source record will identify the
-reporting institution and listed security for every observation. The merger
-changes the scale and composition of a series. Regression coefficients are not
-interpreted as estimates of merger effects.
 
-The study covers FY 2076/77--2081/82, spanning years before, during, and after
-the early-2023 mergers, with a target of 30 observations subject to
-verification. NMB Bank is included in the descriptive and pooled analyses as the
-unmerged reference series. Because the model includes no merger indicator or
-interaction, it does not estimate a merger-versus-non-merger comparison.
+The five purposively selected commercial bank series, identified by their current corporate names, are:
+\begin{enumerate}
+  \item \textbf{Global IME Bank Limited (GBIME):} Absorbed Bank of Kathmandu Limited; joint operations commenced on 9 January 2023 (swap ratio 1:1) \citep{gbime2022agm,nrb2023list}.
+  \item \textbf{Himalayan Bank Limited (HBL):} Acquired Civil Bank Limited; joint operations commenced on 24 February 2023 (swap ratio 100:80.28) \citep{hbl2023report}.
+  \item \textbf{Kumari Bank Limited (KBL):} Absorbed Nepal Credit and Commerce Bank Limited; joint operations commenced on 1 January 2023 (swap ratio 1:1) \citep{kumari2022sgm,nrb2023list}.
+  \item \textbf{Nepal Investment Mega Bank Limited (NIMB):} Amalgamation of Nepal Investment Bank Limited and Mega Bank Nepal Limited; joint operations commenced on 11 January 2023 (swap ratio 100:90) \citep{nimb2023report}.
+  \item \textbf{NMB Bank Limited (NMB):} Maintained continuous independent operations without merger throughout the study period, serving as the unmerged benchmark series \citep{nrb2023list}.
+\end{enumerate}
+
+For merged institutions, pre-merger observations represent the acquiring institution, while post-merger observations represent the unified corporate entity. FY 2079/80 is documented as the merger transition year. Per-share figures are adjusted where necessary for bonus issues, rights offerings, and capital restructuring to ensure longitudinal comparability. Because the sample is purposive, empirical findings apply directly to the selected series rather than the entire financial system.
 
 \subsection{Nature and sources of data collection}
-This study relies entirely on secondary financial and market data. Bank
-financial statements provide the accounting measures, while NEPSE trading records
-provide market prices. NRB, SEBON, and Ministry of Finance publications provide
-regulatory and sector context and are used for cross-checking where they report
-the same observation. Sources for each bank-year are recorded in the data file.
-The principal sources are:
+This study relies exclusively on verified secondary financial and market data. Accounting measures are extracted from published financial statements, and share prices are retrieved from official trading archives. Regulatory and macroeconomic context is derived from official publications of regulatory bodies. The primary data sources include:
 \begin{itemize}
-  \item Audited annual reports and published financial statements of the sampled commercial banks.
-  \item \textit{Banking and Financial Statistics} and supervision reports published by Nepal Rastra Bank (NRB).
-  \item NEPSE trading records and official share-price bulletins. SEBON annual reports and publications provide market and regulatory context.
-  \item \textit{Economic Survey} published by the Ministry of Finance (MoF), Government of Nepal.
+  \item Audited annual reports and published financial statements of the five sampled commercial banks;
+  \item Nepal Rastra Bank (NRB) publications, including \textit{Banking and Financial Statistics}, annual supervision reports, and regulatory directives;
+  \item Nepal Stock Exchange (NEPSE) official daily price bulletins, trading sheets, and corporate disclosure portals;
+  \item Securities Board of Nepal (SEBON) annual reports and market reviews; and
+  \item Ministry of Finance (MoF), Government of Nepal, \textit{Economic Survey} reports.
 \end{itemize}
-Extracted figures are checked against the originating report and, where an
-independent source reports the same measure, cross-checked before processing.
-Differences are recorded and resolved using the originating audited report for
-accounting measures and the NEPSE record for trading prices.
+All figures extracted from secondary sources are reconciled against the primary audited reports. Any discrepancies between published summaries and audited statements are resolved in favor of the originating audited financial accounts.
 
 \subsection{Research framework and definition of variables}
-The research framework illustrating the relationship between the explanatory
-accounting fundamentals and the dependent variable is depicted in
-Figure~\ref{fig:framework}. Post-disclosure market price per share
-($\mathit{MPS}^{post}$) is the dependent variable, while earnings per share
-(EPS), dividend per share (DPS), book value per share (BVPS), and return on
-assets (ROA) are the explanatory variables.
+The conceptual research framework guiding this study is rooted in the accounting value-relevance model of \citet{ohlson1995} and the post-merger valuation framework of \citet{kwon2020}. It is depicted in Figure~\ref{fig:framework}. Market price per share at the reporting-deadline window ($\mathit{MPS}^{RD}$) is the dependent variable. Earnings per share (EPS) and book value per share (BVPS) are the primary independent variables. The consolidation period indicator ($\mathit{Post}_t$) serves as an interaction variable to examine whether the accounting-price slope coefficients differed across the consolidation period. Bank fixed effects ($\mu_i$) and fiscal-year fixed effects ($\lambda_t$) control for unobserved time-invariant bank characteristics and common macroeconomic shocks.
 
-\begin{figure}[h]
+\begin{figure}[!ht]
 \centering
-% Figure-only caption style (sample §9; gap plan A9): 11 pt italic, "Figure 1." label,
-% 18 pt left indent. Global captionsetup (for future tables) is untouched.
 \captionsetup{font={small,it},labelsep=period,margin={18pt,0pt},singlelinecheck=false,justification=justified}
-\begin{tikzpicture}[node distance=0.45cm,
-  ind/.style={rectangle, draw, minimum width=4.2cm, minimum height=0.7cm, text centered, font=\normalsize},
-  dep/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.7cm, text centered, font=\normalsize},
-  arrow/.style={thick,->,>=stealth}]
-  \node[ind] (eps)  {EPS};
-  \node[ind, below=of eps] (dps)  {DPS};
-  \node[ind, below=of dps] (bvps) {BVPS};
-  \node[ind, below=of bvps] (roa) {ROA};
-  \path (dps) -- (bvps) coordinate[midway] (mid);
-  \node[dep, right=4cm of mid] (mps) {$\mathit{MPS}^{\mathit{post}}$};
-  \draw[arrow] (eps.east)  -- ([yshift=18pt]mps.west);
-  \draw[arrow] (dps.east)  -- ([yshift=6pt]mps.west);
-  \draw[arrow] (bvps.east) -- ([yshift=-6pt]mps.west);
-  \draw[arrow] (roa.east)  -- ([yshift=-18pt]mps.west);
-  \node[below=0.25cm of roa, font=\normalsize] {Independent variables};
-  \node[below=0.25cm of mps, font=\normalsize] {Dependent variable};
+\begin{tikzpicture}[
+  box/.style={rectangle, draw, minimum width=3.8cm, minimum height=0.75cm, align=center, font=\normalsize},
+  depbox/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.6cm, align=center, font=\normalsize},
+  modbox/.style={rectangle, draw, dashed, minimum width=4.2cm, minimum height=0.85cm, align=center, font=\normalsize},
+  ctrlbox/.style={rectangle, draw, dotted, minimum width=4.2cm, minimum height=0.85cm, align=center, font=\normalsize},
+  arrow/.style={thick,->,>=stealth}
+]
+  \node[box] (eps) at (0, 1.1) {Earnings Per Share (EPS)};
+  \node[box] (bvps) at (0, -0.3) {Book Value Per Share (BVPS)};
+  
+  \node[depbox] (mps) at (7.8, 0.4) {Market Price Per Share\\($\mathit{MPS}^{RD}$)};
+  
+  \node[modbox] (post) at (3.9, 2.3) {Consolidation Period\\($\mathit{Post}_t$: Pre vs.\ Post)};
+  \node[ctrlbox] (fe) at (3.9, -1.5) {Fixed Effects Control\\(Bank $\mu_i$ \& Year $\lambda_t$)};
+
+  \draw[arrow] (eps.east) -- node[above, font=\footnotesize] {$\beta_E$} ([yshift=10pt]mps.west);
+  \draw[arrow] (bvps.east) -- node[below, font=\footnotesize] {$\beta_B$} ([yshift=-10pt]mps.west);
+  
+  \draw[arrow, dashed] (post.south) -- (3.9, 0.4);
+  \draw[arrow, dotted] (fe.north) -- (3.9, -0.4);
+  
+  \node[above=0.08cm of post, font=\footnotesize\bfseries] {Moderating / Interaction Effect};
+  \node[below=0.12cm of bvps, font=\footnotesize\bfseries] {Fundamental Independent Variables};
+  \node[below=0.12cm of mps, font=\footnotesize\bfseries] {Dependent Variable};
 \end{tikzpicture}
-\caption{Research framework (Source: adapted from Pradhan and Dahal, 2016)}
+\caption{Research framework (Source: adapted from Ohlson, 1995; Kwon and Wang, 2020)}
 \label{fig:framework}
 \end{figure}
 
-Post-disclosure market price per share ($\mathit{MPS}^{\mathit{post}}$),
-measured in Nepalese rupees (NPR), is the closing price on the first NEPSE
-trading day with a calendar date strictly later than the NEPSE disclosure date
-for the corresponding audited annual financial statements. The same rule is
-applied to every sampled bank series and fiscal year. The filing date, trading
-date, listed security, and source records are logged for each observation. The
-NEPSE closing price recorded for that date is used. A retrospectively adjusted
-price series is not substituted.
+The operational definitions of all variables are as follows:
 
-Any bonus issue, rights issue, split, or other share-capital action between
-fiscal year-end and the price date is recorded. Accounting per-share measures
-must use a share basis comparable with the listed security on the price date.
-Audited restatements or source-documented share-basis conversions will be used
-where available. If comparability cannot be established, the affected bank-year
-is recorded as unavailable rather than adjusted using an undocumented rule.
+\textbf{Market Price per Share at Reporting Deadline ($\mathit{MPS}^{RD}$):} The dependent variable, measured in Nepalese Rupees (NPR), is the closing market price on NEPSE on the first trading session following the statutory nine-month audited-reporting publication deadline specified under Section 59(2) of the Banks and Financial Institutions Act, 2017 \citep{bafia2017}. For each accounting fiscal year ending in mid-July (Ashadh-end), the statutory deadline corresponds to the end of Chaitra in the following fiscal year. The first subsequent NEPSE trading day on which a valid trade is executed establishes $\mathit{MPS}^{RD}$. This fixed reporting-window measurement guarantees that audited accounts were legally required to be public, avoiding the look-ahead error of Ashadh-end prices and the measurement ambiguity of reconstructing 30 unverified corporate announcement timestamps. If a security was suspended or recorded no trading within a five-day window following the deadline, the observation is coded as missing.
 
-Earnings per share (EPS), in NPR per ordinary share, is audited basic EPS as
-reported in the annual financial statements or calculated from reported profit
-attributable to ordinary equity holders and weighted-average ordinary shares
-outstanding. Any audited retrospective restatement following a bonus issue or
-share split is retained.
+\textbf{Earnings per Share (EPS):} Audited basic earnings per share, in NPR per ordinary share, extracted from the published annual financial statements. EPS reflects net profit attributable to ordinary equity holders divided by the weighted-average number of ordinary shares outstanding during the fiscal year. Retrospective audited restatements for bonus shares and stock splits are incorporated to preserve comparability.
 
-Dividend per share (DPS), in NPR per ordinary share, is the cash dividend per
-share recommended for the corresponding fiscal year and publicly disclosed by
-the MPS observation date. The recommendation is used whether or not it has
-subsequently received shareholder approval or been distributed. Later approval
-or payment is not used because it was not necessarily known at the observation
-date. A documented decision not to recommend a cash dividend is recorded as
-zero. If the recommendation or its amount cannot be established by the MPS
-date, DPS is unavailable. The source and recommendation status are logged.
+\textbf{Book Value per Share (BVPS):} The accounting net worth per ordinary share, in NPR, calculated as total ordinary shareholders' equity (excluding preference capital and revaluation reserves) at fiscal year-end divided by the number of ordinary shares outstanding at that date. Audited reported figures are verified against balance-sheet components.
 
-Book value per share (BVPS), in NPR per ordinary share, is ordinary
-shareholders' equity at fiscal year-end divided by ordinary shares outstanding
-at that date. The audited reported value is used when its share basis is clear.
-Otherwise, it is calculated from the audited statement.
+\textbf{Consolidation Period Indicator ($\mathit{Post}_t$):} A binary temporal indicator variable set to $1$ for observations belonging to the post-consolidation period (FY 2079/80, 2080/81, and 2081/82) and $0$ for observations in the pre-consolidation period (FY 2076/77, 2077/78, and 2078/79). This variable interacts with EPS and BVPS to test for parameter shifts across the two periods.
 
-Return on assets (ROA), in percent, is profit after tax divided by average
-total assets (the arithmetic mean of opening and closing total assets),
-multiplied by 100. The numerator and both asset balances are recorded for each
-bank-year. In a merger transition year, the reporting entity and any
-restatement of opening assets are recorded from the audited financial
-statements. A value is treated as unavailable if the numerator and denominator
-cannot be matched to the same reporting boundary. All explanatory variables use
-these definitions. Reported ratios using different definitions are retained only
-as source checks and are not substituted into the analysis.
+\textbf{Supplementary / Robustness Variables:}
+\begin{itemize}
+  \item \textit{Return on Assets (ROA):} Profit after tax divided by average total assets, expressed as a percentage. Used in robustness checks as an alternative measure of operating profitability.
+  \item \textit{Dividend per Share (DPS):} Cash dividend per ordinary share, in NPR, recommended for the corresponding fiscal year that was publicly declared on or prior to the $\mathit{MPS}^{RD}$ observation date. Documented zero-dividend decisions are recorded as zero; unannounced or unverifiable recommendations are treated as missing.
+\end{itemize}
 
-\needspace{6\baselineskip}
+\textbf{Exclusion of Price-Derived Ratios:} The price-earnings (P/E) ratio is strictly excluded from all specifications because $\text{P/E}=\text{MPS}/\text{EPS}$. Including a variable that embeds the dependent variable directly in its numerator creates artificial correlation and distorts coefficient interpretation.
+
 \subsection{Methods of analysis}
-The analysis describes the observations and estimates the specified
-associations. Because the sample contains repeated observations for only five
-bank series, the regression and its conventional significance tests are treated
-as exploratory rather than confirmatory.
+Data analysis is structured to describe the properties of the data, assess econometric assumptions, and test the research hypotheses using panel regression methods.
 
-To examine the joint and conditional associations of all four accounting
-fundamentals with post-disclosure market price per share, the following multiple
-linear regression model is specified:
+\subsubsection{Model Specification}
+To evaluate the baseline value relevance of accounting fundamentals, Model~1 specifies a two-way fixed-effects panel regression:
 \begin{equation}
-\mathit{MPS}^{post}_{it} = \beta_0 + \beta_1 \mathit{EPS}_{it} + \beta_2 \mathit{DPS}_{it} + \beta_3 \mathit{BVPS}_{it} + \beta_4 \mathit{ROA}_{it} + \varepsilon_{it}
-\label{eq:main}
+\mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} + \varepsilon_{it}
+\label{eq:model1}
 \end{equation}
-% Force the page break HERE (fills the previous page, which stranded ~270 pt).
-% Must be [4]: with fully rigid vertical glue every short page has badness 10000,
-% which caps cost at 100000 and swallows any milder penalty ([3] verified inert).
-% -10000 forces unconditionally, but only at feasible points: equation-end sits
-% ~46 pt above page goal, so this holds. If 7.x edits push it past the goal this
-% produces an overfull page instead — re-run checkbottoms.py after any 7.x edit.
-\pagebreak[4]
-where $\mathit{MPS}^{post}_{it}$ is the closing price for bank series $i$ in
-fiscal year $t$, recorded on the pre-specified post-disclosure trading date.
-$\mathit{EPS}_{it}$, $\mathit{DPS}_{it}$, $\mathit{BVPS}_{it}$, and
-$\mathit{ROA}_{it}$ denote earnings per share, dividend per share, book value
-per share, and return on assets, respectively. $\beta_0$ is the intercept.
-$\beta_1$ through $\beta_4$ are slope coefficients for the conditional
-associations, holding the other included variables constant.
-$\varepsilon_{it}$ is the stochastic disturbance term.
+where $i$ indexes the five commercial banks ($i = 1, \dots, 5$), $t$ indexes the six fiscal years ($t = 1, \dots, 6$), $\mu_i$ represents unobserved time-invariant bank fixed effects, $\lambda_t$ represents fiscal-year fixed effects, and $\varepsilon_{it}$ is the idiosyncratic disturbance term. The coefficients $\beta_E$ and $\beta_B$ capture the conditional associations of EPS and BVPS with the reporting-deadline market price.
 
-The empirical analysis follows this protocol. Data suitability and model
-assumptions are assessed before coefficient tests are interpreted:
+To investigate whether the value relevance of accounting fundamentals differed before and after the consolidation wave, Model~2 introduces interaction terms with the consolidation indicator $\mathit{Post}_t$:
+\begin{equation}
+\begin{aligned}
+\mathit{MPS}^{RD}_{it} ={}& \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} \\
+& + \delta_E (\mathit{EPS}_{it} \times \mathit{Post}_t) + \delta_B (\mathit{BVPS}_{it} \times \mathit{Post}_t) + \varepsilon_{it}
+\end{aligned}
+\label{eq:model2}
+\end{equation}
+Because the specification includes a full set of fiscal-year fixed effects ($\lambda_t$), the standalone $\mathit{Post}_t$ indicator is a deterministic linear combination of the year indicators ($\sum_{t \in \text{Post}} \lambda_t$) and is perfectly collinear with them. Consequently, the standalone $\mathit{Post}_t$ term is absorbed by the year fixed effects and is not estimated separately.
+
+For Model~2, the baseline valuation slopes during the pre-consolidation period are given by $\beta_E$ and $\beta_B$. The interaction coefficients $\delta_E$ and $\delta_B$ measure incremental slope shifts between the pre- and post-consolidation periods. Consequently, the post-consolidation slope for EPS is $(\beta_E + \delta_E)$, while for BVPS it is $(\beta_B + \delta_B)$.
+
+\subsubsection{Hypothesis Testing and Robustness Protocol}
+The analytical protocol proceeds through the following sequential steps:
 \begin{enumerate}
-  \item \textbf{Descriptive Statistics:} The mean, standard deviation, minimum,
-    and maximum of all variables are reported by bank series and fiscal year.
-    This presentation makes merger-linked reporting boundaries visible rather
-    than treating observations as one unchanged institution.
-  \item \textbf{Correlation Analysis:} Pearson correlations measure bivariate
-    associations between each fundamental and $\mathit{MPS}^{post}$ and screen
-    for strong pairwise associations among regressors.
-  \item \textbf{Multiple Regression Analysis:} Eq.~\ref{eq:main} is estimated
-    by pooled OLS as an exploratory baseline. The coefficient of determination
-    ($R^2$) and adjusted $R^2$ describe in-sample fit. For each slope
-    coefficient $\beta_j$, $j=1,\ldots,4$, the test is
-    $H_{0j}:\beta_j=0$ against $H_{Aj}:\beta_j\ne 0$. Individual coefficients
-    are evaluated using two-tailed $t$-tests at the 5\% level
-    ($\alpha=0.05$); the corresponding 95\% confidence intervals are also
-    reported. Joint model significance is reported with an $F$-test at the 5\%
-    level.
-    These conventional tests are nominal because they do not adjust for
-    possible within-series dependence. With only five series, bank-clustered
-    standard errors are not used as an automatic correction. Coefficient signs,
-    confidence intervals, and p-values are reported as exploratory summaries.
-    The nominal tests do not establish causal effects, stable relationships, or
-    sector-wide findings. Hypotheses are not accepted or rejected as
-    confirmatory conclusions. Prices are observed on bank-specific dates, so
-    unmodeled market-wide conditions at those dates may also contribute to the
-    estimated associations.
-  \item \textbf{Diagnostic Tests:} Model assumptions are examined before
-    interpreting results. Multicollinearity is evaluated with variance inflation
-    factors (VIF) and tolerance statistics alongside the correlation matrix.
-    Residual diagnostics include checks for heteroskedasticity (White or
-    Breusch-Pagan test), influential observations (Cook's distance), and
-    residual distribution (Q-Q plot). Residual patterns are inspected by bank
-    series and fiscal year because repeated observations may be dependent. With
-    only five series, cluster-based inference relies on very few clusters and is
-    not treated as an automatic remedy \citep{cameron2008clusters}. These
-    diagnostics can identify warning signs but cannot establish independence or
-    validate inference for this short, merger-affected dataset. The small
-    sample, transition-year reporting boundaries, and limits of conventional
-    OLS inference are stated with the results. If data checks
-    or diagnostics identify unresolved comparability, multicollinearity,
-    heteroskedasticity, or influential-observation concerns, the affected
-    coefficient tests will be omitted and the estimates will be presented
-    descriptively with the concern stated.
+  \item \textbf{Descriptive and Bivariate Analysis:} Mean, standard deviation, minimum, and maximum are computed for each variable across bank series and fiscal years. Pearson correlation coefficients and scatter matrices screen for bivariate associations and severe pairwise collinearity.
+  \item \textbf{Estimation of Baseline Model (Model~1):} Evaluates Hypotheses~H1 ($\beta_E \ne 0$) and H2 ($\beta_B \ne 0$) using two-tailed tests at the 5\% significance level ($\alpha = 0.05$). Parameter estimates, standard errors, and 95\% confidence intervals are reported.
+  \item \textbf{Estimation of Interaction Model (Model~2):} Evaluates Hypotheses~H3 ($\delta_E \ne 0$) and H4 ($\delta_B \ne 0$) to test for parameter differences across periods. The primary test evaluates the joint null hypothesis:
+  \begin{equation}
+  H_0: \delta_E = \delta_B = 0
+  \end{equation}
+  using a joint Wald $F$-test. Rejection of $H_0$ provides statistical evidence that the accounting-price relationship differed across the consolidation period.
+  \item \textbf{Robustness and Sensitivity Checks:}
+  \begin{itemize}
+    \item \textit{ROA Specification:} EPS is replaced with ROA in Models~1 and 2 to evaluate sensitivity to an asset-scaled profitability measure.
+    \item \textit{Dividend Specification:} Eligible DPS observations are incorporated into the specification for bank-years where dividend announcements preceded the price window.
+    \item \textit{Transition-Year Sensitivity:} Model~2 is re-estimated excluding the transition fiscal year (FY 2079/80) to verify that results are not driven solely by the initial merger transition shock.
+  \end{itemize}
+  \item \textbf{Econometric Diagnostics and Inferential Caveats:}
+  Diagnostic checks include Variance Inflation Factors (VIF) and tolerance statistics for multicollinearity, the Breusch-Pagan/Cook-Weisberg test for heteroskedasticity, Cook's distance for influential outliers, and Q-Q plots for residual normality.
+  
+  With $N = 30$ observations, 5 bank fixed effects, 6 fiscal-year fixed effects, and 4 slope parameters, the residual degrees of freedom in Model~2 are approximately 16. Furthermore, econometric literature demonstrates that cluster-robust standard errors are unreliable when the number of clusters is small ($G = 5$) \citep{cameron2008clusters}. Accordingly, standard errors are interpreted cautiously as exploratory indicators rather than definitive confirmatory tests. Results are framed as observed differences in empirical associations across structural periods rather than causal impacts of mergers.
 \end{enumerate}
 
-Data organization, coding, descriptive statistics, correlations, pooled OLS,
-and the specified diagnostic checks are conducted using Microsoft Excel and the
-Statistical Package for the Social Sciences (SPSS).
+Data organization, audit cross-checking, and variable coding are performed in Microsoft Excel. Econometric modeling, diagnostic testing, and panel estimations are executed using Stata and SPSS.
