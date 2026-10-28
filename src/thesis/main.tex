@@ -26,6 +26,9 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{longtable}
+\usepackage{etoolbox}
+\AtBeginEnvironment{tabular}{\singlespacing}
+\AtBeginEnvironment{longtable}{\singlespacing}
 \usepackage{needspace}
 \usepackage{amsmath}
 \usepackage{unicode-math}
@@ -108,15 +111,14 @@
   \renewcommand{\headrulewidth}{0pt}
 }
 
-\fancypagestyle{mainbody}{
+% Plain style during front matter: Roman numerals bottom center (FOM 2019 p. 21)
+\fancypagestyle{plain}{
   \fancyhf{}
-  \fancyhead[R]{\thepage}
+  \fancyfoot[C]{\thepage}
   \renewcommand{\headrulewidth}{0pt}
-  \setlength{\headheight}{15pt}
 }
 
-% Override plain style for chapter start pages so they conform to FOM rules
-\fancypagestyle{plain}{
+\fancypagestyle{mainbody}{
   \fancyhf{}
   \fancyhead[R]{\thepage}
   \renewcommand{\headrulewidth}{0pt}
@@ -187,6 +189,14 @@
 \pagestyle{mainbody}
 \pagenumbering{arabic}
 \setcounter{page}{1}
+
+% Override plain style for main body chapter start pages: Arabic numerals top right (FOM p. 21)
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \setlength{\headheight}{15pt}
+}
 
 % Chapter I: Introduction
 \input{chapters/chapter_01_introduction}
