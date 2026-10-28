@@ -4,7 +4,7 @@
 \section{Introduction}
 \label{sec:lit_intro}
 
-The purpose of this chapter is to conduct an extensive, critical, and structured review of the theoretical, regulatory, and empirical literature pertinent to the valuation of equity securities and the value relevance of financial accounting information, with specific focus on commercial banking institutions undergoing structural consolidation. A rigorous literature review serves as the intellectual cornerstone of academic inquiry: it establishes the theoretical mechanisms through which accounting metrics map into market valuations, traces the historical evolution of empirical methodologies, identifies contradictions and divergences in prior findings, and illuminates the unaddressed conceptual and empirical boundaries that constitute the research gap.
+The purpose of this chapter is to conduct an extensive, critical, and structured review of the theoretical, regulatory, and empirical literature pertinent to the valuation of equity securities and the value relevance of financial accounting information, with specific focus on commercial banking institutions undergoing structural consolidation.
 
 This chapter establishes a direct link with the research problem and objectives articulated in Chapter~I. It is organized into four major substantive sections:
 \begin{itemize}
@@ -22,7 +22,7 @@ This chapter establishes a direct link with the research problem and objectives 
 
 In financial economics and accounting theory, equity valuation has evolved from dividend-discounting formulations into models grounded in fundamental accounting numbers. The seminal theoretical breakthrough linking financial accounting disclosures directly to equity market values was established by \citet{ohlson1995} and extended by \citet{feltham1995}. The Residual Income Valuation (RIV) framework---often designated as the Edwards-Bell-Ohlson (EBO) model---reconceptualizes firm value by expressing the market value of common equity as the sum of currently recognized book value of equity and the present value of expected future residual income (abnormal earnings).
 
-The mathematical foundation of the Ohlson framework rests on three interrelated structural building blocks:
+The mathematical foundation of the Ohlson framework rests on four interrelated structural building blocks:
 
 \begin{enumerate}[label=\textbf{\arabic*.}]
 \item \textbf{The Present Value of Expected Dividends (PVED):}
@@ -94,10 +94,10 @@ When moving from this analytical formulation to empirical testing, the accountin
 \begin{equation}
 P_{it} = \beta_0 + \beta_1 \text{EPS}_{it} + \beta_2 \text{BVPS}_{it} + \varepsilon_{it}
 \end{equation}
-where earnings per share ($\text{EPS}_{it}$) serves as the empirical proxy for abnormal earning capacity, and book value per share ($\text{BVPS}_{it}$) serves as the empirical proxy for cumulative net resources.
+where earnings per share ($\text{EPS}_{it}$) serves as the empirical proxy for contemporaneous earnings (with abnormal earning capacity impounded into the structural parameters), and book value per share ($\text{BVPS}_{it}$) serves as the empirical proxy for cumulative net resources.
 \end{enumerate}
 
-The theoretical implications of the Ohlson framework are profound for banking research. First, it demonstrates that earnings and book value are not arbitrary ad hoc variables selected for regression convenience; rather, they serve as mathematically necessary and theoretically complementary inputs in equity pricing. Book value represents the accumulated historical stock of equity net assets, providing an asset-backing floor, while earnings capture current operational flows and abnormal earning power. Second, the theoretical coefficients are direct functions of earnings persistence ($\omega$). As earnings persistence increases, the valuation weight placed on earnings expands. Conversely, if earnings become transitory, noisy, or disrupted by non-recurring events, the persistence parameter $\omega$ declines, leading the market to shift its valuation weight toward balance-sheet net worth.
+The Ohlson framework demonstrates that earnings and book value are not arbitrary ad hoc variables selected for regression convenience; rather, they serve as theoretically motivated and complementary inputs in equity pricing. Book value represents the accumulated historical stock of equity net assets, providing an asset-backing floor, while earnings capture current operational flows and abnormal earning power. Second, the theoretical coefficients are direct functions of earnings persistence ($\omega$). As earnings persistence increases, the valuation weight placed on earnings expands. Conversely, if earnings become transitory, noisy, or disrupted by non-recurring events, the persistence parameter $\omega$ declines, leading the market to shift its valuation weight toward balance-sheet net worth.
 
 \subsection{Valuation Dynamics Across Corporate Reorganizations and M\&A}
 \label{subsec:ma_valuation}
@@ -109,7 +109,7 @@ Investigating the valuation consequences of corporate combinations, \citet{kwon2
 \item \textbf{Transitory Integration Costs and Earnings Noise:} Post-merger operational integration requires extensive administrative expenditures, harmonization of operating systems, restructuring of branch networks, and rationalization of redundant human resources. These integration expenses generate substantial transitory, non-recurring accounting charges that temporarily suppress reported net income.
 \item \textbf{Accounting Harmonization and Portfolio Revaluation:} Merging disparate corporate entities requires harmonizing accounting policies across previously independent balance sheets. In commercial banking, this entails realigning loan classification standards, reassessing non-performing loans (NPLs), unifying impairment provisioning methodologies under NFRS 9 / IFRS 9, and recognizing purchase price allocation adjustments and goodwill.
 \item \textbf{Earnings Persistence Impairment:} Because transitional accounting charges and post-merger adjustments are inherently temporary and do not reflect ongoing operational earning capacity, the time-series persistence of reported earnings ($\omega$) declines sharply in the immediate post-merger period.
-\item \textbf{Shift Toward Balance-Sheet Anchoring:} Following the residual income logic of \citet{ohlson1995} and the empirical evidence of \citet{collins1997}, when earnings quality and persistence deteriorate due to non-recurring organizational shocks, rational equity investors discount current earnings as a noisy indicator of future performance. Consequently, market participants place greater valuation weight on the stock of tangible net assets---book value per share (BVPS)---which serves as an anchor of fundamental solvency and net worth.
+\item \textbf{Shift Toward Balance-Sheet Anchoring:} Following the residual income logic of \citet{ohlson1995} and the empirical evidence of \citet{collins1997}, when earnings quality and persistence deteriorate due to non-recurring organizational shocks, rational equity investors discount current earnings as a noisy indicator of future performance. Consequently, market participants place greater valuation weight on the stock of net assets---book value per share (BVPS)---which serves as an anchor of fundamental solvency and net worth.
 \end{enumerate}
 
 \citet{collins1997} similarly demonstrate across a forty-year empirical panel that the relative value relevance of earnings versus book values shifts systematically across economic regimes: earnings relevance dominates when earnings are persistent and stable, whereas book value relevance increases during periods of structural transition, severe financial stress, and extreme restructuring. These theoretical insights provide the direct intellectual rationale for testing parameter shifts ($\delta_E, \delta_B$) across Nepal's 2023 banking consolidation wave.
@@ -127,7 +127,7 @@ P_0 = \frac{D_1}{k_e - g}
 positing that external investors discount retained earnings more heavily than current dividends due to risk aversion regarding uncertain future capital gains (the ``bird-in-the-hand'' hypothesis).
 \end{itemize}
 
-In the Nepalese commercial banking sector, dividend announcements---comprising both cash dividends and capitalized bonus shares---have historically served as vital valuation signals. Consequently, evaluating cash dividends (DPS) alongside earnings and book value serves as an essential robustness dimension in accounting valuation research.
+In the Nepalese commercial banking sector, dividend announcements---comprising both cash dividends and capitalized bonus shares---have historically served as vital valuation signals. While the baseline valuation model follows \citet{collins1997} in focusing on earnings and book value, evaluating cash dividends (DPS) in an expanded specification serves as an essential empirical robustness test (Specification R4) to examine whether payout distributions alter the fundamental valuation coefficients.
 
 \subsection{Information Asymmetry, Signaling, and Agency Theories in Banking}
 \label{subsec:signaling_agency}
@@ -135,8 +135,8 @@ In the Nepalese commercial banking sector, dividend announcements---comprising b
 Financial institutions operate in an environment characterized by acute informational friction between bank managers, external equity investors, and regulatory bodies:
 \begin{itemize}
 \item \textbf{Signaling Theory:} \citet{ross1977}, \citet{bhattacharya1979}, and \citet{john1985} demonstrate that in capital markets plagued by information asymmetry, financial disclosures, dividend announcements, and corporate restructuring decisions serve as costly, credible signals conveying management's private expectations regarding future performance. Because weaker firms cannot afford to mimic costly dividend commitments or stringent audited reporting standards without courting financial distress, published audited accounting statements and declared dividends convey authentic fundamental value.
-\item \textbf{Agency Theory:} \citet{jensen1976} and \citet{jensen1986} formulate the free cash flow agency theory, positing that corporate managers have incentives to accumulate resources and pursue empire-building acquisitions rather than returning excess capital to shareholders. In commercial banking, mandatory cash dividend distributions and transparent audited balance sheets mitigate agency conflicts by constraining managerial discretion and subjecting the institution to regular capital-market monitoring.
-\item \textbf{Banking Asset Opacity and Prudential Regulation:} \citet{morgan2002} and \citet{flannery2004} establish that commercial banks are inherently more opaque than industrial corporations. Bank assets consist primarily of unquoted private commercial loans whose true quality and credit risk are shielded from public observation. This severe asset opacity makes statutory auditing, capital adequacy compliance, and standardized regulatory reporting ceilings indispensable for credible market valuation.
+\item \textbf{Agency Theory:} \citet{jensen1976} and \citet{jensen1986} formulate the free cash flow agency theory, positing that corporate managers have incentives to accumulate resources and pursue empire-building acquisitions rather than returning excess capital to shareholders. In commercial banking, declared cash dividend distributions and transparent audited balance sheets mitigate agency conflicts by constraining managerial discretion and subjecting the institution to regular capital-market monitoring.
+\item \textbf{Banking Asset Opacity and Prudential Regulation:} \citet{morgan2002} and \citet{flannery2004} establish that commercial banks are inherently more opaque than industrial corporations. Bank assets consist primarily of unquoted private commercial loans whose true quality and credit risk are shielded from public observation. This severe asset opacity makes statutory auditing, capital adequacy compliance, and standardized regulatory reporting deadlines indispensable for credible market valuation.
 \end{itemize}
 
 \subsection{Efficient Market Hypothesis and the Information Content of Disclosures}
@@ -165,12 +165,12 @@ introduces a fatal structural circularity. The dependent variable ($\text{MPS}_{
 \begin{equation}
 \text{MPS}_{it} = \beta_0 + \beta_1 \text{EPS}_{it} + \beta_2 \left(\frac{\text{MPS}_{it}}{\text{EPS}_{it}}\right) + \beta_3 \text{BVPS}_{it} + \varepsilon_{it}
 \end{equation}
-Rearranging this equation reveals that $\text{MPS}_{it}$ is being regressed on a linear transformation of itself. This specification generates severe mechanical endogeneity, violates the fundamental Gauss-Markov assumption of orthogonality between regressors and error terms ($\mathbb{E}[\text{P/E}_{it} \varepsilon_{it}] \ne 0$), creates artificial multi-collinearity, and inflates the coefficient of determination ($R^2$) through definitional overlap rather than economic explanation. Consequently, theoretical econometric integrity requires that all price-derived multiples be strictly excluded from value-relevance specifications, restricting explanatory regressors to pure accounting fundamentals that are determined independently of secondary market trading prices.
+Rearranging this equation reveals that $\text{MPS}_{it}$ is being regressed on a function of itself. This specification generates severe mechanical endogeneity, violates the fundamental Gauss-Markov assumption of orthogonality between regressors and error terms ($\mathbb{E}[\text{P/E}_{it} \varepsilon_{it}] \ne 0$), creates artificial multi-collinearity, and inflates the coefficient of determination ($R^2$) through definitional overlap rather than economic explanation. Consequently, theoretical econometric integrity requires that all price-derived multiples be strictly excluded from value-relevance specifications, restricting explanatory regressors to pure accounting fundamentals that are determined independently of secondary market trading prices.
 
 \section{Review of Legal, Regulatory, and Policy Framework in Nepal}
 \label{sec:regulatory_framework}
 
-The commercial banking sector and capital market of Nepal operate under a highly structured statutory and prudential regulatory regime. Understanding this regulatory architecture is vital for contextualizing corporate reporting disclosures, merger timelines, and observation windows:
+The commercial banking sector and capital market of Nepal operate under a highly structured statutory and prudential regulatory regime:
 
 \subsection{Evolution of Capital Market Regulation: SEC, NEPSE, and SEBON}
 \label{subsec:nepse_history}
@@ -180,15 +180,15 @@ The institutional development of Nepal's organized capital market commenced with
 \subsection{The Statutory Financial Reporting Framework: BAFIA 2017}
 \label{subsec:bafia_framework}
 
-Commercial banks in Nepal operate under the dual regulatory oversight of the Companies Act, 2006 (2063 BS) and the Banks and Financial Institutions Act, 2017 (2073 BS) (BAFIA), alongside prudential directives issued by Nepal Rastra Bank.
+Commercial banks in Nepal operate under the dual regulatory oversight of the Companies Act, 2006 (2063 BS) and the Banks and Financial Institutions Act, 2017 (2073 BS) (BAFIA), alongside prudential directives issued by Nepal Rastra Bank \citep{companiesact2006,bafia2017}.
 
-Regarding financial reporting disclosure, Section 59 of BAFIA, 2017 establishes statutory submission and publication obligations for licensed institutions. Specifically, Section 59(2) delineates two distinct reporting duties stated in subsection (2):
+Regarding financial reporting disclosure, Section 59 of BAFIA, 2017 establishes statutory submission and publication obligations for licensed institutions. Specifically, Section 59(2) delineates two distinct reporting duties:
 \begin{enumerate}
-\item First, a licensed bank must prepare its balance sheet and profit and loss account and submit them to Nepal Rastra Bank within three months of the completion of each financial year, publishing details for the information of the general public within that period as prescribed by NRB; and
-\item Second, the bank must submit its audited balance sheet and profit and loss account to NRB within nine months into the subsequent financial year, and publish the audited financial statements for the public in the prescribed format \citep{bafia2017}.
+\item First, a licensed bank must prepare its balance sheet and profit and loss account and submit them to Nepal Rastra Bank within three months of the completion of each financial year, publishing summary details for the information of the general public within that period as prescribed by NRB; and
+\item Second, the bank must publish its audited balance sheet and profit and loss account for the public in the prescribed format within nine months into the subsequent financial year \citep{bafia2017}.
 \end{enumerate}
 
-Because commercial bank fiscal years in Nepal terminate at Ashadh-end (mid-July), counting nine months into the subsequent financial year (from Shrawan through Chaitra) establishes the end of Chaitra (mid-April) as the statutory publication deadline. Operationalizing the observation window at the first trading session following the end of Chaitra is therefore the study's institutional operationalization of the nine-month statutory timeline under Section 59(2). In observed banking practice, commercial bank boards typically release audited annual highlights and announce dividend recommendations between Ashwin and Poush (October to January), with formal adoption at Annual General Meetings (AGMs) preceding the Chaitra ceiling. Operationalizing the price observation window at the end of Chaitra provides a reproducible, legally anchored cutoff ensuring that the observation date falls after the statutory deadline by which audited accounts were legally required to be public, eliminating look-ahead bias without relying on fragmented, unverified corporate press-release timestamps.
+Because commercial bank fiscal years in Nepal terminate at Ashadh-end (mid-July), counting nine months into the subsequent financial year (from Shrawan through Chaitra) terminates at the end of Chaitra (mid-April). Operationalizing the price observation window at the first trading session following the end of Chaitra ($MPS^{RD}$) is the study's institutional operationalization of the statutory nine-month timeline under Section 59(2). In observed banking practice across the sampled institutions, commercial bank boards typically release audited annual highlights and announce dividend recommendations between Ashwin and Poush (October to January), with formal adoption at Annual General Meetings (AGMs) concluded prior to the end-of-Chaitra cutoff. Operationalizing the price observation window at the end of Chaitra provides a reproducible, legally anchored cutoff ensuring that the observation date falls after the statutory deadline by which audited accounts were legally required to be public, eliminating look-ahead bias without relying on fragmented, unverified corporate press-release timestamps.
 
 \subsection{NRB Capital Mandates and the Consolidation Directive}
 \label{subsec:nrb_consolidation}
@@ -202,11 +202,11 @@ The structural consolidation of Nepalese commercial banks has been driven primar
 
 This regulatory drive culminated in the massive consolidation wave of early 2023 (mid-FY 2079/80), wherein major commercial banks executed statutory mergers and acquisitions:
 \begin{enumerate}[label=\textbf{\arabic*.}]
-\item \textbf{Global IME Bank Limited (GBIME):} Amalgamated with Bank of Kathmandu Limited; unified commercial operations commenced on 9 January 2023 (swap ratio 1:1) \citep{gbime2022agm,nrb2023list}.
-\item \textbf{Himalayan Bank Limited (HBL):} Acquired Civil Bank Limited; unified commercial operations commenced on 24 February 2023 (swap ratio 100:80.28) \citep{hbl2023report,nrb2023list}.
-\item \textbf{Kumari Bank Limited (KBL):} Amalgamated with Nepal Credit and Commerce Bank Limited; unified commercial operations commenced on 1 January 2023 (swap ratio 1:1) \citep{kumari2022sgm,nrb2023list}.
-\item \textbf{Nepal Investment Mega Bank Limited (NIMB):} Formed via the amalgamation of Nepal Investment Bank Limited and Mega Bank Nepal Limited; unified commercial operations commenced on 11 January 2023 (swap ratio 100:90) \citep{nimb2023report,nrb2023list}.
-\item \textbf{NMB Bank Limited (NMB):} Maintained continuous corporate operations without participating in the early-2023 consolidation wave, serving as the benchmark series. (Note: NMB had previously acquired Kanchan Development Bank Limited in August 2020, adding approximately NPR 0.57 billion to share capital in FY 2077/78, but remained independent during the 2023 wave) \citep{nrb2023list}.
+\item \textbf{Global IME Bank Limited (GBIME):} Amalgamated with Bank of Kathmandu Limited; unified commercial operations commenced on 9 January 2023 (swap ratio 1:1) \citep{gbime2022agm}.
+\item \textbf{Himalayan Bank Limited (HBL):} Acquired Civil Bank Limited; unified commercial operations commenced on 24 February 2023 (swap ratio 100:80.28) \citep{hbl2023report}.
+\item \textbf{Kumari Bank Limited (KBL):} Amalgamated with Nepal Credit and Commerce Bank Limited; unified commercial operations commenced on 1 January 2023 (swap ratio 1:1) \citep{kumari2022sgm}.
+\item \textbf{Nepal Investment Mega Bank Limited (NIMB):} Formed via the amalgamation of Nepal Investment Bank Limited and Mega Bank Nepal Limited; unified commercial operations commenced on 11 January 2023 (swap ratio 100:90) \citep{nimb2023report}.
+\item \textbf{NMB Bank Limited (NMB):} Maintained continuous corporate operations without participating in the early-2023 consolidation wave, serving as the benchmark series. (Note: NMB had previously acquired Kanchan Development Bank Limited in August 2020, adding approximately NPR 0.56 billion to paid-up capital beyond its 13\% bonus share capitalization in FY 2077/78, but remained independent during the 2022--2023 wave).
 \end{enumerate}
 
 By mid-October 2023 (Asoj 2080 BS), these amalgamations reduced the total commercial bank population in Nepal to exactly 20 Class 'A' institutions \citep{nrb2023list}.
@@ -217,7 +217,7 @@ By mid-October 2023 (Asoj 2080 BS), these amalgamations reduced the total commer
 \subsection{International Empirical Studies}
 \label{subsec:intl_empirical}
 
-International empirical research across developed and emerging capital markets provides extensive documentation regarding the association between financial accounting disclosures and equity valuation:
+Empirical accounting research across developed and emerging capital markets provides extensive documentation regarding the association between financial accounting disclosures and equity valuation:
 
 \citet{collins1997} investigated the value relevance of earnings and book values in the United States over a forty-year period (1953--1993) across thousands of firm-year observations. Employing the Ohlson (1995) valuation framework, the authors addressed concerns that the transition from an industrialized to a service- and technology-oriented economy had degraded the relevance of historical accounting numbers. Their empirical findings demonstrated that the combined explanatory power ($R^2$) of earnings and book values had actually increased over the forty-year period. However, they observed a systematic shift in relative explanatory weights: the incremental value relevance of earnings declined, while the incremental value relevance of book value increased, driven by higher incidences of negative earnings, non-recurring charges, and intangible asset intensity.
 
@@ -232,15 +232,15 @@ Empirical investigation into equity valuation determinants in Nepal originated a
 
 \citet{pradhan2003} conducted one of the earliest empirical evaluations of stock market behavior in Nepal, examining listed enterprises over 1992--1997. Employing descriptive and correlational techniques, Pradhan investigated the relative effects of cash dividends and retained earnings on stock prices. The study documented that cash dividends exhibited a stronger, more statistically significant positive association with market share prices than retained earnings, concluding that Nepalese equity investors exhibited strong cash-dividend preference in an environment characterized by institutional opacity and market volatility.
 
-\citet{bhattarai2014} investigated the determinants of share prices across a sample of 14 listed commercial banks covering 35 pooled bank-year observations over the period 2006 to 2014. Using pooled cross-sectional OLS regressions, Bhattarai evaluated market price per share against earnings per share (EPS), dividend per share (DPS) / dividend yield, price-earnings (P/E) ratio, and book value per share (BVPS). The study reported that EPS and P/E ratios exhibited statistically significant positive associations with market share prices, whereas dividend yield displayed an inverse relationship. However, as noted in Chapter~I, Bhattarai's specification explicitly included P/E as an explanatory regressor alongside MPS, inducing mechanical circularity.
+\citet{bhattarai2014} investigated the determinants of share prices across a sample of nine commercial banks (Nabil Bank, Nepal Investment Bank, Standard Chartered Bank Nepal, Everest Bank, Bank of Kathmandu, Machhapuchchhre Bank, Laxmi Bank, Kumari Bank, and Siddhartha Bank) over the period 2006 to 2014. Using pooled OLS regressions, Bhattarai evaluated fiscal-year-end closing market price per share against dividend payout ratio (DPR), dividend yield (DY), earnings per share (EPS), price-earnings (P/E) ratio, and bank size (SIZE). The study reported that EPS and P/E ratios exhibited statistically significant positive associations with market share prices, whereas dividend yield displayed an inverse relationship. However, as noted in Chapter~I, Bhattarai's specification explicitly included P/E as an explanatory regressor alongside MPS, inducing mechanical circularity.
 
-\citet{pradhan2016} examined 14 commercial banks over the period 2002/03 to 2013/14 using a pooled panel regression framework. The authors analyzed the impact of firm size, earnings per share, return on assets, and dividend per share on market equity valuation. Their empirical findings identified bank size and EPS as the most consistent and statistically significant positive determinants of share prices, while macroeconomic variables exhibited secondary explanatory power.
+\citet{pradhan2016} examined 14 commercial banks over the period 2002/03 to 2013/14 using a pooled panel regression framework. The authors analyzed the impact of firm size, earnings per share, return on assets, and dividend per share on market equity valuation, alongside macroeconomic controls. Their empirical findings identified bank size and EPS as the most consistent and statistically significant positive determinants of share prices, while macroeconomic variables exhibited secondary explanatory power.
 
 \citet{bajracharya2019} evaluated ten commercial banks listed on NEPSE over the ten-year period from 2006/07 to 2015/16. Utilizing pooled OLS regression models, the authors reported that earnings per share (EPS) and dividend per share (DPS) had a statistically significant positive effect on share prices, whereas return on assets (ROA) and return on equity (ROE) were statistically insignificant in predicting market valuations.
 
 \citet{silwal2019} evaluated ten commercial banks across 100 bank-year observations over FY 2065/66 to 2074/75 (2008/09--2017/18). Employing correlation and multiple regression analysis, the authors examined market price per share in relation to book value per share, return on equity, and P/E ratio. The study concluded that BVPS exerted the largest explanatory influence on stock prices, followed by ROE and P/E ratios, arguing that net asset backing served as the primary benchmark for Nepalese bank investors following the 2015 capital escalation mandate.
 
-\subsection{Recent Nepalese Empirical Studies on Bank Share Price Determinants (2021--2024)}
+\subsection{Empirical Evidence from Recent Nepalese Studies (2021--2024, Pre-Wave Panels)}
 \label{subsec:recent_nepal}
 
 Recent empirical research on Nepalese commercial banking valuation documents notable divergence in empirical findings across diverse samples and econometric specifications:
@@ -259,7 +259,7 @@ Recent empirical research on Nepalese commercial banking valuation documents not
 
 \citet{gurung2024} evaluated 16 commercial banks across 171 observations over the period 2007 to 2023 using stepwise multiple regression analysis. The study found that earnings per share and book value per share exerted statistically significant positive influences on commercial bank share prices, while dividend per share was statistically insignificant, demonstrating that market valuation was anchored in foundational balance-sheet and earning power rather than payout distributions.
 
-\subsection{Studies Spanning the Early-2023 Consolidation Wave and Recent Advances (2024--2026)}
+\subsection{Empirical Evidence Spanning the 2023 Consolidation Wave (2024--2026)}
 \label{subsec:consolidation_studies}
 
 The most recent body of empirical research has extended observation windows through FY 2023/24 and 2024/25, directly capturing the post-consolidation operating environment:
@@ -268,7 +268,7 @@ The most recent body of empirical research has extended observation windows thro
 
 \citet{chaudhari2025} examined ten commercial banks over 2014/15 to 2023/24 (100 bank-year observations). Employing pooled OLS regression, Chaudhari analyzed market price per share against firm-specific variables (EPS, DPS, ROA, bank size) and macroeconomic factors (inflation, interest rates, GDP). The empirical results revealed strong, statistically significant positive coefficients for EPS and DPS. In contrast, return on assets (ROA) displayed a statistically significant \textit{negative} association with market share prices, while bank size and macroeconomic variables failed to attain statistical significance. Chaudhari concluded that equity investors penalized low-margin asset expansion while rewarding per-share earnings generation.
 
-\citet{gurungdahal2025} investigated ten commercial banks listed on NEPSE over the ten-year period FY 2013/14 to 2023/24 using a panel regression framework.\footnote{Gurung and Dahal (2025), published in \textit{Pravaha} (vol.~31, no.~1, pp.~1--12), is distinct from the comprehensive panel study by Dahal, Gurung, and Ghimire (2025) in the \textit{Interdisciplinary Journal of Management and Social Sciences}, which examined 209 bank-year observations across all listed commercial banks.} Among the studies reviewed, \citet{gurungdahal2025} provide the closest methodological precedent, because they applied the Hausman specification test and estimated a bank fixed-effects regression model to control for unobserved time-invariant bank heterogeneity. Their empirical results indicated that dividend payout ratio (DPR), P/E ratio, earnings per share, book value per share, and return on assets exerted statistically significant impacts on market share prices. However, Gurung and Dahal estimated static, full-sample coefficients, omitting any formal interaction test of whether valuation parameters shifted before and after the 2023 consolidation wave.
+\citet{gurungdahal2025} investigated ten commercial banks listed on NEPSE over the ten-year period FY 2013/14 to 2023/24 using a panel regression framework.\footnote{Gurung and Dahal \citep{gurungdahal2025}, published in \textit{Pravaha} (vol.~31, no.~1, pp.~1--12), is distinct from the comprehensive panel study by Dahal, Gurung, and Ghimire \citep{dahal2025} in the \textit{Interdisciplinary Journal of Management and Social Sciences} (vol.~6, no.~1, pp.~252--261), which examined 209 bank-year observations across all listed commercial banks.} Among the studies reviewed, \citet{gurungdahal2025} provide the closest methodological precedent, because they applied the Hausman specification test and estimated a bank fixed-effects regression model to control for unobserved time-invariant bank heterogeneity. Their empirical results indicated that dividend payout ratio (DPR), P/E ratio, earnings per share, book value per share, and return on assets exerted statistically significant impacts on market share prices. However, Gurung and Dahal estimated static, full-sample coefficients, omitting any formal interaction test of whether valuation parameters shifted before and after the 2023 consolidation wave.
 
 \citet{timalsina2026} evaluated 13 commercial banks over the thirteen-year panel FY 2011/12 to 2023/24 (169 bank-year observations). Utilizing descriptive statistics, Pearson correlation, and panel regression analysis, Timalsina investigated the impact of firm-specific indicators (EPS, DPS, P/E, ROA, size) and macroeconomic factors (GDP, inflation, interest rates) on market share prices. The empirical findings revealed that EPS, DPS, P/E, firm size, and inflation had statistically significant positive associations with share prices, while interest rates exerted a significant negative effect. Return on assets (ROA) and GDP growth showed no statistically significant influence.
 
@@ -279,7 +279,7 @@ Regarding banking consolidation directly, \citet{adhikari2023} conducted an empi
 \subsection{Synthesis of Empirical Literature}
 \label{subsec:synthesis_matrix}
 
-Table~\ref{tab:lit_synthesis} provides a structured, comparative synthesis of the key empirical studies reviewed, summarizing their author(s), observation periods, sample composition, methodological specifications, and core findings.
+Table~\ref{tab:lit_synthesis} provides a curated, comparative synthesis of primary empirical studies directly informing the valuation and consolidation models, summarizing their author(s), observation periods, sample composition, methodological specifications, and core findings.
 
 \begin{table}[!htbp]
 \centering
@@ -295,11 +295,11 @@ Table~\ref{tab:lit_synthesis} provides a structured, comparative synthesis of th
 \addlinespace
 \citet{collins1997} & US Firms (1953--1993) & Ohlson RIV Panel OLS & Price, EPS, BVPS & Combined relevance increased; book value relevance rose relative to earnings. \\
 \addlinespace
-\citet{kwon2020} & US M\&A Firms (SFAS 141R) & Pre/Post M\&A Panel & Price, EPS, BVPS, Post & Post-merger earnings relevance declines; book value relevance increases as anchor. \\
+\citet{kwon2020} & US M\&A Firms (SFAS 141R) & Pre/Post M\&A Panel & Price, EPS, BVPS, Post-Merger & Post-merger earnings relevance declines; book value relevance increases as anchor. \\
 \addlinespace
 \citet{sharma2011} & BSE 30, India (1993--2008) & Pooled OLS Panel & Price, EPS, BVPS, DPS & EPS, BVPS, and DPS exhibit significant positive associations with equity prices. \\
 \addlinespace
-\citet{bhattarai2014} & 14 Banks, 35 obs (2006--2014) & Pooled OLS & MPS, EPS, DPS/DY, P/E, BVPS & EPS and P/E positively associated with MPS; circular P/E inclusion. \\
+\citet{bhattarai2014} & 9 Banks (2006--2014) & Pooled OLS & MPS, DPR, DY, EPS, P/E, Size & EPS and P/E positively associated with MPS; circular P/E inclusion. \\
 \addlinespace
 \citet{pradhan2016} & 14 Banks (2002--2014) & Pooled Panel OLS & MPS, EPS, ROA, DPS, Size & Bank size and EPS are primary positive determinants; ROA is secondary. \\
 \addlinespace
@@ -313,15 +313,15 @@ Table~\ref{tab:lit_synthesis} provides a structured, comparative synthesis of th
 \addlinespace
 \citet{joshi2023} & 7 Banks (2012--2022) & Linear Panel OLS & MPS, EPS, DPS, BVPS, P/E & EPS, DPS, BVPS, and P/E exhibit positive associations; circular P/E. \\
 \addlinespace
-\citet{giri2024} & 4 Banks, 40 obs (2013--2023) & Correlation Analysis & MPS, DPS, EPS, P/E, Net Worth & MPS correlates with DPS, P/E, net worth; EPS correlation negligible. \\
+\citet{giri2024} & 4 Banks, 40 obs (2013--2023) & Correlation Analysis & MPS, DPS, EPS, P/E, Net Worth & MPS correlates with DPS, P/E, net worth; EPS correlation negligible; circular P/E. \\
 \addlinespace
 \citet{pant2024} & 7 Banks (2013--2024) & Multiple OLS & MPS, EPS, DPS, BVPS, P/E & EPS and P/E positive; DPS and BVPS negative and insignificant; circular P/E. \\
 \addlinespace
 \citet{chaudhari2025} & 10 Banks (2014--2024) & Pooled OLS & MPS, EPS, DPS, ROA, Size & EPS and DPS strong positive; ROA significantly negative; macro insignificant. \\
 \addlinespace
-\citet{gurungdahal2025} & 10 Banks (2013--2024) & Bank Fixed Effects & MPS, DPR, P/E, EPS, BVPS, ROA & EPS, BVPS, ROA significant under bank FE; static full-sample pooling only. \\
+\citet{gurungdahal2025} & 10 Banks (2013--2024) & Bank Fixed Effects & MPS, DPR, P/E, EPS, BVPS, ROA & DPR, EPS, BVPS, ROA significant under bank FE; static pooling; circular P/E. \\
 \addlinespace
-\citet{timalsina2026} & 13 Banks (2011--2024) & Panel Regression & MPS, EPS, DPS, P/E, ROA & EPS, DPS, P/E positive and significant; ROA insignificant; circular P/E. \\
+\citet{timalsina2026} & 13 Banks (2011--2024) & Panel Regression & MPS, EPS, DPS, P/E, ROA, Size & EPS, DPS, P/E, size, inflation positive and significant; circular P/E. \\
 \addlinespace
 \citet{adhikari2023} & 7 Merged Banks (2013--2020) & Pre/Post Comparative & MPS, EPS, DPS, Net Profit & Substantial post-merger price drops and dividend cuts; slow operational synergy. \\
 \bottomrule
@@ -331,10 +331,10 @@ Table~\ref{tab:lit_synthesis} provides a structured, comparative synthesis of th
 \section{Research Gap}
 \label{sec:research_gap}
 
-A critical and systematic evaluation of the theoretical foundations, regulatory frameworks, and empirical literature reveals several profound conceptual, methodological, and econometric gaps that directly motivate this dissertation:
+A review of the theoretical foundations, regulatory frameworks, and empirical literature reveals five key conceptual, methodological, and econometric gaps that motivate this dissertation:
 
 \subsection{The Consolidation Regime-Shift Gap}
-Almost without exception, existing Nepalese banking studies employ pooled cross-sectional or static panel regression designs that estimate sample-average, full-period relationships \citep{bhattarai2014,chaudhari2025,chhetri2023,gurungdahal2025,timalsina2026}. These models implicitly assume parameter constancy across time. However, early 2023 witnessed the most concentrated commercial banking consolidation wave in Nepalese history, altering reporting boundaries, asset bases, and capital structures across four major merged institutions. Following the theoretical framework of \citet{kwon2020} and \citet{collins1997}, major corporate amalgamations impair earnings persistence through integration costs and loan harmonization, leading rational markets to shift valuation weight toward balance-sheet equity. Despite this theoretical precedent, to the best of the researcher's knowledge and within the extensive corpus of studies reviewed, none has formulated an explicit regime-interaction econometric model to test whether the valuation coefficients of EPS ($\beta_E$) and BVPS ($\beta_B$) differed between the pre-consolidation (FY 2076/77--2078/79) and post-consolidation (FY 2079/80--2081/82) periods.
+Almost without exception, existing Nepalese banking studies employ pooled cross-sectional or static panel regression designs that estimate sample-average, full-period relationships \citep{bhattarai2014,chaudhari2025,chhetri2023,gurungdahal2025,timalsina2026}. These models implicitly assume parameter constancy across time. However, early 2023 witnessed the most concentrated commercial banking consolidation wave in Nepalese history, altering reporting boundaries, asset bases, and capital structures across four major merged institutions. Following the theoretical framework of \citet{kwon2020} and \citet{collins1997}, major corporate amalgamations impair earnings persistence through integration costs and loan harmonization, suggesting a possible shift in valuation weight toward balance-sheet equity. Despite this theoretical precedent, to the best of the researcher's knowledge and within the extensive corpus of studies reviewed, none has formulated an explicit regime-interaction econometric model to test (in a two-tailed framework) whether the valuation coefficients of EPS ($\beta_E$) and BVPS ($\beta_B$) differed between the pre-consolidation (FY 2076/77--2078/79) and post-consolidation (FY 2079/80--2081/82) periods.
 
 \subsection{The Specification and Endogeneity Gap (Circularity of P/E Multiples)}
 A pervasive practice in the Nepalese empirical literature is the routine inclusion of the Price-to-Earnings (P/E) ratio as an independent regressor in models predicting Market Price per Share (MPS) \citep{bhattarai2014,chhetri2023,giri2024,gurungdahal2025,joshi2023,pant2024,timalsina2026}. As mathematically demonstrated in Section~\ref{subsec:pe_circularity}, because $\text{P/E} = \text{MPS} / \text{EPS}$, regressing MPS on P/E introduces a circular algebraic dependency, embedding the dependent variable directly inside the regressor. This induces severe mechanical endogeneity, inflates $R^2$ values spuriously, and invalidates statistical inference. A defensible research design must eliminate price-derived multiples and restrict explanatory variables to fundamental accounting measures determined independently of secondary market share prices.
@@ -348,5 +348,5 @@ None of the empirical studies reviewed addresses the institutional transition ti
 \subsection{The Econometric and Small-Cluster Inference Gap}
 Prior empirical research on Nepalese commercial banking routinely overlooks finite-sample degrees of freedom and the econometric hazards of small-cluster panel inference. In fixed-effects panel models with interactions, parameter estimation rapidly consumes degrees of freedom. Moreover, standard cluster-robust standard errors suffer from severe downward bias when the number of clusters is small ($G = 5$) \citep{cameron2008clusters}. Published Nepalese studies frequently report unadjusted OLS or naive clustered standard errors without acknowledging finite-sample fragility. This dissertation addresses this gap by implementing MacKinnon-White HC3 heteroskedasticity-robust standard errors, disclosing exact residual degrees of freedom ($28 - 14 = 14$ df), and framing findings as observed statistical associations rather than causal proofs.
 
-By synthesizing the \citet{ohlson1995} residual income valuation model with the post-merger value-relevance framework of \citet{kwon2020}, operationalizing the standardized BAFIA reporting deadline ($MPS^{RD}$), excluding circular P/E multiples, and executing a rigorous two-way fixed-effects panel model with eight robustness checks, this dissertation directly bridges each of the identified gaps in the literature.
+By synthesizing the \citet{ohlson1995} residual income valuation model with the post-merger value-relevance framework of \citet{kwon2020}, operationalizing the standardized BAFIA reporting deadline ($MPS^{RD}$), excluding circular P/E multiples, and executing a rigorous two-way fixed-effects panel model with eight robustness checks, this dissertation is designed to address each of the identified gaps in the literature.
 
