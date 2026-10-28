@@ -36,7 +36,7 @@ The specific sampling criteria applied to select the institutions are:
 1. **Participation in the 2023 Consolidation Wave:** Prominent commercial bank series that executed horizontal statutory amalgamations or major corporate acquisitions that commenced joint commercial operations during the early-2023 consolidation wave (January–February 2023 / mid-FY 2079/80).
 2. **Benchmark Series Continuity:** Inclusion of an established Class 'A' commercial bank that did not participate in the early-2023 consolidation wave, providing a contemporaneous, unmerged benchmark series to differentiate sector-wide market trends from merger-specific structural shifts.
 3. **Longitudinal Data Availability and Regulatory Compliance:** Availability of complete, audited annual financial statements across all six fiscal years (FY 2076/77 to FY 2081/82) prepared in accordance with Nepal Financial Reporting Standards (NFRS) and submitted to Nepal Rastra Bank.
-4. **Secondary Market Trading Continuity:** Continuous active listing on the Nepal Stock Exchange (NEPSE) with secondary trading records that satisfy the study's post-deadline freshness window.
+4. **Secondary Market Listing and Trading Activity:** Active listing on the Nepal Stock Exchange (NEPSE), with row-level trading freshness applied as detailed in Section 3.3.4 (under which two bank-years with extended trading halts exceeding the 5-day post-deadline freshness window are coded as missing).
 
 ### 3.3.3 Profile of the Sampled Commercial Banks
 The five purposively selected commercial bank series, identified by their current corporate names, are:
@@ -76,8 +76,8 @@ However, in secondary equity pricing, corporate restructuring frequently induces
 > *If a security was suspended from trading or recorded zero valid transactions within a five-day calendar window following the statutory reporting deadline (end of Chaitra / mid-April), the observation is coded as missing and excluded from the regression sample. It is never imputed from stale pre-suspension prices.*
 
 Two bank-year observations fail this freshness rule due to prolonged merger-related trading suspensions:
-1. **Himalayan Bank Limited (HBL) FY 2077/78:** Trading in HBL shares was suspended on NEPSE during complex tripartite merger negotiations with Nepal Investment Bank. Trading remained suspended until 6 June 2022 (Jestha 2079 BS), representing a resumption delay of 54 days beyond the target deadline of 13 April 2022.
-2. **Nepal Investment Mega Bank Limited (NIMB, formerly NIB) FY 2077/78:** Trading in NIB shares was concurrently suspended during the same negotiation process, resuming on 30 May 2022 (Jestha 2079 BS), representing a resumption delay of 47 days beyond the 13 April 2022 deadline.
+1. **Himalayan Bank Limited (HBL) FY 2077/78:** Trading in HBL shares on NEPSE experienced a prolonged merger-related suspension following the rejection of its proposed bilateral merger with Nepal Investment Bank at its 29th AGM in January 2022. Trading remained suspended until 6 June 2022 (Jestha 2079 BS), representing a resumption delay of 54 days beyond the target deadline of 13 April 2022.
+2. **Nepal Investment Mega Bank Limited (NIMB, formerly NIB) FY 2077/78:** Trading in NIB shares was concurrently suspended under the same merger process, resuming on 30 May 2022 (Jestha 2079 BS), representing a resumption delay of 47 days beyond the 13 April 2022 deadline.
 
 Consequently, these two observations are coded as missing, leaving a realized clean estimation sample of **$N = 28$ observations** (13 pre-consolidation bank-years and 15 post-consolidation bank-years).
 
@@ -95,9 +95,9 @@ Table 3.1 reports the complete panel matrix of observation dates, closing market
 | **FY 2081/82** | 13 April 2026 | 238.00 | 208.50 | 229.00 | 210.70 | 248.40 |
 
 *Notes:*
-* Prices are expressed in Nepalese Rupees (NPR) per ordinary share, retrieved from capital market data aggregators (ShareSansar and Merolagani; cross-checked against FinancialNotices for FY 2081/82) and verified against NEPSE trading records.
+* Prices are expressed in Nepalese Rupees (NPR) per ordinary share, retrieved from capital market data aggregators (ShareSansar and Merolagani; cross-checked against FinancialNotices for FY 2081/82). Note that official NEPSE floor trading archives were not independently verified, and NEPSE official closes remain unverified against exchange source records.
 * $^a$HBL merger-related trading suspension until 6 June 2022 (54 days late; gap > 5 days; coded as missing under freshness rule).
-* $^b$NIMB (formerly NIB) trading suspension until 30 May 2022 (47 days late; gap > 5 days; coded as missing under freshness rule).
+* $^b$NIMB (formerly NIB) merger-related trading suspension until 30 May 2022 (47 days late; gap > 5 days; coded as missing under freshness rule).
 * $^c$Entity timing transition mismatch: accounting fundamentals reflect pre-merger standalone operations, whereas April 2023 prices reflect post-merger consolidated trading (mergers commenced January–February 2023). Retained in baseline; evaluated in Sensitivity Check R6.
 * $^d$Chaitra-end fell on Friday, 12 April 2024; Sunday, 14 April 2024 was the first subsequent NEPSE trading session (gap = 2 calendar days, clean).
 * Total realized sample size: $N = 28$ observations (13 pre-consolidation, 15 post-consolidation).
@@ -124,10 +124,10 @@ To ensure institutional credibility and empirical accuracy, data sources are bif
 * *Ministry of Finance (MoF), Government of Nepal:* *Economic Survey* publications (FY 2076/77 through FY 2081/82).
 
 ### 3.4.3 Data Audit, Extraction, and Reconciliation Protocol
-All secondary data were processed through a multi-stage audit and verification protocol to ensure zero data transcription error:
+All secondary data were processed through a multi-stage audit and verification protocol to ensure that every value was extracted from the audited report, recomputed where the definition requires it, and flagged where recomputation disagreed with a printed figure, rather than overwritten:
 1. **Primary Audit Verification:** All fundamental accounting variables (EPS, equity, ordinary shares, net profit, total assets, DPS) were manually extracted from original audited annual reports and verified across balance sheet and income statement schedules.
 2. **Reconciliation Against Aggregators:** Figures compiled from financial aggregators were cross-referenced against original audited PDF reports. In all instances of discrepancy, figures were resolved strictly in favor of the originating audited financial accounts.
-3. **Cross-Aggregator Price Reconciliation:** For every bank-year observation, closing market share prices on the target date were compared across ShareSansar and Merolagani (and FinancialNotices for FY 2081/82). Out of 30 target cells, 29 demonstrated perfect zero-variance matching; the single minor discrepancy (NMB FY 2076/77, Merolagani 437.00 vs. ShareSansar 436.00) was arbitrated and verified at NPR 437.00 based on NEPSE floor trading archives.
+3. **Cross-Aggregator Price Reconciliation:** For every bank-year observation, closing market share prices on the target date were compared across ShareSansar and Merolagani (and FinancialNotices for FY 2081/82). Out of 30 target cells, 29 demonstrated perfect zero-variance matching; for NMB FY 2076/77, the dataset (ShareSansar) recorded a closing price of NPR 437.00, whereas Merolagani reported a last traded price (LTP) of NPR 436.00. The NPR 437.00 value was retained on the basis of ShareSansar's full daily record (open 432, high 439, low 428, close 437.00); because ShareSansar is the dataset's primary source, this does not represent independent verification, and the official NEPSE closing price for 13 April 2021 remains unverified against primary exchange floor archives.
 4. **Trading Status and Freshness Verification:** Daily trading status was screened across the calendar window following the reporting deadline to identify trading halts, record dates, and resumption sessions.
 
 ---
@@ -197,7 +197,7 @@ In this framework, secondary market closing price at the reporting deadline ($\m
   * *Econometric Treatment:* Evaluated in Specification R3 as an asset-scaled substitute for EPS. Because EPS and ROA correlate at $r = 0.975$ (variance inflation factor $\approx 30$), they are never co-included in the same regression to prevent severe multicollinearity.
 * **Dividend per Share (DPS):**
   * *Definition:* Cash dividend recommended per ordinary share, expressed in NPR, for the corresponding fiscal year.
-  * *Operational Measurement:* Evaluated in Specification R4, including only eligible cash dividends that were officially declared on or prior to the $\mathit{MPS}^{RD}$ observation date. Documented zero-dividend decisions are recorded as zero; unannounced dividends are treated as missing.
+  * *Operational Measurement:* Evaluated in Specification R4, including only eligible cash dividends that were officially declared on or prior to the $\mathit{MPS}^{RD}$ observation date. Documented zero-dividend decisions are recorded as zero; unannounced dividends are treated as missing in the operational rule. In the realized analysis sample ($N = 28$), all 28 observations possess confirmed declarations or documented nil distributions (zero cash dividend), meaning no DPS observation is missing in the realized estimation dataset.
 
 #### 5. Strict Exclusion of Price-Derived Multiples
 The Price-to-Earnings (P/E) ratio is strictly excluded from all regression models. As mathematically proved in Section 2.2.6, because $\text{P/E} = \text{MPS} / \text{EPS}$, regressing MPS on P/E introduces circular algebraic endogeneity that biases coefficients and spuriously inflates explanatory power.
@@ -217,14 +217,18 @@ where:
 * $\mathit{MPS}^{RD}_{it}$ is the secondary market closing price observed at the post-reporting-deadline window;
 * $\mathit{EPS}_{it}$ is basic earnings per share from own audited SOPL;
 * $\mathit{BVPS}_{it}$ is recomputed book value per share at fiscal year-end;
-* $\mu_i$ represents unobserved time-invariant bank fixed effects (estimated via 4 bank dummy variables, with GBIME as reference);
-* $\lambda_t$ represents common fiscal-year fixed effects (estimated via 5 year dummy variables, with FY 2076/77 as reference);
+* $\alpha$ is the constant baseline intercept;
+* $\mu_i$ represents unobserved time-invariant bank fixed effects, estimated via 4 bank dummy variables with Global IME Bank Limited (GBIME) serving as the omitted reference bank;
+* $\lambda_t$ represents common fiscal-year fixed effects, estimated via 5 fiscal-year dummy variables with FY 2076/77 serving as the omitted reference year;
 * $\beta_E$ and $\beta_B$ are the baseline valuation slopes for EPS and BVPS;
 * $\varepsilon_{it}$ is the idiosyncratic disturbance term.
+
+In Model 1, the parameter count comprises 1 intercept, 4 bank dummy coefficients, 5 fiscal-year dummy coefficients, and 2 slope parameters, totaling $K = 12$ estimated parameters. On the realized sample of $N = 28$ observations, Model 1 retains $N - K = 28 - 12 = 16$ residual degrees of freedom.
 
 ### 3.6.2 Model 2: Consolidation-Period Regime Shift Model
 To test whether accounting value relevance differed before and after the banking consolidation wave (Hypotheses $H_3$ and $H_4$), Model 2 introduces interaction terms between accounting fundamentals and the consolidation indicator:
 $$\mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} + \delta_E (\mathit{EPS}_{it} \times \mathit{Post}_t) + \delta_B (\mathit{BVPS}_{it} \times \mathit{Post}_t) + \varepsilon_{it}$$
+where reference categories remain identically defined (GBIME as reference bank for $\mu_i$, FY 2076/77 as reference fiscal year for $\lambda_t$).
 
 #### Econometric Note on Standalone Post Absorption:
 Because Model 2 includes a full set of fiscal-year fixed effects ($\lambda_t$), the standalone consolidation indicator ($\mathit{Post}_t$) is a deterministic linear combination of the post-consolidation year dummy indicators:
@@ -246,12 +250,12 @@ Including a standalone $\mathit{Post}_t$ regressor alongside full year fixed eff
 Estimation is performed by Ordinary Least Squares (OLS) with explicit dummy variables for bank and fiscal-year fixed effects:
 * **Degrees of Freedom Accounting:** On the realized clean sample of $N = 28$ observations, Model 2 estimates 14 parameters:
   * 1 constant intercept ($\alpha$)
-  * 4 bank fixed effects ($\mu_i$)
-  * 5 fiscal-year fixed effects ($\lambda_t$)
+  * 4 bank fixed effects ($\mu_i$, with GBIME as reference)
+  * 5 fiscal-year fixed effects ($\lambda_t$, with FY 2076/77 as reference)
   * 2 baseline slopes ($\beta_E, \beta_B$)
   * 2 interaction slopes ($\delta_E, \delta_B$)
   $$\text{Residual Degrees of Freedom} = N - K = 28 - 14 = 14 \text{ df}$$
-  In supplementary models incorporating DPS, residual degrees of freedom decrease from 14 to $28 - 15 = 13$ df.
+  In supplementary models incorporating DPS (Specification R4), estimating the additional slope parameter $\beta_{\text{DPS}}$ increases the parameter count to $K = 15$, reducing residual degrees of freedom from 14 to $28 - 15 = 13$ df.
 * **MacKinnon-White HC3 Robust Standard Errors:** Standard cluster-robust covariance estimators (such as Huber-White cluster SEs) suffer from severe downward bias and over-reject null hypotheses when the number of clusters is small ($G = 5$) (Cameron et al., 2008). To ensure conservative, reliable inference, standard errors, $t$-statistics, and confidence intervals are computed using MacKinnon-White (1985) HC3 heteroskedasticity-robust standard errors:
   $$\text{HC3} = (X'X)^{-1} \left( \sum_{i=1}^n \frac{e_i^2}{(1 - h_{ii})^2} x_i x_i' \right) (X'X)^{-1}$$
   where $h_{ii} = x_i (X'X)^{-1} x_i'$ represents the leverage of observation $i$. HC3 heavily discounts high-leverage observations, providing reliable finite-sample inference in small panel samples.
@@ -272,7 +276,7 @@ To verify that empirical inferences are not artifacts of specific modeling choic
 * **R5 (Excluding Transition Year):** Re-estimates Model 2 excluding FY 2079/80 ($n = 23$) to verify results are not driven by immediate consolidation shock.
 * **R6 (Excluding Entity-Timing Mismatch):** Re-estimates Model 2 excluding FY 2078/79 ($n = 23$) to eliminate the mismatch where standalone fundamentals were paired with post-merger April 2023 prices.
 * **R7 (Bonus Share Capitalization Adjustment):** Re-estimates Model 2 using bonus-adjusted book value per share ($\mathit{BVPS}_{\text{adj}} = \mathit{BVPS} / (1 + \text{bonus ratio})$) to evaluate parameter stability against share dilutions ($n = 28$).
-* **R8 (Retrospective Restated EPS):** Re-estimates Model 2 using retrospective audited basic EPS restatements from subsequent annual reports ($n = 28$).
+* **R8 (Retrospective Restated EPS):** Re-estimates Model 2 using retrospective audited basic EPS restatements from subsequent annual reports ($n = 28$). Specifically, two bank-year observations in the analyzed sample exhibit retrospective restatements: Global IME Bank FY 2076/77 (reported 17.99, restated 15.33) and NMB Bank FY 2077/78 (reported 16.66, restated 14.76). A third restatement in the broader 30-row dataset, Himalayan Bank FY 2077/78 (reported 29.80, restated 27.60), falls within a trading-suspension window and is excluded from the regression sample; thus, it does not affect the R8 estimates.
 
 ### 3.6.6 Specification Comparison
 To ensure transparency regarding how fixed effects absorb market-wide variation, baseline two-way fixed-effects estimates are compared directly against:
@@ -280,5 +284,4 @@ To ensure transparency regarding how fixed effects absorb market-wide variation,
 2. **Bank Fixed-Effects Only:** Absorbs cross-bank heterogeneity but retains longitudinal macroeconomic price variation.
 
 ### 3.6.7 Computational Tools and Implementation
-Data extraction, audit reconciliation, and panel assembly are executed in Python (`pandas`, `numpy`) and Microsoft Excel. Econometric modeling, robust HC3 covariance estimation, diagnostic testing, and visualization are executed using Python (`statsmodels`, `linearmodels`, `seaborn`, `matplotlib`), with cross-validation in Stata and SPSS.
-
+Data extraction, audit reconciliation, and panel assembly are executed in Python (`pandas`, `numpy`) and Microsoft Excel. Econometric modeling, robust HC3 covariance estimation, diagnostic testing, and visualization are executed using Python (`statsmodels`, `linearmodels`, `seaborn`, `matplotlib`).

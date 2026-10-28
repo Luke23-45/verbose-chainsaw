@@ -33,8 +33,8 @@ def _run_row(run: RobustnessRun) -> tuple[str, ...]:
         delta_b = run.result.term(delta_b_name)
         wald = joint_zero_test(run.result.results, (delta_e_name, delta_b_name))
         wald_cell = f"{wald.f_stat:.2f} ({_pfmt(wald.p_value)})"
-        delta_e_cell = f"{delta_e.coef:.3f}"
-        delta_b_cell = f"{delta_b.coef:.3f}"
+        delta_e_cell = f"{delta_e.coef:.3f} ({delta_e.se:.3f})"
+        delta_b_cell = f"{delta_b.coef:.3f} ({delta_b.se:.3f})"
     else:
         wald_cell = "n/a"
         delta_e_cell = "n/a"
@@ -64,8 +64,8 @@ def generate(dataset: AnalysisDataset) -> list:
             "Specification",
             "Earnings coef (SE)",
             "BVPS coef (SE)",
-            "delta(E)",
-            "delta(B)",
+            "delta(E) (SE)",
+            "delta(B) (SE)",
             "Joint Wald F (p)",
             "n",
         ),

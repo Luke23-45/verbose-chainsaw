@@ -57,7 +57,7 @@ class FitResult:
 
 
 def _fit(label: str, formula: str, frame: pd.DataFrame, terms: tuple[str, ...]) -> FitResult:
-    results = smf.ols(formula, data=frame).fit(cov_type="HC3")
+    results = smf.ols(formula, data=frame).fit(cov_type="HC3", use_t=True)
     ci = results.conf_int()
     estimates = tuple(
         TermEstimate(

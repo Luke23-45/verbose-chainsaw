@@ -48,11 +48,11 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T3_model1.tex",
-          "sha256": "729831ee53150384e96ee358a841a034dd5a112f77fcfd2f98ac94c0739f7b04"
+          "sha256": "eac19053741aae48bc590ff72873cc50f19e088fd1760507668fb70e318be3ce"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T3_model1.md",
-          "sha256": "fedec00e3bc537f44075d4ea8feb6224c1375c9b9b49a67c07ef12327d7f6135"
+          "sha256": "1aa3896c58939a10cad424c71ebcbdf2b6eef0d13d4ac272f68c38412fa0b68d"
         }
       ]
     },
@@ -61,11 +61,11 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T4_model2.tex",
-          "sha256": "0f4121803a76f957aa1d30f760f1dad7ce79c214f0a8bf89365d664d760895bf"
+          "sha256": "2a7e8eb3672b30f7cdd23394fdb14ad63faf7e0bff996dba76cb49a914aefd29"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T4_model2.md",
-          "sha256": "b079125f8f8d1f9c10a3d82e15fd99ae0ac60d0e666fc18f64aa58cd7ed6189d"
+          "sha256": "87647977738a017e1385f52296ec6a902ee791e4c6a4e06b18023fee121bdc9f"
         }
       ]
     },
@@ -74,11 +74,11 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T5_robustness.tex",
-          "sha256": "d4a34197152888acd5ce6f83ba8b3b4608609a22581431bc97ae9ccf8b60d0f3"
+          "sha256": "ac7bfa38ecae0809e52d5be91b64c8a79bda4ed3ad033415a4e59e9bcb960e67"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T5_robustness.md",
-          "sha256": "59373caa1bf83ecda3f35e301703e1c61202cc1a3c8965c40fc19479ef2bbdb5"
+          "sha256": "d7bea2bb331f2045216c8f788de51050051c3f788277a71fa246d7d2fee6acba"
         }
       ]
     },
@@ -100,7 +100,7 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F1_scatter_matrix.pdf",
-          "sha256": "04debbb515c412e4043b8004a100d2cd070e0dcce1f7f1ee7efbce563fd5e394"
+          "sha256": "6199ac6aff6d0f492b64e609a9d3e9d01f335e0754d58c97baaf5caf92f57515"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F1_scatter_matrix.png",
@@ -113,7 +113,7 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F2_correlation_heatmap.pdf",
-          "sha256": "7465dcfdaea7d6e3ace42d4c3e3cde78f7f93c62bade5c9cd1eec66f4b1699d5"
+          "sha256": "d59b0538b213dac10f655aa26373eb05aa74900e805e7f96dfa90c91bcffc8ab"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F2_correlation_heatmap.png",
@@ -126,11 +126,11 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F3_value_relevance.pdf",
-          "sha256": "1d9737bbb79be7bbf8ceaef6240408254c6ace69748043d05064cdc033585ad2"
+          "sha256": "531af73f52bcdf8b10cc4bcb7481b921a53d30c92b5c9f9dc8f79b6d36ba69c2"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F3_value_relevance.png",
-          "sha256": "61ee3fd1a68658ce5cee35bd41b9e02e737fe7720e92c9c2b39840e20e816fd4"
+          "sha256": "a50c73ebbeb8be45ccc48391d9196b6c31ba07631110c5cbd6ba81d25f4b7e9b"
         }
       ]
     },
@@ -139,11 +139,11 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F4_coefficient_forest.pdf",
-          "sha256": "ec08ccf26f6716a80b1c30537fbad9bc4371e65592aa84c869ec41f1cc7c4a02"
+          "sha256": "5ab99d80b17587bf5974fded870fd2acea3b289500b3ba7ede83d4f481197e4c"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F4_coefficient_forest.png",
-          "sha256": "425aae96364b2679d8e32426770de2f5ccf21d032636ecdcd7264516c04be955"
+          "sha256": "b1bc1882953899e7a72c9ac777beb7c39984353d57e3dddbc034d48363ec2759"
         }
       ]
     },
@@ -152,7 +152,7 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F5_diagnostics.pdf",
-          "sha256": "5c18cb7a46fc74c83a9f9d13ac59499c779cef12f9fb845b6a3d63f516eb8432"
+          "sha256": "a0f92eb6d1038b046972bfefa28449e4baa282b564085266cc8f669b78c3d45a"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F5_diagnostics.png",
@@ -165,7 +165,7 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F6_trends.pdf",
-          "sha256": "7f5660988927610e2a3c1e4a996bc809c3a4a703f6c215274342ba7cdf41ed81"
+          "sha256": "3df76e463baedd0a34f8f979fb3044ca1d3d94ce0da3b533fa91021bdf445ad8"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F6_trends.png",
@@ -178,7 +178,7 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A1_coverage_map.pdf",
-          "sha256": "f639395c3378818b6b6fb5bc77b7f5b98757d29ad8487ac315d9af89da72edbc"
+          "sha256": "6c4591835f345deab828efc732a2b77873aebbc3efb9b45c0d3647c74e10dfc8"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A1_coverage_map.png",
@@ -191,11 +191,11 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A2_robustness_forest.pdf",
-          "sha256": "8cf00ff72d91a09019d179368fa4c30b87a57bc1ea35e574fdd203d1c422f72d"
+          "sha256": "e44449079ccc015c2875c8384ef1ea67f34657101ef6ab8a8ee7d8962c0d9785"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A2_robustness_forest.png",
-          "sha256": "fa9f6f832a2e7caa4fd150987507230351988ee3d7f2e933051246269345324f"
+          "sha256": "8d9987275611d15dff42dc27b1bf6703000d0f0c9153e8a7ad8e00daa7a5d4ed"
         }
       ]
     },
@@ -204,7 +204,7 @@
       "outputs": [
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A3_model2_diagnostics.pdf",
-          "sha256": "476d05bdd972a9b809eb1571de4d84d7e154fbb393a33e53de02a9e9083e55ac"
+          "sha256": "e9adc27aa41c55e233a78ae000df82db9f04873007a847910c03b515f7ef5d25"
         },
         {
           "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A3_model2_diagnostics.png",

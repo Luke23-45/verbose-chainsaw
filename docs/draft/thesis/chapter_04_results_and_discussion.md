@@ -9,15 +9,17 @@ In accordance with the Faculty of Management, Tribhuvan University *Master's Deg
 The **Results** section (Section 4.2) details the empirical outcomes derived from the five sampled banking series over the six-year observation period (FY 2076/77 to FY 2081/82, corresponding to Gregorian years 2019/20 through 2024/25). The presentation proceeds through seven structured subsections:
 1. *Descriptive Statistics* (Section 4.2.1), summarizing the distributional properties, central tendencies, and dispersions of the primary valuation variables across the full panel and comparative pre- and post-consolidation sub-periods;
 2. *Correlation Analysis and Multicollinearity Assessment* (Section 4.2.2), examining bivariate linear associations, verifying collinearity boundaries between EPS and return on assets (ROA), and reviewing the visual dispersion patterns across variables;
-3. *Baseline Value Relevance Estimation* (Section 4.2.3), reporting the estimation of Model 1 under two-way fixed effects with MacKinnon-White HC3 robust standard errors;
+3. *Baseline Value Relevance Estimation* (Section 4.2.3), reporting the estimation of Model 1 under two-way fixed effects with MacKinnon-White HC3 robust standard errors on Student's $t$ residual degrees of freedom;
 4. *Consolidation Regime Shift Analysis* (Section 4.2.4), detailing the estimation of Model 2, capturing pre-consolidation valuation slopes, regime interaction coefficients ($\delta_E, \delta_B$), implied post-consolidation net slopes, and the principal joint Wald test of parameter stability;
 5. *Formal Hypothesis Testing* (Section 4.2.5), evaluating the empirical findings against the four research hypotheses ($H_1, H_2, H_3, H_4$) formulated in Chapter I;
 6. *Robustness and Sensitivity Suite* (Section 4.2.6), executing eight alternative specifications (R1 through R8) to probe the sensitivity of baseline estimates to profitability definitions, dividend exclusions, entity-timing mismatches, transition-year volatility, bonus share dilutive adjustments, and restated basic earnings; and
 7. *Econometric Diagnostics and Specification Comparison* (Section 4.2.7), evaluating variance inflation factors (VIF), Breusch-Pagan heteroskedasticity tests, Cook's distance influence metrics, residual normality, and comparing pooled OLS, bank fixed effects, and two-way fixed effects specifications.
 
+For analytical transparency and audit traceability, the analytical figures embedded in this chapter correspond directly to verified analytical codebase outputs: Figure 4.1 maps to codebase asset F6, Figure 4.2 to F1, Figure 4.3 to F2, Figure 4.4 to F3, Figure 4.5 to F4, Figure 4.6 to A2, and Figure 4.7 to F5.
+
 The **Discussion** section (Section 4.3) evaluates, synthesizes, and critically interprets these empirical findings in the context of foundational valuation theory and contemporary empirical literature. It examines:
 1. The structural behavior of accounting valuation multiples in the pre-consolidation regime (Section 4.3.1);
-2. The economic mechanisms driving the downward shift in earnings multiples and the compression of book value multiples post-consolidation (Section 4.3.2);
+2. Economic and institutional interpretations of the downward shift in earnings multiples and the compression of book value multiples post-consolidation (Section 4.3.2);
 3. Theoretical reconciliation with the Ohlson (1995) residual income valuation framework, clean-surplus accounting, dividend signaling, and banking opacity theories (Section 4.3.3);
 4. Comparative alignment and divergence with prior Nepalese and emerging-market empirical literature (Section 4.3.4); and
 5. Methodological, institutional, and regulatory implications stemming from transition-year friction and statutory reporting deadlines under Section 59(2) of the Banks and Financial Institutions Act, 2017 (Section 4.3.5).
@@ -30,7 +32,7 @@ The **Discussion** section (Section 4.3) evaluates, synthesizes, and critically 
 
 To establish the empirical baseline of the panel, Table 4.1 reports the descriptive statistics—sample size ($n$), mean, standard deviation (SD), minimum, and maximum—for the dependent variable ($MPS^{RD}$) and explanatory accounting fundamentals (EPS, BVPS, DPS, and ROA) across the full analysis sample ($N = 28$) as well as the partitioned pre-consolidation ($n = 13$) and post-consolidation ($n = 15$) sub-periods.
 
-The analysis sample consists of 28 realized bank-year observations from an intended balanced panel of 30 bank-years (5 commercial banks $\times$ 6 fiscal years). Two observations—Himalayan Bank Limited (HBL) for FY 2077/78 and Nepal Investment Mega Bank Limited (NIMB) for FY 2077/78—were dropped in strict adherence to the 5-day freshness rule defined in Chapter III. Secondary market trading for both banking series was suspended during complex merger negotiations around the statutory reporting deadline (end of Chaitra 2078 BS / mid-April 2022), with trading resuming 54 days late (6 June 2022) for HBL and 47 days late (30 May 2022) for NIMB. In alignment with econometric protocol, these prices were recorded as missing rather than imputed, preserving data integrity.
+The analysis sample consists of 28 realized bank-year observations from an intended balanced panel of 30 bank-years (5 commercial banks $\times$ 6 fiscal years). Two observations—Himalayan Bank Limited (HBL) for FY 2077/78 and Nepal Investment Mega Bank Limited (NIMB) for FY 2077/78—were dropped in strict adherence to the 5-day freshness rule defined in Chapter III. Secondary market trading for both banking series was suspended during merger-related processes around the statutory reporting deadline (end of Chaitra 2078 BS / mid-April 2022), with trading resuming 54 days late (6 June 2022) for HBL and 47 days late (30 May 2022) for NIMB. In alignment with econometric protocol, these prices were recorded as missing rather than imputed, preserving data integrity.
 
 Table 4.1: *Descriptive Statistics of Value-Relevance Variables, Five Nepalese Commercial Bank Series, FY 2076/77–FY 2081/82*
 
@@ -65,7 +67,7 @@ The descriptive statistics in Table 4.1 reveal substantial economic shifts acros
 To illustrate these longitudinal trajectories across each sampled institution, Figure 4.1 plots the time-series trends for all five variables by bank series across the six fiscal years.
 
 ```
-Figure 4.1: Variable Trends by Bank Series across FY 2076/77–FY 2081/82
+Figure 4.1: Variable Trends by Bank Series across FY 2076/77–FY 2081/82 (Codebase Asset F6)
 [Refer to: data_analysis/analysis/outputs/figures/main/F6_trends.pdf]
 ```
 *Note.* Variable trends across the six fiscal years (FY 2076/77 through FY 2081/82) for Global IME Bank Limited (GBIME), Himalayan Bank Limited (HBL), Kumari Bank Limited (KBL), Nepal Investment Mega Bank Limited (NIMB), and NMB Bank Limited (NMB). The shaded region delineates the post-consolidation regime (FY 2079/80–FY 2081/82). Window-excluded prices for HBL and NIMB in FY 2077/78 are represented as open markers.
@@ -92,19 +94,19 @@ Table 4.2: *Pearson Correlation Matrix of Value-Relevance Variables ($N = 28$)*
 
 The correlation matrix reveals several key empirical patterns:
 1. **Unconditional Price Associations:** In raw, unadjusted bivariate correlations, $MPS^{RD}$ exhibits a positive correlation with EPS ($r = 0.358, p = 0.061$) and BVPS ($r = 0.217, p = 0.268$). Although positive—consistent with general equity valuation logic—neither bivariate association achieves statistical significance at the 5% level in the unconditioned sample. Operating profitability (ROA) displays a statistically significant positive bivariate correlation with market price ($r = 0.378, p = 0.047$), whereas cash dividend per share (DPS) exhibits an extraordinarily weak linear correlation ($r = 0.082, p = 0.678$).
-2. **Severe Collinearity between EPS and ROA:** Crucially, the Pearson correlation coefficient between EPS and ROA is $r = 0.975$ ($p < 0.001$). Entering both regressors simultaneously into a multivariate linear specification would generate catastrophic variance inflation ($\text{VIF} \approx 1 / (1 - 0.975^2) \approx 20.2$ to $30.0$), severely destabilizing standard errors, inducing sign reversals, and invalidating inference. Consequently, ROA is strictly excluded from concurrent inclusion with EPS in all econometric specifications; it is deployed exclusively as a substitute operating profitability regressor in robustness specification R3.
+2. **Severe Collinearity between EPS and ROA:** Crucially, the Pearson correlation coefficient between EPS and ROA is $r = 0.975$ ($p < 0.001$). Entering both regressors simultaneously into a multivariate linear specification would generate catastrophic variance inflation ($\text{VIF} \approx 1 / (1 - 0.975^2) \approx 20.2$ to $30.0$ when other covariates are included), severely destabilizing standard errors, inducing sign reversals, and invalidating inference. Consequently, ROA is strictly excluded from concurrent inclusion with EPS in all econometric specifications; it is deployed exclusively as a substitute operating profitability regressor in robustness specification R3.
 3. **Core Regressor Independence:** In contrast, the bivariate correlation between the two core explanatory variables of the Ohlson framework—EPS and BVPS—is moderate ($r = 0.372, p = 0.051$). This demonstrates that earnings and book value capture distinct dimensions of financial performance and equity value, retaining sufficient independent variation for simultaneous estimation without multicollinearity distortion.
 
 Figure 4.2 presents the bivariate scatter plot matrix among all variables, while Figure 4.3 illustrates the corresponding correlation heatmap.
 
 ```
-Figure 4.2: Bivariate Scatter Plot Matrix of Value-Relevance Variables
+Figure 4.2: Bivariate Scatter Plot Matrix of Value-Relevance Variables (Codebase Asset F1)
 [Refer to: data_analysis/analysis/outputs/figures/main/F1_scatter_matrix.pdf]
 ```
 *Note.* Pairwise scatter plots, linear fit lines, and univariate kernel density distributions for $MPS^{RD}$, EPS, BVPS, DPS, and ROA ($N = 28$).
 
 ```
-Figure 4.3: Pearson Correlation Heatmap
+Figure 4.3: Pearson Correlation Heatmap (Codebase Asset F2)
 [Refer to: data_analysis/analysis/outputs/figures/main/F2_correlation_heatmap.pdf]
 ```
 *Note.* Correlation heatmap displaying pairwise Pearson correlation coefficients among value-relevance variables. Asterisks indicate statistical significance levels (\* $p < 0.05$, \*\* $p < 0.01$).
@@ -115,9 +117,9 @@ Figure 4.3: Pearson Correlation Heatmap
 
 To address Research Question 1 and provide an empirical benchmark of accounting value relevance prior to evaluating regime shifts, Model 1 estimates the static Ohlson valuation equation across the entire six-year panel:
 
-$$MPS^{RD}_{it} = \mu_i + \lambda_t + \beta_E \text{EPS}_{it} + \beta_B \text{BVPS}_{it} + \varepsilon_{it}$$
+$$MPS^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \text{EPS}_{it} + \beta_B \text{BVPS}_{it} + \varepsilon_{it}$$
 
-where $\mu_i$ represents unobserved time-invariant bank fixed effects (accounting for persistent cross-bank differences in brand prestige, governance architecture, legacy credit culture, and retail franchise value), and $\lambda_t$ represents common fiscal-year fixed effects (absorbing macroeconomic shocks, policy rate changes by NRB, stock market liquidity cycles, and systemic shifts in investor sentiment). Standard errors are estimated using the MacKinnon-White (1985) HC3 heteroskedasticity-consistent covariance matrix.
+where $\alpha$ is the constant baseline intercept, $\mu_i$ represents unobserved time-invariant bank fixed effects (with GBIME serving as reference bank), and $\lambda_t$ represents common fiscal-year fixed effects (with FY 2076/77 serving as reference year). Standard errors, $t$-statistics, $p$-values, and confidence intervals are estimated using MacKinnon-White (1985) HC3 heteroskedasticity-consistent standard errors evaluated on Student's $t$ distribution with residual degrees of freedom ($\text{df} = 16$).
 
 Table 4.3 reports the parameter estimates, standard errors, $t$-statistics, $p$-values, and 95% confidence intervals for Model 1.
 
@@ -125,8 +127,8 @@ Table 4.3: *Model 1: Baseline Value Relevance of Accounting Fundamentals ($N = 2
 
 | Independent Variable | Parameter | Coefficient | HC3 Std. Error | $t$-statistic | $p$-value | 95% Confidence Interval |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Earnings per Share (EPS) | $\beta_E$ | 2.095 | 4.096 | 0.51 | 0.609 | [$-5.932$, $10.122$] |
-| Book Value per Share (BVPS) | $\beta_B$ | 0.219 | 1.858 | 0.12 | 0.906 | [$-3.423$, $3.861$] |
+| Earnings per Share (EPS) | $\beta_E$ | 2.095 | 4.096 | 0.51 | 0.616 | [$-6.587$, $10.777$] |
+| Book Value per Share (BVPS) | $\beta_B$ | 0.219 | 1.858 | 0.12 | 0.908 | [$-3.720$, $4.158$] |
 | Bank Fixed Effects ($\mu_i$) |  | Included |  |  |  |  |
 | Fiscal-Year Fixed Effects ($\lambda_t$) |  | Included |  |  |  |  |
 | Observations ($N$) |  | 28 |  |  |  |  |
@@ -134,12 +136,12 @@ Table 4.3: *Model 1: Baseline Value Relevance of Accounting Fundamentals ($N = 2
 | Adjusted $R^2$ |  | 0.912 |  |  |  |  |
 | Residual Degrees of Freedom |  | 16 |  |  |  |  |
 
-*Note.* Dependent variable: Market Price per Share at Reporting Deadline ($MPS^{RD}$). OLS estimation with two-way fixed effects (bank dummies and fiscal-year dummies). Inference based on MacKinnon-White HC3 robust standard errors. Residual degrees of freedom: $28 \text{ observations} - 5 \text{ bank parameters} - (6 - 1) \text{ year parameters} - 2 \text{ slope parameters} = 28 - 12 = 16$. Two-tailed tests at 5% significance level.
+*Note.* Dependent variable: Market Price per Share at Reporting Deadline ($MPS^{RD}$). OLS estimation with two-way fixed effects (bank dummies and fiscal-year dummies). Inference based on MacKinnon-White HC3 robust standard errors on Student's $t$ distribution ($\text{df} = 16$). Parameter count: 1 intercept + 4 bank dummies + 5 year dummies + 2 slopes = 12 parameters; residual degrees of freedom: $28 - 12 = 16$. Two-tailed tests at 5% significance level.
 
 The baseline results in Table 4.3 provide important empirical insights:
 1. **Coefficient Magnitudes and Signs:** Both accounting fundamentals exhibit positive coefficients: $\beta_E = 2.095$ and $\beta_B = 0.219$. In economic terms, this suggests that across the full observation span, each additional NPR 1.00 of reported earnings per share is associated with an incremental NPR 2.10 in post-deadline market share price, while each additional NPR 1.00 of book equity per share is associated with an incremental NPR 0.22 in market price, holding unobserved bank characteristics and common macro-temporal shocks constant.
-2. **Statistical Significance under Robust Inference:** Neither slope coefficient achieves statistical significance at conventional levels. For EPS, the $t$-statistic is $0.51$ ($p = 0.609$), and the 95% HC3 confidence interval spans widely from NPR $-5.932$ to NPR $10.122$. For BVPS, the $t$-statistic is $0.12$ ($p = 0.906$), with a 95% confidence interval spanning from NPR $-3.423$ to NPR $3.861$.
-3. **Goodness of Fit and Degrees of Freedom:** The model exhibits an extraordinarily high coefficient of determination ($R^2 = 0.948$, Adjusted $R^2 = 0.912$). However, as demonstrated in the specification comparisons in Section 4.2.7, this high explanatory power is almost entirely driven by the two-way fixed effects structure—specifically the fiscal-year dummies ($\lambda_t$), which absorb the massive macro-market repricing of NEPSE over this period. Accounting for 5 bank intercepts, 5 independent year parameters, and 2 slope regressors consumes 12 degrees of freedom, leaving exactly $28 - 12 = 16$ residual degrees of freedom.
+2. **Statistical Significance under Robust Inference:** Neither slope coefficient achieves statistical significance at conventional levels. For EPS, the $t$-statistic is $0.51$ ($p = 0.616$ on $t(16)$), and the 95% HC3 confidence interval spans widely from NPR $-6.587$ to NPR $10.777$. For BVPS, the $t$-statistic is $0.12$ ($p = 0.908$ on $t(16)$), with a 95% confidence interval spanning from NPR $-3.720$ to NPR $4.158$.
+3. **Goodness of Fit and Degrees of Freedom:** The model exhibits an extraordinarily high coefficient of determination ($R^2 = 0.948$, Adjusted $R^2 = 0.912$). However, as demonstrated in the specification comparisons in Section 4.2.7, this high explanatory power is almost entirely driven by the two-way fixed effects structure—specifically the fiscal-year dummies ($\lambda_t$), which absorb the massive macro-market repricing of NEPSE over this period. Accounting for 1 constant intercept, 4 bank dummy parameters, 5 fiscal-year dummy parameters, and 2 slope regressors consumes 12 degrees of freedom, leaving exactly $28 - 12 = 16$ residual degrees of freedom.
 
 ---
 
@@ -147,27 +149,27 @@ The baseline results in Table 4.3 provide important empirical insights:
 
 To evaluate Research Question 2 and directly test whether the 2023 consolidation wave altered the valuation relationship between accounting fundamentals and equity prices, Model 2 introduces consolidation interaction terms into the two-way fixed effects framework:
 
-$$MPS^{RD}_{it} = \mu_i + \lambda_t + \beta_E \text{EPS}_{it} + \beta_B \text{BVPS}_{it} + \delta_E (\text{EPS}_{it} \times Post_t) + \delta_B (\text{BVPS}_{it} \times Post_t) + \varepsilon_{it}$$
+$$MPS^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \text{EPS}_{it} + \beta_B \text{BVPS}_{it} + \delta_E (\text{EPS}_{it} \times Post_t) + \delta_B (\text{BVPS}_{it} \times Post_t) + \varepsilon_{it}$$
 
-where $Post_t = 1$ for the post-consolidation fiscal years (FY 2079/80, 2080/81, and 2081/82) and $Post_t = 0$ for the pre-consolidation fiscal years (FY 2076/77, 2077/78, and 2078/79). 
+where $Post_t = 1$ for the post-consolidation fiscal years (FY 2079/80, 2080/81, and 2081/82) and $Post_t = 0$ for the pre-consolidation fiscal years (FY 2076/77, 2077/78, and 2078/79). Reference categories remain identical (GBIME for $\mu_i$, FY 2076/77 for $\lambda_t$).
 
 Because common fiscal-year fixed effects ($\lambda_t$) are fully specified, the stand-alone indicator $Post_t$ is an exact linear combination of the fiscal-year dummies ($\sum_{t \in Post} \lambda_t = Post_t$); consequently, the main effect of $Post_t$ is perfectly absorbed by the year fixed effects and cannot be separately estimated. The pre-consolidation valuation slopes are captured by $\beta_E$ and $\beta_B$, the regime interaction coefficients are captured by $\delta_E$ and $\delta_B$, and the implied post-consolidation valuation slopes are given by the linear combinations $(\beta_E + \delta_E)$ and $(\beta_B + \delta_B)$.
 
-Table 4.4 reports the estimation results for Model 2, including pre-consolidation slopes, interaction shifts, implied post-consolidation slopes, and the principal joint Wald test of structural parameter change.
+Table 4.4 reports the estimation results for Model 2, including pre-consolidation slopes, interaction shifts, implied post-consolidation slopes, and the principal joint Wald test of structural parameter change, evaluated with HC3 robust standard errors on Student's $t$ distribution ($\text{df} = 14$).
 
 Table 4.4: *Model 2: Value Relevance Regime Shift Across the 2023 Consolidation Wave ($N = 28$)*
 
 | Model Parameter / Term | Coefficient | HC3 Std. Error | $t$-statistic | $p$-value | 95% Confidence Interval |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Pre-Consolidation Slopes:** |  |  |  |  |  |
-| Earnings per Share ($\beta_E$) | 5.577 | 3.560 | 1.57 | 0.117 | [$-1.401$, $12.555$] |
-| Book Value per Share ($\beta_B$) | 0.100 | 1.306 | 0.08 | 0.939 | [$-2.459$, $2.660$] |
+| Earnings per Share ($\beta_E$) | 5.577 | 3.560 | 1.57 | 0.140 | [$-2.059$, $13.213$] |
+| Book Value per Share ($\beta_B$) | 0.100 | 1.306 | 0.08 | 0.940 | [$-2.700$, $2.901$] |
 | **Consolidation Interaction Shifts:** |  |  |  |  |  |
-| EPS $\times$ Post ($\delta_E$) | $-3.124$ | 4.003 | $-0.78$ | 0.435 | [$-10.970$, $4.722$] |
-| BVPS $\times$ Post ($\delta_B$) | $-1.758$ | 1.231 | $-1.43$ | 0.153 | [$-4.170$, $0.654$] |
+| EPS $\times$ Post ($\delta_E$) | $-3.124$ | 4.003 | $-0.78$ | 0.448 | [$-11.710$, $5.462$] |
+| BVPS $\times$ Post ($\delta_B$) | $-1.758$ | 1.231 | $-1.43$ | 0.175 | [$-4.398$, $0.882$] |
 | **Implied Post-Consolidation Slopes:** |  |  |  |  |  |
-| Implied EPS Slope ($\beta_E + \delta_E$) | 2.453 | 2.269 | 1.08 | 0.280 | [$-1.993$, $6.900$] |
-| Implied BVPS Slope ($\beta_B + \delta_B$) | $-1.658$ | 1.120 | $-1.48$ | 0.139 | [$-3.852$, $0.537$] |
+| Implied EPS Slope ($\beta_E + \delta_E$) | 2.453 | 2.269 | 1.08 | 0.298 | [$-2.412$, $7.319$] |
+| Implied BVPS Slope ($\beta_B + \delta_B$) | $-1.658$ | 1.120 | $-1.48$ | 0.161 | [$-4.059$, $0.744$] |
 | **Model Diagnostics:** |  |  |  |  |  |
 | Joint Wald Test of Regime Shift: |  |  |  |  |  |
 | $H_0: \delta_E = 0 \text{ and } \delta_B = 0$ | $F = 2.954$ |  |  | 0.085 | $\text{df} = (2, 14)$ |
@@ -177,38 +179,38 @@ Table 4.4: *Model 2: Value Relevance Regime Shift Across the 2023 Consolidation 
 | Coefficient of Determination ($R^2$) | 0.978 |  |  |  |  |
 | Residual Degrees of Freedom | 14 |  |  |  |  |
 
-*Note.* Dependent variable: $MPS^{RD}$. OLS estimation with bank and fiscal-year fixed effects. Post indicator equals 1 for FY 2079/80–2081/82 and 0 for FY 2076/77–2078/79; stand-alone Post main effect is fully absorbed by the fiscal-year fixed effects. Standard errors, confidence intervals, and the joint Wald $F$-statistic are computed under the MacKinnon-White HC3 robust covariance matrix. Implied post-consolidation slopes are linear combinations evaluated under the HC3 covariance. Residual degrees of freedom: $28 - 14 = 14$. Two-tailed tests.
+*Note.* Dependent variable: $MPS^{RD}$. OLS estimation with bank and fiscal-year fixed effects. Post indicator equals 1 for FY 2079/80–2081/82 and 0 for FY 2076/77–2078/79; stand-alone Post main effect is fully absorbed by the fiscal-year fixed effects. Standard errors, confidence intervals, and the joint Wald $F$-statistic are computed under the MacKinnon-White HC3 robust covariance matrix on Student's $t$ distribution ($\text{df} = 14$). Implied post-consolidation slopes are linear combinations evaluated under the HC3 covariance. Residual degrees of freedom: $28 - 14 = 14$. Two-tailed tests.
 
 The empirical estimates in Table 4.4 provide substantive evidence regarding structural changes in valuation dynamics:
 
 1. **Pre-Consolidation Valuation Regime:**
-   - Prior to the 2023 consolidation wave, the estimated valuation slope for earnings per share was $\beta_E = 5.577$ (HC3 SE = 3.560, $t = 1.57, p = 0.117$). In economic magnitude, equity investors priced commercial bank shares at approximately 5.58 times reported earnings per share. While economically substantial, this estimate is not statistically significant at the 5% level ($p = 0.117$), reflecting the wide confidence interval ([-1.401, 12.555]) resulting from small sample degrees of freedom and conservative HC3 standard errors.
-   - The pre-consolidation slope for book value per share was negligible: $\beta_B = 0.100$ (HC3 SE = 1.306, $t = 0.08, p = 0.939$). In the pre-consolidation environment, secondary market share prices were predominantly driven by earnings and dividend capacity rather than balance-sheet equity backing.
+   - Prior to the 2023 consolidation wave, the estimated valuation slope for earnings per share was $\beta_E = 5.577$ (HC3 SE = 3.560, $t = 1.57, p = 0.140$). In economic magnitude, equity investors priced commercial bank shares at approximately 5.58 times reported earnings per share. While economically substantial, this estimate is not statistically significant at the 5% level ($p = 0.140$ on $t(14)$), reflecting the wide confidence interval ([-2.059, 13.213]) resulting from small sample degrees of freedom and conservative HC3 standard errors.
+   - The pre-consolidation slope for book value per share was negligible: $\beta_B = 0.100$ (HC3 SE = 1.306, $t = 0.08, p = 0.940$). In the pre-consolidation environment, secondary market share prices were predominantly driven by earnings and dividend capacity rather than balance-sheet equity backing.
 2. **Consolidation Regime Interaction Shifts:**
-   - The earnings interaction coefficient is negative: $\delta_E = -3.124$ (HC3 SE = 4.003, $t = -0.78, p = 0.435$). Although statistically insignificant in isolation ($p = 0.435$), the point estimate indicates that post-consolidation equity prices discounted reported earnings by approximately NPR 3.12 per rupee of EPS relative to the pre-consolidation regime, cutting the implied earnings multiple by more than half.
-   - The book value interaction coefficient is also negative: $\delta_B = -1.758$ (HC3 SE = 1.231, $t = -1.43, p = 0.153$). While not statistically significant at the 5% level ($p = 0.153$), the point estimate reflects an erosion of the valuation multiple attached to book equity by NPR 1.76 per rupee of BVPS.
+   - The earnings interaction coefficient is negative: $\delta_E = -3.124$ (HC3 SE = 4.003, $t = -0.78, p = 0.448$). Although statistically insignificant in isolation ($p = 0.448$), the point estimate indicates that post-consolidation equity prices discounted reported earnings by approximately NPR 3.12 per rupee of EPS relative to the pre-consolidation regime, cutting the implied earnings multiple by more than half.
+   - The book value interaction coefficient is also negative: $\delta_B = -1.758$ (HC3 SE = 1.231, $t = -1.43, p = 0.175$). While not statistically significant at the 5% level ($p = 0.175$), the point estimate reflects an erosion of the valuation multiple attached to book equity by NPR 1.76 per rupee of BVPS.
 3. **Implied Post-Consolidation Slopes:**
-   - Combining the baseline slope and interaction shift yields an implied post-consolidation earnings slope of $\beta_E + \delta_E = 2.453$ (HC3 SE = 2.269, $t = 1.08, p = 0.280$). The pricing of earnings compressed from 5.58 times EPS to 2.45 times EPS.
-   - For book value, the implied post-consolidation slope is negative: $\beta_B + \delta_B = -1.658$ (HC3 SE = 1.120, $t = -1.48, p = 0.139$). Rather than serving as an asset anchor, increases in book equity following the merger wave were weakly associated with lower share prices, reflecting market apprehension over asset quality dilution, goodwill recognition, and capital overhang.
+   - Combining the baseline slope and interaction shift yields an implied post-consolidation earnings slope of $\beta_E + \delta_E = 2.453$ (HC3 SE = 2.269, $t = 1.08, p = 0.298$). The pricing of earnings compressed from 5.58 times EPS to 2.45 times EPS.
+   - For book value, the implied post-consolidation slope is negative: $\beta_B + \delta_B = -1.658$ (HC3 SE = 1.120, $t = -1.48, p = 0.161$). Rather than serving as an asset anchor, increases in book equity following the merger wave were weakly associated with lower share prices, reflecting market apprehension over asset quality dilution, goodwill recognition, and capital overhang.
 4. **Principal Joint Wald Test of Regime Shift:**
    - Because corporate combinations simultaneously alter multiple accounting dimensions, testing interaction coefficients individually can fail to capture multi-parameter structural shifts. The principal econometric test is the joint Wald $F$-test evaluating the composite null hypothesis that both interaction terms are simultaneously zero ($H_0: \delta_E = 0 \text{ and } \delta_B = 0$).
-   - The joint test yields $F(2, 14) = 2.954$ with an asymptotic $p$-value of $0.085$. Under the designated two-tailed 5% significance threshold, the null hypothesis of structural stability cannot be rejected ($p = 0.085 > 0.05$). However, the joint test achieves marginal significance at the 10% level ($p < 0.10$), providing suggestive evidence of a joint structural shift in the accounting valuation function.
+   - The joint test yields $F(2, 14) = 2.954$ with an $F$-distribution $p$-value of $0.085$. Under the designated two-tailed 5% significance threshold, the null hypothesis of structural stability cannot be rejected ($p = 0.085 > 0.05$). However, the joint test achieves marginal significance at the 10% level ($p < 0.10$), providing suggestive evidence of a joint structural shift in the accounting valuation function.
 5. **Parameter Accounting and Residual Degrees of Freedom:**
-   - Model 2 estimates 5 bank fixed effects, 5 independent fiscal-year fixed effects, 2 main slope parameters ($\beta_E, \beta_B$), and 2 interaction parameters ($\delta_E, \delta_B$), consuming a total of 14 degrees of freedom. On $N = 28$ observations, this leaves exactly $28 - 14 = 14$ residual degrees of freedom.
+   - Model 2 estimates 1 constant intercept, 4 bank fixed effects (GBIME reference), 5 fiscal-year fixed effects (FY 2076/77 reference), 2 main slope parameters ($\beta_E, \beta_B$), and 2 interaction parameters ($\delta_E, \delta_B$), consuming a total of 14 degrees of freedom. On $N = 28$ observations, this leaves exactly $28 - 14 = 14$ residual degrees of freedom.
 
 To visually display these pre- and post-consolidation relationships, Figure 4.4 presents bivariate scatter plots of $MPS^{RD}$ against EPS and BVPS partitioned by consolidation regime, while Figure 4.5 presents the coefficient forest plot for Model 2.
 
 ```
-Figure 4.4: MPS_RD against Accounting Fundamentals Pre vs. Post Consolidation
+Figure 4.4: MPS_RD against Accounting Fundamentals Pre vs. Post Consolidation (Codebase Asset F3)
 [Refer to: data_analysis/analysis/outputs/figures/main/F3_value_relevance.pdf]
 ```
 *Note.* Scatter panels and OLS regression lines of $MPS^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77–2078/79, blue) and post-consolidation (FY 2079/80–2081/82, vermillion) sub-periods ($N = 28$).
 
 ```
-Figure 4.5: Model 2 Coefficients and 95% HC3 Confidence Intervals
+Figure 4.5: Model 2 Coefficients and 95% HC3 Confidence Intervals (Codebase Asset F4)
 [Refer to: data_analysis/analysis/outputs/figures/main/F4_coefficient_forest.pdf]
 ```
-*Note.* Coefficient forest plot displaying pre-consolidation slopes ($\beta_E, \beta_B$), interaction shifts ($\delta_E, \delta_B$), and implied post-consolidation linear combinations ($\beta_E+\delta_E, \beta_B+\delta_B$) from Model 2, estimated with MacKinnon-White HC3 robust 95% confidence intervals ($N = 28, \text{residual df} = 14$).
+*Note.* Coefficient forest plot displaying pre-consolidation slopes ($\beta_E, \beta_B$), interaction shifts ($\delta_E, \delta_B$), and implied post-consolidation linear combinations ($\beta_E+\delta_E, \beta_B+\delta_B$) from Model 2, estimated with MacKinnon-White HC3 robust 95% confidence intervals on Student's $t(14)$ distribution ($N = 28, \text{residual df} = 14$).
 
 ---
 
@@ -216,33 +218,37 @@ Figure 4.5: Model 2 Coefficients and 95% HC3 Confidence Intervals
 
 Based on the econometric estimates obtained from Model 1 and Model 2, the four operational research hypotheses formulated in Chapter I are formally evaluated at the designated two-tailed 5% significance level ($\alpha = 0.05$).
 
+To ensure rigorous transparency, Hypotheses $H_1$ and $H_2$ are evaluated under both Model 1 (overall six-year baseline slopes) and Model 2 (pre-consolidation regime slopes). In both specifications, the empirical decision is identical.
+
 Table 4.5 summarizes the formal hypothesis testing decisions.
 
 Table 4.5: *Summary of Hypothesis Testing Decisions*
 
-| Hypothesis | Parameter / Test | Null Hypothesis ($H_0$) | Estimate / Test Stat. | $p$-value | Decision at $\alpha = 0.05$ | Econometric Inference |
+| Hypothesis | Parameter / Model | Null Hypothesis ($H_0$) | Estimate / Test Stat. | $p$-value | Decision at $\alpha = 0.05$ | Econometric Inference |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **$H_1$** | $\beta_E$ (Model 2 Pre Slope) | $\beta_E \le 0$ | $\hat{\beta}_E = 5.577$ | $0.117$ | Fail to Reject $H_0$ | Positive association ($\hat{\beta}_E = 5.58$), but statistically insignificant under HC3 inference ($\text{df} = 14$). |
-| **$H_2$** | $\beta_B$ (Model 2 Pre Slope) | $\beta_B \le 0$ | $\hat{\beta}_B = 0.100$ | $0.939$ | Fail to Reject $H_0$ | Positive association ($\hat{\beta}_B = 0.10$), but statistically indistinguishable from zero ($\text{df} = 14$). |
-| **$H_3$** | $\delta_E$ (EPS Interaction) | $\delta_E = 0$ | $\hat{\delta}_E = -3.124$ | $0.435$ | Fail to Reject $H_0$ | Downward shift ($\hat{\delta}_E = -3.12$), but individual interaction is not statistically significant. |
-| **$H_4$** | $\delta_B$ (BVPS Interaction) | $\delta_B = 0$ | $\hat{\delta}_B = -1.758$ | $0.153$ | Fail to Reject $H_0$ | Downward shift ($\hat{\delta}_B = -1.76$), but individual interaction is not statistically significant. |
+| **$H_1$ (Model 1)** | $\beta_E$ (Overall Baseline) | $\beta_E = 0$ | $\hat{\beta}_E = 2.095$ | $0.616$ | Fail to Reject $H_0$ | Positive slope, but statistically insignificant under HC3 inference ($t(16) = 0.51$). |
+| **$H_1$ (Model 2)** | $\beta_E$ (Pre-Consolidation) | $\beta_E = 0$ | $\hat{\beta}_E = 5.577$ | $0.140$ | Fail to Reject $H_0$ | Economically substantial slope ($\hat{\beta}_E = 5.58$), but insignificant at 5% ($t(14) = 1.57$). |
+| **$H_2$ (Model 1)** | $\beta_B$ (Overall Baseline) | $\beta_B = 0$ | $\hat{\beta}_B = 0.219$ | $0.908$ | Fail to Reject $H_0$ | Positive slope, but statistically indistinguishable from zero ($t(16) = 0.12$). |
+| **$H_2$ (Model 2)** | $\beta_B$ (Pre-Consolidation) | $\beta_B = 0$ | $\hat{\beta}_B = 0.100$ | $0.940$ | Fail to Reject $H_0$ | Positive slope ($\hat{\beta}_B = 0.10$), but statistically indistinguishable from zero ($t(14) = 0.08$). |
+| **$H_3$** | $\delta_E$ (EPS Interaction) | $\delta_E = 0$ | $\hat{\delta}_E = -3.124$ | $0.448$ | Fail to Reject $H_0$ | Downward shift ($\hat{\delta}_E = -3.12$), but individual interaction is not statistically significant ($t(14) = -0.78$). |
+| **$H_4$** | $\delta_B$ (BVPS Interaction) | $\delta_B = 0$ | $\hat{\delta}_B = -1.758$ | $0.175$ | Fail to Reject $H_0$ | Downward shift ($\hat{\delta}_B = -1.76$), but individual interaction is not statistically significant ($t(14) = -1.43$). |
 | **Principal Joint Test** | Joint Wald Test ($H_0: \delta_E = \delta_B = 0$) | $\delta_E = 0 \text{ and } \delta_B = 0$ | $F(2, 14) = 2.954$ | $0.085$ | Fail to Reject $H_0$ at 5% (Marginal at 10%) | Joint regime shift is marginally significant at 10% ($p = 0.085$), but fails conventional 5% significance. |
 
-*Note.* All tests evaluated at two-tailed $\alpha = 0.05$. Estimates derived from Model 2 ($N = 28, \text{residual df} = 14$) with two-way fixed effects and MacKinnon-White HC3 robust standard errors.
+*Note.* All tests evaluated at two-tailed $\alpha = 0.05$. Estimates derived from Model 1 ($N = 28, \text{residual df} = 16$) and Model 2 ($N = 28, \text{residual df} = 14$) with two-way fixed effects and MacKinnon-White HC3 robust standard errors on Student's $t$ distribution.
 
 Detailed evaluations of individual hypotheses:
-1. **Hypothesis 1 ($H_1$): Value Relevance of Pre-Consolidation EPS:**
-   - *Hypothesis Statement:* There is a statistically significant positive relationship between earnings per share and market share price before the 2023 consolidation wave ($\beta_E > 0$).
-   - *Test Outcome:* In Model 2, the pre-consolidation EPS slope is estimated at $\hat{\beta}_E = 5.577$ with an HC3 standard error of $3.560$ ($t = 1.57, p = 0.117$). Under Model 1 baseline, the overall EPS slope is $\hat{\beta}_E = 2.095$ ($p = 0.609$). In both models, the point estimates are positive and economically meaningful, but because $p > 0.05$, the study fails to reject the null hypothesis of no statistical association at the 5% significance level.
-2. **Hypothesis 2 ($H_2$): Value Relevance of Pre-Consolidation BVPS:**
-   - *Hypothesis Statement:* There is a statistically significant positive relationship between book value per share and market share price before the 2023 consolidation wave ($\beta_B > 0$).
-   - *Test Outcome:* In Model 2, the pre-consolidation BVPS slope is $\hat{\beta}_B = 0.100$ with an HC3 standard error of $1.306$ ($t = 0.08, p = 0.939$). In Model 1, the overall slope is $\hat{\beta}_B = 0.219$ ($p = 0.906$). Because $p = 0.939 \gg 0.05$, the study fails to reject the null hypothesis. Prior to consolidation, book value per share provided negligible explanatory power for share prices beyond earnings and fixed effects.
+1. **Hypothesis 1 ($H_1$): Value Relevance of Earnings per Share:**
+   - *Hypothesis Statement:* There is a statistically significant relationship between earnings per share and market share price ($H_0: \beta_E = 0$ vs. $H_1: \beta_E \ne 0$).
+   - *Test Outcome:* In Model 1, the overall EPS slope is $\hat{\beta}_E = 2.095$ with an HC3 standard error of $4.096$ ($t = 0.51, p = 0.616$). In Model 2, the pre-consolidation EPS slope is estimated at $\hat{\beta}_E = 5.577$ with an HC3 standard error of $3.560$ ($t = 1.57, p = 0.140$). In both models, the point estimates are positive and economically meaningful, but because $p > 0.05$, the study fails to reject the null hypothesis of no statistical association at the 5% significance level.
+2. **Hypothesis 2 ($H_2$): Value Relevance of Book Value per Share:**
+   - *Hypothesis Statement:* There is a statistically significant relationship between book value per share and market share price ($H_0: \beta_B = 0$ vs. $H_1: \beta_B \ne 0$).
+   - *Test Outcome:* In Model 1, the overall slope is $\hat{\beta}_B = 0.219$ ($t = 0.12, p = 0.908$). In Model 2, the pre-consolidation BVPS slope is $\hat{\beta}_B = 0.100$ with an HC3 standard error of $1.306$ ($t = 0.08, p = 0.940$). Because $p \gg 0.05$ across both specifications, the study fails to reject the null hypothesis. Prior to consolidation, book value per share provided negligible explanatory power for share prices beyond earnings and fixed effects.
 3. **Hypothesis 3 ($H_3$): Structural Shift in Earnings Value Relevance:**
-   - *Hypothesis Statement:* The value relevance of earnings per share underwent a statistically significant shift following the 2023 consolidation wave ($\delta_E \neq 0$).
-   - *Test Outcome:* The interaction coefficient is $\hat{\delta}_E = -3.124$ with an HC3 standard error of $4.003$ ($t = -0.78, p = 0.435$). Although the point estimate indicates a substantial downward shift in the valuation multiple, the individual coefficient is not statistically significant at conventional thresholds. The study fails to reject the null hypothesis of no structural shift in EPS value relevance when evaluated in isolation.
+   - *Hypothesis Statement:* The value relevance of earnings per share underwent a statistically significant shift following the 2023 consolidation wave ($H_0: \delta_E = 0$ vs. $H_1: \delta_E \ne 0$).
+   - *Test Outcome:* The interaction coefficient is $\hat{\delta}_E = -3.124$ with an HC3 standard error of $4.003$ ($t = -0.78, p = 0.448$). Although the point estimate indicates a substantial downward shift in the valuation multiple, the individual coefficient is not statistically significant at conventional thresholds. The study fails to reject the null hypothesis of no structural shift in EPS value relevance when evaluated in isolation.
 4. **Hypothesis 4 ($H_4$): Structural Shift in Book Value Relevance:**
-   - *Hypothesis Statement:* The value relevance of book value per share underwent a statistically significant shift following the 2023 consolidation wave ($\delta_B \neq 0$).
-   - *Test Outcome:* The interaction coefficient is $\hat{\delta}_B = -1.758$ with an HC3 standard error of $1.231$ ($t = -1.43, p = 0.153$). Although the negative shift reduces the implied post-consolidation slope to $-1.658$, the interaction term does not achieve statistical significance at the 5% level. The study fails to reject the null hypothesis of no structural shift in BVPS value relevance when evaluated in isolation.
+   - *Hypothesis Statement:* The value relevance of book value per share underwent a statistically significant shift following the 2023 consolidation wave ($H_0: \delta_B = 0$ vs. $H_1: \delta_B \ne 0$).
+   - *Test Outcome:* The interaction coefficient is $\hat{\delta}_B = -1.758$ with an HC3 standard error of $1.231$ ($t = -1.43, p = 0.175$). Although the negative shift reduces the implied post-consolidation slope to $-1.658$, the interaction term does not achieve statistical significance at the 5% level. The study fails to reject the null hypothesis of no structural shift in BVPS value relevance when evaluated in isolation.
 5. **Principal Joint Structural Test:**
    - Evaluating the joint composite hypothesis $H_0: \delta_E = \delta_B = 0$ yields $F(2, 14) = 2.954$ ($p = 0.085$). While the study cannot reject the null hypothesis of parameter stability at the strict 5% level, the marginal significance ($p < 0.10$) indicates that corporate consolidation induced non-trivial joint adjustments across accounting valuation multiples.
 
@@ -250,43 +256,43 @@ Detailed evaluations of individual hypotheses:
 
 ### 4.2.6 Robustness and Sensitivity Analyses (R1 through R8)
 
-To evaluate the stability of baseline estimates against alternative empirical assumptions, variable definitions, and sample compositions, an eight-part robustness suite (R1 through R8) was estimated. All specifications maintain two-way bank and fiscal-year fixed effects and MacKinnon-White HC3 robust inference.
+To evaluate the stability of baseline estimates against alternative empirical assumptions, variable definitions, and sample compositions, an eight-part robustness suite (R1 through R8) was estimated. All specifications maintain two-way bank and fiscal-year fixed effects and MacKinnon-White HC3 robust inference on Student's $t$ residual degrees of freedom.
 
-Table 4.6 summarizes the estimation results across the robustness suite.
+Table 4.6 summarizes the estimation results across the robustness suite, reporting point estimates, standard errors for both main slopes and interaction terms, and the joint Wald $F$-test.
 
 Table 4.6: *Robustness and Sensitivity Analysis Across Econometric Specifications (R1–R8)*
 
-| Specification / Model | Earnings Coef. (SE) | BVPS Coef. (SE) | $\delta_E$ | $\delta_B$ | Joint Wald $F$ ($p$-value) | $N$ |
+| Specification / Model | Earnings Coef. (SE) | BVPS Coef. (SE) | $\delta_E$ (SE) | $\delta_B$ (SE) | Joint Wald $F$ ($p$-value) | $N$ |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **R1:** Model 1 Baseline (Two-Way FE) | 2.095 (4.096) | 0.219 (1.858) | — | — | — | 28 |
-| **R2:** Model 2 Baseline (Two-Way FE + Interactions) | 5.577 (3.560) | 0.100 (1.306) | $-3.124$ | $-1.758$ | 2.95 (0.085) | 28 |
-| **R3:** ROA Replaces EPS | 83.760 (79.852) | 0.358 (1.381) | $-43.570$ | $-1.901$ | 2.46 (0.121) | 28 |
-| **R4:** Model 2 + Eligible Cash DPS | 6.183 (4.508) | $-0.642$ (1.378) | $-4.072$ | $-1.770$ | 2.77 (0.100) | 28 |
-| **R5:** Excluding Transition Year (FY 2079/80) | 5.993 (4.635) | $-0.201$ (1.849) | $-2.578$ | $-1.880$ | 2.41 (0.139) | 23 |
-| **R6:** Excluding FY 2078/79 Entity Mismatch | 4.336 (3.724) | 0.802 (1.328) | $-2.436$ | $-2.611$ | **5.82 (0.021)\*** | 23 |
-| **R7:** Bonus-Adjusted Book Value per Share | 5.775 (4.145) | 0.153 (1.632) | $-4.043$ | $-1.533$ | 2.37 (0.130) | 28 |
-| **R8:** Restated Basic Earnings per Share | 5.256 (3.016) | 0.031 (1.300) | $-2.860$ | $-1.812$ | 2.92 (0.087) | 28 |
+| **R2:** Model 2 Baseline (Two-Way FE + Interactions) | 5.577 (3.560) | 0.100 (1.306) | $-3.124$ (4.003) | $-1.758$ (1.231) | 2.95 (0.085) | 28 |
+| **R3:** ROA Replaces EPS | 83.760 (79.852) | 0.358 (1.381) | $-43.570$ (83.671) | $-1.901$ (1.290) | 2.46 (0.121) | 28 |
+| **R4:** Model 2 + Eligible Cash DPS | 6.183 (4.508) | $-0.642$ (1.378) | $-4.072$ (5.151) | $-1.770$ (1.335) | 2.77 (0.100) | 28 |
+| **R5:** Excluding Transition Year (FY 2079/80) | 5.993 (4.635) | $-0.201$ (1.849) | $-2.578$ (5.521) | $-1.880$ (1.419) | 2.41 (0.139) | 23 |
+| **R6:** Excluding FY 2078/79 Entity Mismatch | 4.336 (3.724) | 0.802 (1.328) | $-2.436$ (4.755) | $-2.611$ (1.517) | **5.82 (0.021)\*** | 23 |
+| **R7:** Bonus-Adjusted Book Value per Share | 5.775 (4.145) | 0.153 (1.632) | $-4.043$ (4.446) | $-1.533$ (1.595) | 2.37 (0.130) | 28 |
+| **R8:** Restated Basic Earnings per Share | 5.256 (3.016) | 0.031 (1.300) | $-2.860$ (3.807) | $-1.812$ (1.223) | 2.92 (0.087) | 28 |
 
-*Note.* \* Significant at $p < 0.05$. All models estimated by OLS with bank and fiscal-year fixed effects; HC3 robust standard errors reported in parentheses. The joint Wald $F$-statistic tests $H_0: \delta_E = \delta_B = 0$ under the HC3 covariance matrix. R3: ROA substitutes for EPS. R4: Cash DPS included (residual df = 13). R5: Transition year FY 2079/80 dropped ($N = 23$). R6: FY 2078/79 entity-timing mismatch dropped ($N = 23$). R7: BVPS adjusted for bonus share capitalization: $\text{BVPS}_{\text{adj}} = \text{BVPS} / (1 + \text{bonus ratio})$. R8: Restated basic EPS substituted for GBIME FY 2076/77 and NMB FY 2077/78 ($N = 28$).
+*Note.* \* Significant at $p < 0.05$. All models estimated by OLS with bank and fiscal-year fixed effects; HC3 robust standard errors reported in parentheses. The joint Wald $F$-statistic tests $H_0: \delta_E = \delta_B = 0$ under the HC3 covariance matrix. R3: ROA substitutes for EPS. R4: Cash DPS included (residual df = 13). R5: Transition year FY 2079/80 dropped ($N = 23, \text{residual df} = 10$). R6: FY 2078/79 entity-timing mismatch dropped ($N = 23, \text{residual df} = 10$). R7: BVPS adjusted for bonus share capitalization: $\text{BVPS}_{\text{adj}} = \text{BVPS} / (1 + \text{bonus ratio})$. R8: Restated basic EPS substituted for GBIME FY 2076/77 and NMB FY 2077/78 ($N = 28$).
 
 The sensitivity analysis yields critical econometric and substantive insights:
 
-1. **Operating Profitability Substitution (R3):** Substituting ROA (PAT divided by average total assets) for EPS yields an operating profitability slope of $83.760$ (HC3 SE = 79.852, $p = 0.311$) and an interaction shift of $\delta_{ROA} = -43.570$. The book value interaction remains negative ($\delta_B = -1.901, \text{SE} = 1.381$), and the joint Wald test yields $F = 2.46$ ($p = 0.121$). This confirms that the observed valuation dynamics are not an artifact of per-share earnings scaling, but reflect fundamental operational repricing.
-2. **Dividend Incorporation (R4):** Augmenting Model 2 with declared cash dividends per share (DPS) produces an earnings slope of $\hat{\beta}_E = 6.183$ (SE = 4.508) and a book value slope of $\hat{\beta}_B = -0.642$ (SE = 1.378). The interaction shifts remain consistently negative ($\delta_E = -4.072, \delta_B = -1.770$), and the joint Wald $F$ is $2.77$ ($p = 0.100$). Because adding DPS consumes an additional parameter, residual degrees of freedom decrease from 14 to exactly 13 on $N = 28$.
-3. **Transition-Year Exclusion (R5):** Dropping the initial post-merger integration year (FY 2079/80, $N = 23$) to eliminate one-off transition accounting friction preserves the structural pattern: $\hat{\beta}_E = 5.993$, $\hat{\delta}_E = -2.578$, $\hat{\delta}_B = -1.880$, with joint Wald $F = 2.41$ ($p = 0.139$). This demonstrates that the negative interaction shifts are not solely driven by temporary integration write-offs in the immediate post-merger fiscal year.
-4. **Entity-Timing Mismatch Exclusion (R6) — Key Finding:** Specification R6 excludes FY 2078/79 ($N = 23$). As established in Chapter III, FY 2078/79 represents an entity-timing asymmetry: audited financial statements published at the end of Chaitra 2079 BS reflected standalone, pre-merger banking operations (ending mid-July 2022), whereas secondary market share prices observed on 13 April 2023 reflected the expanded, post-merger capitalized entities following early-2023 amalgamations.
-   - When this entity-mismatch fiscal year is excluded, the joint Wald test of regime shift becomes **statistically significant at the 5% level**: **$F(2, 10) = 5.82, p = 0.021$**!
-   - In this clean specification, the book value interaction shift widens to $\hat{\delta}_B = -2.611$ (HC3 SE = 1.328, $t = -1.97, p = 0.077$), while the earnings interaction is $\hat{\delta}_E = -2.436$ (HC3 SE = 3.724). This provides robust empirical proof that once entity-boundary distortions are eliminated, the 2023 banking consolidation wave produced a statistically significant structural regime shift in the accounting valuation function.
-5. **Bonus Capitalization Adjustment (R7):** Adjusting book value for subsequent bonus share dilution ($\text{BVPS}_{\text{adj}} = \text{BVPS} / (1 + \text{bonus ratio})$) yields estimates virtually identical to baseline: $\hat{\beta}_E = 5.775$, $\hat{\delta}_E = -4.043$, $\hat{\delta}_B = -1.533$, with Wald $F = 2.37$ ($p = 0.130$).
-6. **Restated Earnings per Share (R8):** Substituting restated basic EPS (accounting for bonus issues in subsequent fiscal periods for GBIME FY 2076/77 and NMB FY 2077/78) leaves the baseline conclusions intact: $\hat{\beta}_E = 5.256$, $\hat{\delta}_E = -2.860$, $\hat{\delta}_B = -1.812$, with Wald $F = 2.92$ ($p = 0.087$).
+1. **Operating Profitability Substitution (R3):** Substituting ROA (PAT divided by average total assets) for EPS yields an operating profitability slope of $83.760$ (HC3 SE = 79.852, $p = 0.312$) and an interaction shift of $\delta_{ROA} = -43.570$ (HC3 SE = 83.671, $p = 0.611$). The book value interaction remains negative ($\delta_B = -1.901, \text{SE} = 1.290, p = 0.163$), and the joint Wald test yields $F(2, 14) = 2.46$ ($p = 0.121$). This confirms that the observed valuation dynamics are not an artifact of per-share earnings scaling, but reflect fundamental operational repricing.
+2. **Dividend Incorporation (R4):** Augmenting Model 2 with declared cash dividends per share (DPS) produces an earnings slope of $\hat{\beta}_E = 6.183$ (SE = 4.508, $p = 0.193$) and a book value slope of $\hat{\beta}_B = -0.642$ (SE = 1.378, $p = 0.649$). The interaction shifts remain consistently negative ($\delta_E = -4.072, \text{SE} = 5.151, p = 0.443; \delta_B = -1.770, \text{SE} = 1.335, p = 0.208$), and the joint Wald $F$ is $2.77$ ($p = 0.100$). Because adding DPS consumes an additional parameter, residual degrees of freedom decrease from 14 to exactly 13 on $N = 28$.
+3. **Transition-Year Exclusion (R5):** Dropping the initial post-merger integration year (FY 2079/80, $N = 23, \text{residual df} = 10$) to eliminate one-off transition accounting friction preserves the structural pattern: $\hat{\beta}_E = 5.993$ (SE = 4.635, $p = 0.225$), $\hat{\delta}_E = -2.578$ (SE = 5.521, $p = 0.650$), $\hat{\delta}_B = -1.880$ (SE = 1.419, $p = 0.215$), with joint Wald $F(2, 10) = 2.41$ ($p = 0.139$). This demonstrates that the negative interaction shifts are not solely driven by temporary integration write-offs in the immediate post-merger fiscal year.
+4. **Entity-Timing Mismatch Exclusion (R6) — Key Sensitivity Finding:** Specification R6 excludes FY 2078/79 ($N = 23, \text{residual df} = 10$). As established in Chapter III, FY 2078/79 represents an entity-timing asymmetry: audited financial statements published at the end of Chaitra 2079 BS reflected standalone, pre-merger banking operations (ending mid-July 2022), whereas secondary market share prices observed on 13 April 2023 reflected the expanded, post-merger capitalized entities following early-2023 amalgamations.
+   - When this entity-mismatch fiscal year is excluded, the joint Wald test of regime shift becomes **statistically significant at the 5% level**: **$F(2, 10) = 5.82, p = 0.021$**.
+   - In this clean specification, the book value interaction shift is estimated at $\hat{\delta}_B = -2.611$ with an HC3 standard error of $1.517$ ($t = -1.72, p = 0.116$ on $t(10)$), while the earnings interaction is $\hat{\delta}_E = -2.436$ (HC3 SE = 4.755, $t = -0.51, p = 0.620$). While neither individual interaction term achieves significance at the 10% level under the Student's $t(10)$ distribution, the joint test demonstrates that purging the entity-timing asymmetry reveals a statistically significant joint structural difference across the pre- and post-consolidation calendar regimes.
+5. **Bonus Capitalization Adjustment (R7):** Adjusting book value for subsequent bonus share dilution ($\text{BVPS}_{\text{adj}} = \text{BVPS} / (1 + \text{bonus ratio})$) yields estimates virtually identical to baseline: $\hat{\beta}_E = 5.775$ (SE = 4.145, $p = 0.185$), $\hat{\delta}_E = -4.043$ (SE = 4.446, $p = 0.379$), $\hat{\delta}_B = -1.533$ (SE = 1.595, $p = 0.353$), with Wald $F(2, 14) = 2.37$ ($p = 0.130$).
+6. **Restated Earnings per Share (R8):** Substituting restated basic EPS (accounting for bonus issues in subsequent fiscal periods for GBIME FY 2076/77 and NMB FY 2077/78) leaves the baseline conclusions intact: $\hat{\beta}_E = 5.256$ (SE = 3.016, $p = 0.103$), $\hat{\delta}_E = -2.860$ (SE = 3.807, $p = 0.465$), $\hat{\delta}_B = -1.812$ (SE = 1.223, $p = 0.161$), with Wald $F(2, 14) = 2.92$ ($p = 0.087$).
 
 Figure 4.6 presents a coefficient forest plot summarizing parameter estimates and confidence intervals across all eight robustness specifications.
 
 ```
-Figure 4.6: Robustness Forest Plot Across Specifications R1–R8
+Figure 4.6: Robustness Forest Plot Across Specifications R1–R8 (Codebase Asset A2)
 [Refer to: data_analysis/analysis/outputs/figures/appendix/A2_robustness_forest.pdf]
 ```
-*Note.* Forest plot comparing estimated earnings and book value slope parameters, regime interaction shifts, and 95% HC3 confidence intervals across robustness specifications R1 through R8.
+*Note.* Forest plot comparing estimated earnings and book value slope parameters, regime interaction shifts, and 95% HC3 confidence intervals across robustness specifications R1 through R8 ($N = 28$ or $N = 23$).
 
 ---
 
@@ -308,7 +314,7 @@ Table 4.7: *Econometric Diagnostics for Baseline Value-Relevance Model (Model 1)
 | **Influential Observations:** |  |  |  |  |  |
 | Cook's Distance ($D_i$) | Maximum $D_i$ | 0.552 | $4/N = 0.143$ | 5 observations exceed $4/N$ | Controlled via HC3 robust inference |
 
-*Note.* Diagnostics computed on Model 1 baseline ($N = 28$). VIF computed exclusively on substantive regressors (fixed effects dummies excluded). Breusch-Pagan Lagrange Multiplier test evaluates residual variance constancy across fitted values and regressors. Cook's distance evaluated against standard finite-sample threshold $4/N = 4/28 = 0.143$.
+*Note.* Diagnostics computed on Model 1 baseline ($N = 28$). VIF computed exclusively on substantive regressors (fixed effects dummies excluded). Breusch-Pagan Lagrange Multiplier test evaluates residual variance constancy across fitted values and regressors. Cook's distance evaluated using the correct parameter count ($K = 12$) against standard finite-sample threshold $4/N = 4/28 = 0.143$.
 
 Key diagnostic findings:
 1. **Multicollinearity:** The variance inflation factors for EPS and BVPS are identical at $\text{VIF} = 1.16$ (tolerance = 0.862). Because these values fall well below the conventional conservative ceiling of $5.0$ (and standard threshold of $10.0$), multicollinearity between the substantive accounting fundamentals does not distort parameter estimation.
@@ -318,7 +324,7 @@ Key diagnostic findings:
 Figure 4.7 presents the four-panel econometric diagnostic plot for Model 1 (Residuals vs Fitted, Normal Q-Q, Scale-Location, and Cook's Distance).
 
 ```
-Figure 4.7: Econometric Residual Diagnostics for Baseline Model
+Figure 4.7: Econometric Residual Diagnostics for Baseline Model (Codebase Asset F5)
 [Refer to: data_analysis/analysis/outputs/figures/main/F5_diagnostics.pdf]
 ```
 *Note.* Four-panel diagnostic suite for Model 1: (top-left) Residuals vs. Fitted values assessing linearity; (top-right) Normal Q-Q plot assessing error normality; (bottom-left) Scale-Location plot ($\sqrt{|\text{standardized residuals}|}$ vs. fitted) assessing homoskedasticity; (bottom-right) Cook's distance across observations ($N = 28$) identifying leverage points against $4/N = 0.143$.
@@ -331,13 +337,13 @@ Table 4.8: *Specification Comparison Across Econometric Model Structures ($N = 2
 
 | Specification | $\beta_E$ (EPS Coef.) | $\beta_B$ (BVPS Coef.) | $R^2$ | Residual df | Econometric Assessment |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Pooled OLS (No Fixed Effects)** | 4.882 (3.099) | 0.552 (1.259) | 0.136 | 25 | Suffers from severe omitted variable bias; conflates macro-market cycles with accounting relevance. |
+| **Pooled OLS (No Fixed Effects)** | 4.882 (3.099) | 0.552 (1.259) | 0.136 | 25 | Omits bank and macro-year variation; conflates market cycles with accounting relevance. |
 | **Bank Fixed Effects Only** | 5.217 (5.360) | 1.432 (2.727) | 0.176 | 21 | Controls for bank-specific heterogeneity, but ignores macro-temporal NEPSE price collapse. |
 | **Two-Way Fixed Effects (Model 1)** | 2.095 (4.096) | 0.219 (1.858) | 0.948 | 16 | Rigorously absorbs both unobserved bank heterogeneity and macro-year shocks; unbiased benchmark. |
 
 *Note.* HC3 robust standard errors reported in parentheses. Dependent variable: $MPS^{RD}$. Analysis sample $N = 28$.
 
-The comparison in Table 4.8 reveals that Pooled OLS yields inflated slope coefficients ($\hat{\beta}_E = 4.882, \hat{\beta}_B = 0.552$) while explaining only 13.6% of price variance ($R^2 = 0.136$). When fiscal-year dummies are added in the two-way fixed effects model, the explanatory power jumps to 94.8% ($R^2 = 0.948$), while the estimated slopes attenuate to $\hat{\beta}_E = 2.095$ and $\hat{\beta}_B = 0.219$. This proves that in unadjusted pooled regressions—such as those widely published in prior Nepalese studies—accounting fundamentals artificially capture broader macroeconomic cycles, monetary policy shocks, and NEPSE-wide liquidity trends.
+The comparison in Table 4.8 reveals that Pooled OLS yields inflated point estimates ($\hat{\beta}_E = 4.882, \hat{\beta}_B = 0.552$) while explaining only 13.6% of price variance ($R^2 = 0.136$). When fiscal-year dummies are added in the two-way fixed effects model, the explanatory power jumps to 94.8% ($R^2 = 0.948$), while the estimated slopes attenuate to $\hat{\beta}_E = 2.095$ and $\hat{\beta}_B = 0.219$. This proves that in unadjusted pooled regressions, accounting fundamentals can easily absorb broader macroeconomic cycles, monetary policy shifts, and NEPSE-wide liquidity trends. However, it is noteworthy that even in the pooled specification, the EPS coefficient ($\hat{\beta}_E = 4.882, \text{SE} = 3.099, t = 1.58, p = 0.126$) is not statistically significant under HC3 robust inference.
 
 ---
 
@@ -345,7 +351,7 @@ The comparison in Table 4.8 reveals that Pooled OLS yields inflated slope coeffi
 
 ### 4.3.1 Value Relevance of Accounting Fundamentals in the Pre-Consolidation Regime
 
-In the pre-consolidation regime (FY 2076/77 through FY 2078/79), the estimated valuation multiple for earnings per share was $\hat{\beta}_E = 5.577$ (HC3 SE = 3.560, $p = 0.117$), whereas the multiple for book value per share was $\hat{\beta}_B = 0.100$ (HC3 SE = 1.306, $p = 0.939$). 
+In the pre-consolidation regime (FY 2076/77 through FY 2078/79), the estimated valuation multiple for earnings per share was $\hat{\beta}_E = 5.577$ (HC3 SE = 3.560, $t = 1.57, p = 0.140$ on $t(14)$), whereas the multiple for book value per share was $\hat{\beta}_B = 0.100$ (HC3 SE = 1.306, $t = 0.08, p = 0.940$ on $t(14)$). 
 
 Although these parameter estimates do not achieve conventional statistical significance at the 5% level—a direct consequence of small-sample degrees of freedom ($N = 28$, residual $\text{df} = 14$) combined with conservative HC3 standard errors—their relative magnitudes provide valuable economic insights into the functioning of the Nepalese secondary banking market prior to the 2023 consolidation wave:
 1. **Dominance of Earnings over Book Value:** The substantial positive magnitude of $\hat{\beta}_E$ ($5.58$) relative to $\hat{\beta}_B$ ($0.10$) indicates that before the consolidation wave, equity investors on NEPSE prioritized current operational profitability and earnings generation over historical balance-sheet equity backing. In an equity market characterized by high retail participation and dividend anticipation, reported net profit per share served as the primary benchmark for valuing commercial banking equities. Investors viewed earnings as a direct indicator of immediate cash dividend paying capacity and bonus share distribution potential.
@@ -353,75 +359,69 @@ Although these parameter estimates do not achieve conventional statistical signi
 
 ---
 
-### 4.3.2 Regime Shift: Earnings Deterioration and Goodwill Impairment Risks
+### 4.3.2 Regime Shift: Earnings Deterioration and Book Value Multiples Post-Consolidation
 
-Following the consolidation wave of early 2023, the empirical estimates reveal a noticeable contraction in valuation multiples. The regime interaction coefficients are uniformly negative: $\hat{\delta}_E = -3.124$ ($p = 0.435$) for earnings per share and $\hat{\delta}_B = -1.758$ ($p = 0.153$) for book value per share. The implied post-consolidation earnings slope compressed to $\hat{\beta}_E + \hat{\delta}_E = 2.453$, while the implied post-consolidation book value slope turned negative to $\hat{\beta}_B + \hat{\delta}_B = -1.658$.
+Following the consolidation wave of early 2023, the empirical estimates reveal a noticeable contraction in valuation multiples. The regime interaction coefficients are uniformly negative: $\hat{\delta}_E = -3.124$ ($p = 0.448$) for earnings per share and $\hat{\delta}_B = -1.758$ ($p = 0.175$) for book value per share. The implied post-consolidation earnings slope compressed to $\hat{\beta}_E + \hat{\delta}_E = 2.453$ ($p = 0.298$), while the implied post-consolidation book value slope turned negative to $\hat{\beta}_B + \hat{\delta}_B = -1.658$ ($p = 0.161$).
 
-This downward adjustment in valuation multiples can be understood through four underlying economic and institutional mechanisms:
+Because neither individual interaction term achieves statistical significance at conventional thresholds, and the joint Wald test in the baseline sample is marginally significant at 10% ($p = 0.085$), these patterns are interpreted not as proven causal effects, but as suggestive structural tendencies consistent with several economic and institutional mechanisms operating in Nepal's post-merger banking environment:
 
-1. **Asset Quality Deterioration and Loan Provisioning Shocks:** The horizontal amalgamations executed in 2023 forced surviving commercial banks to assimilate legacy loan portfolios from acquired institutions (e.g., Bank of Kathmandu by Global IME Bank; Civil Bank by Himalayan Bank; NCC Bank by Kumari Bank; Mega Bank by Nepal Investment Bank). Following consolidation, these institutions confronted severe asset quality challenges, exacerbated by nationwide economic slowdown, real estate illiquidity, and stricter supervisory scrutiny by NRB. As non-performing loans surged across the banking system, surviving banks were compelled to recognize massive credit-loss provisions. Consequently, reported earnings became highly volatile, transitory, and contaminated by credit-loss adjustments. Equity investors recognized that reported earnings were subject to potential future write-downs, leading to a substantial discount on reported profit multiples.
-2. **Capital Dilution and Swap Ratio Overhang:** Amalgamations significantly expanded the outstanding equity base of surviving banks through share swap agreements. The influx of newly created equity shares diluted earnings per share (mean EPS contracted by 40.11% post-consolidation, from NPR 17.90 to NPR 10.72) and created an overhang of secondary market supply. Investors recognized that the enlarged capital base would constrain future per-share returns and bonus share distributions.
-3. **Dividend Cessation and Cash Flow Interruption:** In the pre-consolidation period, regular cash dividends provided a direct floor for equity valuations (mean DPS = NPR 6.06). Following consolidation, regulatory capital adequacy constraints, loan loss reserves, and merger-related reserve allocations forced surviving banks to virtually eliminate cash dividend payouts (mean DPS fell to NPR 1.40, with 12 of 15 post-consolidation bank-years recording exactly zero dividends). In a market driven heavily by dividend yield expectations, the evaporation of cash payouts removed a critical valuation anchor, contributing to the compression of valuation multiples.
-4. **Negative Post-Consolidation Book Value Slope:** The emergence of a negative implied slope for book value per share ($\hat{\beta}_B + \hat{\delta}_B = -1.658$) is an intriguing empirical phenomenon. In standard valuation theory, market price should be a non-negative function of book equity. However, in the post-merger Nepalese context, banks with larger balance-sheet equity backing were often those that absorbed troubled target institutions with large portfolios of stressed, uncollectible loans. Higher reported book value frequently masked unamortized merger goodwill, deferred tax assets, and unprovisioned credit exposures. Investors correctly perceived that high book equity did not represent tangible liquidation value, but rather indicated institutions carrying substantial restructuring burdens and capital trapped in low-yielding assets.
+1. **Asset Quality Pressures and Loan Provisioning (Plausible Mechanism):** The horizontal amalgamations executed in 2023 required surviving commercial banks to assimilate legacy loan portfolios from acquired institutions. Contemporaneous industry reports and NRB supervisory data indicate that following consolidation, commercial banks experienced rising non-performing loans, driven by broad macroeconomic deceleration, construction sector stress, and stricter loan-loss provisioning requirements. As credit-loss charges expanded, reported accounting earnings exhibited higher volatility and transitoriness. Equity investors may have recognized that reported net income was increasingly sensitive to provisioning assumptions, leading to a discount on earnings multiples. This mechanism is consistent with the observed drop in the earnings multiple, though direct asset quality variables are not estimated in the econometric model.
+2. **Capital Expansion and Share Supply:** Amalgamations significantly expanded the paid-up equity base of surviving banks through share swap agreements. The influx of newly created equity shares diluted per-share earnings (mean EPS contracted by 40.11% post-consolidation, from NPR 17.90 to NPR 10.72) and expanded the secondary market float. Market participants may have factored this enlarged equity supply into their pricing models, anticipating slower growth in per-share metrics.
+3. **Dividend Cessation and Information Loss:** In the pre-consolidation period, regular cash dividends provided an observable benchmark for equity valuations (mean DPS = NPR 6.06). Following consolidation, capital conservation requirements and regulatory provisioning mandates led banks to suspend cash distributions (mean DPS fell to NPR 1.40, with 12 of 15 post-consolidation bank-years recording zero cash dividends). The withdrawal of regular dividend payments removed an observable cash flow signal, coinciding with the broader attenuation of earnings relevance.
+4. **Interpreting the Negative Book Value Point Estimate:** The negative implied slope for book value per share ($\hat{\beta}_B + \hat{\delta}_B = -1.658$, HC3 SE = 1.120, $t = -1.48, p = 0.161$) is statistically insignificant under the Student's $t(14)$ distribution. It cannot therefore be presented as an established empirical law. Econometrically, it reflects an exploratory point estimate indicating that post-consolidation book equity increases did not translate into proportional share price premiums. Conceptually, in a banking sector navigating complex post-merger integrations, expanded balance-sheet capital can reflect equity issued to absorb stressed assets or unamortized restructuring costs rather than unencumbered tangible net worth. Investors may have treated book equity expansion with caution, rather than as an unambiguous indicator of liquidation value.
 
 ---
 
-### 4.3.3 Reconciling with Theoretical Frameworks (Ohlson RIV, Signaling, Clean Surplus)
+### 4.3.3 Reconciling with Theoretical Frameworks (Ohlson RIV, Signaling, Opacity)
 
-The empirical findings can be rigorously evaluated against the theoretical doctrines established in financial accounting and banking economics:
+The empirical findings can be evaluated against foundational theoretical models in accounting and financial economics:
 
-1. **The Ohlson (1995) Residual Income Framework:**
-   The Ohlson framework conceptualizes firm value as the sum of current book value and the discounted present value of expected future residual income:
+1. **Divergence and Resonance with Kwon and Wang (2020):**
+   Comparing our results with the post-merger valuation framework of Kwon and Wang (2020) reveals an important divergence alongside a shared insight:
+   - *Where our results resonate:* In line with Kwon and Wang, our findings indicate that corporate amalgamations generate accounting noise and structural disruption that reduce the valuation relevance of earnings. Following major mergers, financial statement comparability is disrupted, historical earnings predictability diminishes, and equity markets discount reported earnings multiples ($\hat{\delta}_E = -3.124$).
+   - *Where our results diverge:* In Kwon and Wang's framework, when earnings become noisy following mergers, book value typically assumes an anchoring role, serving as a reliable proxy for net asset backing. In our Nepalese commercial banking sample, book value conspicuously did *not* serve as an asset anchor; instead, its valuation multiple compressed from $\hat{\beta}_B = 0.100$ to an implied post-consolidation slope of $-1.658$. Unlike non-financial corporations, commercial banks cannot be readily evaluated on an orderly liquidation basis because they are subject to statutory resolution regimes and regulatory intervention.
+2. **The Ohlson (1995) Residual Income Framework:**
+   The Ohlson model specifies firm equity value as the sum of contemporaneous book value and the capitalized expected future abnormal earnings:
    $$P_t = B_t + \sum_{\tau=1}^{\infty} R^{-\tau} \mathbb{E}_t [\tilde{x}_{t+\tau}^a]$$
-   Under linear information dynamics, this translates into a linear pricing equation in contemporaneous earnings and book value. Our baseline empirical estimates provide partial consistency with this framework: in the pre-consolidation period, both coefficients are positive ($\hat{\beta}_E = 5.58, \hat{\beta}_B = 0.10$). However, the post-consolidation regime violates the classical Ohlson assumptions of informational linearity and clean-surplus stability. 
-   As documented by Collins, Maydew, and Weiss (1997), when a firm experiences structural distress, severe earnings transitoriness, or major corporate restructuring, the valuation role of earnings diminishes, and book value typically assumes greater prominence as a proxy for the firm's abandonment or liquidation value. In our sample, however, book value did not serve as an effective abandonment anchor. Because commercial banks are highly leveraged, tightly regulated institutions subject to regulatory resolution rather than orderly market liquidation, book value failed to serve as a viable liquidation proxy.
-2. **Kwon and Wang (2020) M&A Valuation Dynamics:**
-   Our findings strongly resonate with the international empirical evidence of Kwon and Wang (2020), who demonstrated that major mergers and acquisitions generate substantial accounting noise, restructuring costs, and organizational friction that temporarily impair the valuation relevance of accounting numbers. In the immediate aftermath of large-scale combinations, financial statement comparability is disrupted, historical forecasting models break down, and market participants discount accounting indicators until the surviving corporate entity demonstrates sustained post-merger operational stability.
+   Our baseline estimates in the pre-consolidation period display positive point estimates for both components ($\hat{\beta}_E = 5.58, \hat{\beta}_B = 0.10$). However, the post-consolidation regime exposes the limitations of linear valuation models during periods of banking restructuring. When clean-surplus accounting is complicated by merger reserve adjustments, swap accounting, and dividend halts, linear pricing dynamics break down, producing wide confidence intervals and parameter attenuation.
 3. **Dividend Signaling Theory (Bhattacharya, 1979; John & Williams, 1985):**
-   Under dividend signaling theory, cash dividends serve as a credible, costly mechanism for corporate insiders to signal private information regarding future cash flow prospects. In Nepal's commercial banking sector, where retail investors face substantial information asymmetry regarding underlying loan portfolio quality, cash dividends historically functioned as the primary verification of reported accounting profitability. When post-merger regulatory capital requirements eliminated cash dividends, investors lost their primary signaling mechanism. Lacking verifiable dividend signals, market participants heavily discounted reported earnings, driving down the earnings valuation multiple.
-4. **Banking Opacity and Regulatory Discipline (Morgan, 2002; Flannery et al., 2004):**
-   Banking institutions are inherently opaque due to the private nature of bank loan contracts and discretionary loan-loss provisioning. In Nepal, this opacity was magnified during the 2023 consolidation wave. Regulatory forbearance policies granted by NRB—allowing merged banks extended grace periods to meet statutory capital and provisioning thresholds—created substantial ambiguity regarding the true economic health of surviving balance sheets. As predicted by banking opacity theory, when regulatory forbearance obscures asset quality, secondary equity markets struggle to price accounting numbers, leading to attenuated valuation coefficients and widened standard errors.
+   Under dividend signaling theory, cash distributions provide a costly and credible signal verifying reported earnings quality. In the Nepalese banking sector, where retail equity investors face informational opacity regarding loan classifications, cash dividends historically functioned as an observable verification of accounting profits. When regulatory capital constraints forced banks to eliminate cash dividends post-consolidation, the absence of this verification signal coincided with the compression of the earnings valuation multiple.
+4. **Banking Opacity and Regulatory Forbearance (Morgan, 2002; Flannery et al., 2004):**
+   Commercial banks are recognized in financial economics as opaque institutions due to the proprietary nature of loan assets and the discretion inherent in loan provisioning. In Nepal, regulatory forbearance provisions—allowing consolidated banks extended timelines to meet regulatory ratios—may have increased informational opacity. When market participants cannot independently verify loan portfolio quality, they discount reported accounting metrics, widening standard errors and attenuating valuation slopes.
 
 ---
 
 ### 4.3.4 Comparative Context with Nepalese and International Empirical Studies
 
-Evaluating the empirical results of this dissertation against prior literature highlights critical methodological, institutional, and empirical distinctions:
+Evaluating the empirical findings of this dissertation against prior literature reveals important methodological and empirical distinctions:
 
-1. **Divergence from Static Nepalese Banking Studies:**
-   Prior studies in Nepal have predominantly reported highly significant, large positive coefficients for EPS and other financial ratios. For example:
-   - Bhattarai (2014) examined 14 commercial banks over 2006–2014 and reported that EPS and DPS were powerful, statistically significant determinants of share prices.
-   - Joshi, Ghimire, and Singh (2023) evaluated seven commercial banks over 2012/13–2021/22 and reported that BVPS exerted a strong, positive, statistically significant influence on market price ($\beta = 1.62, p < 0.01$).
-   - Bhandari, Pradhan, and Ghimire (2026) identified EPS as the predominant determinant of equity valuation across listed commercial banks.
-
-   The apparent contrast between their statistically significant findings and our statistically insignificant baseline slopes ($\hat{\beta}_E = 2.10, p = 0.609; \hat{\beta}_B = 0.22, p = 0.906$) is directly explained by econometric specification:
-   - **Econometric Endogeneity:** Prior studies routinely included the circular Price-to-Earnings (P/E) ratio as an independent regressor predicting share price (Bhattarai, 2014; Chhetri, 2023; Giri, 2024; Gurung & Dahal, 2025; Joshi et al., 2023; Pant et al., 2024). Including P/E mathematically embeds the dependent variable ($MPS$) into the explanatory regressor matrix, generating massive spurious correlation and artificially inflated $t$-statistics.
-   - **Omission of Macro-Temporal Fixed Effects:** Prior studies employed pooled OLS or one-way bank random/fixed effects, omitting fiscal-year dummies. As shown in our Table 4.8, pooled OLS yields a large, apparent earnings slope ($\hat{\beta}_E = 4.882$). However, this apparent relationship is entirely spurious: when fiscal-year fixed effects are introduced, the macro-market cycle of NEPSE is properly absorbed, and the isolated accounting slope attenuates sharply.
-   - **Measurement Timing and Look-Ahead Bias:** Prior studies measured share prices at fiscal year-end (Ashadh-end / mid-July), months before audited accounts were published. In contrast, this study measures share prices strictly at the post-reporting-deadline statutory window (end of Chaitra / mid-April), ensuring that the information was legally in the public domain and eliminating look-ahead bias.
-2. **Alignment with Recent Panel Studies:**
-   Our findings closely align with recent, more methodologically careful studies that document growing earnings transitoriness and valuation complexity in Nepal:
-   - Chaudhari (2025) examined ten commercial banks over 2014/15–2023/24 and documented volatile, unstable earnings relationships, concluding that conventional financial ratios have lost their predictive precision following recent macroeconomic tightening.
-   - Pant, Joshi, and Saud (2024) investigated seven commercial banks through FY 2023/24 and reported a negative, statistically insignificant BVPS coefficient, consistent with our post-consolidation findings.
-   - Timalsina (2026) documented that commercial bank share prices became increasingly decoupled from historical accounting indicators during the post-2023 liquidity crunch.
-3. **Synthesis with International Emerging Market Evidence:**
-   In broader emerging and frontier markets, studies such as Almumani (2014) in Jordan and Malhotra and Tandon (2013) in India demonstrate that during periods of regulatory disruption and structural reform, accounting value relevance invariably declines. The findings of this dissertation confirm that frontier equity markets exhibit pronounced sensitivity to corporate restructuring, with accounting numbers losing pricing power when entity boundaries and earnings quality are in flux.
+1. **Methodological Differences with Prior Nepalese Studies:**
+   Prior empirical literature on Nepalese commercial banks has predominantly reported large, statistically significant positive coefficients for accounting fundamentals (e.g., Bhattarai, 2014; Bhandari et al., 2026; Joshi et al., 2023). In contrast, our two-way fixed effects baseline yields statistically insignificant slopes ($\hat{\beta}_E = 2.10, p = 0.616; \hat{\beta}_B = 0.22, p = 0.908$). This divergence reflects three critical methodological factors:
+   - **Exclusion of Circular Price-to-Earnings Multiples:** Several prior Nepalese studies included the Price-to-Earnings (P/E) ratio as an explanatory regressor predicting share price (e.g., Bhattarai, 2014; Chhetri, 2023; Giri, 2024; Joshi et al., 2023; Pant et al., 2024). As demonstrated mathematically in Chapter II, because $\text{P/E} = MPS / \text{EPS}$, regressing $MPS$ on P/E introduces the dependent variable into the regressor, generating mechanical circularity and inflated statistical significance. This dissertation strictly excludes P/E.
+   - **Omission of Macro-Year Fixed Effects in Pooled Models:** Prior studies frequently relied on pooled OLS or one-way random effects, omitting fiscal-year dummies. As our specification comparison in Table 4.8 illustrates, pooled OLS yields an inflated point estimate ($\hat{\beta}_E = 4.882$) compared to two-way fixed effects ($\hat{\beta}_E = 2.095$). In unadjusted pooled regressions, accounting fundamentals can inadvertently absorb broad macroeconomic cycles and the severe post-2021 NEPSE market correction. When year fixed effects absorb market-wide price levels, slope coefficients reflect strictly within-year cross-sectional variation. Notably, even in our pooled specification, HC3 robust inference yields an insignificant slope ($t = 1.58, p = 0.126$), confirming that the lack of significance is not an artifact of fixed effects alone, but reflects genuine estimation uncertainty.
+   - **Standardized Reporting-Deadline Measurement:** Prior studies commonly measured share prices at fiscal year-end (Ashadh-end / mid-July), long before audited reports were published. By measuring share prices strictly at the post-reporting-deadline statutory window under Section 59(2) of BAFIA (end of Chaitra / mid-April), this study eliminates look-ahead bias and ensures that audited accounting numbers were legally public.
+   - **Sample Harmonization:** In reconciling prior samples, Bhattarai (2014) examined 14 commercial banks over 2006–2014 comprising 35 pooled bank-year observations, while Joshi, Ghimire, and Singh (2023) analyzed seven commercial banks over 2012/13–2021/22. Both examined pre-consolidation periods under pooled structures, explaining their higher reported significance.
+2. **Alignment with Recent Methodological Studies:**
+   Our findings closely parallel more recent Nepalese studies that document valuation instability:
+   - Chaudhari (2025) examined ten commercial banks over 2014/15–2023/24 without P/E circularity and documented unstable valuation relationships, finding that traditional financial ratios lost predictive power during recent macroeconomic stress.
+   - Pant, Joshi, and Saud (2024) investigated seven commercial banks through FY 2023/24 and documented a negative, statistically insignificant BVPS coefficient, consistent with our post-consolidation findings.
+   - Timalsina (2026) observed that bank share prices decoupled from historical accounting metrics following the post-2023 liquidity contraction.
+3. **Emerging Market Literature Context:**
+   In broader emerging and frontier markets, studies such as Almumani (2014) in Jordan and Malhotra and Tandon (2013) in India demonstrate that during periods of regulatory disruption and financial sector reform, accounting value relevance tends to decline. Frontier equity markets appear highly sensitive to structural transitions, with accounting numbers losing pricing power during periods of institutional restructuring.
 
 ---
 
-### 4.3.5 Methodological and Policy Context: Transition Dynamics and Structural Discontinuities
+### 4.3.5 Methodological Context: Transition Dynamics and Structural Discontinuities
 
-The sensitivity analyses conducted in Section 4.2.6 provide profound methodological and policy lessons regarding the evaluation of corporate mergers in frontier capital markets:
+The sensitivity analyses conducted in Section 4.2.6 provide important methodological insights for evaluating corporate restructuring in frontier capital markets:
 
-1. **The Critical Role of Entity-Boundary Timing (Specification R6):**
-   The single most important econometric finding of this study emerges from specification R6, which excludes FY 2078/79 ($N = 23$). When this entity-mismatch year is excluded, the joint Wald test of regime shift achieves strong statistical significance at the 5% level:
+1. **Entity-Boundary Timing and Sensitivity Check R6:**
+   The most salient sensitivity finding arises from specification R6, which excludes FY 2078/79 ($N = 23, \text{residual df} = 10$). In that specification, the joint Wald test of regime shift achieves statistical significance at the 5% level:
    $$F(2, 10) = 5.82, \quad p = 0.021$$
-   This result uncovers a critical structural reality: in FY 2078/79, audited financial statements reflected the pre-merger standalone operations of the legacy banks (as of mid-July 2022), whereas secondary market share prices observed on 13 April 2023 reflected the enlarged, merged banking institutions following their early-2023 amalgamations. This temporal mismatch artificially contaminated the econometric estimation. Once this mismatch is purged, the empirical data conclusively prove that **the 2023 consolidation wave caused a statistically significant structural break in the valuation relevance of Nepalese bank accounting information**.
-2. **The 5-Day Freshness Rule and Secondary Trading Suspensions:**
-   The necessity of excluding HBL and NIMB for FY 2077/78 underscores a major institutional friction in Nepalese capital markets. Historical NEPSE regulations mandated prolonged trading suspensions during merger negotiations, freezing secondary market price discovery for months. For HBL, trading was frozen for 54 days past the Chaitra reporting deadline; for NIMB, trading was frozen for 47 days. Strictly dropping these delayed observations rather than imputing stale prices preserved the integrity of the econometric panel, demonstrating the critical importance of rigorous data auditing in empirical finance.
+   This result highlights an institutional timing feature of corporate combinations. In FY 2078/79, audited financial statements reflected the pre-merger standalone operations of the legacy banks (for the fiscal year ending mid-July 2022), whereas secondary market share prices observed on 13 April 2023 reflected the enlarged, merged entities following amalgamations in January–February 2023. When this entity-mismatch year is included, the baseline joint test does not reject structural stability at the 5% level ($p = 0.085$). After excluding this mismatch year, the joint test rejects parameter stability at the 5% level ($p = 0.021$). The evidence for a regime shift is therefore suggestive in the baseline and statistically significant in the sensitivity check; it is reported as an empirical association across calendar regimes, rather than as a causal merger effect.
+2. **The 5-Day Freshness Rule and Trading Suspensions:**
+   The exclusion of HBL and NIMB for FY 2077/78 underscores an institutional friction in Nepalese capital markets. NEPSE regulations historically enforced extended trading halts during merger negotiations, suspending price discovery for weeks or months. Dropping observations that exceeded the 5-day freshness window rather than imputing stale pre-suspension prices was essential to maintaining empirical integrity.
 3. **BAFIA Section 59(2) Reporting Deadlines as an Empirical Anchor:**
-   Finally, anchoring share price observations to the nine-month statutory reporting deadline under Section 59(2) of BAFIA (end of Chaitra / mid-April) proved to be an objective, replicable, and methodologically sound empirical strategy. It successfully eliminated look-ahead bias while providing an institutional anchor grounded in Nepalese banking law.
+   Anchoring share price observations to the nine-month statutory reporting deadline under Section 59(2) of BAFIA (end of Chaitra / mid-April) provided an objective, reproducible observation window grounded in Nepalese banking law, eliminating the measurement ambiguity of unverified announcement dates while avoiding look-ahead bias.
 
-In conclusion, the empirical evidence demonstrates that while commercial bank valuations in Nepal were historically anchored in operational earnings, the massive corporate consolidation wave of 2023 fundamentally disrupted this valuation regime. Surging credit provisions, equity capital dilution, dividend halts, and balance-sheet opacity induced a substantial compression in valuation multiples, creating a structural break that becomes statistically evident once entity-boundary timing distortions are rigorously resolved.
-
----
-
+In summary, the empirical results indicate that commercial bank valuations in Nepal exhibited noticeable shifts across the 2023 consolidation wave. Valuation multiples on earnings compressed and book value multiples turned negative, reflecting an environment characterized by increased earnings transitoriness, dividend reductions, and asset quality challenges. While baseline models show suggestive joint shifts, statistical significance emerges once entity-boundary timing mismatches are resolved, highlighting the critical importance of temporal alignment in empirical valuation research.
