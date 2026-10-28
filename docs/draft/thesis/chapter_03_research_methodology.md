@@ -2,14 +2,12 @@
 
 ## 3.1 Introduction
 
-Scientific research in empirical finance and financial accounting is distinguished by the formalization, transparency, and reproducibility of its methodological design. The research methodology establishes the systematic protocol through which research questions are investigated, theoretical constructs are operationalized into observable metrics, empirical data are collected and audited, and statistical models are specified and estimated. A rigorous methodology allows subsequent researchers to replicate the findings, verify empirical claims, and evaluate the econometric robustness of reported inferences.
-
-This chapter sets out the comprehensive research methodology employed to investigate the value relevance of accounting information across Nepal's 2023 commercial banking consolidation wave. Structured in strict compliance with the *Master's Degree Dissertation Guidelines (2019)* of the Faculty of Management, Tribhuvan University (pp. 13–14), this chapter is organized into five interrelated sections:
-* **Section 3.2: Research Design** outlines the epistemological and econometric architecture of the study, specifying its quantitative, correlational, comparative, and longitudinal panel dimensions.
-* **Section 3.3: Population, Sample, and Sampling Procedure** defines the commercial banking population, justifies the purposive sampling design, presents the institutional profiles of the five selected bank series, discloses the 5-day freshness rule for trading records, and presents the realized price observation matrix.
-* **Section 3.4: Nature and Sources of Data, and Data Collection Procedure** details the primary financial statement inputs, market price series aggregators, regulatory publications, and the audit reconciliation protocols utilized to verify data integrity.
-* **Section 3.5: Research Framework and Definition of Variables** delineates the conceptual valuation framework, establishes the operational definitions and measurement rules for dependent, independent, moderating, and robustness variables, and justifies the mathematical exclusion of price-derived ratios (P/E).
-* **Section 3.6: Methods of Analysis and Econometric Specification** details the baseline (Model 1) and regime-shift (Model 2) two-way fixed-effects panel regression models, formulates the MacKinnon-White HC3 robust inference procedure, accounts for finite-sample degrees of freedom, outlines econometric diagnostic tests, and specifies the eight-part robustness suite.
+Scientific research in empirical finance and financial accounting is distinguished by the formalization, transparency, and reproducibility of its methodological design. This chapter sets out the comprehensive research methodology employed to investigate the value relevance of accounting information across Nepal's 2023 commercial banking consolidation wave. Structured in accordance with the *Master's Degree Dissertation Guidelines (2019)* of the Faculty of Management, Tribhuvan University, this chapter is organized into five interrelated sections:
+* **Section 3.2: Research Design** specifies the quantitative, correlational, comparative, and longitudinal two-way fixed-effects panel design.
+* **Section 3.3: Population, Sample, and Sampling Procedure** defines the commercial banking population, justifies purposive sampling, presents the institutional profiles of the five bank series, and defines the 5-day freshness rule.
+* **Section 3.4: Nature and Sources of Data, and Data Collection Procedure** details audited financial statement inputs, market price series, regulatory sources, and reconciliation protocols.
+* **Section 3.5: Research Framework and Definition of Variables** delineates the conceptual framework, operational variable definitions ($MPS^{RD}$, EPS, BVPS, $\mathit{Post}_t$, ROA, DPS), and the exclusion of circular P/E multiples.
+* **Section 3.6: Methods of Analysis and Econometric Specification** formulates the baseline (Model 1) and regime-shift (Model 2) panel models, MacKinnon-White HC3 robust inference, finite-sample degrees of freedom accounting, diagnostic tests, and the eight-part robustness suite.
 
 ---
 
@@ -27,10 +25,10 @@ This study adopts a quantitative, correlational, and comparative longitudinal pa
 ## 3.3 Population, Sample, and Sampling Procedure
 
 ### 3.3.1 Population of the Study
-The target population for this study comprises all commercial banks licensed by Nepal Rastra Bank as Class 'A' financial institutions operating in the Federal Democratic Republic of Nepal. Over the past decade, successive consolidation mandates executed by NRB dramatically compressed the commercial banking sector from an apex of 32 institutions in FY 2011/12 to 20 commercial banks by mid-October 2023 (Asoj 2080 BS) (NRB, 2023). These 20 licensed institutions constitute the universal population of the modern Nepalese commercial banking industry.
+The target population for this study comprises all commercial banks licensed by Nepal Rastra Bank as Class 'A' financial institutions operating in the Federal Democratic Republic of Nepal. Over the past decade, successive consolidation mandates executed by NRB reduced the commercial banking sector from 32 institutions in FY 2011/12 to 20 commercial banks by mid-October 2023 (Asoj 2080 BS) (NRB, 2023). These 20 licensed institutions constitute the population of the modern Nepalese commercial banking industry.
 
 ### 3.3.2 Sampling Method and Selection Criteria
-From the total population of 20 licensed commercial banks, a purposive (judgmental) sample of five commercial bank series is selected. Purposive sampling is mathematically and conceptually appropriate because the core research objective focuses specifically on evaluating accounting value relevance across the prominent commercial banking consolidations that reshaped the financial sector in early 2023, while requiring longitudinal data continuity across both pre- and post-merger regimes.
+From the total population of 20 licensed commercial banks, a purposive (judgmental) sample of five commercial bank series is selected. Purposive sampling is conceptually appropriate because the core research objective focuses specifically on evaluating accounting value relevance across the prominent commercial banking consolidations that reshaped the financial sector in early 2023, while requiring longitudinal data continuity across both pre- and post-merger regimes.
 
 The specific sampling criteria applied to select the institutions are:
 1. **Participation in the 2023 Consolidation Wave:** Prominent commercial bank series that executed horizontal statutory amalgamations or major corporate acquisitions that commenced joint commercial operations during the early-2023 consolidation wave (January–February 2023 / mid-FY 2079/80).
@@ -44,36 +42,36 @@ The five purposively selected commercial bank series, identified by their curren
 1. **Global IME Bank Limited (GBIME):**
    * *Consolidation Status:* Amalgamated with Bank of Kathmandu Limited (BOK).
    * *Effective Joint Operation Date:* 9 January 2023 (25 Poush 2079 BS).
-   * *Consolidation Mechanism:* Statutory merger with an equity share swap ratio of 1:1. Following amalgamation, GBIME emerged as the largest commercial bank in Nepal by total asset scale and paid-up equity capital (Global IME Bank, 2022; NRB, 2023).
+   * *Consolidation Mechanism:* Statutory merger with an equity share swap ratio of 1:1. Following amalgamation, GBIME emerged as the largest commercial bank in Nepal by total asset scale and paid-up equity capital (Global IME Bank, 2022).
    * *Pre-Merger Entity:* Global IME Bank Limited standalone operations.
 
 2. **Himalayan Bank Limited (HBL):**
    * *Consolidation Status:* Acquired Civil Bank Limited.
    * *Effective Joint Operation Date:* 24 February 2023 (12 Falgun 2079 BS).
-   * *Consolidation Mechanism:* Statutory acquisition with an equity share swap ratio of 100:80.28 (100 shares of Civil Bank exchanged for 80.28 shares of HBL). The acquisition substantially expanded HBL's domestic retail deposit base and branch network (Himalayan Bank, 2023; NRB, 2023).
+   * *Consolidation Mechanism:* Statutory acquisition with an equity share swap ratio of 100:80.28 (100 shares of Civil Bank exchanged for 80.28 shares of HBL). The acquisition substantially expanded HBL's domestic retail deposit base and branch network (Himalayan Bank, 2023).
    * *Pre-Merger Entity:* Himalayan Bank Limited standalone operations.
 
 3. **Kumari Bank Limited (KBL):**
    * *Consolidation Status:* Amalgamated with Nepal Credit and Commerce Bank Limited (NCC Bank).
    * *Effective Joint Operation Date:* 1 January 2023 (17 Poush 2079 BS).
-   * *Consolidation Mechanism:* Statutory horizontal amalgamation with an equity share swap ratio of 1:1, combining complementary branch networks across semi-urban and commercial centers (Kumari Bank, 2022; NRB, 2023).
+   * *Consolidation Mechanism:* Statutory horizontal amalgamation with an equity share swap ratio of 1:1, combining complementary branch networks across semi-urban and commercial centers (Kumari Bank, 2022).
    * *Pre-Merger Entity:* Kumari Bank Limited standalone operations.
 
 4. **Nepal Investment Mega Bank Limited (NIMB):**
    * *Consolidation Status:* Amalgamation of Nepal Investment Bank Limited (NIB) and Mega Bank Nepal Limited.
    * *Effective Joint Operation Date:* 11 January 2023 (27 Poush 2079 BS).
-   * *Consolidation Mechanism:* Statutory horizontal amalgamation with an equity share swap ratio of 100:90 (100 shares of Mega Bank exchanged for 90 shares of NIB), creating one of the largest corporate banking portfolios in the country (Nepal Investment Mega Bank, 2023; NRB, 2023).
+   * *Consolidation Mechanism:* Statutory horizontal amalgamation with an equity share swap ratio of 100:90 (100 shares of Mega Bank exchanged for 90 shares of NIB), creating one of the largest corporate banking portfolios in the country (Nepal Investment Mega Bank, 2023).
    * *Pre-Merger Entity:* Nepal Investment Bank Limited (NIB) standalone operations.
 
 5. **NMB Bank Limited (NMB):**
    * *Consolidation Status:* Did not participate in the early-2023 consolidation wave, serving as the benchmark series for the 2023 restructuring.
-   * *Corporate History Note:* NMB acquired Kanchan Development Bank Limited in August 2020 (Bhadra 2077 BS), adding approximately NPR 0.57 billion to share capital in FY 2077/78. However, its core corporate identity, executive management, and operational boundaries remained continuous and unmerged throughout the early-2023 consolidation wave (NRB, 2023).
+   * *Corporate History Note:* NMB acquired Kanchan Development Bank Limited in August 2020 (Bhadra 2077 BS), adding approximately NPR 0.56 billion to paid-up capital beyond its 13% bonus share capitalization in FY 2077/78, but remained independent during the 2022–2023 wave.
 
 ### 3.3.4 Sample Size, Missingness Protocol, and Realized Observations
 The research protocol targets 30 potential bank-year observations, comprising five commercial bank series tracked over six fiscal years (FY 2076/77 to FY 2081/82). Primary audited annual financial reports are complete for all 30 bank-years ($100\%$ accounting coverage).
 
 However, in secondary equity pricing, corporate restructuring frequently induces prolonged trading halts. To ensure empirical integrity, the study enforces a strict **five-day calendar freshness rule**:
-> *If a security was suspended from trading or recorded zero valid transactions within a five-day calendar window following the statutory reporting deadline (end of Chaitra / mid-April), the observation is coded as missing and excluded from the regression sample. It is never imputed from stale pre-suspension prices.*
+> *If a security was suspended from trading or recorded zero valid transactions within a five-day calendar window following the study's operationalized reporting deadline (end of Chaitra / mid-April), the observation is coded as missing and excluded from the regression sample. It is never imputed from stale pre-suspension prices.*
 
 Two bank-year observations fail this freshness rule due to prolonged merger-related trading suspensions:
 1. **Himalayan Bank Limited (HBL) FY 2077/78:** Trading in HBL shares on NEPSE experienced a prolonged merger-related suspension following the rejection of its proposed bilateral merger with Nepal Investment Bank at its 29th AGM in January 2022. Trading remained suspended until 6 June 2022 (Jestha 2079 BS), representing a resumption delay of 54 days beyond the target deadline of 13 April 2022.
@@ -107,7 +105,7 @@ Table 3.1 reports the complete panel matrix of observation dates, closing market
 ## 3.4 Nature and Sources of Data, and Data Collection Procedure
 
 ### 3.4.1 Nature of Data
-This dissertation relies exclusively on quantitative secondary data extracted from audited financial disclosures and official secondary capital market trading archives. All accounting variables are compiled strictly on a standalone Bank-level basis rather than consolidated Group accounts, adhering to standard Nepalese banking valuation convention where non-banking subsidiaries are segregated from the licensed commercial bank's capital adequacy and regulatory return metrics. Standalone Bank balance-sheet identities ($\text{Total Assets} - \text{Total Liabilities} - \text{Total Equity} = 0$) hold exactly across all 30 bank-year observations within a $\le 1$ NPR rounding tolerance. In the Global IME Bank raw extractions, Group total equity equals equity attributable to equity holders and excludes non-controlling interest (NPR 211.28 million in FY 2076/77); regardless, Group-level figures are never utilized in panel regressions as all empirical estimations rely strictly on standalone Bank accounts.
+This dissertation relies exclusively on quantitative secondary data extracted from audited financial disclosures and capital market data aggregators. All accounting variables are compiled strictly on a standalone Bank-level basis rather than consolidated Group accounts, ensuring that non-banking subsidiaries are segregated from the licensed commercial bank's capital adequacy and regulatory return metrics. Standalone Bank balance-sheet identities ($\text{Total Assets} - \text{Total Liabilities} - \text{Total Equity} = 0$) hold exactly across all 30 bank-year observations within a $\le 1$ NPR rounding tolerance. In the Global IME Bank raw extractions, Group total equity equals equity attributable to equity holders and excludes non-controlling interest (NPR 211.28 million in FY 2076/77); Group-level figures are never utilized in panel regressions, as all empirical estimations rely strictly on standalone Bank accounts.
 
 The empirical dataset comprises two primary streams of financial information:
 1. **Audited Financial Accounting Data:** Comprehensive annual financial metrics—specifically basic earnings per share, total equity attributable to equity holders, ordinary shares outstanding, profit after tax, average total assets, and recommended cash dividends per share.
@@ -159,7 +157,7 @@ The conceptual framework guiding this research synthesizes the residual income v
 +------------------------------------+
 |  Econometric Controls              |
 |  - Bank Fixed Effects (mu_i)       |
-|  - Fiscal-Year Fixed Effects (l_t) |
+|  - Fiscal-Year Fixed Effects (\lambda_t) |
 +------------------------------------+
 ```
 
@@ -198,7 +196,7 @@ In this framework, secondary market closing price at the reporting deadline ($\m
 * **Return on Assets (ROA):**
   * *Definition:* Operating profitability expressed as net profit after tax divided by average total assets, expressed as a percentage:
     $$\mathit{ROA}_{it} = \left(\frac{\text{Profit After Tax}_{it}}{\text{Average Total Assets}_{it}}\right) \times 100$$
-  * *Econometric Treatment:* Evaluated in Specification R3 as an asset-scaled substitute for EPS. Because EPS and ROA correlate at $r = 0.975$ (variance inflation factor $\approx 30$), they are never co-included in the same regression to prevent severe multicollinearity.
+  * *Econometric Treatment:* Evaluated in Specification R3 as an asset-scaled substitute for EPS. Because EPS and ROA correlate at $r = 0.975$ (yielding a bivariate variance inflation factor of $1/(1 - r^2) \approx 20.3$, rising to approximately 30 when conditioning on fixed effects), they are never co-included in the same regression to prevent severe multicollinearity.
 * **Dividend per Share (DPS):**
   * *Definition:* Cash dividend recommended per ordinary share, expressed in NPR, for the corresponding fiscal year.
   * *Operational Measurement:* Evaluated in Specification R4, including only eligible cash dividends that were officially declared on or prior to the $\mathit{MPS}^{RD}$ observation date. Documented zero-dividend decisions are recorded as zero; unannounced dividends are treated as missing in the operational rule. In the realized analysis sample ($N = 28$), all 28 observations possess confirmed declarations or documented nil distributions (zero cash dividend), meaning no DPS observation is missing in the realized estimation dataset.
@@ -236,8 +234,8 @@ where reference categories remain identically defined (GBIME as reference bank f
 
 #### Econometric Note on Standalone Post Absorption:
 Because Model 2 includes a full set of fiscal-year fixed effects ($\lambda_t$), the standalone consolidation indicator ($\mathit{Post}_t$) is a deterministic linear combination of the post-consolidation year dummy indicators:
-$$\mathit{Post}_t = \lambda_{2079/80} + \lambda_{2080/81} + \lambda_{2081/82}$$
-Including a standalone $\mathit{Post}_t$ regressor alongside full year fixed effects would create perfect exact collinearity (dummy variable trap). Consequently, the main effect of $\mathit{Post}_t$ is fully absorbed by the fiscal-year fixed effects and is not estimated separately.
+$$\mathit{Post}_t = D_{2079/80} + D_{2080/81} + D_{2081/82}$$
+where $D_t$ represents the post-consolidation fiscal-year dummy indicators. Including a standalone $\mathit{Post}_t$ regressor alongside full year fixed effects would create perfect exact collinearity (dummy variable trap). Consequently, the main effect of $\mathit{Post}_t$ is fully absorbed by the fiscal-year fixed effects and is not estimated separately.
 
 #### Interpretation of Slope Parameters:
 * **Pre-Consolidation Valuation Slopes:** Represented directly by the baseline coefficients:
@@ -260,13 +258,13 @@ Estimation is performed by Ordinary Least Squares (OLS) with explicit dummy vari
   * 2 interaction slopes ($\delta_E, \delta_B$)
   $$\text{Residual Degrees of Freedom} = N - K = 28 - 14 = 14 \text{ df}$$
   In supplementary models incorporating DPS (Specification R4), estimating the additional slope parameter $\beta_{\text{DPS}}$ increases the parameter count to $K = 15$, reducing residual degrees of freedom from 14 to $28 - 15 = 13$ df.
-* **MacKinnon-White HC3 Robust Standard Errors:** Standard cluster-robust covariance estimators (such as Huber-White cluster SEs) suffer from severe downward bias and over-reject null hypotheses when the number of clusters is small ($G = 5$) (Cameron et al., 2008). To ensure conservative, reliable inference, standard errors, $t$-statistics, and confidence intervals are computed using MacKinnon-White (1985) HC3 heteroskedasticity-robust standard errors:
+* **MacKinnon-White HC3 Robust Standard Errors and Reference Distribution:** Standard cluster-robust covariance estimators (such as Huber-White cluster SEs) suffer from severe downward bias and over-reject null hypotheses when the number of clusters is small ($G = 5$) (Cameron et al., 2008). To ensure conservative, reliable inference, standard errors, $t$-statistics, and confidence intervals are computed using MacKinnon-White (1985) HC3 heteroskedasticity-robust standard errors:
   $$\text{HC3} = (X'X)^{-1} \left( \sum_{i=1}^n \frac{e_i^2}{(1 - h_{ii})^2} x_i x_i' \right) (X'X)^{-1}$$
-  where $h_{ii} = x_i (X'X)^{-1} x_i'$ represents the leverage of observation $i$. HC3 heavily discounts high-leverage observations, providing reliable finite-sample inference in small panel samples.
+  where $h_{ii} = x_i (X'X)^{-1} x_i'$ represents the leverage of observation $i$. Dividing squared residuals by $(1 - h_{ii})^2$ inflates the influence of high-leverage observations, yielding conservative standard error estimates and reliable finite-sample inference in small panel samples. All $t$-statistics, $p$-values, and parameter confidence intervals are referred to Student's $t$ distribution on residual degrees of freedom ($t(14)$ for Model 2, $t(16)$ for Model 1), avoiding asymptotic normal approximations in finite samples.
 
 ### 3.6.4 Econometric Diagnostic Battery
 To assess econometric validity, the estimation protocol executes four diagnostic checks:
-1. **Multicollinearity:** Variance Inflation Factors (VIF) and tolerance statistics ($1/\text{VIF}$) computed on substantive regressors. Regressors exhibiting $\text{VIF} > 5$ or tolerance $< 0.20$ are screened for collinearity.
+1. **Multicollinearity:** Variance Inflation Factors (VIF) and tolerance statistics ($1/\text{VIF}$) computed on substantive regressors. Regressors exhibiting $\text{VIF} > 5$ or tolerance $< 0.20$ are screened for collinearity (in the estimated models, substantive regressors exhibit VIF $\approx 1.16$, well below diagnostic thresholds).
 2. **Heteroskedasticity:** The Breusch-Pagan / Cook-Weisberg Lagrange Multiplier test evaluated against the null hypothesis of constant error variance ($H_0: \sigma_i^2 = \sigma^2$).
 3. **Influential Outliers:** Cook's Distance ($D_i$) computed for each observation and evaluated against the conventional finite-sample threshold $D_i > 4/n = 4/28 \approx 0.143$.
 4. **Residual Normality:** Normal Q-Q probability plots and residual standard deviation screening.
@@ -288,4 +286,4 @@ To ensure transparency regarding how fixed effects absorb market-wide variation,
 2. **Bank Fixed-Effects Only:** Absorbs cross-bank heterogeneity but retains longitudinal macroeconomic price variation.
 
 ### 3.6.7 Computational Tools and Implementation
-Data extraction, audit reconciliation, and panel assembly are executed in Python (`pandas`, `numpy`) and Microsoft Excel. Econometric modeling, robust HC3 covariance estimation, diagnostic testing, and visualization are executed using Python (`statsmodels`, `linearmodels`, `seaborn`, `matplotlib`).
+Data extraction, audit reconciliation, and panel assembly are executed in Python (`pandas`, `numpy`). Econometric modeling, robust HC3 covariance estimation, diagnostic testing, and visualization are executed using Python (`statsmodels`, `seaborn`, `matplotlib`).
