@@ -74,11 +74,11 @@
       "outputs": [
         {
           "path": "tables/T5_robustness.tex",
-          "sha256": "ac7bfa38ecae0809e52d5be91b64c8a79bda4ed3ad033415a4e59e9bcb960e67"
+          "sha256": "9f85ecd4ddf14e5692509bb73483a0a8077620ebfed00dfd0afca48e0d5af5c4"
         },
         {
           "path": "tables/T5_robustness.md",
-          "sha256": "d7bea2bb331f2045216c8f788de51050051c3f788277a71fa246d7d2fee6acba"
+          "sha256": "fe88c172fdca0d6e66c5bb48a9976bd9c3738f91d362507f763cf6faf985dc22"
         }
       ]
     },
@@ -100,7 +100,7 @@
       "outputs": [
         {
           "path": "figures/main/F1_scatter_matrix.pdf",
-          "sha256": "6542866c99e33f0e6d4a989f8d9754d0368c240cf2709eca3d5508592d623ab4"
+          "sha256": "2a21bac9989d73bb03f5ee82d158ae7efb6a3a8302606bd9936b16c18c6cbcdc"
         },
         {
           "path": "figures/main/F1_scatter_matrix.png",
@@ -113,7 +113,7 @@
       "outputs": [
         {
           "path": "figures/main/F2_correlation_heatmap.pdf",
-          "sha256": "819d08515702fdea78e15cb55134ca705a98b84ee29930281de406387b712f9f"
+          "sha256": "22cf2eb1920df68b42473b36d888dedaabad000c039ea974524519c20ccd4c45"
         },
         {
           "path": "figures/main/F2_correlation_heatmap.png",
@@ -126,11 +126,11 @@
       "outputs": [
         {
           "path": "figures/main/F3_value_relevance.pdf",
-          "sha256": "b898ec83b4da8fa38199ba43acb90ca871e318158b433de2886fd61accd3ed72"
+          "sha256": "164f6803b75effd033f1784b5a85463991d1b450e51b243dac5b88557e69da0e"
         },
         {
           "path": "figures/main/F3_value_relevance.png",
-          "sha256": "de30296b990421cf7168c226171a2bf7e927554e0aedbe3dc8f2ee894a069c16"
+          "sha256": "393087117e569d4f08a1cf51e6936d3bcb2cc65c1e2a2158d4d8b9ee2b7aaf36"
         }
       ]
     },
@@ -139,7 +139,7 @@
       "outputs": [
         {
           "path": "figures/main/F4_coefficient_forest.pdf",
-          "sha256": "ae09942b5d86035e477cfb80bca8018bfe71590b6a75a1e32c92ff29d4802fa4"
+          "sha256": "fcbc63ca9c068c75801d8b923b5026a77cfed802cfe0447951f335b45aff2c4d"
         },
         {
           "path": "figures/main/F4_coefficient_forest.png",
@@ -152,7 +152,7 @@
       "outputs": [
         {
           "path": "figures/main/F5_diagnostics.pdf",
-          "sha256": "3732d88bf4c3a06cb6ffe115b68aed72b2042d18b3d42939c3e88841a8f542bd"
+          "sha256": "aa6a012b6ffea68c5645a37736fc77b6eca7b321f2d4be075d28db0a94ffa168"
         },
         {
           "path": "figures/main/F5_diagnostics.png",
@@ -165,7 +165,7 @@
       "outputs": [
         {
           "path": "figures/main/F6_trends.pdf",
-          "sha256": "04122dd800fce2765c706afb6c5bd3741c0903d37ece814ce18b7b9a8b1d72cd"
+          "sha256": "39aa78f0abd965d002809ee54e0a0371b1a3860aa4c1663fd6333e179863f709"
         },
         {
           "path": "figures/main/F6_trends.png",
@@ -178,7 +178,7 @@
       "outputs": [
         {
           "path": "figures/appendix/A1_coverage_map.pdf",
-          "sha256": "48efad4cc6b64f08a4a10322bffbf0dd3c2ba178debf3a88fd50edddfb85ceed"
+          "sha256": "493f3e355d5bed3f631c7a9466ea446197d6642b6d9f8e44e9e0b4067419ac8b"
         },
         {
           "path": "figures/appendix/A1_coverage_map.png",
@@ -191,7 +191,7 @@
       "outputs": [
         {
           "path": "figures/appendix/A2_robustness_forest.pdf",
-          "sha256": "ad351ce7dacdd0a7c07ae25fed8331a2768c9a4b5ab6078d784e0bfe294290bf"
+          "sha256": "6ec550358b855759aafa3a511e382cd2567cd0e1a07444064ac5684472a84452"
         },
         {
           "path": "figures/appendix/A2_robustness_forest.png",
@@ -204,7 +204,7 @@
       "outputs": [
         {
           "path": "figures/appendix/A3_model2_diagnostics.pdf",
-          "sha256": "52d65c4c419fbdbc913f459a9f26ae334f5a49f4a426a8d5e56ec0c31f3dfe22"
+          "sha256": "142fb68d815c69570da14c2bc61d75e37e1dce19d8b076b3ac7191e9650430a8"
         },
         {
           "path": "figures/appendix/A3_model2_diagnostics.png",

@@ -117,7 +117,7 @@ def build_runs(dataset: AnalysisDataset) -> list[RobustnessRun]:
         RobustnessRun(
             "R7",
             bonus.label,
-            "BVPS adjusted for bonus issues: BVPS_adj = BVPS / (1 + bonus%)",
+            "BVPS adjusted for proposed bonus issues: BVPS_adj = BVPS / (1 + bonus%), a pro-forma forward capitalization adjustment",
             bonus,
             "eps",
             "bvps_adj",
