@@ -1,0 +1,50 @@
+# Analysis configuration.  Input paths are resolved relative to data_analysis/
+# (the analysis stage root).  Inputs are frozen data_extract outputs and are
+# never written by analysis code.  Tests redirect the whole file via the
+# THESIS_ANALYSIS_CONFIG environment variable.
+
+data:
+  root: data_extract/output/manual_review
+  panel: mps_rd_joined_panel.csv
+  bonusadj: mps_rd_joined_panel_bonusadj.csv
+  price_status: mps_rd_candidate_price_table.csv
+  merolagani: mps_rd_merolagani_verification.csv
+
+analysis:
+  # Proposal 07_methodology: MPS_RD is observed within a 5-day window of the
+  # reporting deadline; observations outside it are missing, never imputed
+  # (HBL FY2077-78 gap 54, NIMB FY2077-78 gap 47).
+  price_freshness_days: 5
+  banks: [GBIME, HBL, KBL, NIMB, NMB]
+  fys: [FY2076-77, FY2077-78, FY2078-79, FY2079-80, FY2080-81, FY2081-82]
+  # Post period = consolidation wave: mergers completed January-February 2023,
+  # so FY2079/80 onward is post (proposal section 04).
+  post_fys: [FY2079-80, FY2080-81, FY2081-82]
+  transition_fy: FY2079-80       # robustness (c): first post year
+  entity_mismatch_fy: FY2078-79  # robustness (c): pre-merger fundamentals vs post-merger April 2023 price
+  variables:
+    dependent: price
+    fundamentals: [eps, bvps]
+    robustness_vars: [dps, roa]
+  # Restated basic EPS as printed in the following year's audited report
+  # (own-current rule differs).  Verified against
+  # output/manual_review/mps_rd_final_audit_2026-10-27.md note (a): values are
+  # used as printed; no mechanical restatement rule may be invented, and the
+  # substituted rows are flagged in table notes.  HBL FY2077-78 (28.07 -> 27.60)
+  # sits in a delayed-price row and never enters the clean sample.
+  eps_restated:
+    GBIME: {FY2076-77: 15.33}
+    NMB: {FY2077-78: 14.76}
+    HBL: {FY2077-78: 27.60}
+
+output:
+  paper_root: analysis/outputs
+  manifest_name: generation_manifest.json
+
+style:
+  palette: okabe_ito
+  dpi: 300
+  text_width_in: 5.5
+  period_colors:
+    pre: blue
+    post: vermillion

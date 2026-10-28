@@ -1,0 +1,255 @@
+{
+  "argv": [],
+  "coverage": {
+    "intended": 30,
+    "realized": 28,
+    "realized_pre": 13,
+    "realized_post": 15,
+    "window_excluded": [
+      "HBL/FY2077-78",
+      "NIMB/FY2077-78"
+    ],
+    "entity_mismatch": [
+      "GBIME/FY2078-79",
+      "HBL/FY2078-79",
+      "KBL/FY2078-79",
+      "NIMB/FY2078-79"
+    ]
+  },
+  "assets": {
+    "T1": {
+      "title": "Descriptive statistics",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T1_descriptives.tex",
+          "sha256": "a591c64fb328b1fe383a0034cc5334209a44ebd38a7fac8340b2b9fca6ddeb0e"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T1_descriptives.md",
+          "sha256": "598f4f8bdcf202e526b4e1025d6c2d7f4a1df20600559db29790bf111c976c42"
+        }
+      ]
+    },
+    "T2": {
+      "title": "Pearson correlation matrix",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T2_correlations.tex",
+          "sha256": "61a852f2c7807fa0030a8e919c2087c9637fcda3e6d04339fe53294e0d3f59a6"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T2_correlations.md",
+          "sha256": "de7c4c515e0cb8c14946e0a078a2257a65443089cde6e54cb845dd757839aa46"
+        }
+      ]
+    },
+    "T3": {
+      "title": "Model 1: baseline value-relevance estimates (two-way FE, HC3)",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T3_model1.tex",
+          "sha256": "729831ee53150384e96ee358a841a034dd5a112f77fcfd2f98ac94c0739f7b04"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T3_model1.md",
+          "sha256": "fedec00e3bc537f44075d4ea8feb6224c1375c9b9b49a67c07ef12327d7f6135"
+        }
+      ]
+    },
+    "T4": {
+      "title": "Model 2: consolidation interactions and the joint Wald test",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T4_model2.tex",
+          "sha256": "0f4121803a76f957aa1d30f760f1dad7ce79c214f0a8bf89365d664d760895bf"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T4_model2.md",
+          "sha256": "b079125f8f8d1f9c10a3d82e15fd99ae0ac60d0e666fc18f64aa58cd7ed6189d"
+        }
+      ]
+    },
+    "T5": {
+      "title": "Robustness suite",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T5_robustness.tex",
+          "sha256": "d4a34197152888acd5ce6f83ba8b3b4608609a22581431bc97ae9ccf8b60d0f3"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T5_robustness.md",
+          "sha256": "59373caa1bf83ecda3f35e301703e1c61202cc1a3c8965c40fc19479ef2bbdb5"
+        }
+      ]
+    },
+    "T6": {
+      "title": "Diagnostics for Model 1",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T6_diagnostics.tex",
+          "sha256": "0be67cf2f3e29d999f01321c29b974e02234980163d01c302585bac865f18dfa"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T6_diagnostics.md",
+          "sha256": "f0178f3ccde9e9035036e0513d46a4e768ef9a8406433263a698cc22f73460d0"
+        }
+      ]
+    },
+    "F1": {
+      "title": "Scatter matrix of MPS_RD, EPS and BVPS by period",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F1_scatter_matrix.pdf",
+          "sha256": "04debbb515c412e4043b8004a100d2cd070e0dcce1f7f1ee7efbce563fd5e394"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F1_scatter_matrix.png",
+          "sha256": "cee97e5f66c633dcb5eb5a419a53c2e146daacb10946102fb1ccd1b21907a901"
+        }
+      ]
+    },
+    "F2": {
+      "title": "Correlation heatmap",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F2_correlation_heatmap.pdf",
+          "sha256": "7465dcfdaea7d6e3ace42d4c3e3cde78f7f93c62bade5c9cd1eec66f4b1699d5"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F2_correlation_heatmap.png",
+          "sha256": "ed999427b9c2fd3c28837aa434ff5596f1a34aaf43c0537edae52840c4693e8f"
+        }
+      ]
+    },
+    "F3": {
+      "title": "Value-relevance scatter panels, pre vs post",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F3_value_relevance.pdf",
+          "sha256": "1d9737bbb79be7bbf8ceaef6240408254c6ace69748043d05064cdc033585ad2"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F3_value_relevance.png",
+          "sha256": "61ee3fd1a68658ce5cee35bd41b9e02e737fe7720e92c9c2b39840e20e816fd4"
+        }
+      ]
+    },
+    "F4": {
+      "title": "Coefficient forest: pre slopes, interactions, implied post slopes",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F4_coefficient_forest.pdf",
+          "sha256": "ec08ccf26f6716a80b1c30537fbad9bc4371e65592aa84c869ec41f1cc7c4a02"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F4_coefficient_forest.png",
+          "sha256": "425aae96364b2679d8e32426770de2f5ccf21d032636ecdcd7264516c04be955"
+        }
+      ]
+    },
+    "F5": {
+      "title": "Diagnostics panel for Model 1",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F5_diagnostics.pdf",
+          "sha256": "5c18cb7a46fc74c83a9f9d13ac59499c779cef12f9fb845b6a3d63f516eb8432"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F5_diagnostics.png",
+          "sha256": "69a62e0a519bbf03a543ce863520885fd5cae1f5523fd11c366af678f2842b69"
+        }
+      ]
+    },
+    "F6": {
+      "title": "Variable trends by bank series",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F6_trends.pdf",
+          "sha256": "7f5660988927610e2a3c1e4a996bc809c3a4a703f6c215274342ba7cdf41ed81"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F6_trends.png",
+          "sha256": "5620f65443efa60ad48183d6757002ca4ea0ae4f3a720a1f3670aead657e26a9"
+        }
+      ]
+    },
+    "A1": {
+      "title": "Data coverage map (bank x fiscal year)",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A1_coverage_map.pdf",
+          "sha256": "f639395c3378818b6b6fb5bc77b7f5b98757d29ad8487ac315d9af89da72edbc"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A1_coverage_map.png",
+          "sha256": "9e3d4758eb9049c6a12643c8360b34048010c1101f21f3188642b519d7de9929"
+        }
+      ]
+    },
+    "A2": {
+      "title": "Robustness coefficient forest (EPS channel)",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A2_robustness_forest.pdf",
+          "sha256": "8cf00ff72d91a09019d179368fa4c30b87a57bc1ea35e574fdd203d1c422f72d"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A2_robustness_forest.png",
+          "sha256": "fa9f6f832a2e7caa4fd150987507230351988ee3d7f2e933051246269345324f"
+        }
+      ]
+    },
+    "A3": {
+      "title": "Diagnostics panel for Model 2",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A3_model2_diagnostics.pdf",
+          "sha256": "476d05bdd972a9b809eb1571de4d84d7e154fbb393a33e53de02a9e9083e55ac"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A3_model2_diagnostics.png",
+          "sha256": "1b649cca1f64211f922fe6bfa7efd794c8696b6d08b37b52bacfd2da477bfbc9"
+        }
+      ]
+    },
+    "A4": {
+      "title": "MPS_RD price verification (Merolagani cross-check)",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A4_price_verification.tex",
+          "sha256": "51e0326b891f72c40581258dd762e719f19dacec51a8053c8d37ef70911f51dd"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A4_price_verification.md",
+          "sha256": "35611a2d223d811a8c35f252a8cadfa42b6acdc3cb5eb126bede8711e5713193"
+        }
+      ]
+    },
+    "A5": {
+      "title": "Specification comparison: pooled OLS vs bank FE vs two-way FE",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A5_specification_comparison.tex",
+          "sha256": "5e1a6723a19cbb85e6e44be25515196b6467629aec5660d5d93177609405b35b"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A5_specification_comparison.md",
+          "sha256": "aa344171b486811d320639e20ecbe31f9349e97ff1bb1fe51dd5770ec59c521b"
+        }
+      ]
+    },
+    "A6": {
+      "title": "Analysis dataset by bank-year",
+      "outputs": [
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A6_analysis_dataset.tex",
+          "sha256": "d754d6fd2872a82bd23023135f7020236005e9e660f2659568c2a71a6bd27b56"
+        },
+        {
+          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A6_analysis_dataset.md",
+          "sha256": "0edf1fae4e9851ea64b7e0e3276f0b0631a7e9a23c05ce9534d8ce8a264ec8a1"
+        }
+      ]
+    }
+  }
+}
