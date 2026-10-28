@@ -55,9 +55,13 @@ def generate(dataset: AnalysisDataset) -> list:
         rows=tuple(rows),
         notes=(
             "MPS_RD is the closing price on the first trading session following the reporting "
-            "deadline (5-day window). BVPS is recomputed from balance-sheet components; DPS is "
-            "the eligible cash dividend declared on or before the price-observation date. "
-            "Reported basic EPS shown; variant R8 substitutes the restated values flagged above."
+            "deadline (5-day window). BVPS is recomputed from balance-sheet components; minor variances "
+            "(0.28-0.40 NPR) with printed NAV in five NIMB rows reflect whole-integer rounding in printed highlights, "
+            "while NMB FY2081/82 (175.18 vs 174.49) remains flagged as an unrounded difference. "
+            "DPS is the eligible cash dividend declared on or before the price-observation date. "
+            "Reported basic EPS uses weighted-average shares per NAS 33, whereas BVPS uses year-end shares; "
+            "in merger year FY2079/80, EPS denominators reflect blended share counts while BVPS uses post-merger ending shares. "
+            "Variant R8 substitutes the restated basic EPS values flagged above."
         ),
     )
     return save_table(table, "tables/A6_analysis_dataset")

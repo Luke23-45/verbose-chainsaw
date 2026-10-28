@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import logging
+from pathlib import Path
 
 from analysis.assets import ASSET_REGISTRY
 from analysis.common import config
@@ -24,13 +25,24 @@ def main(argv: list[str] | None = None) -> int:
     paper_root = config.paper_root()
     manifest_path = config.manifest_path()
 
-    recorded: dict[str, str] = {}  # absolute output path -> recorded sha256
+    recorded: dict[str, str] = {}  # output path (both absolute and relative) -> recorded sha256
     if manifest_path.is_file():
         data = json.loads(manifest_path.read_text(encoding="utf-8"))
         for entry in data.get("assets", {}).values():
             for output in entry.get("outputs", []):
-                if output.get("path") and output.get("sha256"):
-                    recorded[output["path"]] = output["sha256"]
+                p_str = output.get("path")
+                sha = output.get("sha256")
+                if p_str and sha:
+                    p = Path(p_str)
+                    if p.is_absolute():
+                        recorded[str(p)] = sha
+                        try:
+                            recorded[str(p.relative_to(paper_root)).replace("\\", "/")] = sha
+                        except ValueError:
+                            pass
+                    else:
+                        recorded[str(paper_root / p)] = sha
+                        recorded[str(p).replace("\\", "/")] = sha
         LOG.info("manifest: %s (%d outputs recorded)", manifest_path, len(recorded))
     else:
         LOG.warning("manifest not found: %s (run generate first; presence checks only)", manifest_path)
@@ -45,7 +57,7 @@ def main(argv: list[str] | None = None) -> int:
             if path.stat().st_size == 0:
                 problems.append(f"{asset_id}: empty output {relative}")
                 continue
-            expected = recorded.get(str(path))
+            expected = recorded.get(str(path)) or recorded.get(str(relative).replace("\\", "/"))
             if expected and sha256_file(path) != expected:
                 problems.append(f"{asset_id}: sha256 drift for {relative}")
 

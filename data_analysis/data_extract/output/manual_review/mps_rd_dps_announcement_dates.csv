@@ -22,7 +22,7 @@ NIMB,FY2077-78,Dividend declaration,2021-10-04,2022-04-13,yes,First declaration 
 NIMB,FY2078-79,Dividend declaration,2022-11-16,2023-04-13,yes,As NIB: 4% bonus 7% cash
 NIMB,FY2079-80,Dividend declaration,2024-02-02,2024-04-14,yes,Panel DPS 0
 NIMB,FY2080-81,Dividend declaration,2025-01-10,2025-04-13,yes,Panel DPS 0
-NIMB,FY2081-82,AGM only,2025-12-24,2026-04-13,yes,Panel DPS 0 documented by 2025-12-22 no-dividend letter (Merolagani detail field reads 080-081, so not used as the FY81-82 announcement here); AGM date itself is before price date
+NIMB,FY2081-82,AGM only,2025-12-24,2026-04-13,yes,"Panel DPS 0 documented by 2025-12-22 no-dividend letter (Merolagani detail field reads 080-081, so not used as the FY81-82 announcement here); AGM date itself is before price date"
 NMB,FY2076-77,AGM only,2020-12-23,2021-04-13,yes,AGM detail shows 3.2% cash 13% bonus; no separate declaration title found
 NMB,FY2077-78,Dividend declaration,2021-10-31,2022-04-13,yes,12.5% bonus 3.3% cash
 NMB,FY2078-79,Dividend declaration,2022-12-06,2023-04-13,yes,8.25% cash

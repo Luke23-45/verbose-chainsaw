@@ -43,6 +43,19 @@ by the test suite):
 cd analysis && python -m pytest
 ```
 
+### Dependencies and Environment
+Running the complete asset generation and test suite requires:
+`python >= 3.10`, `numpy`, `pandas`, `scipy`, `statsmodels`, `patsy`, `matplotlib`, `seaborn`, `pytest`, `pyyaml`.
+
+To execute the test suite with python module resolution:
+```powershell
+cd data_analysis
+$env:PYTHONPATH=".;analysis"
+pytest analysis/tests
+```
+The generation manifest (`generation_manifest.json`) records relative asset paths and SHA-256 hashes to guarantee cross-machine reproducibility.
+```
+
 ## Inputs (frozen; this package never writes them)
 
 - `../data_extract/output/manual_review/mps_rd_joined_panel.csv` (primary)

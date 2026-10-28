@@ -21,11 +21,11 @@
       "title": "Descriptive statistics",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T1_descriptives.tex",
+          "path": "tables/T1_descriptives.tex",
           "sha256": "a591c64fb328b1fe383a0034cc5334209a44ebd38a7fac8340b2b9fca6ddeb0e"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T1_descriptives.md",
+          "path": "tables/T1_descriptives.md",
           "sha256": "598f4f8bdcf202e526b4e1025d6c2d7f4a1df20600559db29790bf111c976c42"
         }
       ]
@@ -34,11 +34,11 @@
       "title": "Pearson correlation matrix",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T2_correlations.tex",
+          "path": "tables/T2_correlations.tex",
           "sha256": "61a852f2c7807fa0030a8e919c2087c9637fcda3e6d04339fe53294e0d3f59a6"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T2_correlations.md",
+          "path": "tables/T2_correlations.md",
           "sha256": "de7c4c515e0cb8c14946e0a078a2257a65443089cde6e54cb845dd757839aa46"
         }
       ]
@@ -47,11 +47,11 @@
       "title": "Model 1: baseline value-relevance estimates (two-way FE, HC3)",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T3_model1.tex",
+          "path": "tables/T3_model1.tex",
           "sha256": "eac19053741aae48bc590ff72873cc50f19e088fd1760507668fb70e318be3ce"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T3_model1.md",
+          "path": "tables/T3_model1.md",
           "sha256": "1aa3896c58939a10cad424c71ebcbdf2b6eef0d13d4ac272f68c38412fa0b68d"
         }
       ]
@@ -60,11 +60,11 @@
       "title": "Model 2: consolidation interactions and the joint Wald test",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T4_model2.tex",
+          "path": "tables/T4_model2.tex",
           "sha256": "2a7e8eb3672b30f7cdd23394fdb14ad63faf7e0bff996dba76cb49a914aefd29"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T4_model2.md",
+          "path": "tables/T4_model2.md",
           "sha256": "87647977738a017e1385f52296ec6a902ee791e4c6a4e06b18023fee121bdc9f"
         }
       ]
@@ -73,11 +73,11 @@
       "title": "Robustness suite",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T5_robustness.tex",
+          "path": "tables/T5_robustness.tex",
           "sha256": "ac7bfa38ecae0809e52d5be91b64c8a79bda4ed3ad033415a4e59e9bcb960e67"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T5_robustness.md",
+          "path": "tables/T5_robustness.md",
           "sha256": "d7bea2bb331f2045216c8f788de51050051c3f788277a71fa246d7d2fee6acba"
         }
       ]
@@ -86,11 +86,11 @@
       "title": "Diagnostics for Model 1",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T6_diagnostics.tex",
+          "path": "tables/T6_diagnostics.tex",
           "sha256": "0be67cf2f3e29d999f01321c29b974e02234980163d01c302585bac865f18dfa"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\T6_diagnostics.md",
+          "path": "tables/T6_diagnostics.md",
           "sha256": "f0178f3ccde9e9035036e0513d46a4e768ef9a8406433263a698cc22f73460d0"
         }
       ]
@@ -99,11 +99,11 @@
       "title": "Scatter matrix of MPS_RD, EPS and BVPS by period",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F1_scatter_matrix.pdf",
-          "sha256": "6199ac6aff6d0f492b64e609a9d3e9d01f335e0754d58c97baaf5caf92f57515"
+          "path": "figures/main/F1_scatter_matrix.pdf",
+          "sha256": "6542866c99e33f0e6d4a989f8d9754d0368c240cf2709eca3d5508592d623ab4"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F1_scatter_matrix.png",
+          "path": "figures/main/F1_scatter_matrix.png",
           "sha256": "cee97e5f66c633dcb5eb5a419a53c2e146daacb10946102fb1ccd1b21907a901"
         }
       ]
@@ -112,11 +112,11 @@
       "title": "Correlation heatmap",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F2_correlation_heatmap.pdf",
-          "sha256": "d59b0538b213dac10f655aa26373eb05aa74900e805e7f96dfa90c91bcffc8ab"
+          "path": "figures/main/F2_correlation_heatmap.pdf",
+          "sha256": "819d08515702fdea78e15cb55134ca705a98b84ee29930281de406387b712f9f"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F2_correlation_heatmap.png",
+          "path": "figures/main/F2_correlation_heatmap.png",
           "sha256": "ed999427b9c2fd3c28837aa434ff5596f1a34aaf43c0537edae52840c4693e8f"
         }
       ]
@@ -125,12 +125,12 @@
       "title": "Value-relevance scatter panels, pre vs post",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F3_value_relevance.pdf",
-          "sha256": "531af73f52bcdf8b10cc4bcb7481b921a53d30c92b5c9f9dc8f79b6d36ba69c2"
+          "path": "figures/main/F3_value_relevance.pdf",
+          "sha256": "b898ec83b4da8fa38199ba43acb90ca871e318158b433de2886fd61accd3ed72"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F3_value_relevance.png",
-          "sha256": "a50c73ebbeb8be45ccc48391d9196b6c31ba07631110c5cbd6ba81d25f4b7e9b"
+          "path": "figures/main/F3_value_relevance.png",
+          "sha256": "de30296b990421cf7168c226171a2bf7e927554e0aedbe3dc8f2ee894a069c16"
         }
       ]
     },
@@ -138,11 +138,11 @@
       "title": "Coefficient forest: pre slopes, interactions, implied post slopes",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F4_coefficient_forest.pdf",
-          "sha256": "5ab99d80b17587bf5974fded870fd2acea3b289500b3ba7ede83d4f481197e4c"
+          "path": "figures/main/F4_coefficient_forest.pdf",
+          "sha256": "ae09942b5d86035e477cfb80bca8018bfe71590b6a75a1e32c92ff29d4802fa4"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F4_coefficient_forest.png",
+          "path": "figures/main/F4_coefficient_forest.png",
           "sha256": "b1bc1882953899e7a72c9ac777beb7c39984353d57e3dddbc034d48363ec2759"
         }
       ]
@@ -151,11 +151,11 @@
       "title": "Diagnostics panel for Model 1",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F5_diagnostics.pdf",
-          "sha256": "a0f92eb6d1038b046972bfefa28449e4baa282b564085266cc8f669b78c3d45a"
+          "path": "figures/main/F5_diagnostics.pdf",
+          "sha256": "3732d88bf4c3a06cb6ffe115b68aed72b2042d18b3d42939c3e88841a8f542bd"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F5_diagnostics.png",
+          "path": "figures/main/F5_diagnostics.png",
           "sha256": "69a62e0a519bbf03a543ce863520885fd5cae1f5523fd11c366af678f2842b69"
         }
       ]
@@ -164,11 +164,11 @@
       "title": "Variable trends by bank series",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F6_trends.pdf",
-          "sha256": "3df76e463baedd0a34f8f979fb3044ca1d3d94ce0da3b533fa91021bdf445ad8"
+          "path": "figures/main/F6_trends.pdf",
+          "sha256": "04122dd800fce2765c706afb6c5bd3741c0903d37ece814ce18b7b9a8b1d72cd"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\main\\F6_trends.png",
+          "path": "figures/main/F6_trends.png",
           "sha256": "5620f65443efa60ad48183d6757002ca4ea0ae4f3a720a1f3670aead657e26a9"
         }
       ]
@@ -177,11 +177,11 @@
       "title": "Data coverage map (bank x fiscal year)",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A1_coverage_map.pdf",
-          "sha256": "6c4591835f345deab828efc732a2b77873aebbc3efb9b45c0d3647c74e10dfc8"
+          "path": "figures/appendix/A1_coverage_map.pdf",
+          "sha256": "48efad4cc6b64f08a4a10322bffbf0dd3c2ba178debf3a88fd50edddfb85ceed"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A1_coverage_map.png",
+          "path": "figures/appendix/A1_coverage_map.png",
           "sha256": "9e3d4758eb9049c6a12643c8360b34048010c1101f21f3188642b519d7de9929"
         }
       ]
@@ -190,11 +190,11 @@
       "title": "Robustness coefficient forest (EPS channel)",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A2_robustness_forest.pdf",
-          "sha256": "e44449079ccc015c2875c8384ef1ea67f34657101ef6ab8a8ee7d8962c0d9785"
+          "path": "figures/appendix/A2_robustness_forest.pdf",
+          "sha256": "ad351ce7dacdd0a7c07ae25fed8331a2768c9a4b5ab6078d784e0bfe294290bf"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A2_robustness_forest.png",
+          "path": "figures/appendix/A2_robustness_forest.png",
           "sha256": "8d9987275611d15dff42dc27b1bf6703000d0f0c9153e8a7ad8e00daa7a5d4ed"
         }
       ]
@@ -203,11 +203,11 @@
       "title": "Diagnostics panel for Model 2",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A3_model2_diagnostics.pdf",
-          "sha256": "e9adc27aa41c55e233a78ae000df82db9f04873007a847910c03b515f7ef5d25"
+          "path": "figures/appendix/A3_model2_diagnostics.pdf",
+          "sha256": "52d65c4c419fbdbc913f459a9f26ae334f5a49f4a426a8d5e56ec0c31f3dfe22"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\figures\\appendix\\A3_model2_diagnostics.png",
+          "path": "figures/appendix/A3_model2_diagnostics.png",
           "sha256": "1b649cca1f64211f922fe6bfa7efd794c8696b6d08b37b52bacfd2da477bfbc9"
         }
       ]
@@ -216,12 +216,12 @@
       "title": "MPS_RD price verification (Merolagani cross-check)",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A4_price_verification.tex",
-          "sha256": "51e0326b891f72c40581258dd762e719f19dacec51a8053c8d37ef70911f51dd"
+          "path": "tables/A4_price_verification.tex",
+          "sha256": "3a9cf32255b136c225aa701ffdc5ab700c709f7d1aa26e632584ad0f8fb52c9e"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A4_price_verification.md",
-          "sha256": "35611a2d223d811a8c35f252a8cadfa42b6acdc3cb5eb126bede8711e5713193"
+          "path": "tables/A4_price_verification.md",
+          "sha256": "a8e817343220216d27e14d50bdb5d5cb60c49f4421caf888fef1bf83e40ecd1c"
         }
       ]
     },
@@ -229,11 +229,11 @@
       "title": "Specification comparison: pooled OLS vs bank FE vs two-way FE",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A5_specification_comparison.tex",
+          "path": "tables/A5_specification_comparison.tex",
           "sha256": "5e1a6723a19cbb85e6e44be25515196b6467629aec5660d5d93177609405b35b"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A5_specification_comparison.md",
+          "path": "tables/A5_specification_comparison.md",
           "sha256": "aa344171b486811d320639e20ecbe31f9349e97ff1bb1fe51dd5770ec59c521b"
         }
       ]
@@ -242,12 +242,12 @@
       "title": "Analysis dataset by bank-year",
       "outputs": [
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A6_analysis_dataset.tex",
-          "sha256": "d754d6fd2872a82bd23023135f7020236005e9e660f2659568c2a71a6bd27b56"
+          "path": "tables/A6_analysis_dataset.tex",
+          "sha256": "1f212e67fd5023cbf5925a602afc8b875e795e0b01812543e5bff3a09a8f4f65"
         },
         {
-          "path": "C:\\Users\\Hellx\\Documents\\Docs\\Res\\As\\thesis\\data_analysis\\analysis\\outputs\\tables\\A6_analysis_dataset.md",
-          "sha256": "0edf1fae4e9851ea64b7e0e3276f0b0631a7e9a23c05ce9534d8ce8a264ec8a1"
+          "path": "tables/A6_analysis_dataset.md",
+          "sha256": "f75887d039d272c212a56956c5c6d9d3d19a072221bf5e8b5a6c0666f935fe94"
         }
       ]
     }

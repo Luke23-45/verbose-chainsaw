@@ -45,9 +45,10 @@ def generate(dataset: AnalysisDataset) -> list:
         rows=tuple(rows),
         notes=(
             f"Dataset close and Merolagani LTP agree on {n_match} of {len(rows)} bank-years. "
-            "The NMB FY2076-77 cell (437.00 vs 436.00) was resolved by a third source at "
-            "437.00 (final audit 2026-10-27, section 8); NEPSE official-close verification "
-            "remains open. Pre-merger NIMB rows trade under the NIB symbol on Merolagani."
+            "For NMB FY2076-77, the dataset recorded 437.00, whereas Merolagani reported LTP 436.00; "
+            "437.00 was retained on the basis of ShareSansar's full daily record, but because "
+            "ShareSansar is the dataset's primary source, this does not represent independent verification, "
+            "and NEPSE official close remains unverified. Pre-merger NIMB rows trade under the NIB symbol on Merolagani."
         ),
     )
     return save_table(table, "tables/A4_price_verification")

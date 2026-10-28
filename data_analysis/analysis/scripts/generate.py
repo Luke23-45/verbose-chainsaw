@@ -91,6 +91,7 @@ def main(argv: list[str] | None = None) -> int:
         "assets": {},
     }
     failures: list[str] = []
+    paper_root = config.paper_root()
     for spec in specs:
         try:
             generator = load_generator(spec)
@@ -98,7 +99,11 @@ def main(argv: list[str] | None = None) -> int:
             manifest["assets"][spec.id] = {
                 "title": spec.title,
                 "outputs": [
-                    {"path": str(path), "sha256": sha256_file(path)} for path in outputs
+                    {
+                        "path": str(path.relative_to(paper_root)).replace("\\", "/"),
+                        "sha256": sha256_file(path),
+                    }
+                    for path in outputs
                 ],
             }
             LOG.info("%-4s OK    %s", spec.id, ", ".join(path.name for path in outputs))

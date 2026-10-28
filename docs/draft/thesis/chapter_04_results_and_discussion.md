@@ -204,7 +204,7 @@ To visually display these pre- and post-consolidation relationships, Figure 4.4 
 Figure 4.4: MPS_RD against Accounting Fundamentals Pre vs. Post Consolidation (Codebase Asset F3)
 [Refer to: data_analysis/analysis/outputs/figures/main/F3_value_relevance.pdf]
 ```
-*Note.* Scatter panels and OLS regression lines of $MPS^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77–2078/79, blue) and post-consolidation (FY 2079/80–2081/82, vermillion) sub-periods ($N = 28$).
+*Note.* Scatter panels and OLS regression lines of $MPS^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77–2078/79, blue) and post-consolidation (FY 2079/80–2081/82, vermillion) sub-periods ($N = 28$). Lines are descriptive bivariate OLS fits, not the two-way fixed-effects estimates in Table 4.4; the post-BVPS sign difference is the effect of absorbing year effects.
 
 ```
 Figure 4.5: Model 2 Coefficients and 95% HC3 Confidence Intervals (Codebase Asset F4)
@@ -420,7 +420,7 @@ The sensitivity analyses conducted in Section 4.2.6 provide important methodolog
    $$F(2, 10) = 5.82, \quad p = 0.021$$
    This result highlights an institutional timing feature of corporate combinations. In FY 2078/79, audited financial statements reflected the pre-merger standalone operations of the legacy banks (for the fiscal year ending mid-July 2022), whereas secondary market share prices observed on 13 April 2023 reflected the enlarged, merged entities following amalgamations in January–February 2023. When this entity-mismatch year is included, the baseline joint test does not reject structural stability at the 5% level ($p = 0.085$). After excluding this mismatch year, the joint test rejects parameter stability at the 5% level ($p = 0.021$). The evidence for a regime shift is therefore suggestive in the baseline and statistically significant in the sensitivity check; it is reported as an empirical association across calendar regimes, rather than as a causal merger effect.
 2. **The 5-Day Freshness Rule and Trading Suspensions:**
-   The exclusion of HBL and NIMB for FY 2077/78 underscores an institutional friction in Nepalese capital markets. NEPSE regulations historically enforced extended trading halts during merger negotiations, suspending price discovery for weeks or months. Dropping observations that exceeded the 5-day freshness window rather than imputing stale pre-suspension prices was essential to maintaining empirical integrity.
+   The exclusion of HBL and NIMB for FY 2077/78 underscores an institutional friction in Nepalese capital markets. Secondary market trading remained suspended across extended merger processes, suspending price discovery for weeks or months. Dropping observations that exceeded the 5-day freshness window rather than imputing stale pre-suspension prices was essential to maintaining empirical integrity.
 3. **BAFIA Section 59(2) Reporting Deadlines as an Empirical Anchor:**
    Anchoring share price observations to the nine-month statutory reporting deadline under Section 59(2) of BAFIA (end of Chaitra / mid-April) provided an objective, reproducible observation window grounded in Nepalese banking law, eliminating the measurement ambiguity of unverified announcement dates while avoiding look-ahead bias.
 
