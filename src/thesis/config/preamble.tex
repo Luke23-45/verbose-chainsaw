@@ -142,12 +142,13 @@
   {\thesection}{0.5em}{}
 \titlespacing*{\section}{0pt}{14pt}{4pt}
 
-% Main-content loop Round 2: \sloppy in the subsection before-code so a
-% long subsection title wraps instead of sticking into the margin
-% (4.3.2 title overflowed 16.17 pt before this; no page-count change).
+% Subsection titles wrap on the global emergencystretch (2em); no
+% loose-tolerance flag in the before-code (removed 2026-10-29: the flag
+% added in main-content loop Round 2 for the 4.3.2 title overflow is
+% no longer used anywhere in the thesis).
 \titleformat{\subsection}
   {\normalfont\normalsize\bfseries\setstretch{1}}
-  {\thesubsection}{0.5em}{\sloppy}
+  {\thesubsection}{0.5em}{}
 \titlespacing*{\subsection}{0pt}{10pt}{2pt}
 
 \titleformat{\subsubsection}

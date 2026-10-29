@@ -120,7 +120,7 @@ ROA & 0.378\textsuperscript{*} & 0.975\textsuperscript{**} & 0.278 & 0.595\texts
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} \textsuperscript{*} $p < 0.05$, \textsuperscript{**} $p < 0.01$ (two-tailed). Analysis sample of 28 realized bank-year observations. Price-to-Earnings (P/E) ratio is excluded by construction due to mechanical endogeneity with $\mathit{MPS}^{RD}$.
+\textit{Note.} \textsuperscript{*} $p < 0.05$, \textsuperscript{**} $p < 0.01$ (two-tailed). Analysis sample of 28 realized bank-year observations. Price-to-Earnings (P/E) ratio is excluded by construction due to mechanical endogeneity with Market Price per Share at Reporting Deadline ($\mathit{MPS}^{RD}$).
 \end{minipage}
 \end{table}
 
@@ -417,7 +417,7 @@ Table~\ref{tab:t5_robustness} summarizes the estimation results across the robus
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} \textsuperscript{*} Significant at $p < 0.05$. All models estimated by OLS with bank and fiscal-year fixed effects; HC3 robust standard errors reported in parentheses. The joint Wald $F$-statistic tests $H_0: \delta_E = \delta_B = 0$ under the HC3 covariance matrix. R3: ROA substitutes for EPS. R4: Cash DPS included (residual df = 13). R5: Transition year FY 2079/80 dropped ($N = 23, \text{residual df} = 10$). R6: FY 2078/79 entity-timing mismatch dropped ($N = 23, \text{residual df} = 10$). R7: BVPS adjusted for proposed bonus share capitalization ($\mathit{BVPS}_{\text{adj}} = \mathit{BVPS} / (1 + \text{bonus ratio})$, a pro-forma forward capitalization adjustment). R8: Restated basic EPS substituted for GBIME FY 2076/77 and NMB FY 2077/78 ($N = 28$). Residual degrees of freedom: R1 16; R2, R3, R7, R8 14; R4 13; R5, R6 10.
+\textit{Note.} \textsuperscript{*} Significant at $p < 0.05$. All models estimated by OLS with bank and fiscal-year fixed effects; MacKinnon-White HC3 robust standard errors reported in parentheses. The joint Wald $F$-statistic tests $H_0: \delta_E = \delta_B = 0$ under the MacKinnon-White HC3 covariance matrix. R3: ROA substitutes for EPS. R4: Cash DPS included (residual df = 13). R5: Transition year FY 2079/80 dropped ($N = 23, \text{residual df} = 10$). R6: FY 2078/79 entity-timing mismatch dropped ($N = 23, \text{residual df} = 10$). R7: BVPS adjusted for proposed bonus share capitalization ($\mathit{BVPS}_{\text{adj}} = \mathit{BVPS} / (1 + \text{bonus ratio})$, a pro-forma forward capitalization adjustment). R8: Restated basic EPS substituted for GBIME FY 2076/77 and NMB FY 2077/78 ($N = 28$). Residual degrees of freedom: R1 16; R2, R3, R7, R8 14; R4 13; R5, R6 10.
 \end{minipage}
 \end{table}
 
@@ -474,7 +474,7 @@ Cook's Distance (Influential) & Max $D_i$ & 0.552 & Cutoff: $4/N = 0.143$ & Addr
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Diagnostics computed on Model~1 baseline ($N = 28$). VIF computed exclusively on substantive regressors (fixed effects dummies excluded). Breusch-Pagan Lagrange Multiplier test evaluates residual variance constancy across fitted values and regressors. Cook's distance evaluated using the correct parameter count ($K = 12$) against standard finite-sample threshold $4/N = 4/28 = 0.143$.
+\textit{Note.} Diagnostics computed on Model~1 baseline ($N = 28$). Variance Inflation Factor (VIF) computed exclusively on substantive regressors (fixed effects dummies excluded). Breusch-Pagan Lagrange Multiplier test evaluates residual variance constancy across fitted values and regressors. Cook's distance evaluated using the correct parameter count ($K = 12$) against standard finite-sample threshold $4/N = 4/28 = 0.143$.
 \end{minipage}
 \end{table}
 
@@ -523,7 +523,7 @@ Two-Way FE (Model 1) & 2.095 (4.096) & 0.219 (1.858) & 0.948 & 16 & Rigorously a
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} HC3 robust standard errors reported in parentheses. Dependent variable: $\mathit{MPS}^{RD}$. Analysis sample $N = 28$.
+\textit{Note.} MacKinnon-White HC3 robust standard errors reported in parentheses. Dependent variable: $\mathit{MPS}^{RD}$. Analysis sample $N = 28$.
 \end{minipage}
 \end{table}
 
@@ -540,7 +540,7 @@ Although these parameter estimates do not achieve conventional statistical signi
     \item \textbf{Economic Logic of Book Value Disregard:} The near-zero coefficient for book value per share ($\hat{\beta}_B = 0.100$) indicates that balance-sheet net worth exerted virtually no incremental pricing influence beyond earnings and fixed effects. Prior to 2023, Nepalese commercial banks operated in a regulatory regime where minimum paid-up capital had been escalated to NPR 8.0 billion pursuant to NRB's 2015 directive, but solvency and institutional viability were largely taken for granted by market participants. As long as banks maintained stable credit growth, low reported non-performing loan ratios, and predictable dividend streams, equity investors paid minimal attention to the underlying net asset backing, treating book value as an uninformative historical accounting construct.
 \end{enumerate}
 
-\subsection{Regime Shift: Earnings Deterioration and Book Value Multiples Post-Consolidation}
+\subsection[Regime Shift: Earnings Deterioration and Book Value Multiples Post-Consolidation]{Regime Shift: Earnings Deterioration and Book Value Multiples Post-\\Consolidation}
 As detailed in Table~\ref{tab:t4_model2}, following the consolidation wave of early 2023, the empirical estimates reveal a noticeable contraction in valuation multiples, with negative interaction coefficients ($\hat{\delta}_E = -3.124, p = 0.448; \hat{\delta}_B = -1.758, p = 0.175$) and attenuated implied post-consolidation slopes ($\hat{\beta}_E + \hat{\delta}_E = 2.453, p = 0.298; \hat{\beta}_B + \hat{\delta}_B = -1.658, p = 0.161$).
 
 Because neither individual interaction term achieves statistical significance at conventional thresholds, and the joint Wald test in the baseline sample is marginally significant at 10\% ($p = 0.085$), these patterns are interpreted not as proven causal effects, but as suggestive structural tendencies consistent with several economic and institutional mechanisms operating in Nepal's post-merger banking environment:
