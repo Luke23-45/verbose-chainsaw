@@ -1,4 +1,5 @@
 \clearpage
+\addcontentsline{toc}{chapter}{Report of Research Committee}
 \thispagestyle{plain}
 \begin{center}
 {\fontsize{14}{18}\selectfont\bfseries Report of Research Committee\par}
@@ -6,26 +7,30 @@
 
 \vspace{1.5cm}
 
+% NOTE (visual-reference pass): this page follows FOM 2019 Appendix B
+% p. 25 exactly, as a filled-in form. The sentence keeps a dotted blank
+% for the supervisor's name (unknown, never invented); the two
+% supervisor blocks and the bordered date boxes are the template's own
+% layout, including the second block's Name/Signature/Position order.
 \setstretch{1.5}
-Ms.~Asmita Subedi has defended research proposal entitled \textbf{``VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS''} successfully. The research committee has registered the dissertation for further progress. It is recommended to carry out the work as per suggestions and guidance of supervisor and submit the thesis for evaluation and viva voce examination.
+Ms.~Asmita Subedi has defended research proposal entitled \textbf{``VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS''} successfully. The research committee has registered the dissertation for further progress. It is recommended to carry out the work as per suggestions and guidance of supervisor \makebox[5cm]{\dotfill} and submit the thesis for evaluation and viva voce examination.
 
 \vspace{2.5cm}
 
 \singlespacing
 \noindent
-\begin{tabular}{@{}ll@{}}
-\textbf{Name of Supervisor:} & \underline{\hspace{7.5cm}} \\
-\textbf{Position:} & \underline{\hspace{7.5cm}} \\
-\textbf{Signature:} & \underline{\hspace{7.5cm}} \\[1.2cm]
-
-\textbf{Name of Head of Research Committee:} & \underline{\hspace{5.5cm}} \\
-\textbf{Signature:} & \underline{\hspace{7.5cm}} \\
-\end{tabular}
-
-\vspace{2.0cm}
-
-\noindent
-\textbf{Dissertation Proposal Defended Date:} \underline{\hspace{4.5cm}} \\[0.3cm]
-\textbf{Dissertation Submitted Date:} \underline{\hspace{5.5cm}} \\[0.3cm]
-\textbf{Dissertation Viva Voce Date:} \underline{\hspace{5.8cm}}
-
+% Column math (text width 433 pt): left 0.46 = 199 pt holds the longest
+% left label (head, 180 pt); box parbox 0.46 = 199 pt holds the longest
+% box label (defended date, 193 pt) on one line. \null\dotfill (not
+% bare \dotfill) is required inside the boxes: a bare \dotfill at the
+% start of a line after \\ is discarded and renders nothing. The
+% blocks are side-by-side [t] parboxes (not a tabular): a tabular
+% p-column put each box level with its block's LAST line instead of
+% its first, while [t] parboxes align the box label with the block's
+% first line, as in the template.
+{\setlength{\fboxsep}{8pt}
+\parbox[t]{0.46\textwidth}{Name of Supervisor \dotfill\\Position: \dotfill\\Signature: \dotfill}\hspace{0.02\textwidth}\parbox[t]{0.52\textwidth}{\fbox{\parbox[t]{0.46\textwidth}{\textbf{Dissertation Proposal Defended Date:}\\[0.4cm]\null\dotfill}}}
+\par\vspace{2.0cm}
+\noindent\parbox[t]{0.46\textwidth}{Name of Supervisor \dotfill\\Signature: \dotfill\\Position: \dotfill}\hspace{0.02\textwidth}\parbox[t]{0.52\textwidth}{\fbox{\parbox[t]{0.46\textwidth}{\textbf{Dissertation Submitted Date:}\\[0.4cm]\null\dotfill}}}
+\par\vspace{2.0cm}
+\noindent\parbox[t]{0.46\textwidth}{Name of head of Research committee \dotfill\\Signature: \dotfill}\hspace{0.02\textwidth}\parbox[t]{0.52\textwidth}{\fbox{\parbox[t]{0.46\textwidth}{\textbf{Dissertation Viva Voce Date:}\\[0.4cm]\null\dotfill}}}}

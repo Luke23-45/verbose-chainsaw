@@ -1,0 +1,36 @@
+% ============================================================================
+% TU FOM MBS dissertation — notation macros.
+%
+% STATUS (2026-10-29, config phase): DEFINED, NOT YET USED IN CHAPTERS.
+% Chapters still use the inline forms. That is deliberate: defining a
+% macro changes nothing, while converting chapters is a separate phase
+% with its own replacement checklist and diff gate. Do not mix the two.
+%
+% RULE: name a command for what a symbol means, not how it looks.
+% Each definition below expands to exactly the inline form currently
+% used in the chapters, so the first converted version of a chapter
+% must render identically. A notation restyle is a separate, approved
+% decision after conversion, never bundled into it.
+% ============================================================================
+
+% Market price per share at the reporting deadline.
+\newcommand{\MPSRD}{\ensuremath{\mathit{MPS}^{RD}}}
+% Consolidation period indicator (Post = 1 for FY 2079/80-2081/82).
+\newcommand{\Post}{\ensuremath{\mathit{Post}_t}}
+% Two-way fixed effects.
+\newcommand{\bankFE}{\ensuremath{\mu_i}}
+\newcommand{\yearFE}{\ensuremath{\lambda_t}}
+% Pre-consolidation slopes (Model 1, and Model 2 baseline).
+\newcommand{\betaE}{\ensuremath{\beta_E}}
+\newcommand{\betaB}{\ensuremath{\beta_B}}
+% Regime-shift (interaction) coefficients (Model 2).
+\newcommand{\deltaE}{\ensuremath{\delta_E}}
+\newcommand{\deltaB}{\ensuremath{\delta_B}}
+% Variable names, upright in maths contexts.
+\newcommand{\EPS}{\ensuremath{\mathrm{EPS}}}
+\newcommand{\BVPS}{\ensuremath{\mathrm{BVPS}}}
+\newcommand{\ROA}{\ensuremath{\mathrm{ROA}}}
+\newcommand{\DPS}{\ensuremath{\mathrm{DPS}}}
+% Units and labels.
+\newcommand{\NPR}{NPR}
+\newcommand{\FY}[1]{FY #1}
