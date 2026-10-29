@@ -228,7 +228,7 @@ To synthesize the empirical literature directly informing this dissertation's ec
 | **Sharma (2011)** | BSE 30, India, 15 yrs (1993–2008) | Pooled OLS Panel | Price, EPS, BVPS, DPS | EPS, BVPS, and DPS exhibit significant positive associations with equity prices. |
 | **Bhattarai (2014)** | 9 Banks, 72 obs (2006–2014) | Pooled OLS | MPS, DPR, DY, EPS, P/E, Size | EPS and P/E positively associated with MPS; circular P/E inclusion. |
 | **Pradhan & Dahal (2016)** | 14 Banks, 168 obs (2002–2014) | Pooled Panel OLS | MPS, EPS, ROA, DPS, Size | Bank size and EPS are primary positive determinants; macro controls secondary. |
-| **Bajracharya & Dangol (2019)** | 10 Banks, 100 obs (2006–2016) | Pooled OLS | MPS, EPS, DPS, ROA, ROE | EPS and DPS have significant positive effects; ROA and ROE statistically insignificant. |
+| **Bajracharya & Sawagvudcharee (2019)** | 10 Banks, 100 obs (2006–2016) | Pooled OLS | MPS, EPS, DPS, ROA, ROE | EPS and DPS have significant positive effects; ROA and ROE statistically insignificant. |
 | **Silwal & Napit (2019)** | 10 Banks, 100 obs (2008–2018) | Correlation / Multiple OLS | MPS, BVPS, ROE, P/E | BVPS has largest explanatory power, followed by ROE and P/E; circular P/E. |
 | **Niroula (2021)** | 18 Banks, 90 obs (2015–2020) | Pooled OLS | MPS, EPS, BVPS, ROE | EPS is significantly positive; BVPS and ROE are negative and insignificant. |
 | **Gyawali (2022)** | 10 Banks, 50 obs (2017–2021) | Multiple OLS | MPS, EPS, DPS, ROA | EPS and DPS have significant positive effects; ROA is statistically insignificant. |
