@@ -37,7 +37,6 @@ The analysis sample consists of 28 realized bank-year observations from an inten
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption[Descriptive Statistics of Value-Relevance Variables]{Descriptive Statistics of Value-Relevance Variables, FY 2076/77--FY 2081/82}
 \label{tab:t1_descriptives}
 \begin{tabular}{llccccc}
@@ -104,7 +103,6 @@ Table~\ref{tab:t2_correlations} reports the Pearson correlation coefficients amo
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Pearson Correlation Matrix of Value-Relevance Variables ($N = 28$)}
 \label{tab:t2_correlations}
 \begin{tabular}{lccccc}
@@ -166,34 +164,41 @@ To address Research Question~1 and provide an empirical benchmark of accounting 
 \end{equation}
 where $\alpha$ is the constant baseline intercept, $\mu_i$ represents unobserved time-invariant bank fixed effects (with GBIME serving as reference bank), and $\lambda_t$ represents common fiscal-year fixed effects (with FY 2076/77 serving as reference year). Standard errors, $t$-statistics, $p$-values, and confidence intervals are estimated using \citet{mackinnon1985} HC3 heteroskedasticity-consistent standard errors evaluated on Student's $t$ distribution with residual degrees of freedom ($\text{df} = 16$).
 
-Table~\ref{tab:t3_model1} reports the parameter estimates, standard errors, $t$-statistics, $p$-values, and 95\% confidence intervals for Model~1.
+Table~\ref{tab:t3_model1} reports the parameter estimates for Model~1, with MacKinnon-White HC3 robust standard errors in parentheses beneath each estimate; $t$-statistics, $p$-values, and 95\% confidence intervals are reported in the text.
 
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Model 1: Baseline Value Relevance of Accounting Fundamentals ($N = 28$)}
 \label{tab:t3_model1}
-\begin{tabular}{p{0.17\textwidth}cccccc}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedleft\arraybackslash}p{0.32\textwidth}}
 \toprule
-\textbf{Independent Variable} & \textbf{Parameter} & \textbf{Coefficient} & \textbf{HC3 SE} & \textbf{$t$-stat} & \textbf{$p$-value} & \textbf{95\% CI} \\
+\textbf{Independent Variable} & \textbf{Dependent Variable: $\mathit{MPS}^{RD}$} \\
 \midrule
-Earnings per Share (EPS) & $\beta_E$ & 2.095 & 4.096 & 0.51 & 0.616 & [$-6.587$, $10.777$] \\
-Book Value per Share (BVPS) & $\beta_B$ & 0.219 & 1.858 & 0.12 & 0.908 & [$-3.720$, $4.158$] \\
-\midrule
-Bank Fixed Effects ($\mu_i$) & \multicolumn{6}{c}{Included (4 dummies; Reference: GBIME)} \\
-Fiscal-Year Fixed Effects ($\lambda_t$) & \multicolumn{6}{c}{Included (5 dummies; Reference: FY 2076/77)} \\
-Observations ($N$) & \multicolumn{6}{c}{28} \\
-$R^2$ & \multicolumn{6}{c}{0.948} \\
-Adjusted $R^2$ & \multicolumn{6}{c}{0.912} \\
-Residual Degrees of Freedom & \multicolumn{6}{c}{16} \\
+Earnings per Share (EPS) & 2.095 \\
+& (4.096) \\
+Book Value per Share (BVPS) & 0.219 \\
+& (1.858) \\
+\addlinespace
+\multicolumn{2}{l}{\textbf{Fixed Effects}} \\
+\addlinespace
+Bank Fixed Effects ($\mu_i$) & Yes \\
+Fiscal-Year Fixed Effects ($\lambda_t$) & Yes \\
+\addlinespace
+\multicolumn{2}{l}{\textbf{Model Diagnostics}} \\
+\addlinespace
+Observations ($N$) & 28 \\
+$R^2$ (LSDV) & 0.948 \\
+Adjusted $R^2$ & 0.912 \\
+Within-$R^2$ & 0.152 \\
+Residual Degrees of Freedom & 16 \\
 \bottomrule
 \end{tabular}
 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Dependent variable: Market Price per Share at Reporting Deadline ($\mathit{MPS}^{RD}$). OLS estimation with two-way fixed effects (bank dummies and fiscal-year dummies). Inference based on MacKinnon-White HC3 robust standard errors on Student's $t$ distribution ($\text{df} = 16$). Parameter count: 1 intercept + 4 bank dummies + 5 year dummies + 2 slopes = 12 parameters; residual degrees of freedom: $28 - 12 = 16$. Two-tailed tests at 5\% significance level.
+\textit{Note.} Dependent variable: Market Price per Share at Reporting Deadline ($\mathit{MPS}^{RD}$). OLS estimation with two-way fixed effects (bank dummies and fiscal-year dummies). MacKinnon-White HC3 robust standard errors in parentheses beneath parameter estimates. Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $R^2$ (LSDV) is the least-squares dummy-variable fit including fixed effects; Within-$R^2$ is the share of bank-and-year-adjusted variation explained by the slopes. Parameter count: 1 intercept + 4 bank dummies + 5 year dummies + 2 slopes = 12 parameters; residual degrees of freedom: $28 - 12 = 16$. Two-tailed tests at 5\% significance level; $t$-statistics, $p$-values, and 95\% confidence intervals are reported in the text.
 \end{minipage}
 \end{table}
 
@@ -216,44 +221,54 @@ where $\mathit{Post}_t = 1$ for the post-consolidation fiscal years (FY 2079/80,
 
 Because common fiscal-year fixed effects ($\lambda_t$) are fully specified, the stand-alone indicator $\mathit{Post}_t$ is an exact linear combination of the fiscal-year dummies ($\mathit{Post}_t = D_{2079/80} + D_{2080/81} + D_{2081/82}$); consequently, the main effect of $\mathit{Post}_t$ is perfectly absorbed by the year fixed effects and cannot be separately estimated. The pre-consolidation valuation slopes are captured by $\beta_E$ and $\beta_B$, the regime interaction coefficients are captured by $\delta_E$ and $\delta_B$, and the implied post-consolidation valuation slopes are given by the linear combinations $(\beta_E + \delta_E)$ and $(\beta_B + \delta_B)$.
 
-Table~\ref{tab:t4_model2} reports the estimation results for Model~2, including pre-consolidation slopes, interaction shifts, implied post-consolidation slopes, and the principal joint Wald test of structural parameter change, evaluated with HC3 robust standard errors on Student's $t$ distribution ($\text{df} = 14$).
+Table~\ref{tab:t4_model2} reports the estimation results for Model~2, including pre-consolidation slopes, interaction shifts, implied post-consolidation slopes, and the principal joint Wald test of structural parameter change, with MacKinnon-White HC3 robust standard errors in parentheses beneath each estimate on Student's $t$ distribution ($\text{df} = 14$); $t$-statistics, $p$-values, and confidence intervals are reported in the text.
 
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Model 2: Value Relevance Regime Shift Across Consolidation ($N = 28$)}
 \label{tab:t4_model2}
-\begin{tabular}{p{0.26\textwidth}ccccc}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedleft\arraybackslash}p{0.32\textwidth}}
 \toprule
-\textbf{Model Parameter / Term} & \textbf{Coefficient} & \textbf{HC3 SE} & \textbf{$t$-stat} & \textbf{$p$-value} & \textbf{95\% CI} \\
+\textbf{Model Parameter / Term} & \textbf{Dependent Variable: $\mathit{MPS}^{RD}$} \\
 \midrule
-\multicolumn{6}{l}{\textbf{Pre-Consolidation Slopes:}} \\
-Earnings per Share ($\beta_E$) & 5.577 & 3.560 & 1.57 & 0.140 & [$-2.059$, $13.213$] \\
-Book Value per Share ($\beta_B$) & 0.100 & 1.306 & 0.08 & 0.940 & [$-2.700$, $2.901$] \\
-\midrule
-\multicolumn{6}{l}{\textbf{Consolidation Interaction Shifts:}} \\
-EPS $\times$ Post ($\delta_E$) & $-3.124$ & 4.003 & $-0.78$ & 0.448 & [$-11.710$, $5.462$] \\
-BVPS $\times$ Post ($\delta_B$) & $-1.758$ & 1.231 & $-1.43$ & 0.175 & [$-4.398$, $0.882$] \\
-\midrule
-\multicolumn{6}{l}{\textbf{Implied Post-Consolidation Slopes:}} \\
-Implied EPS Slope ($\beta_E + \delta_E$) & 2.453 & 2.269 & 1.08 & 0.298 & [$-2.412$, $7.319$] \\
-Implied BVPS Slope ($\beta_B + \delta_B$) & $-1.658$ & 1.120 & $-1.48$ & 0.161 & [$-4.059$, $0.744$] \\
-\midrule
-\multicolumn{6}{l}{\textbf{Model Diagnostics and Joint Wald Test:}} \\
-Joint Wald Test ($H_0: \delta_E = \delta_B = 0$) & \multicolumn{5}{c}{$F(2, 14) = 2.954, \quad p = 0.085$ (Marginal at 10\%)} \\
-Bank Fixed Effects ($\mu_i$) & \multicolumn{5}{c}{Included (4 dummies; Reference: GBIME)} \\
-Fiscal-Year Fixed Effects ($\lambda_t$) & \multicolumn{5}{c}{Included (5 dummies; Reference: FY 2076/77)} \\
-Observations ($N$) & \multicolumn{5}{c}{28} \\
-$R^2$ & \multicolumn{5}{c}{0.978} \\
-Residual Degrees of Freedom & \multicolumn{5}{c}{14} \\
+\multicolumn{2}{l}{\textbf{Pre-Consolidation Slopes}} \\
+\addlinespace
+Earnings per Share ($\beta_E$) & 5.577 \\
+& (3.560) \\
+Book Value per Share ($\beta_B$) & 0.100 \\
+& (1.306) \\
+\addlinespace
+\multicolumn{2}{l}{\textbf{Consolidation Interaction Shifts}} \\
+\addlinespace
+EPS $\times$ Post ($\delta_E$) & $-3.124$ \\
+& (4.003) \\
+BVPS $\times$ Post ($\delta_B$) & $-1.758$ \\
+& (1.231) \\
+\addlinespace
+\multicolumn{2}{l}{\textbf{Implied Post-Consolidation Slopes}} \\
+\addlinespace
+Implied EPS Slope ($\beta_E + \delta_E$) & 2.453 \\
+& (2.269) \\
+Implied BVPS Slope ($\beta_B + \delta_B$) & $-1.658$ \\
+& (1.120) \\
+\addlinespace
+\multicolumn{2}{l}{\textbf{Diagnostics and Structural Change Tests}} \\
+\addlinespace
+Wald Test: $F(2, 14)$ \newline $[H_0: \delta_E = \delta_B = 0]$ & 2.954 ($p = 0.085$) \\
+Bank Fixed Effects ($\mu_i$) & Yes \\
+Fiscal-Year Fixed Effects ($\lambda_t$) & Yes \\
+Observations ($N$) & 28 \\
+$R^2$ (LSDV) & 0.978 \\
+Within-$R^2$ & 0.642 \\
+Residual Degrees of Freedom & 14 \\
 \bottomrule
 \end{tabular}
 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. OLS estimation with bank and fiscal-year fixed effects. Post indicator equals 1 for FY 2079/80--2081/82 and 0 for FY 2076/77--2078/79; stand-alone Post main effect is fully absorbed by the fiscal-year fixed effects. Standard errors, confidence intervals, and the joint Wald $F$-statistic are computed under the MacKinnon-White HC3 robust covariance matrix on Student's $t$ distribution ($\text{df} = 14$). Implied post-consolidation slopes are linear combinations evaluated under the HC3 covariance. Residual degrees of freedom: $28 - 14 = 14$. Two-tailed $t$-tests for individual parameters; right-tail Wald $F$-test for joint hypothesis.
+\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. OLS estimation with bank and fiscal-year fixed effects. Post indicator equals 1 for FY 2079/80--2081/82 and 0 for FY 2076/77--2078/79; stand-alone Post main effect is fully absorbed by the fiscal-year fixed effects. MacKinnon-White HC3 robust standard errors in parentheses beneath parameter estimates. Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $R^2$ (LSDV) is the least-squares dummy-variable fit including fixed effects; Within-$R^2$ is the share of bank-and-year-adjusted variation explained by the slopes and interactions. Implied post-consolidation slopes are linear combinations evaluated under the HC3 covariance. Residual degrees of freedom: $28 - 14 = 14$. Two-tailed $t$-tests for individual parameters; right-tail Wald $F$-test for joint hypothesis; the Wald test is marginally significant at the 10\% level. $t$-statistics, $p$-values, and confidence intervals are reported in the text.
 \end{minipage}
 \end{table}
 
@@ -319,19 +334,24 @@ Table~\ref{tab:hypotheses} summarizes the formal hypothesis testing decisions.
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Summary of Operational Hypothesis Testing Decisions}
 \label{tab:hypotheses}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}cc>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.125\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}cc>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}}
 \toprule
 \textbf{Hypothesis} & \textbf{Model / Term} & \textbf{Null ($H_0$)} & \textbf{Estimate} & \textbf{$p$-value} & \textbf{Decision} & \textbf{Inference} \\
 \midrule
 $H_1$ (Model 1) & $\beta_E$ (Overall) & $\beta_E = 0$ & 2.095 & 0.616 & Fail to Reject & Positive slope; insignificant under $t(16)$. \\
+\addlinespace
 $H_1$ (Model 2) & $\beta_E$ (Pre Slope) & $\beta_E = 0$ & 5.577 & 0.140 & Fail to Reject & Substantial slope; insignificant at 5\% ($t(14)$). \\
+\addlinespace
 $H_2$ (Model 1) & $\beta_B$ (Overall) & $\beta_B = 0$ & 0.219 & 0.908 & Fail to Reject & Insignificant under $t(16)$. \\
+\addlinespace
 $H_2$ (Model 2) & $\beta_B$ (Pre Slope) & $\beta_B = 0$ & 0.100 & 0.940 & Fail to Reject & Indistinguishable from zero under $t(14)$. \\
+\addlinespace
 $H_3$ & $\delta_E$ (EPS Shift) & $\delta_E = 0$ & $-3.124$ & 0.448 & Fail to Reject & Downward shift; insignificant under $t(14)$. \\
+\addlinespace
 $H_4$ & $\delta_B$ (BVPS Shift) & $\delta_B = 0$ & $-1.758$ & 0.175 & Fail to Reject & Downward shift; insignificant under $t(14)$. \\
+\addlinespace
 Joint Test & Joint Wald & $\delta_E=\delta_B=0$ & $F=2.95$ & 0.085 & Fail to Reject & Marginal at 10\%; fails 5\% threshold. \\
 \bottomrule
 \end{tabular}
@@ -369,21 +389,27 @@ Table~\ref{tab:t5_robustness} summarizes the estimation results across the robus
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Robustness and Sensitivity Analysis Across Econometric Specifications}
 \label{tab:t5_robustness}
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{0.19\textwidth}p{0.13\textwidth}p{0.12\textwidth}p{0.14\textwidth}p{0.12\textwidth}p{0.12\textwidth}c}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}c}
 \toprule
 \textbf{Specification} & \textbf{Earnings (SE)} & \textbf{BVPS (SE)} & \textbf{$\delta_E$ (SE)} & \textbf{$\delta_B$ (SE)} & \textbf{Wald $F$ ($p$)} & \textbf{$n$} \\
 \midrule
 \textbf{R1:} Model 1 Baseline & 2.095 (4.096) & 0.219 (1.858) & --- & --- & --- & 28 \\
+\addlinespace
 \textbf{R2:} Model 2 Baseline & 5.577 (3.560) & 0.100 (1.306) & $-3.124$ (4.003) & $-1.758$ (1.231) & 2.95 (0.085) & 28 \\
+\addlinespace
 \textbf{R3:} ROA Replaces EPS & 83.760 (79.852) & 0.358 (1.381) & $-43.570$ (83.671) & $-1.901$ (1.290) & 2.46 (0.121) & 28 \\
+\addlinespace
 \textbf{R4:} Model 2 + DPS & 6.183 (4.508) & $-0.642$ (1.378) & $-4.072$ (5.151) & $-1.770$ (1.335) & 2.77 (0.100) & 28 \\
+\addlinespace
 \textbf{R5:} Excl.\ Transition & 5.993 (4.635) & $-0.201$ (1.849) & $-2.578$ (5.521) & $-1.880$ (1.419) & 2.41 (0.139) & 23 \\
+\addlinespace
 \textbf{R6:} Excl.\ Mismatch & 4.336 (3.724) & 0.802 (1.328) & $-2.436$ (4.755) & $-2.611$ (1.517) & \textbf{5.82 (0.021)\textsuperscript{*}} & 23 \\
+\addlinespace
 \textbf{R7:} Bonus-Adjusted & 5.775 (4.145) & 0.153 (1.632) & $-4.043$ (4.446) & $-1.533$ (1.595) & 2.37 (0.130) & 28 \\
+\addlinespace
 \textbf{R8:} Restated EPS & 5.256 (3.016) & 0.031 (1.300) & $-2.860$ (3.807) & $-1.812$ (1.223) & 2.92 (0.087) & 28 \\
 \bottomrule
 \end{tabular}
@@ -429,7 +455,6 @@ Table~\ref{tab:t6_diagnostics} presents the diagnostic test statistics for the b
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Econometric Diagnostics for Baseline Value-Relevance Model}
 \label{tab:t6_diagnostics}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.22\textwidth}cccc}
@@ -437,8 +462,11 @@ Table~\ref{tab:t6_diagnostics} presents the diagnostic test statistics for the b
 \textbf{Diagnostic Dimension} & \textbf{Statistic} & \textbf{Value} & \textbf{$p$-value / Threshold} & \textbf{Assessment} \\
 \midrule
 VIF (EPS) & VIF & 1.16 & $< 10.0$ (Tolerance = 0.862) & Passed \\
+\addlinespace
 VIF (BVPS) & VIF & 1.16 & $< 10.0$ (Tolerance = 0.862) & Passed \\
+\addlinespace
 Breusch-Pagan Heteroskedasticity & LM & 14.37 & $p = 0.213$ ($\chi^2(11) = 19.68$) & Passed \\
+\addlinespace
 Cook's Distance (Influential) & Max $D_i$ & 0.552 & Cutoff: $4/N = 0.143$ & Addressed via HC3 \\
 \bottomrule
 \end{tabular}
@@ -477,16 +505,17 @@ To demonstrate why two-way fixed effects estimation is the preferred econometric
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Specification Comparison Across Econometric Model Structures}
 \label{tab:spec_comp}
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{0.18\textwidth}cccc>{\raggedright\arraybackslash}p{0.20\textwidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth}cccc>{\raggedright\arraybackslash}p{0.20\textwidth}}
 \toprule
 \textbf{Specification} & \textbf{$\beta_E$ (EPS Coef.)} & \textbf{$\beta_B$ (BVPS Coef.)} & \textbf{$R^2$} & \textbf{Resid.\ df} & \textbf{Assessment} \\
 \midrule
 Pooled OLS (No FE) & 4.882 (3.099) & 0.552 (1.259) & 0.136 & 25 & Conflates market cycles with relevance. \\
+\addlinespace
 Bank FE Only & 5.217 (5.360) & 1.432 (2.727) & 0.176 & 21 & Ignores macro-temporal price collapse. \\
+\addlinespace
 Two-Way FE (Model 1) & 2.095 (4.096) & 0.219 (1.858) & 0.948 & 16 & Rigorously absorbs bank and year shocks; preferred benchmark. \\
 \bottomrule
 \end{tabular}

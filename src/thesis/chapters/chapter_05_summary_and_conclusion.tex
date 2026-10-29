@@ -135,7 +135,6 @@ To formally synthesize the empirical findings against the theoretical expectatio
 \begin{table}[!htbp]
 \centering
 \small
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Summary of Hypothesis Testing Decisions}
 \label{tab:hyp_decisions}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}}
@@ -143,9 +142,11 @@ To formally synthesize the empirical findings against the theoretical expectatio
 \textbf{Research Hypothesis} & \textbf{Model / Parameter} & \textbf{Null Hypothesis} & \textbf{Estimate (SE) / Stat.} & \textbf{Empirical Decision} \\
 \midrule
 $H_1$: EPS Relevance & Model 1 Baseline $\beta_E$ & $H_0: \beta_E = 0$ & 2.095 (4.096), $p = 0.616$ & Fail to Reject $H_0$ \\
+\addlinespace
 & Model 2 Pre $\beta_E$ & $H_0: \beta_E = 0$ & 5.577 (3.560), $p = 0.140$ & Fail to Reject $H_0$ \\
 \addlinespace
 $H_2$: BVPS Relevance & Model 1 Baseline $\beta_B$ & $H_0: \beta_B = 0$ & 0.219 (1.858), $p = 0.908$ & Fail to Reject $H_0$ \\
+\addlinespace
 & Model 2 Pre $\beta_B$ & $H_0: \beta_B = 0$ & 0.100 (1.306), $p = 0.940$ & Fail to Reject $H_0$ \\
 \addlinespace
 $H_3$: EPS Regime Shift & Model 2 Interaction $\delta_E$ & $H_0: \delta_E = 0$ & $-3.124$ (4.003), $p = 0.448$ & Fail to Reject $H_0$ \\
@@ -153,6 +154,7 @@ $H_3$: EPS Regime Shift & Model 2 Interaction $\delta_E$ & $H_0: \delta_E = 0$ &
 $H_4$: BVPS Regime Shift & Model 2 Interaction $\delta_B$ & $H_0: \delta_B = 0$ & $-1.758$ (1.231), $p = 0.175$ & Fail to Reject $H_0$ \\
 \addlinespace
 Joint Regime Shift & Model 2 Joint Wald & $H_0: \delta_E=\delta_B=0$ & $F(2, 14) = 2.954, p = 0.085$ & Fail to Reject $H_0$ \\
+\addlinespace
 (Composite Test) & R6 Joint Wald (Sens.) & $H_0: \delta_E=\delta_B=0$ & $F(2, 10) = 5.818, p = 0.021$ & Reject $H_0$ (at 5\%) \\
 \bottomrule
 \end{tabular}
