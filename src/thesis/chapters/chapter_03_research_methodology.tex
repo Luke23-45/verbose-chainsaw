@@ -173,8 +173,6 @@ The conceptual framework guiding this research synthesizes the residual income v
 \begin{figure}[!ht]
 \centering
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
-\caption{Research Framework: Two-Way Fixed-Effects Valuation Model}
-\label{fig:framework}
 \begin{tikzpicture}[
   box/.style={rectangle, draw, minimum width=4.0cm, minimum height=0.85cm, align=center, font=\normalsize},
   depbox/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.6cm, align=center, font=\normalsize},
@@ -187,7 +185,7 @@ The conceptual framework guiding this research synthesizes the residual income v
   
   \node[depbox] (mps) at (7.8, 0.4) {Market Price Per Share\\($\mathit{MPS}^{RD}$)};
   \node[modbox] (post) at (3.9, 2.3) {Consolidation Period\\($\mathit{Post}_t$: Pre vs.\ Post)};
-  \node[ctrlbox] (fe) at (3.9, -1.5) {Fixed Effects Control\\(Bank $\mu_i$ \& Year $\lambda_t$)};
+  \node[ctrlbox] (fe) at (3.9, -1.9) {Fixed Effects Control\\(Bank $\mu_i$ \& Year $\lambda_t$)};
 
   \draw[arrow] (eps.east) -- node[above, font=\footnotesize] {$\beta_E$} ([yshift=10pt]mps.west);
   \draw[arrow] (bvps.east) -- node[below, font=\footnotesize] {$\beta_B$} ([yshift=-10pt]mps.west);
@@ -199,6 +197,8 @@ The conceptual framework guiding this research synthesizes the residual income v
   \node[below=0.12cm of bvps, font=\footnotesize\bfseries] {Fundamental Independent Variables};
   \node[below=0.12cm of mps, font=\footnotesize\bfseries] {Dependent Variable};
 \end{tikzpicture}
+\caption{Research Framework: Two-Way Fixed-Effects Valuation Model}
+\label{fig:framework}
 \end{figure}
 
 In this framework, secondary market closing price at the reporting deadline ($\mathit{MPS}^{RD}$) serves as the outcome variable. Earnings per share (EPS) and book value per share (BVPS) are the primary independent fundamental regressors. The consolidation period indicator ($\mathit{Post}_t$) acts as a temporal moderating indicator, interacting with EPS and BVPS to test for structural parameter shifts ($\delta_E, \delta_B$) across the consolidation wave. Bank fixed effects ($\mu_i$) and fiscal-year fixed effects ($\lambda_t$) control for time-invariant institutional heterogeneity and market-wide macroeconomic trends.
@@ -250,6 +250,7 @@ Evaluated in Specification R3 as an asset-scaled substitute for EPS. Because EPS
 Cash dividend recommended per ordinary share, expressed in NPR, for the corresponding fiscal year. Evaluated in Specification R4, including only eligible cash dividends that were officially declared on or prior to the $\mathit{MPS}^{RD}$ observation date. Documented zero-dividend decisions are recorded as zero; unannounced dividends are treated as missing in the operational rule. In the realized analysis sample ($N = 28$), all 28 observations possess confirmed declarations or documented nil distributions (zero cash dividend), meaning no DPS observation is missing in the realized estimation dataset.
 
 \subsubsection{Strict Exclusion of Price-Derived Multiples}
+\textbf{Price-to-Earnings (P/E) Ratio:}
 The Price-to-Earnings (P/E) ratio is strictly excluded from all regression models. As mathematically proved in Section~2.2.6, because $\text{P/E} = \text{MPS} / \text{EPS}$, regressing MPS on P/E introduces circular algebraic endogeneity that biases coefficients and spuriously inflates explanatory power.
 
 \section{Methods of Analysis and Econometric Specification}

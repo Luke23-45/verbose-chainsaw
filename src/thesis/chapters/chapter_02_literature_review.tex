@@ -183,7 +183,7 @@ The institutional development of Nepal's organized capital market commenced with
 Commercial banks in Nepal operate under the dual regulatory oversight of the Companies Act, 2006 (2063 BS) and the Banks and Financial Institutions Act, 2017 (2073 BS) (BAFIA), alongside prudential directives issued by Nepal Rastra Bank \citep{companiesact2006,bafia2017}.
 
 Regarding financial reporting disclosure, Section 59 of BAFIA, 2017 establishes statutory submission and publication obligations for licensed institutions. Specifically, Section 59(2) delineates two distinct reporting duties:
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{\arabic*.}]
 \item First, a licensed bank must prepare its balance sheet and profit and loss account and submit them to Nepal Rastra Bank within three months of the completion of each financial year, publishing summary details for the information of the general public within that period as prescribed by NRB; and
 \item Second, the bank must publish its audited balance sheet and profit and loss account for the public in the prescribed format within nine months into the subsequent financial year \citep{bafia2017}.
 \end{enumerate}
@@ -268,7 +268,7 @@ The most recent body of empirical research has extended observation windows thro
 
 \citet{chaudhari2025} examined ten commercial banks over 2014/15 to 2023/24 (100 bank-year observations). Employing pooled OLS regression, Chaudhari analyzed market price per share against firm-specific variables (EPS, DPS, ROA, bank size) and macroeconomic factors (inflation, interest rates, GDP). The empirical results revealed strong, statistically significant positive coefficients for EPS and DPS. In contrast, return on assets (ROA) displayed a statistically significant \textit{negative} association with market share prices, while bank size and macroeconomic variables failed to attain statistical significance. Chaudhari concluded that equity investors penalized low-margin asset expansion while rewarding per-share earnings generation.
 
-\citet{gurungdahal2025} investigated ten commercial banks listed on NEPSE over the ten-year period FY 2013/14 to 2023/24 using a panel regression framework.\footnote{Gurung and Dahal \citep{gurungdahal2025}, published in \textit{Pravaha} (vol.~31, no.~1, pp.~1--12), is distinct from the comprehensive panel study by Dahal, Gurung, and Ghimire \citep{dahal2025} in the \textit{Interdisciplinary Journal of Management and Social Sciences} (vol.~6, no.~1, pp.~252--261), which examined 209 bank-year observations across all listed commercial banks.} Among the studies reviewed, \citet{gurungdahal2025} provide the closest methodological precedent, because they applied the Hausman specification test and estimated a bank fixed-effects regression model to control for unobserved time-invariant bank heterogeneity. Their empirical results indicated that dividend payout ratio (DPR), P/E ratio, earnings per share, book value per share, and return on assets exerted statistically significant impacts on market share prices. However, Gurung and Dahal estimated static, full-sample coefficients, omitting any formal interaction test of whether valuation parameters shifted before and after the 2023 consolidation wave.
+\citet{gurungdahal2025} investigated ten commercial banks listed on NEPSE over the ten-year period FY 2013/14 to 2023/24 using a panel regression framework.\footnote{Gurung and Dahal \citet{gurungdahal2025}, published in \textit{Pravaha} (vol.~31, no.~1, pp.~1--12), is distinct from the comprehensive panel study by Dahal, Gurung, and Ghimire \citet{dahal2025} in the \textit{Interdisciplinary Journal of Management and Social Sciences} (vol.~6, no.~1, pp.~252--261), which examined 209 bank-year observations across all listed commercial banks.} Among the studies reviewed, \citet{gurungdahal2025} provide the closest methodological precedent, because they applied the Hausman specification test and estimated a bank fixed-effects regression model to control for unobserved time-invariant bank heterogeneity. Their empirical results indicated that dividend payout ratio (DPR), P/E ratio, earnings per share, book value per share, and return on assets exerted statistically significant impacts on market share prices. However, Gurung and Dahal estimated static, full-sample coefficients, omitting any formal interaction test of whether valuation parameters shifted before and after the 2023 consolidation wave.
 
 \citet{timalsina2026} evaluated 13 commercial banks over the thirteen-year panel FY 2011/12 to 2023/24 (169 bank-year observations). Using descriptive statistics, Pearson correlation, and panel regression analysis, Timalsina investigated the impact of firm-specific indicators (EPS, DPS, P/E, ROA, size) and macroeconomic factors (GDP, inflation, interest rates) on market share prices. The empirical findings revealed that EPS, DPS, P/E, firm size, and inflation had statistically significant positive associations with share prices, while interest rates exerted a significant negative effect. Return on assets (ROA) and GDP growth showed no statistically significant influence.
 
@@ -297,16 +297,18 @@ With few exceptions, extant Nepalese banking studies employ pooled ordinary leas
 
 To synthesize the empirical literature directly informing this dissertation's econometric framework, Table~\ref{tab:lit_synthesis} presents a comparative synthesis of primary empirical studies. Selection is restricted to foundational theoretical frameworks and empirical studies whose dependent variable is market price per share (MPS) and which evaluate fundamental accounting indicators across commercial banks.
 
-\begin{table}[!htbp]
-\centering
-\small
+{\small
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}}
 \caption{Synthesis of Empirical Literature on Accounting Fundamentals and Equity Valuation}
-\label{tab:lit_synthesis}
-\begin{tabular}{p{0.18\textwidth}p{0.18\textwidth}p{0.16\textwidth}p{0.18\textwidth}p{0.22\textwidth}}
+\label{tab:lit_synthesis}\\
 \toprule
 \textbf{Study \& Year} & \textbf{Sample \& Period} & \textbf{Methodology} & \textbf{Key Variables} & \textbf{Core Empirical Findings} \\
 \midrule
+\endfirsthead
+\textbf{Study \& Year} & \textbf{Sample \& Period} & \textbf{Methodology} & \textbf{Key Variables} & \textbf{Core Empirical Findings} \\
+\midrule
+\endhead
 \citet{pradhan2003} & Listed firms, 5 yrs (1992--1997) & Bivariate / Pooled OLS & MPS, DPS, Retained Earnings & Cash dividends show stronger positive price association than retained earnings. \\
 \addlinespace
 \citet{collins1997} & US Firms, 40 yrs (1953--1993) & Ohlson RIV Panel OLS & Price, EPS, BVPS & Combined relevance increased; book value relevance rose relative to earnings. \\
@@ -351,8 +353,14 @@ To synthesize the empirical literature directly informing this dissertation's ec
 \addlinespace
 \citet{adhikari2023} & 7 Merged Banks (2013--2020) & Pre/Post Comparative & MPS, EPS, DPS, Net Profit & Substantial post-merger price drops and dividend cuts; slow operational synergy. \\
 \bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
+}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} MPS = market price per share; EPS = earnings per share; BVPS = book value per share; DPS = dividend per share; ROA = return on assets; ROE = return on equity; DPR = dividend payout ratio; DY = dividend yield; P/E = price-to-earnings ratio; OLS = ordinary least squares; RIV = residual income valuation; M\&A = mergers and acquisitions; BSE = Bombay Stock Exchange. EY and MTB are reproduced as labelled in the Dahal et al.\ (2025) row; their expansions are not defined in the thesis text.
+\end{minipage}
 
 \section{Research Gap}
 \label{sec:research_gap}

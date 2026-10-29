@@ -9,10 +9,10 @@ The \textbf{Results} section (Section~4.2) details the empirical outcomes derive
 \begin{enumerate}
     \item \textit{Descriptive Statistics} (Section~4.2.1), summarizing the distributional properties, central tendencies, and dispersions of the primary valuation variables across the full panel and comparative pre- and post-consolidation sub-periods;
     \item \textit{Correlation Analysis and Multicollinearity Assessment} (Section~4.2.2), examining bivariate linear associations, verifying collinearity boundaries between EPS and return on assets (ROA), and reviewing visual dispersion patterns;
-    \item \textit{Baseline Value Relevance Estimation} (Section~4.2.3), reporting the estimation of Model~1 under two-way fixed effects with MacKinnon-White HC3 robust standard errors on Student's $t$ residual degrees of freedom;
-    \item \textit{Consolidation Regime Shift Analysis} (Section~4.2.4), detailing the estimation of Model~2, capturing pre-consolidation valuation slopes, regime interaction coefficients ($\delta_E, \delta_B$), implied post-consolidation net slopes, and the principal joint Wald test of parameter stability;
-    \item \textit{Formal Hypothesis Testing} (Section~4.2.5), evaluating the empirical findings against the four operational research hypotheses ($H_1, H_2, H_3, H_4$) formulated in Chapter~I;
-    \item \textit{Robustness and Sensitivity Suite} (Section~4.2.6), executing an eight-specification suite (R1--R2 baselines plus six robustness variants R3--R8) to probe the sensitivity of baseline estimates to profitability definitions, dividend exclusions, entity-timing mismatches, transition-year volatility, bonus share dilutive adjustments, and restated basic earnings; and
+    \item \textit{Baseline Value Relevance: Model 1 Estimation} (Section~4.2.3), reporting the estimation of Model~1 under two-way fixed effects with MacKinnon-White HC3 robust standard errors on Student's $t$ residual degrees of freedom;
+    \item \textit{Impact of Consolidation on Value Relevance: Model 2 Estimation} (Section~4.2.4), detailing the estimation of Model~2, capturing pre-consolidation valuation slopes, regime interaction coefficients ($\delta_E, \delta_B$), implied post-consolidation net slopes, and the principal joint Wald test of parameter stability;
+    \item \textit{Hypothesis Testing} (Section~4.2.5), evaluating the empirical findings against the four operational research hypotheses ($H_1, H_2, H_3, H_4$) formulated in Chapter~I;
+    \item \textit{Robustness and Sensitivity Analyses (R1 through R8)} (Section~4.2.6), executing an eight-specification suite (R1--R2 baselines plus six robustness variants R3--R8) to probe the sensitivity of baseline estimates to profitability definitions, dividend exclusions, entity-timing mismatches, transition-year volatility, bonus share dilutive adjustments, and restated basic earnings; and
     \item \textit{Econometric Diagnostics and Specification Comparison} (Section~4.2.7), evaluating variance inflation factors (VIF), Breusch-Pagan heteroskedasticity tests, Cook's distance influence metrics, residual normality, and comparing pooled OLS, bank fixed effects, and two-way fixed effects specifications.
 \end{enumerate}
 
@@ -38,7 +38,7 @@ The analysis sample consists of 28 realized bank-year observations from an inten
 \centering
 \small
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
-\caption{Descriptive Statistics of Value-Relevance Variables, FY 2076/77--FY 2081/82}
+\caption[Descriptive Statistics of Value-Relevance Variables]{Descriptive Statistics of Value-Relevance Variables, FY 2076/77--FY 2081/82}
 \label{tab:t1_descriptives}
 \begin{tabular}{llccccc}
 \toprule
@@ -109,7 +109,7 @@ Table~\ref{tab:t2_correlations} reports the Pearson correlation coefficients amo
 \label{tab:t2_correlations}
 \begin{tabular}{lccccc}
 \toprule
-\textbf{Variable} & $\mathit{MPS}^{RD}$ & \textbf{EPS} & \textbf{BVPS} & \textbf{DPS} & \textbf{ROA} \\
+\textbf{Variable} & \textbf{$\mathit{MPS}^{RD}$} & \textbf{EPS} & \textbf{BVPS} & \textbf{DPS} & \textbf{ROA} \\
 \midrule
 $\mathit{MPS}^{RD}$ & 1.000 &  &  &  &  \\
 EPS & 0.358 & 1.000 &  &  &  \\
@@ -174,7 +174,7 @@ Table~\ref{tab:t3_model1} reports the parameter estimates, standard errors, $t$-
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Model 1: Baseline Value Relevance of Accounting Fundamentals ($N = 28$)}
 \label{tab:t3_model1}
-\begin{tabular}{lcccccc}
+\begin{tabular}{p{0.17\textwidth}cccccc}
 \toprule
 \textbf{Independent Variable} & \textbf{Parameter} & \textbf{Coefficient} & \textbf{HC3 SE} & \textbf{$t$-stat} & \textbf{$p$-value} & \textbf{95\% CI} \\
 \midrule
@@ -224,7 +224,7 @@ Table~\ref{tab:t4_model2} reports the estimation results for Model~2, including 
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Model 2: Value Relevance Regime Shift Across Consolidation ($N = 28$)}
 \label{tab:t4_model2}
-\begin{tabular}{lcccccc}
+\begin{tabular}{p{0.26\textwidth}ccccc}
 \toprule
 \textbf{Model Parameter / Term} & \textbf{Coefficient} & \textbf{HC3 SE} & \textbf{$t$-stat} & \textbf{$p$-value} & \textbf{95\% CI} \\
 \midrule
@@ -293,7 +293,7 @@ To visually display these pre- and post-consolidation relationships, Figure~\ref
 \vspace{2pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Scatter panels and OLS regression lines of $\mathit{MPS}^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77--2078/79, blue) and post-consolidation (FY 2079/80--2081/82, vermillion) sub-periods ($N = 28$) (Codebase Asset F3). Lines are descriptive bivariate OLS fits, not the two-way fixed-effects estimates in Table~\ref{tab:model2_vr}; the post-BVPS sign difference is the effect of absorbing year effects.
+\textit{Note.} Scatter panels and OLS regression lines of $\mathit{MPS}^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77--2078/79, blue) and post-consolidation (FY 2079/80--2081/82, vermillion) sub-periods ($N = 28$) (Codebase Asset F3). Lines are descriptive bivariate OLS fits, not the two-way fixed-effects estimates in Table~\ref{tab:t4_model2}; the post-BVPS sign difference is the effect of absorbing year effects.
 \end{minipage}
 \end{figure}
 
@@ -322,7 +322,7 @@ Table~\ref{tab:hypotheses} summarizes the formal hypothesis testing decisions.
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Summary of Operational Hypothesis Testing Decisions}
 \label{tab:hypotheses}
-\begin{tabular}{lcccccc}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}cc>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
 \toprule
 \textbf{Hypothesis} & \textbf{Model / Term} & \textbf{Null ($H_0$)} & \textbf{Estimate} & \textbf{$p$-value} & \textbf{Decision} & \textbf{Inference} \\
 \midrule
@@ -372,7 +372,8 @@ Table~\ref{tab:t5_robustness} summarizes the estimation results across the robus
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Robustness and Sensitivity Analysis Across Econometric Specifications}
 \label{tab:t5_robustness}
-\begin{tabular}{lcccccc}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.19\textwidth}p{0.13\textwidth}p{0.12\textwidth}p{0.14\textwidth}p{0.12\textwidth}p{0.12\textwidth}c}
 \toprule
 \textbf{Specification} & \textbf{Earnings (SE)} & \textbf{BVPS (SE)} & \textbf{$\delta_E$ (SE)} & \textbf{$\delta_B$ (SE)} & \textbf{Wald $F$ ($p$)} & \textbf{$n$} \\
 \midrule
@@ -431,7 +432,7 @@ Table~\ref{tab:t6_diagnostics} presents the diagnostic test statistics for the b
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Econometric Diagnostics for Baseline Value-Relevance Model}
 \label{tab:t6_diagnostics}
-\begin{tabular}{lcccc}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\textwidth}cccc}
 \toprule
 \textbf{Diagnostic Dimension} & \textbf{Statistic} & \textbf{Value} & \textbf{$p$-value / Threshold} & \textbf{Assessment} \\
 \midrule
@@ -479,7 +480,8 @@ To demonstrate why two-way fixed effects estimation is the preferred econometric
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
 \caption{Specification Comparison Across Econometric Model Structures}
 \label{tab:spec_comp}
-\begin{tabular}{lccccc}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.18\textwidth}cccc>{\raggedright\arraybackslash}p{0.20\textwidth}}
 \toprule
 \textbf{Specification} & \textbf{$\beta_E$ (EPS Coef.)} & \textbf{$\beta_B$ (BVPS Coef.)} & \textbf{$R^2$} & \textbf{Resid.\ df} & \textbf{Assessment} \\
 \midrule
