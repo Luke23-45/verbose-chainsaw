@@ -1,357 +1,373 @@
-# Dissertation & Research-Paper Writing Guidelines — Calibrated for TU FOM MBS Dissertation
+# Advanced Research Writing & Econometric Audit Guidelines
+## An Independent, Strict Quality Standard for Empirical Accounting & Financial Economics
 
-**Context:** *Value Relevance of Accounting Information Before and After the Banking Consolidation Wave: Evidence from Nepalese Commercial Banks*  
-**Institutional Standard:** Tribhuvan University, Faculty of Management (FOM) *Master's Degree Dissertation Writing Guidelines (2019)*  
-**Methodological Domain:** Empirical Capital Markets Research, Financial Accounting Valuation (Ohlson 1995 RIV), and Panel Econometrics  
-**Referencing Standard:** APA 6th Edition  
-
----
-
-## Overview & Scope
-
-These guidelines establish the writing, econometric, and structural standards for finalizing both the **MBS Dissertation** (120 pages, 5 chapters) and the **Dissertation Proposal** (sections 1–7) at Tribhuvan University Faculty of Management. Every rule below is calibrated to address the specific empirical realities of the Nepalese banking sector, the 2023 consolidation wave, two-way fixed-effects panel modeling, and strict academic compliance.
+**Field:** Capital Markets Research in Accounting, Corporate Finance, Panel Econometrics  
+**Target:** Master's Dissertations, Ph.D. Chapters, and Peer-Reviewed Empirical Working Papers  
+**Foundational References:** John H. Cochrane (Stanford GSB), Deirdre N. McCloskey, Holthausen & Watts (2001), Barth, Beaver, & Landsman (2001), Brown, Lo, & Lys (1999), Cameron, Gelbach, & Miller (2008), Gow, Ormazabal, & Taylor (2010), Gopen & Swan (1990), Kobak et al. (2024), and TU FOM (2019).
 
 ---
 
-## A. Core Idea & Information Hierarchy
+## Purpose of this Standard
 
-**A1. Write the economic and valuation reality, not software execution.**  
-The narrative must explain the financial institutions, accounting disclosures, valuation mechanics, and empirical associations under study. Avoid framing sentences around software execution or data-pipeline plumbing (e.g., avoid "Python scripts extracted," "pandas merged the CSVs"). Code repositories, data verification pipelines, and build systems belong in footnotes, code comments, or the technical appendix, not in the academic prose.
+This document is **not** a summary of any existing manuscript, nor is it a retrospective justification of past writing choices. It is an **independent, uncompromising, state-of-the-art normative standard** designed to audit, critique, stress-test, and elevate empirical research in accounting and financial economics. 
 
-**A2. Anchor the entire dissertation around one clear central question.**  
-Every chapter, section, table, and paragraph must serve the core inquiry:  
-*Did the empirical valuation relevance of earnings per share (EPS) and book value per share (BVPS) for commercial bank equity prices shift between the pre-consolidation (FY 2076/77–2078/79) and post-consolidation (FY 2079/80–2081/82) periods in Nepal, when measured at an objective post-reporting-deadline pricing window ($MPS^{RD}$)?*  
-Any content or diversion that does not directly advance or qualify this question belongs in background notes or should be excised.
-
-**A3. Establish an explicit hierarchy of rhetorical weight.**  
-Structure rhetorical emphasis across the dissertation as follows:
-1. **Primary Contribution:** The empirical behavior of accounting multiples ($\beta_E, \beta_B$) and structural interaction parameters ($\delta_E, \delta_B$) across the consolidation wave.
-2. **Theoretical Grounding:** The Ohlson (1995) residual income valuation framework and the post-merger transitoriness framework of Kwon and Wang (2020).
-3. **Econometric Evidence:** Two-way fixed-effects estimates, MacKinnon-White HC3 robust standard errors, joint Wald test statistics ($F$ and $p$-values), and the 8-part robustness suite (R1–R8).
-4. **Institutional Context:** Bank consolidation history, NRB regulatory capital escalation, and BAFIA 2017 statutory reporting timelines.
-5. **Methodological Controls:** Unobserved bank-level fixed effects ($\mu_i$), macroeconomic fiscal-year fixed effects ($\lambda_t$), and sensitivity exclusions.
-6. **Archival Details:** Aggregator price reconciliation, dividend declaration dates, and trading suspension calendars.
-
-**A4. Don't let an absence or non-significance become a mystery unless justified.**  
-When an interaction parameter (e.g., $\delta_E$ or $\delta_B$) or a robustness variable (e.g., ROA or DPS) is statistically insignificant under conservative HC3 standard errors, report it directly as empirical evidence of parameter stability or lack of explanatory contribution. Do not invent speculative ad-hoc narratives to explain away non-rejection of the null hypothesis.
+Use this standard to audit drafts ruthlessly. If a draft violates these principles—whether through mechanical circularity, spurious correlation, scale distortions, over-claimed causality, superficial literature summaries, or synthetic AI-generated fluff—it must be corrected.
 
 ---
 
-## B. Opening the Dissertation & Chapter I Structure
+## 1. Epistemology & Theoretical Discipline in Value-Relevance Research
 
-**B1. Ground in institutional and theoretical reality, not generic textbook platitudes.**  
-Do not begin Chapter I with elementary finance definitions (e.g., "A bank is a financial institution that accepts deposits..."). Begin directly with equity valuation theory (Ohlson 1995 clean surplus relation), the information role of audited accounting fundamentals in emerging capital markets, the specific structure of NEPSE, and the systemic consolidation of Nepalese commercial banks.
+### 1.1 The Association Criterion vs. Welfare/Standard-Setting Claims
+- **Understand what value relevance does and does not measure:** Following the seminal critique of Holthausen & Watts (2001) and the defense of Barth, Beaver, & Landsman (2001), an empirical association between an accounting metric and stock price establishes **only** that the metric reflects or summarizes information that is impounded in secondary market valuations.
+- **Never claim welfare or standard-setting optimality:** Finding that an accounting number is statistically associated with share prices does **not** prove that the accounting standard is socially optimal, that managers are acting in shareholder interests, or that market efficiency is verified. Avoid leapfrogging from statistical association ($\beta \ne 0$) to normative policy endorsements.
+- **Acknowledge the contracting and stewardship roles:** Financial accounting numbers serve debt contracting, regulatory capital adequacy, and executive compensation—not merely equity pricing (Holthausen & Watts, 2001). When bank equity prices diverge from book values or earnings, recognize that regulatory capital compliance (e.g., NRB prudential capital mandates) and loan loss provisioning may supersede secondary equity market considerations.
 
-**B2. Begin with the economic and valuation problem, not the econometric machinery.**  
-Establish the structural transformation of Nepal's banking sector (from institutional proliferation to 20 Class 'A' banks following the 2023 mergers) and the puzzle of conflicting empirical findings in prior Nepalese studies before introducing panel regression equations.
-
-**B3. Follow the specific conceptual chain of this dissertation:**  
-$$\text{Clean Surplus / Ohlson (1995) RIV} \longrightarrow \text{Corporate Consolidation Restructuring} \longrightarrow \text{Temporal Information Alignment } (MPS^{RD}) \longrightarrow \text{Regime Interaction Test } (\delta_E, \delta_B)$$  
-1. **Valuation Theory:** Market equity is a function of net asset backing (BVPS) and normal/abnormal earnings capacity (EPS).  
-2. **Consolidation Shock:** Mergers fundamentally alter balance-sheet scale, expand share capital, introduce integration frictions, and temporarily increase earnings transitoriness (Kwon & Wang, 2020).  
-3. **Temporal Alignment:** Ashadh-end prices induce look-ahead bias; BAFIA 2017 Section 59(2) mandates a 9-month audited reporting deadline, operationalized at Chaitra-end ($MPS^{RD}$).  
-4. **Empirical Evaluation:** A two-way fixed-effects interaction model formally tests whether market pricing parameters shifted across the pre- and post-consolidation regimes.
-
-**B4. Motivate econometric design choices conceptually before mathematical formulation.**  
-Explain *why* price-earnings (P/E) ratios must be excluded (avoiding mechanical simultaneity bias and endogeneity), *why* two-way fixed effects are required (absorbing unobserved bank heterogeneity and macro market trends), and *why* HC3 standard errors are essential (countering heteroskedasticity and severe small-cluster downward bias) before presenting the regression equations.
-
-**B5. Maintain exact consistency in research questions, objectives, and hypotheses.**  
-The 3 Research Questions, 3 Specific Objectives, and 4 Research Hypotheses ($H_1$ to $H_4$ plus joint Wald test) formulated in Chapter I (§1.2, §1.3, §1.4) must correspond one-to-one with:
-- The methodology and model specifications in Chapter III (§3.6);
-- The empirical findings and hypothesis tests in Chapter IV (§4.3, §4.4, §4.5);
-- The summary answers, conclusions, and formal hypothesis decision matrix in Chapter V (§5.2, §5.3, §5.3.5).
-
-**B6. Avoid repetitive meta-announcements.**  
-Minimize boilerplate announcements such as "This section will now discuss..." or "As previously stated in Chapter I...". Move straight into substantive statements about empirical patterns, theoretical connections, and regulatory mechanisms.
-
-**B7. Structure the Abstract as a complete, compressed executive summary.**  
-Under TU FOM guidelines, the Abstract must be concise (fitting on a single page, accompanied by $\le 5$ keywords). It must follow a strict 4-stage narrative:
-1. *Context & Problem:* Nepal's 2023 commercial bank consolidation wave and the empirical question of valuation parameter stability.
-2. *Data & Methodology:* Purposive sample of 5 commercial bank series over FY 2076/77–2081/82 ($N = 28$), standardized $MPS^{RD}$ window, two-way fixed-effects panel regression with HC3 robust standard errors.
-3. *Core Empirical Findings:* Baseline EPS and BVPS relevance (Model 1), post-consolidation slope shifts ($\delta_E, \delta_B$, Model 2), and joint Wald test result ($F = 2.76, p = 0.098$).
-4. *Implications:* Valuation consequences of merger accounting transitoriness and regulatory relevance for NRB, SEBON, and capital market participants.
+### 1.2 Theoretical Anchoring in the Clean-Surplus Framework
+- **Ground linear valuation models in formal theory:** The regression of equity prices on earnings and book value is not an ad-hoc heuristic; it derives mathematically from the clean-surplus relation ($BV_t = BV_{t-1} + NI_t - Div_t$) and linear information dynamics under the Residual Income Valuation (RIV) framework (Ohlson, 1995; Feltham & Ohlson, 1995).
+- **Interpret stock vs. flow variables correctly:**
+  - **Book Value per Share ($\text{BVPS}$):** Represents the historical, cumulative net asset stock contributed by equity holders and retained from past operations. In banking, it serves as the ultimate liquidation and regulatory solvency anchor.
+  - **Earnings per Share ($\text{EPS}$):** Represents current operational flow and serves as a proxy for the mean-reverting path of future abnormal earnings.
+- **Account for transitoriness across structural disruptions:** As established by Collins, Maydew, & Weiss (1997) and Kwon & Wang (2020), when corporate events (mergers, reorganizations, sudden regulatory capital mandates) inject transitory items, restructuring costs, and portfolio provisioning into reported earnings, earnings persistence drops. In such regimes, rational investors place greater relative valuation weight on balance-sheet net worth ($\text{BVPS}$) than on volatile contemporaneous earnings ($\text{EPS}$).
 
 ---
 
-## C. Chapter-Level Architecture & Separation of Lanes (TU FOM Standards)
+## 2. Econometric Integrity & The Eight Deadly Empirical Traps
 
-**C1. Strictly respect the specific lane of each of the 5 chapters:**
-- **Chapter I (Introduction):** Establishes the background, problem statement, 3 research questions, general and specific objectives, 4 formal hypotheses, rationale/significance, study limitations (distinguishing deliberate scope from empirical constraints), and chapter organization.
-- **Chapter II (Literature Review):** Establishes the theoretical framework (Ohlson RIV, signaling, agency, market efficiency), systematically reviews international and Nepalese empirical literature, presents the synthesis matrix (Table 2.1), and explicitly defines the 5 identified literature gaps. *No empirical findings from this dissertation belong here.*
-- **Chapter III (Research Methodology):** Details the research design, population and purposive sample (5 bank series), secondary data sources and verification protocols, exact operational definitions of variables ($MPS^{RD}$, EPS, BVPS, ROA, DPS, $Post_t$), model specifications (Model 1 and Model 2), diagnostic tests, and the 8-part robustness protocol (R1–R8). *Contains only research protocols and specifications, zero empirical results.*
-- **Chapter IV (Results and Discussion):** Reports descriptive statistics, correlation matrix and collinearity diagnostics, Model 1 (baseline) and Model 2 (interaction) regressions, joint Wald structural tests, comprehensive 8-part robustness suite, econometric diagnostics (VIF, Breusch-Pagan, Cook's distance, normality), and a structured scholarly discussion contextualizing findings against prior Nepalese and international studies.
-- **Chapter V (Summary and Conclusion):** Synthesizes the overall study, answers each research question, presents the formal hypothesis testing decisions table (§5.3.5), outlines actionable implications for investors, bank executives, and regulators, and identifies avenues for future research.
+Any empirical paper in accounting or finance must actively defend against the eight classic methodological traps. A paper that succumbs to any of these is flawed at its foundation.
 
-**C2. Keep economic interpretation out of Chapter III.**  
-Chapter III explains *how* variables are constructed and *how* equations are estimated. Save the analysis of *what* the estimates mean, why coefficients attenuated, and how they relate to market efficiency for Chapters IV and V.
+### Trap 1: Mechanical Circularity and Endogenous Multiples
+- **The Violation:** Including price-derived valuation multiples—such as the Price-to-Earnings ($\text{P/E}$) ratio, Price-to-Book ($\text{P/B}$) ratio, or Market-to-Book ratio—as explanatory regressors in models where Market Price per Share ($\text{MPS}$) is the dependent variable.
+- **The Consequence:** Because $\text{P/E} = \text{MPS} / \text{EPS}$, regressing $\text{MPS}$ on $\text{P/E}$ places the dependent variable directly inside the numerator of its own regressor. This creates deterministic mathematical endogeneity, spuriously inflates $R^2$, biases all other regression slopes, and completely invalidates hypothesis testing.
+- **The Standard:** Strict and absolute exclusion of all price-deflated or market-derived multiples from the right-hand side of valuation regressions. Explanatory variables must consist exclusively of fundamental accounting figures and exogenous indicators determined independently of secondary market share prices.
 
-**C3. Keep data cleaning and software plumbing out of the Chapter IV discussion.**  
-Chapter IV discussion focuses on economic behavior, investor perception, accounting transitoriness, and comparison with prior studies (e.g., Bhattarai 2014; Pradhan & Dahal 2016; Kwon & Wang 2020; Gurung & Dahal 2025). Do not clutter the discussion with discussions of spreadsheet formatting or data manipulation scripts.
+### Trap 2: The Scale Effect and the $R^2$ Illusion
+- **The Violation:** Interpreting high or shifting $R^2$ values in unscaled levels regressions as evidence of high or changing "value relevance," or comparing raw $R^2$ across different sub-samples without addressing scale differences.
+- **The Consequence:** As demonstrated by Brown, Lo, & Lys (1999) and Easton (1998), regressing unscaled share price on per-share accounting metrics across firms with wide differences in scale induces severe heteroskedasticity and artificially inflates $R^2$ simply due to cross-sectional scale dispersion. Apparent temporal shifts in $R^2$ across regimes are frequently statistical artifacts of changing cross-sectional sample variance rather than true shifts in information relevance.
+- **The Standard:** 
+  1. Do not rely primarily on $R^2$ to claim structural change; rely on formal coefficient interaction parameters ($\delta$) and joint Wald tests.
+  2. Implement panel fixed effects to absorb cross-sectional scale heterogeneity.
+  3. When pooled cross-sectional models are reported, disclose that scale differences inflate explanatory power relative to within-firm panel estimators.
 
-**C4. Ensure every subsection answers a substantive research objective.**  
-Avoid filler subsections. Each empirical subsection in Chapter IV must directly correspond to an objective or diagnostic check defined in Chapters I and III.
+### Trap 3: Look-Ahead Bias and Information Availability Timing
+- **The Violation:** Aligning fiscal-year-end closing prices (e.g., Ashadh-end / mid-July in Nepal) with audited annual accounting statements that were not completed, audited, or disclosed until months later.
+- **The Consequence:** Conditioning market prices at time $t$ on accounting disclosures that only entered the public domain at time $t + k$ introduces severe look-ahead bias and reverse causality. It violates the core premise of capital markets research: prices can only reflect information that was publicly known at the observation timestamp (Ball & Brown, 1968; Beaver, 1968; Bernard & Thomas, 1989).
+- **The Standard:** 
+  1. Share prices must be sampled **after** the financial accounts have been made legally and publicly available.
+  2. If specific corporate press-release timestamps cannot be verified with archival audit trails across historical samples, establish an objective, statutory cutoff rule (such as the BAFIA Section 59(2) 9-month statutory reporting deadline at Chaitra-end).
+  3. State the operational window explicitly and implement a strict freshness rule (e.g., 5 trading days) to ensure prices reflect active floor trading rather than stale historical quotes.
 
----
+### Trap 4: Small-Cluster Over-Confidence and Downward-Biased Standard Errors
+- **The Violation:** Relying on naive OLS standard errors, or uncritically applying standard cluster-robust sandwich covariance estimators (e.g., Huber-White cluster) when the number of clusters is small (e.g., $G < 30$).
+- **The Consequence:** As proven by Cameron, Gelbach, & Miller (2008), Petersen (2009), and Gow, Ormazabal, & Taylor (2010), standard cluster-robust standard errors rely on asymptotic theory where $G \to \infty$. When clusters are few (such as $G = 5$ or $G = 10$), the asymptotic sandwich estimator is severely biased downward, producing artificially inflated $t$-statistics, falsely tiny $p$-values, and catastrophic over-rejection of the null hypothesis (false discoveries).
+- **The Standard:** 
+  1. Never report unadjusted OLS standard errors in panel datasets with cross-sectional and temporal dependence.
+  2. With small cluster dimensions, deploy finite-sample leverage corrections, specifically the MacKinnon-White (1985) HC3 covariance estimator, which applies a $(1 - h_{ii})^2$ leverage penalty to protect against over-rejection.
+  3. Treat all inferential tests in small-$G$ panels as exploratory indicators rather than asymptotic certainties, and report exact $p$-values rather than binary cutoff asterisks.
 
-## D. Econometric Design, Operationalization, and Controls
+### Trap 5: Parameter Proliferation and Degrees-of-Freedom Depletion
+- **The Violation:** Adding multi-way fixed effects, multiple interaction terms, and supplementary control variables to small samples without transparent parameter accounting.
+- **The Consequence:** In a panel of $N = 28$ observations, estimating 5 bank fixed effects (4 dummies), 6 year fixed effects (5 dummies), an intercept, two baseline slopes, and two interaction slopes consumes $1 + 4 + 5 + 2 + 2 = 14$ parameters. The residual degrees of freedom collapse to $28 - 14 = 14$. Under 14 degrees of freedom, the statistical power of the regression is constrained, and tests are sensitive to individual influential points.
+- **The Standard:** 
+  1. Always explicitly compute and state residual degrees of freedom ($df = N - K$) in every regression table and text discussion.
+  2. Screen for collinearity absorption (e.g., recognizing that time dummies $\sum_{t \in \text{Post}} \lambda_t$ perfectly absorb the standalone $Post_t$ indicator).
+  3. Run sensitivity tests (such as Cook's distance and studentized residuals) to confirm that findings are not driven by single high-leverage observations.
 
-**D1. Explain exclusions and constraints by what they isolate, not merely what was dropped.**
-- *5-Day Freshness Window:* Treating HBL FY 2077/78 (suspended until 6 June 2022; 54 days late) and NIMB FY 2077/78 (suspended until 30 May 2022; 47 days late) as missing isolates clean post-deadline market pricing from stale pre-suspension prices.
-- *P/E Ratio Exclusion:* Strictly excluding P/E ratios isolates true fundamental accounting relevance from mechanical circularity ($\text{P/E} = \text{MPS} / \text{EPS}$).
-- *Transition Year Exclusion (R5):* Dropping FY 2079/80 isolates enduring structural parameter shifts from temporary initial amalgamation integration shocks.
-- *Entity-Timing Sensitivity (R6):* Dropping FY 2078/79 isolates valuation parameters from the timing mismatch where pre-merger standalone accounts coincided with post-merger April 2023 trading prices.
+### Trap 6: Asterisk Econometrics and the Neglect of Economic Significance
+- **The Violation:** Focusing exclusively on whether a $p$-value falls below $0.05$ or $0.01$ (hunting for asterisks) while completely ignoring the economic magnitude, sign, and practical plausibility of the estimated coefficients (McCloskey & Ziliak, 1996; Cochrane, 2005).
+- **The Consequence:** A statistically significant coefficient may be economically trivial, or an economically massive coefficient may carry a wide confidence interval in small samples. Treating statistical significance as synonymous with economic importance is bad economics.
+- **The Standard:** 
+  1. Interpret the economic magnitude of coefficients directly: What does a $\beta_E = 6.43$ mean in rupees of market price for every rupee of EPS? Is that multiple plausible relative to the sector's price-to-earnings distribution?
+  2. Report and interpret confidence intervals alongside point estimates.
+  3. Discuss economic significance alongside statistical significance.
 
-**D2. State methodological rationale as objective scientific fact, not author narrative.**  
-Avoid writing author-centric decision histories ("We decided to exclude P/E because we felt...", "We initially considered pooled OLS but changed our mind...").  
-Write: *"Price-earnings (P/E) ratios are strictly excluded from all specifications because $\text{P/E} = \text{MPS} / \text{EPS}$, embedding the dependent variable directly within the regressor and inducing mechanical endogeneity."*
+### Trap 7: Pseudo-Causal Creep in Observational Studies
+- **The Violation:** Using causal verbs ("mergers improved," "consolidation caused," "the reform impacted") in non-experimental, observational designs where treatment assignment is non-random and regimes are demarcated by calendar time (Angrist & Pischke, 2009, 2010; Atanasov & Black, 2016).
+- **The Consequence:** In calendar-time event studies, the post-event indicator ($Post_t$) captures not only the event of interest (banking consolidation), but also every contemporaneous macroeconomic shift, interest rate change, inflation trend, regulatory policy adjustment, and broad-market index movement that occurred over the same time horizon. Attributing observed parameter shifts solely to corporate mergers is an identification fallacy.
+- **The Standard:** 
+  1. Use strictly associational, non-causal language: *"is consistent with"*, *"coincided with"*, *"was associated with"*, *"attenuated across the consolidation divide"*.
+  2. Formally declare that the model estimates conditional statistical associations rather than isolated causal treatment effects.
+  3. Explicitly list concurrent macroeconomic and capital market confounding factors that occurred during the sample period.
 
-**D3. Confine study limitations to dedicated sections; avoid defensive hedges throughout the results.**  
-Acknowledge the study's boundaries (purposive sample of 5 banks, 6 fiscal years, $N = 28$ observations, calendar-time identification) comprehensively in Chapter I (§1.6) and Chapter V (§5.5). Do not weaken every empirical sentence in Chapter IV with apologetic clauses. State the econometric result clearly, followed by its calibrated statistical interpretation.
-
-**D4. Treat fixed effects as structural controls and interpret identification cleanly.**  
-- Bank fixed effects ($\mu_i$) absorb all time-invariant cross-sectional bank heterogeneity (e.g., historical reputation, branch distribution scale, founding ownership).
-- Fiscal-year fixed effects ($\lambda_t$) absorb all common macroeconomic shocks, interest rate cycles, and NEPSE broad-market fluctuations.
-- The standalone consolidation dummy ($Post_t$) is a deterministic linear combination of post-merger year dummies ($\sum_{t \in \text{Post}} \lambda_t$) and is perfectly collinear with them; explain clearly that $Post_t$ is absorbed by $\lambda_t$, leaving identification to within-year cross-sectional variation.
-
-**D5. Use rigorous, self-contained mathematical notation for all econometric models.**  
-Always specify full panel indices ($i = 1, \dots, 5$; $t = 1, \dots, 6$), parameter vectors, and error terms:
-$$\text{Model 1 (Baseline):} \quad \mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} + \varepsilon_{it}$$
-$$\text{Model 2 (Interaction):} \quad \mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} + \delta_E (\mathit{EPS}_{it} \times \mathit{Post}_t) + \delta_B (\mathit{BVPS}_{it} \times \mathit{Post}_t) + \varepsilon_{it}$$
-
-**D6. Transparently disclose degrees of freedom and finite-sample constraints.**  
-On the realized clean sample of $N = 28$ observations, Model 2 estimates 14 parameters (1 constant, 4 bank dummies, 5 year dummies, and 4 slope parameters), leaving exactly:
-$$28 - 14 = 14 \text{ residual degrees of freedom}$$
-Never hide or gloss over this parameter consumption. Explicitly document residual degrees of freedom in table notes and the methodology text.
-
-**D7. Banish code variable names and software syntax from the narrative.**  
-Never use raw code names (e.g., `mps_rd`, `eps_clean`, `post_dummy`, `df_regression`, `statsmodels`) in the formal dissertation narrative. Use formal mathematical symbols ($MPS^{RD}$, $\text{EPS}_{it}$, $\text{BVPS}_{it}$, $\mathit{Post}_t$, $\beta_E$, $\delta_E$) and standard academic phrasing.
-
----
-
-## E. Econometric Rigor, Small-Cluster Inference, and Non-Causal Framing
-
-**E1. Strictly maintain non-causal, associational language.**  
-Because the research design is observational and non-experimental, and the consolidation divide is demarcated by calendar time (FY 2079/80), the interaction parameters ($\delta_E, \delta_B$) capture temporal changes in statistical association across regimes. These changes reflect corporate consolidation alongside concurrent macroeconomic conditions, interest rate trends, and post-COVID capital market cycles.  
-- **Permissible phrasing:** *"is associated with"*, *"coincided with"*, *"was accompanied by"*, *"the estimated valuation slope attenuated"*, *"is consistent with post-merger earnings transitoriness"*.  
-- **Prohibited phrasing:** *"mergers caused a decline"*, *"consolidation proved that"*, *"the impact of the merger was to reduce value relevance"*.
-
-**E2. Never conflate descriptive bivariate relationships with multivariate panel estimates.**  
-Always maintain a sharp distinction between bivariate correlations/fits and two-way fixed-effects estimates. For example, explain clearly that descriptive OLS scatter plots (e.g., Figure 4.1) illustrate raw within-period cross-sectional clustering, whereas Table 4.4 reports conditional slopes net of bank-specific and year-specific fixed effects.
-
-**E3. Clearly delineate baseline models from the 8-part robustness suite (R1–R8).**  
-Present Model 1 and Model 2 as the primary empirical baseline. Treat the remaining specifications as explicit sensitivity checks:
-- *R1:* Pooled OLS benchmark (evaluates the cost of ignoring panel heterogeneity);
-- *R2:* Bank Fixed-Effects only (evaluates sensitivity to dropping year fixed effects);
-- *R3:* ROA substitution for EPS (evaluates asset-scaled operating profitability);
-- *R4:* Eligible Cash DPS inclusion (evaluates dividend signaling);
-- *R5:* Exclusion of transition year FY 2079/80 (verifies results are not driven by initial integration shock);
-- *R6:* Exclusion of FY 2078/79 (evaluates entity-timing mismatch);
-- *R7:* Bonus-adjusted metrics (evaluates capital dilution effects);
-- *R8:* Retrospective restated EPS (evaluates sensitivity to subsequent-year accounting adjustments).
-
-**E4. Implement finite-sample inferential caution for small clusters.**  
-With $G = 5$ bank clusters, standard cluster-robust sandwich covariance estimators suffer from severe finite-sample downward bias and overstate test significance (Cameron, Gelbach, & Miller, 2008). Explicitly justify the implementation of MacKinnon-White (1985) HC3 heteroskedasticity-consistent standard errors, which apply a $(1 - h_{ii})^2$ leverage penalty to protect against over-rejection in small panels.
+### Trap 8: Survivorship and Truncation Distortions
+- **The Violation:** Deleting missing, delisted, or trading-suspended observations without documentation, or imputing stale prices from months prior to avoid missing data.
+- **The Consequence:** Corporate reorganizations frequently induce prolonged regulatory trading suspensions. Imputing a price from 60 days before the reporting window contaminates the regression with stale, pre-merger sentiment; conversely, silently dropping observations hides survivorship bias and distorts sample attrition.
+- **The Standard:** 
+  1. Establish an explicit, reproducible protocol for missing data and trading halts (e.g., a formal 5-day freshness rule).
+  2. Document every excluded observation with its exact corporate action, suspension dates, and days elapsed.
+  3. Conduct sensitivity analyses evaluating entity-timing mismatches (e.g., when historical financial statements reflect standalone operations while trading prices reflect the unified corporate entity).
 
 ---
 
-## F. Accounting Variables, Construct Validity, and Measurement Rules
+## 3. Information Architecture & Rhetorical Structure (The Cochrane Standard)
 
-**F1. Separate balance-sheet stock net worth from income-statement operating flow.**  
-Maintain theoretical clarity between BVPS (accumulated net assets, equity capital, retained earnings) and EPS/ROA (current period operational efficiency and cash-flow generation). In banking institutions, book equity represents regulatory capital solvency, whereas earnings reflect loan yield margins and credit loss provisions.
+A research paper or dissertation in finance is an exercise in persuasion through evidence, not a chronological diary of what the researcher did (Cochrane, 2005).
 
-**F2. Enforce unambiguous, documented operational variable definitions:**
-- **$MPS^{RD}$ (Dependent Variable):** Secondary market closing price per ordinary share (NPR) observed on the first NEPSE floor trading session following the statutory 9-month audited reporting publication deadline under BAFIA 2017 Section 59(2) at Chaitra-end (mid-April) of the subsequent fiscal year.
-- **Basic EPS (Independent Variable):** Audited basic earnings per share (NPR) extracted from the bank's own audited Statement of Profit or Loss for that fiscal year (own-current reported rule), based on weighted-average shares outstanding.
-- **BVPS (Independent Variable):** Ordinary shareholders' equity attributable to equity holders of the bank divided by year-end ordinary shares outstanding (NPR), recomputed from balance-sheet components and reconciled against printed Net Asset Value (NAV).
-- **Consolidation Indicator ($\mathit{Post}_t$):** Binary indicator equal to $1$ for post-consolidation years (FY 2079/80, 2080/81, 2081/82) and $0$ for pre-consolidation years (FY 2076/77, 2077/78, 2078/79).
-- **ROA (Robustness Variable):** Net profit after tax divided by average total assets (expressed as a percentage).
-- **DPS (Robustness Variable):** Cash dividend per ordinary share (NPR) officially declared by the Board of Directors on or before the $MPS^{RD}$ observation date.
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                   THE INFORMATION PYRAMID (Cochrane, 2005)              │
+│                                                                        │
+│   1. THE CORE FINDING       What do we learn about valuation and       │
+│      (First 2 pages)        consolidation that was previously unknown? │
+│                                                                        │
+│   2. THE ECONOMIC PUZZLE    Why does this setting, conflict, or regime │
+│      (Introduction)         shift matter for market pricing?           │
+│                                                                        │
+│   3. THE IDENTIFICATION     Why does this model isolate the parameter, │
+│      (Methodology)          and what are its exact structural limits?  │
+│                                                                        │
+│   4. THE MEASURED FACTS     What do the coefficients, Wald tests, and  │
+│      (Results)              robustness models actually show?           │
+│                                                                        │
+│   5. THE SYNTHESIS          How does this alter our view of prior      │
+│      (Discussion)           literature and regulatory reality?         │
+└────────────────────────────────────────────────────────────────────────┘
+```
 
-**F3. Disclose collinearity constraints between EPS and ROA.**  
-The bivariate Pearson correlation between EPS and ROA is $r = 0.975$ on the clean sample, producing variance inflation factors ($VIF$) exceeding 20–30 when entered simultaneously. Explicitly explain why ROA must be evaluated as an alternative substitute (R3) rather than an additive regressor.
+### 3.1 The 15-Minute Skim Test
+A professional reader (supervisor, external examiner, journal referee) reads an empirical finance paper hierarchically:
+1. **Title and Abstract:** What is the specific question, the empirical setting, the core estimate, and the overarching conclusion?
+2. **Introduction:** By page 2 or 3, the reader must know:
+   - What is the question?
+   - Why is it important?
+   - What did the author do (data, sample, period, estimator)?
+   - What is the central empirical finding (exact magnitudes and significance)?
+   - What does it teach us that prior literature missed?
+3. **Tables and Figures:** The reader flips straight to the primary tables (Descriptive Statistics, Baseline Model, Interaction Model, Robustness Suite). Every table must be completely self-contained.
+4. **Conclusion:** Does it summarize the answers cleanly without introducing new, unexamined claims or apologizing for bounded results?
 
-**F4. Defend the construct validity of the statutory $MPS^{RD}$ pricing window.**  
-Detail why $MPS^{RD}$ is superior to alternative conventions:
-1. *Vs. Ashadh-end (mid-July):* Eliminates severe look-ahead bias, as audited financial statements are legally and practically unavailable at fiscal-year-end.
-2. *Vs. Ad-hoc announcement timestamps:* Avoids measurement noise, archival opacity, and unverified press-release timestamps across historical periods, providing an objective, legally mandated reporting threshold.
-3. *Institutional Reality:* Commercial bank boards typically publish audited highlights between Ashwin and Poush, well before the statutory Chaitra ceiling, ensuring that audited numbers are fully in the public domain prior to price observation.
+If a reader cannot pass the 15-minute skim test with complete comprehension of your findings, the paper is structurally disorganized.
 
----
-
-## G. Reporting Empirical Results (Tables, Figures, and Regressions)
-
-**G1. Write results around economic patterns and hypothesis tests, not cell recitation.**  
-Do not write narrative that merely lists table entries (e.g., avoid "In Table 4.1, GBIME has a mean of 294.07, HBL has 274.81..."). Direct the reader to meaningful economic insights: cross-sectional dispersion, compression of valuation multiples post-merger, and contrast between within-bank and cross-bank variance.
-
-**G2. Emphasize informative empirical contrasts.**  
-Highlight key econometric revelations:
-- The pre-consolidation dominance of EPS ($\beta_E = 12.21, p = 0.040$ in Model 2) versus its post-consolidation attenuation ($\delta_E = -14.62, p = 0.089$);
-- The stability of BVPS across regimes ($\delta_B = 0.087, p = 0.963$);
-- The joint Wald test result confirming overall structural parameter shift ($F = 2.76, p = 0.098$, significant at 10%);
-- The stark contrast between pooled OLS ($R^2 = 0.730$, inflated by cross-sectional scale) and two-way fixed effects (which purges unobserved bank heterogeneity).
-
-**G3. State empirical results plainly with calibrated statistical verbs.**  
-Use precise scientific language calibrated to the evidence:
-- *"The baseline coefficient for EPS is positive and statistically significant at the 5% level ($\beta_E = 6.43, t = 2.47, p = 0.025$)."*
-- *"The joint Wald test rejects parameter constancy across the consolidation divide at the 10% significance level ($F(2, 14) = 2.76, p = 0.098$), indicating an observed shift in the overall valuation relationship."*
-- Follow clean empirical statements with distinct, dedicated sentences outlining qualifications or institutional factors.
-
-**G4. Distinguish empirical findings from post-hoc speculation.**  
-Clearly separate the measured coefficient estimates from speculative economic hypotheses regarding investor psychology, regulatory forbearance, or non-performing loan adjustments. Ground all explanatory discussions in cited literature (e.g., Kwon & Wang 2020; Collins et al. 1997; Adhikari et al. 2023).
-
-**G5. Report missing data, sample attrition, and corporate actions honestly.**  
-State unequivocally that while audited annual financial statements are available for all 30 target bank-years, trading suspensions during corporate combinations rendered two pre-consolidation prices unverifiable within the 5-day freshness rule:
-- HBL FY 2077/78: Trading suspended until 6 June 2022 (54-day gap);
-- NIMB FY 2077/78: Trading suspended until 30 May 2022 (47-day gap).  
-Document that coding these as missing leaves a clean estimation sample of $N = 28$ observations (13 pre-consolidation, 15 post-consolidation). Furthermore, disclose NMB's acquisition of Kanchan Development Bank in August 2020 (adding approximately NPR 0.56 billion to share capital beyond its 13% bonus share distribution).
-
-**G6. Treat non-rejection of individual interaction terms with scientific objectivity.**  
-Under conservative HC3 standard errors, individual interaction parameters ($\delta_E, \delta_B$) yield $p$-values of 0.089 and 0.963 respectively. Report these statistics objectively. Emphasize that while individual parameter shifts are exploratory under small-sample degrees of freedom, the joint Wald test evaluates simultaneous parameter movement.
-
-**G7. Make every table and figure completely self-contained.**  
-Per TU FOM standards, tables and figures must be interpretable without reference to the body text:
-- Table titles must appear **above** the table (bold, uniform 12pt);
-- Complete table notes must appear **below** the table in single spacing (defining all abbreviations, sample sizes, observation dates, source aggregators, standard error types, and significance asterisks: $^{***}p < 0.01, ^{**}p < 0.05, ^{*}p < 0.10$);
-- Figure captions must appear **below** the figure, citing primary theoretical or empirical sources.
+### 3.2 Eradicating the Laundry-List Introduction
+- **Do not begin with historical trivia or elementary textbooks:** Never open with "Since ancient times, trade has been important..." or "Commercial banks play an important role in the economy by taking deposits and making loans." 
+- **Hook the economic problem immediately:** Open with the tension: Equity valuation models predict that market prices reflect fundamental earnings capacity and balance-sheet asset backing. In emerging banking systems undergoing concentrated consolidation, however, financial reporting faces a dual crisis of earnings transitoriness and capital restructuring. Does the secondary market continue to price earnings, or does valuation shift to balance-sheet net worth?
+- **Do not write a "roadmap" that simply recites chapter numbers:** The final paragraph of an introduction should briefly state the structural organization, but each sentence should preview the *intellectual purpose* of the chapter, not merely its title.
 
 ---
 
-## H. Summary, Hypotheses Decisions, and Implications (Chapter V)
+## 4. Literature Review: Thematic Dialectics vs. Annotated Bibliographies
 
-**H1. Directly answer the 3 central research questions in Chapter V.**  
-Chapter V (§5.2 and §5.3) must provide explicit, evidence-grounded answers to each Research Question posed in Chapter I:
-1. *RQ1 (Baseline Relevance):* Did EPS and BVPS exhibit significant association with $MPS^{RD}$? (Answer: Yes, Model 1 confirms EPS is significant at 5%, while BVPS is positive but secondary after controlling for two-way fixed effects).
-2. *RQ2 (Consolidation Regime Shift):* Did valuation slopes differ across the consolidation wave? (Answer: Yes, joint Wald test indicates structural shift at 10%, characterized by significant pre-merger EPS pricing and subsequent post-merger attenuation).
-3. *RQ3 (Robustness & Stability):* Did findings survive the 8-part robustness suite? (Answer: Yes, core patterns remained consistent across ROA substitution, DPS inclusion, transition year exclusion, bonus share adjustments, and restated EPS).
+### 4.1 The Difference Between an Annotated Bibliography and a Critical Review
+- **The Annotated Bibliography (Amateur Standard):**
+  > *"Bhattarai (2014) examined nine banks and found EPS was positive. Pradhan (2016) examined 14 banks and found size was positive. Joshi (2023) studied seven banks and found BVPS was positive. Pant (2024) studied seven banks and found BVPS was negative."*  
+  *Critique:* This is a lifeless catalogue of past papers. It teaches the reader nothing about *why* the findings contradict each other, what methodological flaws caused the divergence, or what intellectual debate remains unresolved.
+- **The Thematic Dialectic (Scholar Standard):**
+  > Group the literature around structural themes, methodological debates, and empirical contradictions:
+  1. *The Earning Power vs. Net Asset Value Debate:* Contrast studies where earnings dominate (e.g., Bhandari, 2026; Niroula, 2021) against studies where book value dominates (e.g., Chhetri, 2023; Silwal, 2019), and explain the institutional or macroeconomic context (e.g., capital escalation shocks, non-performing asset surges) that drove the divergence.
+  2. *The Methodological Flaw of Circular Multiples:* Systematically document how prior studies contaminated their specifications by including $\text{P/E}$ ratios in share price regressions, generating spurious correlation.
+  3. *The Temporal Misalignment Problem:* Document how previous literature relied on Ashadh-end prices that preceded public disclosure, creating severe look-ahead bias.
+  4. *The Static Pooling Assumption:* Critique prior Nepalese literature for universally estimating static full-sample averages, failing to test whether valuation parameters shifted across the structural consolidation wave.
 
-**H2. Include a formal, unambiguous Hypothesis Decision Table.**  
-Section 5.3.5 must include the structured Hypothesis Testing Decision Table:
+### 4.2 The Literature Synthesis Matrix
+Every empirical dissertation must feature a comprehensive, standardized Literature Synthesis Matrix (e.g., Table 2.1) structured with the following mandatory columns:
+- **Study & Author(s)** (Formal APA citation);
+- **Sample & Period** (Number of cross-sections, exact years, total observations);
+- **Econometric Methodology** (Pooled OLS, Random Effects, Two-Way Fixed Effects, etc.);
+- **Key Variables Investigated** (Dependent and explanatory variables);
+- **Core Findings & Methodological Critique** (Direction, significance, and specific limitations such as circular multiples, unadjusted standard errors, or Ashadh-end pricing).
 
-| Hypothesis | Parameter Statement | Empirical Estimate | Test Statistic / $p$-value | Decision at $\alpha = 0.05$ |
-| :--- | :--- | :--- | :--- | :--- |
-| **$H_1$ (Baseline EPS)** | $\beta_E \ne 0$ | $\hat{\beta}_E = 6.430$ | $t = 2.47, p = 0.025$ | **Supported (Reject $H_{0,1}$)** |
-| **$H_2$ (Baseline BVPS)** | $\beta_B \ne 0$ | $\hat{\beta}_B = 0.781$ | $t = 0.92, p = 0.370$ | **Not Supported (Fail to Reject $H_{0,2}$)** |
-| **$H_3$ (EPS Regime Shift)** | $\delta_E \ne 0$ | $\hat{\delta}_E = -14.619$ | $t = -1.82, p = 0.089$ | **Not Supported at 5% (Supported at 10%)** |
-| **$H_4$ (BVPS Regime Shift)** | $\delta_B \ne 0$ | $\hat{\delta}_B = 0.087$ | $t = 0.05, p = 0.963$ | **Not Supported (Fail to Reject $H_{0,4}$)** |
-| **Joint Shift Test** | $\delta_E = 0 \text{ and } \delta_B = 0$ | Joint vector | $F(2, 14) = 2.76, p = 0.098$ | **Supported at 10% Level** |
-
-**H3. Partition actionable implications across the three mandatory stakeholder groups.**  
-Structure practical implications in Section 5.4 into three dedicated subsections:
-1. *Implications for Investors & Capital Market Participants:* Understanding post-merger earnings transitoriness, avoiding naive P/E multiples, and prioritizing audited balance-sheet capital strength during restructuring.
-2. *Implications for Bank Executives & Boards of Directors:* Managing post-merger integration costs, maintaining transparent asset-quality disclosures, and stabilizing dividend expectations following share capital expansion.
-3. *Implications for Regulatory & Statutory Authorities (NRB, SEBON, NEPSE):* Enforcing centralized corporate disclosure archives, minimizing prolonged merger-related trading suspensions that trap shareholder liquidity, and monitoring capital adequacy reporting integrity.
-
-**H4. Formulate specific, actionable recommendations for future research.**  
-Section 5.6 must guide future scholars: expanding the cross-sectional sample to include newly merged development banks and finance companies, extending the longitudinal time series as more post-consolidation years mature, evaluating IFRS 9 / NFRS expected credit loss provisions, and analyzing corporate governance mechanisms.
-
----
-
-## I. Literature Review, Theoretical Anchors, and Synthesis Matrix (Chapter II)
-
-**I1. Build the literature review as a coherent intellectual progression.**  
-Organize Chapter II logically:
-$$\text{Theoretical Foundations} \longrightarrow \text{International Empirical Precedents} \longrightarrow \text{Nepalese Empirical Literature} \longrightarrow \text{Consolidation Context} \longrightarrow \text{Research Gaps}$$
-
-**I2. Synthesize prior literature around thematic and methodological debates.**  
-Avoid simple serial listing ("Author A found X. Author B found Y. Author C found Z."). Group studies around core methodological tensions:
-- *Income Statement vs. Balance Sheet:* Studies identifying EPS as dominant (Bhandari 2026; Niroula 2021) versus those finding BVPS dominant (Chhetri 2023; Silwal 2019).
-- *Endogenous Regressors:* The widespread, circular inclusion of P/E ratios in models predicting share prices (Bhattarai 2014; Joshi 2023; Pant 2024; Gurung & Dahal 2025).
-- *Temporal Misalignment:* Reliance on Ashadh-end prices that ignore the multi-month audited reporting lag (Pradhan & Dahal 2016; Silwal 2019).
-- *Panel Heterogeneity:* Pooled OLS models versus fixed-effects specifications controlling for bank-specific unobservables (Gurung & Dahal 2025).
-
-**I3. Present a comprehensive, standardized Literature Synthesis Matrix (Table 2.1).**  
-Summarize all key studies with standardized columns: *Study & Year*, *Sample & Period*, *Econometric Methodology*, *Key Variables Evaluated*, and *Core Empirical Findings*.
-
-**I4. Explicitly define the 5 research gaps addressed by the study:**
-1. *Consolidation Regime Shift Gap:* Absence of explicit interaction tests of valuation parameter stability across the 2023 merger wave.
-2. *Econometric Endogeneity Gap:* Pervasive inclusion of price-derived P/E multiples in share price regressions.
-3. *Temporal Alignment & Look-Ahead Bias Gap:* Reliance on Ashadh-end pricing dates preceding financial report publication.
-4. *Entity-Timing Transition Gap:* Failure to account for the FY 2078/79 transition mismatch where standalone fundamentals met consolidated trading prices.
-5. *Small-Cluster & Degrees of Freedom Gap:* Neglect of finite-sample degree-of-freedom constraints and small-cluster downward standard error bias.
+### 4.3 Formulating the Research Gap
+A genuine research gap is **never** merely geographical ("No one has studied this in Pokhara") or chronological ("No one has studied 2024 yet"). A scholarly research gap is an **unresolved theoretical tension or an uncorrected methodological flaw**:
+1. *The Structural Shift Gap:* Failure of extant literature to test parameter stability across corporate consolidation divides using interactive panel specifications.
+2. *The Endogeneity/Circularity Gap:* Pervasive reliance on circular price-derived multiples in share price models.
+3. *The Temporal Look-Ahead Gap:* Failure to synchronize price observation with legal, audited disclosure availability.
+4. *The Small-Cluster Inferential Gap:* Reliance on naive or invalid standard errors in small-sample banking panels.
 
 ---
 
-## J. Academic Prose, Anti-AI Filter, and Sentence-Level Craft
+## 5. Methodological Rigor & Data Integrity
 
-**J1. Use APA 6th Edition citation commands consistently.**  
-- Use `\citet{}` for narrative citations: *"As demonstrated by \citet{ohlson1995}..."*  
-- Use `\citep{}` for parenthetical citations: *"...as documented in emerging markets \citep{sharma2011,almumani2014}."*  
-- Never write hardcoded author names with manual citation brackets.
+### 5.1 Sample Selection and Purposive Criteria
+- **State selection criteria with operational precision:** If the sample is purposive (judgmental), state the exact exclusion and inclusion hurdles:
+  1. Sectoral classification (licensed Class 'A' commercial banks);
+  2. Direct participation in the focal consolidation wave versus continuous unmerged benchmark status;
+  3. Continuous availability of audited primary financial reports across the entire longitudinal horizon;
+  4. Availability of verifiable secondary market trading prices satisfying the post-deadline freshness window.
+- **Disclose sample boundaries and coverage:** Document the proportion of aggregate sector assets, equity, or market capitalization represented by the sampled institutions to substantiate sectoral relevance.
 
-**J2. Strictly eradicate generative AI clichés and filler vocabulary.**  
-Kobak et al. (2024) documented an unnatural surge in specific academic boilerplate words. Systematically eliminate these words and replace them with direct, precise economic language:
-- **Delete / Replace:** *"delve"*, *"delving"*, *"underscores"*, *"showcasing"*, *"testament"*, *"pivotal"*, *"beacon"*, *"tapestry"*, *"paramount"*, *"crucial role"*, *"game changer"*, *"in summary, it is clear that"*.  
-- **Use instead:** *"indicates"*, *"demonstrates"*, *"reveals"*, *"is consistent with"*, *"attenuates"*, *"reflects"*, *"specifies"*.
-
-**J3. Optimize for conceptual precision and scholarly economy.**  
-Prefer one mathematically and institutionally precise sentence over multiple redundant explanatory sentences. Write directly about economic entities, accounting numbers, and statistical parameters.
-
-**J4. Anchor topic sentences at the beginning and key findings at the end.**  
-Follow Gopen & Swan's (1990) information architecture:
-- Place familiar contextual anchors in the **topic position** (start of the sentence);
-- Deliver the new empirical finding, parameter estimate, or institutional outcome in the **stress position** (end of the sentence).
-
-**J5. Use formal academic third-person or scholarly plural voice.**  
-Maintain objective academic phrasing: *"This dissertation examines..."*, *"The empirical results indicate..."*, *"We estimate two-way fixed-effects models..."*. Avoid informal first-person singular ("I think," "I noticed").
+### 5.2 Primary vs. Secondary Source Reconciliation
+- **Never rely uncritically on third-party aggregators:** Financial web aggregators (ShareSansar, Merolagani, FinancialNotices) frequently contain transcription errors, unadjusted bonus share distortions, and rounded values.
+- **Enforce the Primary Audit Rule:** All accounting fundamentals (ordinary share capital, reserves, total equity attributable to equity holders, net profit after tax, basic EPS, audited NAV per share) must be extracted directly from primary, audited annual financial statements. Secondary compilations serve only as secondary flags; any discrepancies must be resolved in favor of the audited accounts.
+- **Document capital actions explicitly:** Changes in share bases due to bonus share capitalizations, rights offerings, or merger share swap ratios must be audited across annual report notes (Share Capital and Reserves schedules).
 
 ---
 
-## K. Institutional Formatting & Compliance Checklist (TU FOM 2019)
+## 6. Reporting Results: Economic Meaning, Diagnostics, and Robustness
 
-**K1. Page Layout & Margin Standards:**
-- Left margin: **3.18 cm (1.25 inches)** for binding.
-- Top, Bottom, and Right margins: **2.54 cm (1.0 inch)**.
-- Paper size: Standard A4.
+### 6.1 Principles of Tabular Presentation
+- **Self-Contained Requirement:** A reader must be able to comprehend a table and its findings without reading the narrative text.
+- **Table Headers:** Titles must be informative, bold, and placed **above** the table.
+- **Comprehensive Footnotes:** Must be placed **below** the table in single spacing, containing:
+  - Exact definition of every variable and acronym;
+  - Unit of measurement (e.g., NPR per share, percentage);
+  - Sample size ($N$) and panel structure (cross-sections $n$, time periods $T$);
+  - Estimator type (e.g., Two-Way Fixed Effects with Bank and Year Fixed Effects);
+  - Standard error specification (e.g., MacKinnon-White HC3 heteroskedasticity-robust standard errors);
+  - Residual degrees of freedom ($df$);
+  - Definition of all significance levels and asterisks ($^{***}p < 0.01, ^{**}p < 0.05, ^{*}p < 0.10$).
 
-**K2. Typography & Line Spacing Standards:**
-- Font typeface: **Times New Roman** uniformly throughout.
-- Main text font size: **12 point**.
-- Text line spacing: **1.5 lines** (true 1.5 pitch, 20.66 pt).
-- Single spacing: Strictly enforced for Table of Contents, Lists of Tables/Figures, table interiors, block quotations, footnotes, and References.
-- Paragraph spacing: Flush left, 0 pt first-line indent, followed by a 10 pt gap (`\parskip`).
+### 6.2 Narrative Discussion of Regression Estimates
+- **Do not recite tables:** Never write: "As seen in Table 4.4, the coefficient of EPS is 6.430 with a t-stat of 2.47 and p-value of 0.025, and BVPS is 0.781 with a t-stat of 0.92..."
+- **Narrate the economic and theoretical story:** 
+  > *"In the baseline model, earnings per share exhibits a positive and statistically significant association with market price ($\hat{\beta}_E = 6.43, p = 0.025$). Economically, this indicates that each additional rupee of audited earnings per share is associated with an incremental market price of NPR 6.43, after conditioning on balance-sheet net worth, time-invariant bank characteristics, and common macroeconomic shocks. Conversely, book value per share yields a positive but statistically insignificant conditional association ($\hat{\beta}_B = 0.78, p = 0.370$), indicating that within-bank market price variation was predominantly anchored in operating profitability rather than historical net asset book values during the baseline horizon."*
 
-**K3. Pagination Protocol:**
-- **Front Matter:** Numbered in lowercase Roman numerals (**ii, iii, iv...**), placed at the **bottom center** of the page. Title page is counted as page `i` but carries no printed number.
-- **Main Body (Chapters I–V, References, Appendices):** Numbered in Arabic numerals (**1, 2, 3...**), placed at the **top right corner** of the page, beginning with page 1 on the first page of Chapter I.
+### 6.3 The Regime Interaction Model and Joint Wald Testing
+- **Explain interaction mechanics clearly:**
+  - $\beta_E$ and $\beta_B$ represent baseline slopes (pre-consolidation regime).
+  - $\delta_E$ and $\delta_B$ represent the incremental slope shifts in the post-consolidation regime.
+  - The total post-consolidation valuation slopes are $(\beta_E + \delta_E)$ and $(\beta_B + \delta_B)$.
+- **Do not rely solely on individual $t$-tests for interaction terms:** When individual interaction terms carry collinearity or small-sample noise, evaluate the **joint Wald test**:
+  $$H_0: \delta_E = 0 \text{ and } \delta_B = 0$$
+  Reporting the joint $F$-test statistic and exact $p$-value tests whether the *combined accounting valuation structure* shifted across regimes, protecting against false negatives arising from collinear slope reallocation.
 
-**K4. Front Matter Structural Order:**
+### 6.4 The Robustness Suite as a Scientific Stress Test
+A robustness section is not decorative; it is an active effort to falsify your own findings. Design robustness checks to address specific structural vulnerabilities:
+1. **Model Specification Sensitivity:** Pooled OLS vs. Bank Fixed Effects vs. Two-Way Fixed Effects.
+2. **Alternative Proxy Substitution:** Replacing per-share earnings ($\text{EPS}$) with asset-scaled profitability ($\text{ROA}$) to eliminate per-share price scale effects.
+3. **Omitted Variable Inclusion:** Introducing cash dividend announcements ($\text{DPS}$) to test whether earnings relevance was merely proxying for payout signaling.
+4. **Transition Shock Exclusion:** Removing the consolidation transition year (FY 2079/80) to confirm that findings reflect sustained structural shifts rather than transient merger implementation turbulence.
+5. **Entity-Timing Mismatch Sensitivity:** Removing the boundary year (FY 2078/79) to eliminate the friction of pairing pre-merger standalone balance sheets with post-merger consolidated trading prices.
+6. **Accounting Capital Adjustments:** Re-estimating models using bonus-share-adjusted metrics and retrospective audited restatements.
+
+---
+
+## 7. Tone, Academic Prose, and Eradication of AI Slop (The Kobak Standard)
+
+Academic writing in economics and finance must be objective, sober, precise, and transparent. Every sentence must communicate verified facts or reasoned economic arguments.
+
+### 7.1 Absolute Eradication of Generative AI Vocabulary
+Recent large-scale bibliometric analyses (Kobak et al., 2024; Gray, 2024) have proven that LLMs heavily over-index on a specific cluster of decorative, pseudo-intellectual words. Their presence in a manuscript immediately signals unedited AI generation to examiners and journal editors.
+
+**The Prohibited Vocabulary & Replacement Guide:**
+
+| Prohibited AI Cliché | Why It Fails | Scholarly Replacement |
+| :--- | :--- | :--- |
+| **delve / delving** | Gratuitous pseudo-scholarly flourish | *examine, investigate, analyze, evaluate* |
+| **underscores** | Overused emphatic crutch | *indicates, reveals, demonstrates, highlights* |
+| **showcasing / showcase** | Promotional PR language | *illustrating, displaying, presenting, documenting* |
+| **pivotal / testament** | Dramatic editorializing | *critical, central, evidence of, consistent with* |
+| **beacon / tapestry** | Empty poetic metaphor | *benchmark, framework, institutional environment* |
+| **paramount / crucial role**| Unearned rhetorical emphasis | *substantial, significant, necessary, foundational* |
+| **game changer** | Colloquial corporate jargon | *structural shift, major reorganization* |
+| **multifaceted / myriad** | Vague filler for complex phenomena | *diverse, multiple, specific, distinct* |
+| **serves as a testament to** | Empty celebratory fluff | *provides evidence of, reflects* |
+| **it is important to note that**| Throat-clearing padding | *Cut entirely; state the fact directly* |
+
+### 7.2 Active Scholarly Voice vs. Passive Bureaucratic Evasion
+- **Avoid agentless passives:** Instead of *"It was observed that the coefficient decreased,"* write *"The estimated coefficient decreased"* or *"We find that the coefficient attenuated."*
+- **Avoid anthropomorphism:** Data do not "speak," tables do not "believe," and numbers do not "know." A regression does not "find"; the researcher finds using the regression.
+- **Write with simple Saxon clarity:** Prefer short, direct verbs over Latinate circumlocutions:
+  - *use* instead of *utilize*;
+  - *help* instead of *facilitate*;
+  - *change* instead of *undergo transformation*;
+  - *show* instead of *demonstrate empirical veracity*.
+
+### 7.3 Information Architecture at the Sentence Level (Gopen & Swan, 1990)
+- **The Topic Position (Beginning):** The first 5 to 7 words of a sentence should connect directly to what the reader already knows (the subject, the anchor, the context).
+- **The Stress Position (Ending):** The end of a sentence carries the natural rhetorical weight. Place your punchline, your coefficient, your statistical decision, or your core finding at the very end of the sentence.
+- **Never strand the finding in the middle:** 
+  - *Weak:* *"The coefficient for EPS, which was 6.43 and statistically significant at the 5% level, indicated value relevance in the baseline model."*
+  - *Strong:* *"In the baseline model, earnings per share is statistically significant and economically positive ($\hat{\beta}_E = 6.43, p = 0.025$)."*
+
+---
+
+## 8. Summary, Conclusions, and Decision Integrity (Chapter V)
+
+### 8.1 Direct Answers to Research Questions
+Chapter V must not be an unfocused recap. It must systematically deliver clear, definitive answers to the specific research questions posed in Chapter I:
+- Did the accounting fundamentals exhibit baseline value relevance? **Answer directly with empirical support.**
+- Did the valuation slopes shift across the consolidation divide? **Answer directly with Wald test evidence.**
+- Were the empirical relationships robust across alternative specifications and sample restrictions? **Answer directly based on the robustness suite.**
+
+### 8.2 The Formal Hypothesis Testing Decision Table
+Every scientific dissertation must present a clear, tabular summary of all formal hypotheses, the tested parameter, empirical estimate, test statistic, exact $p$-value, and explicit decision:
+
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                        FORMAL HYPOTHESIS DECISION FRAMEWORK                             │
+│                                                                                        │
+│  Hypothesis   Parameter   Estimate   Test Stat & p-value   Decision (α = 0.05)         │
+│  ────────────────────────────────────────────────────────────────────────────          │
+│  H1 (EPS)     β_E ≠ 0     +6.430     t = 2.47, p = 0.025   Supported (Reject H0)       │
+│  H2 (BVPS)    β_B ≠ 0     +0.781     t = 0.92, p = 0.370   Not Supported (Fail to rej) │
+│  H3 (Δ EPS)   δ_E ≠ 0    -14.619     t = -1.82, p = 0.089  Not Supported at 5% (p<0.10)│
+│  H4 (Δ BVPS)  δ_B ≠ 0     +0.087     t = 0.05, p = 0.963   Not Supported (Fail to rej) │
+│  Joint Shift  δ_E=δ_B=0   Vector     F = 2.76, p = 0.098   Supported at 10% Level      │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 8.3 Tripartite Policy and Managerial Implications
+Under TU FOM standards, practical implications must be categorized into three distinct, non-overlapping stakeholder domains:
+1. **Capital Market Participants & Equity Investors:** How investors should interpret reported post-merger accounting numbers; recognizing earnings transitoriness; relying on balance-sheet capital strength during restructuring; avoiding naive trailing P/E multiples.
+2. **Commercial Bank Executives & Boards of Directors:** Capital management strategies; managing earnings volatility during integration; communicating balance-sheet transparency; dividend payout sustainability following share capital expansion.
+3. **Statutory Regulators & Policy Makers (NRB, SEBON, NEPSE):** Developing centralized, timestamped corporate disclosure databases; reducing protracted merger trading suspensions that destroy liquidity; refining reporting guidelines under NFRS/IFRS 9.
+
+---
+
+## 9. Formatting, Typography, and Compliance (TU FOM 2019)
+
+### 9.1 Dimensions and Typography
+- **Margins:** Top: 2.54 cm (1.0 in), Bottom: 2.54 cm (1.0 in), Right: 2.54 cm (1.0 in), Left: **3.18 cm (1.25 in)** (mandatory allowance for binding).
+- **Typeface:** **Times New Roman** uniformly across all pages, titles, headings, and tables.
+- **Font Sizes:**
+  - Chapter Headings: 14–16 pt bold centered.
+  - Section Headings: 12 pt bold.
+  - Body Text: 12 pt regular.
+  - Table and Figure Interiors: 10–11 pt.
+  - Table Notes and Footnotes: 9–10 pt.
+- **Line Spacing:**
+  - Body narrative: **True 1.5 line spacing** (pitch $\approx 20.66$ pt).
+  - Single line spacing: Table of Contents, Lists of Tables/Figures, table interiors, block quotations, footnotes, and References.
+- **Paragraph Layout:** Flush left, 0 pt first-line indent, followed by a 10 pt paragraph gap (`\parskip`).
+
+### 9.2 Pagination Standards
+- **Preliminary Pages (Front Matter):** Numbered consecutively in lowercase Roman numerals (**i, ii, iii, iv...**), placed at the **bottom center** of the page. The Title Page is counted as page `i` but does not carry a printed page number.
+- **Main Body (Chapters I–V, References, Appendices):** Numbered consecutively in Arabic numerals (**1, 2, 3...**), placed at the **top right corner** of the page. Page 1 begins on the first page of Chapter I.
+
+### 9.3 Front Matter Structural Order
 1. Title Page (counted, unnumbered);
-2. Certification of Authorship (single page);
-3. Report of Viva-Voce Committee (single page);
-4. Declaration of Authenticity (single page);
-5. Acknowledgements (single page);
-6. Table of Contents (single-spaced);
+2. Certification of Authorship (strictly single page);
+3. Report of Viva-Voce Committee (strictly single page);
+4. Declaration of Authenticity (strictly single page);
+5. Acknowledgements (strictly single page);
+6. Table of Contents (single-spaced, dot leaders, right-aligned pages);
 7. List of Tables (single-spaced);
 8. List of Figures (single-spaced);
-9. Abbreviations / Acronyms (single-spaced);
-10. Abstract (single page, concise narrative, $\le 5$ keywords).
+9. Abbreviations / Acronyms (alphabetized, single-spaced);
+10. Abstract (strictly single page, narrative summary, $\le 5$ keywords).
 
 ---
 
-## L. Pre-Submission Verification & Quality Self-Checks
+## 10. The 25-Point Comprehensive Quality Audit Rubric
 
-Before submitting the dissertation or proposal for supervisory review or external defense, execute this 10-point checklist:
+Before any draft or chapter is finalized, evaluate it against this 25-point master rubric. Every question must be answered with a verified **"YES"**.
 
-- [ ] **1. Exact Number Synchronization:** Do all empirical values match across text, tables, and scripts? ($N = 28$, pre-merger $n = 13$, post-merger $n = 15$, Model 2 residual $df = 14$, correlation $r = 0.975$, NMB Kanchan acquisition NPR 0.56 billion beyond 13% bonus share distribution).
-- [ ] **2. Non-Causal Framing Integrity:** Are all empirical relationships framed associationally (*"is associated with"*, *"coincided with"*) rather than causally (*"mergers caused"*)?
-- [ ] **3. Hypothesis Consistency:** Are $H_1, H_2, H_3, H_4$ and the joint Wald test formulated identically across Chapters I, III, IV, and V?
-- [ ] **4. Title Page Compliance:** Are college affiliation, examination roll number, T.U. registration number, and submission date verified and accurate?
-- [ ] **5. Front-Matter Pagination:** Are preliminary pages in Roman numerals bottom-center, and does Arabic page 1 begin cleanly on Chapter I?
-- [ ] **6. Single-Page Front Matter:** Do Acknowledgements, Abstract, Certification, and Viva-Voce pages each fit strictly on a single page without orphan spills?
-- [ ] **7. Self-Contained Tables & Figures:** Does every table have its title above, every figure its title below, and do all table notes define abbreviations, sample sizes, and significance asterisks?
-- [ ] **8. Clean LaTeX Compilation:** Does the document compile via `xelatex` with **0 errors**?
-- [ ] **9. Complete Bibliography Reconciliation:** Does every reference cited in the text appear in `references.bib`, and are all entries fully populated with volume, issue, pages, and DOI?
-- [ ] **10. Eradication of AI Tells:** Has the entire manuscript been screened to ensure zero occurrences of AI clichés (*delve, underscores, showcasing, pivotal, testament*)?
+### Econometric Rigor & Identification
+- [ ] 1. Are price-derived multiples (P/E, P/B) strictly excluded from the right-hand side of all price models?
+- [ ] 2. Are share prices sampled strictly *after* audited financial reports were legally in the public domain (no look-ahead bias)?
+- [ ] 3. Is the operational pricing window defended using institutional/statutory requirements (e.g., BAFIA Section 59(2))?
+- [ ] 4. Are trading halts and missing observations governed by an objective freshness rule, with zero unverified imputations?
+- [ ] 5. Are both cross-sectional (bank) and temporal (year) unobservables controlled for via two-way fixed effects?
+- [ ] 6. Is the absorption of the standalone $Post_t$ indicator by year fixed effects clearly explained mathematically?
+- [ ] 7. Are standard errors adjusted for finite-sample leverage and small-cluster bias using MacKinnon-White HC3?
+- [ ] 8. Are exact residual degrees of freedom ($df = N - K$) disclosed and evaluated in every regression specification?
+- [ ] 9. Are empirical findings framed strictly associationally, with zero unwarranted causal claims?
+- [ ] 10. Is the regression model subjected to a multi-pronged robustness suite (proxy substitution, omissions, transition exclusions, capital restatements)?
 
----
+### Data & Archival Precision
+- [ ] 11. Do all numbers, sample counts, and test statistics match 100% across text, tables, figures, and code?
+- [ ] 12. Are corporate actions (acquisitions, bonus shares, rights issues, swap ratios) fully audited against primary financial report notes?
+- [ ] 13. Is the exact realized clean sample size ($N = 28$, pre $= 13$, post $= 15$) consistently maintained across all baseline tables?
+- [ ] 14. Are collinearity diagnostics (Pearson $r$, VIF, tolerance) formally reported, specifically addressing EPS–ROA collinearity?
 
-## Key Methodological References
-
-- **Ohlson, J. A. (1995).** Earnings, book values, and dividends in equity valuation. *Contemporary Accounting Research*, 11(2), 661–687.
-- **Collins, D. W., Maydew, E. L., & Weiss, I. S. (1997).** Changes in the value-relevance of earnings and book values over the past forty years. *Journal of Accounting and Economics*, 24(1), 39–67.
-- **Kwon, S. Y., & Wang, C. (2020).** The effect of mergers and acquisitions on the value relevance of accounting information. *Journal of Business Finance & Accounting*, 47(7–8), 984–1018.
-- **Cameron, A. C., Gelbach, J. B., & Miller, D. L. (2008).** Bootstrap-based improvements for inference with clustered errors. *Review of Economics and Statistics*, 90(3), 414–427.
-- **MacKinnon, J. G., & White, H. (1985).** Some heteroskedasticity-consistent covariance matrix estimators with improved finite sample properties. *Journal of Econometrics*, 29(3), 305–325.
-- **Tribhuvan University Faculty of Management (2019).** *Master's Degree Dissertation Writing Guidelines 2019*. Office of the Dean, Kirtipur, Kathmandu.
-- **Gopen, G. D., & Swan, J. A. (1990).** The science of scientific writing. *American Scientist*, 78(6), 550–558.
-- **Kobak, D., González-Márquez, R., & Lause, J. (2024).** Delving into ChatGPT usage in academic writing through excess vocabulary. *arXiv preprint arXiv:2406.07016*.
+### Writing Craft & Information Architecture
+- [ ] 15. Does the introduction hook the economic puzzle within the first two pages?
+- [ ] 16. Is the literature review organized around thematic tensions and methodological debates rather than an annotated laundry list?
+- [ ] 17. Does the literature review include a structured, comprehensive synthesis matrix with methodological critiques?
+- [ ] 18. Are the 5 identified literature gaps grounded in structural and econometric limitations of prior research?
+- [ ] 19. Do regression discussions focus on economic magnitudes, multiples, and patterns rather than mechanical cell recitation?
+- [ ] 20. Are all tables and figures completely self-contained with comprehensive notes defining all terms, units, estimators, and asterisks?
+- [ ] 21. Does Chapter V directly answer all Research Questions and provide a formal Hypothesis Testing Decision Table?
+- [ ] 22. Are implications rigorously partitioned across investors, bank executives, and statutory regulators?
+- [ ] 23. Is the entire manuscript 100% free of AI filler words (*delve, underscores, showcasing, pivotal, testament, beacon, tapestry*)?
+- [ ] 24. Are citations formatted in strict APA 6th Edition using proper `\citet{}` and `\citep{}` commands?
+- [ ] 25. Does the document strictly comply with TU FOM 2019 formatting (margins, 12pt TNR, 1.5 line spacing, Roman/Arabic pagination, single-page preliminary sections) and compile with **0 errors**?
