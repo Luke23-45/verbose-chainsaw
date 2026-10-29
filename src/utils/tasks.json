@@ -1,0 +1,30 @@
+{
+    "contract_section": {
+        "src": "samples/agreement.pdf",
+        "pages": {
+            "range": "3-6"
+        },
+        "output_form": "pdf",
+        "output_dir": "dist/contracts"
+    },
+    "manual_diagrams": {
+        "src": "samples/user_guide.pdf",
+        "pages": {
+            "list": [
+                1,
+                4,
+                8
+            ]
+        },
+        "output_form": "images",
+        "format": "png",
+        "dpi": 300,
+        "output_dir": "dist/diagrams"
+    },
+    "summary_snapshot": {
+        "src": "samples/annual_report.pdf",
+        "pages": "1, 3, 5-7",
+        "output_form": "jpg",
+        "output_dir": "dist/snapshots"
+    }
+}
