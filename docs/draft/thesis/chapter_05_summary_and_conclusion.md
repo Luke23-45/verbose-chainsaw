@@ -7,7 +7,7 @@ This concluding chapter synthesizes the theoretical arguments, empirical methodo
 In accordance with the Faculty of Management, Tribhuvan University *Master's Degree Dissertation Guidelines* (2019, p. 15), this chapter is organized into four core functional sections:
 1. **Summary of the Study** (Section 5.2), providing an integrated overview of the research problem, operational objectives, theoretical foundation, research design, and major empirical results;
 2. **Conclusions** (Section 5.3), articulating the insights, formal hypothesis testing decisions, and academic knowledge derived from the empirical findings regarding accounting value relevance, structural discontinuities, and capital market pricing behavior in Nepal;
-3. **Implications of the Study** (Section 5.4), delineating targeted, actionable implications for regulatory institutions (Nepal Rastra Bank and the Securities Board of Nepal), commercial bank executives, retail and institutional equity investors, and accounting standard setters; and
+3. **Implications of the Study** (Section 5.4), delineating targeted, actionable implications partitioned across three institutional domains: regulatory authorities (NRB, SEBON, and NEPSE), commercial bank executives and boards, and equity investors and market participants; and
 4. **Recommendations and Directions for Future Research** (Section 5.5), presenting practical policy recommendations alongside prospective avenues for subsequent scholarly inquiry.
 
 ---
@@ -31,7 +31,7 @@ To resolve these empirical gaps, this dissertation addressed three core research
 2. Did the valuation associations of EPS and BVPS differ between the pre-consolidation period (FY 2076/77–2078/79) and the post-consolidation period (FY 2079/80–2081/82)?
 3. How sensitive are the estimated valuation coefficients to transition-year effects, entity-timing mismatches, operating profitability substitutions, dividend exclusions, bonus share adjustments, and restated earnings?
 
-Correspondingly, the study set out to: (i) evaluate the baseline value relevance of EPS and BVPS under a standardized post-reporting-deadline pricing framework; (ii) quantify structural shifts in valuation slopes across the 2023 consolidation wave using an interactive panel specification; and (iii) execute a comprehensive eight-part robustness suite to establish the empirical boundary conditions of accounting multiples in Nepal.
+Correspondingly, the study set out to: (i) evaluate the baseline value relevance of EPS and BVPS under a standardized post-reporting-deadline pricing framework; (ii) quantify structural shifts in valuation slopes across the 2023 consolidation wave using an interactive panel specification; and (iii) execute a comprehensive eight-specification estimation and robustness suite (R1–R2 baselines plus six robustness variants R3–R8) to establish the empirical boundary conditions of accounting multiples in Nepal.
 
 ---
 
@@ -67,7 +67,7 @@ The empirical analysis yielded several substantive findings regarding the statis
    - **Dividend Reduction:** Cash dividends per share (DPS) experienced a severe collapse of 76.90% (from NPR 6.06 to NPR 1.40), with 12 out of 15 post-consolidation bank-years recording exactly zero cash dividends, coinciding with post-merger capital retention and provisioning pressures.
    - **Book Value Stability:** Mean BVPS remained anchored across regimes, rising modestly by 2.44% from NPR 158.11 to NPR 161.97, reflecting statutory reserve retention mandated by NRB.
 2. **Correlation and Multicollinearity Boundaries:**
-   - Operating profitability (ROA) correlated almost perfectly with EPS ($r = 0.975, p < 0.01$), confirming that simultaneous inclusion would generate catastrophic multicollinearity ($\text{VIF} \approx 20\text{--}30$). Hence, ROA was preserved strictly as an isolated substitute.
+   - Operating profitability (ROA) correlated almost perfectly with EPS ($r = 0.975, p < 0.01$), confirming that simultaneous inclusion would generate catastrophic multicollinearity ($\text{VIF} \approx 20.2$). Hence, ROA was preserved strictly as an isolated substitute.
    - In contrast, EPS and BVPS exhibited moderate correlation ($r = 0.372, p = 0.051$), with variance inflation factors of $\text{VIF} \approx 1.16$, confirming that multicollinearity between EPS and BVPS is negligible.
 3. **Baseline Value Relevance (Model 1):**
    - In the baseline two-way fixed effects model, the estimated earnings coefficient was $\hat{\beta}_E = 2.095$ (HC3 SE = 4.096, $t = 0.51, p = 0.616$ on $t(16)$) and the book value coefficient was $\hat{\beta}_B = 0.219$ (HC3 SE = 1.858, $t = 0.12, p = 0.908$ on $t(16)$).
@@ -78,7 +78,7 @@ The empirical analysis yielded several substantive findings regarding the statis
    - **Implied Post-Consolidation Slopes:** Post-consolidation earnings slope compressed to $\hat{\beta}_E + \hat{\delta}_E = 2.453$ ($t = 1.08, p = 0.298$), while the implied book value slope turned negative to $\hat{\beta}_B + \hat{\delta}_B = -1.658$ ($t = -1.48, p = 0.161$).
    - **Principal Joint Wald Test:** The joint test of parameter stability ($H_0: \delta_E = \delta_B = 0$) yielded $F(2, 14) = 2.954$ ($p = 0.085$). Under the designated 5% threshold, the baseline model does not reject parameter stability, though it achieves marginal significance at the 10% level.
 5. **Robustness Suite Insights and the Entity-Timing Sensitivity:**
-   - The robustness suite (R1–R8) did not reject parameter stability at the 5% level across ROA substitution (R3), cash dividend inclusion (R4, residual $\text{df} = 13$), transition-year removal (R5), bonus share dilution (R7), and restated basic earnings (R8), except under Specification R6 (detailed below), where the joint Wald test rejected parameter stability.
+   - The eight-specification suite (R1–R8) did not reject parameter stability at the 5% level across ROA substitution (R3), cash dividend inclusion (R4, residual $\text{df} = 13$), transition-year removal (R5), bonus share dilution (R7), and restated basic earnings (R8), except under Specification R6 (detailed below), where the joint Wald test rejected parameter stability.
    - **Entity-Timing Sensitivity (Specification R6):** When FY 2078/79 was excluded to eliminate the entity-timing asymmetry (standalone pre-merger fundamentals vs. post-merger April 2023 trading prices across the four merged banks), the joint Wald test became **statistically significant at the 5% level**:
      $$F(2, 10) = 5.82, \quad p = 0.021 \quad (N = 23)$$
      with $\hat{\delta}_B = -2.611$ (HC3 SE = 1.517, $t = -1.72, p = 0.116$ on $t(10)$). While the individual interaction coefficient is not significant at 10% under Student's $t(10)$, the joint test indicates that excluding the transition mismatch reveals a statistically significant joint structural difference across the calendar regimes.
@@ -89,22 +89,45 @@ The empirical analysis yielded several substantive findings regarding the statis
 
 ## 5.3 Conclusions
 
-Based on the empirical findings, econometric diagnostics, and theoretical evaluations conducted in this dissertation, the following major conclusions and formal hypothesis decisions are drawn:
+Based on the empirical findings, econometric diagnostics, and theoretical evaluations conducted in this dissertation, the following major conclusions, direct answers to research questions, and formal hypothesis decisions are drawn:
 
-### 5.3.1 Regime Differences in Accounting Valuation Multiples
+### 5.3.1 Direct Answers to Research Questions
+In direct response to the three research questions formulated in Chapter I:
+1. **Answer to Research Question 1 (Baseline Value Relevance):** Fundamental accounting measures (EPS and BVPS) do not exhibit a statistically significant association with secondary market equity prices observed immediately following statutory annual reporting deadlines under the baseline two-way fixed-effects model ($p = 0.616$ for EPS; $p = 0.908$ for BVPS). Omitted macro-year price shocks account for the high explanatory power reported in static pooled studies.
+2. **Answer to Research Question 2 (Consolidation Regime Shift):** Across the 2023 commercial banking consolidation wave, both earnings and book value valuation multiples experienced downward compression ($\hat{\delta}_E = -3.124, \hat{\delta}_B = -1.758$). In the baseline sample, the joint Wald test does not reject parameter stability at the strict 5% level ($F = 2.954, p = 0.085$), though marginal significance is observed at the 10% level.
+3. **Answer to Research Question 3 (Sensitivity and Boundary Conditions):** The structural regime shift is highly sensitive to entity-boundary timing. Purging the FY 2078/79 entity-timing mismatch (Specification R6) yields a statistically significant joint regime shift at the 5% level ($F = 5.82, p = 0.021$). Baseline estimates remain stable across operating profitability substitutions (R3), cash dividend inclusions (R4), transition-year removal (R5), bonus share dilution adjustments (R7), and restated basic earnings (R8).
+
+### 5.3.2 Regime Differences in Accounting Valuation Multiples
 The empirical evidence indicates that the valuation associations of accounting fundamentals among Nepalese commercial banks exhibited noticeable differences between the pre- and post-consolidation periods. In the pre-consolidation regime (FY 2076/77–2078/79), equity market pricing was primarily oriented toward operational earnings capacity ($\hat{\beta}_E = 5.58$), while balance-sheet net worth exerted virtually no incremental influence ($\hat{\beta}_B = 0.10$). In the post-consolidation period (FY 2079/80–2081/82), valuation multiples on earnings compressed (implied slope $2.45$) and book value multiples became negative (implied slope $-1.66$). In the baseline model, the joint test does not reject structural stability at the 5% level ($F = 2.954, p = 0.085$). However, after excluding the entity-mismatch fiscal year (Specification R6), the joint test rejects parameter stability at the 5% level ($F = 5.82, p = 0.021$). The evidence for a regime shift is therefore sensitivity-dependent rather than conclusive in the baseline; it is documented as an empirical association across calendar periods, rather than as an established causal merger impact.
 
-### 5.3.2 Behavior of Book Value and Earnings Multiples Across Regimes
+### 5.3.3 Behavior of Book Value and Earnings Multiples Across Regimes
 Under classical valuation theory (e.g., Ohlson, 1995; Collins et al., 1997), when reported earnings become transitory or disrupted by corporate restructuring, equity investors are expected to shift their valuation focus toward balance-sheet book value as an abandonment or liquidation floor. This theoretical substitution was **not observed** in this sample of Nepalese commercial banks. Rather than acting as a valuation anchor, the post-consolidation point estimate for book value per share turned negative ($\hat{\beta}_B + \hat{\delta}_B = -1.658$, though statistically insignificant at $p = 0.161$). A plausible economic interpretation is that in the post-merger banking environment, expanded book equity can reflect capital issued to absorb distressed assets, unamortized restructuring costs, or regulatory reserve transfers, rather than unencumbered liquidation value. Because commercial banks are highly leveraged institutions subject to regulatory resolution rather than orderly liquidation, market participants did not treat expanded book equity as an uncompromised asset anchor.
 
-### 5.3.3 Econometric Discipline: Specification Sensitivity and Macro-Year Variation
-This dissertation highlights the crucial role of econometric specification in evaluating accounting value relevance in frontier markets. In this sample, pooled estimation yields a larger earnings slope estimate ($\hat{\beta}_E = 4.882$) than two-way fixed effects ($\hat{\beta}_E = 2.095$), while explaining far less variance ($R^2 = 0.136$ versus $0.948$), illustrating how omitted macro-year variation can inflate accounting slope estimates. When fiscal-year fixed effects absorb common market-wide price levels, slope coefficients are identified strictly from within-year cross-sectional differentiation. Furthermore, studies that included the Price-to-Earnings (P/E) ratio as an explanatory regressor face severe mechanical endogeneity, as P/E directly embeds the dependent variable ($MPS$) in its numerator. When P/E is strictly excluded, prices are measured post-disclosure, and two-way fixed effects are estimated with HC3 robust standard errors, accounting fundamentals explain cross-sectional bank differentiation with substantial uncertainty, while macro-temporal trends account for the large majority of price variation.
+### 5.3.4 Econometric Discipline: Specification Sensitivity and Macro-Year Variation
+This dissertation highlights the substantial influence of econometric specification in evaluating accounting value relevance in frontier markets. In this sample, pooled estimation yields a larger earnings slope estimate ($\hat{\beta}_E = 4.882$) than two-way fixed effects ($\hat{\beta}_E = 2.095$), while explaining far less variance ($R^2 = 0.136$ versus $0.948$), illustrating how omitted macro-year variation can inflate accounting slope estimates. When fiscal-year fixed effects absorb common market-wide price levels, slope coefficients are identified from within-bank variation net of common year shocks (after removing both bank-specific and fiscal-year means). Furthermore, studies that included the Price-to-Earnings (P/E) ratio as an explanatory regressor face severe mechanical endogeneity, as P/E directly embeds the dependent variable ($MPS$) in its numerator. When P/E is strictly excluded, prices are measured post-disclosure, and two-way fixed effects are estimated with HC3 robust standard errors, accounting fundamentals explain cross-sectional bank differentiation with substantial uncertainty, while macro-temporal trends account for the large majority of price variation.
 
-### 5.3.4 Archival Timing and Data Integrity in Frontier Market Research
+### 5.3.5 Archival Timing and Data Integrity in Frontier Market Research
 The sensitivity analysis demonstrates that the econometric evaluation of corporate restructuring in frontier markets is acutely sensitive to archival timing and entity-boundary definitions. In the immediate aftermath of amalgamations, reporting lags create temporal asymmetries where historical standalone financial accounts are paired with newly enlarged capitalized market entities. Purging this entity mismatch in specification R6 yielded a statistically significant joint test ($F = 5.82, p = 0.021$). Furthermore, enforcing the 5-day freshness rule demonstrated that prolonged secondary trading suspensions—such as those observed for HBL (54 days) and NIMB (47 days)—preclude reliable price observation. Methodologically defensible research must anchor market observations to statutory disclosure mandates (BAFIA Section 59(2)) and explicitly exclude stale or suspended price series.
 
-### 5.3.5 Formal Decisions on Research Hypotheses
-To formally synthesize the empirical findings against the theoretical expectations formulated in Chapter I, the decisions regarding the four research hypotheses and the joint structural stability hypothesis are summarized as follows:
+### 5.3.6 Formal Decisions on Research Hypotheses
+To formally synthesize the empirical findings against the theoretical expectations formulated in Chapter I, Table 5.1 presents the decisions on the four operational research hypotheses and the joint structural stability hypothesis.
+
+**Table 5.1: Summary of Hypothesis Testing Decisions**
+
+| Research Hypothesis | Model / Parameter | Null Hypothesis | Estimate (SE) / Stat. | Empirical Decision |
+|---|---|---|---|---|
+| **$H_1$: EPS Relevance** | Model 1 Baseline $\beta_E$ | $H_0: \beta_E = 0$ | 2.095 (4.096), $p = 0.616$ | Fail to Reject $H_0$ |
+| | Model 2 Pre $\beta_E$ | $H_0: \beta_E = 0$ | 5.577 (3.560), $p = 0.140$ | Fail to Reject $H_0$ |
+| **$H_2$: BVPS Relevance** | Model 1 Baseline $\beta_B$ | $H_0: \beta_B = 0$ | 0.219 (1.858), $p = 0.908$ | Fail to Reject $H_0$ |
+| | Model 2 Pre $\beta_B$ | $H_0: \beta_B = 0$ | 0.100 (1.306), $p = 0.940$ | Fail to Reject $H_0$ |
+| **$H_3$: EPS Regime Shift** | Model 2 Interaction $\delta_E$ | $H_0: \delta_E = 0$ | $-3.124$ (4.003), $p = 0.448$ | Fail to Reject $H_0$ |
+| **$H_4$: BVPS Regime Shift** | Model 2 Interaction $\delta_B$ | $H_0: \delta_B = 0$ | $-1.758$ (1.231), $p = 0.175$ | Fail to Reject $H_0$ |
+| **Joint Regime Shift** | Model 2 Joint Wald | $H_0: \delta_E = \delta_B = 0$ | $F(2, 14) = 2.954, p = 0.085$ | Fail to Reject $H_0$ |
+| **(Composite Test)** | R6 Joint Wald (Sens.) | $H_0: \delta_E = \delta_B = 0$ | $F(2, 10) = 5.818, p = 0.021$ | Reject $H_0$ (at 5%) |
+
+*Note.* Decisions evaluated at $\alpha = 0.05$ two-tailed significance threshold. Standard errors and Wald tests estimated under MacKinnon-White HC3 robust covariance matrix on Student's $t$ residual degrees of freedom ($\text{df} = 16$ for Model 1; $\text{df} = 14$ for Model 2; $\text{df} = 10$ for R6).
+
+As summarized in Table 5.1, the empirical evaluations lead to the following formal decisions:
 1. **Hypothesis 1 ($H_1$: Value Relevance of EPS):** Evaluated via the null hypothesis $H_0: \beta_E = 0$. In the baseline two-way fixed effects Model 1, the earnings slope was $\hat{\beta}_E = 2.095$ ($t = 0.51, p = 0.616$ on $t(16)$); in Model 2, the pre-consolidation earnings slope was $\hat{\beta}_E = 5.577$ ($t = 1.57, p = 0.140$ on $t(14)$). Because both $p$-values exceed the 5% significance threshold, the study fails to reject the null hypothesis $H_0$. Accounting earnings do not exhibit a statistically significant association with post-reporting-deadline market prices once macro-temporal shocks are absorbed.
 2. **Hypothesis 2 ($H_2$: Value Relevance of BVPS):** Evaluated via the null hypothesis $H_0: \beta_B = 0$. In Model 1, the book value slope was $\hat{\beta}_B = 0.219$ ($t = 0.12, p = 0.908$ on $t(16)$); in Model 2, the pre-consolidation book value slope was $\hat{\beta}_B = 0.100$ ($t = 0.08, p = 0.940$ on $t(14)$). Failing to attain statistical significance at the 5% level, the evidence fails to reject $H_0$. Book value per share exerts no statistically significant incremental pricing effect in the baseline specification.
 3. **Hypothesis 3 ($H_3$: Structural Regime Shift in EPS Slope):** Evaluated via the null hypothesis $H_0: \delta_E = 0$ in Model 2. The estimated interaction parameter was $\hat{\delta}_E = -3.124$ ($t = -0.78, p = 0.448$ on $t(14)$). Because $p > 0.05$, the study fails to reject $H_0$. The individual compression in the earnings valuation slope across the 2023 consolidation wave is not statistically significant.
@@ -115,25 +138,25 @@ To formally synthesize the empirical findings against the theoretical expectatio
 
 ## 5.4 Implications of the Study
 
-The findings and methodological insights of this dissertation offer targeted implications across multiple institutional domains:
+The findings and methodological insights of this dissertation offer targeted, actionable implications partitioned across three institutional domains:
 
-### 5.4.1 Implications for Regulatory Authorities (Nepal Rastra Bank)
-1. **Scrutiny of Post-Merger Asset Quality and Provisioning Transparency:**
+### 5.4.1 Implications for Regulatory Authorities (NRB, SEBON, and NEPSE)
+1. **Scrutiny of Post-Merger Asset Quality and Provisioning Transparency (NRB):**
    The observed downward compression in earnings multiples and the lack of a positive book value pricing anchor post-consolidation coincide with market caution regarding the asset quality of merged commercial banks. NRB's supervisory departments should prioritize rigorous on-site asset quality reviews (AQRs) across consolidated entities. Standardized, transparent impairment testing of loan books assimilated during amalgamations is essential to restore market confidence in reported financial accounts.
-2. **Evaluation of Mandatory Consolidation Policies:**
+2. **Evaluation of Mandatory Consolidation Policies (NRB):**
    While consolidation mandates reduced the universal population of commercial banks from 32 to 20, the empirical evidence indicates that horizontal amalgamations were accompanied by substantial earnings transitoriness and valuation compression. Policy frameworks should consider that structural combinations do not automatically translate into improved financial stability or higher equity valuations in the short to medium term.
-3. **Transparency in Capital Distribution Directives:**
+3. **Transparency in Capital Distribution Directives (NRB):**
    The sharp reduction in cash dividend distributions post-consolidation removed a historical valuation anchor for bank equities. NRB should provide clear, forward-looking guidelines regarding dividend distribution criteria and counter-cyclical capital buffer expectations, helping market participants formulate realistic cash flow projections.
-
-### 5.4.2 Implications for Securities Market Regulators and Exchanges (SEBON and NEPSE)
-1. **Reforming Secondary Market Trading Suspension Practices:**
-   A critical institutional friction identified in this study was the extended suspension of secondary market trading during merger processes, which froze trading for up to 54 days past statutory reporting deadlines. SEBON and NEPSE should enforce trading continuity during corporate combinations, restricting trading halts to at most a few sessions around share swap execution. Continuous price discovery is vital to maintain liquidity and avoid information distortion.
-2. **Standardizing Corporate Disclosure Timelines and Digital Access:**
-   Under Section 59(2) of BAFIA, commercial banks are legally mandated to publish audited financial statements within nine months into the subsequent fiscal year. To eliminate fragmented corporate disclosures and ensure uniform public access, SEBON and NEPSE should operationalize a centralized electronic disclosure portal where audited annual reports, quarterly NFRS financials, and merger swap audit reports are uploaded instantaneously with certified timestamps.
-3. **Discouraging Endogenous Ratios in Equity Research:**
+4. **Reforming Secondary Market Trading Suspension Practices (SEBON and NEPSE):**
+   A critical institutional friction identified in this study was the extended merger-related trading suspensions, which froze secondary market trading for up to 54 days past statutory reporting deadlines. SEBON and NEPSE should enforce trading continuity during corporate combinations, restricting trading halts to at most a few sessions around share swap execution. Continuous price discovery is vital to maintain liquidity and avoid information distortion.
+5. **Standardizing Corporate Disclosure Timelines and Digital Access (SEBON and NEPSE):**
+   Under Section 59(2) of BAFIA, commercial banks are legally mandated to publish audited financial statements within nine months into the subsequent fiscal year. To mitigate the risk of fragmented corporate disclosures and ensure uniform public access, SEBON and NEPSE should operationalize a centralized electronic disclosure portal where audited annual reports, quarterly NFRS financials, and merger swap audit reports are uploaded instantaneously with certified timestamps.
+6. **Discouraging Endogenous Ratios in Equity Research (SEBON and NEPSE):**
    Given the historical use of endogenous price-earnings multiples in local equity research and academic literature, regulatory education frameworks should promote sound financial modeling practices that avoid regressing share price on price-derived ratios.
+7. **Standardizing NFRS Restatement Disclosures (Accounting Standard Setters):**
+   The Accounting Standards Board (ASB) of Nepal and ICAN should enforce uniform reporting of bonus-adjusted basic EPS and diluted EPS across consecutive annual reports, ensuring transparent historical comparability following capital expansions.
 
-### 5.4.3 Implications for Commercial Bank Executives and Boards of Directors
+### 5.4.2 Implications for Commercial Bank Executives and Boards of Directors
 1. **Prioritizing Post-Merger Operational and Credit Integration:**
    The observed earnings dispersion post-consolidation highlights the necessity for executive leadership to focus on internal operational harmonization. Boards of directors of consolidated banks should expedite the integration of management information systems, unify core banking software, and align credit underwriting standards to address legacy loan portfolios.
 2. **Transparent Disclosure of Restructuring Adjustments:**
@@ -141,19 +164,13 @@ The findings and methodological insights of this dissertation offer targeted imp
 3. **Communication of Sustainable Capital Policies:**
    Bank executives should pursue sustainable capital management strategies that balance regulatory capital adequacy maintenance with transparent, predictable dividend distribution policies.
 
-### 5.4.4 Implications for Equity Investors, Financial Analysts, and Market Participants
+### 5.4.3 Implications for Equity Investors, Financial Analysts, and Market Participants
 1. **Scrutinizing Book Value Composition:**
    Equity investors and analysts in Nepal should exercise caution when using unadjusted book value per share as a safety metric for consolidated banks. In the post-merger banking era, reported book equity may encompass capital issued against stressed assets or restructuring costs. Fundamental analysis should examine the underlying quality of net assets, adjusting for unamortized goodwill and loan provisioning levels.
 2. **Recognizing Earnings Transitoriness in Merged Institutions:**
-   Market participants should account for the fact that reported accounting earnings in the immediate years following major amalgamations can exhibit heightened transitoriness due to credit-loss charges and integration expenses. Valuation models should utilize normalized operational metrics rather than headline basic EPS.
+   Market participants should account for the fact that reported accounting earnings in the immediate years following major amalgamations can exhibit heightened transitoriness due to credit-loss charges and integration expenses. Valuation models should use normalized operational metrics rather than headline basic EPS.
 3. **Incorporating Macro-Temporal Factors:**
    Financial analysts must recognize that macroeconomic cycles—including systemic liquidity, policy rates, and broad market sentiment—exert a dominant influence on bank share prices. Valuation frameworks should incorporate macro-temporal factors rather than relying solely on static accounting multiples.
-
-### 5.4.5 Implications for Academic Researchers and Accounting Standard Setters
-1. **Adopting Rigorous Panel Econometric Frameworks:**
-   This dissertation demonstrates the importance of rigorous econometric modeling in Nepalese empirical accounting research. Graduate researchers and academic institutions should eliminate mathematically circular regressors (such as P/E predicting MPS), incorporate two-way fixed effects to control for unobserved bank and temporal heterogeneity, and employ robust inference methods such as HC3.
-2. **Standardizing NFRS Restatement Disclosures:**
-   The Accounting Standards Board (ASB) of Nepal and ICAN should enforce uniform reporting of bonus-adjusted basic EPS and diluted EPS across consecutive annual reports, ensuring transparent historical comparability following capital expansions.
 
 ---
 
@@ -170,13 +187,15 @@ Based on the synthesized conclusions and institutional implications, the followi
 ### 5.5.2 Avenues for Future Academic Inquiry
 While this dissertation has established an econometric baseline for evaluating accounting value relevance across the 2023 consolidation wave, several fruitful avenues remain open for future scholarly research:
 
-1. **Extension to Long-Horizon Post-Consolidation Panels:**
+1. **Methodological Rigor and Econometric Specification in Frontier Markets:**
+   This dissertation demonstrates the critical importance of rigorous panel econometric specifications in Nepalese accounting research. Graduate researchers and academic institutions should eliminate mathematically circular regressors (such as P/E predicting MPS), incorporate two-way fixed effects to control for unobserved bank and temporal heterogeneity, and employ finite-sample robust inference methods such as MacKinnon-White HC3 on Student's $t$ residual degrees of freedom.
+2. **Extension to Long-Horizon Post-Consolidation Panels:**
    This study examined the post-consolidation regime across three initial fiscal years (FY 2079/80 through FY 2081/82). As additional financial years elapse, future research should re-estimate the interactive valuation models over longer post-merger horizons (5 to 10 years) to evaluate whether valuation multiples recover once integration is fully completed.
-2. **Expansion to the Full Commercial Banking Population:**
+3. **Expansion to the Full Commercial Banking Population:**
    Future studies should expand the cross-sectional sample to encompass all 20 surviving commercial banks on NEPSE, employing difference-in-differences (DiD) panel frameworks that compare aggressively merged banking series against a larger cohort of organically grown or minimally consolidated peer institutions.
-3. **Investigation of Non-Financial Disclosure and ESG Metrics:**
+4. **Investigation of Non-Financial Disclosure and ESG Metrics:**
    Subsequent research should examine the value relevance of non-financial indicators, corporate governance metrics, digital banking investments, and Environmental, Social, and Governance (ESG) disclosures among Nepalese financial institutions, assessing whether non-accounting disclosures provide incremental pricing power.
-4. **Intraday Event-Study Methodologies:**
+5. **Intraday Event-Study Methodologies:**
    Building upon the panel findings of this study, future inquiries could employ high-frequency, intraday event-study methodologies to capture the immediate market reaction surrounding statutory board dividend announcements, AGM approvals, and quarterly earnings releases, quantifying the speed and informational efficiency of NEPSE's price discovery mechanism.
-5. **Cross-Sectoral Valuation Comparative Inquiries:**
+6. **Cross-Sectoral Valuation Comparative Inquiries:**
    Finally, comparative studies should investigate accounting value relevance across divergent sectors of the Nepalese economy, contrasting the commercial banking industry with insurance companies, hydropower developers, microfinance institutions, and manufacturing corporations to evaluate how divergent regulatory environments shape the pricing of earnings and book value.
