@@ -1,36 +1,32 @@
 \clearpage
 \addcontentsline{toc}{chapter}{Report of Research Committee}
 \thispagestyle{plain}
-\begin{center}
-{\fontsize{14}{18}\selectfont\bfseries Report of Research Committee\par}
-\end{center}
+\frontPageTitle{Report of Research Committee}
 
-\vspace{1.5cm}
-
-% NOTE (visual-reference pass): this page follows FOM 2019 Appendix B
-% p. 25 exactly, as a filled-in form. The sentence keeps a dotted blank
-% for the supervisor's name (unknown, never invented); the two
-% supervisor blocks and the bordered date boxes are the template's own
-% layout, including the second block's Name/Signature/Position order.
-\setstretch{1.5}
+% Pixel-perfect copy of the reference (Gurung dissertation, p. iii)
+% structure, per Krishna's override: the FOM label/box layout is
+% replaced by Gurung's signatory stacks (signature line, name line,
+% title line) with plain date labels on the right and no bordered
+% boxes. Boxes were then restored around the date sections per
+% Krishna (label + dotted line inside each box, 0.9 cm gap as in the
+% earlier FOM version, "Date:" lines replaced by dots); the left
+% column narrowed 229 pt to 200 pt so the 199 pt box interiors fit.
+% FOM margins are kept (text starts at 90.28 pt, not Gurung's
+% 108 pt), as on the title page; relative gaps and pitches are copied
+% (body 20.76 grid, dots-to-name 30.0, name-to-title 28.0,
+% label-to-Date 25.3). Names: the sentence keeps Asmita Subedi;
+% supervisor and chairperson names are unknown, so their name lines
+% are dotted blanks (never invented). The previous FOM version is
+% backed up at ~/workspace/frontmatter_build/research_committee_fom_version.tex.
+\setstretch{1}\fontsize{12}{20.76}\selectfont
 Ms.~Asmita Subedi has defended research proposal entitled \textbf{``VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS''} successfully. The research committee has registered the dissertation for further progress. It is recommended to carry out the work as per suggestions and guidance of supervisor \makebox[5cm]{\dotfill} and submit the thesis for evaluation and viva voce examination.
 
-\vspace{2.5cm}
+\vspace{1.24cm}
 
-\singlespacing
-\noindent
-% Column math (text width 433 pt): left 0.46 = 199 pt holds the longest
-% left label (head, 180 pt); box parbox 0.46 = 199 pt holds the longest
-% box label (defended date, 193 pt) on one line. \null\dotfill (not
-% bare \dotfill) is required inside the boxes: a bare \dotfill at the
-% start of a line after \\ is discarded and renders nothing. The
-% blocks are side-by-side [t] parboxes (not a tabular): a tabular
-% p-column put each box level with its block's LAST line instead of
-% its first, while [t] parboxes align the box label with the block's
-% first line, as in the template.
+\setstretch{1}\fontsize{12}{14.5}\selectfont
 {\setlength{\fboxsep}{8pt}
-\parbox[t]{0.46\textwidth}{Name of Supervisor \dotfill\\Position: \dotfill\\Signature: \dotfill}\hspace{0.02\textwidth}\parbox[t]{0.52\textwidth}{\fbox{\parbox[t]{0.46\textwidth}{\textbf{Dissertation Proposal Defended Date:}\\[0.4cm]\null\dotfill}}}
-\par\vspace{2.0cm}
-\noindent\parbox[t]{0.46\textwidth}{Name of Supervisor \dotfill\\Signature: \dotfill\\Position: \dotfill}\hspace{0.02\textwidth}\parbox[t]{0.52\textwidth}{\fbox{\parbox[t]{0.46\textwidth}{\textbf{Dissertation Submitted Date:}\\[0.4cm]\null\dotfill}}}
-\par\vspace{2.0cm}
-\noindent\parbox[t]{0.46\textwidth}{Name of head of Research committee \dotfill\\Signature: \dotfill}\hspace{0.02\textwidth}\parbox[t]{0.52\textwidth}{\fbox{\parbox[t]{0.46\textwidth}{\textbf{Dissertation Viva Voce Date:}\\[0.4cm]\null\dotfill}}}}
+\noindent\parbox[t]{200pt}{\makebox[120pt]{\dotfill}\\[15.5pt]\makebox[120pt]{\dotfill}\\[13.5pt]Dissertation Supervisor}\hspace{10pt}\parbox[t]{223pt}{\fbox{\parbox[t]{199pt}{\textbf{Dissertation Proposal Defended Date:}\\[0.9cm]\null\dotfill}}}
+\par\vspace{1.11cm}
+\noindent\hfill\parbox[t]{223pt}{\fbox{\parbox[t]{199pt}{\textbf{Dissertation Submitted Date:}\\[0.9cm]\null\dotfill}}}
+\par\vspace{1.48cm}
+\noindent\parbox[t]{200pt}{\makebox[120pt]{\dotfill}\\[15.5pt]\makebox[120pt]{\dotfill}\\[13.5pt]Chairperson, Research Committee}\hspace{10pt}\parbox[t]{223pt}{\fbox{\parbox[t]{199pt}{\textbf{Dissertation Viva Voce Date:}\\[0.9cm]\null\dotfill}}}}

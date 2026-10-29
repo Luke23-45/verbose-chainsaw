@@ -72,23 +72,69 @@
 \renewcommand{\listfigurename}{List of Figures}
 
 % Format Chapter headings matching TU FOM convention:
-% "CHAPTER I", newline, "INTRODUCTION" (14pt bold centered)
-\titleformat{\chapter}[display]
-  {\normalfont\large\bfseries\centering\setstretch{1}}
-  {\MakeUppercase{\chaptertitlename\ \thechapter}}
-  {6pt}
-  {\MakeUppercase}
+% "CHAPTER I", newline, "INTRODUCTION" (14pt bold centered).
+% Kept as a command (not inline) so \thesisFrontList can switch to the
+% front-page title format for a list and restore this one afterwards.
+\newcommand{\mainChapterFormat}{%
+  \titleformat{\chapter}[display]
+    {\normalfont\large\bfseries\centering\setstretch{1}}
+    {\MakeUppercase{\chaptertitlename\ \thechapter}}
+    {6pt}
+    {\MakeUppercase}%
+}
+\mainChapterFormat
 % Chapter numbers display in Roman (the thesis prose convention:
-% Chapter I..V), while section, table, figure, and equation numbers
-% stay Arabic. \thechapter itself is Roman, so the dependent
-% counters are pinned to \arabic{chapter} explicitly; a bare
-% \thechapter change alone would renumber them to IV.1, Table IV.1.
+% Chapter I..V), while section and equation numbers stay Arabic.
+% \thechapter itself is Roman, so the dependent counters are
+% pinned to \arabic{chapter} explicitly; a bare \thechapter
+% change alone would renumber them to IV.1.
+% Tables and figures are numbered sequentially through the whole
+% document (1, 2, 3...), as in the reference PDF — not per chapter
+% (4.1, A.1). \counterwithout stops the chapter reset, and the
+% plain \arabic forms make captions, \ref, and LOT/LOF entries
+% all follow the same sequence. No prose number is hard-coded
+% (verified by grep), so every in-text reference updates
+% automatically. Sections and equations keep chapter numbers.
 \renewcommand{\thechapter}{\Roman{chapter}}
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
-\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
-\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\counterwithout{table}{chapter}
+\counterwithout{figure}{chapter}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 \titlespacing*{\chapter}{0pt}{10pt}{20pt}
+
+% Front-page titles. Reference: Gurung (2025) dissertation front pages
+% (reference.pdf) — every front-page title is Times New Roman Bold 16pt
+% (pdftohtml font id 1: 24 units = 16pt, on the title, certification,
+% research committee, approval, acknowledgements, contents, tables,
+% figures, abbreviations, and abstract pages). Defined ONCE here; no
+% front file hardcodes a title size. \frontPageTitle is for the
+% hand-written front titles. \thesisTitleFont / \titlePageBodyFont are
+% the title page's own calibrated fonts from the reference line grid
+% (16/27.6 title, 12/20.76 body). \frontChapterFormat is for the
+% generated list headings (Contents / Tables / Figures), which are
+% \chapter* headings internally, so they cannot use \frontPageTitle.
+\newcommand{\frontPageTitleFont}{\setstretch{1}\fontsize{16}{20}\selectfont\bfseries}
+\newcommand{\frontPageTitle}[1]{%
+  \begin{center}{\frontPageTitleFont #1\par}\end{center}%
+}
+\newcommand{\thesisTitleFont}{\fontsize{16}{27.6}\selectfont\bfseries}
+\newcommand{\titlePageBodyFont}{\fontsize{12}{20.76}\selectfont}
+\newcommand{\frontChapterFormat}{%
+  \titleformat{\chapter}[display]
+    {\normalfont\frontPageTitleFont\centering}
+    {}
+    {0pt}
+    {}%
+}
+% Signature-block leading. FOM 2019 p. 24 (Certification) and p. 25
+% (Research Committee) both use the same pitch: template lines sit
+% 26.7 PDF pt apart (p. 24: 548.22 -> 574.98 -> 601.62; p. 25 block 1:
+% 311.44 -> 338.20 -> 364.86), versus the 20.7 pt body pitch. In TeX
+% points that is 26.8 pt. Defined once here; authorship.tex and
+% research_committee.tex only name the command.
+\newcommand{\fomSignatureFont}{\setstretch{1}\fontsize{12}{26.8}\selectfont}
 
 % Section and subsection headings (12pt bold)
 \titleformat{\section}
@@ -109,24 +155,37 @@
   {\thesubsubsection}{0.5em}{}
 \titlespacing*{\subsubsection}{0pt}{8pt}{2pt}
 
-% TOC formatting (12pt Times New Roman, single spaced per FOM p. 20)
+% TOC formatting (12pt Times New Roman). Front entries use this
+% format: regular, matching Gurung (front entries regular, Title
+% Page entry italic via \itshape in its own \addcontentsline).
+% Numbered chapter entries get bold label + text from the \bfseries
+% in the label code below (it persists through the entry text).
+% Two deliberate deviations from Gurung, both forced by tocloft:
+% chapter dots + page numbers stay regular (not bold) and chapter
+% gaps stay single 20.7 pt (not Gurung's double 41.4 pt), because
+% tocloft gives dots + numbers the format's font and one format
+% must serve front and chapter entries. A mid-stream format switch
+% was tried and rejected: tocloft echoes it as \ttl@change right
+% after the Table of Contents entry, which would turn the four
+% later front entries (List of Tables, List of Figures, List of
+% Abbreviations, Abstract) bold with double spacing.
 \titlecontents{chapter}
   [0em]
-  {\addvspace{8pt}\normalfont\normalsize\bfseries}
-  {\MakeUppercase{\chaptername\ \thecontentslabel:\ }}
+  {\addvspace{6.2pt}\normalfont\normalsize}
+  {\bfseries\MakeUppercase{\chaptername\ \thecontentslabel:\ }}
   {}
   {\enspace\titlerule*[0.5pc]{.}\contentspage}
 
 \titlecontents{section}
-  [2.0em]
-  {\addvspace{3pt}\normalfont\normalsize}
+  [3.0em]
+  {\addvspace{6.2pt}\normalfont\normalsize}
   {\contentslabel[\thecontentslabel]{2.0em}}
   {\hspace*{-2.0em}}
   {\enspace\titlerule*[0.5pc]{.}\contentspage}
 
 \titlecontents{subsection}
-  [4.2em]
-  {\addvspace{1pt}\normalfont\normalsize}
+  [4.6em]
+  {\addvspace{6.2pt}\normalfont\normalsize}
   {\contentslabel[\thecontentslabel]{2.6em}}
   {\hspace*{-2.6em}}
   {\enspace\titlerule*[0.5pc]{.}\contentspage}
@@ -166,17 +225,47 @@
 
 % One front-matter list (Contents / Tables / Figures), single-spaced,
 % on its own page, as in the old main.tex.
-% Front-matter list pages (TOC, LOT, LOF): single-spaced, and each
-% registers itself in the TOC, like the reference thesis does for its
-% preliminary pages. #1 is the TOC entry text, #2 the list command.
-% The entry is written after the \clearpage so it records this page.
-\newcommand{\thesisFrontList}[2]{%
+% List of Tables / List of Figures entry geometry (titletoc, not
+% tocloft — tocloft is NOT loaded; \titlecontents is titletoc's and
+% the \cft... lengths do not exist here). Reference (Gurung) title
+% column sits 69.3 pt right of her margin; with FOM margins the
+% labels sit at our margin and titles at margin + 69.3 pt.
+% Labels read "Table 1" / "Figure 1", as in the reference list:
+% the 69.3 pt label box holds the word plus the sequential
+% number. titletoc starts the number code at the title column,
+% so the code first backs up the full 69.3 pt (the way
+% \contentslabel does) — a bare \makebox without that back-up
+% lands the label at the title column and pushes titles to
+% margin + 138.6 pt (caught by measurement).
+\titlecontents{table}
+  [69.3pt]
+  {\normalfont\normalsize}
+  {\hspace*{-69.3pt}\makebox[69.3pt][l]{Table~\thecontentslabel}}
+  {}
+  {\enspace\titlerule*[0.5pc]{.}\contentspage}
+\titlecontents{figure}
+  [69.3pt]
+  {\normalfont\normalsize}
+  {\hspace*{-69.3pt}\makebox[69.3pt][l]{Figure~\thecontentslabel}}
+  {}
+  {\enspace\titlerule*[0.5pc]{.}\contentspage}
+
+% Front-matter list pages (TOC, LOT, LOF): each registers itself in
+% the TOC, like the reference thesis does for its preliminary pages.
+% #1 (optional, default 1) is the entry leading as a stretch factor,
+% #2 the TOC entry text, #3 the list command. The entry is written
+% after the \clearpage so it records this page. TOC stays single
+% (FOM p. 20 excepts only the contents); LOT/LOF take 1.5, the FOM
+% general rule, matching the body leading of 21.75 pt.
+\newcommand{\thesisFrontList}[3][1]{%
   \clearpage
-  \addcontentsline{toc}{chapter}{#1}
+  \addcontentsline{toc}{chapter}{#2}
   \begingroup
-  \singlespacing
+  \setstretch{#1}
   \setlength{\parskip}{0pt}
-  #2
+  \frontChapterFormat
+  #3
+  \mainChapterFormat
   \endgroup
 }
 
@@ -205,12 +294,15 @@
     {\MakeUppercase{Appendix\ \thechapter}}
     {6pt}
     {\MakeUppercase}%
-  % \appendix has already set \thechapter to \Alph, so restoring the
-  % chapter-based counter forms gives Appendix tables/figures A.1,
-  % not 6.1 (the \arabic{chapter} forms above would give 6.1 here).
+  % \appendix has already set \thechapter to \Alph, so the section
+  % form gives Appendix sections A.1, not 6.1 (the \arabic{chapter}
+  % form above would give 6.1 here). Tables and figures keep the
+  % plain document sequence (they continue past the chapters, no
+  % A.1 restart); only sections and equations take the appendix
+  % letter here.
   \renewcommand{\thesection}{\thechapter.\arabic{section}}%
-  \renewcommand{\thetable}{\thechapter.\arabic{table}}%
-  \renewcommand{\thefigure}{\thechapter.\arabic{figure}}%
+  \renewcommand{\thetable}{\arabic{table}}%
+  \renewcommand{\thefigure}{\arabic{figure}}%
   \renewcommand{\theequation}{\thechapter.\arabic{equation}}%
 }
 
@@ -218,7 +310,7 @@
 % per FOM p. 20). Old main.tex wrote this block out inline.
 \newcommand{\thesisBibliography}{%
   \phantomsection
-  \addcontentsline{toc}{chapter}{References}
+  \addcontentsline{toc}{chapter}{\bfseries References}
   \begingroup
   \singlespacing
   \urlstyle{APACsame}

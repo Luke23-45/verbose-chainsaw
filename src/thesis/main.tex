@@ -46,12 +46,17 @@
 
 % Table of Contents (single-spaced per FOM p. 20)
 \thesisFrontList{Table of Contents}{\tableofcontents}
+% The appendices hide their automatic TOC entries with tocdepth -1
+% (see the Appendices block below). \setcounter is global, so that
+% value would otherwise leak past the Contents and empty the List
+% of Tables/Figures; restore it here, right after the Contents.
+\setcounter{tocdepth}{2}
 
-% List of Tables
-\thesisFrontList{List of Tables}{\listoftables}
+% List of Tables (1.5 leading per FOM p. 20 general rule)
+\thesisFrontList[1.5]{List of Tables}{\listoftables}
 
-% List of Figures
-\thesisFrontList{List of Figures}{\listoffigures}
+% List of Figures (1.5 leading per FOM p. 20 general rule)
+\thesisFrontList[1.5]{List of Figures}{\listoffigures}
 
 % List of Abbreviations
 \input{front/abbreviations}
@@ -62,6 +67,9 @@
 % =============================================================================
 % MAIN BODY OF THE DISSERTATION (Chapters I - V)
 % =============================================================================
+% FULL THESIS (2026-10-29, Krishna): all five chapters, References,
+% and Appendices restored. The partial-build state (Chapters II,
+% III, V commented out, with a forced chapter counter) is gone.
 
 \clearpage
 \pagestyle{mainbody}
@@ -89,6 +97,7 @@
 % =============================================================================
 % SUPPLEMENTARY MATERIALS SECTION
 % =============================================================================
+% Full thesis (2026-10-29): all chapters, References, and Appendices.
 
 % References (APA 6th edition, single spaced with hanging indent per FOM p. 20)
 \clearpage
@@ -98,6 +107,16 @@
 \clearpage
 \appendix
 \thesisAppendixHeadings
+
+% Single TOC entry for the appendices (2026-10-29, Krishna): the
+% three appendix chapters keep their body headings (APPENDIX A/B/C),
+% but the TOC lists one bold "Appendix" entry. The tocdepth line
+% hides the three automatic appendix entries (and any appendix
+% sections) from the TOC; it runs inside the TOC's own group when
+% the .toc file is read, so it cannot leak into the List of
+% Tables/Figures.
+\addcontentsline{toc}{chapter}{\bfseries Appendix}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
 
 \input{appendices/appendix_a}
 \input{appendices/appendix_b}
