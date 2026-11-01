@@ -53,7 +53,7 @@ The specific selection criteria for the sampled banks are:
 \begin{enumerate}[label=(\roman*)]
   \item Commercial bank series involved in the major early-2023 consolidation wave;
   \item Inclusion of a comparison series not involved in the early-2023 merger wave; and
-  \item Availability of audited annual reports across the six fiscal years (FY 2076/77--2081/82) and market-price records that can be assessed under the five-calendar-day reporting-deadline window.
+  \item Availability of audited annual reports for the six fiscal years FY 2076/77--2081/82 and market-price records that can be assessed under the five-calendar-day reporting-deadline window.
 \end{enumerate}
 
 The five purposively selected commercial bank series, identified by their current corporate names, are:
@@ -96,37 +96,8 @@ Accounting figures are checked against the source banks' audited reports. Market
 \subsection{Research framework and definition of variables}
 The conceptual research framework guiding this study is rooted in the accounting value-relevance model of \citet{ohlson1995} and the post-merger valuation framework of \citet{kwon2020}. It is depicted in Figure~\ref{fig:framework}. Market price per share at the reporting-deadline window ($\mathit{MPS}^{RD}$) is the dependent variable. Earnings per share (EPS) and book value per share (BVPS) are the primary independent variables. The consolidation period indicator ($\mathit{Post}_t$) serves as an interaction variable to examine whether the accounting-price slope coefficients differed across the consolidation period. Bank fixed effects ($\mu_i$) and fiscal-year fixed effects ($\lambda_t$) control for unobserved time-invariant bank characteristics and common macroeconomic shocks.
 
-\begin{figure}[!ht]
-\centering
-\captionsetup{font={small,it},labelsep=period,margin={18pt,0pt},singlelinecheck=false,justification=justified}
-\begin{tikzpicture}[
-  box/.style={rectangle, draw, minimum width=3.8cm, minimum height=0.75cm, align=center, font=\normalsize},
-  depbox/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.6cm, align=center, font=\normalsize},
-  modbox/.style={rectangle, draw, dashed, minimum width=4.2cm, minimum height=0.85cm, align=center, font=\normalsize},
-  ctrlbox/.style={rectangle, draw, dotted, minimum width=4.2cm, minimum height=0.85cm, align=center, font=\normalsize},
-  arrow/.style={thick,->,>=stealth}
-]
-  \node[box] (eps) at (0, 1.1) {Earnings Per Share (EPS)};
-  \node[box] (bvps) at (0, -0.3) {Book Value Per Share (BVPS)};
-  
-  \node[depbox] (mps) at (7.8, 0.4) {Market Price Per Share\\($\mathit{MPS}^{RD}$)};
-  
-  \node[modbox] (post) at (3.9, 2.3) {Consolidation Period\\($\mathit{Post}_t$: Pre vs.\ Post)};
-  \node[ctrlbox] (fe) at (3.9, -1.5) {Fixed Effects Control\\(Bank $\mu_i$ \& Year $\lambda_t$)};
-
-  \draw[arrow] (eps.east) -- node[above, font=\footnotesize] {$\beta_E$} ([yshift=10pt]mps.west);
-  \draw[arrow] (bvps.east) -- node[below, font=\footnotesize] {$\beta_B$} ([yshift=-10pt]mps.west);
-  
-  \draw[arrow, dashed] (post.south) -- (3.9, 0.4);
-  \draw[arrow, dotted] (fe.north) -- (3.9, -0.4);
-  
-  \node[above=0.08cm of post, font=\footnotesize\bfseries] {Moderating / Interaction Effect};
-  \node[below=0.12cm of bvps, font=\footnotesize\bfseries] {Fundamental Independent Variables};
-  \node[below=0.12cm of mps, font=\footnotesize\bfseries] {Dependent Variable};
-\end{tikzpicture}
-\caption{Conceptual research framework developed for this study based on Ohlson (1995) and Kwon and Wang (2020)}
-\label{fig:framework}
-\end{figure}
+% Figure 1 source lives in figures/fig_framework.tex -- edit the TikZ there.
+\input{figures/fig_framework}
 
 The operational definitions of all variables are as follows:
 
@@ -233,4 +204,4 @@ The analytical protocol proceeds through the following sequential steps:
   Additionally, because fiscal-year fixed effects absorb the market-wide price level (macroeconomic trends and NEPSE index movements), slope parameters are identified through within-year cross-sectional variation among the sampled banks. To ensure full transparency regarding specification sensitivity, baseline two-way fixed-effects estimates are compared against pooled OLS and bank-only fixed-effects models.
 \end{enumerate}
 
-Data organization, audit cross-checking, and variable coding will be performed in Python (\texttt{pandas}, \texttt{numpy}). Econometric modeling, diagnostic testing, robust HC3 covariance estimation, and visualization will be executed using Python (\texttt{statsmodels}, \texttt{seaborn}, \texttt{matplotlib}).
+Data organization, audit cross-checking, and variable coding will be performed in Python (\textit{pandas}, \textit{numpy}). Econometric modeling, diagnostic testing, robust HC3 covariance estimation, and visualization will be executed using Python (\textit{statsmodels}, \textit{seaborn}, \textit{matplotlib}).
