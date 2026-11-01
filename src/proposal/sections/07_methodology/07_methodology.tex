@@ -6,14 +6,15 @@ This study adopts a quantitative, correlational, and comparative panel research 
 Descriptive statistics summarize earnings per share (EPS), book value per share (BVPS), supplementary variables (ROA, DPS), and the standardized reporting-deadline market price ($\mathit{MPS}^{RD}$) by bank series and fiscal year. Pearson correlation coefficients describe bivariate associations and screen for pairwise collinearity. The core empirical analysis employs a two-way fixed-effects panel regression framework, estimating a baseline value-relevance model (Model~1) and a consolidation-period interaction model (Model~2) with bank fixed effects ($\mu_i$) and fiscal-year fixed effects ($\lambda_t$).
 
 The study targets 30 bank-year observations comprising five purposively selected
-commercial bank series observed over six fiscal years, FY 2076/77--2081/82. While
-audited annual reports are complete for all 30 bank-years, trading suspensions
-during corporate restructuring render two pre-consolidation price observations
-unavailable within the defined freshness window: HBL FY 2077/78 (trading suspended
-until 6 June 2022) and NIMB FY 2077/78 (trading suspended until 30 May 2022).
-Consequently, the clean realized estimation sample comprises 28 bank-year
-observations, consisting of 13 pre-consolidation observations (FY 2076/77--2078/79)
-and 15 post-consolidation observations (FY 2079/80--2081/82). Four of the five
+commercial bank series observed over six fiscal years, FY 2076/77--2081/82. The
+preliminary price-availability screen found audited annual reports for all 30
+bank-years, but trading suspensions during corporate restructuring make two
+pre-consolidation prices unavailable within the defined freshness window: HBL FY
+2077/78 (trading suspended until 6 June 2022) and NIMB FY 2077/78 (trading
+suspended until 30 May 2022). The provisional estimation sample is therefore 28
+bank-year observations: 13 classified as pre-consolidation (FY 2076/77--2078/79)
+and 15 as post-consolidation (FY 2079/80--2081/82). The final sample size will be
+confirmed after the planned source and data audit. Four of the five
 sampled bank series crossed a merger boundary during FY 2079/80 (early 2023),
 shifting reporting boundaries from the original acquiring entities to the
 consolidated institutions. Following recent panel research on Nepalese commercial
@@ -22,34 +23,37 @@ unobserved time-invariant bank heterogeneity. In this study, the interaction
 coefficients estimate differences in accounting-price associations across
 calendar periods rather than identifying causal effects of mergers.
 
-Before finalizing the sample and estimating the econometric models, a structured
-bank-by-year data feasibility screen will be executed. For every observation, the
-protocol documents: the audited annual financial report, the statutory reporting
-deadline, the first trading day following that deadline with its closing market
-price, all accounting fundamental measures, corporate actions affecting share
-bases, and the disclosure status of any cash dividend recommendation.
-Unverifiable or trading-suspended observations are explicitly documented and
-excluded rather than replaced with stale prices. Because the realized sample
-comprises 28 observations across five institutions, statistical inference is
-treated as exploratory, with full disclosure of estimation uncertainty and
-degrees of freedom.
+Before final estimation, a structured bank-by-year source and data audit will
+document the audited report, the Chaitra-end operationalization of the statutory
+reporting deadline, the first eligible trading session on or after that target
+within the five-calendar-day window, its ShareSansar-derived reported close,
+the source for each price, the accounting measures, corporate actions affecting
+share bases, and the status of any cash dividend recommendation. The audited
+report's public-release date and supporting source will also be recorded where
+verifiable. A preliminary screen
+does not establish that every report was publicly available by the statutory
+deadline; the planned audit will document any such uncertainty. Unverifiable or
+trading-suspended prices will be excluded rather than replaced with stale prices.
+Given the small provisional sample, inference will be treated as exploratory,
+with estimation uncertainty and residual degrees of freedom reported.
 
 \subsection{Population and sampling procedure}
-The target population for this study is defined by the commercial banking sector
-of Nepal following the early-2023 consolidation wave. Nepal Rastra Bank records
-list 20 commercial banks licensed as Class `A' financial institutions as of
-mid-October 2023 \citep{nrb2023list}. From this population, a purposive
-(judgmental) sample of five commercial bank series is selected. Purposive
-sampling is appropriate because the research focuses specifically on examining
-accounting value relevance across the prominent commercial bank mergers that
-reshaped the sector in early 2023, while maintaining longitudinal data
-availability.
+The study's sampling frame is Nepalese commercial banks with listed ordinary
+shares and usable annual-report and price records for FY 2076/77--2081/82. NRB's
+mid-October 2023 directory listed 20 Class A commercial banks after the
+consolidation wave; this is a historical sector snapshot, not the sample size
+or a claim about the current bank count \citep{nrb2023list}. Five bank series
+are selected purposively to cover four bank series involved in the major
+early-2023 consolidations and one series not involved in that wave. The
+resulting sample is designed for a
+focused, exploratory comparison and is not statistically representative of
+the full sector.
 
 The specific selection criteria for the sampled banks are:
 \begin{enumerate}[label=(\roman*)]
-  \item Prominent commercial bank series involved in the major early-2023 consolidation wave;
-  \item Inclusion of an established commercial bank that did not participate in the 2023 consolidation wave to provide a benchmark series; and
-  \item Availability of complete audited annual financial reports across all six fiscal years (FY 2076/77--2081/82) and verified market trading records satisfying the post-deadline freshness window.
+  \item Commercial bank series involved in the major early-2023 consolidation wave;
+  \item Inclusion of a comparison series not involved in the early-2023 merger wave; and
+  \item Availability of audited annual reports across the six fiscal years (FY 2076/77--2081/82) and market-price records that can be assessed under the five-calendar-day reporting-deadline window.
 \end{enumerate}
 
 The five purposively selected commercial bank series, identified by their current corporate names, are:
@@ -58,27 +62,36 @@ The five purposively selected commercial bank series, identified by their curren
   \item \textbf{Himalayan Bank Limited (HBL):} Acquired Civil Bank Limited; joint operations commenced on 24 February 2023 (swap ratio 100:80.28) \citep{hbl2023report}.
   \item \textbf{Kumari Bank Limited (KBL):} Absorbed Nepal Credit and Commerce Bank Limited; joint operations commenced on 1 January 2023 (swap ratio 1:1) \citep{kumari2022sgm,nrb2023list}.
   \item \textbf{Nepal Investment Mega Bank Limited (NIMB):} Amalgamation of Nepal Investment Bank Limited and Mega Bank Nepal Limited; joint operations commenced on 11 January 2023 (swap ratio 100:90) \citep{nimb2023report}.
-  \item \textbf{NMB Bank Limited (NMB):} Did not participate in the early-2023 consolidation wave, serving as the benchmark series for the 2023 restructuring. (Note: NMB acquired Kanchan Development Bank Limited in August 2020, adding approximately NPR 0.56 billion to share capital in FY 2077/78 (beyond capitalization of a 13\% bonus share distribution); this acquisition is accounted for, while its corporate identity remained continuous through the 2023 consolidation) \citep{nrb2023list}.
+  \item \textbf{NMB Bank Limited (NMB):} Did not participate in the early-2023 merger wave and is used as a comparison series, not as an untreated control. NMB commenced unified operations with Kanchan Development Bank on 23 August 2020. Accordingly, FY 2076/77 fundamentals precede that acquisition while the April 2021 price follows it; this is an additional entity-timing mismatch and will be examined by excluding the affected NMB bank-year in a sensitivity analysis \citep{nmb2021report}.
 \end{enumerate}
 
-For merged institutions, pre-merger observations represent the acquiring institution, while post-merger observations represent the unified corporate entity. FY 2079/80 is documented as the merger transition year. Per-share figures are adjusted where necessary for bonus issues, rights offerings, and capital restructuring to ensure longitudinal comparability. Because the sample is purposive, empirical findings apply directly to the selected series rather than the entire financial system.
+For the four early-2023 merger series, observations before the mergers refer to the acquiring institutions and later observations refer to the combined entities. FY 2079/80 is treated as the merger-transition year; FY 2078/79 accounting measures for those four banks are paired with April 2023 prices observed after their mergers. Primary EPS values follow the current year's audited basic EPS; BVPS is recomputed from year-end ordinary equity and shares outstanding, with reported NAV used as a reconciliation check. Retrospectively restated EPS and bonus-adjusted BVPS are used only in separately identified sensitivity analyses. Findings are specific to these selected series.
 
 \subsection{Nature and sources of data collection}
-This study relies exclusively on verified secondary financial and market data. Data sources are structured into primary empirical inputs and contextual regulatory materials:
+This study uses secondary financial and market data. Accounting data are
+extracted from the banks' published audited reports. Market-price observations
+come from a ShareSansar-derived daily-price dataset and are checked, where
+available, against exact-date records from other aggregators. These checks do
+not establish that the observations are official NEPSE closing prices.
 
-\textbf{Primary Empirical Data Sources:}
+\textbf{Accounting source documents:}
 \begin{itemize}
-  \item Audited annual financial statements (Statements of Financial Position, Statements of Profit or Loss, and Statements of Changes in Equity) extracted directly from published annual reports of the five sampled commercial banks; and
-  \item Market share price series retrieved from established capital market data aggregators (ShareSansar, Merolagani, and FinancialNotices), cross-checked against trading archives and corporate disclosure records.
+  \item Audited annual financial statements (Statements of Financial Position, Statements of Profit or Loss, and Statements of Changes in Equity) from the five sampled banks' published annual reports.
 \end{itemize}
 
-\textbf{Contextual and Regulatory Data Sources:}
+\textbf{Market-price sources and verification:}
+\begin{itemize}
+  \item ShareSansar-derived daily records supply the reported close values \citep{sharesansar2026}. Exact-date Merolagani checks match 29 of the 30 candidate values by LTP; for NMB FY 2076/77 on 13 April 2021, the dataset/ShareSansar close is NPR 437.00 and Merolagani reports LTP NPR 436.00 \citep{merolagani2026}. The ShareSansar check is not independent of the dataset source.
+  \item FinancialNotices reports the same Close values for all five FY 2081/82 observations \citep{financialnotices2026}. No primary NEPSE close record has been independently verified for the complete sample.
+\end{itemize}
+
+\textbf{Contextual and regulatory sources:}
 \begin{itemize}
   \item Nepal Rastra Bank (NRB) publications, directives, and licensed institution directories;
   \item Securities Board of Nepal (SEBON) annual reports and capital market reviews; and
   \item Ministry of Finance (MoF), Government of Nepal, \textit{Economic Survey} reports.
 \end{itemize}
-All figures extracted from secondary compilations are reconciled against the primary audited reports. Any discrepancies are resolved in favor of the originating audited financial accounts.
+Accounting figures are checked against the source banks' audited reports. Market-price source differences are retained and disclosed; accounting-document checks do not resolve price-source discrepancies.
 
 \subsection{Research framework and definition of variables}
 The conceptual research framework guiding this study is rooted in the accounting value-relevance model of \citet{ohlson1995} and the post-merger valuation framework of \citet{kwon2020}. It is depicted in Figure~\ref{fig:framework}. Market price per share at the reporting-deadline window ($\mathit{MPS}^{RD}$) is the dependent variable. Earnings per share (EPS) and book value per share (BVPS) are the primary independent variables. The consolidation period indicator ($\mathit{Post}_t$) serves as an interaction variable to examine whether the accounting-price slope coefficients differed across the consolidation period. Bank fixed effects ($\mu_i$) and fiscal-year fixed effects ($\lambda_t$) control for unobserved time-invariant bank characteristics and common macroeconomic shocks.
@@ -111,19 +124,29 @@ The conceptual research framework guiding this study is rooted in the accounting
   \node[below=0.12cm of bvps, font=\footnotesize\bfseries] {Fundamental Independent Variables};
   \node[below=0.12cm of mps, font=\footnotesize\bfseries] {Dependent Variable};
 \end{tikzpicture}
-\caption{Research framework (Source: adapted from Ohlson, 1995; Kwon and Wang, 2020)}
+\caption{Conceptual research framework developed for this study based on Ohlson (1995) and Kwon and Wang (2020)}
 \label{fig:framework}
 \end{figure}
 
 The operational definitions of all variables are as follows:
 
-\textbf{Market Price per Share at Reporting Deadline ($\mathit{MPS}^{RD}$):} The dependent variable, measured in Nepalese Rupees (NPR), is the secondary market closing price for ordinary shares on the first trading session following the statutory nine-month audited-reporting publication deadline specified under Section 59(2) of the Banks and Financial Institutions Act, 2017 \citep{bafia2017}, operationalized at the end of Chaitra (mid-April) of the following fiscal year. Market prices are retrieved from cross-checked capital market data series (ShareSansar, Merolagani, and FinancialNotices) and reconciled against historical trading archives. This fixed reporting-window measurement relies on the statutory mandate that audited annual accounts be made public within this nine-month window, avoiding the look-ahead error of Ashadh-end prices and the measurement ambiguity of reconstructing 30 unverified corporate announcement timestamps. If a security was suspended from trading or recorded no transactions within a five-day calendar window following the deadline, the observation is coded as missing rather than imputed from stale dates. Two bank-year observations fail this freshness rule due to prolonged merger-related trading suspensions: HBL FY 2077/78 (trading resumed 6 June 2022, 54 days late) and NIMB FY 2077/78 (trading resumed 30 May 2022, 47 days late). Consequently, 28 clean price observations are realized for empirical analysis, as presented in Table~\ref{tab:mps_rd}.
+\textbf{Market Price per Share in the Reporting-Deadline Window ($\mathit{MPS}^{RD}$):} The dependent variable, measured in Nepalese Rupees (NPR), is the ShareSansar-derived reported close for ordinary shares on the first eligible trading date on or after Chaitra-end, the study's operationalization of the statutory nine-month audited-reporting deadline in Section 59(2) of the Banks and Financial Institutions Act, 2017 \citep{bafia2017}. The eligible observation must fall within five calendar days of the Chaitra-end target; if no eligible trade is recorded in that window, the observation is coded missing rather than carried forward. This is a standardized deadline-window proxy, not a price tied to each bank's actual disclosure date or an event-time market response. The legal requirement does not establish that each bank published its audited statements by that date; actual release dates and sources will be recorded where verifiable, and uncertain timing will limit interpretation as value relevance. Price-source checks and their limits are described above and in Table~\ref{tab:mps_rd}. Two candidate observations fail the freshness rule after merger-related suspensions: HBL FY 2077/78 (trading resumed 6 June 2022, 54 days after the target) and NIMB FY 2077/78 (30 May 2022, 47 days after the target). The preliminary screen therefore leaves 28 candidate observations, subject to the planned final audit.
 
 \textbf{Earnings per Share (EPS):} Basic earnings per share, in NPR per ordinary share, extracted from each fiscal year's own audited Statement of Profit or Loss (the own-current reported basic EPS rule). EPS reflects net profit attributable to ordinary equity holders divided by the weighted-average number of ordinary shares outstanding during the fiscal year. Retrospective audited restatements reported in subsequent annual reports are retained for sensitivity analysis rather than overwriting original audited figures.
 
 \textbf{Book Value per Share (BVPS):} Net worth per ordinary share, in NPR, calculated as total ordinary shareholders' equity attributable to equity holders of the bank at fiscal year-end divided by the number of ordinary shares outstanding at that date, recomputed from balance-sheet components with printed Net Asset Value (NAV) per share used as an audit reconciliation check.
 
-\textbf{Consolidation Period Indicator ($\mathit{Post}_t$):} A binary temporal indicator variable set to $1$ for observations belonging to the post-consolidation period (FY 2079/80, 2080/81, and 2081/82) and $0$ for observations in the pre-consolidation period (FY 2076/77, 2077/78, and 2078/79). This variable interacts with EPS and BVPS to test for parameter shifts across the two periods.
+\textbf{Consolidation Period Indicator ($\mathit{Post}_t$):} A binary temporal
+indicator set to $1$ for observations belonging to the post-consolidation period
+(FY 2079/80, 2080/81, and 2081/82) and $0$ for observations in the
+pre-consolidation period (FY 2076/77, 2077/78, and 2078/79). Classification is
+by the fiscal year of the accounting measures, not by the market-price
+observation date. Thus FY 2078/79 remains in the pre-consolidation baseline even
+though its April 2023 price observations followed the early-2023 mergers; this
+entity-timing mismatch is assessed separately in the sensitivity analysis. FY
+2079/80 is treated as the merger-transition fiscal year and is excluded in a
+separate sensitivity analysis. The indicator interacts with EPS and BVPS to
+test for slope differences across the specified periods.
 
 \textbf{Supplementary / Robustness Variables:}
 \begin{itemize}
@@ -131,19 +154,19 @@ The operational definitions of all variables are as follows:
   \item \textit{Dividend per Share (DPS):} Cash dividend per ordinary share, in NPR, recommended for the corresponding fiscal year that was publicly declared on or prior to the $\mathit{MPS}^{RD}$ observation date. Documented zero-dividend decisions are recorded as zero; unannounced or unverifiable recommendations are treated as missing.
 \end{itemize}
 
-\textbf{Exclusion of Price-Derived Ratios:} The price-earnings (P/E) ratio is strictly excluded from all specifications because $\text{P/E}=\text{MPS}/\text{EPS}$. Including a variable that embeds the dependent variable directly in its numerator creates artificial correlation and distorts coefficient interpretation.
+\textbf{Exclusion of Price-Derived Ratios:} The price-earnings (P/E) ratio is excluded from all specifications because $\text{P/E}=\text{MPS}/\text{EPS}$. Since it contains the dependent variable in its numerator, its inclusion would create direct mathematical overlap and make its coefficient difficult to interpret as the separate association of an accounting measure with price.
 
 \begin{table}[!ht]
 \centering
 \small
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
-\caption{Realized $MPS^{RD}$ observation dates, market closing prices, and trading status}
+\caption{Preliminary $MPS^{RD}$ observation dates, market closing prices, and trading status}
 \label{tab:mps_rd}
 \begin{tabular}{llccccc}
 \toprule
 \textbf{Fiscal Year} & \textbf{Observation Date} & \textbf{GBIME} & \textbf{HBL} & \textbf{KBL} & \textbf{NIMB} & \textbf{NMB} \\
 \midrule
-FY 2076/77 & 13 April 2021 & 450.00 & 520.00 & 328.00 & 466.00 & 437.00 \\
+FY 2076/77 & 13 April 2021 & 450.00 & 520.00 & 328.00 & 466.00 & 437.00$^e$ \\
 FY 2077/78 & 13 April 2022 & 299.70 & \textit{Missing}$^a$ & 222.00 & \textit{Missing}$^b$ & 293.00 \\
 FY 2078/79 & 13 April 2023 & 189.00$^c$ & 231.00$^c$ & 176.00$^c$ & 191.00$^c$ & 235.00 \\
 FY 2079/80 & 14 April 2024$^d$ & 179.00 & 183.00 & 136.90 & 156.00 & 176.00 \\
@@ -155,7 +178,7 @@ FY 2081/82 & 13 April 2026 & 238.00 & 208.50 & 229.00 & 210.70 & 248.40 \\
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Prices in NPR per share retrieved from capital market data aggregators (ShareSansar and Merolagani; cross-checked against FinancialNotices for FY 2081/82). $^a$HBL merger-related trading suspension until 6 June 2022 (54 days late); $^b$NIMB (formerly NIB) suspended until 30 May 2022 (47 days late); both coded as missing under the 5-day freshness rule. $^c$Entity timing transition: fundamentals reflect pre-merger standalone operations, while April 2023 prices reflect post-merger consolidated trading. $^d$Chaitra end fell on Friday, 12 April 2024; Sunday, 14 April 2024 was the first subsequent NEPSE trading session. Realized clean $N = 28$ observations (13 pre-consolidation, 15 post-consolidation).
+\textit{Note.} Prices are ShareSansar-derived reported closes. Exact-date Merolagani LTPs match 29 of 30 values; NMB FY 2076/77 is NPR 437.00 in the dataset/ShareSansar record and NPR 436.00 in Merolagani. FinancialNotices Close matches all five FY 2081/82 values. No NEPSE official close was independently verified for the full sample. $^a$HBL was suspended until 6 June 2022 (54 days after the target); $^b$NIMB (formerly NIB) until 30 May 2022 (47 days after); both are missing under the 5-day rule. $^c$For the four merged banks, FY 2078/79 fundamentals are pre-merger while April 2023 prices are post-merger. $^d$Chaitra end was Friday, 12 April 2024; the next trading session was Sunday, 14 April 2024. $^e$NMB FY 2076/77 fundamentals predate its Kanchan acquisition, while the April 2021 price follows it. Preliminary usable $N = 28$ (13 pre-consolidation, 15 post-consolidation); final sample subject to audit.
 \end{minipage}
 \end{table}
 
@@ -178,7 +201,7 @@ To investigate whether the value relevance of accounting fundamentals differed b
 \end{aligned}
 \label{eq:model2}
 \end{equation}
-Because the specification includes a full set of fiscal-year fixed effects ($\lambda_t$), the standalone $\mathit{Post}_t$ indicator is a deterministic linear combination of the year indicators ($\sum_{t \in \text{Post}} \lambda_t$) and is perfectly collinear with them. Consequently, the standalone $\mathit{Post}_t$ term is absorbed by the year fixed effects and is not estimated separately.
+Because the specification includes a full set of fiscal-year fixed effects ($\lambda_t$), the standalone $\mathit{Post}_t$ indicator equals the sum of the fiscal-year indicator variables for FY 2079/80, FY 2080/81, and FY 2081/82. It is therefore perfectly collinear with the year fixed effects, is absorbed by them, and is not estimated separately.
 
 For Model~2, the baseline valuation slopes during the pre-consolidation period are given by $\beta_E$ and $\beta_B$. The interaction coefficients $\delta_E$ and $\delta_B$ measure incremental slope shifts between the pre- and post-consolidation periods. Consequently, the post-consolidation slope for EPS is $(\beta_E + \delta_E)$, while for BVPS it is $(\beta_B + \delta_B)$.
 
@@ -187,24 +210,24 @@ The analytical protocol proceeds through the following sequential steps:
 \begin{enumerate}
   \item \textbf{Descriptive and Bivariate Analysis:} Mean, standard deviation, minimum, and maximum are computed for each variable across bank series and fiscal years. Pearson correlation coefficients and scatter matrices screen for bivariate associations and severe pairwise collinearity.
   \item \textbf{Estimation of Baseline Model (Model~1):} Evaluates Hypotheses~H1 ($\beta_E \ne 0$) and H2 ($\beta_B \ne 0$) using two-tailed tests at the 5\% significance level ($\alpha = 0.05$). Parameter estimates, standard errors, and 95\% confidence intervals are reported.
-  \item \textbf{Estimation of Interaction Model (Model~2):} Evaluates Hypotheses~H3 ($\delta_E \ne 0$) and H4 ($\delta_B \ne 0$) to test for parameter differences across periods. The primary test evaluates the joint null hypothesis:
+  \item \textbf{Estimation of Interaction Model (Model~2):} Evaluates H3 ($\delta_E \ne 0$) and H4 ($\delta_B \ne 0$) as two-sided coefficient tests at $\alpha = 0.05$, reporting estimates, standard errors, and 95\% confidence intervals. The primary omnibus test evaluates the joint null hypothesis:
   \begin{equation}
   H_0: \delta_E = \delta_B = 0
   \end{equation}
-  using a joint Wald $F$-test. Rejection of $H_0$ provides statistical evidence that the accounting-price relationship differed across the consolidation period.
+  using an HC3-based joint Wald $F$-test at the 5\% significance level. Rejection of $H_0$ provides evidence that at least one estimated accounting-price slope differs across the specified periods; it does not establish that consolidation caused the difference.
   \item \textbf{Robustness and Sensitivity Checks:}
   \begin{itemize}
     \item \textit{ROA Specification:} EPS is replaced with ROA in Models~1 and 2 to evaluate sensitivity to an asset-scaled profitability measure.
-    \item \textit{Dividend Specification:} In supplementary estimation, eligible DPS is included as an explanatory variable in Models~1 and 2 for bank-years where dividend declarations preceded the price window, noting that adding DPS reduces residual degrees of freedom in Model~2 from 14 to 13 on the clean $N = 28$ sample.
-    \item \textit{Transition and Entity-Timing Sensitivity:} Model~2 is re-estimated excluding: (a) the transition fiscal year (FY 2079/80) to verify results are not driven by the initial merger shock; and (b) FY 2078/79 to account for entity timing mismatch where pre-merger fundamentals are paired with post-consolidation April 2023 market prices.
-    \item \textit{Bonus Share Adjustments:} Models are re-estimated using bonus-adjusted per-share metrics to evaluate parameter stability.
-    \item \textit{Restated EPS Sensitivity:} Specifications are re-estimated using retrospective audited basic EPS restatements from subsequent annual reports to evaluate slope stability against subsequent-year capital adjustments.
+    \item \textit{Dividend Specification:} In supplementary estimation, eligible DPS is included as an explanatory variable in Models~1 and 2 for bank-years where dividend declarations preceded the price window. On the same $N = 28$ observations, adding DPS would add one parameter and reduce Model~2's residual degrees of freedom from 14 to 13. Unavailable or unverifiable eligible DPS may further reduce the estimation sample.
+    \item \textit{Transition and Entity-Timing Sensitivity:} Model~2 is re-estimated excluding (a) FY 2079/80 to assess sensitivity to the merger-transition year; (b) FY 2078/79, when the four merged banks' pre-merger fundamentals are paired with April 2023 prices after their mergers; and (c) NMB FY 2076/77, when pre-Kanchan fundamentals are paired with a post-acquisition April 2021 price. These exclusions are evaluated separately because simultaneous exclusions would further reduce an already small sample.
+    \item \textit{Bonus Share Adjustment:} Model~2 is re-estimated with bonus-adjusted BVPS as a sensitivity check; the primary EPS series is unchanged.
+    \item \textit{Restated EPS Sensitivity:} Model~2 is re-estimated using subsequent audited restatements of EPS where reported, using the restated values as published rather than applying a mechanical adjustment rule.
   \end{itemize}
   \item \textbf{Econometric Diagnostics and Inferential Caveats:}
   Diagnostic checks include Variance Inflation Factors (VIF) and tolerance statistics for multicollinearity, the Breusch-Pagan/Cook-Weisberg test for heteroskedasticity, Cook's distance for influential outliers, and Q-Q plots for residual normality.
   
   \begin{sloppypar}
-  Across the realized clean sample of $N = 28$ observations (13 pre-consolidation and 15 post-consolidation rows), Model~2 estimates 14 parameters (one constant, 4 bank fixed effects, 5 year fixed effects, and 4 slope coefficients), yielding $28 - 14 = 14$ residual degrees of freedom. In addition, econometric research demonstrates that cluster-robust standard errors are unreliable when the number of clusters is small ($G = 5$) \citep{cameron2008clusters}. Accordingly, hypothesis tests and standard errors are computed using MacKinnon-White HC3 heteroskedasticity-robust standard errors, and inference is interpreted cautiously as exploratory indicators. Results are framed as observed differences in empirical associations across structural periods rather than causal impacts of mergers.
+  If the provisional $N = 28$ sample is confirmed, Model~2 estimates 14 parameters (one constant, 4 bank fixed effects, 5 year fixed effects, and 4 slope coefficients), leaving $28 - 14 = 14$ residual degrees of freedom. Cluster-robust inference is unreliable with so few bank clusters ($G = 5$) \citep{cameron2008clusters}. HC3 standard errors are used for heteroskedasticity; they do not account for arbitrary within-bank dependence over time and are not a correction for the small number of clusters. Accordingly, the tests are exploratory, and results are interpreted as differences in association across periods rather than causal merger effects.
   \end{sloppypar}
   
   Additionally, because fiscal-year fixed effects absorb the market-wide price level (macroeconomic trends and NEPSE index movements), slope parameters are identified through within-year cross-sectional variation among the sampled banks. To ensure full transparency regarding specification sensitivity, baseline two-way fixed-effects estimates are compared against pooled OLS and bank-only fixed-effects models.
