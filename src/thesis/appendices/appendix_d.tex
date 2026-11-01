@@ -1,0 +1,272 @@
+\chapter{Data Sources and Reproducibility Documentation}
+\label{app:reproducibility}
+
+This appendix is the reproducibility record for a thesis submitted without any accompanying repository or code. It is written so that a reader holding only this thesis and the public sources it names can audit every number, rebuild the 28-row analysis panel, and verify the estimates against Chapter IV. The documentation follows the structure of the Data and Code Availability Policy of the American Economic Association \citep{aea2026datacode} (a data availability statement, provenance for each source, and details on each dataset). It is modelled on that standard and is not a claim of compliance with it, because no code is shared. Tables~\ref{tab:app_register}--\ref{tab:app_sample} in this appendix use the shared row key of bank series and fiscal year, identical to the keys in Appendices A and B. Chapter III states the methods in narrative form; this appendix states the operational record underneath them.
+
+\section{Data Availability}
+
+The complete analysis dataset is printed in Appendix B: all 30 planned bank-year observations, of which 28 are realized in the estimation sample and two are flagged as window-excluded. The price verification table is printed in Appendix A (Table~\ref{tab:app_price_verification}). This appendix adds the source register (Tables~\ref{tab:app_register} and~\ref{tab:app_locators}), the statute and calendar sources (Table~\ref{tab:app_statute}), the variable codebook (Table~\ref{tab:app_codebook}), and the sample construction log (Table~\ref{tab:app_sample}).
+
+The 30 reports, 328.30 MB and 5,663 pages in total, cannot be printed in a thesis. Table~\ref{tab:app_register} therefore gives, for each of the 30 reports, its retrieval route and content identifiers (page count, file size, and SHA-256 prefix) so that a reader can obtain the identical file and confirm its identity before reading any value from it.
+
+Terms of use, by source, are as follows. Bank annual reports are audited statements published under the publication duty in Section 59(2) of the Banks and Financial Institutions Act, 2017, and are public disclosure documents. NEPSE, Merolagani, FinancialNotices, and ShareSansar price pages are publicly accessible pages; all live market checks in this thesis were accessed on 2026-10-27. The nepse-data dataset is a public GitHub repository that carries no licence file, so no licence is claimed for it. The analysis panel itself is printed in Appendix B. The provenance statements in this appendix also follow the FAIR principles for reusable data \citep{wilkinson2016fair}: R1.2, which asks that data carry detailed provenance, meaning a record of where each value came from and how it was handled; and R1.1, which asks that data carry a clear usage licence, reflected in the terms-of-use lines above and in Table~\ref{tab:app_statute}. Where no licence exists, as for the dataset, that absence is stated rather than filled in.
+
+Two dates are kept separate throughout this appendix. The reports were collected in October 2026 (source register dated 2026-10-27). Per-report retrieval dates were not recorded at collection, so none are invented here. Every re-verification reported in this appendix was performed on 1 November 2026: file existence, page counts, SHA-256 recomputation, statement and dividend page ranges, dividend page cross-checks, and price-series boundaries were all re-checked on that date.
+
+\section{Source Register}
+
+Table~\ref{tab:app_register} identifies every report. Table~\ref{tab:app_locators} locates every value: the Statement of Financial Position pages, the Statement of Profit or Loss pages, the dividend proposal page, and the indicators or highlights location for each bank-year.
+
+{\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedleft\arraybackslash}p{0.08\textwidth}>{\raggedleft\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
+\caption{Annual Report Identification Register: 30 Reports}
+\label{tab:app_register}\\
+\toprule
+\textbf{Series} & \textbf{Fiscal Year} & \textbf{Edition} & \textbf{Route} & \textbf{Pages} & \textbf{Size (MB)} & \textbf{SHA-256 (first 12)} \\
+\midrule
+\endfirsthead
+\textbf{Series} & \textbf{Fiscal Year} & \textbf{Edition} & \textbf{Route} & \textbf{Pages} & \textbf{Size (MB)} & \textbf{SHA-256 (first 12)} \\
+\midrule
+\endhead
+GBIME & FY 2076/77 & English & Bank website & 182 & 9.37 & \texttt{e283d0061aac} \\
+GBIME & FY 2077/78 & English & Bank website & 180 & 10.77 & \texttt{602ffaa583e4} \\
+GBIME & FY 2078/79 & English & Bank website & 176 & 14.73 & \texttt{5d5685d87eb8} \\
+GBIME & FY 2079/80 & English & Bank website & 186 & 13.85 & \texttt{f35baf9725dc} \\
+GBIME & FY 2080/81 & English & Bank website & 126 & 5.73 & \texttt{46be4fac6ee7} \\
+GBIME & FY 2081/82 & English & Bank website & 352 & 41.51 & \texttt{59c65f10642a} \\
+\midrule
+HBL & FY 2076/77 & English & Wayback capture & 122 & 3.16 & \texttt{3b3ed73d00ca} \\
+HBL & FY 2077/78 & English & Wayback capture & 128 & 4.29 & \texttt{678359f8bfcc} \\
+HBL & FY 2078/79 & English & Wayback capture & 134 & 8.51 & \texttt{020fb56c24f5} \\
+HBL & FY 2079/80 & English & Wayback capture & 142 & 6.48 & \texttt{5cc6265d4a67} \\
+HBL & FY 2080/81 & English & Wayback capture & 146 & 7.81 & \texttt{fb3052f302a3} \\
+HBL & FY 2081/82 & English & Wayback capture & 148 & 8.15 & \texttt{ea1949d7b95f} \\
+\midrule
+KBL & FY 2076/77 & English & Bank website & 188 & 10.12 & \texttt{a86ac977fc7f} \\
+KBL & FY 2077/78 & English & Bank website & 220 & 4.98 & \texttt{75fe8a20c19a} \\
+KBL & FY 2078/79 & English & Bank website & 224 & 6.98 & \texttt{e0be3d803137} \\
+KBL & FY 2079/80 & English & Bank website & 336 & 18.29 & \texttt{a295813f11c5} \\
+KBL & FY 2080/81 & English & Bank website & 196 & 8.26 & \texttt{53d82ae3bb59} \\
+KBL & FY 2081/82 & English & Bank website & 257 & 12.76 & \texttt{2bf5712f25e0} \\
+\midrule
+NIMB & FY 2076/77 & English & Bank website & 176 & 5.5 & \texttt{8bf39860d16e} \\
+NIMB & FY 2077/78 & English & Bank website & 180 & 9.11 & \texttt{10600b369c50} \\
+NIMB & FY 2078/79 & English & Bank website & 188 & 4.74 & \texttt{51c916047efc} \\
+NIMB & FY 2079/80 & English & Bank website & 212 & 30.08 & \texttt{bb487ab636b3} \\
+NIMB & FY 2080/81 & English & Bank website & 204 & 13.35 & \texttt{c874001c057f} \\
+NIMB & FY 2081/82 & English & Bank website & 194 & 35.69 & \texttt{07911bdcb2c9} \\
+\midrule
+NMB & FY 2076/77 & English & Bank website & 260 & 5.43 & \texttt{2ef3c667e974} \\
+NMB & FY 2077/78 & English & Bank website & 160 & 3.62 & \texttt{f9b57d5fbeb9} \\
+NMB & FY 2078/79 & English & Bank website & 186 & 6.76 & \texttt{495b83b14b42} \\
+NMB & FY 2079/80 & Nepali & Bank website & 150 & 4.56 & \texttt{ecd7423be796} \\
+NMB & FY 2080/81 & English & Bank website & 158 & 4.85 & \texttt{f077680faeae} \\
+NMB & FY 2081/82 & English & Bank website & 152 & 8.87 & \texttt{fb4ebe0e5111} \\
+\bottomrule
+\end{longtable}}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Report files follow the pattern \texttt{<SERIES>\_FYxxxx-xx\_annual\_report.pdf}, except NMB FY 2079/80, whose file is \texttt{NMB\_FY2079-80\_annual\_report\_NP.pdf} (Nepali edition). Routes: GBIME, bank website annual-report page, https://www.globalimebank.com/np/annual-report/ (English editions); HBL, Wayback Machine captures of the bank's own annual-report listing (the live site refused connections on 2026-10-27). The HBL reports are the bank's 28th (FY 2076/77) through 33rd (FY 2081/82) annual reports; the archived copies were located under different filenames and each was matched to the local file by SHA-1 digest, earliest matching capture (UTC) shown: FY 2076/77, \texttt{HBL 28\_Annual Report 2076-077\_final.pdf}, 20220524114914; FY 2077/78, \texttt{29th Annual Report as on 15th July 2021.pdf}, 20220107061436; FY 2078/79, \texttt{HBL Annual Report With Cover\_compressed.pdf}, 20250624140054; FY 2079/80, \texttt{Himalayan Bank Annual Report 2023\_compressed.pdf}, 20240405181138; FY 2080/81, \texttt{Himalayan Bank Annual Report 2024.pdf}, 20250624140159; FY 2081/82, \texttt{Himalayan Bank Annual Report 2025\_Web.pdf}, 20260129192533. Each snapshot is \texttt{web.archive.org/web/<timestamp>id\_/} \texttt{https://www.himalayanbank.com/images/pdf/uploaded/<filename>}, with spaces encoded as \%20. The ordinal-named \texttt{30th Annual Report.pdf} captures do not match the local FY 2078/79 file and are not cited as its source; KBL, bank website reports page, https://www.kumaribank.com/reports; NIMB, bank website financial reports (nimb.com.np; legacy nibl.com.np redirects there), with pre-merger years as Nepal Investment Bank reports via the legacy site; NMB, bank website annual-report page, https://www.nmb.com.np/en/report/annual-report (the English FY 2079/80 link is dead on the bank's own server, returning an S3 NoSuchKey response, so the Nepali edition is the usable audited report). SHA-256 prefixes are the first 12 hexadecimal characters of the SHA-256 recorded at extraction; the 30 prefixes are mutually distinct, and file identity is established jointly by filename, page count, size, prefix, and route. Reports were collected in October 2026 and re-verified on 1 November 2026; all 30 recomputed SHA-256 values matched the register.
+\end{minipage}
+
+{\small\setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.30\textwidth}}
+\caption{Statement Locators: SOFP, SOPL, DPS, and Indicators Locations}
+\label{tab:app_locators}\\
+\toprule
+\textbf{Series} & \textbf{Fiscal Year} & \textbf{SOFP (PDF pp.)} & \textbf{SOPL (PDF pp.)} & \textbf{DPS p. (PDF / printed)} & \textbf{Indicators / Highlights Locator} \\
+\midrule
+\endfirsthead
+\textbf{Series} & \textbf{Fiscal Year} & \textbf{SOFP (PDF pp.)} & \textbf{SOPL (PDF pp.)} & \textbf{DPS p. (PDF / printed)} & \textbf{Indicators / Highlights Locator} \\
+\midrule
+\endhead
+GBIME & FY 2076/77 & 81--82 & 82 & 29 / 29 & p. 71 \\
+GBIME & FY 2077/78 & 75--76 & 76 & 23 / 23 & p. 65 \\
+GBIME & FY 2078/79 & 83--84 & 84 & 34 / 32 & p. 68 \\
+GBIME & FY 2079/80 & 88--89 & 89 & 36 / 34 & p. 73 \\
+GBIME & FY 2080/81 & 60--61 & 61 & 45 / 85 & p. 23 \\
+GBIME & FY 2081/82 & 182--183 & 183 & 108 / 102 & p. 33 \\
+\midrule
+HBL & FY 2076/77 & 43 & 44 & 31 / 29 & Comparative Financial Indicators (from p. 28) \\
+HBL & FY 2077/78 & 48--49 & 49 & 37 / 35 & p. 38 \\
+HBL & FY 2078/79 & 51--52 & 52 & 40 / 38 & p. 41 \\
+HBL & FY 2079/80 & 52--53 & 53 & 128 / 126 & p. 41 \\
+HBL & FY 2080/81 & 54--55 & 55 & 129 / 127 & p. 44 \\
+HBL & FY 2081/82 & 51--52 & 52 & 128 / 126 & p. 41 \\
+\midrule
+KBL & FY 2076/77 & 49 & 50 & 117 / 121 & Review of the Financial Indicators of previous years (p. 30) \\
+KBL & FY 2077/78 & 34 & 35--41 & 124 / 122 & No titled table located \\
+KBL & FY 2078/79 & 32 & 33--39 & 126 / 124 & No titled table located \\
+KBL & FY 2079/80 & 42 & 43--49 & 137 / 135 & Major Financial Indicators (p. 160) \\
+KBL & FY 2080/81 & 42 & 43--49 & 141 / 139 & Major Financial Indicators (p. 165) \\
+KBL & FY 2081/82 & 57--58 & 58 & 148 / 146 & Major Financial Indicators (p. 172) \\
+\midrule
+NIMB & FY 2076/77 & 43--44 & 44 & 138 / 136 & Major Financial Highlights (from p. 156) \\
+NIMB & FY 2077/78 & 43--44 & 44 & 141 / 139 & Major Financial Highlights (from p. 159) \\
+NIMB & FY 2078/79 & 45--46 & 46 & 145 / 143 & Major Financial Highlights (from p. 167) \\
+NIMB & FY 2079/80 & 49--50 & 50 & 152 / 150 & Major Financial Highlights (from p. 168) \\
+NIMB & FY 2080/81 & 50--51 & 51 & 155 / 154 & Major Financial Highlights (from p. 172) \\
+NIMB & FY 2081/82 & 47--48 & 48 & 143 / 141 & Major Financial Highlights (from p. 164) \\
+\midrule
+NMB & FY 2076/77 & 184--185 & 185 & 18 / 18 & pp. 45--46 \\
+NMB & FY 2077/78 & 40--42 & 42--47 & 17 / 13 & Financial Highlights (from p. 27) \\
+NMB & FY 2078/79 & 63--65 & 65 & 19 / 19 & Key Financial Highlights (p. 31) \\
+NMB & FY 2079/80 & 37--38 & 39--44 & 14 / 14 & p. 107 \\
+NMB & FY 2080/81 & 48--49 & 49 & 18 / 18 & pp. 112--113 \\
+NMB & FY 2081/82 & 37--38 & 38 & 17 / 17 & p. 104 \\
+\bottomrule
+\end{longtable}}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Page numbers are PDF pages of the files in Table~\ref{tab:app_register}, recorded at statement level, not per individual cell. All SOFP, SOPL, and DPS pages fall within the page count of their file, and all 30 DPS pages match the dividend source records exactly. GBIME statement pages are two-page spreads, so both pages of each spread are cited. Indicators column convention: ``p. XX'' is the page on which the printed EPS and NAV for that row were both located; ``pp. AA--BB'' is an adjacent-page span holding the two values; a named section with a start page means the titled table begins there and spans further pages; ``No titled table located'' means no titled indicators table was found by text search for that report. Two reports required visual reads because their text layers use legacy-encoded fonts that extract as gibberish: HBL FY 2076/77 (SOFP PDF p. 43, printed p. 41) and KBL FY 2076/77 (SOFP PDF p. 49, printed p. 53), confirmed by balance-sheet identity checks (HBL exact; KBL within 1 NPR of printed rounding). The NMB FY 2079/80 Nepali edition has the same legacy-encoding property for Devanagari text, while numerals extract cleanly; its values were recovered by word-coordinate parsing, its SOPL profit after tax was cross-checked exactly against the following year's previous column, and its dividend proposal was read visually. Numbers in the Nepali edition are printed in Western digits, so no Devanagari-numeral conversion was required; Devanagari field labels are not recoverable from the text layer, so fields were identified by statement structure and position and confirmed by the cross-checks above.
+\end{minipage}
+
+\section{Price Provenance}
+
+All $\mathit{MPS}^{RD}$ prices in this thesis come from one dataset, identified here in full. The dataset is nepse-data, published by Aabishkar2 at https://github.com/Aabishkar2/nepse-data \citep{nepsedata2026}, cloned on 2026-10-27. The clone holds 372 company CSV files under \texttt{data/company-wise/}, one per trading symbol, with columns \texttt{published\_date}, \texttt{open}, \texttt{high}, \texttt{low}, \texttt{close}, \texttt{per\_change}, \texttt{traded\_quantity}, \texttt{traded\_amount}, and \texttt{status}. At the clone date the series were current to 2026-10-26. The dataset's scraper pulls from ShareSansar, not directly from NEPSE, so every dataset price is cited as ShareSansar data via this dataset, never as a NEPSE record. The repository updates its data almost daily, so the clone date is part of the identification: a later download of the same repository is a different vintage and may differ. The repository carries no licence file.
+
+The event clock for $\mathit{MPS}^{RD}$ follows the nine-month publication duty in Section 59(2) of the Banks and Financial Institutions Act, 2017, and it must not be confused with the other duty in the same subsection. Section 59(2) imposes two separate duties: first, to submit the balance sheet and profit and loss account to Nepal Rastra Bank within three months of fiscal-year end, with details published for the public within that period; second, to make public the audited statements within nine months of the next fiscal year. The thesis uses the second duty only. It is read as fiscal-year end (Ashadh-end, mid-July) plus nine months, which is the end of Chaitra (mid-April) of the following fiscal year. The statute does not name Chaitra; end-of-Chaitra is the thesis's operationalization, and it is written that way. The resulting target deadlines are: FY 2076/77, 13 April 2021; FY 2077/78, 13 April 2022; FY 2078/79, 13 April 2023; FY 2079/80, 12 April 2024; FY 2080/81, 13 April 2025; FY 2081/82, 13 April 2026. Each deadline was verified by subtracting the recorded gap from the observation date in Table~\ref{tab:mps_rd}. Section 59(2) is cited from the Nepal Gazette text via the Nepal Law Commission repository; the Nepal Rastra Bank English rendering is labelled an unofficial translation and was not used as the authority, and the ambiguous phrase in that rendering is resolved by the stated reading rather than relied on.
+
+The observation rule is: the closing price on the first active NEPSE trading session following the target deadline, provided that session falls within a five-calendar-day window after the deadline; beyond the window the price is coded missing, never imputed from a stale date. Sundays were trading days during the study window, as the dataset's own sessions show, so a deadline falling on a Friday is followed by a Sunday session two days later, which is clean, as in FY 2079/80, where Chaitra-end fell on Friday, 12 April 2024, and the first session was Sunday, 14 April 2024.
+
+Verification of the 30 dataset price cells (28 clean observation-date prices plus the two delayed resumption prices) against Merolagani last traded prices gives 29 exact matches and one difference. For NMB FY 2076/77, the dataset records a close of NPR 437.00 on 13 April 2021, whereas Merolagani reports a last traded price of NPR 436.00. The dataset value was retained on the basis of ShareSansar's full daily record for that date (open 432, high 439, low 428, close 437.00). Because ShareSansar is the dataset's own source, this is a check of scrape accuracy against its own source, not independent verification, and the official NEPSE closing price for 13 April 2021 remains unverified against primary exchange floor archives. FinancialNotices provides an independent second check only from 28 October 2025 onward: all five FY 2081/82 rows match its Close column exactly, and those five rows are the full coverage window, not a chosen sample. No NEPSE official close has been verified for any $\mathit{MPS}^{RD}$ row, and no dataset close, Merolagani last traded price, or FinancialNotices Close is presented anywhere in this thesis as a verified NEPSE official close.
+
+The two missing rows are HBL FY 2077/78 and NIMB FY 2077/78, both in the pre-consolidation regime. For HBL, the target deadline was 13 April 2022, trading resumed on 6 June 2022 at NPR 358.90, a gap of 54 days. For NIMB, then trading as Nepal Investment Bank, the target deadline was also 13 April 2022, trading resumed on 30 May 2022 at NPR 367.70, a gap of 47 days. Both gaps exceed the five-day window, so both prices are coded missing and the rows are excluded from estimation. The cause in both cases is the failed bilateral merger between the two banks: a memorandum of understanding dated 13 May 2021, suspension of both symbols from that date, rejection by HBL shareholders at the 29th annual general meeting on 14 January 2022 \citep{tht2022hblnibl}, and resumptions on the dates above. The dataset boundaries confirm the suspension independently of any news account: the last pre-suspension rows are 12 May 2021 (HBL close 487.0, NIB close 453.0), and no rows exist for HBL from 13 May 2021 to 5 June 2022 or for NIB from 13 May 2021 to 29 May 2022. One discrepancy is recorded rather than hidden: news accounts of the last pre-suspension prices (HBL 484, NIB 460) \citep{tht2022hblnibl,sharesansar2022nib} differ from the dataset's last rows (487, 453). Confirmation of the suspensions against NEPSE's own suspension notices is outstanding and is stated as such; the merger cause rests on the cited news accounts plus the dataset boundaries above. A parallel boundary correction applies to Global IME Bank in the following year: its last trade before the Bank of Kathmandu merger suspension was 15 June 2022 (close 251.4), no rows exist from 16 June to 6 December 2022, and trading resumed on 7 December 2022 (close 221.4), consistent with the memorandum dated 16 June 2022 \citep{corporatekhabar2022gbime}. The 7 December resumption follows the NEPSE circular reported by ShareSansar \citep{sharesansar2022gbime}; that article's statement that trading was halted from 15 October 2022 is not used, because it contradicts the dataset boundary above.
+
+$\mathit{MPS}^{RD}$ is not any other price concept used during this study. It is not the post-disclosure price (closing price on the first trading day after the NEPSE disclosure date), which could be settled for only two of 30 bank-years and was abandoned as a design. It is not an Ashadh-end or fiscal-year-end price, and it is not a candidate fixed-date price from the dataset. The three price concepts are never mixed in any regression.
+
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Statute and Calendar Sources}
+\label{tab:app_statute}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}}
+\toprule
+\textbf{Source} & \textbf{What It Supplies} & \textbf{Access / Terms Line} \\
+\midrule
+Banks and Financial Institutions Act, 2017, Section 59(2) & Three-month submission duty to Nepal Rastra Bank; nine-month audited-statement publication duty (the event clock) & Nepal Gazette text via the Nepal Law Commission repository; Nepal Rastra Bank English rendering is an unofficial translation \\
+NEPSE trading calendar & Trading sessions including Sundays during the study window; holidays and suspension gaps & Session dates are established from the dataset's own trading rows and the resumption dates in this appendix \\
+nepse-data dataset (Aabishkar2) & Daily open, high, low, close, and volume by symbol; the five series used here span 2011 to 2026 & Public GitHub repository, clone of 2026-10-27, current to 2026-10-26; no licence file in the repository; scraper source is ShareSansar \\
+ShareSansar & Full daily OHLC records underlying the dataset & Public company pages, accessed 2026-10-27 \\
+Merolagani & Last traded price cross-check for all 30 dataset price cells & Public symbol pages, accessed 2026-10-27; price column labelled LTP \\
+FinancialNotices & Close cross-check for the five FY 2081/82 rows & Public price-history pages, accessed 2026-10-27; price column labelled Close; coverage begins 28 October 2025 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Access dates for all live market checks are 2026-10-27. The dataset vintage (clone of 2026-10-27) is part of its identification because the repository updates almost daily.
+\end{minipage}
+\end{table}
+
+\section{Variable Codebook}
+
+Table~\ref{tab:app_codebook} defines every variable in the analysis panel. Four rules govern all of them. First, Bank columns govern over Group columns: the panel uses the bank-only statements, because the thesis values the listed bank, not its consolidated group. Second, each year's own current column governs over any later restated previous column: a value is never overwritten by a subsequent report's restatement of it. Third, recomputation governs over printed per-share figures: EPS, BVPS, and ROA are recomputed from audited inputs, and printed EPS and NAV are cross-checks, not sources. Fourth, a dividend of zero is recorded only where the board's nil decision is documented; no dividend is ever zero-filled by assumption.
+
+Fiscal years are cited in Bikram Sambat throughout the thesis. The website labels banks use for the same years are: FY 2076/77 as 2019/20, FY 2077/78 as 2020/21, FY 2078/79 as 2021/22, FY 2079/80 as 2022/23, FY 2080/81 as 2023/24, and FY 2081/82 as 2024/25. These labels are needed to retrieve the reports, whose web listings use the Anno Domini years.
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Variable Codebook for the Analysis Panel}
+\label{tab:app_codebook}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}}
+\toprule
+\textbf{Variable} & \textbf{Definition} & \textbf{Construction} & \textbf{Source and Rule} \\
+\midrule
+$\mathit{MPS}^{RD}$ & Closing price on the first trading session after the nine-month publication deadline & Observed close, no formula & Dataset close column (ShareSansar via nepse-data); five-day window; missing beyond; never imputed \\
+EPS & Basic earnings per share, own audited report & Profit attributable divided by weighted-average shares, per NAS 33 (Nepal Accounting Standard 33, Earnings per Share, Accounting Standards Board, Nepal) & Own SOPL; own-current rule; restated values enter only in R8 \\
+BVPS & Book value per share at fiscal year-end, recomputed & Bank total equity divided by year-end shares outstanding & Own SOFP; recomputed; printed NAV is a cross-check only \\
+ROA & Return on assets, recomputed & Profit after tax divided by average total assets & Own SOPL and SOFP (current and previous year); recomputed \\
+DPS & Cash dividend per share, board-proposed & Cash dividend amount per ordinary share; bonus shares recorded separately and excluded & Board proposal in the annual report (Table~\ref{tab:app_locators}); zero only for documented nil decisions \\
+$\mathit{Post}$ & Consolidation-regime indicator & 1 for FY 2079/80 through FY 2081/82, 0 otherwise & Year-level indicator from the January--February 2023 amalgamations; absorbed by year fixed effects, never estimated standalone \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} EPS denominators use weighted-average shares per NAS 33, while BVPS uses year-end shares; in merger year FY 2079/80, EPS denominators reflect blended share weights whereas BVPS uses post-merger ending shares. Recomputation tolerances: balance-sheet identities hold within 1 NPR per row, and recomputation from the panel's own audited inputs reproduces the panel within 0.01. Two recomputed BVPS values disagree with printed NAV beyond rounding and stay flagged: HBL FY 2076/77, recomputed 187.67 against printed 187.72, and NMB FY 2081/82, recomputed 175.18 against printed 174.49. Five NIMB rows show printed NAV gaps of 0.28 to 0.40 NPR, which are whole-integer rounding in the printed highlights, not disagreements.
+\end{minipage}
+\end{table}
+
+Restatements are exactly three, and their treatment is fixed. Global IME Bank FY 2076/77 reported EPS 17.99, restated 15.33; NMB Bank FY 2077/78 reported 16.66, restated 14.76; Himalayan Bank FY 2077/78 reported 28.07, restated 27.60. Baselines and all robustness variants except R8 use the own-current reported values. R8 substitutes the restated values; because the Himalayan Bank row is window-excluded from the estimation sample, only the two in-sample substitutions affect the R8 estimates. Dividend data are complete for all 30 bank-years: 18 proposed cash dividends and 12 documented nil decisions, and every announcement date precedes its $\mathit{MPS}^{RD}$ price date.
+
+\section{Sample Construction Log}
+
+Table~\ref{tab:app_sample} closes the sample arithmetic and separates exclusions from treatments, which must never be confused. Exclusions remove rows. Treatments and disclosures change nothing in the row count but change how rows are read, and each is disclosed where it applies.
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Sample Construction Log: Exclusions and Treatments}
+\label{tab:app_sample}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.30\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}}
+\toprule
+\textbf{Stage or Treatment} & \textbf{Rows} & \textbf{Rule and Result} \\
+\midrule
+Bank-years collected & 30 & Five bank series across six fiscal years, FY 2076/77 through FY 2081/82 \\
+Less: HBL FY 2077/78 & $-1$ & Merger-related suspension; price resumed 54 days after the deadline; exceeds the five-day window; coded missing \\
+Less: NIMB FY 2077/78 & $-1$ & Merger-related suspension; price resumed 47 days after the deadline; exceeds the five-day window; coded missing \\
+Analysis sample & 28 & 13 pre-consolidation rows and 15 post-consolidation rows \\
+\midrule
+Series mapping: NIB to NIMB & 6 rows & FY 2076/77 and FY 2077/78 use Nepal Investment Bank reports; FY 2078/79 onward use Nepal Investment Mega Bank reports; one NIMB series throughout \\
+Entity-timing mismatch: FY 2078/79 & 4 rows & GBIME, HBL, KBL, and NIMB fundamentals are pre-merger standalone reports, while 13 April 2023 prices are post-merger symbols; retained in baselines, covered by R6 \\
+Merger-transition year: FY 2079/80 & 5 rows & Consolidated reports used for the four merged series; NMB did not merge in the 2023 wave; covered by R5 \\
+Restatements & 3 values & Own-current values in baselines; restated values substituted only in R8, of which two are in-sample \\
+Dividend nil decisions & 12 rows & Coded zero only where the nil decision is documented; never imputed \\
+Price-definition exclusion & --- & Post-disclosure, Ashadh-end, and candidate fixed-date prices are not used in any regression \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} The two exclusions are the only rows removed between collection and estimation. All other entries in the lower block are treatments or disclosures that leave the row count at 28.
+\end{minipage}
+\end{table}
+
+\section{Estimation Recipe}
+
+The two baseline models are the two-way fixed-effects panel regressions specified in Chapter III, Section 3.6. Model 1 is
+\begin{equation}
+\mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} + \varepsilon_{it},
+\end{equation}
+and Model 2 adds the regime-shift interactions,
+\begin{equation}
+\mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} + \delta_E (\mathit{EPS}_{it} \times \mathit{Post}_t) + \delta_B (\mathit{BVPS}_{it} \times \mathit{Post}_t) + \varepsilon_{it}.
+\end{equation}
+Fixed effects are implemented by dummy variables, not by within-demeaning: one intercept, four bank dummies with Global IME Bank as the omitted reference bank, and five fiscal-year dummies with FY 2076/77 as the omitted reference year. Model 1 therefore estimates $K = 12$ parameters on $N = 28$ observations, leaving $28 - 12 = 16$ residual degrees of freedom; Model 2 estimates $K = 14$ parameters, leaving $28 - 14 = 14$ residual degrees of freedom. The standalone consolidation indicator $\mathit{Post}_t$ is a deterministic linear combination of the three post-consolidation year dummies, so it is fully absorbed by the fiscal-year fixed effects and is not estimated separately; attempting to include it alongside the full year dummies would create exact collinearity.
+
+Inference uses ordinary least squares with MacKinnon-White HC3 heteroskedasticity-robust covariance. The HC3 variance estimator scales each squared residual by $1 / (1 - h_{ii})^2$, where $h_{ii} = x_i (X'X)^{-1} x_i'$ is the leverage of observation $i$, which inflates the influence of high-leverage observations and yields conservative standard errors in small samples. All $t$-statistics, $p$-values, and confidence intervals are referred to Student's $t$ distribution on residual degrees of freedom ($t(16)$ for Model 1, $t(14)$ for Model 2), not to asymptotic normal approximations. A leverage check on the realized design matrices confirms the estimator is defined: maximum leverage is 0.68 in Model 1 and 0.93 in Model 2, no leverage equals 1, and leverages sum to the parameter count in each model (12 and 14 respectively). Estimation was performed in Python with ordinary least squares; the analysis requirements specify statsmodels version 0.14 or later, and no exact version is claimed here because none was pinned. No code is printed in this thesis.
+
+The joint test of regime shift is the Wald test of $H_0: \delta_E = \delta_B = 0$ under the HC3 covariance matrix, reported as $F(2, 14)$ for Model 2. The eight-specification suite is: R1, Model 1; R2, Model 2; R3, Model 2 with ROA substituted for EPS; R4, Model 2 augmented with cash DPS (residual degrees of freedom 13); R5, Model 2 excluding the transition year FY 2079/80 ($N = 23$, residual degrees of freedom 10); R6, Model 2 excluding the entity-timing mismatch year FY 2078/79 ($N = 23$, residual degrees of freedom 10); R7, Model 2 with bonus-adjusted BVPS, where the adjustment divides BVPS by one plus the bonus ratio as a pro-forma forward capitalization adjustment, not a restated year-end book value; R8, Model 2 with restated EPS as defined in Section D.4. Diagnostics (variance inflation factors, Breusch-Pagan heteroskedasticity tests, Cook's distance influence measures, and residual normality) and the specification comparison across pooled OLS, bank fixed effects, and two-way fixed effects are reported in Tables~\ref{tab:t6_diagnostics} and~\ref{tab:spec_comp}; robustness estimates are reported in Table~\ref{tab:t5_robustness}.
+
+\section{Replication Checklist}
+
+A replication from the sources named in this appendix should proceed in the following order, checking each checkpoint before moving on.
+
+\begin{enumerate}
+\item Retrieve the 30 reports through the routes in Table~\ref{tab:app_register} and confirm file identity by page count, file size, and SHA-256 prefix. A mismatch at this step means a different file, and no later step can rescue it.
+\item Extract the Statement of Financial Position and Statement of Profit or Loss values at the pages in Table~\ref{tab:app_locators}. Checkpoint: every balance-sheet identity (total liabilities plus total equity against total assets, Bank columns) holds within 1 NPR per row.
+\item Recompute EPS, BVPS, and ROA from the extracted inputs under the rules in Table~\ref{tab:app_codebook}. Checkpoint: the rebuilt panel matches Appendix B to printed precision, with the flagged gaps in Table~\ref{tab:app_codebook} reproduced exactly, not smoothed away.
+\item Record cash dividends from the board proposals at the dividend pages in Table~\ref{tab:app_locators}. Checkpoint: 30 of 30 bank-years have a proposed or documented nil dividend, and every announcement date precedes its $\mathit{MPS}^{RD}$ price date.
+\item Obtain the price series from the dataset vintage in Table~\ref{tab:app_statute} and apply the deadline and five-day rules in Section D.3. Checkpoint: the rebuilt price list has 30 rows, the two delayed resumption prices are 358.90 (HBL, 6 June 2022) and 367.70 (NIMB, 30 May 2022), and both are coded missing, leaving 28 rows.
+\item Assemble the 28-row panel. Checkpoint: 13 pre-consolidation rows and 15 post-consolidation rows, with the four FY 2078/79 entity-mismatch rows flagged and the NIB to NIMB series mapping applied.
+\item Estimate Models 1 and 2 by dummy-variable ordinary least squares with HC3 covariance and $t$ inference, as in Section D.6. Checkpoint: coefficients, standard errors, and test statistics match Tables~\ref{tab:t3_model1} and~\ref{tab:t4_model2} to printed precision.
+\item Run specifications R1 through R8 as defined in Section D.6. Checkpoint: estimates and joint Wald statistics match Table~\ref{tab:t5_robustness} to printed precision, including residual degrees of freedom 16, 14, 13, and 10 as applicable.
+\item Run the diagnostics as in Section D.6. Checkpoint: results match Table~\ref{tab:t6_diagnostics}.
+\end{enumerate}
+
+Two precision rules govern the checkpoints. First, Appendix B is a printed, rounded panel, so exact replication rebuilds from the reports, not from the printed values; Appendix B is the check that the rebuild matches, to printed precision. Second, Chapter IV tables print three decimals, so a replication matches when it agrees to the last printed digit; a difference beyond the last printed digit indicates a specification difference, not rounding.
+
+\section{Limits of Reproducibility}
+
+Four limits bound what this appendix can promise. First, live web pages change: bank report listings, aggregator pages, and the dataset repository are all updated after access, so the access dates, the clone vintage, and the printed panel in Appendix B are the record, and a later retrieval is not assumed identical. Second, no NEPSE official closing price has been verified for any price row, so the study is reproducible as a cross-checked aggregator-price study, not as an official-exchange-close study, and its conclusions must be read with that boundary. Third, confirmation of the trading suspensions against NEPSE's own notices was not obtained, so the halt causes are not presented as exchange-confirmed; individual Wayback snapshot timestamps for the Himalayan Bank reports were recovered by SHA-1 matching on 1 November 2026 and are recorded in the note to Table~\ref{tab:app_register}, alongside the routes, the dataset boundaries, and the content hashes. Fourth, printed rounding in Appendix B and section-level indicators locations where noted mean that a replication must rebuild from the reports for exact values rather than copying the printed panel. Within those limits, the thesis is reconstructable: every input is named, every rule is stated, and every checkpoint is checkable from the sources in Tables~\ref{tab:app_register}--\ref{tab:app_sample}. What it is not is re-runnable from the thesis alone, because no code is shared; a reader who wants to re-execute rather than reconstruct must reimplement the recipe in Section D.6, and the checkpoints in Section D.7 are the test of whether that reimplementation matches.

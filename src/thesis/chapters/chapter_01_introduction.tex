@@ -25,7 +25,7 @@ For instance, regarding operating profitability, \citet{chhetri2023} examined 13
 
 These empirical discrepancies stem fundamentally from differences in sample composition, observation periods, econometric specifications, and variable measurement timing. However, beyond empirical divergence across static studies, the existing literature reveals four critical conceptual and methodological problems that motivate the present dissertation:
 
-\begin{enumerate}
+\begin{itemize}
 \item \textbf{The Absence of Consolidation Regime Shift Analysis:}
 Published Nepalese studies reviewed in this dissertation predominantly employ pooled OLS or static panel regression designs that estimate unconditional, full-sample average coefficients across their entire observation spans \citep{bhattarai2014,chaudhari2025,gurungdahal2025,timalsina2026}. These static models implicitly assume parameter stationarity---that the valuation multiple attached to a rupee of earnings or book value remains identical throughout the sample period. However, between January and February 2023, four prominent commercial banking mergers in recent Nepalese history commenced joint operations: Global IME Bank absorbed Bank of Kathmandu (9 January 2023); Himalayan Bank acquired Civil Bank (24 February 2023); Kumari Bank absorbed NCC Bank (1 January 2023); and Nepal Investment Bank amalgamated with Mega Bank Nepal to form NIMB (11 January 2023) \citep{gbime2022agm,hbl2023report,kumari2022sgm,nimb2023report}. These amalgamations fundamentally transformed the capital scale, loan portfolios, branch networks, and risk profiles of the surviving entities. International research demonstrates that structural corporate combinations alter the financial reporting environment, temporarily increasing earnings volatility while shifting investor attention toward balance-sheet net worth \citep{kwon2020}. No empirical study identified in the literature reviewed in Chapter II has formally evaluated whether the valuation coefficients of EPS and BVPS shifted between the pre-consolidation (FY 2076/77--2078/79) and post-consolidation (FY 2079/80--2081/82) periods using an explicit regime-interaction econometric framework.
 
@@ -37,14 +37,14 @@ A critical limitation in prior Nepalese valuation research concerns the timing o
 
 \item \textbf{Neglect of Degrees of Freedom and Small-Cluster Econometric Fragility:}
 Prior single-sector panel studies in Nepal frequently implement econometric estimation without disclosing or addressing the severe statistical constraints imposed by small cross-sectional dimensions. In fixed-effects panel models with interactive specifications, parameter proliferation rapidly consumes residual degrees of freedom. On a clean sample of $N = 28$ observations, estimating individual bank fixed effects, common fiscal-year fixed effects, and four slope coefficients leaves exactly $28 - 14 = 14$ residual degrees of freedom. Furthermore, standard cluster-robust sandwich standard errors perform poorly and exhibit substantial finite-sample downward bias when the number of clusters is small ($G = 5$) \citep{cameron2008clusters}. Prior empirical studies in Nepal reviewed in Chapter II have largely left these inferential hazards unaddressed, risking false discoveries and overstated statistical precision. Rigorous modeling requires explicit parameter accounting and the deployment of MacKinnon-White HC3 heteroskedasticity-robust inference, accompanied by transparent non-causal interpretation.
-\end{enumerate}
+\end{itemize}
 
 To address these empirical, methodological, and econometric problems, this study investigates three central research questions:
-\begin{enumerate}
+\begin{itemize}
 \item \textbf{Research Question 1:} Are fundamental accounting measures---specifically earnings per share (EPS) and book value per share (BVPS)---statistically associated with post-reporting-deadline market share prices ($MPS^{RD}$) among the selected Nepalese commercial banks?
 \item \textbf{Research Question 2:} Did the estimated valuation associations of EPS and BVPS with market share prices differ significantly between the pre-consolidation period (FY 2076/77--2078/79) and the post-consolidation period (FY 2079/80--2081/82)?
 \item \textbf{Research Question 3:} Are the baseline and consolidation-interaction findings robust to alternative operating profitability specifications, inclusion of eligible dividend disclosures, adjustment for bonus share capitalization, retrospective earnings restatements, and the econometric exclusion of structural transition periods?
-\end{enumerate}
+\end{itemize}
 
 \section{Objectives of the Study}
 \label{sec:objectives}
@@ -52,7 +52,7 @@ To address these empirical, methodological, and econometric problems, this study
 The overarching general objective of this dissertation is to examine the accounting value relevance of financial information and evaluate whether the empirical relationships between accounting fundamentals and equity market prices differed before and after the 2023 commercial banking consolidation wave across five purposively selected commercial bank series in Nepal.
 
 To achieve this general objective, the study establishes the following specific objectives:
-\begin{enumerate}
+\begin{itemize}
 \item \textbf{To estimate the baseline value relevance} of earnings per share (EPS) and book value per share (BVPS) in relation to secondary market share prices measured at a standardized post-reporting-deadline window ($MPS^{RD}$) within a two-way fixed-effects panel regression framework.
 \item \textbf{To test whether the empirical valuation slopes} of EPS ($\beta_E$) and BVPS ($\beta_B$) differed between the pre-consolidation period (FY 2076/77--2078/79) and the post-consolidation period (FY 2079/80--2081/82) by evaluating interaction parameters ($\delta_E, \delta_B$) and a joint Wald coefficient test.
 \item \textbf{To evaluate the econometric robustness and stability} of the value-relevance estimates across alternative specifications, including:
@@ -64,7 +64,7 @@ To achieve this general objective, the study establishes the following specific 
 \item Re-estimation using bonus-adjusted per-share metrics to account for share capital dilutions; and
 \item Re-estimation using retrospective audited basic EPS restatements from subsequent annual reports.
 \end{itemize}
-\end{enumerate}
+\end{itemize}
 
 \section{Hypotheses of the Study}
 \label{sec:hypotheses}
@@ -139,7 +139,7 @@ Rejecting this joint null hypothesis provides statistical evidence that the over
 
 This dissertation is justified on theoretical, methodological, empirical, and practical grounds. As Nepal's commercial banking sector emerges from the structural consolidation wave of 2022--2023, understanding how capital markets perceive and price accounting disclosures is critical for financial transparency, capital allocation, and regulatory design. The specific rationale and significance of this research include:
 
-\begin{enumerate}
+\begin{itemize}
 \item \textbf{Theoretical and Conceptual Contribution:}
 While the residual income valuation framework of \citet{ohlson1995} has been extensively tested in developed equity markets, its applicability in frontier environments undergoing rapid structural transformation remains underexplored. By synthesizing Ohlson's (1995) valuation model with the post-merger value-relevance framework of \citet{kwon2020}, this study provides a coherent theoretical structure for assessing how corporate amalgamations alter the relative informational roles of income-statement flows (earnings) versus balance-sheet stocks (book value). It grounds the empirical valuation of Nepalese banks within formal accounting valuation theory.
 
@@ -156,16 +156,16 @@ The findings of this study provide actionable insights for diverse capital marke
 \item \textbf{Commercial Bank Management and Boards of Directors:} Informs bank executives regarding the capital-market consequences of earnings volatility, dividend payout stability, and balance-sheet transparency following corporate amalgamations.
 \item \textbf{Nepal Rastra Bank (NRB):} Offers the central bank empirical observations on how secondary equity markets evaluate capital and earnings metrics surrounding policy-driven bank consolidations, assisting in the design of future prudential capital and reporting guidelines.
 \item \textbf{Securities Board of Nepal (SEBON) and NEPSE:} Highlights the critical importance of timely corporate disclosures, centralized announcement timestamp databases, and the market-distorting effects of prolonged merger-related trading suspensions.
-\item \textbf{Academic Researchers:} Provides a documented, reproducible dataset and analytical codebase, rigorous two-way fixed-effects methodology, and robust finite-sample econometric protocols for future researchers investigating financial-sector dynamics in South Asia.
+\item \textbf{Academic Researchers:} Provides a documented, reproducible dataset and reproducibility appendix (Appendix~\ref{app:reproducibility}), rigorous two-way fixed-effects methodology, and robust finite-sample econometric protocols for future researchers investigating financial-sector dynamics in South Asia.
 \end{itemize}
-\end{enumerate}
+\end{itemize}
 
 \section{Limitations of the Study}
 \label{sec:limitations}
 
 To maintain academic integrity and assist readers in interpreting the findings within their proper context, the methodological, institutional, and empirical boundaries of this research are explicitly acknowledged. In accordance with the \textit{Master's Degree Dissertation Guidelines (2019)} of the Faculty of Management, a clear distinction is maintained between the scope of the study (which defines its deliberate boundaries) and the limitations that arise within that scope:
 
-\begin{enumerate}
+\begin{itemize}
 \item \textbf{Small Purposive Sample and Sectoral Generalizability:}
 The study's scope is confined to five purposively selected Class 'A' commercial bank series observed across six fiscal years (FY 2076/77 to FY 2081/82). While these five institutions represent the central corporate combinations of the 2023 consolidation wave alongside an unmerged benchmark (in the 2023 wave), the sample cannot be generalized to the entire commercial banking industry, development banks, finance companies, or non-financial listed sectors. Findings apply directly to the selected institutions and their specific consolidation contexts.
 
@@ -183,7 +183,7 @@ Because the four merging banks commenced joint operations in January--February 2
 
 \item \textbf{Institutional Reporting Compliance and Information Leakage:}
 The standardized reporting window relies on the legal mandate under BAFIA Section 59(2) requiring publication within nine months into the subsequent fiscal year. While in the disclosures examined for this study, commercial bank boards typically released audited highlights and dividend proposals between Ashwin and Poush (months prior to the Chaitra statutory deadline), this pattern reflects observed corporate practice rather than audited proof of disclosure timing for every individual observation; any unrecorded informal information leakage prior to public board announcements remains an unobservable institutional feature of frontier equity markets.
-\end{enumerate}
+\end{itemize}
 
 \section{Organization of the Study}
 \label{sec:organization}

@@ -1,0 +1,435 @@
+\chapter{Detailed Estimation Outputs}
+\label{app:estimation_outputs}
+
+This appendix prints the full estimation outputs behind Chapter IV. It adds no new specification and no new interpretation. Chapter III states the estimators and the fixed-effects structure in narrative form. Chapter IV reports the headline coefficients and the hypothesis decisions. This appendix prints every baseline coefficient, including every fixed-effect dummy, with HC3 standard errors, t-statistics, exact p-values, and 95 percent confidence intervals, together with the joint fixed-effect tests, the full eight-specification robustness suite including its fixed-effect dummies and joint tests, and the diagnostics and sensitivity checks. Estimates are computed from the stored analysis panel, not from the rounded print in Appendix B. Chapter IV prints the same headline coefficients to three decimals, so a last-digit difference between this appendix and Chapter IV is rounding.
+
+\section{Estimation Audit}
+
+The estimation sample is the 28-row sample built in Appendix D, Section D.5. Thirty bank-years were planned. Two are window-excluded: HBL FY 2077/78 and NIMB FY 2077/78, whose first valid prices fall 54 and 47 days after the reporting deadline, outside the five-day window. No other observation is excluded, and no value is imputed.
+
+Parameters and residual degrees of freedom follow the dummy-variable design. Model 1 has 12 parameters: an intercept, 2 slopes, 4 bank dummies, and 5 year dummies, leaving 16 residual degrees of freedom. Model 2 adds the 2 regime-shift interactions for 14 parameters and 14 residual degrees of freedom. R4 adds cash DPS for 15 parameters and 13 degrees of freedom. R5 and R6 each drop one fiscal year and its dummy, giving 13 parameters and 10 degrees of freedom. All other robustness specifications carry 14 parameters and 14 degrees of freedom.
+
+The reference bank is GBIME and the reference fiscal year is FY 2076/77, so the intercept is the GBIME FY 2076/77 baseline and each dummy measures a deviation from it. Estimation is ordinary least squares with two-way bank and fiscal-year fixed effects and MacKinnon-White HC3 robust standard errors. Test statistics use Student's t distribution on the residual degrees of freedom, and joint tests use the Wald F statistic under the HC3 covariance matrix. Within-R², printed in the baseline table notes, is the share of bank-and-year-adjusted variation explained by the slopes, where the adjusted variation is the residual variation left after the bank and year dummies alone.
+
+Software and package versions are stated in Appendix D, Section D.6. No code is shared with this thesis, so this appendix is an audit record, not a replication package: it prints the full baseline and robustness estimates a reader needs to check the headline results, but it does not by itself rerun them. Precision follows the table notes: estimates, standard errors, and confidence limits to four decimals, t-statistics to two decimals, p-values to three decimals, and fit statistics to three decimals.
+
+\section{Baseline Estimates}
+
+Tables~\ref{tab:app_m1full} and~\ref{tab:app_m2full} print the full baseline estimates. Table~\ref{tab:app_fetests} prints the joint fixed-effect tests. The bank dummies are not significant at the 5 percent level in either model (Model 1 p = 0.280, Model 2 p = 0.080), while the year dummies are jointly significant in both models (p < 0.001) and all fixed effects jointly are significant in both models (p < 0.001). A year dummy measures the common price shift of its fiscal year relative to FY 2076/77 after accounting for EPS and BVPS, and a bank dummy measures the bank's average deviation from GBIME on the same basis.
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Model 1: Full Baseline Value-Relevance Estimates ($N = 28$)}
+\label{tab:app_m1full}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
+\toprule
+\textbf{Variable} & \textbf{Estimate} & \textbf{HC3 SE} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} \\
+\midrule
+Intercept & $364.7338$ & $246.7895$ & $1.48$ & $0.159$ & $[-158.4364, 887.9041]$ \\
+EPS & $2.0948$ & $4.0955$ & $0.51$ & $0.616$ & $[-6.5874, 10.7769]$ \\
+BVPS & $0.2188$ & $1.8582$ & $0.12$ & $0.908$ & $[-3.7205, 4.1581]$ \\
+Bank HBL & $26.7932$ & $44.3696$ & $0.60$ & $0.554$ & $[-67.2662, 120.8525]$ \\
+Bank KBL & $-20.6091$ & $38.8248$ & $-0.53$ & $0.603$ & $[-102.9141, 61.6958]$ \\
+Bank NIMB & $-9.5996$ & $35.6694$ & $-0.27$ & $0.791$ & $[-85.2154, 66.0161]$ \\
+Bank NMB & $18.7783$ & $16.1080$ & $1.17$ & $0.261$ & $[-15.3690, 52.9257]$ \\
+Year FY 2077/78 & $-159.2036$ & $40.2319$ & $-3.96$ & $0.001$ & $[-244.4913, -73.9159]$ \\
+Year FY 2078/79 & $-238.4752$ & $36.3982$ & $-6.55$ & $<0.001$ & $[-315.6361, -161.3144]$ \\
+Year FY 2079/80 & $-262.5414$ & $31.2258$ & $-8.41$ & $<0.001$ & $[-328.7372, -196.3456]$ \\
+Year FY 2080/81 & $-199.0712$ & $38.9228$ & $-5.11$ & $<0.001$ & $[-281.5839, -116.5586]$ \\
+Year FY 2081/82 & $-198.6948$ & $55.6769$ & $-3.57$ & $0.003$ & $[-316.7246, -80.6651]$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $N = 28$; parameters $K = 12$; residual degrees of freedom $= 16$; $R^2$ (LSDV) $= 0.948$; adjusted $R^2 = 0.912$; Within-$R^2 = 0.152$. OLS with two-way fixed effects; MacKinnon-White HC3 robust standard errors; $t$-statistics and confidence intervals on Student's $t(16)$ distribution. Estimates, standard errors, and confidence limits to four decimals; $p$-values to three decimals.
+\end{minipage}
+\end{table}
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Model 2: Full Regime-Shift Value-Relevance Estimates ($N = 28$)}
+\label{tab:app_m2full}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
+\toprule
+\textbf{Variable} & \textbf{Estimate} & \textbf{HC3 SE} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} \\
+\midrule
+Intercept & $325.8132$ & $170.7209$ & $1.91$ & $0.077$ & $[-40.3466, 691.9730]$ \\
+EPS & $5.5771$ & $3.5603$ & $1.57$ & $0.140$ & $[-2.0589, 13.2131]$ \\
+BVPS & $0.1003$ & $1.3057$ & $0.08$ & $0.940$ & $[-2.7002, 2.9009]$ \\
+$\delta_E$ & $-3.1237$ & $4.0031$ & $-0.78$ & $0.448$ & $[-11.7096, 5.4622]$ \\
+$\delta_B$ & $-1.7580$ & $1.2307$ & $-1.43$ & $0.175$ & $[-4.3975, 0.8816]$ \\
+Bank HBL & $22.6107$ & $23.4012$ & $0.97$ & $0.350$ & $[-27.5798, 72.8012]$ \\
+Bank KBL & $-42.2014$ & $27.8587$ & $-1.51$ & $0.152$ & $[-101.9524, 17.5496]$ \\
+Bank NIMB & $4.1965$ & $20.1299$ & $0.21$ & $0.838$ & $[-38.9779, 47.3709]$ \\
+Bank NMB & $18.2249$ & $12.9719$ & $1.40$ & $0.182$ & $[-9.5971, 46.0470]$ \\
+Year FY 2077/78 & $-153.9279$ & $24.9356$ & $-6.17$ & $<0.001$ & $[-207.4094, -100.4465]$ \\
+Year FY 2078/79 & $-244.3946$ & $24.9767$ & $-9.78$ & $<0.001$ & $[-297.9643, -190.8250]$ \\
+Year FY 2079/80 & $64.2538$ & $171.1480$ & $0.38$ & $0.713$ & $[-302.8222, 431.3297]$ \\
+Year FY 2080/81 & $141.4026$ & $173.8733$ & $0.81$ & $0.430$ & $[-231.5186, 514.3237]$ \\
+Year FY 2081/82 & $158.5893$ & $178.2907$ & $0.89$ & $0.389$ & $[-223.8062, 540.9848]$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. $\delta_E$ and $\delta_B$ are the interactions of EPS and BVPS with the post-consolidation indicator; implied post-consolidation slopes are EPS $2.4534$ (SE $2.2687$, $t = 1.08$, $p = 0.298$, 95\% CI $[-2.4124, 7.3192]$) and BVPS $-1.6576$ (SE $1.1198$, $t = -1.48$, $p = 0.161$, 95\% CI $[-4.0593, 0.7441]$). Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $N = 28$; parameters $K = 14$; residual degrees of freedom $= 14$; $R^2$ (LSDV) $= 0.978$; adjusted $R^2 = 0.958$; Within-$R^2 = 0.642$. OLS with two-way fixed effects; MacKinnon-White HC3 robust standard errors; $t$-statistics and confidence intervals on Student's $t(14)$ distribution. Estimates, standard errors, and confidence limits to four decimals; $p$-values to three decimals.
+\end{minipage}
+\end{table}
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Joint Fixed-Effects Tests for the Baseline Models}
+\label{tab:app_fetests}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
+\toprule
+\textbf{Model} & \textbf{Null Hypothesis} & \textbf{$F$} & \textbf{df} & \textbf{$p$} \\
+\midrule
+Model 1 & Bank fixed effects jointly zero & $1.395$ & $4, 16$ & $0.280$ \\
+Model 1 & Year fixed effects jointly zero & $17.030$ & $5, 16$ & $<0.001$ \\
+Model 1 & All fixed effects jointly zero & $31.419$ & $9, 16$ & $<0.001$ \\
+Model 2 & Bank fixed effects jointly zero & $2.618$ & $4, 14$ & $0.080$ \\
+Model 2 & Year fixed effects jointly zero & $27.102$ & $5, 14$ & $<0.001$ \\
+Model 2 & All fixed effects jointly zero & $30.835$ & $9, 14$ & $<0.001$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Wald tests under the HC3 covariance matrix. Reference categories are GBIME and FY 2076/77. Individual dummy coefficients are printed in Tables~\ref{tab:app_m1full} and ~\ref{tab:app_m2full}; the joint tests are the basis for retaining the two-way fixed-effects structure.
+\end{minipage}
+\end{table}
+
+\section{Robustness Estimates}
+
+Table~\ref{tab:app_robustfull} prints the full robustness suite. Table~\ref{tab:app_robust_inf} prints the same robustness coefficients with t-statistics, exact p-values, and confidence intervals for R3 through R8; R1 and R2 inference is in Tables~\ref{tab:app_m1full} and~\ref{tab:app_m2full}. Tables~\ref{tab:app_robust_fe1} and~\ref{tab:app_robust_fe2} print the fixed-effect dummy coefficients for R3 through R8, and Table~\ref{tab:app_robust_fetests} prints the joint fixed-effect tests for those specifications. Only R6, which drops the entity-mismatch year FY 2078/79, reaches the 5 percent level on the joint regime-shift test (F = 5.818, p = 0.021). The remaining joint p-values range from 0.085 (R2) to 0.139 (R5). The R4 cash DPS coefficient, which Chapter IV Table~\ref{tab:t5_robustness} does not print separately, is 4.4580 (SE 3.0869, p = 0.172) and appears in Table~\ref{tab:app_robust_inf}.
+
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Full Robustness Estimates Across Specifications R1--R8}
+\label{tab:app_robustfull}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}}
+\toprule
+\textbf{Specification} & \textbf{EPS (SE)} & \textbf{BVPS (SE)} & \textbf{$\delta_E$ (SE)} & \textbf{$\delta_B$ (SE)} & \textbf{Wald $F$ ($p$)} & \textbf{$N$} & \textbf{df} \\
+\midrule
+R1: Model 1 Baseline & $2.0948$ ($4.0955$) & $0.2188$ ($1.8582$) & --- & --- & --- & 28 & 16 \\
+R2: Model 2 Baseline & $5.5771$ ($3.5603$) & $0.1003$ ($1.3057$) & $-3.1237$ ($4.0031$) & $-1.7580$ ($1.2307$) & $2.954$ ($0.085$) & 28 & 14 \\
+R3: ROA Replaces EPS & $83.7595$ ($79.8520$) & $0.3581$ ($1.3814$) & $-43.5697$ ($83.6707$) & $-1.9010$ ($1.2904$) & $2.463$ ($0.121$) & 28 & 14 \\
+R4: Model 2 + DPS & $6.1832$ ($4.5078$) & $-0.6416$ ($1.3781$) & $-4.0721$ ($5.1513$) & $-1.7697$ ($1.3348$) & $2.767$ ($0.100$) & 28 & 13 \\
+R5: Excl. Transition & $5.9931$ ($4.6351$) & $-0.2009$ ($1.8492$) & $-2.5783$ ($5.5206$) & $-1.8798$ ($1.4185$) & $2.414$ ($0.139$) & 23 & 10 \\
+R6: Excl. Mismatch & $4.3360$ ($3.7239$) & $0.8018$ ($1.3282$) & $-2.4363$ ($4.7551$) & $-2.6108$ ($1.5174$) & $5.818$ ($0.021$) & 23 & 10 \\
+R7: Bonus-Adjusted & $5.7747$ ($4.1447$) & $0.1527$ ($1.6324$) & $-4.0432$ ($4.4460$) & $-1.5332$ ($1.5950$) & $2.365$ ($0.130$) & 28 & 14 \\
+R8: Restated EPS & $5.2555$ ($3.0157$) & $0.0311$ ($1.3003$) & $-2.8599$ ($3.8070$) & $-1.8125$ ($1.2233$) & $2.915$ ($0.087$) & 28 & 14 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} All specifications include bank and fiscal-year fixed effects. R3 substitutes ROA for EPS (and its interaction for $\delta_E$); R7 uses bonus-adjusted BVPS in both the level and the interaction; R8 uses restated EPS in both the level and the interaction. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so one year dummy drops in each and parameters fall to $K = 13$. The R4 cash DPS coefficient with full inference is in Table~\ref{tab:app_robust_inf}. Wald tests are the joint test of the two regime-shift interactions under the HC3 covariance matrix. Estimates and standard errors to four decimals; Chapter IV Table~\ref{tab:t5_robustness} prints the same coefficients to three decimals. Fit statistics: $R^2$ (adjusted $R^2$; Within-$R^2$): R1 $0.948$ ($0.912$; $0.152$); R2 $0.978$ ($0.958$; $0.642$); R3 $0.977$ ($0.955$; $0.621$); R4 $0.983$ ($0.965$; $0.722$); R5 $0.976$ ($0.948$; $0.677$); R6 $0.992$ ($0.983$; $0.876$); R7 $0.976$ ($0.955$; $0.614$); R8 $0.977$ ($0.955$; $0.621$).
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Robustness Coefficient Inference (R3--R8)}
+\label{tab:app_robust_inf}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
+\toprule
+\textbf{Variable} & \textbf{Estimate} & \textbf{HC3 SE} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} \\
+\midrule
+\multicolumn{6}{l}{\textbf{R3: ROA Replaces EPS}} \\
+ROA & $83.7595$ & $79.8520$ & $1.05$ & $0.312$ & $[-87.5060, 255.0251]$ \\
+BVPS & $0.3581$ & $1.3814$ & $0.26$ & $0.799$ & $[-2.6048, 3.3210]$ \\
+$\delta_{ROA}$ & $-43.5697$ & $83.6707$ & $-0.52$ & $0.611$ & $[-223.0255, 135.8862]$ \\
+$\delta_B$ & $-1.9010$ & $1.2904$ & $-1.47$ & $0.163$ & $[-4.6688, 0.8667]$ \\
+\multicolumn{6}{l}{\textbf{R4: Model 2 + DPS}} \\
+EPS & $6.1832$ & $4.5078$ & $1.37$ & $0.193$ & $[-3.5553, 15.9216]$ \\
+BVPS & $-0.6416$ & $1.3781$ & $-0.47$ & $0.649$ & $[-3.6188, 2.3356]$ \\
+$\delta_E$ & $-4.0721$ & $5.1513$ & $-0.79$ & $0.443$ & $[-15.2007, 7.0565]$ \\
+$\delta_B$ & $-1.7697$ & $1.3348$ & $-1.33$ & $0.208$ & $[-4.6535, 1.1140]$ \\
+DPS & $4.4580$ & $3.0869$ & $1.44$ & $0.172$ & $[-2.2108, 11.1268]$ \\
+\multicolumn{6}{l}{\textbf{R5: Excl. Transition}} \\
+EPS & $5.9931$ & $4.6351$ & $1.29$ & $0.225$ & $[-4.3346, 16.3209]$ \\
+BVPS & $-0.2009$ & $1.8492$ & $-0.11$ & $0.916$ & $[-4.3211, 3.9194]$ \\
+$\delta_E$ & $-2.5783$ & $5.5206$ & $-0.47$ & $0.650$ & $[-14.8790, 9.7225]$ \\
+$\delta_B$ & $-1.8798$ & $1.4185$ & $-1.33$ & $0.215$ & $[-5.0405, 1.2809]$ \\
+\multicolumn{6}{l}{\textbf{R6: Excl. Mismatch}} \\
+EPS & $4.3360$ & $3.7239$ & $1.16$ & $0.271$ & $[-3.9613, 12.6334]$ \\
+BVPS & $0.8018$ & $1.3282$ & $0.60$ & $0.560$ & $[-2.1576, 3.7611]$ \\
+$\delta_E$ & $-2.4363$ & $4.7551$ & $-0.51$ & $0.620$ & $[-13.0313, 8.1587]$ \\
+$\delta_B$ & $-2.6108$ & $1.5174$ & $-1.72$ & $0.116$ & $[-5.9919, 0.7702]$ \\
+\multicolumn{6}{l}{\textbf{R7: Bonus-Adjusted}} \\
+EPS & $5.7747$ & $4.1447$ & $1.39$ & $0.185$ & $[-3.1148, 14.6642]$ \\
+BVPS (bonus-adjusted) & $0.1527$ & $1.6324$ & $0.09$ & $0.927$ & $[-3.3483, 3.6538]$ \\
+$\delta_E$ & $-4.0432$ & $4.4460$ & $-0.91$ & $0.379$ & $[-13.5789, 5.4924]$ \\
+$\delta_B$ (bonus-adjusted) & $-1.5332$ & $1.5950$ & $-0.96$ & $0.353$ & $[-4.9542, 1.8878]$ \\
+\multicolumn{6}{l}{\textbf{R8: Restated EPS}} \\
+EPS (restated) & $5.2555$ & $3.0157$ & $1.74$ & $0.103$ & $[-1.2125, 11.7236]$ \\
+BVPS & $0.0311$ & $1.3003$ & $0.02$ & $0.981$ & $[-2.7578, 2.8200]$ \\
+$\delta_E$ (restated) & $-2.8599$ & $3.8070$ & $-0.75$ & $0.465$ & $[-11.0250, 5.3052]$ \\
+$\delta_B$ & $-1.8125$ & $1.2233$ & $-1.48$ & $0.161$ & $[-4.4362, 0.8112]$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} R1 and R2 inference is in Tables~\ref{tab:app_m1full} and ~\ref{tab:app_m2full}. Fixed-effect dummies for R3--R8 are in Tables~\ref{tab:app_robust_fe1} and~\ref{tab:app_robust_fe2}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Robustness Fixed-Effect Dummy Coefficients (R3--R5)}
+\label{tab:app_robust_fe1}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
+\toprule
+\textbf{Variable} & \textbf{Estimate} & \textbf{HC3 SE} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} \\
+\midrule
+\multicolumn{6}{l}{\textbf{R3: ROA Replaces EPS}} \\
+Bank HBL & $24.7403$ & $25.9234$ & $0.95$ & $0.356$ & $[-30.8599, 80.3404]$ \\
+Bank KBL & $-40.1215$ & $27.5760$ & $-1.45$ & $0.168$ & $[-99.2660, 19.0230]$ \\
+Bank NIMB & $-5.4405$ & $17.7884$ & $-0.31$ & $0.764$ & $[-43.5928, 32.7119]$ \\
+Bank NMB & $15.0352$ & $11.9922$ & $1.25$ & $0.230$ & $[-10.6856, 40.7560]$ \\
+Year FY 2077/78 & $-154.8041$ & $23.6571$ & $-6.54$ & $<0.001$ & $[-205.5436, -104.0647]$ \\
+Year FY 2078/79 & $-242.4167$ & $25.3323$ & $-9.57$ & $<0.001$ & $[-296.7491, -188.0843]$ \\
+Year FY 2079/80 & $93.7296$ & $172.3099$ & $0.54$ & $0.595$ & $[-275.8384, 463.2976]$ \\
+Year FY 2080/81 & $172.8994$ & $174.6684$ & $0.99$ & $0.339$ & $[-201.7272, 547.5259]$ \\
+Year FY 2081/82 & $191.1905$ & $178.2058$ & $1.07$ & $0.301$ & $[-191.0229, 573.4039]$ \\
+\multicolumn{6}{l}{\textbf{R4: Model 2 + DPS}} \\
+Bank HBL & $33.8899$ & $31.1861$ & $1.09$ & $0.297$ & $[-33.4836, 101.2634]$ \\
+Bank KBL & $-51.2475$ & $31.2024$ & $-1.64$ & $0.124$ & $[-118.6562, 16.1611]$ \\
+Bank NIMB & $30.4131$ & $33.2813$ & $0.91$ & $0.377$ & $[-41.4868, 102.3130]$ \\
+Bank NMB & $22.9960$ & $16.2954$ & $1.41$ & $0.182$ & $[-12.2080, 58.2000]$ \\
+Year FY 2077/78 & $-155.8561$ & $26.8708$ & $-5.80$ & $<0.001$ & $[-213.9070, -97.8052]$ \\
+Year FY 2078/79 & $-274.0277$ & $34.3959$ & $-7.97$ & $<0.001$ & $[-348.3356, -199.7198]$ \\
+Year FY 2079/80 & $84.8871$ & $180.0500$ & $0.47$ & $0.645$ & $[-304.0873, 473.8616]$ \\
+Year FY 2080/81 & $172.9425$ & $192.6997$ & $0.90$ & $0.386$ & $[-243.3598, 589.2448]$ \\
+Year FY 2081/82 & $185.4947$ & $204.2601$ & $0.91$ & $0.380$ & $[-255.7823, 626.7718]$ \\
+\multicolumn{6}{l}{\textbf{R5: Excl. Transition}} \\
+Bank HBL & $30.9048$ & $41.3874$ & $0.75$ & $0.472$ & $[-61.3122, 123.1217]$ \\
+Bank KBL & $-44.9915$ & $38.7650$ & $-1.16$ & $0.273$ & $[-131.3653, 41.3823]$ \\
+Bank NIMB & $15.2428$ & $36.2659$ & $0.42$ & $0.683$ & $[-65.5625, 96.0482]$ \\
+Bank NMB & $22.9246$ & $15.9744$ & $1.44$ & $0.182$ & $[-12.6685, 58.5177]$ \\
+Year FY 2077/78 & $-155.7154$ & $25.7327$ & $-6.05$ & $<0.001$ & $[-213.0515, -98.3794]$ \\
+Year FY 2078/79 & $-245.9782$ & $28.5216$ & $-8.62$ & $<0.001$ & $[-309.5282, -182.4283]$ \\
+Year FY 2080/81 & $158.5114$ & $189.2338$ & $0.84$ & $0.422$ & $[-263.1278, 580.1506]$ \\
+Year FY 2081/82 & $179.1178$ & $195.6941$ & $0.92$ & $0.382$ & $[-256.9159, 615.1514]$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. Joint fixed-effect tests for R3--R8 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Robustness Fixed-Effect Dummy Coefficients (R6--R8)}
+\label{tab:app_robust_fe2}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
+\toprule
+\textbf{Variable} & \textbf{Estimate} & \textbf{HC3 SE} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} \\
+\midrule
+\multicolumn{6}{l}{\textbf{R6: Excl. Mismatch}} \\
+Bank HBL & $8.1298$ & $26.7168$ & $0.30$ & $0.767$ & $[-51.3990, 67.6586]$ \\
+Bank KBL & $-58.5394$ & $27.1719$ & $-2.15$ & $0.057$ & $[-119.0822, 2.0035]$ \\
+Bank NIMB & $-0.2685$ & $21.6884$ & $-0.01$ & $0.990$ & $[-48.5933, 48.0562]$ \\
+Bank NMB & $6.6480$ & $11.3357$ & $0.59$ & $0.571$ & $[-18.6096, 31.9056]$ \\
+Year FY 2077/78 & $-141.6247$ & $25.1485$ & $-5.63$ & $<0.001$ & $[-197.6590, -85.5905]$ \\
+Year FY 2079/80 & $187.9481$ & $188.1109$ & $1.00$ & $0.341$ & $[-231.1890, 607.0853]$ \\
+Year FY 2080/81 & $264.1399$ & $196.3361$ & $1.35$ & $0.208$ & $[-173.3241, 701.6039]$ \\
+Year FY 2081/82 & $282.9284$ & $205.3609$ & $1.38$ & $0.198$ & $[-174.6442, 740.5010]$ \\
+\multicolumn{6}{l}{\textbf{R7: Bonus-Adjusted}} \\
+Bank HBL & $20.6059$ & $24.0121$ & $0.86$ & $0.405$ & $[-30.8949, 72.1066]$ \\
+Bank KBL & $-39.8895$ & $27.5135$ & $-1.45$ & $0.169$ & $[-98.9001, 19.1211]$ \\
+Bank NIMB & $3.4531$ & $23.0679$ & $0.15$ & $0.883$ & $[-46.0227, 52.9289]$ \\
+Bank NMB & $19.3270$ & $14.4892$ & $1.33$ & $0.204$ & $[-11.7493, 50.4032]$ \\
+Year FY 2077/78 & $-154.7501$ & $23.8856$ & $-6.48$ & $<0.001$ & $[-205.9797, -103.5205]$ \\
+Year FY 2078/79 & $-246.6907$ & $31.0821$ & $-7.94$ & $<0.001$ & $[-313.3552, -180.0262]$ \\
+Year FY 2079/80 & $39.4445$ & $196.7833$ & $0.20$ & $0.844$ & $[-382.6137, 461.5027]$ \\
+Year FY 2080/81 & $110.2111$ & $199.7850$ & $0.55$ & $0.590$ & $[-318.2851, 538.7072]$ \\
+Year FY 2081/82 & $125.3390$ & $205.2429$ & $0.61$ & $0.551$ & $[-314.8632, 565.5412]$ \\
+\multicolumn{6}{l}{\textbf{R8: Restated EPS}} \\
+Bank HBL & $21.0362$ & $24.3093$ & $0.87$ & $0.401$ & $[-31.1021, 73.1745]$ \\
+Bank KBL & $-48.3145$ & $31.5213$ & $-1.53$ & $0.148$ & $[-115.9211, 19.2920]$ \\
+Bank NIMB & $3.5256$ & $21.2260$ & $0.17$ & $0.870$ & $[-41.9996, 49.0508]$ \\
+Bank NMB & $16.2354$ & $13.8978$ & $1.17$ & $0.262$ & $[-13.5723, 46.0432]$ \\
+Year FY 2077/78 & $-154.3225$ & $27.0721$ & $-5.70$ & $<0.001$ & $[-212.3864, -96.2587]$ \\
+Year FY 2078/79 & $-246.8887$ & $25.7525$ & $-9.59$ & $<0.001$ & $[-302.1223, -191.6552]$ \\
+Year FY 2079/80 & $64.3840$ & $175.0262$ & $0.37$ & $0.718$ & $[-311.0100, 439.7779]$ \\
+Year FY 2080/81 & $142.1468$ & $178.6683$ & $0.80$ & $0.440$ & $[-241.0585, 525.3522]$ \\
+Year FY 2081/82 & $160.4762$ & $183.7035$ & $0.87$ & $0.397$ & $[-233.5287, 554.4810]$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. Joint fixed-effect tests for R3--R8 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Joint Fixed-Effects Tests for the Robustness Specifications}
+\label{tab:app_robust_fetests}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
+\toprule
+\textbf{Specification} & \textbf{Null Hypothesis} & \textbf{$F$} & \textbf{df} & \textbf{$p$} \\
+\midrule
+R3 & Bank fixed effects jointly zero & $2.727$ & $4, 14$ & $0.072$ \\
+R3 & Year fixed effects jointly zero & $35.754$ & $5, 14$ & $<0.001$ \\
+R3 & All fixed effects jointly zero & $23.678$ & $9, 14$ & $<0.001$ \\
+R4 & Bank fixed effects jointly zero & $2.854$ & $4, 13$ & $0.067$ \\
+R4 & Year fixed effects jointly zero & $15.103$ & $5, 13$ & $<0.001$ \\
+R4 & All fixed effects jointly zero & $20.939$ & $9, 13$ & $<0.001$ \\
+R5 & Bank fixed effects jointly zero & $2.505$ & $4, 10$ & $0.109$ \\
+R5 & Year fixed effects jointly zero & $23.190$ & $4, 10$ & $<0.001$ \\
+R5 & All fixed effects jointly zero & $17.152$ & $8, 10$ & $<0.001$ \\
+R6 & Bank fixed effects jointly zero & $2.260$ & $4, 10$ & $0.135$ \\
+R6 & Year fixed effects jointly zero & $20.840$ & $4, 10$ & $<0.001$ \\
+R6 & All fixed effects jointly zero & $17.723$ & $8, 10$ & $<0.001$ \\
+R7 & Bank fixed effects jointly zero & $2.618$ & $4, 14$ & $0.080$ \\
+R7 & Year fixed effects jointly zero & $21.817$ & $5, 14$ & $<0.001$ \\
+R7 & All fixed effects jointly zero & $25.087$ & $9, 14$ & $<0.001$ \\
+R8 & Bank fixed effects jointly zero & $2.676$ & $4, 14$ & $0.076$ \\
+R8 & Year fixed effects jointly zero & $25.402$ & $5, 14$ & $<0.001$ \\
+R8 & All fixed effects jointly zero & $36.622$ & $9, 14$ & $<0.001$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Wald tests under the HC3 covariance matrix. Reference categories are GBIME and FY 2076/77. Denominator degrees of freedom equal the specification residual degrees of freedom in Table~\ref{tab:app_robustfull}.
+\end{minipage}
+\end{table}
+
+\section{Diagnostics and Sensitivity}
+
+Diagnostics for the baseline value-relevance model are summarized in Chapter IV, Table~\ref{tab:t6_diagnostics}: variance inflation factors of 1.16 for EPS and BVPS, a Breusch-Pagan LM statistic of 14.37 (p = 0.213), and a maximum Cook's distance of 0.552 (HBL FY 2076/77). Table~\ref{tab:app_flagged} lists all five observations that exceed the $4/N = 0.143$ flagging threshold in Model 1. Table~\ref{tab:app_m2flagged} lists the five observations that exceed the same threshold in Model 2; the largest is KBL FY 2076/77 at 0.4902, and the Breusch-Pagan LM statistic on Model 2 residuals is 14.54 on 13 degrees of freedom ($p = 0.337$).
+
+Collinearity in Model 2. Variance inflation factors computed on the substantive regressors by the Chapter III method, auxiliary regressions on the slopes alone without fixed effects, are EPS 10.33, BVPS 2.28, $\delta_E$ 15.15, and $\delta_B$ 24.13. Three exceed the Chapter III screening threshold of 5. This collinearity is largely mechanical: each interaction equals its level variable in post-consolidation years and zero before, so the interactions necessarily correlate with their levels. It does not bias the coefficients, but it widens their standard errors, which the HC3 intervals already reflect, and it is why the regime-shift inference rests on the joint Wald test in Table~\ref{tab:app_robustfull} ($F = 2.954$, $p = 0.085$) rather than on the individual interaction t-statistics.
+
+Table~\ref{tab:app_sensitivity} re-estimates Model 2 without each bank series in turn. Table~\ref{tab:app_loy} re-estimates Model 2 without each fiscal year in turn. The headline interactions keep their signs under every single-row deletion and every year deletion. Across bank deletions, only KBL reverses the earnings interaction. The joint test crosses the 5 percent level when NIMB FY 2078/79 is deleted ($p = 0.035$).
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Flagged Influential Observations in Model 1}
+\label{tab:app_flagged}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}}
+\toprule
+\textbf{Bank-Year} & \textbf{Cook's Distance} & \textbf{Leverage} \\
+\midrule
+HBL FY 2076/77 & $0.5519$ & $0.6766$ \\
+KBL FY 2076/77 & $0.4124$ & $0.3494$ \\
+NIMB FY 2076/77 & $0.2711$ & $0.5357$ \\
+KBL FY 2079/80 & $0.1451$ & $0.5737$ \\
+KBL FY 2081/82 & $0.2447$ & $0.4760$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Cook's distance and leverage from Model 1; flagging threshold $4/N = 4/28 = 0.143$. No observation is removed: HC3 standard errors are the stated treatment for leverage, and Table~\ref{tab:app_sensitivity} reports whether the headline results survive deleting each flagged case and each bank.
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Flagged Influential Observations in Model 2}
+\label{tab:app_m2flagged}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}}
+\toprule
+\textbf{Bank-Year} & \textbf{Cook's Distance} & \textbf{Leverage} \\
+\midrule
+KBL FY 2076/77 & $0.4902$ & $0.5073$ \\
+NIMB FY 2076/77 & $0.3983$ & $0.6363$ \\
+KBL FY 2078/79 & $0.1870$ & $0.4805$ \\
+NIMB FY 2078/79 & $0.2404$ & $0.4689$ \\
+HBL FY 2081/82 & $0.1513$ & $0.5205$ \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Cook's distance and leverage from Model 2; flagging threshold $4/N = 4/28 = 0.143$. The Breusch-Pagan LM statistic on Model 2 residuals is $14.54$ on 13 degrees of freedom ($p = 0.337$). No observation is removed: HC3 standard errors are the stated treatment for leverage, and Tables~\ref{tab:app_sensitivity} and~\ref{tab:app_loy} report whether the headline results survive deleting each flagged case, each bank, and each year.
+\end{minipage}
+\end{table}
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Leave-One-Bank Sensitivity of the Model 2 Regime Shift}
+\label{tab:app_sensitivity}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.26\textwidth}}
+\toprule
+\textbf{Dropped Bank} & \textbf{$N$} & \textbf{$\delta_E$ (SE)} & \textbf{$\delta_B$ (SE)} & \textbf{Wald $F$ ($p$)} \\
+\midrule
+GBIME & 22 & $-4.1104$ ($6.5225$) & $-1.6241$ ($1.5744$) & $1.657$ ($0.244$) \\
+HBL & 23 & $-5.1202$ ($7.3062$) & $-1.3799$ ($1.6341$) & $1.598$ ($0.250$) \\
+KBL & 22 & $1.6527$ ($5.2115$) & $-1.4754$ ($1.7910$) & $0.392$ ($0.686$) \\
+NIMB & 23 & $-3.6823$ ($4.6080$) & $-1.7975$ ($1.4818$) & $3.148$ ($0.087$) \\
+NMB & 22 & $-2.6530$ ($15.0990$) & $-1.9753$ ($1.8654$) & $1.333$ ($0.311$) \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Each row re-estimates Model 2 without one bank series; the reference bank is GBIME, except where GBIME itself is dropped, in which case HBL is the reference. Across all 28 single-row deletions, $\delta_E$ ranges from $-5.2039$ to $-1.3925$ and $\delta_B$ from $-2.3071$ to $-1.0526$, with no sign change in either interaction; the joint Wald $p$-value ranges from $0.035$ (NIMB FY 2078/79 deleted) to $0.291$ (KBL FY 2077/78 deleted). $\delta_E$ is most negative when NIMB FY 2076/77 is deleted ($-5.2039$) and least negative when KBL FY 2076/77 is deleted ($-1.3925$); $\delta_B$ is most negative when KBL FY 2078/79 is deleted ($-2.3071$) and least negative when NIMB FY 2076/77 is deleted ($-1.0526$). Only 1 of the 28 deletions brings the joint Wald $p$-value below 0.05, while 17 of 28 fall below 0.10. Dropping KBL as a whole bank reverses $\delta_E$; every other bank deletion leaves both interactions negative.
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Leave-One-Year Sensitivity of the Model 2 Regime Shift}
+\label{tab:app_loy}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.26\textwidth}}
+\toprule
+\textbf{Dropped Year} & \textbf{$N$} & \textbf{$\delta_E$ (SE)} & \textbf{$\delta_B$ (SE)} & \textbf{Wald $F$ ($p$)} \\
+\midrule
+FY 2076/77 & 23 & $-1.1501$ ($13.9859$) & $-0.9887$ ($1.0876$) & $1.056$ ($0.384$) \\
+FY 2077/78 & 25 & $-3.0569$ ($4.7122$) & $-1.7453$ ($1.3822$) & $1.302$ ($0.308$) \\
+FY 2078/79 & 23 & $-2.4363$ ($4.7551$) & $-2.6108$ ($1.5174$) & $5.818$ ($0.021$) \\
+FY 2079/80 & 23 & $-2.5783$ ($5.5206$) & $-1.8798$ ($1.4185$) & $2.414$ ($0.139$) \\
+FY 2080/81 & 23 & $-2.7449$ ($4.9612$) & $-1.8793$ ($1.7363$) & $1.582$ ($0.253$) \\
+FY 2081/82 & 23 & $-4.2799$ ($4.6430$) & $-1.3190$ ($1.3808$) & $2.717$ ($0.114$) \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Each row re-estimates Model 2 without one fiscal year; the reference year is FY 2076/77 except where FY 2076/77 itself is dropped, in which case FY 2077/78 is the reference. The FY 2078/79 and FY 2079/80 rows repeat R6 and R5 from Table~\ref{tab:app_robustfull}. No deletion changes the sign of either interaction.
+\end{minipage}
+\end{table}
