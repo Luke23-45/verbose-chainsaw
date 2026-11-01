@@ -1,0 +1,43 @@
+% ============================================================================
+% TU FOM MBS dissertation — table and figure environments.
+%
+% STATUS (2026-10-29, config phase): DEFINED, NOT YET USED IN CHAPTERS.
+% Chapters still build tables and figures inline. That is deliberate:
+% converting floats is a separate phase with its own LOT/LOF gate.
+% Do not convert a table or figure here and in a chapter at the same
+% time; one phase, one gate.
+%
+% RULE: a chapter supplies caption, label, header row, and data rows.
+% Everything else — centring, size, caption style, booktabs rules,
+% and note layout — comes from here, so a layout change is one edit
+% in this file, not fourteen edits across chapters.
+% ============================================================================
+
+% One standard thesis table: float + centring + \small + booktabs +
+% a note that stays attached to the table (threeparttable).
+% Usage:
+%   \begin{thesistable}
+%     \caption{...}\label{...}
+%     \begin{tabular}{...} ... \end{tabular}
+%     \tablenote{...}
+%   \end{thesistable}
+\newenvironment{thesistable}[1][!htbp]{%
+  \begin{table}[#1]\centering\small\begin{threeparttable}%
+}{%
+  \end{threeparttable}\end{table}%
+}
+
+% Table note, in the style currently used in chapters: footnotesize,
+% italic "Note." lead-in, attached to the table width.
+\newcommand{\tablenote}[1]{%
+  \begin{tablenotes}\footnotesize\item[]\textit{Note.} #1\end{tablenotes}%
+}
+
+% One standard thesis figure. Default width 0.88\textwidth is the
+% current converter default and the most common width in the thesis.
+% Pass a different width only where a figure genuinely needs it, and
+% say why in a comment at the call site.
+% Usage: \thesisfigure[0.72\textwidth]{figures/F2_correlation_heatmap.pdf}{Caption}{fig:label}
+\newcommand{\thesisfigure}[4][0.88\textwidth]{%
+  \begin{figure}[!htbp]\centering\includegraphics[width=#1]{#2}\caption{#3}\label{#4}\end{figure}%
+}

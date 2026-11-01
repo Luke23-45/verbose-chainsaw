@@ -1,31 +1,32 @@
 \clearpage
+\addcontentsline{toc}{chapter}{Report of Research Committee}
 \thispagestyle{plain}
-\begin{center}
-{\fontsize{14}{18}\selectfont\bfseries Report of Research Committee\par}
-\end{center}
+\frontPageTitle{Report of Research Committee}
 
-\vspace{1.5cm}
+% Pixel-perfect copy of the reference (Gurung dissertation, p. iii)
+% structure, per Krishna's override: the FOM label/box layout is
+% replaced by Gurung's signatory stacks (signature line, name line,
+% title line) with plain date labels on the right and no bordered
+% boxes. Boxes were then restored around the date sections per
+% Krishna (label + dotted line inside each box, 0.9 cm gap as in the
+% earlier FOM version, "Date:" lines replaced by dots); the left
+% column narrowed 229 pt to 200 pt so the 199 pt box interiors fit.
+% FOM margins are kept (text starts at 90.28 pt, not Gurung's
+% 108 pt), as on the title page; relative gaps and pitches are copied
+% (body 20.76 grid, dots-to-name 30.0, name-to-title 28.0,
+% label-to-Date 25.3). Names: the sentence keeps Asmita Subedi;
+% supervisor and chairperson names are unknown, so their name lines
+% are dotted blanks (never invented). The previous FOM version is
+% backed up at ~/workspace/frontmatter_build/research_committee_fom_version.tex.
+\setstretch{1}\fontsize{12}{20.76}\selectfont
+Ms.~Asmita Subedi has defended research proposal entitled \textbf{``VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS''} successfully. The research committee has registered the dissertation for further progress. It is recommended to carry out the work as per suggestions and guidance of supervisor \makebox[5cm]{\dotfill} and submit the thesis for evaluation and viva voce examination.
 
-\setstretch{1.5}
-Ms.~Asmita Subedi has defended research proposal entitled \textbf{``VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS''} successfully. The research committee has registered the dissertation for further progress. It is recommended to carry out the work as per suggestions and guidance of supervisor and submit the thesis for evaluation and viva voce examination.
+\vspace{1.24cm}
 
-\vspace{2.5cm}
-
-\singlespacing
-\noindent
-\begin{tabular}{@{}ll@{}}
-\textbf{Name of Supervisor:} & \underline{\hspace{7.5cm}} \\
-\textbf{Position:} & \underline{\hspace{7.5cm}} \\
-\textbf{Signature:} & \underline{\hspace{7.5cm}} \\[1.2cm]
-
-\textbf{Name of Head of Research Committee:} & \underline{\hspace{5.5cm}} \\
-\textbf{Signature:} & \underline{\hspace{7.5cm}} \\
-\end{tabular}
-
-\vspace{2.0cm}
-
-\noindent
-\textbf{Dissertation Proposal Defended Date:} \underline{\hspace{4.5cm}} \\[0.3cm]
-\textbf{Dissertation Submitted Date:} \underline{\hspace{5.5cm}} \\[0.3cm]
-\textbf{Dissertation Viva Voce Date:} \underline{\hspace{5.8cm}}
-
+\setstretch{1}\fontsize{12}{14.5}\selectfont
+{\setlength{\fboxsep}{8pt}
+\noindent\parbox[t]{200pt}{\makebox[120pt]{\dotfill}\\[15.5pt]\makebox[120pt]{\dotfill}\\[13.5pt]Dissertation Supervisor}\hspace{10pt}\parbox[t]{223pt}{\fbox{\parbox[t]{199pt}{\textbf{Dissertation Proposal Defended Date:}\\[0.9cm]\null\dotfill}}}
+\par\vspace{1.11cm}
+\noindent\hfill\parbox[t]{223pt}{\fbox{\parbox[t]{199pt}{\textbf{Dissertation Submitted Date:}\\[0.9cm]\null\dotfill}}}
+\par\vspace{1.48cm}
+\noindent\parbox[t]{200pt}{\makebox[120pt]{\dotfill}\\[15.5pt]\makebox[120pt]{\dotfill}\\[13.5pt]Chairperson, Research Committee}\hspace{10pt}\parbox[t]{223pt}{\fbox{\parbox[t]{199pt}{\textbf{Dissertation Viva Voce Date:}\\[0.9cm]\null\dotfill}}}}
