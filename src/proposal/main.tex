@@ -28,7 +28,7 @@
 \usepackage{longtable}
 \usepackage{needspace}
 \usepackage{amsmath}
-% Times-clone math under XeLaTeX (sample is all-Times; gap plan A10).
+% Times-clone math under XeLaTeX
 \usepackage{unicode-math}
 \setmathfont{TeX Gyre Termes Math}
 \usepackage{tikz}
@@ -37,14 +37,9 @@
 % Guideline: APA sixth edition (explicit in Ch. I and Appendix C)
 \usepackage[natbibapa]{apacite}
 \bibliographystyle{apacite}
-% References hanging indent: continuation +36 pt (0.5 in, sample §13; gap plan A12).
-% With natbibapa, natbib's list is in force, driven by \bibhang. apacite's style hook
-% runs ONCE at package load (setting 2.5em) and never again — so a direct length set
-% here, after \usepackage{apacite}, sticks. Verified 2026-10-13.
+% References hanging indent: continuation 36 pt (0.5 in) per APA guidelines
 \setlength{\bibhang}{36pt}
-% Sample refs: ~6 pt between entries (gap plan refs-style). natbib's list sets
-% \itemsep=\bibsep at bibliography time; apacite's load-time hook resets \bibsep
-% to 0, so set it here, after \usepackage{apacite} (same class as A12 \bibhang).
+% Separation between bibliographic entries
 \setlength{\bibsep}{6pt}
 \usepackage{caption}
 \captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
@@ -144,10 +139,9 @@
 \addcontentsline{toc}{section}{References}
 \begingroup
 \singlespacing % FOM 2019 Page 20: Single spacing used in references
-% References heading: 14 pt bold centered — FOM APA guideline
+% References heading: 14 pt bold centered per FOM APA guideline
 \titleformat{name=\section,numberless}{\normalfont\bfseries\setstretch{1}\large\centering}{}{0pt}{}
-% URLs in Times, not monospace (sample §13; gap plan A11): apacite asserts its APACtt
-% style at begin-document, so (re-)assert APACsame here, after that hook has run.
+% URLs in Times matching body text
 \urlstyle{APACsame}
 \bibliography{references}
 \titleformat{name=\section,numberless}{\normalfont\fontsize{16pt}{20pt}\selectfont\centering}{}{0pt}{}
