@@ -62,7 +62,22 @@
 \setlength{\bibsep}{6pt}
 
 \usepackage{caption}
-\captionsetup{font={normalsize,bf},justification=justified,singlelinecheck=false}
+% Caption typography follows the reference dissertation and the approved
+% proposal convention: regular weight everywhere (nothing bold), table
+% captions as "Table N" on its own line with the italic title beneath,
+% figure captions as "Figure N: Title" with the label italic.
+\captionsetup{font=normalsize,justification=justified,singlelinecheck=false}
+\captionsetup[table]{labelsep=newline,textfont=it}
+% Figure captions sit ABOVE the figure per the author's instruction,
+% matching the reference dissertation and the approved proposal.
+\captionsetup[figure]{labelfont=it,textfont=normalfont,position=above}
+% Float pages: pin floats to the top instead of LaTeX's default vertical
+% centring, which stranded single tables/figures mid-page with large blank
+% bands above and below (body pages 62, 68, 74, 77, 100 of the 2026-10-31 build).
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
 

@@ -171,6 +171,8 @@ The conceptual framework guiding this research synthesizes the residual income v
 
 \begin{figure}[!ht]
 \centering
+\caption{Research Framework: Two-Way Fixed-Effects Valuation Model}
+\label{fig:framework}
 \begin{tikzpicture}[
   box/.style={rectangle, draw, minimum width=4.0cm, minimum height=0.85cm, align=center, font=\normalsize},
   depbox/.style={rectangle, draw, minimum width=4.0cm, minimum height=1.6cm, align=center, font=\normalsize},
@@ -191,12 +193,14 @@ The conceptual framework guiding this research synthesizes the residual income v
   \draw[arrow, dashed] (post.south) -- (3.9, 0.4);
   \draw[arrow, dotted] (fe.north) -- (3.9, -0.4);
   
-  \node[above=0.08cm of post, font=\footnotesize\bfseries] {Moderating / Interaction Effect};
-  \node[below=0.12cm of bvps, font=\footnotesize\bfseries] {Fundamental Independent Variables};
-  \node[below=0.12cm of mps, font=\footnotesize\bfseries] {Dependent Variable};
+  \node[above=0.08cm of post, font=\footnotesize] {Moderating / Interaction Effect};
+  \node[below=0.12cm of bvps, font=\footnotesize] {Fundamental Independent Variables};
+  \node[below=0.12cm of mps, font=\footnotesize] {Dependent Variable};
 \end{tikzpicture}
-\caption{Research Framework: Two-Way Fixed-Effects Valuation Model}
-\label{fig:framework}
+\begin{minipage}{\linewidth}
+\raggedright\small
+\textit{Source:} Adapted from \citet{ohlson1995} and \citet{kwon2020}.
+\end{minipage}
 \end{figure}
 
 In this framework, secondary market closing price at the reporting deadline ($\mathit{MPS}^{RD}$) serves as the outcome variable. Earnings per share (EPS) and book value per share (BVPS) are the primary independent fundamental regressors. The consolidation period indicator ($\mathit{Post}_t$) acts as a temporal moderating indicator, interacting with EPS and BVPS to test for structural parameter shifts ($\delta_E, \delta_B$) across the consolidation wave. Bank fixed effects ($\mu_i$) and fiscal-year fixed effects ($\lambda_t$) control for time-invariant institutional heterogeneity and market-wide macroeconomic trends.

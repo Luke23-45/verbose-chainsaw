@@ -85,10 +85,10 @@ To illustrate these longitudinal trajectories across each sampled institution, F
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/F6_trends.pdf}
 \caption{Variable Trends by Bank Series across FY 2076/77--FY 2081/82}
 \label{fig:trends}
 \vspace{2pt}
+\includegraphics[width=0.92\textwidth]{figures/F6_trends.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Variable trends across the six fiscal years (FY 2076/77 through FY 2081/82) for Global IME Bank Limited (GBIME), Himalayan Bank Limited (HBL), Kumari Bank Limited (KBL), Nepal Investment Mega Bank Limited (NIMB), and NMB Bank Limited (NMB). The shaded region delineates the post-consolidation regime (FY 2079/80--FY 2081/82). Window-excluded prices for HBL and NIMB in FY 2077/78 are represented as open markers. The connecting lines pass continuously through the excluded periods; the open markers designate observations excluded from regression estimation under the freshness rule (Codebase Asset F6).
@@ -135,10 +135,10 @@ Figure~\ref{fig:scatter_matrix} presents the bivariate scatter plot matrix among
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{figures/F1_scatter_matrix.pdf}
 \caption{Bivariate Scatter Plot Matrix of Value-Relevance Variables}
 \label{fig:scatter_matrix}
 \vspace{2pt}
+\includegraphics[width=0.88\textwidth]{figures/F1_scatter_matrix.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Pairwise scatter plots and univariate kernel density distributions for $\mathit{MPS}^{RD}$, EPS, and BVPS across the realized panel ($N = 28$) (Codebase Asset F1).
@@ -147,10 +147,10 @@ Figure~\ref{fig:scatter_matrix} presents the bivariate scatter plot matrix among
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.72\textwidth]{figures/F2_correlation_heatmap.pdf}
 \caption{Pearson Correlation Heatmap of Value-Relevance Variables}
 \label{fig:heatmap}
 \vspace{2pt}
+\includegraphics[width=0.72\textwidth]{figures/F2_correlation_heatmap.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Correlation heatmap displaying pairwise Pearson correlation coefficients among value-relevance variables across the realized panel ($N = 28$) (Codebase Asset F2).
@@ -302,10 +302,10 @@ To visually display these pre- and post-consolidation relationships, Figure~\ref
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/F3_value_relevance.pdf}
 \caption{$\mathit{MPS}^{RD}$ against Fundamentals Pre vs.\ Post Consolidation}
 \label{fig:value_relevance}
 \vspace{2pt}
+\includegraphics[width=0.92\textwidth]{figures/F3_value_relevance.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Scatter panels and OLS regression lines of $\mathit{MPS}^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77--2078/79, blue) and post-consolidation (FY 2079/80--2081/82, vermillion) sub-periods ($N = 28$) (Codebase Asset F3). Lines are descriptive bivariate OLS fits, not the two-way fixed-effects estimates in Table~\ref{tab:t4_model2}; the post-BVPS sign difference is the effect of absorbing year effects.
@@ -314,10 +314,10 @@ To visually display these pre- and post-consolidation relationships, Figure~\ref
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{figures/F4_coefficient_forest.pdf}
 \caption{Model 2 Coefficients and 95\% HC3 Confidence Intervals}
 \label{fig:coeff_forest}
 \vspace{2pt}
+\includegraphics[width=0.88\textwidth]{figures/F4_coefficient_forest.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Coefficient forest plot displaying pre-consolidation slopes ($\beta_E, \beta_B$), interaction shifts ($\delta_E, \delta_B$), and implied post-consolidation linear combinations ($\beta_E+\delta_E, \beta_B+\delta_B$) from Model~2, estimated with MacKinnon-White HC3 robust 95\% confidence intervals on Student's $t(14)$ distribution ($N = 28, \text{residual df} = 14$) (Codebase Asset F4).
@@ -336,7 +336,8 @@ Table~\ref{tab:hypotheses} summarizes the formal hypothesis testing decisions.
 \small
 \caption{Summary of Operational Hypothesis Testing Decisions}
 \label{tab:hypotheses}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.125\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}cc>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}cc>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
 \toprule
 \textbf{Hypothesis} & \textbf{Model / Term} & \textbf{Null ($H_0$)} & \textbf{Estimate} & \textbf{$p$-value} & \textbf{Decision} & \textbf{Inference} \\
 \midrule
@@ -437,10 +438,10 @@ Figure~\ref{fig:robustness_forest} presents a coefficient forest plot summarizin
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/A2_robustness_forest.pdf}
 \caption{Robustness Forest Plot Across Seven Specifications (R1, R2, R4--R8)}
 \label{fig:robustness_forest}
 \vspace{2pt}
+\includegraphics[width=0.92\textwidth]{figures/A2_robustness_forest.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Forest plot of the EPS-channel estimates (earnings coefficient and EPS $\times$ Post interaction) with 95\% HC3 confidence intervals across seven specifications (R1, R2, R4--R8; R3 omitted because ROA is on a different scale; $N = 28$ or $N = 23$) (Codebase Asset A2).
@@ -489,10 +490,10 @@ Figure~\ref{fig:diagnostics} presents the four-panel econometric diagnostic plot
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/F5_diagnostics.pdf}
 \caption{Econometric Residual Diagnostics for Baseline Model (Model 1)}
 \label{fig:diagnostics}
 \vspace{2pt}
+\includegraphics[width=0.92\textwidth]{figures/F5_diagnostics.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Four-panel diagnostic suite for Model~1: (top-left) Normal Q-Q plot assessing error normality; (top-right) Residuals vs.\ Fitted values assessing linearity; (bottom-left) Scale-Location plot ($\sqrt{|\text{standardized residuals}|}$ vs.\ fitted) assessing homoskedasticity; (bottom-right) Cook's distance across observations ($N = 28$) identifying leverage points against $4/N = 0.143$ (Codebase Asset F5).
