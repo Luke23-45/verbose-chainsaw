@@ -16,7 +16,9 @@ adjustments instead of silently diverging.
   price, kept in baseline): GBIME, HBL, KBL, NIMB.
 - Companion inputs: bonus-adjusted panel (`bvps_adj = BVPS / (1 + bonus%)`),
   price-status table (clean / DELAYED), Merolagani LTP cross-check
-  (29/30 match; NMB FY2076-77 resolved by third source at 437.00).
+  (29/30 match; NMB FY2076-77: dataset 437.00 retained on ShareSansar's full
+  daily record vs Merolagani LTP 436.00 — ShareSansar is the dataset's own
+  source, so this is not independent verification; NEPSE close unverified).
 - Restated EPS (final audit 2026-10-27, note a): GBIME FY2076-77 17.99 -> 15.33,
   NMB FY2077-78 16.66 -> 14.76; HBL FY2077-78 28.07 -> 27.60 sits in a dropped
   row.  Values are used as printed and the substituted rows flagged — no
