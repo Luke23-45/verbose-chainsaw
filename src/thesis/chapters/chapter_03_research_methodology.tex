@@ -33,7 +33,7 @@ The specific sampling criteria applied to select the institutions are:
     \item \textbf{Participation in the 2023 Consolidation Wave:} Prominent commercial bank series that executed horizontal statutory amalgamations or major corporate acquisitions that commenced joint commercial operations during the early-2023 consolidation wave (January--February 2023 / mid-FY 2079/80).
     \item \textbf{Benchmark Series Continuity:} Inclusion of an established Class `A' commercial bank that did not participate in the early-2023 consolidation wave, providing a contemporaneous, unmerged benchmark series to differentiate sector-wide market trends from merger-specific structural shifts.
     \item \textbf{Longitudinal Data Availability and Regulatory Compliance:} Availability of complete, audited annual financial statements across all six fiscal years (FY 2076/77 to FY 2081/82) prepared in accordance with Nepal Financial Reporting Standards (NFRS) and submitted to Nepal Rastra Bank.
-    \item \textbf{Secondary Market Listing and Trading Activity:} Active listing on the Nepal Stock Exchange (NEPSE), with row-level trading freshness applied as detailed in Section~3.3.4 (under which two bank-years with extended trading halts exceeding the 5-day post-deadline freshness window are coded as missing).
+    \item \textbf{Secondary Market Listing and Trading Activity:} Active listing on the Nepal Stock Exchange (NEPSE), with row-level trading freshness applied as detailed in Section~\ref{subsec:sample_realized} (under which two bank-years with extended trading halts exceeding the 5-day post-deadline freshness window are coded as missing).
 \end{itemize}
 
 \subsection{Profile of the Sampled Commercial Banks}
@@ -80,6 +80,7 @@ The five purposively selected commercial bank series, identified by their curren
 \end{itemize}
 
 \subsection{Sample Size, Missingness Protocol, and Realized Observations}
+\label{subsec:sample_realized}
 The research protocol targets 30 potential bank-year observations, comprising five commercial bank series tracked over six fiscal years (FY 2076/77 to FY 2081/82). Primary audited annual financial reports are complete for all 30 bank-years ($100\%$ accounting coverage).
 
 However, in secondary equity pricing, corporate restructuring frequently induces prolonged trading halts. To ensure empirical integrity, the study enforces a strict \textbf{five-day calendar freshness rule}:
@@ -132,7 +133,7 @@ The construction of the analysis sample from the 30 collected bank-years, includ
 \section{Nature and Sources of Data, and Data Collection Procedure}
 
 \subsection{Nature of Data}
-This dissertation relies exclusively on quantitative secondary data extracted from audited financial disclosures and capital market data aggregators. All accounting variables are compiled strictly on a standalone Bank-level basis rather than consolidated Group accounts, consistent with standard Nepalese banking valuation convention where non-banking subsidiaries are segregated from the licensed commercial bank's capital adequacy and regulatory return metrics. Standalone Bank balance-sheet identities ($\text{Total Assets} - \text{Total Liabilities} - \text{Total Equity} = 0$) hold exactly across all 30 bank-year observations within a $\le 1$ NPR rounding tolerance. In the Global IME Bank raw extractions, Group total equity equals equity attributable to equity holders and excludes non-controlling interest (NPR 211.28 million in FY 2076/77); regardless, Group-level figures are never used in panel regressions as all empirical estimations rely strictly on standalone Bank accounts.
+This dissertation relies exclusively on quantitative secondary data extracted from audited financial disclosures and capital market data aggregators. All accounting variables are compiled strictly on a standalone Bank-level basis rather than consolidated Group accounts, consistent with the regulatory return framework, in which a licensed commercial bank's capital adequacy and prudential metrics are computed at the standalone Bank level rather than for the consolidated Group. Standalone Bank balance-sheet identities ($\text{Total Assets} - \text{Total Liabilities} - \text{Total Equity} = 0$) hold exactly across all 30 bank-year observations within a $\le 1$ NPR rounding tolerance. In the Global IME Bank raw extractions, Group total equity equals equity attributable to equity holders and excludes non-controlling interest (NPR 211.28 million in FY 2076/77); regardless, Group-level figures are never used in panel regressions as all empirical estimations rely strictly on standalone Bank accounts.
 
 The empirical dataset comprises two primary streams of financial information:
 \begin{itemize}
@@ -250,14 +251,14 @@ Operating profitability expressed as net profit after tax divided by average tot
 \mathit{ROA}_{it} = \left(\frac{\text{Profit After Tax}_{it}}{\text{Average Total Assets}_{it}}\right) \times 100
 \label{eq:roa_def}
 \end{equation}
-Evaluated in Specification R3 as an asset-scaled substitute for EPS. Because EPS and ROA correlate at $r = 0.975$ (yielding a bivariate variance inflation factor of $1 / (1 - r^2) \approx 20.3$), they are never co-included in the same regression to prevent severe multicollinearity.
+Evaluated in Specification R3 as an asset-scaled substitute for EPS. Because EPS and ROA correlate at $r = 0.975$ (yielding a bivariate variance inflation factor of $1 / (1 - r^2) \approx 20$), they are never co-included in the same regression to prevent severe multicollinearity.
 
 \textbf{Dividend per Share (DPS):}
 Cash dividend recommended per ordinary share, expressed in NPR, for the corresponding fiscal year. Evaluated in Specification R4, including only eligible cash dividends that were officially declared on or prior to the $\mathit{MPS}^{RD}$ observation date. Documented zero-dividend decisions are recorded as zero; unannounced dividends are treated as missing in the operational rule. In the realized analysis sample ($N = 28$), all 28 observations possess confirmed declarations or documented nil distributions (zero cash dividend), meaning no DPS observation is missing in the realized estimation dataset.
 
 \subsubsection{Strict Exclusion of Price-Derived Multiples}
 \textbf{Price-to-Earnings (P/E) Ratio:}
-The Price-to-Earnings (P/E) ratio is strictly excluded from all regression models. As mathematically proved in Section~2.2.6, because $\text{P/E} = \text{MPS} / \text{EPS}$, regressing MPS on P/E introduces circular algebraic endogeneity that biases coefficients and spuriously inflates explanatory power.
+The Price-to-Earnings (P/E) ratio is strictly excluded from all regression models. As mathematically proved in Section~\ref{subsec:pe_circularity}, because $\text{P/E} = \text{MPS} / \text{EPS}$, regressing MPS on P/E introduces circular algebraic endogeneity that biases coefficients and spuriously inflates explanatory power.
 
 The codebook definitions governing every variable in the panel are collected in Table~\ref{tab:app_codebook} of Appendix~\ref{app:reproducibility}.
 

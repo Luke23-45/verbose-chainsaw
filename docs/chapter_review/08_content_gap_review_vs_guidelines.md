@@ -1,5 +1,52 @@
 # Thesis chapter content review vs TU FOM Dissertation Guidelines 2019 — gap file
 
+> **FIX APPLICATION RECORD (2026-11-02).** The must-fix and minor items
+> below were applied to the LaTeX thesis and verified in a clean build
+> (zero overfull boxes). Item by item:
+> - **A1** — VIF unified to "approximately 20" in Chapters 1, 3, 4, and 5.
+>   Exact panel r(EPS, ROA) = 0.9747 gives VIF = 19.98; the printed
+>   r = 0.975 gives 20.25; "approximately 20" is correct under both.
+> - **A2** — Appendix C intro, body text, and caption now say seven
+>   specifications (R1, R2, R4--R8) with the R3 omission stated, matching
+>   the figure and its generation code.
+> - **A3** — Appendix A "independently archived by Merolagani" removed;
+>   now "archived by the Merolagani aggregator", consistent with the
+>   thesis's non-independence disclosures.
+> - **A4** — Chapter 2 "universally" → "almost all".
+> - **A5** — Chapter 5 section 5.1 now states the guideline's three-section
+>   structure (p. 15) and discloses the four-section adaptation as a
+>   separation of the guideline's Implications material.
+> - **B** — Table 2.1: a Methodological Critique column was added, carrying
+>   only the tags already present in the Core Empirical Findings cells
+>   (nothing invented); the unsourced Kwon "(1998–2014)" and Bhandari
+>   "(2015–2024)" periods were removed from the Sample & Period cells;
+>   Gurung & Dahal prose "ten-year" corrected to "eleven-year" (110 obs =
+>   10 banks x 11 FYs, consistent with the table); an exclusion sentence
+>   for bhattarai2024, dongol2024, adhikari2023cbr, and niraula2026 was
+>   added to the selection paragraph; the note now defines EY = earnings
+>   yield and MTB = market-to-book ratio (verified against the Dahal et
+>   al. 2025 paper, NepJOL 75407) and states that observation counts are
+>   shown where the underlying study reports them.
+> - **C** — Chapter 2's announcement-registry claim is now hedged to the
+>   disclosures examined for this study; Chapter 3's "standard Nepalese
+>   banking valuation convention" sentence was reworded to the regulatory
+>   return framework; Chapter 1 "unverifiable" → "ineligible"; Chapter 5
+>   "universal population" → "licensed commercial bank population".
+> - **D** — the four hardcoded section cross-references were converted to
+>   \ref (labels added at 3.3.4, 4.2.6, 4.2.7); Table 9 note "correct
+>   parameter count" → "model's parameter count"; "Addressed via HC3" →
+>   "Mitigated via HC3".
+>
+> **Deliberately not done:** the generated analysis assets (e.g. the
+> "~ 30" note in t2_correlations.py) and the Markdown Table 2.1 remain
+> untouched — the LaTeX tables are the submission artifact and the
+> Python/Markdown versions are legacy per the author's instruction; the
+> figure assets were not regenerated (the "T5" tag printed inside the A2
+> asset remains an asset-side artifact; the thesis Note below the figure
+> restates the R3 omission). Observation counts for six Table 2.1 rows
+> and the Lamsal years/count still require the papers themselves and
+> remain pending, as does the Markdown-LaTeX sync.
+
 Thesis: VALUE RELEVANCE OF ACCOUNTING INFORMATION BEFORE AND AFTER THE
 BANKING CONSOLIDATION WAVE: EVIDENCE FROM NEPALESE COMMERCIAL BANKS.
 Repo state at review time: working tree of HEAD 7b6bd07 (thesis chapters

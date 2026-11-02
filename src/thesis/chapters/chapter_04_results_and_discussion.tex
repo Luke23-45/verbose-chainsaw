@@ -127,7 +127,7 @@ ROA & 0.378\textsuperscript{*} & 0.975\textsuperscript{**} & 0.278 & 0.595\texts
 The correlation matrix reveals several key empirical patterns:
 \begin{itemize}
     \item \textbf{Unconditional Price Associations:} In raw, unadjusted bivariate correlations, $\mathit{MPS}^{RD}$ exhibits a positive correlation with EPS ($r = 0.358, p = 0.061$) and BVPS ($r = 0.217, p = 0.268$). Although positive---consistent with general equity valuation logic---neither bivariate association achieves statistical significance at the 5\% level in the unadjusted bivariate sample. Operating profitability (ROA) displays a statistically significant positive bivariate correlation with market price ($r = 0.378, p = 0.047$), whereas cash dividend per share (DPS) exhibits an extraordinarily weak linear correlation ($r = 0.082, p = 0.678$).
-    \item \textbf{Severe Collinearity between EPS and ROA:} Crucially, the Pearson correlation coefficient between EPS and ROA is $r = 0.975$ ($p < 0.001$). Entering both regressors simultaneously into a multivariate linear specification would generate severe variance inflation ($\text{VIF} \approx 1 / (1 - 0.975^2) \approx 20.2$), severely destabilizing standard errors, inducing sign reversals, and invalidating inference. Consequently, ROA is strictly excluded from concurrent inclusion with EPS in all econometric specifications; it is deployed exclusively as a substitute operating profitability regressor in robustness specification R3.
+    \item \textbf{Severe Collinearity between EPS and ROA:} Crucially, the Pearson correlation coefficient between EPS and ROA is $r = 0.975$ ($p < 0.001$). Entering both regressors simultaneously into a multivariate linear specification would generate severe variance inflation ($\text{VIF} \approx 1 / (1 - 0.975^2) \approx 20$), severely destabilizing standard errors, inducing sign reversals, and invalidating inference. Consequently, ROA is strictly excluded from concurrent inclusion with EPS in all econometric specifications; it is deployed exclusively as a substitute operating profitability regressor in robustness specification R3.
     \item \textbf{Core Regressor Independence:} In contrast, the bivariate correlation between the two core explanatory variables of the Ohlson framework---EPS and BVPS---is moderate ($r = 0.372, p = 0.051$). This demonstrates that earnings and book value capture distinct dimensions of financial performance and equity value, retaining sufficient independent variation for simultaneous estimation without multicollinearity distortion.
 \end{itemize}
 
@@ -206,7 +206,7 @@ The baseline results in Table~\ref{tab:t3_model1} provide important empirical in
 \begin{itemize}
     \item \textbf{Coefficient Magnitudes and Signs:} Both accounting fundamentals exhibit positive coefficients: $\beta_E = 2.095$ and $\beta_B = 0.219$. In economic terms, this suggests that across the full observation span, each additional NPR 1.00 of reported earnings per share is associated with an incremental NPR 2.10 in post-deadline market share price, while each additional NPR 1.00 of book equity per share is associated with an incremental NPR 0.22 in market price, holding unobserved bank characteristics and common macro-temporal shocks constant.
     \item \textbf{Statistical Significance under Robust Inference:} Neither slope coefficient achieves statistical significance at conventional levels. For EPS, the $t$-statistic is $0.51$ ($p = 0.616$ on $t(16)$), and the 95\% HC3 confidence interval spans widely from NPR $-6.587$ to NPR $10.777$. For BVPS, the $t$-statistic is $0.12$ ($p = 0.908$ on $t(16)$), with a 95\% confidence interval spanning from NPR $-3.720$ to NPR $4.158$.
-    \item \textbf{Goodness of Fit and Degrees of Freedom:} The model exhibits a high coefficient of determination ($R^2 = 0.948$, Adjusted $R^2 = 0.912$). However, as demonstrated in the specification comparisons in Section~4.2.7, this high explanatory power is almost entirely driven by the two-way fixed effects structure---specifically the fiscal-year dummies ($\lambda_t$), which absorb the substantial macro-market repricing of NEPSE over this period. Accounting for 1 constant intercept, 4 bank dummy parameters, 5 fiscal-year dummy parameters, and 2 slope regressors consumes 12 degrees of freedom, leaving exactly $28 - 12 = 16$ residual degrees of freedom.
+    \item \textbf{Goodness of Fit and Degrees of Freedom:} The model exhibits a high coefficient of determination ($R^2 = 0.948$, Adjusted $R^2 = 0.912$). However, as demonstrated in the specification comparisons in Section~\ref{subsec:diagnostics_spec}, this high explanatory power is almost entirely driven by the two-way fixed effects structure---specifically the fiscal-year dummies ($\lambda_t$), which absorb the substantial macro-market repricing of NEPSE over this period. Accounting for 1 constant intercept, 4 bank dummy parameters, 5 fiscal-year dummy parameters, and 2 slope regressors consumes 12 degrees of freedom, leaving exactly $28 - 12 = 16$ residual degrees of freedom.
 \end{itemize}
 
 \subsection{Impact of Consolidation on Value Relevance: Model 2 Estimation}
@@ -339,7 +339,7 @@ Table~\ref{tab:hypotheses} summarizes the formal hypothesis testing decisions.
 \caption{Summary of Operational Hypothesis Testing Decisions}
 \label{tab:hypotheses}
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}cc>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}cc>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}}
 \toprule
 \textbf{Hypothesis} & \textbf{Model / Term} & \textbf{Null ($H_0$)} & \textbf{Estimate} & \textbf{$p$-value} & \textbf{Decision} & \textbf{Inference} \\
 \midrule
@@ -385,6 +385,7 @@ Detailed evaluations of individual hypotheses:
 \end{itemize}
 
 \subsection{Robustness and Sensitivity Analyses (R1 through R8)}
+\label{subsec:robustness_suite}
 To evaluate the stability of baseline estimates against alternative empirical assumptions, variable definitions, and sample compositions, an eight-specification suite comprising the two baseline models (R1--R2) and six robustness variants (R3--R8) was estimated. All specifications maintain two-way bank and fiscal-year fixed effects and MacKinnon-White HC3 robust inference on Student's $t$ residual degrees of freedom.
 
 Table~\ref{tab:t5_robustness} summarizes the estimation results across the robustness suite, reporting point estimates, standard errors for both main slopes and interaction terms, and the joint Wald $F$-test.
@@ -453,6 +454,7 @@ Figure~\ref{fig:robustness_forest} presents a coefficient forest plot summarizin
 Full robustness estimates, the flagged influential observations, and the leave-one-bank sensitivity are printed in Appendix E, Tables~\ref{tab:app_robustfull}--\ref{tab:app_sensitivity}.
 
 \subsection{Econometric Diagnostics and Specification Comparison}
+\label{subsec:diagnostics_spec}
 To verify that the empirical findings are robust to potential violations of Gauss-Markov and asymptotic assumptions, a comprehensive battery of econometric diagnostics was performed.
 
 Table~\ref{tab:t6_diagnostics} presents the diagnostic test statistics for the baseline model.
@@ -472,14 +474,14 @@ VIF (BVPS) & VIF & 1.16 & $< 10.0$ (Tolerance = 0.862) & Passed \\
 \addlinespace
 Breusch-Pagan Heteroskedasticity & LM & 14.37 & $p = 0.213$ ($\chi^2(11) = 19.68$) & Passed \\
 \addlinespace
-Cook's Distance (Influential) & Max $D_i$ & 0.552 & Cutoff: $4/N = 0.143$ & Addressed via HC3 \\
+Cook's Distance (Influential) & Max $D_i$ & 0.552 & Cutoff: $4/N = 0.143$ & Mitigated via HC3 \\
 \bottomrule
 \end{tabular}
 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Diagnostics computed on Model~1 baseline ($N = 28$). Variance Inflation Factor (VIF) computed exclusively on substantive regressors (fixed effects dummies excluded). Breusch-Pagan Lagrange Multiplier test evaluates residual variance constancy across fitted values and regressors. Cook's distance evaluated using the correct parameter count ($K = 12$) against standard finite-sample threshold $4/N = 4/28 = 0.143$.
+\textit{Note.} Diagnostics computed on Model~1 baseline ($N = 28$). Variance Inflation Factor (VIF) computed exclusively on substantive regressors (fixed effects dummies excluded). Breusch-Pagan Lagrange Multiplier test evaluates residual variance constancy across fitted values and regressors. Cook's distance evaluated using the model's parameter count ($K = 12$) against the standard finite-sample threshold $4/N = 4/28 = 0.143$.
 \end{minipage}
 \end{table}
 
@@ -600,7 +602,7 @@ Evaluating the empirical findings of this dissertation against prior literature 
 \end{itemize}
 
 \subsection{Methodological Context: Transition Dynamics and Structural Discontinuities}
-The sensitivity analyses conducted in Section~4.2.6 provide important methodological insights for evaluating corporate restructuring in frontier capital markets:
+The sensitivity analyses conducted in Section~\ref{subsec:robustness_suite} provide important methodological insights for evaluating corporate restructuring in frontier capital markets:
 \begin{itemize}
     \item \textbf{Entity-Boundary Timing and Sensitivity Check R6:}
     The most salient sensitivity finding arises from specification R6, which excludes FY 2078/79 ($N = 23, \text{residual df} = 10$). In that specification, the joint Wald test of regime shift achieves statistical significance at the 5\% level:
