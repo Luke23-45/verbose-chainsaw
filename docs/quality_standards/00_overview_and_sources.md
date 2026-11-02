@@ -13,6 +13,8 @@ supervisor win. These files apply only where the guideline is silent.
 
 ## How to use this directory
 
+Layer 1 — standards with audit:
+
 1. `01_chapter_function_standards.md` — what each chapter must *do*
    (function, not format), with pointers to where this thesis already
    complies and where the risk sits.
@@ -23,6 +25,28 @@ supervisor win. These files apply only where the guideline is silent.
    reporting reform literature (Wilkinson/TFSI 1999 and successors).
 4. `04_examiner_checklist.md` — the assessment criteria actual thesis
    examiners apply, converted to a pass/fail checklist for this thesis.
+
+Layer 2 — deep-dive methods (fetched primary sources, worked into the
+thesis's own text):
+
+5. `05_introduction_cars_argument.md` — Swales' CARS model audited
+   move-by-move against Chapter I, with the niche-statement rules.
+6. `06_literature_synthesis_method.md` — the synthesis-matrix method
+   (FIU) applied to Table 2.1; the "sources converse" test; the one-
+   claim-two-studies rule; the three profile paragraphs to upgrade.
+7. `07_discussion_interpretation_moves.md` — Guelph's funnel mapped onto
+   §4.3; the four discussion moves with the thesis's own best
+   instances; the interpretation vocabulary.
+8. `08_inference_and_data_display.md` — the ASA six principles verbatim
+   and what each binds; NHST language rules; APA number conventions
+   (including the documented leading-zero deviation); Tufte's display
+   principles applied to the thesis's tables and figures.
+9. `09_examiner_read_path_defense.md` — the read path, the ten viva
+   questions this thesis will attract with section-pointer answers, the
+   McGill self-rating, and the pre-viva sweep.
+10. `10_phrasebank_thesis_templates.md` — Manchester Phrasebank-style
+    sentence frames pre-filled with this thesis's variables, numbers,
+    and institutions; the anti-slop rule for using them.
 
 ## Sources (all consulted 2026-11-03)
 
@@ -110,6 +134,38 @@ supervisor win. These files apply only where the guideline is silent.
 - McGill University — Evaluation of a Written Thesis (official examiner
   criteria): https://www.mcgill.ca/gps/thesis/thesis-guidelines/examination/evaluation-written-thesis
 - Pat Thomson — How an examiner reads a thesis:
-  https://patthomson.net/2017/04/03/how-an-examiner-reads-a-thesis —
+  https://patthomson.net/2017/04/03/how-an-examiner-reads-a-thesis
+
+### Rhetorical structure of introductions (fetched/verified)
+- Swales, J. (1990). *Genre Analysis: English in Academic and Research
+  Settings*. Cambridge UP — the CARS model: Move 1 establish a
+  territory, Move 2 establish a niche, Move 3 occupy the niche.
+- Swales, J., & Feak, C. (2012). *Academic Writing for Graduate
+  Students* (3rd ed.). University of Michigan Press — the working
+  textbook version of the moves. (Full-text PDF of the textbook is
+  widely mirrored; consulted for the moves breakdown.)
+- Secondary analyses: Msuya (2020), Athens Journal of Philology:
+  https://www.athensjournals.gr/philology/2020-7-4-2-Msuya.pdf
+
+### Statistical inference reform (fetched in full)
+- Wasserstein, R. L., & Lazar, N. A. (2016). The ASA Statement on
+  p-Values: Context, Process, and Purpose. *The American Statistician,
+  70*(2), 129–133 — six principles:
+  https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf
+  (Berkeley mirror: https://www.stat.berkeley.edu/~aldous/Real_World/ASA_statement.pdf)
+- ASA (2021) follow-up Task Force statement:
+  https://magazine.amstat.org/blog/2021/08/01/task-force-statement-p-value
+
+### Data display
+- Tufte, E. R. (2001). *The Visual Display of Quantitative Information*
+  (2nd ed.). Graphics Press — data-ink maximization, chartjunk, the lie
+  factor; chapter extracts:
+  http://www.eng.uwaterloo.ca/~jzelek/teaching/syde361/tufte-ch4-6-v3.pdf
+
+### Phrase-level craft
+- The University of Manchester, Academic Phrasebank
+  (https://www.phrasebank.manchester.ac.uk) — Discussing findings:
+  https://www.phrasebank.manchester.ac.uk/discussing-findings ; Morley,
+  J. (2021) compiled edition PDF available via the site. —
   examiners often read the conclusions first, hunting for the stated
   contribution.
