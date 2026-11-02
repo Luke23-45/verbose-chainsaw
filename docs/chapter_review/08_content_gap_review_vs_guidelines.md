@@ -1,5 +1,41 @@
 # Thesis chapter content review vs TU FOM Dissertation Guidelines 2019 — gap file
 
+> **FINAL SWEEP RECORD (2026-11-03, after Appendices D/E landed).** The
+> thesis was rebuilt with the remote commit 91a8fed (Appendices D and E,
+> list-marker polish) merged with the content fixes, and the full
+> battery re-run on the final PDF (159 pages, zero overfull boxes,
+> 39 underfull warnings all in front/appendix prose — harmless):
+> - Citations: 64 cited keys = 64 bibliography entries, clean in both
+>   directions (AEA data-code policy and FAIR principles entries from
+>   Appendix D included).
+> - Number trace: 2.095/0.616, 5.577/0.140, 2.954/0.085, 5.818/0.021
+>   all appear consistently in the abstract, Chapters I/IV/V, and the
+>   appendix outputs; Appendix E's 4-decimal values agree with Chapter
+>   IV's 3-decimal print at every checked cell.
+> - Terminology and banned-word sweep on the rendered text:
+>   universally/catastrophic/monumental/extraordinarily/utilize/pivotal
+>   all zero; no "during merger negotiations"; the one remaining
+>   "merger processes" residue in §4.3.5 was reworded to
+>   "merger-related suspensions".
+> - Table 7 joint-test F and the whole Table 8 Wald column unified to
+>   three decimals (2.954, 2.463, 2.767, 2.414, 5.818, 2.365, 2.915),
+>   matching Appendix E exactly; Chapter I preview "confirmed" →
+>   "the null of parameter stability rejected".
+> - New-appendix consistency: Appendix D's re-verification flagged a
+>   third printed-NAV disagreement (HBL FY 2076/77, 187.67 recomputed
+>   vs 187.72 printed); Chapters 3 and Appendix B notes were aligned to
+>   carry all three flags (NIMB rounding, HBL, NMB) so no appendix
+>   discloses something the chapters omit.
+> - "Codebase Asset" tags no longer appear in the rendered PDF (removed
+>   upstream); no TODO/FIXME/placeholder text (the sole "xxx" hits are
+>   the literal filename pattern FYxxxx-xx in Appendix D's register).
+> - The "N = 28" strings extract oddly through pdftotext (math-font
+>   artifact) but render correctly — verified visually on the table
+>   pages; not a defect.
+>
+> Verification renders: Tables 7 and 8, Appendix D register page,
+> Appendix E baseline-output page — all clean.
+
 > **FIX APPLICATION RECORD (2026-11-02).** The must-fix and minor items
 > below were applied to the LaTeX thesis and verified in a clean build
 > (zero overfull boxes). Item by item:
