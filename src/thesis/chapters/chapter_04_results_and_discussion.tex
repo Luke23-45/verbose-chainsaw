@@ -266,6 +266,7 @@ Bank Fixed Effects ($\mu_i$) & Yes \\
 Fiscal-Year Fixed Effects ($\lambda_t$) & Yes \\
 Observations ($N$) & 28 \\
 $R^2$ (LSDV) & 0.978 \\
+Adjusted $R^2$ & 0.958 \\
 Within-$R^2$ & 0.642 \\
 Residual Degrees of Freedom & 14 \\
 \bottomrule
@@ -446,19 +447,19 @@ The sensitivity analysis yields critical econometric and substantive insights:
     \item \textbf{Kanchan-Mismatched Bank-Year Exclusion (R9):} Dropping the single bank-year whose pre-acquisition fundamentals are paired with a post-acquisition price (NMB FY 2076/77, $N = 27$, residual df = 13) leaves the baseline pattern unchanged: $\hat{\beta}_E = 6.000$ (SE = 7.028, $p = 0.409$), $\hat{\delta}_E = -3.445$ (SE = 6.598, $p = 0.610$), $\hat{\delta}_B = -1.741$ (SE = 1.477, $p = 0.259$), with joint Wald $F(2, 13) = 1.79$ ($p = 0.205$). The Kanchan timing mismatch does not drive the baseline finding of no significant joint shift.
 \end{itemize}
 
-Two additional price-window sensitivities show that the sample rule affects the joint-test decision. Re-including the two observed delayed prices gives $F(2,16)=4.762$ ($p=0.024$; $N=30$), while carrying forward the last pre-suspension prices gives $F(2,16)=3.870$ ($p=0.043$). The carry-forward result is a separate stale-price scenario and does not satisfy the five-day observation rule. In the $N=30$ model, the pre-period BVPS estimate rises from 0.100 to 0.709; excluding the delayed rows therefore attenuates that slope in this sensitivity comparison. The suspensions were merger-related, so exclusion may be informative, but the missingness mechanism and its direction cannot be established from these two cases.
+Two additional price-window sensitivities show that the sample rule affects the joint-test decision. Re-including the two observed delayed prices gives $F(2,16)=4.762$ ($p=0.024$; $N=30$). In a stale-price carry-forward scenario, using the last prices in the panel-series files for HBL (NPR 487) and NIB/NIMB (NPR 453), both dated 12 May 2021, gives $F(2,16)=3.870$ ($p=0.043$). The candidate price table also records an alternative reported pair, HBL NPR 484 and NIB NPR 460, dated 13 May 2021; using that pair gives $F(2,16)=3.821$ ($p=0.044$). The difference reflects an unresolved one-day/source discrepancy. Both pairs are roughly a year before the April 2022 target, so these are stale-price scenarios, not observations meeting the five-day rule. In the $N=30$ model, the pre-period BVPS estimate rises from 0.100 to 0.709; excluding the delayed rows therefore attenuates that slope in this sensitivity comparison. The delayed observations coincide with merger-related trading gaps, but their missingness mechanism and its direction cannot be established from these cases.
 
-Figure~\ref{fig:robustness_forest} presents a coefficient forest plot summarizing parameter estimates and confidence intervals for the earnings channel across eight robustness specifications (R1, R2, and R4 through R9).
+Figure~\ref{fig:robustness_forest} presents earnings-channel estimates and confidence intervals for eight plotted specifications: the two baselines (R1--R2) and six robustness variants (R4--R9). R3 is omitted because ROA is on a different scale.
 
 \begin{figure}[!htbp]
 \centering
-\caption{Robustness Forest Plot Across Eight Specifications (R1, R2, R4--R9)}
+\caption{Robustness Forest Plot Across Eight Plotted Specifications (R1, R2, R4--R9)}
 \label{fig:robustness_forest}
 \vspace{2pt}
 \includegraphics[width=0.92\textwidth]{figures/A2_robustness_forest.pdf}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Forest plot of the EPS-channel estimates (earnings coefficient and EPS $\times$ Post interaction) with 95\% HC3 confidence intervals across eight specifications (R1, R2, R4--R9; R3 omitted because ROA is on a different scale; $N = 28$, $N = 27$, or $N = 23$).
+\textit{Note.} Forest plot of the EPS-channel estimates (earnings coefficient and EPS $\times$ Post interaction) with 95\% HC3 confidence intervals across eight plotted specifications: two baselines (R1--R2) and six variants (R4--R9). R3 is omitted because ROA is on a different scale. Samples are $N = 28$, $N = 27$, or $N = 23$.
 \end{minipage}
 \end{figure}
 
@@ -483,6 +484,11 @@ Model 1 VIF (EPS) & VIF & 1.16 & Tolerance = 0.862 & Below screen \\
 \addlinespace
 Model 1 VIF (BVPS) & VIF & 1.16 & Tolerance = 0.862 & Below screen \\
 \addlinespace
+Model 2 VIF (EPS) & VIF & 10.33 & Tolerance = 0.097 & Above screen \\
+Model 2 VIF (BVPS) & VIF & 2.28 & Tolerance = 0.439 & Below screen \\
+Model 2 VIF (EPS $\times$ Post) & VIF & 15.15 & Tolerance = 0.066 & Above screen \\
+Model 2 VIF (BVPS $\times$ Post) & VIF & 24.13 & Tolerance = 0.041 & Above screen \\
+\addlinespace
 Koenker robust BP (Model 1) & LM & 14.37 & $p = 0.213$ ($\chi^2(11) = 19.68$) & Not rejected \\
 Classical BP (Model 1) & LM & 28.18 & $p = 0.003$ & Rejected \\
 \addlinespace
@@ -493,7 +499,7 @@ Cook's Distance (Model 1) & Max $D_i$ & 0.552 & Cutoff: $4/N = 0.143$ & Review s
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Diagnostics computed on Model~1 ($N = 28$). VIFs use substantive regressors only, excluding fixed-effect dummies. Koenker robust and classical Breusch-Pagan variants are reported because their Model~1 conclusions differ. The $4/N$ Cook's-distance threshold flags cases for review; HC3 adjusts the covariance estimate but does not remove or neutralize influential observations.
+\textit{Note.} Breusch-Pagan and Cook's-distance diagnostics are computed on Model~1 ($N = 28$). VIFs are computed on the named substantive regressors only, excluding fixed-effect dummies. Koenker robust and classical Breusch-Pagan variants are reported because their Model~1 conclusions differ. The $4/N$ Cook's-distance threshold flags cases for review; HC3 adjusts the covariance estimate but does not remove or neutralize influential observations.
 \end{minipage}
 \end{table}
 
