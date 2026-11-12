@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import numpy as np
 import pytest
+import statsmodels.formula.api as smf
 
 from analysis.dataset import build_dataset
 from analysis.stats.diagnostics import breusch_pagan, cooks_distance, vif_table
@@ -59,6 +60,14 @@ def test_diagnostics_shapes(synthetic_study) -> None:
     vifs = vif_table(ds.panel, ("eps", "bvps"))
     assert [row.term for row in vifs] == ["eps", "bvps"]
     assert all(row.vif > 1.0 and 0 < row.tolerance <= 1.0 for row in vifs)
+    model2_frame = ds.panel.assign(
+        eps_post=ds.panel["eps"] * ds.panel["post"],
+        bvps_post=ds.panel["bvps"] * ds.panel["post"],
+    )
+    model2_vifs = vif_table(
+        model2_frame, ("eps", "bvps", "eps_post", "bvps_post")
+    )
+    assert [row.term for row in model2_vifs] == ["eps", "bvps", "eps_post", "bvps_post"]
     bp = breusch_pagan(fit.results)
     assert 0.0 <= bp.lm_pvalue <= 1.0
     cooks = cooks_distance(fit.results)
@@ -69,13 +78,23 @@ def test_diagnostics_shapes(synthetic_study) -> None:
 def test_robustness_runs_cover_methodology_step4(synthetic_study) -> None:
     ds = build_dataset(strict=True)
     runs = build_runs(ds)
-    assert [run.id for run in runs] == ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8"]
+    assert [run.id for run in runs] == ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"]
     by_id = {run.id: run for run in runs}
     assert by_id["R3"].earnings_term == "roa"
     assert by_id["R7"].bvps_term == "bvps_adj"
     assert by_id["R5"].result.nobs == 23  # 28 - 5 transition-year rows
     assert by_id["R6"].result.nobs == 23  # 28 - 5 entity-mismatch-year rows
     assert by_id["R8"].result.nobs == 28
+    assert by_id["R9"].result.nobs == 27
+
+
+def test_within_r_squared_is_partial_r_squared_for_two_way_fe(synthetic_study) -> None:
+    ds = build_dataset(strict=True)
+    fit = fit_model2(ds.panel)
+    fe_only = smf.ols("price ~ C(bank) + C(fy)", data=ds.panel).fit()
+    expected = 1.0 - fit.results.ssr / fe_only.ssr
+    assert fit.within_rsquared == pytest.approx(expected)
+    assert 0.0 <= fit.within_rsquared <= 1.0
 
 
 def test_sanity_gate_against_exploratory_audit() -> None:

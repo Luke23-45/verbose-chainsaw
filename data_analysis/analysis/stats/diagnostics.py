@@ -44,8 +44,11 @@ class HeteroskedasticityResult:
     f_pvalue: float
 
 
-def breusch_pagan(results: Any) -> HeteroskedasticityResult:
-    lm, lm_p, f, f_p = diagnostic.het_breuschpagan(results.resid, results.model.exog)
+def breusch_pagan(results: Any, *, robust: bool = True) -> HeteroskedasticityResult:
+    """Return Koenker's robust form by default, or classical BP if robust=False."""
+    lm, lm_p, f, f_p = diagnostic.het_breuschpagan(
+        results.resid, results.model.exog, robust=robust
+    )
     return HeteroskedasticityResult(
         lm_stat=float(lm), lm_pvalue=float(lm_p), f_stat=float(f), f_pvalue=float(f_p)
     )

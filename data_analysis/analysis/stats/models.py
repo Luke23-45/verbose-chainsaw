@@ -42,6 +42,7 @@ class FitResult:
     terms: tuple[TermEstimate, ...]
     rsquared: float
     rsquared_adj: float
+    within_rsquared: float | None
     nobs: int
     df_resid: float
     results: Any = field(compare=False)  # statsmodels wrapper, for f_test and diagnostics
@@ -58,6 +59,10 @@ class FitResult:
 
 def _fit(label: str, formula: str, frame: pd.DataFrame, terms: tuple[str, ...]) -> FitResult:
     results = smf.ols(formula, data=frame).fit(cov_type="HC3", use_t=True)
+    within_rsquared = None
+    if "C(bank)" in formula and "C(fy)" in formula:
+        fe_only = smf.ols("price ~ C(bank) + C(fy)", data=frame).fit()
+        within_rsquared = float(1.0 - results.ssr / fe_only.ssr)
     ci = results.conf_int()
     estimates = tuple(
         TermEstimate(
@@ -77,6 +82,7 @@ def _fit(label: str, formula: str, frame: pd.DataFrame, terms: tuple[str, ...]) 
         terms=estimates,
         rsquared=float(results.rsquared),
         rsquared_adj=float(results.rsquared_adj),
+        within_rsquared=within_rsquared,
         nobs=int(results.nobs),
         df_resid=float(results.df_resid),
         results=results,
@@ -104,3 +110,7 @@ def fit_pooled(frame: pd.DataFrame, label: str = "Pooled OLS") -> FitResult:
 
 def fit_bank_fe(frame: pd.DataFrame, label: str = "Bank FE only") -> FitResult:
     return _fit(label, "price ~ eps + bvps + C(bank)", frame, MODEL1_TERMS)
+
+
+def fit_year_fe(frame: pd.DataFrame, label: str = "Year FE only") -> FitResult:
+    return _fit(label, "price ~ eps + bvps + C(fy)", frame, MODEL1_TERMS)

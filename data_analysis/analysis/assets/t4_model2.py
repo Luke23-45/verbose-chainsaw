@@ -64,6 +64,7 @@ def generate(dataset: AnalysisDataset) -> list:
          _pfmt(wald.p_value), f"df ({wald.df_num:.0f}, {wald.df_den:.0f})"),
         ("n", str(fit.nobs), "", "", "", ""),
         ("R2", f"{fit.rsquared:.3f}", "", "", "", ""),
+        ("Within-R2", f"{fit.within_rsquared:.3f}", "", "", "", ""),
         ("df (residual)", f"{fit.df_resid:.0f}", "", "", "", ""),
     ]
     table = Table(
@@ -78,7 +79,8 @@ def generate(dataset: AnalysisDataset) -> list:
             "Post = 1 from FY2079/80 onward; the Post main effect is absorbed by the year "
             "fixed effects (proposal eq. 2). Post slopes are linear combinations beta + "
             "delta tested under the HC3 covariance. The principal test is the joint Wald F "
-            "of H0: delta_E = delta_B = 0, two-tailed at 5%; exploratory, non-causal framing."
+            "of H0: delta_E = delta_B = 0; the joint Wald F is an upper-tail test at 5%; "
+            "exploratory, non-causal framing."
         ),
     )
     return save_table(table, "tables/T4_model2")

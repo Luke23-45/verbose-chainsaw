@@ -55,7 +55,7 @@ The statsmodels pipeline reproduces the exploratory numpy audit of
 | T2 | table | main | P0 | Pearson correlations, lower triangle, significance stars, EPS-ROA caveat |
 | T3 | table | main | P0 | Model 1 estimates: beta_E, beta_B, HC3 SE/t/p, 95% CI, R2, df |
 | T4 | table | main | P0 | Model 2: deltas, implied post slopes (t-contrasts), joint Wald F |
-| T5 | table | main | P0 | Robustness suite R1-R8: one row per specification |
+| T5 | table | main | P0 | Robustness suite R1-R9: one row per specification |
 | T6 | table | main | P1 | Model 1 diagnostics: VIF/tolerance, Breusch-Pagan, Cook's D vs 4/n |
 | F1 | figure | main | P1 | Seaborn scatter matrix of MPS_RD/EPS/BVPS, hue = period |
 | F2 | figure | main | P1 | Correlation heatmap, diverging Okabe-Ito scale |

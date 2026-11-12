@@ -3,7 +3,8 @@ from the same analysis frame, reported side by side with the two baselines.
 
 R1/R2 baselines; R3 ROA-for-EPS; R4 +DPS; R5 excludes the transition year
 FY2079-80; R6 excludes FY2078-79 (entity mismatch); R7 bonus-adjusted BVPS;
-R8 restated EPS (as printed, rows flagged).
+    R8 restated EPS (as printed, rows flagged); R9 excludes the single Kanchan-mismatched
+    NMB FY2076-77 bank-year.
 """
 from __future__ import annotations
 

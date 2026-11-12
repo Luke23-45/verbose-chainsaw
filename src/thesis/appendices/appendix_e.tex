@@ -494,7 +494,7 @@ R9 & All fixed effects jointly zero & $14.059$ & $9, 13$ & $<0.001$ \\
 
 \section{Diagnostics and Sensitivity}
 
-Diagnostics for the baseline value-relevance model are summarized in Chapter IV, Table~\ref{tab:t6_diagnostics}: variance inflation factors of 1.16 for EPS and BVPS, a Breusch-Pagan LM statistic of 14.37 (p = 0.213), and a maximum Cook's distance of 0.552 (HBL FY 2076/77). Table~\ref{tab:app_flagged} lists all five observations that exceed the $4/N = 0.143$ flagging threshold in Model 1. Table~\ref{tab:app_m2flagged} lists the five observations that exceed the same threshold in Model 2; the largest is KBL FY 2076/77 at 0.4902, and the Breusch-Pagan LM statistic on Model 2 residuals is 14.54 on 13 degrees of freedom ($p = 0.337$).
+Diagnostics for the baseline value-relevance model are summarized in Chapter IV, Table~\ref{tab:t6_diagnostics}. Model~1 substantive-regressor VIFs are 1.16 for EPS and BVPS; the Model~2 VIFs are also discussed in Chapter IV. The Model~1 Koenker robust Breusch-Pagan LM statistic is 14.37 ($p=0.213$), while the classical variant is 28.18 ($p=0.003$). The maximum Model~1 Cook's distance is 0.552 (HBL FY 2076/77). Table~\ref{tab:app_flagged} lists the five observations that exceed the $4/N=0.143$ attention threshold in Model~1. Table~\ref{tab:app_m2flagged} lists the five observations above that threshold in Model~2; the largest is KBL FY 2076/77 at 0.4902. The Model~2 Koenker robust Breusch-Pagan LM statistic is 14.54 on 13 degrees of freedom ($p=0.337$).
 
 Collinearity in Model 2. Variance inflation factors computed on the substantive regressors by the Chapter III method, auxiliary regressions on the slopes alone without fixed effects, are EPS 10.33, BVPS 2.28, $\delta_E$ 15.15, and $\delta_B$ 24.13. Three exceed the Chapter III screening threshold of 5. This collinearity is largely mechanical: each interaction equals its level variable in post-consolidation years and zero before, so the interactions necessarily correlate with their levels. It does not bias the coefficients, but it widens their standard errors, which the HC3 intervals already reflect, and it is why the regime-shift inference rests on the joint Wald test in Table~\ref{tab:app_robustfull} ($F = 2.954$, $p = 0.085$) rather than on the individual interaction t-statistics.
 
@@ -525,7 +525,7 @@ KBL FY 2081/82 & $0.2447$ & $0.4760$ \\
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Cook's distance and leverage from Model 1; flagging threshold $4/N = 4/28 = 0.143$. No observation is removed: HC3 standard errors are the stated treatment for leverage, and Table~\ref{tab:app_sensitivity} reports whether the headline results survive deleting each flagged case and each bank.
+\textit{Note.} Cook's distance and leverage from Model~1; attention threshold $4/N=4/28=0.143$. No observation is removed. HC3 adjusts the covariance estimate but does not remove or neutralize influential observations; Table~\ref{tab:app_sensitivity} reports sensitivity to deleting each flagged case and each bank.
 \end{minipage}
 \end{table}
 
@@ -554,7 +554,7 @@ HBL FY 2081/82 & $0.1513$ & $0.5205$ \\
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Cook's distance and leverage from Model 2; flagging threshold $4/N = 4/28 = 0.143$. The Breusch-Pagan LM statistic on Model 2 residuals is $14.54$ on 13 degrees of freedom ($p = 0.337$). No observation is removed: HC3 standard errors are the stated treatment for leverage, and Tables~\ref{tab:app_sensitivity} and~\ref{tab:app_loy} report whether the headline results survive deleting each flagged case, each bank, and each year.
+\textit{Note.} Cook's distance and leverage from Model~2; attention threshold $4/N=4/28=0.143$. The Koenker robust Breusch-Pagan LM statistic on Model~2 residuals is $14.54$ on 13 degrees of freedom ($p=0.337$). No observation is removed. HC3 adjusts the covariance estimate but does not remove or neutralize influential observations; Tables~\ref{tab:app_sensitivity} and~\ref{tab:app_loy} report sensitivity to deleting flagged cases, banks, and years.
 \end{minipage}
 \end{table}
 \begin{table}[!htbp]

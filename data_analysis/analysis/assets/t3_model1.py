@@ -35,6 +35,7 @@ def generate(dataset: AnalysisDataset) -> list:
         ("n", str(fit.nobs), "", "", "", ""),
         ("R2", f"{fit.rsquared:.3f}", "", "", "", ""),
         ("Adj. R2", f"{fit.rsquared_adj:.3f}", "", "", "", ""),
+        ("Within-R2", f"{fit.within_rsquared:.3f}", "", "", "", ""),
         ("df (residual)", f"{fit.df_resid:.0f}", "", "", "", ""),
     ]
     table = Table(
