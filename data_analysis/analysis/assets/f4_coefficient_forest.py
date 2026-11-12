@@ -6,25 +6,12 @@ means no rejection.
 from __future__ import annotations
 
 import matplotlib.pyplot as plt
-import numpy as np
 from matplotlib.lines import Line2D
 
 from analysis.common.style import OKABE_ITO, paper_style
 from analysis.dataset import AnalysisDataset
 from analysis.render.figures import coef_forest, save
-from analysis.stats.models import TermEstimate, fit_model2
-
-
-def _combo(fit, constraint: str) -> TermEstimate:
-    test = fit.results.t_test(constraint)
-    effect = float(np.asarray(test.effect, dtype=float).ravel()[0])
-    se = float(np.asarray(test.sd, dtype=float).ravel()[0])
-    ci = np.asarray(test.conf_int(), dtype=float).ravel()
-    return TermEstimate(
-        term=constraint, coef=effect, se=se, tvalue=effect / se,
-        pvalue=float(np.asarray(test.pvalue, dtype=float).ravel()[0]),
-        ci_low=float(ci[0]), ci_high=float(ci[1]),
-    )
+from analysis.stats.models import fit_model2, linear_combination
 
 
 def generate(dataset: AnalysisDataset) -> list:
@@ -34,8 +21,8 @@ def generate(dataset: AnalysisDataset) -> list:
         ("BVPS (pre; beta)", fit.term("bvps"), OKABE_ITO["blue"]),
         ("EPS x Post (delta)", fit.term("eps:post"), OKABE_ITO["orange"]),
         ("BVPS x Post (delta)", fit.term("bvps:post"), OKABE_ITO["orange"]),
-        ("EPS (post; beta+delta)", _combo(fit, "eps + eps:post = 0"), OKABE_ITO["vermillion"]),
-        ("BVPS (post; beta+delta)", _combo(fit, "bvps + bvps:post = 0"), OKABE_ITO["vermillion"]),
+        ("EPS (post; beta+delta)", linear_combination(fit, "eps + eps:post = 0"), OKABE_ITO["vermillion"]),
+        ("BVPS (post; beta+delta)", linear_combination(fit, "bvps + bvps:post = 0"), OKABE_ITO["vermillion"]),
     ]
     labels = [name for name, _est, _color in rows]
     estimates = [est.coef for _name, est, _color in rows]

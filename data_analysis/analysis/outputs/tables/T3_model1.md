@@ -9,6 +9,7 @@
 | n | 28 |  |  |  |  |
 | R2 | 0.948 |  |  |  |  |
 | Adj. R2 | 0.912 |  |  |  |  |
+| Within-R2 | 0.152 |  |  |  |  |
 | df (residual) | 16 |  |  |  |  |
 
 *Notes: OLS with bank (mu_i) and fiscal-year (lambda_t) fixed effects; MacKinnon-White HC3 robust standard errors (G = 5 banks is too few for cluster-robust inference). Two-tailed tests at the 5% level. Exploratory: associations, not causal effects.*

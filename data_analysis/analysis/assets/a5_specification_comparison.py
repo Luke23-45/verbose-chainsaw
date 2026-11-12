@@ -22,7 +22,9 @@ def generate(dataset: AnalysisDataset) -> list:
         (
             fit.label,
             "—" if "eps" not in fit.term_map() else f"{fit.term('eps').coef:.3f} ({fit.term('eps').se:.3f})",
+            "—" if "eps" not in fit.term_map() else f"{fit.term('eps').pvalue:.3f}",
             "—" if "bvps" not in fit.term_map() else f"{fit.term('bvps').coef:.3f} ({fit.term('bvps').se:.3f})",
+            "—" if "bvps" not in fit.term_map() else f"{fit.term('bvps').pvalue:.3f}",
             f"{fit.rsquared:.3f}",
             f"{fit.rsquared_adj:.3f}",
             "n/a" if fit.within_rsquared is None else f"{fit.within_rsquared:.3f}",
@@ -33,7 +35,7 @@ def generate(dataset: AnalysisDataset) -> list:
     table = Table(
         id="A5_specification_comparison",
         caption="Specification comparison: pooled OLS, bank FE and two-way FE",
-        headers=("Specification", "beta(EPS)", "beta(BVPS)", "R2", "Adj. R2", "Within-R2", "n"),
+        headers=("Specification", "beta(EPS) (SE)", "p(EPS)", "beta(BVPS) (SE)", "p(BVPS)", "R2", "Adj. R2", "Within-R2", "n"),
         rows=rows,
         notes=(
             "HC3 robust standard errors in parentheses. Two-way FE adds fiscal-year dummies "

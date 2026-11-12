@@ -9,7 +9,7 @@ import statsmodels.formula.api as smf
 
 from analysis.dataset import build_dataset
 from analysis.stats.diagnostics import breusch_pagan, cooks_distance, vif_table
-from analysis.stats.models import fit_bank_fe, fit_model1, fit_model2, fit_pooled
+from analysis.stats.models import fit_bank_fe, fit_model1, fit_model2, fit_pooled, linear_combination
 from analysis.stats.robustness import build_runs
 from analysis.stats.wald import joint_zero_test
 from tests.conftest import BVPS_SLOPE, EPS_SLOPE
@@ -36,6 +36,16 @@ def test_model2_planted_delta_recovered_and_wald_rejects(synthetic_study) -> Non
     assert fit.term("eps:post").coef == pytest.approx(planted_delta, abs=0.6)
     wald = joint_zero_test(fit.results, ("eps:post", "bvps:post"))
     assert wald.p_value < 0.05
+
+
+def test_post_slope_linear_combination_uses_hc3_covariance(synthetic_study) -> None:
+    ds = build_dataset(strict=True)
+    fit = fit_model2(ds.panel)
+    post_eps = linear_combination(fit, "eps + eps:post = 0")
+    assert post_eps.coef == pytest.approx(fit.term("eps").coef + fit.term("eps:post").coef)
+    assert post_eps.se > 0
+    assert 0 <= post_eps.pvalue <= 1
+    assert post_eps.ci_low < post_eps.coef < post_eps.ci_high
 
 
 def test_wald_does_not_reject_when_no_deltas_planted(synthetic_study) -> None:

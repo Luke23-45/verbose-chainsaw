@@ -11,6 +11,8 @@
 | Joint Wald F (H0: delta_E = delta_B = 0) | F = 2.954 |  |  | 0.085 | df (2, 14) |
 | n | 28 |  |  |  |  |
 | R2 | 0.978 |  |  |  |  |
+| Adj. R2 | 0.958 |  |  |  |  |
+| Within-R2 | 0.642 |  |  |  |  |
 | df (residual) | 14 |  |  |  |  |
 
-*Notes: Post = 1 from FY2079/80 onward; the Post main effect is absorbed by the year fixed effects (proposal eq. 2). Post slopes are linear combinations beta + delta tested under the HC3 covariance. The principal test is the joint Wald F of H0: delta_E = delta_B = 0, two-tailed at 5%; exploratory, non-causal framing.*
+*Notes: Post = 1 from FY2079/80 onward; the Post main effect is absorbed by the year fixed effects (proposal eq. 2). Post slopes are linear combinations beta + delta tested under the HC3 covariance. The principal test is the joint Wald F of H0: delta_E = delta_B = 0; the joint Wald F is an upper-tail test at 5%; exploratory, non-causal framing.*

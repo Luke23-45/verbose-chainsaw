@@ -53,7 +53,7 @@ def generate(dataset: AnalysisDataset) -> list:
         rows=tuple(rows),
         notes=(
             "* p < 0.05, ** p < 0.01 (two-tailed). EPS and ROA correlate at r ~ 0.97 "
-            "(variance inflation ~ 20), so ROA never appears alongside EPS in any "
+            "(bivariate variance inflation ~ 20), so ROA never appears alongside EPS in any "
             "specification; P/E is excluded by construction (mechanical MPS/EPS overlap)."
         ),
     )

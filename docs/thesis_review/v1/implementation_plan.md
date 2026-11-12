@@ -1,10 +1,10 @@
 # Implementation Plan: Data Analysis Review v1
 
-**Purpose:** Convert the findings in [`data_analysis_review.md`](data_analysis_review.md) into a controlled implementation sequence for the thesis. This is a plan only. No thesis, analysis, data, configuration, or generated output files have been changed in preparing it.
+**Purpose:** Convert the findings in [`data_analysis_review.md`](data_analysis_review.md) into a controlled implementation sequence for the thesis. This file began as a plan; implementation status is recorded at the end.
 
 **Scope:** Methodological decisions, analysis reporting, thesis text, and the analysis pipeline/tests where traceability requires it. The extracted data remain the agreed ground truth. No extraction audit, redesign, or thesis rebuild is included in this planning stage.
 
-**Plan basis:** Current repository state at `e1cf467` (2026-11-12). The review file remains the findings register; this plan maps and sequences its findings rather than replacing them.
+**Plan basis:** Review findings checked against commit `0283469` and current source/output files (2026-11-12). The review file remains the findings register; this plan maps and sequences its findings rather than replacing them.
 
 ## Triple-check completed
 
@@ -33,7 +33,7 @@ These checks validate the key review claims against the current code path. They 
 |---|---|---|---|
 | Price freshness rule and two delayed rows | M4, M5, M14; Q1–Q2 | Record why five days is the intended freshness boundary and whether the estimand is an immediately post-deadline price or the next available price after a suspension. Keep the 28-row rule as the stated primary sample unless the author revises the design. Add a clearly labelled sensitivity that includes the two observed delayed prices (N=30; current code gives F=4.762, p=.024). Do not carry prices forward or treat 47/54-day prices as five-day observations without a defensible design decision. Describe the merger-related suspension and discuss plausible missingness/bias; do not label the mechanism MCAR/MAR/MNAR without author support. | Author/supervisor rationale is recorded; primary sample and sensitivity estimand are explicitly distinguished; any changed sample rule is approved before recalculation. |
 | R6 and multiplicity | M3, M13; Q7 | Identify the family as the eight joint tests R2–R9 and state whether they are primary or sensitivity analyses. Retain unadjusted p-values for transparency, report a Holm-adjusted R6 p≈.169 as a sensitivity-family calibration, and explain that R6 is the only raw rejection, R5 does not reject at the same N/df, neither R6 interaction is individually significant, and the joint statistic is close enough to its critical value that a 29.5% reduction would remove the raw rejection. Correct the R6 leave-one-out attribution: the “1 of 28” result is baseline M2, while 16/23 R6 deletions remain below .05. | R6 wording reflects its sensitivity status and the multiplicity family; the primary hypothesis decision is not silently redefined. |
-| Power / detectable effects | M1, M33; Q6 | Add a design-sensitivity/MDE explanation with the assumptions, test, degrees of freedom, target power, and effect scale stated. Present the review's approximate thresholds only after recomputing and documenting the method. Phrase them as detectable-effect limits, not as proof that small or moderate effects are absent and not as retrospective “observed power.” | The thesis states what null findings can and cannot establish, with computation and assumptions traceable. |
+| Power / detectable effects | M1; Q6 | Add a design-sensitivity/MDE explanation with the assumptions, test, degrees of freedom, target power, and effect scale stated. Present the review's approximate thresholds only after recomputing and documenting the method. Phrase them as detectable-effect limits, not as proof that small or moderate effects are absent and not as retrospective “observed power.” | The thesis states what null findings can and cannot establish, with computation and assumptions traceable. |
 
 ## Phase 2 — Correct method and diagnostic reporting
 
@@ -93,4 +93,4 @@ Apply after Phases 1–3 are resolved so prose and numbers are synchronized.
 
 ---
 
-**Status:** Planning complete; implementation not started. The only file created for this step is this plan in `docs/thesis_review/v1/`.
+**Implementation status:** First surgical patch set was committed at `0283469`; the follow-up patches are applied and recorded in [`implementation_log.md`](implementation_log.md). Selected analysis tables were regenerated and checked against the manifest; the analysis tests pass. The full thesis was not built. The `assemble_e.py` source named in the follow-up audit is not present in the repository or its parent project directory, so Appendix E generator synchronization remains unverified and must be checked where that external source is maintained.

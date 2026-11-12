@@ -1,5 +1,8 @@
 {
-  "argv": [],
+  "argv": [
+    "--asset",
+    "T2"
+  ],
   "coverage": {
     "intended": 30,
     "realized": 28,
@@ -35,11 +38,11 @@
       "outputs": [
         {
           "path": "tables/T2_correlations.tex",
-          "sha256": "61a852f2c7807fa0030a8e919c2087c9637fcda3e6d04339fe53294e0d3f59a6"
+          "sha256": "37eaefc8cb084eb8d03865d49caa7a4951e12a1a6116c432ba9bdb300cbbb7bd"
         },
         {
           "path": "tables/T2_correlations.md",
-          "sha256": "de7c4c515e0cb8c14946e0a078a2257a65443089cde6e54cb845dd757839aa46"
+          "sha256": "0adb5b6df4782c7b04a238cb4ddf5e3e77360c58850b643b221061cae07e406f"
         }
       ]
     },
@@ -48,11 +51,11 @@
       "outputs": [
         {
           "path": "tables/T3_model1.tex",
-          "sha256": "eac19053741aae48bc590ff72873cc50f19e088fd1760507668fb70e318be3ce"
+          "sha256": "4ec3f80458197aedb1e8d87ce3deec3fbf1bd1f841b3e0e43f09d8ad32647c85"
         },
         {
           "path": "tables/T3_model1.md",
-          "sha256": "1aa3896c58939a10cad424c71ebcbdf2b6eef0d13d4ac272f68c38412fa0b68d"
+          "sha256": "c8cb6da36c9185570922dad97923463d5a71f995c213a07997c190b60b5d1c58"
         }
       ]
     },
@@ -61,11 +64,11 @@
       "outputs": [
         {
           "path": "tables/T4_model2.tex",
-          "sha256": "2a7e8eb3672b30f7cdd23394fdb14ad63faf7e0bff996dba76cb49a914aefd29"
+          "sha256": "4918389d7869a0336a85c259a954006976be3e7600b5350a2f0c0304cf575e1f"
         },
         {
           "path": "tables/T4_model2.md",
-          "sha256": "87647977738a017e1385f52296ec6a902ee791e4c6a4e06b18023fee121bdc9f"
+          "sha256": "36e6eee93f981bab2a8f7909064a7be90c1b394b8fa08887488acf43c52812e1"
         }
       ]
     },
@@ -74,11 +77,11 @@
       "outputs": [
         {
           "path": "tables/T5_robustness.tex",
-          "sha256": "9f85ecd4ddf14e5692509bb73483a0a8077620ebfed00dfd0afca48e0d5af5c4"
+          "sha256": "9af27e2188107cae961a7d7e6c5aab77ef872c9544415d047e3df023815a7600"
         },
         {
           "path": "tables/T5_robustness.md",
-          "sha256": "fe88c172fdca0d6e66c5bb48a9976bd9c3738f91d362507f763cf6faf985dc22"
+          "sha256": "c535196146d95317e42a8ca7cbf915a673101308af57def65b2ebd464b3c0ab4"
         }
       ]
     },
@@ -87,11 +90,11 @@
       "outputs": [
         {
           "path": "tables/T6_diagnostics.tex",
-          "sha256": "0be67cf2f3e29d999f01321c29b974e02234980163d01c302585bac865f18dfa"
+          "sha256": "b35f8a358720912894d38716c0d684564c6ef08dc1053ca925eba7fcf5db7bc4"
         },
         {
           "path": "tables/T6_diagnostics.md",
-          "sha256": "f0178f3ccde9e9035036e0513d46a4e768ef9a8406433263a698cc22f73460d0"
+          "sha256": "4e30ef8bea92e9da25fed96fb88888c1b7e7082edc666f33dd33ec387cf5e0b3"
         }
       ]
     },
@@ -230,11 +233,11 @@
       "outputs": [
         {
           "path": "tables/A5_specification_comparison.tex",
-          "sha256": "5e1a6723a19cbb85e6e44be25515196b6467629aec5660d5d93177609405b35b"
+          "sha256": "74afb7d091fb6169cb9abb3aef38771f0c4861313ccebc03e606326aceb5ec78"
         },
         {
           "path": "tables/A5_specification_comparison.md",
-          "sha256": "aa344171b486811d320639e20ecbe31f9349e97ff1bb1fe51dd5770ec59c521b"
+          "sha256": "a27b75f38df6a79ef852554c4d907fc5bbf10597e77ff7f87eac4b9658d97370"
         }
       ]
     },

@@ -15,6 +15,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
+import numpy as np
 import pandas as pd
 import statsmodels.formula.api as smf
 
@@ -55,6 +56,23 @@ class FitResult:
 
     def term_map(self) -> dict[str, TermEstimate]:
         return {estimate.term: estimate for estimate in self.terms}
+
+
+def linear_combination(fit: FitResult, constraint: str) -> TermEstimate:
+    """Estimate a linear combination using the fitted robust covariance."""
+    test = fit.results.t_test(constraint)
+    effect = float(np.asarray(test.effect, dtype=float).ravel()[0])
+    se = float(np.asarray(test.sd, dtype=float).ravel()[0])
+    ci_low, ci_high = np.asarray(test.conf_int(), dtype=float).ravel()
+    return TermEstimate(
+        term=constraint,
+        coef=effect,
+        se=se,
+        tvalue=effect / se if se else float("nan"),
+        pvalue=float(np.asarray(test.pvalue, dtype=float).ravel()[0]),
+        ci_low=float(ci_low),
+        ci_high=float(ci_high),
+    )
 
 
 def _fit(label: str, formula: str, frame: pd.DataFrame, terms: tuple[str, ...]) -> FitResult:

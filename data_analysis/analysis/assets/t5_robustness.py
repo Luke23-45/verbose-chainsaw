@@ -8,21 +8,11 @@ FY2079-80; R6 excludes FY2078-79 (entity mismatch); R7 bonus-adjusted BVPS;
 """
 from __future__ import annotations
 
-import numpy as np
-
 from analysis.dataset import AnalysisDataset
 from analysis.render.tables import Table, save_table
 from analysis.stats.robustness import RobustnessRun, build_runs, interaction_terms
 from analysis.stats.wald import joint_zero_test
 from analysis.assets.t3_model1 import _pfmt
-
-
-def _combo(fit, constraint: str) -> tuple[float, float]:
-    """(estimate, HC3 SE) of a linear combination of coefficients."""
-    test = fit.results.t_test(constraint)
-    effect = float(np.asarray(test.effect, dtype=float).ravel()[0])
-    se = float(np.asarray(test.sd, dtype=float).ravel()[0])
-    return effect, se
 
 
 def _run_row(run: RobustnessRun) -> tuple[str, ...]:

@@ -85,10 +85,17 @@ def main(argv: list[str] | None = None) -> int:
         LOG.info("check: %d assets selected, no outputs written", len(specs))
         return 0
 
+    manifest_path = config.manifest_path()
+    previous_manifest = {}
+    if manifest_path.is_file():
+        try:
+            previous_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            LOG.warning("could not read previous manifest; rebuilding selected entries only")
     manifest = {
         "argv": sys.argv[1:],
         "coverage": coverage,
-        "assets": {},
+        "assets": dict(previous_manifest.get("assets", {})),
     }
     failures: list[str] = []
     paper_root = config.paper_root()
@@ -111,7 +118,6 @@ def main(argv: list[str] | None = None) -> int:
             failures.append(spec.id)
             LOG.error("%-4s FAILED  %s: %s", spec.id, type(exc).__name__, exc)
 
-    manifest_path = config.manifest_path()
     atomic_write_text(manifest_path, json.dumps(manifest, indent=2) + "\n")
     LOG.info("manifest: %s (%d assets ok, %d failed)", manifest_path, len(specs) - len(failures), len(failures))
     return 1 if failures else 0

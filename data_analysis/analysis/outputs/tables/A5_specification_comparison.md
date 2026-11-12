@@ -1,9 +1,10 @@
 **Specification comparison: pooled OLS, bank FE and two-way FE**
 
-| Specification | beta(EPS) | beta(BVPS) | R2 | n |
-|---|---|---|---|---|
-| Pooled OLS (no FE) | 4.882 (3.099) | 0.552 (1.259) | 0.136 | 28 |
-| Bank FE only | 5.217 (5.360) | 1.432 (2.727) | 0.176 | 28 |
-| Two-way FE (Model 1) | 2.095 (4.096) | 0.219 (1.858) | 0.948 | 28 |
+| Specification | beta(EPS) (SE) | p(EPS) | beta(BVPS) (SE) | p(BVPS) | R2 | Adj. R2 | Within-R2 | n |
+|---|---|---|---|---|---|---|---|---|
+| Pooled OLS (no FE) | 4.882 (3.099) | 0.128 | 0.552 (1.259) | 0.665 | 0.136 | 0.067 | n/a | 28 |
+| Bank FE only | 5.217 (5.360) | 0.341 | 1.432 (2.727) | 0.605 | 0.176 | -0.059 | n/a | 28 |
+| Year FE + EPS/BVPS | 2.185 (1.260) | 0.098 | 0.555 (0.674) | 0.420 | 0.919 | 0.891 | n/a | 28 |
+| Two-way FE (Model 1) | 2.095 (4.096) | 0.616 | 0.219 (1.858) | 0.908 | 0.948 | 0.912 | 0.152 | 28 |
 
-*Notes: HC3 robust standard errors in parentheses. Two-way FE adds fiscal-year dummies to the bank fixed effects; this is Model 1, the baseline carried into Model 2.*
+*Notes: HC3 robust standard errors in parentheses. Two-way FE adds fiscal-year dummies to the bank fixed effects; this is Model 1, the baseline carried into Model 2. Within-R2 is defined relative to a bank-and-year-dummies-only model; it is not applicable to specifications without both fixed effects.*
