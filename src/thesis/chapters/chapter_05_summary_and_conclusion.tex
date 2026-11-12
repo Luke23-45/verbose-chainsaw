@@ -33,7 +33,7 @@ To resolve these empirical gaps, this dissertation addressed three core research
     \item How sensitive are the estimated valuation coefficients to transition-year effects, entity-timing mismatches, operating profitability substitutions, dividend exclusions, bonus share adjustments, and restated earnings?
 \end{itemize}
 
-Correspondingly, the study set out to: (i) evaluate the baseline value relevance of EPS and BVPS under a standardized post-reporting-deadline pricing framework; (ii) quantify structural shifts in valuation slopes across the 2023 consolidation wave using an interactive panel specification; and (iii) execute a comprehensive eight-specification estimation and robustness suite (R1--R2 baselines plus six robustness variants R3--R8) to establish the empirical boundary conditions of accounting multiples in Nepal.
+Correspondingly, the study set out to: (i) evaluate the baseline value relevance of EPS and BVPS under a standardized post-reporting-deadline pricing framework; (ii) quantify structural shifts in valuation slopes across the 2023 consolidation wave using an interactive panel specification; and (iii) execute a comprehensive nine-specification estimation and robustness suite (R1--R2 baselines plus seven robustness variants R3--R9) to establish the empirical boundary conditions of accounting multiples in Nepal.
 
 \subsection{Methodology and Research Design Synthesis}
 To execute this investigation with rigorous econometric discipline, the study employed a longitudinal panel design spanning six fiscal years (FY 2076/77 through FY 2081/82, corresponding to 2019/20 through 2024/25). The target population encompassed all Class `A' commercial banks listed on NEPSE. A purposive sample of five prominent commercial banking series was selected:
@@ -94,7 +94,7 @@ The empirical analysis yielded several substantive findings regarding the statis
     \end{itemize}
     \item \textbf{Robustness Suite Insights and the Entity-Timing Sensitivity:}
     \begin{itemize}
-        \item The eight-specification suite (R1--R8) did not reject parameter stability at the 5\% level across ROA substitution (R3), cash dividend inclusion (R4, residual $\text{df} = 13$), transition-year removal (R5), bonus share dilution (R7), and restated basic earnings (R8), except under Specification R6 (detailed below), where the joint Wald test rejected parameter stability.
+        \item The nine-specification suite (R1--R9) did not reject parameter stability at the 5\% level across ROA substitution (R3), cash dividend inclusion (R4, residual $\text{df} = 13$), transition-year removal (R5), bonus share dilution (R7), restated basic earnings (R8), and Kanchan-mismatched bank-year removal (R9, residual $\text{df} = 13$), except under Specification R6 (detailed below), where the joint Wald test rejected parameter stability.
         \item \textit{Entity-Timing Sensitivity (Specification R6):} When FY 2078/79 was excluded to eliminate the entity-timing asymmetry (standalone pre-merger fundamentals vs.\ post-merger April 2023 trading prices across the four merged banks), the joint Wald test became \textbf{statistically significant at the 5\% level}:
         \begin{equation}
         F(2, 10) = 5.82, \quad p = 0.021 \quad (N = 23)
@@ -114,7 +114,7 @@ In direct response to the three research questions formulated in Chapter~I:
 \begin{itemize}
     \item \textbf{Answer to Research Question 1 (Baseline Value Relevance):} Fundamental accounting measures (EPS and BVPS) do not exhibit a statistically significant association with secondary market equity prices observed immediately following statutory annual reporting deadlines under the baseline two-way fixed-effects model ($p = 0.616$ for EPS; $p = 0.908$ for BVPS). Omitted macro-year price shocks account for the high explanatory power reported in static pooled studies.
     \item \textbf{Answer to Research Question 2 (Consolidation Regime Shift):} Across the 2023 commercial banking consolidation wave, both earnings and book value valuation multiples experienced downward compression ($\hat{\delta}_E = -3.124, \hat{\delta}_B = -1.758$). In the baseline sample, the joint Wald test does not reject parameter stability at the strict 5\% level ($F = 2.954, p = 0.085$), though marginal significance is observed at the 10\% level.
-    \item \textbf{Answer to Research Question 3 (Sensitivity and Boundary Conditions):} The structural regime shift is highly sensitive to entity-boundary timing. Purging the FY 2078/79 entity-timing mismatch (Specification R6) yields a statistically significant joint regime shift at the 5\% level ($F = 5.82, p = 0.021$). Baseline estimates remain stable across operating profitability substitutions (R3), cash dividend inclusions (R4), transition-year removal (R5), bonus share dilution adjustments (R7), and restated basic earnings (R8).
+    \item \textbf{Answer to Research Question 3 (Sensitivity and Boundary Conditions):} The structural regime shift is highly sensitive to entity-boundary timing. Purging the FY 2078/79 entity-timing mismatch (Specification R6) yields a statistically significant joint regime shift at the 5\% level ($F = 5.82, p = 0.021$). Baseline estimates remain stable across operating profitability substitutions (R3), cash dividend inclusions (R4), transition-year removal (R5), bonus share dilution adjustments (R7), restated basic earnings (R8), and Kanchan-mismatched bank-year removal (R9).
 \end{itemize}
 
 \subsection{Regime Differences in Accounting Valuation Multiples}
@@ -124,7 +124,7 @@ The empirical evidence indicates that the valuation associations of accounting f
 Under classical valuation theory \citep{ohlson1995,collins1997}, when reported earnings become transitory or disrupted by corporate restructuring, equity investors are expected to shift their valuation focus toward balance-sheet book value as an abandonment or liquidation floor. This theoretical substitution was \textbf{not observed} in this sample of Nepalese commercial banks. Rather than acting as a valuation anchor, the post-consolidation point estimate for book value per share turned negative ($\hat{\beta}_B + \hat{\delta}_B = -1.658$, though statistically insignificant at $p = 0.161$). A plausible economic interpretation is that in the post-merger banking environment, expanded book equity can reflect capital issued to absorb distressed assets, unamortized restructuring costs, or regulatory reserve transfers, rather than unencumbered liquidation value. Because commercial banks are highly leveraged institutions subject to regulatory resolution rather than orderly liquidation, market participants did not treat expanded book equity as an uncompromised asset anchor.
 
 \subsection{Econometric Discipline: Specification Sensitivity and Macro-Year Variation}
-This dissertation highlights the substantial influence of econometric specification in evaluating accounting value relevance in frontier markets. In this sample, pooled estimation yields a larger earnings slope estimate ($\hat{\beta}_E = 4.882$) than two-way fixed effects ($\hat{\beta}_E = 2.095$), while explaining far less variance ($R^2 = 0.136$ versus $0.948$), illustrating how omitted macro-year variation can inflate accounting slope estimates. When fiscal-year fixed effects absorb common market-wide price levels, slope coefficients are identified from within-bank variation net of common year shocks (after removing both bank-specific and fiscal-year means). Furthermore, studies that included the Price-to-Earnings (P/E) ratio as an explanatory regressor face severe mechanical endogeneity, as P/E directly embeds the dependent variable ($\mathit{MPS}$) in its numerator. When P/E is strictly excluded, prices are measured post-disclosure, and two-way fixed effects are estimated with HC3 robust standard errors, accounting fundamentals explain cross-sectional bank differentiation with substantial uncertainty, while macro-temporal trends account for the large majority of price variation.
+This dissertation highlights the substantial influence of econometric specification in evaluating accounting value relevance in frontier markets. In this sample, pooled estimation yields a larger earnings slope estimate ($\hat{\beta}_E = 4.882$) than two-way fixed effects ($\hat{\beta}_E = 2.095$), while explaining far less variance ($R^2 = 0.136$ versus $0.948$), illustrating how omitted macro-year variation can inflate accounting slope estimates. When fiscal-year fixed effects absorb common market-wide price levels, slope coefficients are identified from within-bank variation net of common year shocks (after removing both bank-specific and fiscal-year means). Furthermore, studies that included the Price-to-Earnings (P/E) ratio as an explanatory regressor face severe mechanical endogeneity, as P/E directly embeds the dependent variable ($\mathit{MPS}$) in its numerator. When P/E is strictly excluded, prices are measured after the statutory reporting deadline, and two-way fixed effects are estimated with HC3 robust standard errors, accounting fundamentals explain cross-sectional bank differentiation with substantial uncertainty, while macro-temporal trends account for the large majority of price variation.
 
 \subsection{Archival Timing and Data Integrity in Frontier Market Research}
 The sensitivity analysis demonstrates that the econometric evaluation of corporate restructuring in frontier markets is acutely sensitive to archival timing and entity-boundary definitions. In the immediate aftermath of amalgamations, reporting lags create temporal asymmetries where historical standalone financial accounts are paired with newly enlarged capitalized market entities. Purging this entity mismatch in specification R6 yielded a statistically significant joint test ($F = 5.82, p = 0.021$). Furthermore, enforcing the 5-day freshness rule demonstrated that prolonged secondary trading suspensions---such as those observed for HBL (54 days) and NIMB (47 days)---preclude reliable price observation. Methodologically defensible research must anchor market observations to statutory disclosure mandates (BAFIA Section 59(2)) and explicitly exclude stale or suspended price series.
@@ -137,30 +137,29 @@ To formally synthesize the empirical findings against the theoretical expectatio
 \small
 \caption{Summary of Hypothesis Testing Decisions}
 \label{tab:hyp_decisions}
-\renewcommand{\arraystretch}{1.22}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}}
 \toprule
 \textbf{Research Hypothesis} & \textbf{Model / Parameter} & \textbf{Null Hypothesis} & \textbf{Estimate (SE) / Stat.} & \textbf{Empirical Decision} \\
 \midrule
 $H_1$: EPS Relevance & Model 1 Baseline $\beta_E$ & $H_0: \beta_E = 0$ & 2.095 (4.096), $p = 0.616$ & Fail to Reject $H_0$ \\
-\addlinespace[3.5pt]
- & Model 2 Pre $\beta_E$ & $H_0: \beta_E = 0$ & 5.577 (3.560), $p = 0.140$ & Fail to Reject $H_0$ \\
-\addlinespace[6pt]
+\addlinespace
+& Model 2 Pre $\beta_E$ & $H_0: \beta_E = 0$ & 5.577 (3.560), $p = 0.140$ & Fail to Reject $H_0$ \\
+\addlinespace
 $H_2$: BVPS Relevance & Model 1 Baseline $\beta_B$ & $H_0: \beta_B = 0$ & 0.219 (1.858), $p = 0.908$ & Fail to Reject $H_0$ \\
-\addlinespace[3.5pt]
- & Model 2 Pre $\beta_B$ & $H_0: \beta_B = 0$ & 0.100 (1.306), $p = 0.940$ & Fail to Reject $H_0$ \\
-\addlinespace[6pt]
+\addlinespace
+& Model 2 Pre $\beta_B$ & $H_0: \beta_B = 0$ & 0.100 (1.306), $p = 0.940$ & Fail to Reject $H_0$ \\
+\addlinespace
 $H_3$: EPS Regime Shift & Model 2 Interaction $\delta_E$ & $H_0: \delta_E = 0$ & $-3.124$ (4.003), $p = 0.448$ & Fail to Reject $H_0$ \\
-\addlinespace[6pt]
+\addlinespace
 $H_4$: BVPS Regime Shift & Model 2 Interaction $\delta_B$ & $H_0: \delta_B = 0$ & $-1.758$ (1.231), $p = 0.175$ & Fail to Reject $H_0$ \\
-\addlinespace[6pt]
+\addlinespace
 Joint Regime Shift & Model 2 Joint Wald & $H_0: \delta_E=\delta_B=0$ & $F(2, 14) = 2.954, p = 0.085$ & Fail to Reject $H_0$ \\
-\addlinespace[6pt]
-Composite Test (Sens.) & R6 Joint Wald (Sens.) & $H_0: \delta_E=\delta_B=0$ & $F(2, 10) = 5.818, p = 0.021$ & Reject $H_0$ (at 5\%) \\
+\addlinespace
+(Composite Test) & R6 Joint Wald (Sens.) & $H_0: \delta_E=\delta_B=0$ & $F(2, 10) = 5.818, p = 0.021$ & Reject $H_0$ (at 5\%) \\
 \bottomrule
 \end{tabular}
 
-\vspace{6pt}
+\vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Decisions evaluated at $\alpha = 0.05$ two-tailed significance threshold. Standard errors and Wald tests estimated under MacKinnon-White HC3 robust covariance matrix on Student's $t$ residual degrees of freedom ($\text{df} = 16$ for Model~1; $\text{df} = 14$ for Model~2; $\text{df} = 10$ for R6).

@@ -18,7 +18,7 @@ from analysis.dataset import AnalysisDataset
 from analysis.render.figures import save
 from analysis.stats.robustness import build_runs
 
-EPS_RUN_IDS = ("R1", "R2", "R4", "R5", "R6", "R7", "R8")
+EPS_RUN_IDS = ("R1", "R2", "R4", "R5", "R6", "R7", "R8", "R9")
 SHORT_LABELS = {
     "R1": "R1 Model 1 (baseline)",
     "R2": "R2 Model 2 (baseline)",
@@ -27,6 +27,7 @@ SHORT_LABELS = {
     "R6": "R6 excl. FY2078-79",
     "R7": "R7 bonus-adjusted BVPS",
     "R8": "R8 restated EPS",
+    "R9": "R9 excl. NMB FY2076-77",
 }
 
 

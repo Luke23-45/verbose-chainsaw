@@ -8,6 +8,7 @@ Model 2 based unless stated otherwise:
     FY2078-79 (pre-merger fundamentals vs post-merger April 2023 price),
 (d) bonus-adjusted BVPS,
 (e) restated EPS, used as printed with the substituted rows flagged.
+(f) excluding the single Kanchan-mismatched bank-year NMB FY2076-77.
 """
 from __future__ import annotations
 
@@ -136,6 +137,19 @@ def build_runs(dataset: AnalysisDataset) -> list[RobustnessRun]:
             "restated basic EPS used as printed"
             + (f"; substituted rows: {', '.join(flagged)}" if flagged else ""),
             restated,
+            "eps",
+            "bvps",
+        )
+    )
+
+    excl_kanchan = panel[~((panel["bank"] == "NMB") & (panel["fy"] == "FY2076-77"))]
+    c3 = fit_model2(excl_kanchan, "(f) Model 2 excluding NMB FY2076-77")
+    runs.append(
+        RobustnessRun(
+            "R9",
+            c3.label,
+            "single bank-year NMB FY2076-77 excluded (fundamentals predate its Kanchan acquisition while its April 2021 price follows it)",
+            c3,
             "eps",
             "bvps",
         )

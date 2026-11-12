@@ -259,6 +259,8 @@ Recent empirical research on Nepalese commercial banking valuation documents not
 
 \citet{gurung2024} evaluated 16 commercial banks across 171 observations over the period 2007 to 2023 using stepwise multiple regression analysis. The study found that earnings per share and book value per share exerted statistically significant positive influences on commercial bank share prices, while dividend per share was statistically insignificant, demonstrating that market valuation was anchored in foundational balance-sheet and earning power rather than payout distributions.
 
+\citet{bhattarai2024mps} analyzed market price alongside accounting indicators over FY 2012/13 to 2022/23 in a pooled regression covering 26 commercial banks before the merger wave and 19 after, excluding the fully government-owned Rastriya Banijya Bank. The study reported positive associations for EPS, DPS, and total assets with market price, a negative association for non-performing loans, and no statistically significant BVPS association. Although the sample spans merger-related changes in the number of banks, the reported model does not interact EPS and BVPS with a period indicator, so it does not test for slope changes across the early-2023 consolidation.
+
 \subsection{Empirical Evidence Spanning the 2023 Consolidation Wave (2024--2026)}
 \label{subsec:consolidation_studies}
 
@@ -275,6 +277,8 @@ The most recent body of empirical research has extended observation windows thro
 In the most contemporary literature, \citet{niraula2026} evaluated 16 commercial banks across 80 observations over FY 2019/20 to 2023/24 using balanced panel OLS regression. The study examined firm-specific determinants, documenting statistically significant positive impacts for Capital Adequacy Ratio (CAR), Cash Reserve Ratio (CRR), and total assets, while ROA was positive but statistically insignificant. \citet{bhandari2026} executed a census study of all 19 NEPSE-listed commercial banks, demonstrating that earnings indicators and dividend payout served as the primary determinants of market prices. In governance and regulatory research, \citet{bhattarai2024} evaluated capital adequacy regulations and commercial bank performance, while \citet{dongol2024} investigated corporate governance mechanisms and financial stability.
 
 Regarding banking consolidation directly, \citet{adhikari2023} conducted an empirical examination of the stock and financial performance of seven commercial banks that underwent mergers between 2013 and 2020. The authors documented that post-merger market share prices experienced substantial downward pressure and reduced dividend payouts, while per-share earnings exhibited high post-merger volatility. In a companion study, \citet{adhikari2023cbr} analyzed the comparative financial performance of merged commercial banks, demonstrating that consolidation failed to generate immediate operational synergies or profitability improvements, as substantial integration friction and restructuring costs offset gains from increased asset scale.
+
+\citet{acharya2026merger} extend this merger-performance literature with a comparison of merged banks and non-merged peers using difference-in-differences, supplemented by within-bank pre- and post-merger analyses and interaction models. They report heterogeneous post-merger outcomes and no statistically significant profitability advantage for merged banks relative to non-merged peers. Their focus is merger-related financial performance; like the Adhikari studies, it does not test whether EPS-price and BVPS-price slopes changed across the consolidation period.
 
 \subsection{Synthesis of Empirical Literature}
 \label{subsec:synthesis_matrix}
@@ -297,72 +301,79 @@ With few exceptions, extant Nepalese banking studies employ pooled ordinary leas
 
 To synthesize the empirical literature directly informing this dissertation's econometric framework, Table~\ref{tab:lit_synthesis} presents a comparative synthesis of primary empirical studies. Selection is restricted to foundational theoretical frameworks and empirical studies whose dependent variable is market price per share (MPS) and which evaluate fundamental accounting indicators across commercial banks. Studies of governance, capital adequacy regulation, or standalone financial performance---\citet{bhattarai2024}, \citet{dongol2024}, \citet{adhikari2023cbr}, and \citet{niraula2026}, none of which specifies market price per share as the dependent variable in the work reviewed here---are therefore excluded from the matrix.
 
-\clearpage
-
 {\small
 \setlength{\tabcolsep}{3pt}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.125\textwidth}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.115\textwidth}>{\raggedright\arraybackslash}p{0.155\textwidth}>{\raggedright\arraybackslash}p{0.175\textwidth}}
 \caption{Synthesis of Empirical Literature on Accounting Fundamentals and Equity Valuation}
 \label{tab:lit_synthesis}\\
 \toprule
-\textbf{\shortstack[l]{Study \&\\Year}} & \textbf{\shortstack[l]{Sample \&\\Period}} & \textbf{Methodology} & \textbf{\shortstack[l]{Key\\Variables}} & \textbf{\shortstack[l]{Core Empirical\\Findings}} & \textbf{\shortstack[l]{Methodological\\Critique}} \\
+\textbf{Study \& Year} & \textbf{Sample \& Period} & \textbf{Methodology} & \textbf{Key Variables} & \textbf{Core Empirical Findings} & \textbf{Methodological Critique} \\
 \midrule
 \endfirsthead
-\multicolumn{6}{r}{\footnotesize\textit{(Table \ref{tab:lit_synthesis} continued)}} \\
-\toprule
-\textbf{\shortstack[l]{Study \&\\Year}} & \textbf{\shortstack[l]{Sample \&\\Period}} & \textbf{Methodology} & \textbf{\shortstack[l]{Key\\Variables}} & \textbf{\shortstack[l]{Core Empirical\\Findings}} & \textbf{\shortstack[l]{Methodological\\Critique}} \\
+\textbf{Study \& Year} & \textbf{Sample \& Period} & \textbf{Methodology} & \textbf{Key Variables} & \textbf{Core Empirical Findings} & \textbf{Methodological Critique} \\
 \midrule
 \endhead
-\citet{pradhan2003} & Listed firms, 5 yrs (1992--1997) & Bivariate / Pooled OLS & MPS, DPS, Retained Earnings & Cash dividends show stronger positive price association than retained earnings. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
-\citet{collins1997} & US Firms, 40 yrs (1953--1993) & Ohlson RIV Panel OLS & Price, EPS, BVPS & Combined relevance increased; book value relevance rose relative to earnings. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
-\citet{kwon2020} & US M\&A Firms & Pre/Post M\&A Panel & Price, EPS, BVPS, Post-Merger & Post-merger earnings relevance declines; book value relevance increases as anchor. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
-\citet{sharma2011} & BSE 30, India, 15 yrs (1993--2008) & Pooled OLS Panel & Price, EPS, BVPS, DPS & EPS, BVPS, and DPS exhibit significant positive associations with equity prices. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
+\multicolumn{6}{l}{\textbf{International Empirical Studies}} \\*
+\midrule
+\citet{collins1997} & US Firms, 40 yrs (1953--1993) & Ohlson RIV Panel OLS & Price, EPS, BVPS & Combined relevance increased; book value relevance rose relative to earnings. & --- \\
+\addlinespace
+\citet{kwon2020} & US M\&A Firms & Pre/Post M\&A Panel & Price, EPS, BVPS, Post-Merger & Post-merger earnings relevance declines; book value relevance increases as anchor. & --- \\
+\addlinespace
+\citet{sharma2011} & BSE 30, India, 15 yrs (1993--2008) & Pooled OLS Panel & Price, EPS, BVPS, DPS & EPS, BVPS, and DPS exhibit significant positive associations with equity prices. & --- \\
+\midrule
+\multicolumn{6}{l}{\textbf{Foundational Nepalese Empirical Literature}} \\*
+\midrule
+\citet{pradhan2003} & Listed firms, 5 yrs (1992--1997) & Bivariate / Pooled OLS & MPS, DPS, Retained Earnings & Cash dividends show stronger positive price association than retained earnings. & --- \\
+\addlinespace
 \citet{bhattarai2014} & 9 Banks (2006--2014) & Pooled OLS & MPS, DPR, DY, EPS, P/E, Size & EPS and P/E positively associated with MPS. & Circular P/E inclusion. \\
-\addlinespace[14pt]
-\citet{pradhan2016} & 14 Banks, 168 obs (2002--2014) & Pooled Panel OLS & MPS, EPS, ROA, DPS, Size & Bank size and EPS are primary positive determinants; macro controls secondary. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
-\citet{bajracharya2019} & 10 Banks, 100 obs (2006--2016) & Pooled OLS & MPS, EPS, DPS, ROA, ROE & EPS and DPS have significant positive effects; ROA and ROE statistically insignificant. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
+\addlinespace
+\citet{pradhan2016} & 14 Banks, 168 obs (2002--2014) & Pooled Panel OLS & MPS, EPS, ROA, DPS, Size & Bank size and EPS are primary positive determinants; macro controls secondary. & --- \\
+\addlinespace
+\citet{bajracharya2019} & 10 Banks, 100 obs (2006--2016) & Pooled OLS & MPS, EPS, DPS, ROA, ROE & EPS and DPS have significant positive effects; ROA and ROE statistically insignificant. & --- \\
+\addlinespace
 \citet{silwal2019} & 10 Banks, 100 obs (2008--2018) & Correlation / Multiple OLS & MPS, BVPS, ROE, P/E & BVPS has largest explanatory power, followed by ROE and P/E. & Circular P/E inclusion. \\
-\addlinespace[14pt]
-\citet{niroula2021} & 18 Banks, 90 obs (2015--2020) & Pooled OLS & MPS, EPS, BVPS, ROE & EPS is significantly positive; BVPS and ROE are negative and insignificant. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
-\citet{gyawali2022} & 10 Banks, 50 obs (2017--2021) & Multiple OLS & MPS, EPS, DPS, ROA & EPS and DPS have significant positive effects; ROA is statistically insignificant. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
+\midrule
+\multicolumn{6}{l}{\textbf{Recent Nepalese Studies (2021--2024, Pre-Wave Panels)}} \\*
+\midrule
+\citet{niroula2021} & 18 Banks, 90 obs (2015--2020) & Pooled OLS & MPS, EPS, BVPS, ROE & EPS is significantly positive; BVPS and ROE are negative and insignificant. & --- \\
+\addlinespace
+\citet{gyawali2022} & 10 Banks, 50 obs (2017--2021) & Multiple OLS & MPS, EPS, DPS, ROA & EPS and DPS have significant positive effects; ROA is statistically insignificant. & --- \\
+\addlinespace
 \citet{chhetri2023} & 13 Banks, 143 obs (2012--2022) & Pooled OLS & MPS, EPS, P/E, BVPS, ROA & BVPS, ROA, P/E positive and significant; EPS insignificant. & Circular P/E inclusion. \\
-\addlinespace[14pt]
+\addlinespace
 \citet{joshi2023} & 7 Banks, 70 obs (2012--2022) & Linear Panel OLS & MPS, EPS, DPS, BVPS, P/E & EPS, DPS, BVPS, and P/E exhibit positive associations. & Circular P/E inclusion. \\
-\addlinespace[14pt]
+\addlinespace
 \citet{giri2024} & 4 Banks, 40 obs (2013--2023) & Correlation Analysis & MPS, DPS, EPS, P/E, Net Worth & MPS correlates with DPS, P/E, net worth; EPS correlation negligible. & Circular P/E inclusion. \\
-\addlinespace[14pt]
+\addlinespace
 \citet{lamsal2024} & 7 Banks, multi-year panel & Descriptive / Multiple OLS & MPS, EPS, P/E, DPS, BVPS & EPS, P/E, BVPS positive associations; DPS inverse. & Circular P/E inclusion. \\
-\addlinespace[14pt]
+\addlinespace
 \citet{gurung2024} & 16 Banks, 171 obs (2007--2023) & Stepwise Multiple OLS & MPS, EPS, BVPS, DPS & EPS and BVPS significant positive; DPS insignificant. & Excludes P/E multiples. \\
-\addlinespace[14pt]
+\addlinespace
+\citet{bhattarai2024mps} & 26 banks before merger, 19 after, FY 2012/13--2022/23 & Pooled OLS & MPS, EPS, BVPS, DPS, total assets, NPL & EPS, DPS, and total assets positive; BVPS insignificant; NPL negative. & Static pooling. \\
+\midrule
+\multicolumn{6}{l}{\textbf{Studies Spanning the 2023 Consolidation Wave (2024--2026)}} \\*
+\midrule
 \citet{pant2024} & 7 Banks, 77 obs (2013--2024) & Multiple OLS & MPS, EPS, DPS, BVPS, P/E & EPS and P/E positive; DPS and BVPS negative and insignificant. & Circular P/E inclusion. \\
-\addlinespace[14pt]
-\citet{chaudhari2025} & 10 Banks, 100 obs (2014--2024) & Pooled OLS & MPS, EPS, DPS, ROA, Size & EPS and DPS strong positive; ROA significantly negative; macro insignificant. & \multicolumn{1}{c}{---} \\
-\addlinespace[14pt]
+\addlinespace
+\citet{chaudhari2025} & 10 Banks, 100 obs (2014--2024) & Pooled OLS & MPS, EPS, DPS, ROA, Size & EPS and DPS strong positive; ROA significantly negative; macro insignificant. & --- \\
+\addlinespace
 \citet{dahal2025} & All Banks, 209 obs (2013--2024) & Multiple Regression & MPS, P/E, BVPS, DPR, EY, MTB & P/E and BVPS significantly positive; dividend rate positively associated. & Circular P/E inclusion. \\
-\addlinespace[14pt]
+\addlinespace
 \citet{gurungdahal2025} & 10 Banks, 110 obs (2013--2024) & Bank Fixed Effects & MPS, DPR, P/E, EPS, BVPS, ROA & DPR, EPS, BVPS, ROA significant under bank FE. & Static pooling; circular P/E inclusion. \\
-\addlinespace[14pt]
+\addlinespace
 \citet{timalsina2026} & 13 Banks, 169 obs (2011--2024) & Panel Regression & MPS, EPS, DPS, P/E, ROA, Size & EPS, DPS, P/E, size, inflation positive and significant. & Circular P/E inclusion. \\
-\addlinespace[14pt]
+\addlinespace
 \citet{bhandari2026} & 19 Banks, Census & Multiple OLS & MPS, EPS, DPS, DPR, P/E & EPS and dividend indicators primary determinants. & Circular P/E inclusion. \\
-\addlinespace[14pt]
-\citet{adhikari2023} & 7 Merged Banks (2013--2020) & Pre/Post Comparative & MPS, EPS, DPS, Net Profit & Substantial post-merger price drops and dividend cuts; slow operational synergy. & \multicolumn{1}{c}{---} \\
+\addlinespace
+\citet{adhikari2023} & 7 Merged Banks (2013--2020) & Pre/Post Comparative & MPS, EPS, DPS, Net Profit & Substantial post-merger price drops and dividend cuts; slow operational synergy. & --- \\
+\addlinespace
+\citet{acharya2026merger} & Merged vs non-merged banks, Nepal & Difference-in-differences; within-bank pre/post analyses & Financial performance & Heterogeneous post-merger outcomes; no significant profitability advantage for merged banks. & --- \\
 \bottomrule
 \end{longtable}
 }
 
-\vspace{6pt}
+\vspace{4pt}
 \begin{minipage}{\linewidth}
-\singlespacing
 \footnotesize
 \textit{Note.} MPS = market price per share; EPS = earnings per share; BVPS = book value per share; DPS = dividend per share; ROA = return on assets; ROE = return on equity; DPR = dividend payout ratio; DY = dividend yield; P/E = price-to-earnings ratio; OLS = ordinary least squares; RIV = residual income valuation; M\&A = mergers and acquisitions; BSE = Bombay Stock Exchange; EY = earnings yield; MTB = market-to-book ratio, following the labels used by Dahal et al.\ (2025). Total observations are shown where the underlying study reports them. Critique entries record the methodological issues identified in the text; a dash indicates that no additional methodological issue was identified.
 \end{minipage}
