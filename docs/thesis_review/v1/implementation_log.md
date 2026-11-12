@@ -28,5 +28,5 @@
 ## Deferred or unavailable items
 
 - Optional suggestions that would add a new estimator or specification (wild-cluster bootstrap, reporting R5/R6 post-slopes, and an interacted DPS variant) are deferred; the last changes the model rather than correcting a reporting discrepancy.
-- The external `assemble_e.py` source mentioned in the audit is absent from the repository and the checked parent project directory. Appendix E's tracked `.tex` source is updated, but whether the external assembler overwrites it remains unverified.
+- The `assemble_e.py` source is tracked at `src/thesis/generators/appendix_e/assemble_e.py`, and the Appendix E prose and table-note edits are ported into the generator sources. Regenerating the fragments and re-assembling reproduces the tracked `appendix_e.tex` exactly, so a re-run no longer reverts the edits.
 - Some low-impact pipeline wording and fit-statistic presentation items in the review (including the unused formula-name note and a full R1–R9 fit-statistics display in the main chapter) are not changed because they do not affect the implemented results or primary thesis conclusions.
