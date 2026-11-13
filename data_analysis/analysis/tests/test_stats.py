@@ -9,9 +9,10 @@ import statsmodels.formula.api as smf
 
 from analysis.dataset import build_dataset
 from analysis.stats.diagnostics import breusch_pagan, cooks_distance, vif_table
-from analysis.stats.models import BANK_FE, FY_FE, fit_bank_fe, fit_model1, fit_model2, fit_pooled, linear_combination
-from analysis.stats.robustness import build_runs
+from analysis.stats.models import BANK_FE, FY_FE, MODEL1_FORMULA, fit_bank_fe, fit_model1, fit_model2, fit_pooled, linear_combination
+from analysis.stats.robustness import build_runs, post_slopes
 from analysis.stats.wald import joint_zero_test
+from analysis.stats.wild_bootstrap import rademacher_patterns, wild_cluster_bootstrap_wald
 from tests.conftest import BVPS_SLOPE, EPS_SLOPE
 
 
@@ -124,3 +125,64 @@ def test_sanity_gate_against_exploratory_audit() -> None:
     assert m2.term("bvps:post").coef == pytest.approx(-1.758, abs=0.05)
     wald = joint_zero_test(m2.results, ("eps:post", "bvps:post"))
     assert wald.p_value > 0.05  # H0 not rejected under HC3
+
+
+def test_robustness_post_slopes_match_review_recomputation() -> None:
+    """s2: post slopes for the robustness specs, verified against the review's
+    own recomputation (R5/R6) and the thesis Table 6 (R2). All post slopes
+    keep the baseline signs (EPS positive, BVPS negative) and none is
+    significant."""
+    ds = build_dataset(strict=True)
+    runs = build_runs(ds)
+    by_id = {run.id: run for run in runs}
+    post_eps_r2, post_bvps_r2 = post_slopes(by_id["R2"])
+    assert post_eps_r2.coef == pytest.approx(2.453, abs=0.001)
+    assert post_bvps_r2.coef == pytest.approx(-1.658, abs=0.001)
+    post_eps_r5, post_bvps_r5 = post_slopes(by_id["R5"])
+    assert post_eps_r5.coef == pytest.approx(3.415, abs=0.001)
+    assert post_eps_r5.pvalue == pytest.approx(0.401, abs=0.001)
+    assert post_bvps_r5.coef == pytest.approx(-2.081, abs=0.001)
+    assert post_bvps_r5.pvalue == pytest.approx(0.315, abs=0.001)
+    post_eps_r6, post_bvps_r6 = post_slopes(by_id["R6"])
+    assert post_eps_r6.coef == pytest.approx(1.900, abs=0.001)
+    assert post_eps_r6.pvalue == pytest.approx(0.490, abs=0.001)
+    assert post_bvps_r6.coef == pytest.approx(-1.809, abs=0.001)
+    assert post_bvps_r6.pvalue == pytest.approx(0.212, abs=0.001)
+    for rid in ("R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"):
+        post_e, post_b = post_slopes(by_id[rid])
+        assert post_e.coef > 0 and post_b.coef < 0
+        assert post_e.pvalue > 0.05 and post_b.pvalue > 0.05
+    with pytest.raises(ValueError):
+        post_slopes(by_id["R1"])  # Model 1 has no interactions
+
+
+def test_wild_cluster_bootstrap_is_deterministic_and_coarse() -> None:
+    """s1: wild-cluster bootstrap of the HC3 joint Wald test, enumerating all
+    2**5 = 32 Rademacher patterns at G = 5 banks. The bootstrap p-value is a
+    multiple of 1/32; the all-+1 pattern reproduces the observed statistic,
+    so at least one pattern always counts."""
+    ds = build_dataset(strict=True)
+    runs = build_runs(ds)
+    by_id = {run.id: run for run in runs}
+    assert len(rademacher_patterns(5)) == 32
+    assert rademacher_patterns(5)[0] == (1, 1, 1, 1, 1)
+    m2 = by_id["R2"]
+    res = wild_cluster_bootstrap_wald(
+        m2.result, ds.panel, MODEL1_FORMULA, ("eps:post", "bvps:post")
+    )
+    assert res.n_boot == 32 and res.n_clusters == 5
+    assert res.observed_f == pytest.approx(2.954481, abs=1e-6)
+    assert res.bootstrap_p == pytest.approx(1 / 32)
+    assert res.n_exceed == 1
+    res_again = wild_cluster_bootstrap_wald(
+        m2.result, ds.panel, MODEL1_FORMULA, ("eps:post", "bvps:post")
+    )
+    assert res_again.bootstrap_p == res.bootstrap_p
+    r6_frame = ds.panel[ds.panel["fy"] != "FY2078-79"]
+    r6 = by_id["R6"]
+    res6 = wild_cluster_bootstrap_wald(
+        r6.result, r6_frame, MODEL1_FORMULA, ("eps:post", "bvps:post")
+    )
+    assert res6.observed_f == pytest.approx(5.817708, abs=1e-6)
+    assert res6.bootstrap_p == pytest.approx(2 / 32)
+    assert res6.n_exceed == 2

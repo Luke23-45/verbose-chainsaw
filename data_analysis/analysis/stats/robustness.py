@@ -16,7 +16,16 @@ from dataclasses import dataclass
 
 from analysis.common import config
 from analysis.dataset import AnalysisDataset
-from analysis.stats.models import BANK_FE, FY_FE, FitResult, fit_model1, fit_model2, fit_spec
+from analysis.stats.models import (
+    BANK_FE,
+    FY_FE,
+    FitResult,
+    TermEstimate,
+    fit_model1,
+    fit_model2,
+    fit_spec,
+    linear_combination,
+)
 
 MODEL2_ROA_FORMULA = f"price_rd ~ roa + bvps + roa:post + bvps:post + {BANK_FE} + {FY_FE}"
 MODEL2_ROA_TERMS = ("roa", "bvps", "roa:post", "bvps:post")
@@ -163,3 +172,19 @@ def interaction_terms(run: RobustnessRun) -> tuple[str, str]:
     prefix = run.earnings_term
     base = run.bvps_term
     return f"{prefix}:post", f"{base}:post"
+
+
+def post_slopes(run: RobustnessRun) -> tuple[TermEstimate, TermEstimate]:
+    """Post-period slopes (earnings, BVPS) for a run with interactions.
+
+    Post earnings slope = earnings term + delta_E; post BVPS slope =
+    BVPS term + delta_B, each estimated through the fitted HC3 covariance
+    (``linear_combination``). R1 (Model 1) has no interactions and no post
+    slopes.
+    """
+    if not run.has_deltas():
+        raise ValueError(f"{run.id}: no interaction terms, no post slopes")
+    delta_e, delta_b = interaction_terms(run)
+    post_e = linear_combination(run.result, f"{run.earnings_term} + {delta_e}")
+    post_b = linear_combination(run.result, f"{run.bvps_term} + {delta_b}")
+    return post_e, post_b
