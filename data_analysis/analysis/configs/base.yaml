@@ -23,7 +23,7 @@ analysis:
   transition_fy: FY2079-80       # robustness (c): first post year
   entity_mismatch_fy: FY2078-79  # robustness (c): pre-merger fundamentals vs post-merger April 2023 price
   variables:
-    dependent: price
+    dependent: price_rd
     fundamentals: [eps, bvps]
     robustness_vars: [dps, roa]
   # Restated basic EPS as printed in the following year's audited report

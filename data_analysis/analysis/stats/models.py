@@ -6,7 +6,7 @@ Model 2 (eq. 2) adds dE*(EPS x Post) + dB*(BVPS x Post); the Post main effect
 is absorbed by the fiscal-year fixed effects and therefore does not appear as
 a separate term.
 
-Fixed effects enter as explicit C(bank) + C(fy) dummy terms; inference uses
+Fixed effects enter as explicit dummy terms with reference categories GBIME and FY 2076/77; inference uses
 MacKinnon-White HC3 standard errors (methodology section 07: with G = 5 banks
 cluster-robust covariance is unreliable, so HC3 is the designated inference).
 """
@@ -18,9 +18,12 @@ from typing import Any
 import numpy as np
 import pandas as pd
 import statsmodels.formula.api as smf
+from patsy.contrasts import Treatment
 
-MODEL1_FORMULA = "price ~ eps + bvps + C(bank) + C(fy)"
-MODEL2_FORMULA = "price ~ eps + bvps + eps:post + bvps:post + C(bank) + C(fy)"
+BANK_FE = "C(bank, Treatment(reference='GBIME'))"
+FY_FE = "C(fy, Treatment(reference='FY2076-77'))"
+MODEL1_FORMULA = f"price_rd ~ eps + bvps + {BANK_FE} + {FY_FE}"
+MODEL2_FORMULA = f"price_rd ~ eps + bvps + eps:post + bvps:post + {BANK_FE} + {FY_FE}"
 MODEL1_TERMS = ("eps", "bvps")
 MODEL2_TERMS = ("eps", "bvps", "eps:post", "bvps:post")
 
@@ -78,8 +81,8 @@ def linear_combination(fit: FitResult, constraint: str) -> TermEstimate:
 def _fit(label: str, formula: str, frame: pd.DataFrame, terms: tuple[str, ...]) -> FitResult:
     results = smf.ols(formula, data=frame).fit(cov_type="HC3", use_t=True)
     within_rsquared = None
-    if "C(bank)" in formula and "C(fy)" in formula:
-        fe_only = smf.ols("price ~ C(bank) + C(fy)", data=frame).fit()
+    if "C(bank" in formula and "C(fy" in formula:
+        fe_only = smf.ols(f"price_rd ~ {BANK_FE} + {FY_FE}", data=frame).fit()
         within_rsquared = float(1.0 - results.ssr / fe_only.ssr)
     ci = results.conf_int()
     estimates = tuple(
@@ -123,12 +126,12 @@ def fit_model2(frame: pd.DataFrame, label: str = "Model 2") -> FitResult:
 
 
 def fit_pooled(frame: pd.DataFrame, label: str = "Pooled OLS") -> FitResult:
-    return _fit(label, "price ~ eps + bvps", frame, MODEL1_TERMS)
+    return _fit(label, "price_rd ~ eps + bvps", frame, MODEL1_TERMS)
 
 
 def fit_bank_fe(frame: pd.DataFrame, label: str = "Bank FE only") -> FitResult:
-    return _fit(label, "price ~ eps + bvps + C(bank)", frame, MODEL1_TERMS)
+    return _fit(label, f"price_rd ~ eps + bvps + {BANK_FE}", frame, MODEL1_TERMS)
 
 
 def fit_year_fe(frame: pd.DataFrame, label: str = "Year FE only") -> FitResult:
-    return _fit(label, "price ~ eps + bvps + C(fy)", frame, MODEL1_TERMS)
+    return _fit(label, f"price_rd ~ eps + bvps + {FY_FE}", frame, MODEL1_TERMS)

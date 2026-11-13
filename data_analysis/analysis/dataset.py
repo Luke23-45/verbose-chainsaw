@@ -170,6 +170,9 @@ def build_dataset(strict: bool = True) -> AnalysisDataset:
         raise ValueError(f"{sources['panel']}: absent bank-year cells in strict mode: {names}")
 
     bonusadj_all = panel_loaders.load_bonusadj(sources["bonusadj"])
+    # Same short-window rule as the panel: the bonus-adjusted frame carries
+    # the rule-clean column so robustness variant R7 fits price_rd.
+    bonusadj_all["price_rd"] = bonusadj_all["price"].where(bonusadj_all["gap"] <= freshness)
     _validate_aligned_frame(bonusadj_all, panel_all, sources["bonusadj"])
     in_sample_keys = set(zip(panel_all.loc[in_sample, "bank"], panel_all.loc[in_sample, "fy"]))
     bonusadj_all["in_sample"] = [

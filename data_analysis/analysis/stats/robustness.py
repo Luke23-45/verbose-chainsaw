@@ -16,13 +16,13 @@ from dataclasses import dataclass
 
 from analysis.common import config
 from analysis.dataset import AnalysisDataset
-from analysis.stats.models import FitResult, fit_model1, fit_model2, fit_spec
+from analysis.stats.models import BANK_FE, FY_FE, FitResult, fit_model1, fit_model2, fit_spec
 
-MODEL2_ROA_FORMULA = "price ~ roa + bvps + roa:post + bvps:post + C(bank) + C(fy)"
+MODEL2_ROA_FORMULA = f"price_rd ~ roa + bvps + roa:post + bvps:post + {BANK_FE} + {FY_FE}"
 MODEL2_ROA_TERMS = ("roa", "bvps", "roa:post", "bvps:post")
-MODEL2_DPS_FORMULA = "price ~ eps + bvps + dps + eps:post + bvps:post + C(bank) + C(fy)"
+MODEL2_DPS_FORMULA = f"price_rd ~ eps + bvps + dps + eps:post + bvps:post + {BANK_FE} + {FY_FE}"
 MODEL2_DPS_TERMS = ("eps", "bvps", "dps", "eps:post", "bvps:post")
-MODEL2_BONUS_FORMULA = "price ~ eps + bvps_adj + eps:post + bvps_adj:post + C(bank) + C(fy)"
+MODEL2_BONUS_FORMULA = f"price_rd ~ eps + bvps_adj + eps:post + bvps_adj:post + {BANK_FE} + {FY_FE}"
 MODEL2_BONUS_TERMS = ("eps", "bvps_adj", "eps:post", "bvps_adj:post")
 
 

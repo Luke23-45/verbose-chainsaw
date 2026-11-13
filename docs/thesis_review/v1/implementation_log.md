@@ -30,3 +30,36 @@
 - Optional suggestions that would add a new estimator or specification (wild-cluster bootstrap, reporting R5/R6 post-slopes, and an interacted DPS variant) are deferred; the last changes the model rather than correcting a reporting discrepancy.
 - The `assemble_e.py` source is tracked at `src/thesis/generators/appendix_e/assemble_e.py`, and the Appendix E prose and table-note edits are ported into the generator sources. Regenerating the fragments and re-assembling reproduces the tracked `appendix_e.tex` exactly, so a re-run no longer reverts the edits.
 - Some low-impact pipeline wording and fit-statistic presentation items in the review (including the unused formula-name note and a full R1–R9 fit-statistics display in the main chapter) are not changed because they do not affect the implemented results or primary thesis conclusions.
+
+## Surgical P2 patches (2026-11-13, on the author's instruction)
+
+- 0.709 sentence (Ch4:450, Ch5:132): now reads "In the $N=30$ model with the observed delayed prices, the pre-period BVPS estimate ..." — the ambiguity the author flagged is removed.
+- App C caption: "eight plotted EPS-channel specifications (R1, R2, and R4 through R9)".
+- m1: App E reference-category paragraph already in the tracked appendix (ported in 0619d4a); no further change.
+- m2: reference categories are now explicit in code — `C(bank, Treatment(reference='GBIME'))` and `C(fy, Treatment(reference='FY2076-77'))` in `stats/models.py` and `stats/robustness.py`. Same references patsy used by default, so no number changes.
+- m3: model and robustness formulas now name `price_rd` instead of `price`; `dataset.py` also computes `price_rd` on the bonus-adjusted frame so R7 fits. The raw `price` column is kept for traceability and the F6 open-marker plot.
+- m6: Ch 3 already states within-bank serial independence as an untested assumption (line 350); no change.
+- m7: the phrase "Huber-White cluster SEs" no longer occurs anywhere in the thesis; Ch 3 already distinguishes cluster-robust from HC3.
+- m14: the Spearman (rho = 0.295, p = 0.128) and Shapiro-Wilk (MPS_RD p < 0.001, DPS p = 0.001) checks were already in the Ch 4 correlation text; a normality clause was added to the Table 4 note pointing to them.
+- m16: Ch 4 R9 paragraph now states HBL FY 2076/77 is not covered by R9 and is addressed only by the single-observation leave-one-out sensitivity in Appendix E (App E part was already ported).
+- m21: the Table 10 paragraph now explains the Within-R² jump (0.152 to 0.642): dummies alone explain 93.9% of total variation; slopes add 0.93 pp in Model 1 but 3.9 pp in Model 2.
+- m24: R1–R9 fit statistics (R², adjusted R², Within-R²) added to the Table 8 note, same values as the App E robustfull note.
+- m26: no `_combo` remains anywhere in the analysis package; post-slope inference is centralized in `linear_combination` and tested.
+- m30: the R6 identical-results sentence was already in the Ch 4 text; verified by recomputation — dropping only the 4 mismatched FY 2078/79 rows (n = 24) gives Wald F = 5.817708, p = 0.021095, identical to R6 to 6 decimals.
+- m31: the unsourced "(for bonus issues or share splits)" parenthetical was removed from Ch 3; the sentence now states only the sourced fact (restatements as printed in subsequent annual reports). Q11 is closed by removal.
+- m38: the Table 3 note already documents sample SD (ddof = 1) and the %-change formula; no change.
+- m39: all five SD % changes were already reported in the prose. Correction found during verification: the printed % changes had been computed from 2dp-rounded SDs/means, not full precision. Corrected to full-precision values (verified twice, independently): MPS mean -33.81% (was -33.80%), NPR 105.00 (was 104.99); EPS mean -40.13% (was -40.11%), SD +63.95% (was +63.66%), CV 61.0% (was 60.9%); BVPS mean +2.45% (was +2.44%), NPR 3.87 (was 3.86), SD -15.30% (was -15.29%); DPS SD -16.62% (was -16.57%), CV 58.8% to 212.2% (was 58.7% to 212.1%); ROA mean -46.38% (was -46.56%), SD +97.49% (was "doubled"), CV 16.9% to 62.2% (was 16.8% to 62.9%). The same corrections were applied to the Ch 5 summary repeats and the Ch 4 Discussion EPS repeat.
+- s3: R4 paragraph now states DPS enters as an additive control and cites the interacted variant (Model 2 + DPS + DPS x Post, df = 12): joint Wald F = 2.848, p = 0.097, the same non-rejection as additive R4. Verified by recomputation (F = 2.847907, p = 0.097244; DPS x Post coef -3.651, p = 0.735).
+- s7: the phrase "trading window" no longer occurs anywhere; the notes already say "five calendar days" and "the first active session on or after the target".
+- s8: DPS post median zero was already stated; no "halved" occurs anywhere in the thesis; the Assessment column was already dropped from Table 10.
+- Table 10 overfull: fixed by reducing that table's `\tabcolsep` from 4pt to 3.5pt. The v33 build confirms the 2.68pt overfull is gone; only the standing 0.27pt Chapter III overfull remains.
+
+## Verification performed (this round)
+
+- `python -m pytest analysis/tests -q` under the pinned statsmodels 0.14.6 venv: 28/28 pass. (Two defects were found and fixed during this round: the Within-R² guard checked for the literal `"C(bank)"` substring, which the explicit `Treatment(...)` form no longer contains — now checks `"C(bank"`; and the bonus-adjusted frame lacked `price_rd`, which R7 needs — now computed in `dataset.py` by the same short-window rule.)
+- Full pipeline regeneration (`analysis.scripts.generate`): 18 assets ok; all generated `.tex`/`.md` tables byte-identical to the committed versions, so the m2/m3 code changes move no number. Re-rendered figure binaries differ only by render noise and were reverted, not committed.
+- Full thesis build v33 from the patched tree: 163 pp, 0 errors, 0 undefined, 0 bibtex warnings; build log on the VM at `~/workspace/frontmatter_build/work_v33c/build4.log`; PDF at `~/workspace/frontmatter_build/thesis-full-ch1-5-v33.pdf`. The corrected descriptives values were checked in the built PDF text (new values present, old values absent).
+
+## Still deferred (not surgical)
+
+- s1 (wild-cluster bootstrap) and s2 (post slopes per robustness spec) remain deferred: both add new analysis rather than correcting a reporting error.

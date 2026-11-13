@@ -9,7 +9,7 @@ import statsmodels.formula.api as smf
 
 from analysis.dataset import build_dataset
 from analysis.stats.diagnostics import breusch_pagan, cooks_distance, vif_table
-from analysis.stats.models import fit_bank_fe, fit_model1, fit_model2, fit_pooled, linear_combination
+from analysis.stats.models import BANK_FE, FY_FE, fit_bank_fe, fit_model1, fit_model2, fit_pooled, linear_combination
 from analysis.stats.robustness import build_runs
 from analysis.stats.wald import joint_zero_test
 from tests.conftest import BVPS_SLOPE, EPS_SLOPE
@@ -31,7 +31,7 @@ def test_model2_planted_delta_recovered_and_wald_rejects(synthetic_study) -> Non
     planted = ds.panel.copy()
     planted_delta = 3.0
     post = planted["post"] == 1
-    planted.loc[post, "price"] = planted.loc[post, "price"] + planted_delta * planted.loc[post, "eps"]
+    planted.loc[post, "price_rd"] = planted.loc[post, "price_rd"] + planted_delta * planted.loc[post, "eps"]
     fit = fit_model2(planted)
     assert fit.term("eps:post").coef == pytest.approx(planted_delta, abs=0.6)
     wald = joint_zero_test(fit.results, ("eps:post", "bvps:post"))
@@ -101,7 +101,7 @@ def test_robustness_runs_cover_methodology_step4(synthetic_study) -> None:
 def test_within_r_squared_is_partial_r_squared_for_two_way_fe(synthetic_study) -> None:
     ds = build_dataset(strict=True)
     fit = fit_model2(ds.panel)
-    fe_only = smf.ols("price ~ C(bank) + C(fy)", data=ds.panel).fit()
+    fe_only = smf.ols(f"price_rd ~ {BANK_FE} + {FY_FE}", data=ds.panel).fit()
     expected = 1.0 - fit.results.ssr / fe_only.ssr
     assert fit.within_rsquared == pytest.approx(expected)
     assert 0.0 <= fit.within_rsquared <= 1.0

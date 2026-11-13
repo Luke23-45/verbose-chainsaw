@@ -128,7 +128,7 @@ def synthetic_study(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> dict:
             "transition_fy": "FY2079-80",
             "entity_mismatch_fy": "FY2078-79",
             "variables": {
-                "dependent": "price",
+                "dependent": "price_rd",
                 "fundamentals": ["eps", "bvps"],
                 "robustness_vars": ["dps", "roa"],
             },
