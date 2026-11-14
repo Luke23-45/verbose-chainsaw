@@ -76,8 +76,7 @@ New tables: Tables 14-18. New figures: NONE (the sample flow is a table, not a f
 - HC3 design: dummy-variable LSDV (explicit bank + year dummies).
   Model 1: n=28, k=12, df=16, max leverage 0.6766.
   Model 2: n=28, k=14, df=14, max leverage 0.9324. No leverage equals 1.
-  Software: analysis requirements specify statsmodels >= 0.14 (Python);
-  no exact version is claimed.
+  Software: analysis requirements pin statsmodels==0.14.6 (Python).
 - Dataset: Aabishkar2 nepse-data, https://github.com/Aabishkar2/nepse-data,
   clone of 2026-10-27, series current to 2026-10-26, columns
   published_date/open/high/low/close/per_change/traded_quantity/

@@ -12,8 +12,12 @@ With 5 clusters there are only 2**5 = 32 distinct weight vectors, so all of
 them are enumerated (no RNG; the result is fully deterministic) and the
 bootstrap p-value is a multiple of 1/32. That coarseness is a limitation of
 the check, not a defect in the enumeration, and is reported alongside the
-result. The all-+1 pattern reproduces the original sample, so its bootstrap
-Wald statistic equals the observed one and is counted in the numerator.
+result. The all-+1 pattern reproduces the original sample, and the all−1
+pattern reproduces the observed Wald statistic in exact arithmetic (the
+interaction coefficients negate, the residuals negate, the HC3 covariance is
+identical), so both always count; the comparison below uses a 1e-9 tolerance
+because floating-point evaluation of the all−1 pattern can fall a last ulp
+short of the observed statistic.
 """
 from __future__ import annotations
 
@@ -88,7 +92,9 @@ def wild_cluster_bootstrap_wald(
         f_star = float(
             np.asarray(boot.f_test(constraint).fvalue, dtype=float).ravel()[0]
         )
-        if f_star >= observed.f_stat:
+        # 1e-9 tolerance: the all−1 pattern equals the observed statistic in
+        # exact arithmetic but can fall a last ulp short in floating point.
+        if f_star >= observed.f_stat - 1e-9:
             n_exceed += 1
     return WildBootstrapResult(
         label=fit_result.label,

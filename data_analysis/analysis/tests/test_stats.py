@@ -159,8 +159,8 @@ def test_robustness_post_slopes_match_review_recomputation() -> None:
 def test_wild_cluster_bootstrap_is_deterministic_and_coarse() -> None:
     """s1: wild-cluster bootstrap of the HC3 joint Wald test, enumerating all
     2**5 = 32 Rademacher patterns at G = 5 banks. The bootstrap p-value is a
-    multiple of 1/32; the all-+1 pattern reproduces the observed statistic,
-    so at least one pattern always counts."""
+    multiple of 1/32; the all-+1 and all−1 patterns both reproduce the observed
+    statistic in exact arithmetic, so at least two patterns always count."""
     ds = build_dataset(strict=True)
     runs = build_runs(ds)
     by_id = {run.id: run for run in runs}
@@ -172,8 +172,8 @@ def test_wild_cluster_bootstrap_is_deterministic_and_coarse() -> None:
     )
     assert res.n_boot == 32 and res.n_clusters == 5
     assert res.observed_f == pytest.approx(2.954481, abs=1e-6)
-    assert res.bootstrap_p == pytest.approx(1 / 32)
-    assert res.n_exceed == 1
+    assert res.bootstrap_p == pytest.approx(2 / 32)
+    assert res.n_exceed == 2
     res_again = wild_cluster_bootstrap_wald(
         m2.result, ds.panel, MODEL1_FORMULA, ("eps:post", "bvps:post")
     )

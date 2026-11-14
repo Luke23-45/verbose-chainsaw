@@ -265,7 +265,7 @@ L.append("\\begin{tabular}{>{\\raggedright\\arraybackslash}p{0.32\\textwidth}"
 L.append("\\toprule")
 L.append("\\textbf{Bank-Year} & \\textbf{Cook's Distance} & \\textbf{Leverage} \\\\")
 L.append("\\midrule")
-for _, row in flag.iterrows():
+for _, row in flag.sort_values("cook", ascending=False).iterrows():
     L.append(f"{row['bank']} FY {row['fy'][2:6]}/{row['fy'][7:9]} & "
              f"${row['cook']:.4f}$ & ${row['lev']:.4f}$ \\\\")
 L.append("\\bottomrule")

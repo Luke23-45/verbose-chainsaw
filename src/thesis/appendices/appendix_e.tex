@@ -496,7 +496,7 @@ R9 & All fixed effects jointly zero & $14.059$ & $9, 13$ & $<0.001$ \\
 
 Diagnostics for the baseline value-relevance model are summarized in Chapter IV, Table~\ref{tab:t6_diagnostics}. Model~1 substantive-regressor VIFs are 1.16 for EPS and BVPS; Model~2 VIFs are reported in Chapter IV. The Model~1 Koenker robust Breusch-Pagan LM statistic is 14.37 ($p=0.213$), while the classical variant is 28.18 ($p=0.003$). The maximum Model~1 Cook's distance is 0.552 (HBL FY 2076/77). Table~\ref{tab:app_flagged} lists the five observations that exceed the $4/N=0.143$ attention threshold in Model~1. Table~\ref{tab:app_m2flagged} lists the five observations above that threshold in Model~2; the largest is KBL FY 2076/77 at 0.4902. The Model~2 Koenker robust Breusch-Pagan LM statistic is 14.54 on 13 degrees of freedom ($p=0.337$).
 
-Collinearity in Model 2. Variance inflation factors computed on the substantive regressors by the Chapter III method, auxiliary regressions on the slopes alone without fixed effects, are EPS 10.33, BVPS 2.28, $\delta_E$ 15.15, and $\delta_B$ 24.13. Three exceed the Chapter III screening threshold of 5. This collinearity is largely mechanical: each interaction equals its level variable in post-consolidation years and zero before, so the interactions necessarily correlate with their levels. It does not bias the coefficients, but it widens their standard errors, which the HC3 intervals already reflect, and it is why the regime-shift inference rests on the joint Wald test in Table~\ref{tab:app_robustfull} ($F = 2.954$, $p = 0.085$) rather than on the individual interaction t-statistics.
+Collinearity in Model 2. Variance inflation factors computed on the substantive regressors by the Chapter III method, auxiliary regressions on the slopes alone without fixed effects, are EPS 10.33, BVPS 2.28, $\delta_E$ 15.15, and $\delta_B$ 24.13. Three exceed the Chapter III screening threshold of 5. This collinearity is largely mechanical: each interaction equals its level variable in post-consolidation years and zero before, so the interactions necessarily correlate with their levels. It does not bias the coefficients, but it widens their standard errors. The HC3 intervals reflect sampling variance under heteroskedasticity, not the collinearity as such, and it is why the regime-shift inference rests on the joint Wald test in Table~\ref{tab:app_robustfull} ($F = 2.954$, $p = 0.085$) rather than on the individual interaction t-statistics.
 
 Table~\ref{tab:app_sensitivity} re-estimates Model 2 without each bank series in turn. Table~\ref{tab:app_loy} re-estimates Model 2 without each fiscal year in turn. The headline interactions keep their signs under every single-row deletion and every year deletion. Across bank deletions, only KBL reverses the earnings interaction. In the R6 sample, 16 of 23 leave-one-observation deletions retain an unadjusted joint $p<0.05$; this is separate from the baseline leave-one-out result, for which one of 28 deletions is below 0.05. R9 excludes NMB FY 2076/77 only; HBL FY 2076/77 is covered by the single-observation leave-one-out table, not by R9.
 
@@ -518,9 +518,9 @@ KBL FY 2076/77 & $0.4124$ & $0.3494$ \\
 \addlinespace
 NIMB FY 2076/77 & $0.2711$ & $0.5357$ \\
 \addlinespace
-KBL FY 2079/80 & $0.1451$ & $0.5737$ \\
-\addlinespace
 KBL FY 2081/82 & $0.2447$ & $0.4760$ \\
+\addlinespace
+KBL FY 2079/80 & $0.1451$ & $0.5737$ \\
 \bottomrule
 \end{tabular}
 
@@ -545,9 +545,9 @@ KBL FY 2076/77 & $0.4902$ & $0.5073$ \\
 \addlinespace
 NIMB FY 2076/77 & $0.3983$ & $0.6363$ \\
 \addlinespace
-KBL FY 2078/79 & $0.1870$ & $0.4805$ \\
-\addlinespace
 NIMB FY 2078/79 & $0.2404$ & $0.4689$ \\
+\addlinespace
+KBL FY 2078/79 & $0.1870$ & $0.4805$ \\
 \addlinespace
 HBL FY 2081/82 & $0.1513$ & $0.5205$ \\
 \bottomrule
