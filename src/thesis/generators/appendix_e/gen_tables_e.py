@@ -174,7 +174,8 @@ spec_labels = {
     "R3": "R3: ROA Replaces EPS", "R4": "R4: Model 2 + DPS",
     "R5": "R5: Excl. Transition", "R6": "R6: Excl. Mismatch",
     "R7": "R7: Bonus-Adjusted", "R8": "R8: Restated EPS",
-    "R9": "R9: Excl. NMB FY2076/77"}
+    "R9": "R9: Excl. NMB FY2076/77",
+    "R10": "R10: Excl. NMB \\& KBL FY76"}
 spec_slopes = {
     "R1": ("EPS", "BVPS", None, None),
     "R2": ("EPS", "BVPS", "d_E", "d_B"),
@@ -184,17 +185,19 @@ spec_slopes = {
     "R6": ("EPS", "BVPS", "d_E", "d_B"),
     "R7": ("EPS", "BVPS_adj", "d_E", "d_Badj"),
     "R8": ("EPS_r", "BVPS", "d_Er", "d_B"),
-    "R9": ("EPS", "BVPS", "d_E", "d_B")}
+    "R9": ("EPS", "BVPS", "d_E", "d_B"),
+    "R10": ("EPS", "BVPS", "d_E", "d_B")}
 wald_pair = {"R2": ("d_E", "d_B"), "R3": ("d_ROA", "d_B"), "R4": ("d_E", "d_B"),
              "R5": ("d_E", "d_B"), "R6": ("d_E", "d_B"), "R7": ("d_E", "d_Badj"),
              "R8": ("d_Er", "d_B"),
-             "R9": ("d_E", "d_B")}
+             "R9": ("d_E", "d_B"),
+             "R10": ("d_E", "d_B")}
 L = []
 L.append("\\begin{table}[!htbp]")
 L.append("\\centering")
 L.append("\\footnotesize")
 L.append("\\setlength{\\tabcolsep}{3pt}")
-L.append("\\caption{Full Robustness Estimates Across Specifications R1--R9}")
+L.append("\\caption{Full Robustness Estimates Across Specifications R1--R10}")
 L.append("\\label{tab:app_robustfull}")
 L.append("\\begin{tabular}{>{\\raggedright\\arraybackslash}p{0.16\\textwidth}"
          ">{\\raggedright\\arraybackslash}p{0.135\\textwidth}"
@@ -209,7 +212,7 @@ L.append("\\textbf{Specification} & \\textbf{EPS (SE)} & \\textbf{BVPS (SE)} & "
          "\\textbf{$\\delta_E$ (SE)} & \\textbf{$\\delta_B$ (SE)} & "
          "\\textbf{Wald $F$ ($p$)} & \\textbf{$N$} & \\textbf{df} \\\\")
 L.append("\\midrule")
-for k in ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"]:
+for k in ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10"]:
     res = specs[k]
     e_, b_, dE_, dB_ = spec_slopes[k]
 
@@ -238,7 +241,9 @@ L.append("\\textit{Note.} All specifications include bank and fiscal-year "
          "$\\delta_E$); R7 uses bonus-adjusted BVPS in both the level and the "
          "interaction; R8 uses restated EPS in both the level and the "
          "interaction. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so "
-         "one year dummy drops in each and parameters fall to $K = 13$. R9 excludes the single Kanchan-mismatched bank-year NMB FY 2076/77, so no dummy drops and parameters remain $K = 14$. "
+         "one year dummy drops in each and parameters fall to $K = 13$. "
+         "R9 excludes the single Kanchan-mismatched bank-year NMB FY 2076/77 ($N = 27, \\text{residual df} = 13$). "
+         "R10 additionally excludes the Kumari Bank FY 2076/77 partial-year acquisition observation ($N = 26, \\text{residual df} = 12$) as a supplementary post-hoc sensitivity check. "
          "The R4 cash DPS coefficient with full inference is in "
          "Table~\\ref{tab:app_robust_inf}. "
          "Wald tests are the joint test of the two regime-shift interactions "
@@ -248,7 +253,7 @@ L.append("\\textit{Note.} All specifications include bank and fiscal-year "
          f"Fit statistics: $R^2$ (adjusted $R^2$; Within-$R^2$): "
          + "; ".join(f"{k} ${specs[k]['r2']:.3f}$ (${specs[k]['adj']:.3f}$; "
                      f"${specs[k]['within']:.3f}$)"
-                     for k in ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9"])
+                     for k in ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10"])
          + ".")
 L.append("\\end{minipage}")
 L.append("\\end{table}")

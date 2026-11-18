@@ -135,10 +135,13 @@ spec_inf = {
     "R9": ("R9: Excl. NMB FY2076/77",
            [("EPS", "EPS"), ("BVPS", "BVPS"), ("d_E", "$\\delta_E$"),
             ("d_B", "$\\delta_B$")]),
+    "R10": ("R10: Excl. NMB & KBL FY76",
+            [("EPS", "EPS"), ("BVPS", "BVPS"), ("d_E", "$\\delta_E$"),
+             ("d_B", "$\\delta_B$")]),
 }
-L = open_longtable("Robustness Coefficient Inference (R3--R9)",
+L = open_longtable("Robustness Coefficient Inference (R3--R10)",
                    "tab:app_robust_inf", header6())
-for k in ["R3", "R4", "R5", "R6", "R7", "R8", "R9"]:
+for k in ["R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10"]:
     title, rows = spec_inf[k]
     L.append(f"\\multicolumn{{6}}{{l}}{{\\textbf{{{title}}}}} \\\\*")
     L.extend(full_rows(specs[k], rows))
@@ -146,7 +149,7 @@ L.append("\\bottomrule")
 L.append("\\end{longtable}}")
 L.extend(note_block(
     "R1 and R2 inference is in Tables~\\ref{tab:app_m1full} and "
-    "~\\ref{tab:app_m2full}. Fixed-effect dummies for R3--R9 are in "
+    "~\\ref{tab:app_m2full}. Fixed-effect dummies for R3--R10 are in "
     "Tables~\\ref{tab:app_robust_fe1} and~\\ref{tab:app_robust_fe2}. "
     "Estimates, standard errors, and confidence limits to four decimals; "
     "t-statistics to two decimals; p-values to three decimals.", end_table=False))
@@ -175,8 +178,8 @@ for label, caption, group in [
          "Robustness Fixed-Effect Dummy Coefficients (R3--R5)",
          ["R3", "R4", "R5"]),
         ("tab:app_robust_fe2",
-         "Robustness Fixed-Effect Dummy Coefficients (R6--R9)",
-         ["R6", "R7", "R8", "R9"])]:
+         "Robustness Fixed-Effect Dummy Coefficients (R6--R10)",
+         ["R6", "R7", "R8", "R9", "R10"])]:
     # Both dummy tables are longtables. fe1 is too tall to fit as a float
     # in the space left after Table 23, and a deferred float would print
     # after Table 25 (out of order); fe2 never fit one page at all.
@@ -190,7 +193,8 @@ for label, caption, group in [
     titles = {"R3": "R3: ROA Replaces EPS", "R4": "R4: Model 2 + DPS",
               "R5": "R5: Excl. Transition", "R6": "R6: Excl. Mismatch",
               "R7": "R7: Bonus-Adjusted", "R8": "R8: Restated EPS",
-              "R9": "R9: Excl. NMB FY2076/77"}
+              "R9": "R9: Excl. NMB FY2076/77",
+              "R10": "R10: Excl. NMB & KBL FY76"}
     sub_end = "\\\\*" if is_long else "\\\\"
     for k in group:
         L.append(f"\\multicolumn{{6}}{{l}}{{\\textbf{{{titles[k]}}}}} {sub_end}")
@@ -203,7 +207,7 @@ for label, caption, group in [
     L.extend(note_block(
         "Reference categories are GBIME and FY 2076/77. R5 excludes FY "
         "2079/80 and R6 excludes FY 2078/79, so the corresponding year "
-        "dummy is absent in each. R9 drops only one bank-year, so all dummies are present. Joint fixed-effect tests for R3--R9 are "
+        "dummy is absent in each. R9 and R10 drop specific bank-years, so all dummies are present. Joint fixed-effect tests for R3--R10 are "
         "in Table~\\ref{tab:app_robust_fetests}. Estimates, standard "
         "errors, and confidence limits to four decimals; t-statistics to "
         "two decimals; p-values to three decimals.", end_table=not is_long))
@@ -223,7 +227,7 @@ L[6] = ("\\begin{tabular}{>{\\raggedright\\arraybackslash}p{0.17\\textwidth}"
 L.append("\\textbf{Specification} & \\textbf{Null Hypothesis} & \\textbf{$F$} & "
          "\\textbf{df} & \\textbf{$p$} \\\\")
 L.append("\\midrule")
-for k in ["R3", "R4", "R5", "R6", "R7", "R8", "R9"]:
+for k in ["R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10"]:
     t = fe_tests[k]
     L.append(f"{k} & Bank fixed effects jointly zero & ${t['bank'][0]:.3f}$ & "
              f"${t['n_bank']}, {t['df']}$ & {pfmt(t['bank'][1])} \\\\")

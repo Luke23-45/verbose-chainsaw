@@ -122,7 +122,7 @@ Model 2 & All fixed effects jointly zero & $30.835$ & $9, 14$ & $<0.001$ \\
 \centering
 \footnotesize
 \setlength{\tabcolsep}{3pt}
-\caption{Full Robustness Estimates Across Specifications R1--R9}
+\caption{Full Robustness Estimates Across Specifications R1--R10}
 \label{tab:app_robustfull}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.135\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}}
 \toprule
@@ -145,13 +145,15 @@ R7: Bonus-Adjusted & $5.7747$ ($4.1447$) & $0.1527$ ($1.6324$) & $-4.0432$ ($4.4
 R8: Restated EPS & $5.2555$ ($3.0157$) & $0.0311$ ($1.3003$) & $-2.8599$ ($3.8070$) & $-1.8125$ ($1.2233$) & $2.915$ ($0.087$) & 28 & 14 \\
 \addlinespace
 R9: Excl. NMB FY2076/77 & $6.0003$ ($7.0278$) & $0.0933$ ($1.7190$) & $-3.4454$ ($6.5976$) & $-1.7414$ ($1.4767$) & $1.794$ ($0.205$) & 27 & 13 \\
+\addlinespace
+R10: Excl. NMB \& KBL FY76 & $3.5200$ ($4.6869$) & $-0.1822$ ($1.1479$) & $-0.5575$ ($4.7405$) & $-1.3078$ ($0.8446$) & $1.570$ ($0.248$) & 26 & 12 \\
 \bottomrule
 \end{tabular}
 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} All specifications include bank and fiscal-year fixed effects. ROA is return on assets; EPS is earnings per share; BVPS is book value per share; DPS is cash dividend per share. R3 substitutes ROA for EPS (and its interaction for $\delta_E$); R7 uses bonus-adjusted BVPS in both the level and the interaction; R8 uses restated EPS in both the level and the interaction. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so one year dummy drops in each and parameters fall to $K = 13$. R9 excludes the single Kanchan-mismatched bank-year NMB FY 2076/77, so no dummy drops and parameters remain $K = 14$. The R4 cash DPS coefficient with full inference is in Table~\ref{tab:app_robust_inf}. Wald tests are the joint test of the two regime-shift interactions under the HC3 covariance matrix. Estimates and standard errors to four decimals; Chapter IV Table~\ref{tab:t5_robustness} prints the same coefficients to three decimals. Fit statistics: $R^2$ (adjusted $R^2$; Within-$R^2$): R1 $0.948$ ($0.912$; $0.152$); R2 $0.978$ ($0.958$; $0.642$); R3 $0.977$ ($0.955$; $0.621$); R4 $0.983$ ($0.965$; $0.722$); R5 $0.976$ ($0.948$; $0.677$); R6 $0.992$ ($0.983$; $0.876$); R7 $0.976$ ($0.955$; $0.614$); R8 $0.977$ ($0.955$; $0.621$); R9 $0.975$ ($0.950$; $0.634$).
+\textit{Note.} All specifications include bank and fiscal-year fixed effects. ROA is return on assets; EPS is earnings per share; BVPS is book value per share; DPS is cash dividend per share. R3 substitutes ROA for EPS (and its interaction for $\delta_E$); R7 uses bonus-adjusted BVPS in both the level and the interaction; R8 uses restated EPS in both the level and the interaction. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so one year dummy drops in each and parameters fall to $K = 13$. R9 excludes the single Kanchan-mismatched bank-year NMB FY 2076/77 ($N = 27, \text{residual df} = 13$). R10 additionally excludes the Kumari Bank FY 2076/77 partial-year acquisition observation ($N = 26, \text{residual df} = 12$) as a supplementary post-hoc sensitivity check. The R4 cash DPS coefficient with full inference is in Table~\ref{tab:app_robust_inf}. Wald tests are the joint test of the two regime-shift interactions under the HC3 covariance matrix. Estimates and standard errors to four decimals; Chapter IV Table~\ref{tab:t5_robustness} prints the same coefficients to three decimals. Fit statistics: $R^2$ (adjusted $R^2$; Within-$R^2$): R1 $0.948$ ($0.912$; $0.152$); R2 $0.978$ ($0.958$; $0.642$); R3 $0.977$ ($0.955$; $0.621$); R4 $0.983$ ($0.965$; $0.722$); R5 $0.976$ ($0.948$; $0.677$); R6 $0.992$ ($0.983$; $0.876$); R7 $0.976$ ($0.955$; $0.614$); R8 $0.977$ ($0.955$; $0.621$); R9 $0.975$ ($0.950$; $0.634$); R10 $0.988$ ($0.974$; $0.526$).
 \end{minipage}
 \end{table}
 

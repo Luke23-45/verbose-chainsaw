@@ -1,8 +1,8 @@
 """Round-2 computations for the Appendix E gap closure (v25).
 
-Loads results.pkl from round 1 (verified M1/M2/R1-R8 fits) and computes only
-the new items: Model 2 diagnostics, Model 2 VIFs, joint fixed-effect tests
-for R3-R8, leave-one-year fits, and post-consolidation confidence intervals.
+Loads results.pkl after R9 and R10 have been merged, and computes Model 2
+diagnostics, Model 2 VIFs, joint fixed-effect tests for R2-R10,
+leave-one-year fits, and post-consolidation confidence intervals.
 Verification: leave-one-year for FY2078/79 and FY2079/80 must reproduce R6
 and R5 exactly, and the joint-FE function must reproduce Table 21's Model 2
 row from specs['R2'].
@@ -119,9 +119,16 @@ vifs = {
 print("M2 VIFs:", {k: round(v, 2) for k, v in vifs.items()})
 assert abs(vifs["EPS"] - 10.33) < 0.01 and abs(vifs["d_B"] - 24.13) < 0.01
 
-# ---- 4. Joint FE tests for R3-R8 (+ R2 sanity check vs Table 21) ----
+# ---- 4. Joint FE tests for R2-R10 (+ R2 sanity check vs Table 21) ----
 fe_tests = {}
-for k in ["R2", "R3", "R4", "R5", "R6", "R7", "R8"]:
+expected_specs = ["R2", "R3", "R4", "R5", "R6", "R7", "R8", "R9", "R10"]
+missing_specs = [k for k in expected_specs if k not in specs]
+if missing_specs:
+    raise RuntimeError(
+        "Missing robustness fits in results.pkl: " + ", ".join(missing_specs)
+        + ". Run compute_r9.py and compute_r10.py after compute_e.py first."
+    )
+for k in expected_specs:
     res = specs[k]
     nb = [n for n in res["names"] if n.startswith("Bank ")]
     ny = [n for n in res["names"] if n.startswith("Year ")]

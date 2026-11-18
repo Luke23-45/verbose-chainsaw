@@ -1,7 +1,7 @@
 {\small
 \setlength{\tabcolsep}{4pt}
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
-\caption{Robustness Coefficient Inference (R3--R9)}
+\caption{Robustness Coefficient Inference (R3--R10)}
 \label{tab:app_robust_inf}\\
 \toprule
 \textbf{Variable} & \textbf{Estimate} & \textbf{HC3 SE} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} \\
@@ -74,13 +74,22 @@ BVPS & $0.0933$ & $1.7190$ & $0.05$ & $0.958$ & $[-3.6204, 3.8070]$ \\
 $\delta_E$ & $-3.4454$ & $6.5976$ & $-0.52$ & $0.610$ & $[-17.6987, 10.8079]$ \\
 \addlinespace
 $\delta_B$ & $-1.7414$ & $1.4767$ & $-1.18$ & $0.259$ & $[-4.9317, 1.4488]$ \\
+\addlinespace
+\multicolumn{6}{l}{\textbf{R10: Excl. NMB & KBL FY76}} \\*
+EPS & $3.5200$ & $4.6869$ & $0.75$ & $0.467$ & $[-6.6917, 13.7318]$ \\
+\addlinespace
+BVPS & $-0.1822$ & $1.1479$ & $-0.16$ & $0.877$ & $[-2.6833, 2.3189]$ \\
+\addlinespace
+$\delta_E$ & $-0.5575$ & $4.7405$ & $-0.12$ & $0.908$ & $[-10.8861, 9.7712]$ \\
+\addlinespace
+$\delta_B$ & $-1.3078$ & $0.8446$ & $-1.55$ & $0.147$ & $[-3.1481, 0.5325]$ \\
 \bottomrule
 \end{longtable}}
 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} R1 and R2 inference is in Tables~\ref{tab:app_m1full} and ~\ref{tab:app_m2full}. Fixed-effect dummies for R3--R9 are in Tables~\ref{tab:app_robust_fe1} and~\ref{tab:app_robust_fe2}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
+\textit{Note.} R1 and R2 inference is in Tables~\ref{tab:app_m1full} and ~\ref{tab:app_m2full}. Fixed-effect dummies for R3--R10 are in Tables~\ref{tab:app_robust_fe1} and~\ref{tab:app_robust_fe2}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
 \end{minipage}
 
 {\small
@@ -155,13 +164,13 @@ Year FY 2081/82 & $179.1178$ & $195.6941$ & $0.92$ & $0.382$ & $[-256.9159, 615.
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. R9 drops only one bank-year, so all dummies are present. Joint fixed-effect tests for R3--R9 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
+\textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. R9 and R10 drop specific bank-years, so all dummies are present. Joint fixed-effect tests for R3--R10 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
 \end{minipage}
 
 {\small
 \setlength{\tabcolsep}{4pt}
 \begin{longtable}{>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
-\caption{Robustness Fixed-Effect Dummy Coefficients (R6--R9)}
+\caption{Robustness Fixed-Effect Dummy Coefficients (R6--R10)}
 \label{tab:app_robust_fe2}\\
 \toprule
 \textbf{Variable} & \textbf{Estimate} & \textbf{HC3 SE} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} \\
@@ -243,13 +252,32 @@ Year FY 2079/80 & $70.5081$ & $200.6691$ & $0.35$ & $0.731$ & $[-363.0111, 504.0
 Year FY 2080/81 & $147.9531$ & $201.2825$ & $0.74$ & $0.475$ & $[-286.8913, 582.7975]$ \\
 \addlinespace
 Year FY 2081/82 & $165.0110$ & $203.5949$ & $0.81$ & $0.432$ & $[-274.8292, 604.8511]$ \\
+\addlinespace
+\multicolumn{6}{l}{\textbf{R10: Excl. NMB & KBL FY76}} \\*
+Bank HBL & $30.0602$ & $20.9666$ & $1.43$ & $0.177$ & $[-15.6221, 75.7425]$ \\
+\addlinespace
+Bank KBL & $-28.2755$ & $31.1566$ & $-0.91$ & $0.382$ & $[-96.1598, 39.6088]$ \\
+\addlinespace
+Bank NIMB & $5.8220$ & $16.8387$ & $0.35$ & $0.736$ & $[-30.8664, 42.5103]$ \\
+\addlinespace
+Bank NMB & $18.8976$ & $15.8253$ & $1.19$ & $0.255$ & $[-15.5829, 53.3780]$ \\
+\addlinespace
+Year FY 2077/78 & $-183.1824$ & $40.3891$ & $-4.54$ & $0.001$ & $[-271.1828, -95.1821]$ \\
+\addlinespace
+Year FY 2078/79 & $-264.1692$ & $30.3453$ & $-8.71$ & $<0.001$ & $[-330.2858, -198.0525]$ \\
+\addlinespace
+Year FY 2079/80 & $-72.6011$ & $139.4302$ & $-0.52$ & $0.612$ & $[-376.3935, 231.1913]$ \\
+\addlinespace
+Year FY 2080/81 & $5.2407$ & $140.1053$ & $0.04$ & $0.971$ & $[-300.0226, 310.5039]$ \\
+\addlinespace
+Year FY 2081/82 & $20.6984$ & $140.6639$ & $0.15$ & $0.885$ & $[-285.7820, 327.1788]$ \\
 \bottomrule
 \end{longtable}}
 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. R9 drops only one bank-year, so all dummies are present. Joint fixed-effect tests for R3--R9 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
+\textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. R9 and R10 drop specific bank-years, so all dummies are present. Joint fixed-effect tests for R3--R10 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals; t-statistics to two decimals; p-values to three decimals.
 \end{minipage}
 
 \begin{table}[!htbp]
@@ -303,6 +331,12 @@ R9 & Bank fixed effects jointly zero & $2.249$ & $4, 13$ & $0.120$ \\
 R9 & Year fixed effects jointly zero & $13.304$ & $5, 13$ & $<0.001$ \\
 \addlinespace
 R9 & All fixed effects jointly zero & $14.059$ & $9, 13$ & $<0.001$ \\
+\addlinespace
+R10 & Bank fixed effects jointly zero & $3.407$ & $4, 12$ & $0.044$ \\
+\addlinespace
+R10 & Year fixed effects jointly zero & $23.991$ & $5, 12$ & $<0.001$ \\
+\addlinespace
+R10 & All fixed effects jointly zero & $28.332$ & $9, 12$ & $<0.001$ \\
 \bottomrule
 \end{tabular}
 
