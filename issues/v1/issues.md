@@ -79,9 +79,9 @@
 
 **Unresolved part.** The proposed concern says a sign conflict exists in the article's full text/table, but that text was not obtained. The source page's PDF download timed out. Thus there is no evidence here that the thesis's sign is wrong; conversely, the abstract is not enough to verify coefficient-level direction, significance, or whether the article has an internal inconsistency.
 
-**Assessment.** The claim “DPS-sign conflict” is not established and should not be recorded as a confirmed error. The bibliographic details should be corrected: the current entry says “Journal of Arts, Science and Commerce,” while the primary article page gives “Researchers World - International Refereed Social Sciences Journal.”
+**Assessment (journal-title correction superseded).** The claim “DPS-sign conflict” is not established and should not be recorded as a confirmed error. The earlier assertion that “Researchers World - International Refereed Social Sciences Journal” is the journal title confuses the publisher-site heading with the journal wording. The current thesis bibliography's “Journal of Arts, Science and Commerce” is retained, consistent with the article-header/ISSN evidence recorded in the later audit. See `issues/v2/final_reconciliation_record.md` for the current disposition.
 
-**Correction route.** Obtain the full article and inspect the relevant regression table plus conclusion. If the table supports positive DPS, retain but cite the exact result. If it is negative or internally inconsistent, report only the source's unambiguous result or remove the sign claim. Update the journal field to the primary source's journal name. Until then, word the literature summary at the abstract level and do not call the sign conflict a fact.
+**Correction route.** For the journal field, retain “Journal of Arts, Science and Commerce”; do not substitute the publisher-site heading. The full-text sign question remains separate: any year-by-year or coefficient-level claim requires the article text, so keep the thesis summary at the abstract level unless that text is independently available.
 
 **Source:** [Primary journal article page](https://www.researchersworld.com/index.php/rworld/article/view/303).
 

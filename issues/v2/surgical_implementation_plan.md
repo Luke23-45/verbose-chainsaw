@@ -1,5 +1,7 @@
 # Surgical Implementation Plan: Thesis Issue Remediation (v2 Final)
 
+> **Historical plan; superseded.** Do not apply its proposed patches as current instructions. Use `issues/v2/final_reconciliation_record.md` for current dispositions. In particular, retain the thesis bibliography's `Journal of Arts, Science and Commerce` title for Sharma; the proposed `Researchers World` replacement below is not the adopted citation.
+
 **Target Scope:** Resolution of all seven audited issues (I-01 through I-07) and repository health restoration.  
 **Guiding Principle:** Surgical, minimal-diff edits preserving verified facts, complete econometric reproducibility, and zero hallucinated justifications.
 
@@ -88,6 +90,7 @@ flowchart TD
   ```
 
 ### 1.2 `sharma2011` (Issue I-06)
+> **Superseded:** Do not apply the journal-title replacement below. The current thesis bibliography retains *Journal of Arts, Science and Commerce*; see `issues/v2/final_reconciliation_record.md` for the reconciled disposition. The author-name change to `Sharma, Sanjeet` is already present.
 * **File:** `src/thesis/references.bib` (lines 11–19)
 * **Surgical Replacement:** Expand journal title to its full indexed registered name, and add author's full forename:
   ```bibtex
