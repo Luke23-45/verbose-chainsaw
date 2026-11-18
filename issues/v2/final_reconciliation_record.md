@@ -1,23 +1,23 @@
 # Final Reconciled Audit Record and Issue Status Master
 
 **Project:** Master's Degree Dissertation — Faculty of Management, Tribhuvan University  
-**Candidate:** Asmita Subedi | Triveni International College (Campus Code 48), Pokhara, Nepal  
+**Proposal-listed candidate/institution:** Asmita Subedi | Triveni International College (Campus Code 48), Pokhara, Nepal
 **Topic:** *Value Relevance of Accounting Information Before and After the Banking Consolidation Wave: Evidence from Nepalese Commercial Banks*  
 **Date of Reconciliation:** 18 November 2026  
-**Status:** ALL ISSUES AUDITED, RECONCILED, IMPLEMENTED, AND VERIFIED (36/36 Pytest Assertions Passing)
+**Status:** Reconciliation record; status statements below distinguish implemented edits from claims still awaiting independent evidence.
 
 ---
 
 ## 1. Executive Summary & Purpose of this Record
 
-This document serves as the **single authoritative reconciliation record** across the entire pre-submission thesis audit. It formally synthesizes, resolves, and harmonizes all historical findings, claims, and counter-arguments documented in:
+This document records the current disposition of the pre-submission thesis audit and supersedes conflicting earlier recommendations where stated. Earlier files are retained as audit history; their unresolved or superseded claims should not be read as current status. This record does not treat tests or proposal consistency as verification of personal or institutional records. It synthesizes findings documented in:
 - `issues/v1/issues.md` (Initial external audit queries)
 - `issues/v1/plan.md` (Tentative initial plan)
 - `issues/v1/review.md` (Preliminary verification review)
 - `issues/v2/audit_and_enhanced_plan.md` (Master econometric and evidentiary audit)
 - `issues/v2/surgical_implementation_plan.md` (Multi-phase surgical implementation plan)
 
-Every empirical, bibliographic, and procedural issue raised across the project lifecycle is reconciled here with zero unverified assertions, zero post-hoc fabricated data excuses, and strict econometric discipline.
+The record distinguishes verified source claims, implemented prose changes, author-confirmed facts, and items still awaiting primary evidence.
 
 ---
 
@@ -25,14 +25,14 @@ Every empirical, bibliographic, and procedural issue raised across the project l
 
 | No. | Audit Dimension | Initial `v1/issues.md` Claim | `v1/review.md` Stance | `v2` Evidentiary Reality | Final Thesis Resolution & Audit Status |
 |---|---|---|---|---|---|
-| **1** | **Prabhu Bank Exclusion Rationale** | Alleged unstated exclusion of Century combination. | Proposed claiming Prabhu had data unavailability or severe distortions. | Primary annual reports for Prabhu Bank and Century Commercial Bank exist and are complete; inventing data unavailability would be academic dishonesty. The study was formulated as a purposive selection of 5 focal bank series. | **RESOLVED & CLOSED.** Stated transparently in §3.3 that purposive sampling selected five focal commercial banking series (four merged banks and one unmerged benchmark); Prabhu Bank's acquisition of Century was not included in this selected sample. Misleading phrases like "analytically balanced panel" and "landmark series" were purged. |
+| **1** | **Prabhu Bank Exclusion Rationale** | Alleged unstated exclusion of Century combination. | Earlier plans proposed unsupported data-based explanations. | The author confirms no separate factual or data-based exclusion criterion is known or claimed. | **RESOLVED AS A TRANSPARENT PURPOSIVE JUDGMENT.** Chapter III states that the sample contains four selected merged series and one unmerged benchmark; Prabhu/Century was not included, and no separate data-based exclusion criterion is claimed. |
 | **2** | **Regulatory Data Sources (SEBON / MoF)** | Alleged Chapter III cites SEBON "Capital Market Trends" and MoF *Economic Survey* which were not used. | Concurred that MoF was unconsulted, but proposed replacing with generic SEBON acts/circulars. | No specific SEBON publication was used as empirical regression data (data came exclusively from bank annual reports and NEPSE prices). Listing generic SEBON circulars under Data Sources was an unsupported generalization. Acknowledgements also credited SEBON for archives. | **RESOLVED & CLOSED.** Purged SEBON from Chapter III §3.4.2 data sources entirely. In `src/thesis/front/acknowledgements.tex`, qualified SEBON's mention: credited NRB and NEPSE for reports and trading archives, and SEBON specifically for administering the regulatory frameworks. |
-| **3** | **Candidate Identifiers & College Location** | Alleged candidate roll/registration and Pokhara location were incorrect; claimed college was in Bharatpur, Chitwan. | Debunked Chitwan claim: showed Triveni International College is in Pokhara-27 (Lekhnath), Kaski. | Official TU affiliation records confirm Triveni International College is located in Pokhara-27, Kaski (Campus Code 48, Gandaki Province), exactly matching TU Registration No. `7-2-48-1060-2018`. "Pokhara, Nepal" is institutionally correct. Physical student ID card remains an external administrative document. | **RESOLVED & CLOSED.** Retained official title page metadata (`7-2-48-1060-2018`, Roll `67514/24`, Pokhara, Nepal) which is 100% consistent with TU Affiliation records and approved proposal. Documented as administratively verified. |
-| **4** | **Kumari Bank SGM Document Citation** | Alleged `kumari2022sgm` was titled "Extraordinary general meeting document" when Nepali banks convene SGMs. | Claimed PDF cover was visually verified and proposed an exact minute title. | The local repository stores KBL's annual reports; the standalone SGM PDF is on Kumari Bank's remote server (`1670847430_Extra_Ordinary_General_Meeting_...pdf`), not locally archived. Claiming a visual cover inspection of an unarchived PDF is unproven. | **RESOLVED & CLOSED.** Formatted `references.bib` entry `kumari2022sgm` as an official corporate disclosure document: *"Special General Meeting document, FY 2079/80 (merger proposals and share swap ratio)"*, with note confirming 25 Mangsir 2079 BS date and 1:1 NCC Bank swap ratio. |
+| **3** | **Candidate Identifiers & College Location** | Alleged candidate roll/registration and Pokhara location were incorrect; claimed college was in Bharatpur, Chitwan. | Earlier review found the values consistent with the proposal; it did not verify the candidate's record. | The author confirms the title-page values match the proposal. No official college/TU record verifying the candidate-specific roll and registration numbers has been supplied. | **PROPOSAL CONSISTENCY CONFIRMED; OFFICIAL-RECORD VERIFICATION OPEN.** Leave the title-page values unchanged. Do not describe the roll or registration number as independently verified. |
+| **4** | **Kumari Bank SGM Document Citation** | The exact wording on the PDF cover was disputed. | Earlier review records conflict on whether the cover was visually verified. | The meeting content, date, merger resolution, and 1:1 ratio are supported by the document review, but the exact cover wording is not verified in the current evidence set. | **CONTENT SUPPORTED; EXACT COVER WORDING UNVERIFIED.** The bibliography uses a descriptive title and explicitly notes that it is not a transcription of the cover. |
 | **5** | **Sharma (2011) Citation & Nuances** | Alleged Sharma found positive DPS and BVPS effects, questioning thesis text; noted journal title typo. | Claimed journal title was "Journal of Arts, Science and Commerce" and asserted BVPS was significant in 11 of 16 years with mixed signs. | Publisher official page (`researchersworld.com/index.php/rworld/article/view/303`, ISSN 2231-4172) identifies the journal as *Researchers World – International Refereed Social Sciences Journal*. Abstract confirms EPS, DPS, and BVPS have significant impact with EPS and DPS strongest. The 11/16 years mixed signs claim is not in the publisher abstract. | **RESOLVED & CLOSED.** Set journal in `references.bib` to *Researchers World -- International Refereed Social Sciences Journal*. Reverted literature review §2.2.1 and Table 2.1 to state strictly verified findings: EPS, DPS, and BVPS show significant associations, with EPS and DPS as strongest determinants; circular P/E inclusion noted. |
 | **6** | **KBL Timing Nuance & R9/R10 Context** | Alleged R9 drops NMB FY 2076/77 for Kanchan acquisition timing, but ignored parallel KBL FY 2076/77 Deva acquisition. | Proposed explaining KBL Deva joint operations began 28 Ashad 2077 BS (3 days before year-end), but claimed EPS was on a pre-acquisition weighted-average base. | Ashad 2077 had 31 days (28 to 31 Ashad = 3 to 4 days). KBL year-end balance sheet reflects unified Deva assets/liabilities, but income statement reflects only 3–4 days of operating flows against an April 2021 market price following 9 months of joint operations. Denominator calculation was unverified from accounting notes. | **RESOLVED & CLOSED.** Removed unverified "weighted-average base" claim from §3.8. Accurately documented that joint operations began on 28 Ashad 2077 BS (three to four days prior to FY-end). Created and evaluated supplementary post-hoc check R10 ($N=26, \text{df}=12$) dropping both NMB and KBL FY 2076/77. |
 | **7** | **Specification R10 Reproducibility & Multiplicity** | Not present in original audit. | Proposed adding R10 with $F=1.57, p=0.248$, expanding Holm family to 9 tests ($p=0.190$). | Implementation was sound, but plan markdown had sketched preliminary Within-$R^2$ as $.6358$ (actual statsmodels within-$R^2 = .5257$). In addition, `compute_r9.py` had failed to update `results.pkl`, breaking automated pipeline regeneration. Prose also overstated $p=0.248$ as "confirming stability". | **RESOLVED & CLOSED.** Fixed `compute_r9.py` to merge R9 into `results.pkl`. Verified full 7-step pipeline execution. Corrected prose to "failing to reject the null of joint parameter stability". Clarified Table 4.6 covariance text in Ch 1. Documented Holm derivation ($m=9, \text{R6 } p=0.190, \text{others bounded at } 0.680$). |
-| **8** | **GBIME 16th AGM Citation** | Alleged unread AGM minutes cited for asset projection. | Proposed adding 17th Annual Report alongside 16th AGM minute. | The local repo contains the audited 17th Annual Report FY 2022/23 (`gbime2023report`), which confirms the merger with BOK, 1:1 swap ratio, and that GBIME *became* the largest commercial bank in Nepal. The 16th AGM minute PDF on NEPSE remains unarchived locally. | **RESOLVED & CLOSED.** Replaced reliance on `gbime2022agm` across thesis text. In §3.3 and Chapter II (line 207), cited the primary verified annual report `\citep{gbime2023report}` directly: *"Following amalgamation with Bank of Kathmandu Limited, GBIME became the largest bank in the industry in terms of capital funds, assets, deposits, and total loans \citep{gbime2023report}."* |
+| **8** | **GBIME 16th AGM Citation** | Alleged unread AGM minutes cited for asset projection. | Proposed adding 17th Annual Report alongside 16th AGM minute. | Thesis chapters cite the audited 17th Annual Report (`gbime2023report`) for the merger ratio and the post-merger largest-bank statement. The 16th AGM minute PDF remains unarchived locally and was not verified. | **RESOLVED & CLOSED FOR THE THESIS.** Confirmed `gbime2022agm` is not cited in either thesis chapter; removed its unused entry from `src/thesis/references.bib`. The substantive thesis claims rely on `gbime2023report`, so retrieving the minutes is unnecessary for those claims. The separate proposal bibliography still contains its own `gbime2022agm` entry. |
 
 ---
 
@@ -40,8 +40,8 @@ Every empirical, bibliographic, and procedural issue raised across the project l
 
 ### 3.1 Prabhu Bank Selection Rationale (§3.3)
 * **The Contradiction in Early Files:** `issues/v1/plan.md` contemplated asserting that Century's financials suffered from reporting discontinuities or non-performing loan restatements.
-* **The Ground Truth:** A manual audit confirmed Century Commercial Bank published complete audited NFRS annual reports up to its amalgamation, and Prabhu Bank published complete consolidated financials. Claiming data unavailability or audit failure would be factually false.
-* **Final Resolution:** Purposive sampling is by definition a non-probability sampling method where the researcher selects focal series based on specific study objectives. The thesis proposal pre-specified five commercial banking series (four merged banks and one unmerged benchmark). Century Commercial Bank's acquisition by Prabhu Bank was simply not included in this selected five-bank sample. The thesis states this plainly without subjective embellishment ("analytically balanced panel" and "landmark combinations" were removed).
+* **Author input:** The author confirms that no separate factual or data-based reason for omitting Prabhu/Century is known or claimed.
+* **Resolution:** Chapter III describes the purposive five-series scope, identifies Prabhu/Century as not included, and expressly states that no separate data-based exclusion criterion is claimed. It does not attribute the omission to data availability, panel balance, or another unsupported reason.
 
 ### 3.2 SEBON and Regulatory Source Provenance (§3.4.2 & Acknowledgements)
 * **The Contradiction in Early Files:** `issues.md` pointed out that SEBON's *"Capital Market Trends"* was never published by SEBON (it was a NRB publication title), and MoF *Economic Survey* was never used in the empirical regressions. `v1/review.md` suggested substituting generic SEBON directives.
@@ -51,22 +51,16 @@ Every empirical, bibliographic, and procedural issue raised across the project l
   2. The Acknowledgements page was qualified: Nepal Rastra Bank and the Nepal Stock Exchange are acknowledged for public regulatory reports and trading archives, while SEBON is acknowledged for administering the capital market regulatory frameworks.
 
 ### 3.3 Candidate Identifiers and Campus Location
-* **The Contradiction in Early Files:** `issues.md` claimed the candidate roll number, registration number, and location were invalid and that the campus was in Bharatpur, Chitwan.
-* **The Ground Truth:** 
-  - College: **Triveni International College**
-  - Location: **Pokhara-27 (Talchowk / Lekhnath), Kaski District, Gandaki Province**, Nepal.
-  - Tribhuvan University Campus Code: **48**.
-  - Student Registration: `7-2-48-1060-2018`. The campus code segment `48` mathematically confirms affiliation with Triveni International College.
-  - The claim in `issues.md` that it should be "Bharatpur, Chitwan" was based on confusing Triveni International College with Birendra Multiple Campus in Chitwan.
-* **Final Resolution:** The title page metadata (`Pokhara, Nepal`, Roll `67514/24`, Reg `7-2-48-1060-2018`) is retained as institutionally and geographically authentic. It is documented that these match approved university proposal records.
+* **Proposal consistency:** The author confirms that the roll number, registration number, and "Pokhara, Nepal" match the proposal title page.
+* **Verification limit:** No official college/TU record verifying the candidate-specific roll or registration number has been supplied. Proposal consistency is not independent institutional verification. Leave the thesis values unchanged and describe them only as matching the proposal unless an official record is checked.
 
-### 3.4 Kumari Bank Special General Meeting (SGM) Citation
+### 3.4 Kumari Bank Meeting Document Citation
 * **The Contradiction in Early Files:** `references.bib` originally listed `kumari2022sgm` as *"Extraordinary general meeting document..."* `issues/v1/review.md` claimed the PDF cover had been visually checked.
 * **The Ground Truth:** The PDF is hosted on Kumari Bank's backend AWS S3 storage (`https://backend.kumaribank.com/storage/agm-report/2022/12/1670847430_Extra_Ordinary_General_Meeting_2079-08-25_Kumari_Bank_Ltd..pdf`), but the PDF file is not archived locally in `data/`. Asserting a visual cover verification when the file is not in the repository is an unverified claim.
-* **Final Resolution:** The bibliography entry `kumari2022sgm` is classified as an official corporate disclosure:
-  - Title: *Special General Meeting document, FY 2079/80 (merger proposals and share swap ratio)*
+* **Current citation treatment:** The bibliography entry `kumari2022sgm` is classified as an official corporate disclosure and uses a descriptive title, not a claimed exact cover title:
+  - Title: *Meeting minutes and resolutions concerning the merger of Kumari Bank Limited and Nepal Credit and Commerce Bank Limited (2079/08/25)*
   - Howpublished: *Official corporate disclosure*
-  - Note: *Approved final merger agreement with Nepal Credit and Commerce Bank Limited and 1:1 share swap ratio; meeting convened 25 Mangsir 2079 BS (11 December 2022)*.
+  - Note: *Approved final merger agreement with Nepal Credit and Commerce Bank Limited and 1:1 share swap ratio; meeting convened 25 Mangsir 2079 BS (11 December 2022). Descriptive bibliographic title; exact PDF cover wording not verified.*
 
 ### 3.5 Sharma (2011) Citation and Empirical Scope
 * **The Contradiction in Early Files:** `issues/v1/review.md` gave the journal title as *"Journal of Arts, Science and Commerce"* and asserted that BVPS was significant in 11 of 16 years with mixed signs (9 positive, 2 negative).
@@ -140,8 +134,8 @@ python -m pytest
 
 ## 5. Final Audit Sign-Off
 
-With the completion of this reconciliation:
-1. Every historical dispute between `v1` and `v2` has been resolved with verified physical, institutional, or econometric evidence.
-2. The thesis source code in `src/thesis/` contains zero unverified claims, zero phantom citations, and zero post-hoc fabricated data excuses.
-3. The econometric pipeline is fully automated and 100% reproducible from checked-in scripts and primary data.
-4. The dissertation is in complete compliance with the TU FOM MBS Dissertation Guidelines (2019) and ready for final presentation.
+This reconciliation records the current evidence and limits:
+1. The Prabhu/Century omission is described as a purposive selection judgment without an invented data-based reason.
+2. Candidate details are confirmed against the proposal, not an official candidate-specific college/TU record.
+3. The pipeline run and test results are reported in the execution log; this record does not treat them as verification of external factual claims.
+4. Earlier v1/v2 files remain as audit history and may contain superseded findings; consult this status record and the primary sources before treating any claim as closed.
