@@ -1,3 +1,7 @@
+important:::
+docs\thesis_guidelines_reference
+any reference that we have here are te secondary. and our main referecen should be from teh official univeristy which is located at 
+"src\format\Master_Dissertation_writing_guideline_2019.pdf"
 # Thesis guidelines reference — provenance and hierarchy
 
 Saved 2026-10-29. This folder is a reference set only. It does not change the
