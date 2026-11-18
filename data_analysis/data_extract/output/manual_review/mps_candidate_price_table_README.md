@@ -150,7 +150,7 @@ Verified against the local dataset clone, all symbols counted:
   states it" — that scope was titles reviewed, not all sources):
   HBL and NIB signed a merger MoU/agreement 13 May 2021; NEPSE
   suspended trading of both from 13 May 2021; HBL shareholders
-  rejected the proposal at the 4 Jan 2022 AGM; NIB trading resumed
+  rejected the proposal at the 14 Jan 2022 AGM; NIB trading resumed
   30 May 2022 and HBL trading resumed 6 Jun 2022, in both cases to
   the general public except basic/core shareholders. Sources:
   Himalayan Times 14 Jan 2022, Khabarhub Jun 2022, ShareSansar

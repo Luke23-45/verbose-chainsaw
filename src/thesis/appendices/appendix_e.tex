@@ -1,13 +1,13 @@
 \chapter{Detailed Estimation Outputs}
 \label{app:estimation_outputs}
 
-This appendix prints the full estimation outputs behind Chapter IV. It adds no new specification and no new interpretation. Chapter III states the estimators and the fixed-effects structure in narrative form. Chapter IV reports the headline coefficients and the hypothesis decisions. This appendix prints every baseline coefficient, including every fixed-effect dummy, with HC3 standard errors, t-statistics, exact p-values, and 95 percent confidence intervals, together with the joint fixed-effect tests, the full nine-specification robustness suite including its fixed-effect dummies and joint tests, and the diagnostics and sensitivity checks. Estimates are computed from the stored analysis panel, not from the rounded print in Appendix B. Chapter IV prints the same headline coefficients to three decimals, so a last-digit difference between this appendix and Chapter IV is rounding.
+This appendix prints the full estimation outputs behind Chapter IV. It adds no new specification and no new interpretation. Chapter III states the estimators and the fixed-effects structure in narrative form. Chapter IV reports the headline coefficients and the hypothesis decisions. This appendix prints every baseline coefficient, including every fixed-effect dummy, with HC3 standard errors, t-statistics, exact p-values, and 95 percent confidence intervals, together with the joint fixed-effect tests, the full nine-specification robustness suite including its fixed-effect dummies and joint tests, and the diagnostics and sensitivity checks. Estimates are computed from the stored analysis panel, not from the rounded print in Appendix B. Chapter IV prints the same headline coefficients to three decimals, so a last-digit difference between this appendix and Chapter IV is rounding. In the tables, EPS is earnings per share, BVPS is book value per share, DPS is cash dividend per share, ROA is return on assets, SE is standard error, and LSDV denotes the least-squares dummy-variable fit.
 
 \section{Estimation Audit}
 
 The estimation sample is the 28-row sample built in Appendix D, Section D.5. Thirty bank-years were planned. Two are window-excluded: HBL FY 2077/78 and NIMB FY 2077/78, whose first valid prices fall 54 and 47 days after the reporting deadline, outside the five-day window. No other observation is excluded, and no value is imputed.
 
-Parameters and residual degrees of freedom follow the dummy-variable design. Model 1 has 12 parameters: an intercept, 2 slopes, 4 bank dummies, and 5 year dummies, leaving 16 residual degrees of freedom. Model 2 adds the 2 regime-shift interactions for 14 parameters and 14 residual degrees of freedom. R4 adds cash DPS for 15 parameters and 13 degrees of freedom. R5 and R6 each drop one fiscal year and its dummy, giving 13 parameters and 10 degrees of freedom. All other robustness specifications carry 14 parameters and 14 degrees of freedom.
+Parameters and residual degrees of freedom follow the dummy-variable design. Model 1 has 12 parameters: an intercept, 2 slopes, 4 bank dummies, and 5 year dummies, leaving 16 residual degrees of freedom. Model 2 adds the 2 regime-shift interactions for 14 parameters and 14 residual degrees of freedom. R4 adds cash DPS for 15 parameters and 13 degrees of freedom. R5 and R6 each drop one fiscal year and its dummy, giving 13 parameters and 10 degrees of freedom. R3, R7, and R8 carry 14 parameters and 14 degrees of freedom; R9 carries 14 parameters and 13 degrees of freedom (N = 27).
 
 The reference bank is GBIME and the reference fiscal year is FY 2076/77, so the intercept is the GBIME FY 2076/77 baseline and each dummy measures a deviation from it. Estimation is ordinary least squares with two-way bank and fiscal-year fixed effects and MacKinnon-White HC3 robust standard errors. Test statistics use Student's t distribution on the residual degrees of freedom, and joint tests use the Wald F statistic under the HC3 covariance matrix. Within-R², printed in the baseline table notes, is the share of bank-and-year-adjusted variation explained by the slopes, where the adjusted variation is the residual variation left after the bank and year dummies alone.
 
@@ -56,7 +56,7 @@ Year FY 2081/82 & $-198.6948$ & $55.6769$ & $-3.57$ & $0.003$ & $[-316.7246, -80
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $N = 28$; parameters $K = 12$; residual degrees of freedom $= 16$; $R^2$ (LSDV) $= 0.948$; adjusted $R^2 = 0.912$; Within-$R^2 = 0.152$. OLS with two-way fixed effects; MacKinnon-White HC3 robust standard errors; $t$-statistics and confidence intervals on Student's $t(16)$ distribution. Estimates, standard errors, and confidence limits to four decimals; $p$-values to three decimals.
+\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. EPS is earnings per share; BVPS is book value per share; SE is standard error. Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $N = 28$; parameters $K = 12$; residual degrees of freedom $= 16$; $R^2$ (LSDV) $= 0.948$; adjusted $R^2 = 0.912$; Within-$R^2 = 0.152$. OLS with two-way fixed effects; MacKinnon-White HC3 robust standard errors; $t$-statistics and confidence intervals on Student's $t(16)$ distribution. Estimates, standard errors, and confidence limits to four decimals; $p$-values to three decimals.
 \end{minipage}
 \end{table}
 \begin{table}[!htbp]
@@ -102,7 +102,7 @@ Year FY 2081/82 & $158.5893$ & $178.2907$ & $0.89$ & $0.389$ & $[-223.8062, 540.
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. $\delta_E$ and $\delta_B$ are the interactions of EPS and BVPS with the post-consolidation indicator; implied post-consolidation slopes are EPS $2.4534$ (SE $2.2687$, $t = 1.08$, $p = 0.298$, 95\% CI $[-2.4124, 7.3192]$) and BVPS $-1.6576$ (SE $1.1198$, $t = -1.48$, $p = 0.161$, 95\% CI $[-4.0593, 0.7441]$). Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $N = 28$; parameters $K = 14$; residual degrees of freedom $= 14$; $R^2$ (LSDV) $= 0.978$; adjusted $R^2 = 0.958$; Within-$R^2 = 0.642$. OLS with two-way fixed effects; MacKinnon-White HC3 robust standard errors; $t$-statistics and confidence intervals on Student's $t(14)$ distribution. Estimates, standard errors, and confidence limits to four decimals; $p$-values to three decimals.
+\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. EPS is earnings per share; BVPS is book value per share; SE is standard error. $\delta_E$ and $\delta_B$ are the interactions of EPS and BVPS with the post-consolidation indicator; implied post-consolidation slopes are EPS $2.4534$ (SE $2.2687$, $t = 1.08$, $p = 0.298$, 95\% CI $[-2.4124, 7.3192]$) and BVPS $-1.6576$ (SE $1.1198$, $t = -1.48$, $p = 0.161$, 95\% CI $[-4.0593, 0.7441]$). Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $N = 28$; parameters $K = 14$; residual degrees of freedom $= 14$; $R^2$ (LSDV) $= 0.978$; adjusted $R^2 = 0.958$; Within-$R^2 = 0.642$. OLS with two-way fixed effects; MacKinnon-White HC3 robust standard errors; $t$-statistics and confidence intervals on Student's $t(14)$ distribution. Estimates, standard errors, and confidence limits to four decimals; $p$-values to three decimals.
 \end{minipage}
 \end{table}
 \begin{table}[!htbp]
@@ -138,7 +138,7 @@ Model 2 & All fixed effects jointly zero & $30.835$ & $9, 14$ & $<0.001$ \\
 
 \section{Robustness Estimates}
 
-Table~\ref{tab:app_robustfull} prints the full robustness suite. Table~\ref{tab:app_robust_inf} prints the same robustness coefficients with t-statistics, exact p-values, and confidence intervals for R3 through R9; R1 and R2 inference is in Tables~\ref{tab:app_m1full} and~\ref{tab:app_m2full}. Tables~\ref{tab:app_robust_fe1} and~\ref{tab:app_robust_fe2} print the fixed-effect dummy coefficients for R3 through R9, and Table~\ref{tab:app_robust_fetests} prints the joint fixed-effect tests for those specifications. Only R6, which drops the entity-mismatch year FY 2078/79, reaches the 5 percent level on the joint regime-shift test (F = 5.818, p = 0.021). The remaining joint p-values range from 0.085 (R2) to 0.205 (R9). The R4 cash DPS coefficient, which Chapter IV Table~\ref{tab:t5_robustness} does not print separately, is 4.4580 (SE 3.0869, p = 0.172) and appears in Table~\ref{tab:app_robust_inf}.
+Table~\ref{tab:app_robustfull} prints the full robustness suite. Table~\ref{tab:app_robust_inf} prints the same robustness coefficients with t-statistics, exact p-values, and confidence intervals for R3 through R9; R1 and R2 inference is in Tables~\ref{tab:app_m1full} and~\ref{tab:app_m2full}. Tables~\ref{tab:app_robust_fe1} and~\ref{tab:app_robust_fe2} print the fixed-effect dummy coefficients for R3 through R9, and Table~\ref{tab:app_robust_fetests} prints the joint fixed-effect tests for those specifications. Only R6, which drops the entity-mismatch year FY 2078/79, reaches the 5 percent level on the joint regime-shift test (F = 5.818, p = 0.021). The remaining joint p-values range from 0.085 (R2) to 0.205 (R9). The R4 cash DPS coefficient, which Chapter IV Table~\ref{tab:t5_robustness} does not print separately, is 4.4580 (SE 3.0869, p = 0.172) and appears in Table~\ref{tab:app_robust_inf}. Table~\ref{tab:app_postslopes} prints the implied post-consolidation slopes for the baseline (R2) and the two year-drop specifications (R5, R6), with full inference; the R5 and R6 implied slopes are the values Chapter IV discusses.
 
 \begin{table}[!htbp]
 \centering
@@ -173,7 +173,38 @@ R9: Excl. NMB FY2076/77 & $6.0003$ ($7.0278$) & $0.0933$ ($1.7190$) & $-3.4454$ 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} All specifications include bank and fiscal-year fixed effects. R3 substitutes ROA for EPS (and its interaction for $\delta_E$); R7 uses bonus-adjusted BVPS in both the level and the interaction; R8 uses restated EPS in both the level and the interaction. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so one year dummy drops in each and parameters fall to $K = 13$. R9 excludes the single Kanchan-mismatched bank-year NMB FY 2076/77, so no dummy drops and parameters remain $K = 14$. The R4 cash DPS coefficient with full inference is in Table~\ref{tab:app_robust_inf}. Wald tests are the joint test of the two regime-shift interactions under the HC3 covariance matrix. Estimates and standard errors to four decimals; Chapter IV Table~\ref{tab:t5_robustness} prints the same coefficients to three decimals. Fit statistics: $R^2$ (adjusted $R^2$; Within-$R^2$): R1 $0.948$ ($0.912$; $0.152$); R2 $0.978$ ($0.958$; $0.642$); R3 $0.977$ ($0.955$; $0.621$); R4 $0.983$ ($0.965$; $0.722$); R5 $0.976$ ($0.948$; $0.677$); R6 $0.992$ ($0.983$; $0.876$); R7 $0.976$ ($0.955$; $0.614$); R8 $0.977$ ($0.955$; $0.621$); R9 $0.975$ ($0.950$; $0.634$).
+\textit{Note.} All specifications include bank and fiscal-year fixed effects. ROA is return on assets; EPS is earnings per share; BVPS is book value per share; DPS is cash dividend per share. R3 substitutes ROA for EPS (and its interaction for $\delta_E$); R7 uses bonus-adjusted BVPS in both the level and the interaction; R8 uses restated EPS in both the level and the interaction. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so one year dummy drops in each and parameters fall to $K = 13$. R9 excludes the single Kanchan-mismatched bank-year NMB FY 2076/77, so no dummy drops and parameters remain $K = 14$. The R4 cash DPS coefficient with full inference is in Table~\ref{tab:app_robust_inf}. Wald tests are the joint test of the two regime-shift interactions under the HC3 covariance matrix. Estimates and standard errors to four decimals; Chapter IV Table~\ref{tab:t5_robustness} prints the same coefficients to three decimals. Fit statistics: $R^2$ (adjusted $R^2$; Within-$R^2$): R1 $0.948$ ($0.912$; $0.152$); R2 $0.978$ ($0.958$; $0.642$); R3 $0.977$ ($0.955$; $0.621$); R4 $0.983$ ($0.965$; $0.722$); R5 $0.976$ ($0.948$; $0.677$); R6 $0.992$ ($0.983$; $0.876$); R7 $0.976$ ($0.955$; $0.614$); R8 $0.977$ ($0.955$; $0.621$); R9 $0.975$ ($0.950$; $0.634$).
+\end{minipage}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Implied Post-Consolidation Slopes for the Baseline and Year-Drop Specifications}
+\label{tab:app_postslopes}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}}
+\toprule
+\textbf{Specification} & \textbf{Slope} & \textbf{Estimate (SE)} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} & \textbf{$N$} & \textbf{df} \\
+\midrule
+R2: Model 2 Baseline & Post EPS & $2.4534$ ($2.2687$) & $1.08$ & $0.298$ & $[-2.4124, 7.3192]$ & 28 & 14 \\
+\addlinespace
+R2: Model 2 Baseline & Post BVPS & $-1.6576$ ($1.1198$) & $-1.48$ & $0.161$ & $[-4.0593, 0.7441]$ & 28 & 14 \\
+\addlinespace
+R5: Excl. Transition & Post EPS & $3.4149$ ($3.8912$) & $0.88$ & $0.401$ & $[-5.2552, 12.0849]$ & 23 & 10 \\
+\addlinespace
+R5: Excl. Transition & Post BVPS & $-2.0806$ ($1.9685$) & $-1.06$ & $0.315$ & $[-6.4668, 2.3055]$ & 23 & 10 \\
+\addlinespace
+R6: Excl. Mismatch & Post EPS & $1.8997$ ($2.6492$) & $0.72$ & $0.490$ & $[-4.0032, 7.8026]$ & 23 & 10 \\
+\addlinespace
+R6: Excl. Mismatch & Post BVPS & $-1.8091$ ($1.3573$) & $-1.33$ & $0.212$ & $[-4.8334, 1.2152]$ & 23 & 10 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Each post-consolidation slope is the level coefficient plus its regime-shift interaction (EPS plus $\delta_E$; BVPS plus $\delta_B$), with standard errors, $t$-statistics, $p$-values, and 95\% confidence intervals computed from the fitted HC3 covariance matrix by linear combination. EPS is earnings per share; BVPS is book value per share; SE is standard error. The R2 rows reproduce the implied post slopes in the note to Table~\ref{tab:app_m2full}; the R5 and R6 rows are the values Chapter IV discusses. No post slope is significant at 5\%.
 \end{minipage}
 \end{table}
 
@@ -498,7 +529,7 @@ Diagnostics for the baseline value-relevance model are summarized in Chapter IV,
 
 Collinearity in Model 2. Variance inflation factors computed on the substantive regressors by the Chapter III method, auxiliary regressions on the slopes alone without fixed effects, are EPS 10.33, BVPS 2.28, $\delta_E$ 15.15, and $\delta_B$ 24.13. Three exceed the Chapter III screening threshold of 5. This collinearity is largely mechanical: each interaction equals its level variable in post-consolidation years and zero before, so the interactions necessarily correlate with their levels. It does not bias the coefficients, but it widens their standard errors. The HC3 intervals reflect sampling variance under heteroskedasticity, not the collinearity as such, and it is why the regime-shift inference rests on the joint Wald test in Table~\ref{tab:app_robustfull} ($F = 2.954$, $p = 0.085$) rather than on the individual interaction t-statistics.
 
-Table~\ref{tab:app_sensitivity} re-estimates Model 2 without each bank series in turn. Table~\ref{tab:app_loy} re-estimates Model 2 without each fiscal year in turn. The headline interactions keep their signs under every single-row deletion and every year deletion. Across bank deletions, only KBL reverses the earnings interaction. In the R6 sample, 16 of 23 leave-one-observation deletions retain an unadjusted joint $p<0.05$; this is separate from the baseline leave-one-out result, for which one of 28 deletions is below 0.05. R9 excludes NMB FY 2076/77 only; HBL FY 2076/77 is covered by the single-observation leave-one-out table, not by R9.
+Table~\ref{tab:app_sensitivity} re-estimates Model 2 without each bank series in turn. Table~\ref{tab:app_loy} re-estimates Model 2 without each fiscal year in turn. The headline interactions keep their signs under every single-row deletion and every year deletion. Across bank deletions, only KBL reverses the earnings interaction. In the R6 sample, 16 of 23 leave-one-observation deletions retain an unadjusted joint $p<0.05$; this is separate from the baseline leave-one-out result, for which one of 28 deletions is below 0.05. R9 excludes NMB FY 2076/77 only; HBL FY 2076/77 is covered by the single-observation leave-one-out aggregates in the note to Table~\ref{tab:app_sensitivity}, not by R9.
 
 The Model~1 and Model~2 Q-Q plots are broadly linear through the center, with lower-tail departures. Supplementary Shapiro-Wilk tests reject normality for Model~1 ($W=0.9246$, $p=0.045$) and Model~2 ($W=0.9216$, $p=0.038$). These results qualify the small-sample reference distributions used for inference; HC3 does not correct non-normality.
 

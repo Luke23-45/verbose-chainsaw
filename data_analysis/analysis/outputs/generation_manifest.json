@@ -1,7 +1,7 @@
 {
   "argv": [
     "--asset",
-    "T2"
+    "A6"
   ],
   "coverage": {
     "intended": 30,
@@ -246,11 +246,11 @@
       "outputs": [
         {
           "path": "tables/A6_analysis_dataset.tex",
-          "sha256": "1f212e67fd5023cbf5925a602afc8b875e795e0b01812543e5bff3a09a8f4f65"
+          "sha256": "75f0833cc050c58851b5d10244b200785ef27888dce85f88798d79e643600d06"
         },
         {
           "path": "tables/A6_analysis_dataset.md",
-          "sha256": "f75887d039d272c212a56956c5c6d9d3d19a072221bf5e8b5a6c0666f935fe94"
+          "sha256": "b49f78aa63e61b8a93fbf40d9c160622a68cc7f40ca99777ba4da42cca9ea9f9"
         }
       ]
     }

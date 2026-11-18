@@ -69,9 +69,9 @@
 % figure captions as "Figure N: Title" with the label italic.
 \captionsetup{font=normalsize,justification=justified,singlelinecheck=false}
 \captionsetup[table]{labelsep=newline,textfont=it}
-% Figure captions sit ABOVE the figure per the author's instruction,
-% matching the reference dissertation and the approved proposal.
-\captionsetup[figure]{labelfont=it,textfont=normalfont,position=above}
+% Figure captions sit BELOW the figure per FOM 2019 p. 21 ("Figures must
+% have numbers and captions under the figures").
+\captionsetup[figure]{labelfont=it,textfont=normalfont,position=below}
 % Float pages: pin floats to the top instead of LaTeX's default vertical
 % centring, which stranded single tables/figures mid-page with large blank
 % bands above and below (body pages 62, 68, 74, 77, 100 of the 2026-10-31 build).
@@ -272,8 +272,8 @@
 % #1 (optional, default 1) is the entry leading as a stretch factor,
 % #2 the TOC entry text, #3 the list command. The entry is written
 % after the \clearpage so it records this page. TOC stays single
-% (FOM p. 20 excepts only the contents); LOT/LOF take 1.5, the FOM
-% general rule, matching the body leading of 21.75 pt.
+% (FOM p. 20 excepts only the contents); LOT/LOF take single spacing,
+% per the instructions standard (§9.3 items 7–8).
 \newcommand{\thesisFrontList}[3][1]{%
   \clearpage
   \addcontentsline{toc}{chapter}{#2}

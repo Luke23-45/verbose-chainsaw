@@ -1,6 +1,6 @@
 # Appendix E generators
 
-Generates Appendix E (Tables 19-30) and the Appendix C forest figure
+Generates Appendix E (Tables 20-31) and the Appendix C forest figure
 from the frozen fitted results. All paths are resolved from this
 directory, so the scripts run from any checkout of this repository.
 

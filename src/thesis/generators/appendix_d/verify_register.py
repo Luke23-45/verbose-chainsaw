@@ -70,7 +70,7 @@ with open(OUT, "w") as f:
         p = os.path.join(REPO, r["annual_report_path"])
         exists = os.path.exists(p)
         pages = pdfinfo_pages(p) if exists else None
-        size = round(os.path.getsize(p) / 1e6, 2) if exists else None
+        size = f"{os.path.getsize(p) / 1e6:.2f}" if exists else None
         sha = sha256(p) if exists else None
         sham = (sha == r["report_sha256"]) if sha else False
         def inrange(v):
@@ -83,7 +83,7 @@ with open(OUT, "w") as f:
         ok_dps = (1 <= int(r["dps_pdf_page"]) <= pages) if pages and r["dps_pdf_page"].isdigit() else False
         tl = text_len(p) if exists else -1
         ind = indicator_pages(p) if exists else []
-        dj = dps_map.get((r["series"], r["fy"].replace("-", "/").replace("FY", "FY")))
+        dj = dps_map.get((r["series"], r["fy"]))
         dj_page = None
         if dj:
             dj_page = dj.get("pdf_page") or dj.get("page")

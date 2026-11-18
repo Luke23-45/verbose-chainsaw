@@ -130,7 +130,7 @@ Because commercial bank fiscal years in Nepal terminate at Ashadh-end (mid-July)
 
 ### 2.3.3 NRB Capital Mandates and the Consolidation Directive
 The structural consolidation of Nepalese commercial banks has been driven primarily by explicit central bank policy mandates:
-* **The 2011 Merger Bylaws:** In 2011 (2068 BS), NRB promulgated the *Bank and Financial Institutions Merger and Acquisition Bylaws*, introducing legal provisions, regulatory exemptions, and procedural guidelines for voluntary mergers.
+* **The 2011 Merger Bylaws:** In 2011 (2068 BS), NRB promulgated the *Bank and Financial Institutions Merger Bylaws*, introducing legal provisions, regulatory exemptions, and procedural guidelines for voluntary mergers.
 * **The 2015 Capital Expansion Mandate:** In its Monetary Policy for FY 2015/16 (2072/73 BS), NRB executed an aggressive systemic reform, mandating that all Class 'A' commercial banks quadruple their minimum paid-up equity capital from NPR 2.0 billion to NPR 8.0 billion by the end of FY 2073/74 (mid-July 2017) (NRB, 2015). To comply, commercial banks capitalized reserves through extensive bonus share distributions and executed heavy rights share issues, resulting in substantial share capital expansion and subsequent dilution of per-share earnings.
 * **The 2022–2023 Consolidation Wave:** Recognizing that capital expansion alone had not reduced the excessive number of banking institutions, NRB actively encouraged horizontal "big mergers" through moral suasion, regulatory forbearance (such as temporary leniency on Credit-to-Deposit ratios and branch overlapping), and fiscal incentives granted under the Finance Acts (including tax exemptions on capital gains and dividend distributions resulting from mergers).
 
@@ -139,7 +139,7 @@ This regulatory drive culminated in the systemic consolidation wave of early 202
 2. **Himalayan Bank Limited (HBL):** Acquired Civil Bank Limited; unified commercial operations commenced on 24 February 2023 (swap ratio 100:80.28) (Himalayan Bank, 2023).
 3. **Kumari Bank Limited (KBL):** Amalgamated with Nepal Credit and Commerce Bank Limited; unified commercial operations commenced on 1 January 2023 (swap ratio 1:1) (Kumari Bank, 2022).
 4. **Nepal Investment Mega Bank Limited (NIMB):** Formed via the amalgamation of Nepal Investment Bank Limited and Mega Bank Nepal Limited; unified commercial operations commenced on 11 January 2023 (swap ratio 100:90) (Nepal Investment Mega Bank, 2023).
-5. **NMB Bank Limited (NMB):** Maintained continuous corporate operations without participating in the early-2023 consolidation wave, serving as the benchmark series. (Note: NMB had previously acquired Kanchan Development Bank Limited in August 2020, adding approximately NPR 0.56 billion to paid-up capital beyond its 13% bonus share capitalization in FY 2077/78, but remained independent during the 2022–2023 wave).
+5. **NMB Bank Limited (NMB):** Maintained continuous corporate operations without participating in the early-2023 consolidation wave, serving as the benchmark series. (Note: NMB had previously acquired Kanchan Development Bank Limited in August 2020, adding approximately NPR 0.50 billion in new shares issued to Kanchan shareholders at the 85% swap ratio, alongside a 13% bonus share distribution, in FY 2077/78, but remained independent during the 2022–2023 wave).
 
 By mid-October 2023 (Asoj 2080 BS), these amalgamations reduced the total commercial bank population in Nepal to exactly 20 Class 'A' institutions (NRB, 2023).
 

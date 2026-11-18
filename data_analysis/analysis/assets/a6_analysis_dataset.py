@@ -30,7 +30,7 @@ def generate(dataset: AnalysisDataset) -> list:
             price_cell = _fmt(row.price_rd)
         if row.in_sample and row.entity_mismatch:
             notes.append("entity mismatch (pre-merger fundamentals), kept in baseline")
-        if (row.bank, row.fy) in restated_keys:
+        if row.in_sample and (row.bank, row.fy) in restated_keys:
             notes.append("EPS restated in variant R8")
         rows.append((
             row.bank,
@@ -54,14 +54,14 @@ def generate(dataset: AnalysisDataset) -> list:
         headers=("Bank", "FY", "Period", "MPS_RD (NPR)", "EPS (NPR)", "BVPS (NPR)", "DPS (NPR)", "ROA (%)", "Note"),
         rows=tuple(rows),
         notes=(
-            "MPS_RD is the closing price on the first trading session following the reporting "
+            "MPS_RD is the closing price on the first trading session on or after the reporting "
             "deadline (5-day window). BVPS is recomputed from balance-sheet components; minor variances "
-            "(0.28-0.40 NPR) with printed NAV in five NIMB rows reflect whole-integer rounding in printed highlights, "
-            "while NMB FY2081/82 (175.18 vs 174.49) remains flagged as an unrounded difference. "
+            "(0.08-0.40 NPR) with printed NAV in six NIMB rows reflect whole-integer rounding in printed highlights, "
+            "while HBL FY2076/77 (187.67 vs 187.72) and NMB FY2081/82 (175.18 vs 174.49) remain flagged as unrounded differences. "
             "DPS is the eligible cash dividend declared on or before the price-observation date. "
             "Reported basic EPS uses weighted-average shares per NAS 33, whereas BVPS uses year-end shares; "
             "in merger year FY2079/80, EPS denominators reflect blended share counts while BVPS uses post-merger ending shares. "
-            "Variant R8 substitutes the restated basic EPS values flagged above."
+            "Variant R8 substitutes the restated basic EPS values flagged above (two in-sample rows; the Himalayan Bank FY2077-78 restatement is window-excluded and is not substituted)."
         ),
     )
     return save_table(table, "tables/A6_analysis_dataset")

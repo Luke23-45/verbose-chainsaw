@@ -9,7 +9,7 @@
 | GBIME | FY2080-81 | Post | 218.69 | 16.99 | 169.97 | 0.00 | 1.08 |  |
 | GBIME | FY2081-82 | Post | 238.00 | 13.32 | 174.80 | 8.00 | 0.79 |  |
 | HBL | FY2076-77 | Pre | 520.00 | 27.60 | 187.67 | 6.00 | 1.79 |  |
-| HBL | FY2077-78 | Pre | n/a | 28.07 | 188.43 | 4.62 | 1.79 | price outside 5-day window (gap 54d) - excluded, never imputed; EPS restated in variant R8 |
+| HBL | FY2077-78 | Pre | n/a | 28.07 | 188.43 | 4.62 | 1.79 | price outside 5-day window (gap 54d) - excluded, never imputed |
 | HBL | FY2078-79 | Pre | 231.00 | 18.26 | 169.72 | 11.11 | 1.20 | entity mismatch (pre-merger fundamentals), kept in baseline |
 | HBL | FY2079-80 | Post | 183.00 | 9.18 | 155.29 | 0.00 | 0.57 |  |
 | HBL | FY2080-81 | Post | 231.07 | 5.72 | 169.11 | 0.00 | 0.36 |  |
@@ -33,4 +33,4 @@
 | NMB | FY2080-81 | Post | 251.13 | 12.22 | 157.74 | 0.00 | 0.77 |  |
 | NMB | FY2081-82 | Post | 248.40 | 15.54 | 175.18 | 5.00 | 0.88 |  |
 
-*Notes: MPS_RD is the closing price on the first trading session following the reporting deadline (5-day window). BVPS is recomputed from balance-sheet components; minor variances (0.28-0.40 NPR) with printed NAV in five NIMB rows reflect whole-integer rounding in printed highlights, while NMB FY2081/82 (175.18 vs 174.49) remains flagged as an unrounded difference. DPS is the eligible cash dividend declared on or before the price-observation date. Reported basic EPS uses weighted-average shares per NAS 33, whereas BVPS uses year-end shares; in merger year FY2079/80, EPS denominators reflect blended share counts while BVPS uses post-merger ending shares. Variant R8 substitutes the restated basic EPS values flagged above.*
+*Notes: MPS_RD is the closing price on the first trading session on or after the reporting deadline (5-day window). BVPS is recomputed from balance-sheet components; minor variances (0.08-0.40 NPR) with printed NAV in six NIMB rows reflect whole-integer rounding in printed highlights, while HBL FY2076/77 (187.67 vs 187.72) and NMB FY2081/82 (175.18 vs 174.49) remain flagged as unrounded differences. DPS is the eligible cash dividend declared on or before the price-observation date. Reported basic EPS uses weighted-average shares per NAS 33, whereas BVPS uses year-end shares; in merger year FY2079/80, EPS denominators reflect blended share counts while BVPS uses post-merger ending shares. Variant R8 substitutes the restated basic EPS values flagged above (two in-sample rows; the Himalayan Bank FY2077-78 restatement is window-excluded and is not substituted).*

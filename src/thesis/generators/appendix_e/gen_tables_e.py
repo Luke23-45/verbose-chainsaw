@@ -100,14 +100,16 @@ out = []
 out.append(full_table(
     M1, "tab:app_m1full",
     "Model 1: Full Baseline Value-Relevance Estimates ($N = 28$)",
-    "Dependent variable: $\\mathit{MPS}^{RD}$. Bank fixed effects include 4 "
+    "Dependent variable: $\\mathit{MPS}^{RD}$. EPS is earnings per share; BVPS is "
+    "book value per share; SE is standard error. Bank fixed effects include 4 "
     "dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies "
     "(reference: FY 2076/77). " + fitnote(M1)))
 out.append("")
 out.append(full_table(
     M2, "tab:app_m2full",
     "Model 2: Full Regime-Shift Value-Relevance Estimates ($N = 28$)",
-    "Dependent variable: $\\mathit{MPS}^{RD}$. $\\delta_E$ and $\\delta_B$ are "
+    "Dependent variable: $\\mathit{MPS}^{RD}$. EPS is earnings per share; BVPS is "
+    "book value per share; SE is standard error. $\\delta_E$ and $\\delta_B$ are "
     "the interactions of EPS and BVPS with the post-consolidation indicator; "
     "implied post-consolidation slopes are EPS $2.4534$ (SE $2.2687$, "
     "$t = 1.08$, $p = 0.298$, 95\\% CI $[-2.4124, 7.3192]$) and BVPS "
@@ -230,7 +232,9 @@ L.append("\\vspace{4pt}")
 L.append("\\begin{minipage}{\\linewidth}")
 L.append("\\footnotesize")
 L.append("\\textit{Note.} All specifications include bank and fiscal-year "
-         "fixed effects. R3 substitutes ROA for EPS (and its interaction for "
+         "fixed effects. ROA is return on assets; EPS is earnings per share; "
+         "BVPS is book value per share; DPS is cash dividend per share. "
+         "R3 substitutes ROA for EPS (and its interaction for "
          "$\\delta_E$); R7 uses bonus-adjusted BVPS in both the level and the "
          "interaction; R8 uses restated EPS in both the level and the "
          "interaction. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so "
@@ -346,6 +350,68 @@ L.append("\\textit{Note.} Each row re-estimates Model 2 without one bank "
          "0.10. Dropping KBL as a whole bank reverses "
          "$\\delta_E$; every other bank deletion leaves both interactions "
          "negative.")
+L.append("\\end{minipage}")
+L.append("\\end{table}")
+out.append("\n".join(gap_rows(L)))
+
+# ---- implied post-consolidation slopes (R2, R5, R6) ----
+def post_slope(spec, base, delta):
+    """Implied post slope = level + interaction, with HC3 inference via the
+    fitted covariance (linear combination). Returns (coef, se, t, p, lo, hi)."""
+    names = spec["names"]
+    beta = np.asarray(spec["beta"])
+    V = np.asarray(spec["V"])
+    df = spec["df"]
+    ib, id_ = names.index(base), names.index(delta)
+    coef = float(beta[ib] + beta[id_])
+    se = float(np.sqrt(V[ib, ib] + V[id_, id_] + 2 * V[ib, id_]))
+    t = coef / se
+    p = float(2 * _st.t.sf(abs(t), df))
+    crit = float(_st.t.ppf(0.975, df))
+    return coef, se, t, p, coef - crit * se, coef + crit * se
+
+
+L = []
+L.append("\\begin{table}[!htbp]")
+L.append("\\centering")
+L.append("\\footnotesize")
+L.append("\\setlength{\\tabcolsep}{3pt}")
+L.append("\\caption{Implied Post-Consolidation Slopes for the Baseline and Year-Drop Specifications}")
+L.append("\\label{tab:app_postslopes}")
+L.append("\\begin{tabular}{>{\\raggedright\\arraybackslash}p{0.22\\textwidth}"
+         ">{\\raggedright\\arraybackslash}p{0.10\\textwidth}"
+         ">{\\raggedright\\arraybackslash}p{0.20\\textwidth}"
+         ">{\\raggedright\\arraybackslash}p{0.07\\textwidth}"
+         ">{\\raggedright\\arraybackslash}p{0.07\\textwidth}"
+         ">{\\raggedright\\arraybackslash}p{0.22\\textwidth}"
+         ">{\\raggedright\\arraybackslash}p{0.04\\textwidth}"
+         ">{\\raggedright\\arraybackslash}p{0.04\\textwidth}}")
+L.append("\\toprule")
+L.append("\\textbf{Specification} & \\textbf{Slope} & \\textbf{Estimate (SE)} & "
+         "\\textbf{$t$} & \\textbf{$p$} & \\textbf{95\\% CI} & \\textbf{$N$} & \\textbf{df} \\\\")
+L.append("\\midrule")
+for k in ["R2", "R5", "R6"]:
+    res = specs[k]
+    for slope, base, delta in [("Post EPS", "EPS", "d_E"), ("Post BVPS", "BVPS", "d_B")]:
+        coef, se, t, p, lo, hi = post_slope(res, base, delta)
+        ci = f"$[{lo:.4f}, {hi:.4f}]$".replace("-0.0000", "0.0000")
+        L.append(f"{spec_labels[k]} & {slope} & {num(coef)} ({num(se)}) & "
+                 f"${t:.2f}$ & {pfmt(p)} & {ci} & "
+                 f"{res['n']} & {res['df']} \\\\")
+L.append("\\bottomrule")
+L.append("\\end{tabular}")
+L.append("")
+L.append("\\vspace{4pt}")
+L.append("\\begin{minipage}{\\linewidth}")
+L.append("\\footnotesize")
+L.append("\\textit{Note.} Each post-consolidation slope is the level coefficient plus "
+         "its regime-shift interaction (EPS plus $\\delta_E$; BVPS plus $\\delta_B$), "
+         "with standard errors, $t$-statistics, $p$-values, and 95\\% confidence "
+         "intervals computed from the fitted HC3 covariance matrix by linear "
+         "combination. EPS is earnings per share; BVPS is book value per share; "
+         "SE is standard error. The R2 rows reproduce the implied post slopes in "
+         "the note to Table~\\ref{tab:app_m2full}; the R5 and R6 rows are the values "
+         "Chapter IV discusses. No post slope is significant at 5\\%.")
 L.append("\\end{minipage}")
 L.append("\\end{table}")
 out.append("\n".join(gap_rows(L)))

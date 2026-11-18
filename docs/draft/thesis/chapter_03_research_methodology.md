@@ -65,7 +65,7 @@ The five purposively selected commercial bank series, identified by their curren
 
 5. **NMB Bank Limited (NMB):**
    * *Consolidation Status:* Did not participate in the early-2023 consolidation wave, serving as the benchmark series for the 2023 restructuring.
-   * *Corporate History Note:* NMB acquired Kanchan Development Bank Limited in August 2020 (Bhadra 2077 BS), adding approximately NPR 0.56 billion to paid-up capital beyond its 13% bonus share capitalization in FY 2077/78, but remained independent during the 2022–2023 wave.
+   * *Corporate History Note:* NMB acquired Kanchan Development Bank Limited in August 2020 (Bhadra 2077 BS), adding approximately NPR 0.50 billion in new shares issued to Kanchan shareholders at the 85% swap ratio, alongside a 13% bonus share distribution, in FY 2077/78, but remained independent during the 2022–2023 wave.
 
 ### 3.3.4 Sample Size, Missingness Protocol, and Realized Observations
 The research protocol targets 30 potential bank-year observations, comprising five commercial bank series tracked over six fiscal years (FY 2076/77 to FY 2081/82). Primary audited annual financial reports are complete for all 30 bank-years ($100\%$ accounting coverage).
@@ -119,7 +119,7 @@ To ensure institutional credibility and empirical accuracy, data sources are bif
 * *Capital Market Data Aggregators:* Secondary closing market share prices retrieved from established capital market aggregators (ShareSansar, Merolagani, and FinancialNotices), cross-checked against historical price archives and company filing records.
 
 **Contextual and Regulatory Data Sources:**
-* *Nepal Rastra Bank (NRB):* Annual Banking and Financial Statistics, licensed financial institution directories, Bank and Financial Institutions Merger and Acquisition Bylaws, and circulars issued by the Bank Supervision Department.
+* *Nepal Rastra Bank (NRB):* Annual Banking and Financial Statistics, licensed financial institution directories, Bank and Financial Institutions Merger Bylaws, and circulars issued by the Bank Supervision Department.
 * *Securities Board of Nepal (SEBON):* Annual reports, Capital Market Trends publications, and corporate disclosure directives.
 * *Ministry of Finance (MoF), Government of Nepal:* *Economic Survey* publications (FY 2076/77 through FY 2081/82).
 
