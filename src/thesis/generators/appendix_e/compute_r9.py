@@ -115,3 +115,11 @@ for nm, b, s, t, pv, (lo, hi) in zip(res["names"], res["beta"], res["se"],
 with open(HERE / "results_r9.pkl", "wb") as f:
     pickle.dump(dict(R9=res, wald=(F9, p9), fe_tests={"R9": fe}), f)
 print("saved results_r9.pkl")
+
+# Merge R9 into results.pkl so downstream compute_e2 and gen_tables find it
+with open(HERE / "results.pkl", "rb") as f:
+    r = pickle.load(f)
+r["specs"]["R9"] = res
+with open(HERE / "results.pkl", "wb") as f:
+    pickle.dump(r, f)
+print("updated results.pkl with R9")
