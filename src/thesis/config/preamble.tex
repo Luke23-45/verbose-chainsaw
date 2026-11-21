@@ -72,6 +72,15 @@
 % Figure captions sit BELOW the figure per FOM 2019 p. 21 ("Figures must
 % have numbers and captions under the figures").
 \captionsetup[figure]{labelfont=it,textfont=normalfont,position=below}
+% Float placement parameters: allow floats and text to share pages cleanly
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.70}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.70}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+
 % Float pages: pin floats to the top instead of LaTeX's default vertical
 % centring, which stranded single tables/figures mid-page with large blank
 % bands above and below (body pages 62, 68, 74, 77, 100 of the 2026-10-31 build).

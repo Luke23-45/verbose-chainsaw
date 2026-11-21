@@ -85,13 +85,13 @@ To illustrate these longitudinal trajectories across each sampled institution, F
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/F6_trends.pdf}
+\includegraphics[width=0.85\textwidth]{figures/F6_trends.pdf}
 \vspace{2pt}
 \caption{Variable Trends by Bank Series across FY 2076/77--FY 2081/82}
 \label{fig:trends}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Variable trends across the six fiscal years (FY 2076/77 through FY 2081/82) for Global IME Bank Limited (GBIME), Himalayan Bank Limited (HBL), Kumari Bank Limited (KBL), Nepal Investment Mega Bank Limited (NIMB), and NMB Bank Limited (NMB). The shaded region delineates the post-consolidation regime (FY 2079/80--FY 2081/82). Window-excluded prices for HBL and NIMB in FY 2077/78 are represented as open markers. The connecting lines pass continuously through the excluded periods; the open markers designate observations excluded from regression estimation under the freshness rule.
+\textit{Note.} Trends across FY 2076/77--FY 2081/82 for sampled commercial banks (GBIME, HBL, KBL, NIMB, NMB). The shaded region delineates the post-consolidation regime (FY 2079/80--FY 2081/82). Open markers designate the two FY 2077/78 price observations excluded under the five-day freshness rule.
 \end{minipage}
 \end{figure}
 
@@ -136,31 +136,31 @@ The correlation matrix reveals several key empirical patterns:
     \item \textbf{Dividend Associations:} EPS and DPS are positively correlated ($r = 0.612, p < 0.01$), as are ROA and DPS ($r = 0.595, p < 0.01$). Descriptively, bank-years with higher earnings and profitability tended to pay higher cash dividends; these are bivariate associations only and do not establish that earnings cause dividends.
 \end{itemize}
 
-Pearson $p$-values are supplementary because the price and dividend variables are non-normal in this small sample. Shapiro-Wilk tests reject normality for $\mathit{MPS}^{RD}$ ($p<0.001$) and DPS ($p=0.001$). The EPS--BVPS association is weaker under Spearman rank correlation ($\rho=0.295$, $p=0.127$) than under Pearson correlation ($r=0.372$, $p=0.051$); no substantive conclusion depends on treating that borderline Pearson result as significant.
-
-Figure~\ref{fig:scatter_matrix} presents the bivariate scatter plot matrix among the primary value-relevance variables ($\mathit{MPS}^{RD}$, EPS, and BVPS), while Figure~\ref{fig:heatmap} illustrates the corresponding correlation heatmap.
+To complement the correlation matrix in Table~\ref{tab:t2_correlations}, Figure~\ref{fig:heatmap} illustrates the corresponding pairwise Pearson correlation heatmap.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{figures/F1_scatter_matrix.pdf}
-\vspace{2pt}
-\caption{Bivariate Scatter Plot Matrix of Value-Relevance Variables}
-\label{fig:scatter_matrix}
-\begin{minipage}{\linewidth}
-\footnotesize
-\textit{Note.} Pairwise scatter plots and univariate kernel density distributions for $\mathit{MPS}^{RD}$, EPS, and BVPS across the realized panel ($N = 28$).
-\end{minipage}
-\end{figure}
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.72\textwidth]{figures/F2_correlation_heatmap.pdf}
+\includegraphics[width=0.68\textwidth]{figures/F2_correlation_heatmap.pdf}
 \vspace{2pt}
 \caption{Pearson Correlation Heatmap of Value-Relevance Variables}
 \label{fig:heatmap}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Correlation heatmap displaying pairwise Pearson correlation coefficients among value-relevance variables across the realized panel ($N = 28$).
+\end{minipage}
+\end{figure}
+
+Pearson $p$-values are supplementary because the price and dividend variables are non-normal in this small sample. Shapiro-Wilk tests reject normality for $\mathit{MPS}^{RD}$ ($p<0.001$) and DPS ($p=0.001$). The EPS--BVPS association is weaker under Spearman rank correlation ($\rho=0.295$, $p=0.127$) than under Pearson correlation ($r=0.372$, $p=0.051$); no substantive conclusion depends on treating that borderline Pearson result as significant. To inspect these distributional properties and pairwise relationships visually, Figure~\ref{fig:scatter_matrix} presents the bivariate scatter plot matrix with univariate kernel density distributions among the primary value-relevance variables ($\mathit{MPS}^{RD}$, EPS, and BVPS).
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.80\textwidth]{figures/F1_scatter_matrix.pdf}
+\vspace{2pt}
+\caption{Bivariate Scatter Plot Matrix of Value-Relevance Variables}
+\label{fig:scatter_matrix}
+\begin{minipage}{\linewidth}
+\footnotesize
+\textit{Note.} Pairwise scatter plots and univariate kernel density distributions for $\mathit{MPS}^{RD}$, EPS, and BVPS across the realized panel ($N = 28$).
 \end{minipage}
 \end{figure}
 
@@ -232,7 +232,7 @@ Table~\ref{tab:t4_model2} reports the estimation results for Model~2, including 
 
 \begin{table}[!htbp]
 \centering
-\small
+\footnotesize
 \caption{Model 2: Value Relevance Regime Shift Across Consolidation ($N = 28$)}
 \label{tab:t4_model2}
 \begin{tabular}{>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedleft\arraybackslash}p{0.32\textwidth}}
@@ -276,7 +276,7 @@ Residual Degrees of Freedom & 14 \\
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. OLS estimation with bank and fiscal-year fixed effects. Post indicator equals 1 for FY 2079/80--2081/82 and 0 for FY 2076/77--2078/79; stand-alone Post main effect is fully absorbed by the fiscal-year fixed effects. MacKinnon-White HC3 robust standard errors in parentheses beneath parameter estimates. Bank fixed effects include 4 dummies (reference: GBIME); fiscal-year fixed effects include 5 dummies (reference: FY 2076/77). $R^2$ (LSDV) is the least-squares dummy-variable fit including fixed effects; Within-$R^2$ is the share of bank-and-year-adjusted variation explained by the slopes and interactions. Implied post-consolidation slopes are linear combinations evaluated under the HC3 covariance; their confidence intervals are printed in the text and in Appendix E, Table~\ref{tab:app_m2full}. Residual degrees of freedom: $28 - 14 = 14$. Individual coefficient tests are two-tailed $t$-tests; the joint Wald $F$-test is an upper-tail test and is marginally significant at the 10\% level.
+\textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. OLS estimation with bank and fiscal-year fixed effects. MacKinnon-White HC3 robust standard errors in parentheses beneath parameter estimates. Implied post-consolidation slopes are linear combinations evaluated under the HC3 covariance matrix. Exact residual degrees of freedom: $28 - 14 = 14$. Two-tailed $t$-tests for coefficients; upper-tail Wald $F$-test for joint significance. Confidence intervals are reported in the text and Appendix E, Table~\ref{tab:app_m2full}.
 \end{minipage}
 \end{table}
 
@@ -306,33 +306,33 @@ The empirical estimates in Table~\ref{tab:t4_model2} do not provide statisticall
     Model~2 estimates 1 constant intercept, 4 bank fixed effects (GBIME reference), 5 fiscal-year fixed effects (FY 2076/77 reference), 2 main slope parameters ($\beta_E, \beta_B$), and 2 interaction parameters ($\delta_E, \delta_B$), consuming a total of 14 degrees of freedom. On $N = 28$ observations, this leaves exactly $28 - 14 = 14$ residual degrees of freedom.
 \end{enumerate}
 
-To visually display these pre- and post-consolidation relationships, Figure~\ref{fig:value_relevance} presents bivariate scatter plots of $\mathit{MPS}^{RD}$ against EPS and BVPS partitioned by consolidation regime, while Figure~\ref{fig:coeff_forest} presents the coefficient forest plot for Model~2.
+To visually display these pre- and post-consolidation relationships, Figure~\ref{fig:value_relevance} presents bivariate scatter plots of $\mathit{MPS}^{RD}$ against EPS and BVPS partitioned by consolidation regime.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/F3_value_relevance.pdf}
+\includegraphics[width=0.86\textwidth]{figures/F3_value_relevance.pdf}
 \vspace{2pt}
 \caption{$\mathit{MPS}^{RD}$ against Fundamentals Pre vs.\ Post Consolidation}
 \label{fig:value_relevance}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Scatter panels and bivariate OLS fits of $\mathit{MPS}^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77--2078/79, blue) and post-consolidation (FY 2079/80--2081/82, vermillion) regimes ($N = 28$). The plotted lines are unconditional bivariate fits within each regime, whereas Table~\ref{tab:t4_model2} reports conditional slopes controlling for bank fixed effects, fiscal-year fixed effects, and the companion accounting fundamental.
+\textit{Note.} Unconditional bivariate OLS fits of $\mathit{MPS}^{RD}$ against EPS (left) and BVPS (right), partitioned into pre-consolidation (FY 2076/77--2078/79) and post-consolidation (FY 2079/80--2081/82) regimes ($N = 28$). Conditional two-way fixed-effects slopes appear in Table~\ref{tab:t4_model2}.
 \end{minipage}
 \end{figure}
 
+Full coefficient estimates with $t$-statistics, exact $p$-values, and confidence intervals for Model~1 and Model~2 are printed in Appendix E, Tables~\ref{tab:app_m1full} and~\ref{tab:app_m2full}. To summarize the conditional parameter estimates and their statistical precision graphically, Figure~\ref{fig:coeff_forest} presents the coefficient forest plot for Model~2 with 95\% HC3 confidence intervals.
+
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.88\textwidth]{figures/F4_coefficient_forest.pdf}
+\includegraphics[width=0.84\textwidth]{figures/F4_coefficient_forest.pdf}
 \vspace{2pt}
 \caption{Model 2 Coefficients and 95\% HC3 Confidence Intervals}
 \label{fig:coeff_forest}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Coefficient forest plot displaying pre-consolidation slopes ($\beta_E, \beta_B$), interaction shifts ($\delta_E, \delta_B$), and implied post-consolidation linear combinations ($\beta_E+\delta_E, \beta_B+\delta_B$) from Model~2, estimated with MacKinnon-White HC3 robust 95\% confidence intervals on Student's $t(14)$ distribution ($N = 28, \text{residual df} = 14$).
+\textit{Note.} Model~2 parameter estimates with 95\% HC3 confidence intervals on Student's $t(14)$ ($N = 28$): pre-consolidation slopes ($\beta_E, \beta_B$), interaction shifts ($\delta_E, \delta_B$), and implied post-consolidation slopes ($\beta_E+\delta_E, \beta_B+\delta_B$).
 \end{minipage}
 \end{figure}
-
-Full coefficient estimates with t-statistics, exact p-values, and confidence intervals are printed in Appendix E, Tables~\ref{tab:app_m1full} and~\ref{tab:app_m2full}.
 
 \subsection{Hypothesis Testing}
 Based on the econometric estimates obtained from Model~1 and Model~2, the four operational research hypotheses formulated in Chapter~I are formally evaluated at the designated two-tailed 5\% significance level ($\alpha = 0.05$); the joint Wald $F$-test is evaluated against the upper tail.
@@ -491,13 +491,13 @@ Figure~\ref{fig:robustness_forest} presents earnings-channel estimates and confi
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/A2_robustness_forest.pdf}
+\includegraphics[width=0.88\textwidth]{figures/A2_robustness_forest.pdf}
 \vspace{2pt}
 \caption{Robustness Forest Plot Across Eight Plotted Specifications (R1, R2, R4--R9)}
 \label{fig:robustness_forest}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Forest plot of the EPS-channel estimates (earnings coefficient and EPS $\times$ Post interaction) with 95\% HC3 confidence intervals across eight plotted specifications: two baselines (R1--R2) and six variants (R4--R9). R3 is omitted because ROA is on a different scale. Samples are $N = 28$, $N = 27$, or $N = 23$.
+\textit{Note.} EPS-channel estimates (level and interaction) with 95\% HC3 confidence intervals across eight specifications: baselines (R1--R2) and variants (R4--R9). R3 is omitted due to scale difference ($N = 28, 27, \text{ or } 23$).
 \end{minipage}
 \end{figure}
 
@@ -553,13 +553,13 @@ Figure~\ref{fig:diagnostics} presents the four-panel econometric diagnostic plot
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/F5_diagnostics.pdf}
+\includegraphics[width=0.84\textwidth]{figures/F5_diagnostics.pdf}
 \vspace{2pt}
 \caption{Econometric Residual Diagnostics for Baseline Model (Model 1)}
 \label{fig:diagnostics}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} Four-panel diagnostic suite for Model~1: (top-left) Normal Q-Q plot assessing error normality; (top-right) Residuals vs.\ Fitted values assessing linearity; (bottom-left) Scale-Location plot ($\sqrt{|\text{standardized residuals}|}$ vs.\ fitted) assessing homoskedasticity; (bottom-right) Cook's distance across observations ($N = 28$) identifying leverage points against $4/N = 0.143$.
+\textit{Note.} Diagnostic suite for Model~1 ($N = 28$): (top-left) Normal Q-Q; (top-right) Residuals vs.\ Fitted; (bottom-left) Scale-Location; (bottom-right) Cook's distance against $4/N = 0.143$ threshold.
 \end{minipage}
 \end{figure}
 
