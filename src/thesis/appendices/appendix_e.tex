@@ -189,7 +189,7 @@ Table~\ref{tab:app_postslopes} evaluates the implied post-consolidation slope pa
 \setlength{\tabcolsep}{2.5pt}
 \caption{Implied Post-Consolidation Slopes for the Baseline and Year-Drop Specifications}
 \label{tab:app_postslopes}
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.05\textwidth}>{\raggedright\arraybackslash}p{0.06\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}@{}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.07\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}>{\raggedright\arraybackslash}p{0.04\textwidth}@{}}
 \toprule
 \textbf{Specification} & \textbf{Slope} & \textbf{Estimate (SE)} & \textbf{$t$} & \textbf{$p$} & \textbf{95\% CI} & \textbf{$N$} & \textbf{df} \\
 \midrule
@@ -303,7 +303,7 @@ $\delta_B$ & $-1.3078$ & $0.8446$ & $-1.55$ & $0.147$ & $[-3.1481, 0.5325]$ \\
 \end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
+\noindent\begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} R1 and R2 inference is in Tables~\ref{tab:app_m1full} and ~\ref{tab:app_m2full}. Fixed-effect dummies for R3--R10 are in Tables~\ref{tab:app_robust_fe1} and~\ref{tab:app_robust_fe2}. Estimates, standard errors, and confidence limits to four decimals, t-statistics to two decimals, and p-values to three decimals.
 \end{minipage}
@@ -378,7 +378,7 @@ Year FY 2081/82 & $179.1178$ & $195.6941$ & $0.92$ & $0.382$ & $[-256.9159, 615.
 \end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
+\noindent\begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. R9 and R10 drop specific bank-years, so all dummies are present. Joint fixed-effect tests for R3--R10 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals, t-statistics to two decimals, and p-values to three decimals.
 \end{minipage}
@@ -491,21 +491,23 @@ Year FY 2081/82 & $20.6984$ & $140.6639$ & $0.15$ & $0.885$ & $[-285.7820, 327.1
 \end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
+\noindent\begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Reference categories are GBIME and FY 2076/77. R5 excludes FY 2079/80 and R6 excludes FY 2078/79, so the corresponding year dummy is absent in each. R9 and R10 drop specific bank-years, so all dummies are present. Joint fixed-effect tests for R3--R10 are in Table~\ref{tab:app_robust_fetests}. Estimates, standard errors, and confidence limits to four decimals, t-statistics to two decimals, and p-values to three decimals.
 \end{minipage}
 
-\begin{table}[!htbp]
-\centering
-\small
+{\small
 \setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
 \caption{Joint Fixed-Effects Tests for the Robustness Specifications}
-\label{tab:app_robust_fetests}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
+\label{tab:app_robust_fetests}\\
 \toprule
 \textbf{Specification} & \textbf{Null Hypothesis} & \textbf{$F$} & \textbf{df} & \textbf{$p$} \\
 \midrule
+\endfirsthead
+\textbf{Specification} & \textbf{Null Hypothesis} & \textbf{$F$} & \textbf{df} & \textbf{$p$} \\
+\midrule
+\endhead
 R3 & Bank fixed effects jointly zero & $2.727$ & $4, 14$ & $0.072$ \\
 \addlinespace
 R3 & Year fixed effects jointly zero & $35.754$ & $5, 14$ & $<0.001$ \\
@@ -554,14 +556,13 @@ R10 & Year fixed effects jointly zero & $23.991$ & $5, 12$ & $<0.001$ \\
 \addlinespace
 R10 & All fixed effects jointly zero & $28.332$ & $9, 12$ & $<0.001$ \\
 \bottomrule
-\end{tabular}
+\end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
+\noindent\begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Wald tests under the HC3 covariance matrix. Reference categories are GBIME and FY 2076/77. Denominator degrees of freedom equal the specification residual degrees of freedom in Table~\ref{tab:app_robustfull}.
 \end{minipage}
-\end{table}
 
 \section{Diagnostics and Sensitivity}
 

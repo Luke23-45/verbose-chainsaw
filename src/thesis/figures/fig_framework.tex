@@ -47,7 +47,9 @@
     ([yshift=-10pt]mps.west);
 
   % Moderator and fixed-effects arrows
-  \draw[modarrow] (post.south) -- (3.90,1.15);
+  % Moderator arrow ends above the EPS arrow (y=1.90) so it does not
+  % cross the beta_E line; previously ended at y=1.15 and overlapped it.
+  \draw[modarrow] (post.south) -- (3.90,1.90);
   \draw[ctrlarrow] (fe.north) -- (3.90,-0.05);
 
   % Figure labels

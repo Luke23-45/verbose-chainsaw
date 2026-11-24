@@ -18,11 +18,9 @@ To reduce temporal mismatch and apply a consistent rule, share prices were obser
 
 The price verification confirms exact alignment between the primary ShareSansar records and Merolagani archives across 29 of the 30 bank-years. The NPR 1.00 variance for NMB in FY 2076/77 reflects a minor intraday reporting difference resolved in favor of the primary exchange close. In addition, the two excluded observations (HBL and NIMB in FY 2077/78) were confirmed to have had trading halted for 54 and 47 days respectively following post-merger regulatory procedures. These trading halts placed the earliest observable transactions outside the five-day statutory freshness window, validating their exclusion to prevent temporal aggregation bias.
 
-\clearpage
-
 {\small
-\setlength{\tabcolsep}{4pt}
-\begin{longtable}{llccc>{\centering\arraybackslash}p{0.18\textwidth}}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{llccc>{\centering\arraybackslash}p{0.16\textwidth}}
 \caption{$\mathit{MPS}^{RD}$ Price Verification: Analysis Dataset Close vs. Merolagani Last Traded Price}
 \label{tab:app_price_verification}\\
 \toprule
@@ -96,7 +94,7 @@ NMB   & FY 2081/82 & 2026-04-13 & 248.40 & 248.40 & Match \\
 \end{longtable}}
 
 \vspace{2pt}
-\begin{minipage}{\linewidth}
+\noindent\begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Dataset close and Merolagani LTP agree on 29 of 30 bank-years. $^a$NMB FY 2076/77 price: dataset (ShareSansar) recorded closing price of NPR 437.00, whereas Merolagani reported Last Traded Price (LTP) of NPR 436.00. The NPR 437.00 value was retained on the basis of ShareSansar's full daily record (open 432, high 439, low 428, close 437.00). Because ShareSansar is the dataset's primary source, this does not represent independent verification, and the official NEPSE closing price remains unverified against primary exchange floor archives. $^b$HBL and NIMB FY 2077/78 prices occurred outside the 5-day freshness window due to prolonged merger-related trading halts, and both observations were dropped and never imputed. $^c$Entity-timing transition year: audited accounts represent standalone pre-merger operations, while April 2023 prices reflect merged entities. $^d$Chaitra-end fell on Friday, 12 April 2024, and Sunday, 14 April 2024 was the first trading session. Realized clean sample $N = 28$.
 \end{minipage}

@@ -34,15 +34,17 @@ To establish the empirical baseline of the panel, Table~\ref{tab:t1_descriptives
 
 The analysis sample consists of 28 realized bank-year observations from an intended balanced panel of 30 bank-years (5 commercial banks $\times$ 6 fiscal years). Two observations, Himalayan Bank Limited (HBL) for FY 2077/78 and Nepal Investment Mega Bank Limited (NIMB) for FY 2077/78, were dropped in strict adherence to the 5-day freshness rule defined in Chapter~III. Secondary market trading for both banking series was suspended during merger-related processes around the statutory reporting deadline (end of Chaitra 2078 BS / mid-April 2022), with trading resuming 54 days late (6 June 2022) for HBL and 47 days late (30 May 2022) for NIMB. In alignment with econometric protocol, these prices were recorded as missing rather than imputed, preserving data integrity.
 
-\begin{table}[!htbp]
-\centering
-\small
+{\small
+\begin{longtable}{llccccc}
 \caption[Descriptive Statistics of Value-Relevance Variables]{Descriptive Statistics of Value-Relevance Variables, FY 2076/77--FY 2081/82}
-\label{tab:t1_descriptives}
-\begin{tabular}{llccccc}
+\label{tab:t1_descriptives}\\
 \toprule
 \textbf{Variable} & \textbf{Period} & \textbf{$n$} & \textbf{Mean} & \textbf{SD} & \textbf{Min} & \textbf{Max} \\
 \midrule
+\endfirsthead
+\textbf{Variable} & \textbf{Period} & \textbf{$n$} & \textbf{Mean} & \textbf{SD} & \textbf{Min} & \textbf{Max} \\
+\midrule
+\endhead
 $\mathit{MPS}^{RD}$ (NPR) & Full Sample & 28 & 254.34 & 98.82 & 136.90 & 520.00 \\
  & Pre-Consolidation & 13 & 310.59 & 119.46 & 176.00 & 520.00 \\
  & Post-Consolidation & 15 & 205.60 & 33.45 & 136.90 & 251.13 \\
@@ -63,15 +65,13 @@ ROA (\%) & Full Sample & 28 & 0.99 & 0.47 & 0.00 & 1.79 \\
  & Pre-Consolidation & 13 & 1.31 & 0.22 & 0.90 & 1.79 \\
  & Post-Consolidation & 15 & 0.70 & 0.44 & 0.00 & 1.51 \\
 \bottomrule
-\end{tabular}
+\end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
-\footnotesize
+{\footnotesize\noindent
 \textit{Note.} Analysis sample: bank-years whose $\mathit{MPS}^{RD}$ falls within five calendar days of the statutory annual reporting deadline, operationalized at the end of Chaitra (mid-April). The first active session on or after the target is used, and the two observations beyond five calendar days (HBL and NIMB FY 2077/78) are excluded without imputation. Pre-consolidation = FY 2076/77--FY 2078/79 ($n = 13$). Post-consolidation = FY 2079/80--FY 2081/82 ($n = 15$). Standard deviations use the sample formula ($ddof=1$). Percentage changes are calculated as $(\bar{x}_{post}-\bar{x}_{pre})/\bar{x}_{pre}$ from unrounded values, and the NPR differences reported in the text are likewise calculated from unrounded means, so recomputation from the rounded values printed in this table can differ slightly (for example, the ROA standard-deviation change of 97.49\% follows from the unrounded standard deviations). All monetary figures in Nepalese Rupees (NPR). Data recompiled from published annual reports and cross-checked aggregator market closing series. \\
 \textit{Abbreviations:} $\mathit{MPS}^{RD}$ (Market Price per Share at Reporting Deadline), EPS (Earnings Per Share), BVPS (Book Value Per Share), DPS (Dividend Per Share), ROA (Return on Assets), SD (Standard Deviation), NPR (Nepalese Rupee).
-\end{minipage}
-\end{table}
+\par}
 
 The descriptive statistics in Table~\ref{tab:t1_descriptives} reveal substantial economic shifts across the pre- and post-consolidation periods:
 \begin{itemize}
@@ -233,15 +233,17 @@ Because common fiscal-year fixed effects ($\lambda_t$) are fully specified, the 
 
 Table~\ref{tab:t4_model2} reports the estimation results for Model~2, including pre-consolidation slopes, interaction shifts, implied post-consolidation slopes, and the principal joint Wald test of structural parameter change, with MacKinnon-White HC3 robust standard errors in parentheses beneath each estimate on Student's $t$ distribution ($\text{df} = 14$). Full $t$-statistics, $p$-values, and confidence intervals are reported in the text.
 
-\begin{table}[!htbp]
-\centering
-\footnotesize
+{\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedleft\arraybackslash}p{0.32\textwidth}}
 \caption{Model 2: Value Relevance Regime Shift Across Consolidation ($N = 28$)}
-\label{tab:t4_model2}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.38\textwidth}>{\raggedleft\arraybackslash}p{0.32\textwidth}}
+\label{tab:t4_model2}\\
 \toprule
 \textbf{Model Parameter / Term} & \textbf{Dependent Variable: $\mathit{MPS}^{RD}$} \\
 \midrule
+\endfirsthead
+\textbf{Model Parameter / Term} & \textbf{Dependent Variable: $\mathit{MPS}^{RD}$} \\
+\midrule
+\endhead
 \multicolumn{2}{l}{\textbf{Pre-Consolidation Slopes}} \\
 \addlinespace
 Earnings per Share ($\beta_E$) & 5.577 \\
@@ -274,15 +276,13 @@ Adjusted $R^2$ & 0.958 \\
 Within-$R^2$ & 0.642 \\
 Residual Degrees of Freedom & 14 \\
 \bottomrule
-\end{tabular}
+\end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
-\footnotesize
+{\footnotesize\noindent
 \textit{Note.} Dependent variable: $\mathit{MPS}^{RD}$. OLS estimation with bank and fiscal-year fixed effects. MacKinnon-White HC3 robust standard errors in parentheses beneath parameter estimates. Implied post-consolidation slopes are linear combinations evaluated under the HC3 covariance matrix. Exact residual degrees of freedom: $28 - 14 = 14$. Two-tailed $t$-tests are used for coefficients, and an upper-tail Wald $F$-test is used for joint significance. Confidence intervals are reported in the text and Appendix E, Table~\ref{tab:app_m2full}. \\
 \textit{Abbreviations:} $\mathit{MPS}^{RD}$ (Market Price per Share at Reporting Deadline), EPS (Earnings Per Share), BVPS (Book Value Per Share), Post (post-consolidation indicator), HC3 (MacKinnon-White heteroskedasticity-consistent covariance estimator), OLS (Ordinary Least Squares), SE (Standard Error).
-\end{minipage}
-\end{table}
+\par}
 
 The empirical estimates in Table~\ref{tab:t4_model2} do not provide statistically significant evidence regarding structural changes in valuation dynamics:
 \begin{enumerate}
@@ -351,7 +351,7 @@ Table~\ref{tab:hypotheses} summarizes the formal hypothesis testing decisions.
 \caption{Summary of Operational Hypothesis Testing Decisions}
 \label{tab:hypotheses}
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}cc>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}>{\raggedright\arraybackslash}p{0.10\textwidth}cc>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}}
 \toprule
 \textbf{Hypothesis} & \textbf{Model / Term} & \textbf{Null ($H_0$)} & \textbf{Estimate} & \textbf{$p$-value} & \textbf{Decision} & \textbf{Inference} \\
 \midrule
@@ -403,16 +403,18 @@ To evaluate the stability of baseline estimates against alternative empirical as
 
 Table~\ref{tab:t5_robustness} summarizes the estimation results across the robustness suite, reporting point estimates, standard errors for both main slopes and interaction terms, and the joint Wald $F$-test.
 
-\begin{table}[!htbp]
-\centering
-\small
-\caption{Robustness and Sensitivity Analysis Across Econometric Specifications}
-\label{tab:t5_robustness}
+{\small
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}c}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}c}
+\caption{Robustness and Sensitivity Analysis Across Econometric Specifications}
+\label{tab:t5_robustness}\\
 \toprule
 \textbf{Specification} & \textbf{Earnings (SE)} & \textbf{BVPS (SE)} & \textbf{$\delta_E$ (SE)} & \textbf{$\delta_B$ (SE)} & \textbf{Wald $F$ ($p$)} & \textbf{$n$} \\
 \midrule
+\endfirsthead
+\textbf{Specification} & \textbf{Earnings (SE)} & \textbf{BVPS (SE)} & \textbf{$\delta_E$ (SE)} & \textbf{$\delta_B$ (SE)} & \textbf{Wald $F$ ($p$)} & \textbf{$n$} \\
+\midrule
+\endhead
 \textbf{R1:} Model 1 Baseline & 2.095 (4.096) & 0.219 (1.858) & -- & -- & -- & 28 \\
 \addlinespace
 \textbf{R2:} Model 2 Baseline & 5.577 (3.560) & 0.100 (1.306) & $-3.124$ (4.003) & $-1.758$ (1.231) & 2.954 (0.085) & 28 \\
@@ -431,26 +433,26 @@ Table~\ref{tab:t5_robustness} summarizes the estimation results across the robus
 \addlinespace
 \textbf{R9:} Excl.\ NMB FY2076/77 & 6.000 (7.028) & 0.093 (1.719) & $-3.445$ (6.598) & $-1.741$ (1.477) & 1.794 (0.205) & 27 \\
 \bottomrule
-\end{tabular}
+\end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
-\footnotesize
+{\footnotesize\noindent
 \textit{Note.} \textsuperscript{*} Significant at $p < 0.05$. R6 is significant only at the unadjusted 5\% level, with Holm-adjusted $p = 0.190$. All models estimated by OLS with bank and fiscal-year fixed effects, with MacKinnon-White HC3 robust standard errors reported in parentheses. The joint Wald $F$-statistic tests $H_0: \delta_E = \delta_B = 0$ under the MacKinnon-White HC3 covariance matrix. R3: ROA substitutes for EPS. R4: Cash DPS included (residual df = 13). R5: Transition year FY 2079/80 dropped ($N = 23, \text{residual df} = 10$). R6: FY 2078/79 entity-timing mismatch dropped ($N = 23, \text{residual df} = 10$). R7: BVPS adjusted for proposed bonus share capitalization ($\mathit{BVPS}_{\text{adj}} = \mathit{BVPS} / (1 + \text{bonus ratio})$, a pro-forma forward capitalization adjustment). R8: Restated basic EPS substituted for GBIME FY 2076/77 and NMB FY 2077/78 ($N = 28$). R9: Single Kanchan-mismatched bank-year NMB FY 2076/77 dropped ($N = 27$). Residual degrees of freedom: 16 for R1, 14 for R2, R3, R7, and R8, 13 for R4 and R9, and 10 for R5 and R6. Fit statistics $R^2$ (adjusted $R^2$, Within-$R^2$): R1 0.948 (0.912, 0.152), R2 0.978 (0.958, 0.642), R3 0.977 (0.955, 0.621), R4 0.983 (0.965, 0.722), R5 0.976 (0.948, 0.677), R6 0.992 (0.983, 0.876), R7 0.976 (0.955, 0.614), R8 0.977 (0.955, 0.621), and R9 0.975 (0.950, 0.634). $R^2$ is not comparable across specifications estimated on different sample sizes (R5/R6, $N = 23$, vs $N = 28$). A supplementary post-hoc check R10 excluding both NMB FY 2076/77 and KBL FY 2076/77 (Deva timing sensitivity, $N = 26$, residual df = 12) yields joint Wald $F(2,12) = 1.570$ ($p = 0.248$), as detailed in Appendix E. \\
 \textit{Abbreviations:} EPS (Earnings Per Share), BVPS (Book Value Per Share), DPS (Dividend Per Share), ROA (Return on Assets), HC3 (MacKinnon-White heteroskedasticity-consistent covariance estimator), OLS (Ordinary Least Squares), SE (Standard Error), df (degrees of freedom).
-\end{minipage}
-\end{table}
+\par}
 
-\begin{table}[!htbp]
-\centering
-\small
-\caption{Joint Regime-Shift Tests Under Alternative Covariance Estimators}
-\label{tab:cov_sensitivity}
+{\small
 \setlength{\tabcolsep}{5pt}
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} l ccccc c @{}}
+\begin{longtable}{@{\extracolsep{\fill}} l ccccc c @{}}
+\caption{Joint Regime-Shift Tests Under Alternative Covariance Estimators}
+\label{tab:cov_sensitivity}\\
 \toprule
 \textbf{Specification} & \textbf{Classical} & \textbf{HC0} & \textbf{HC1} & \textbf{HC2} & \textbf{HC3} & \textbf{$n$} \\
 \midrule
+\endfirsthead
+\textbf{Specification} & \textbf{Classical} & \textbf{HC0} & \textbf{HC1} & \textbf{HC2} & \textbf{HC3} & \textbf{$n$} \\
+\midrule
+\endhead
 \textbf{R2:} Model 2 Baseline & 9.573\textsuperscript{*} & 12.654\textsuperscript{*} & 6.327\textsuperscript{*} & 6.243\textsuperscript{*} & 2.954 & 28 \\
  & (0.002) & (0.001) & (0.011) & (0.012) & (0.085) & \\
 \addlinespace
@@ -475,15 +477,13 @@ Table~\ref{tab:t5_robustness} summarizes the estimation results across the robus
 \textbf{R9:} Excl.\ NMB FY2076/77 & 9.108\textsuperscript{*} & 12.291\textsuperscript{*} & 5.918\textsuperscript{*} & 4.998\textsuperscript{*} & 1.794 & 27 \\
  & (0.003) & (0.001) & (0.015) & (0.025) & (0.205) & \\
 \bottomrule
-\end{tabular*}
+\end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
-\footnotesize
+{\footnotesize\noindent
 \textit{Note.} \textsuperscript{*} Significant at $p < 0.05$. Each cell reports the joint Wald $F$-statistic for $H_0: \delta_E = \delta_B = 0$ on the upper line with its $p$-value in parentheses beneath, under the named covariance estimator. The HC3 column reproduces the Wald $F$ column of Table~\ref{tab:t5_robustness}. Under the classical, HC0, HC1 and HC2 covariances, all eight tabulated joint tests R2--R9 reject at 5\%, whereas under HC3 only R6 rejects. R6 is significant only at the unadjusted 5\% level, with Holm-adjusted $p = 0.190$ across the full nine-test family R2--R10 ($p = 0.169$ across R2--R9). The thesis reports HC3 as the designated estimator because it was pre-specified in the proposal and is the conventional small-sample recommendation, not because the alternative estimators agree. Residual degrees of freedom: 14 for R2, R3, R7, and R8, 13 for R4 and R9, and 10 for R5 and R6. Reported $p$-values are rounded to three decimal places (R6 under HC0 is $p = 0.000007$). \\
 \textit{Abbreviations:} HC0, HC1, HC2, and HC3 (heteroskedasticity-consistent covariance estimators), df (degrees of freedom).
-\end{minipage}
-\end{table}
+\par}
 
 The sensitivity analysis yields econometric and substantive observations:
 \begin{itemize}
@@ -524,15 +524,17 @@ To verify that the empirical findings are robust to potential violations of Gaus
 
 Table~\ref{tab:t6_diagnostics} presents the diagnostic test statistics for the baseline model.
 
-\begin{table}[!htbp]
-\centering
-\small
+{\small
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\textwidth}cccc}
 \caption{Econometric Diagnostics for Baseline Value-Relevance Model}
-\label{tab:t6_diagnostics}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\textwidth}cccc}
+\label{tab:t6_diagnostics}\\
 \toprule
 \textbf{Diagnostic Dimension} & \textbf{Statistic} & \textbf{Value} & \textbf{$p$-value / Threshold} & \textbf{Assessment} \\
 \midrule
+\endfirsthead
+\textbf{Diagnostic Dimension} & \textbf{Statistic} & \textbf{Value} & \textbf{$p$-value / Threshold} & \textbf{Assessment} \\
+\midrule
+\endhead
 Model 1 VIF (EPS) & VIF & 1.16 & Tolerance = 0.862 & Below screen \\
 \addlinespace
 Model 1 VIF (BVPS) & VIF & 1.16 & Tolerance = 0.862 & Below screen \\
@@ -547,15 +549,13 @@ Classical BP (Model 1) & LM & 28.18 & $p = 0.003$ & Rejected \\
 \addlinespace
 Cook's Distance (Model 1) & Max $D_i$ & 0.552 & Cutoff: $4/N = 0.143$ & Review sensitivity \\
 \bottomrule
-\end{tabular}
+\end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
-\footnotesize
+{\footnotesize\noindent
 \textit{Note.} Breusch-Pagan and Cook's-distance diagnostics are computed on Model~1 ($N = 28$). VIFs are computed on the named substantive regressors only, excluding fixed-effect dummies. The screening threshold is VIF $> 5$ (Chapter III). On the full fitted design, including the fixed-effect dummies, the VIFs are 5.70 (EPS) and 12.32 (BVPS) for Model~1, and 14.82 (EPS), 12.46 (BVPS), 27.34 (EPS $\times$ Post) and 259.32 (BVPS $\times$ Post) for Model~2, with the largest year-dummy VIF 118.21. The Model~1 ``Below screen'' verdict therefore applies only to the substantive-regressor screen, not to the fitted design. Koenker robust and classical Breusch-Pagan variants are reported because their Model~1 conclusions differ. The $4/N$ Cook's-distance threshold flags cases for review. HC3 adjusts the covariance estimate, but does not remove or neutralize influential observations. \\
 \textit{Abbreviations:} VIF (Variance Inflation Factor), BP (Breusch-Pagan test), LM (Lagrange Multiplier), EPS (Earnings Per Share), BVPS (Book Value Per Share), HC3 (MacKinnon-White heteroskedasticity-consistent covariance estimator).
-\end{minipage}
-\end{table}
+\par}
 
 Key diagnostic findings:
 \begin{itemize}
@@ -587,8 +587,8 @@ Table~\ref{tab:spec_comp} compares four specifications: Pooled OLS (no fixed eff
 \small
 \caption{Specification Comparison Across Econometric Model Structures}
 \label{tab:spec_comp}
-\setlength{\tabcolsep}{3.5pt}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth}cccccccc}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}cccccccc}
 \toprule
 \textbf{Specification} & \textbf{$\beta_E$ (SE)} & \textbf{$p_E$} & \textbf{$\beta_B$ (SE)} & \textbf{$p_B$} & \textbf{$R^2$} & \textbf{Adj. $R^2$} & \textbf{Within-$R^2$} & \textbf{df} \\
 \midrule

@@ -89,6 +89,11 @@
 \makeatother
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+% xurl: lets long \url/\nolinkurl strings (filenames, SHA-1 digests) break at
+% any character, so the Appendix D register note no longer overflows the
+% right margin. Must load after hyperref. (Added 2026-11-24; replaces the
+% \sloppy that was removed from that note -- do not reintroduce \sloppy.)
+\usepackage{xurl}
 
 % TU-strict preliminary headings (FOM Guidelines 2019 p. 9)
 \renewcommand{\contentsname}{Table of Contents}

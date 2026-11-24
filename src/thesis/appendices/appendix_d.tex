@@ -169,14 +169,14 @@ NMB & FY 2081/82 & 37--38 & 38 & 17 / 17 & p. 104 \\
 \end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
+\noindent\begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Page numbers are PDF pages of the files in Table~\ref{tab:app_register}, recorded at statement level, not per individual cell. All SOFP, SOPL, and DPS pages fall within the page count of their file, and all 30 DPS pages match the dividend source records exactly. GBIME statement pages are two-page spreads, so both pages of each spread are cited. Indicators column convention: ``p. XX'' is the page on which the printed EPS and NAV for that row were both located, ``pp. AA--BB'' is an adjacent-page span holding the two values, a named section with a start page means the titled table begins there and spans further pages, and ``No titled table located'' means no titled indicators table was found by text search for that report. Two reports required visual reads because their text layers use legacy-encoded fonts that extract as gibberish: HBL FY 2076/77 (SOFP PDF p. 43, printed p. 41) and KBL FY 2076/77 (SOFP PDF p. 49, printed p. 53), confirmed by balance-sheet identity checks (HBL exact, and KBL within 1 NPR of printed rounding). The NMB FY 2079/80 Nepali edition has the same legacy-encoding property for Devanagari text, while numerals extract cleanly. Its values were recovered by word-coordinate parsing, its SOPL profit after tax was cross-checked exactly against the following year's previous column, and its dividend proposal was read visually. Numbers in the Nepali edition are printed in Western digits, so no Devanagari-numeral conversion was required. Devanagari field labels are not recoverable from the text layer, so fields were identified by statement structure and position and confirmed by the cross-checks above.
 \end{minipage}
 
 \section{Price Provenance}
 
-All $\mathit{MPS}^{RD}$ prices in this thesis come from one dataset, identified here in full. The dataset is nepse-data, published by Aabishkar2 at https://github.com/Aabishkar2/nepse-data \citep{nepsedata2026}, cloned on 2026-10-27. The clone holds 372 company CSV files under \texttt{data/company-wise/}, one per trading symbol, with columns \texttt{published\_date}, \texttt{open}, \texttt{high}, \texttt{low}, \texttt{close}, \texttt{per\_change}, \texttt{traded\_quantity}, \texttt{traded\_amount}, and \texttt{status}. At the clone date the series were current to 2026-10-26. The dataset's scraper pulls from ShareSansar, not directly from NEPSE, so every dataset price is cited as ShareSansar data via this dataset, never as a NEPSE record. The repository updates its data almost daily, so the clone date is part of the identification: a later download of the same repository is a different vintage and may differ. The repository carries no licence file.
+All $\mathit{MPS}^{RD}$ prices in this thesis come from one dataset, identified here in full. The dataset is nepse-data, published by Aabishkar2 at \nolinkurl{https://github.com/Aabishkar2/nepse-data} \citep{nepsedata2026}, cloned on 2026-10-27. The clone holds 372 company CSV files under \texttt{data/company-wise/}, one per trading symbol, with columns \texttt{published\_date}, \texttt{open}, \texttt{high}, \texttt{low}, \texttt{close}, \texttt{per\_change}, \texttt{traded\_quantity}, \texttt{traded\_amount}, and \texttt{status}. At the clone date the series were current to 2026-10-26. The dataset's scraper pulls from ShareSansar, not directly from NEPSE, so every dataset price is cited as ShareSansar data via this dataset, never as a NEPSE record. The repository updates its data almost daily, so the clone date is part of the identification: a later download of the same repository is a different vintage and may differ. The repository carries no licence file.
 
 The event clock for $\mathit{MPS}^{RD}$ follows the nine-month publication duty in Section 59(2) of the Banks and Financial Institutions Act, 2017, and it must not be confused with the other duty in the same subsection. Section 59(2) imposes two separate duties: first, to submit the balance sheet and profit and loss account to Nepal Rastra Bank within three months of fiscal-year end, with details published for the public within that period, and second, to make public the audited statements within nine months of the next fiscal year. The thesis uses the second duty only. It is read as fiscal-year end (Ashadh-end, mid-July) plus nine months, which is the end of Chaitra (mid-April) of the following fiscal year. The statute does not name Chaitra, so end-of-Chaitra is the thesis's operationalization, and it is written that way. The resulting target deadlines are: FY 2076/77 (13 April 2021), FY 2077/78 (13 April 2022), FY 2078/79 (13 April 2023), FY 2079/80 (12 April 2024), FY 2080/81 (13 April 2025), and FY 2081/82 (13 April 2026). Each deadline is consistent with the recorded gap subtracted from the observation date in Table~\ref{tab:mps_rd}. This checks the recorded gap arithmetic, but does not independently verify the deadline against a separate source. Section 59(2) is cited from the Nepal Gazette text via the Nepal Law Commission repository. The Nepal Rastra Bank English rendering is labelled an unofficial translation and was not used as the authority, and the ambiguous phrase in that rendering is resolved by the stated reading rather than relied on.
 
@@ -226,16 +226,18 @@ Table~\ref{tab:app_codebook} defines every variable in the analysis panel. Four 
 
 Fiscal years are cited in Bikram Sambat throughout the thesis. The website labels banks use for the same years are: FY 2076/77 as 2019/20, FY 2077/78 as 2020/21, FY 2078/79 as 2021/22, FY 2079/80 as 2022/23, FY 2080/81 as 2023/24, and FY 2081/82 as 2024/25. These labels are needed to retrieve the reports, whose web listings use the Anno Domini years.
 
-\begin{table}[!htbp]
-\centering
-\small
+{\small
 \setlength{\tabcolsep}{4pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}}
 \caption{Variable Codebook for the Analysis Panel}
-\label{tab:app_codebook}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}}
+\label{tab:app_codebook}\\
 \toprule
 \textbf{Variable} & \textbf{Definition} & \textbf{Construction} & \textbf{Source and Rule} \\
 \midrule
+\endfirsthead
+\textbf{Variable} & \textbf{Definition} & \textbf{Construction} & \textbf{Source and Rule} \\
+\midrule
+\endhead
 $\mathit{MPS}^{RD}$ & Closing price on the first trading session on or after the nine-month publication deadline & Observed close, no formula & Dataset close column (ShareSansar via nepse-data), with 5-day window, missing beyond, and never imputed \\
 \addlinespace
 EPS & Basic earnings per share, own audited report & Profit attributable divided by weighted-average shares, per NAS 33 (Nepal Accounting Standard 33, Earnings per Share, Accounting Standards Board, Nepal) & Own SOPL, under own-current rule, with restated values entering only in R8 \\
@@ -250,14 +252,12 @@ Bonus ratio & Board-proposed bonus share percentage for the fiscal year & Percen
 \addlinespace
 $\mathit{Post}$ & Consolidation-regime indicator & 1 for FY 2079/80 through FY 2081/82, 0 otherwise & Year-level indicator from the January--February 2023 amalgamations, absorbed by year fixed effects, and never estimated standalone \\
 \bottomrule
-\end{tabular}
+\end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
-\footnotesize
+{\footnotesize\noindent
 \textit{Note.} EPS denominators use weighted-average shares per NAS 33, while BVPS uses year-end shares. In merger year FY 2079/80, EPS denominators reflect blended share weights whereas BVPS uses post-merger ending shares. Recomputation tolerances: balance-sheet identities hold within 1 NPR per row, and recomputation from the panel's own audited inputs reproduces the panel within 0.01. Two recomputed BVPS values disagree with printed NAV beyond rounding and stay flagged: HBL FY 2076/77, recomputed 187.67 against printed 187.72, and NMB FY 2081/82, recomputed 175.18 against printed 174.49. Six NIMB rows show printed NAV gaps of 0.08 to 0.40 NPR, which are whole-integer rounding in the printed highlights, not disagreements.
-\end{minipage}
-\end{table}
+\par}
 
 EPS restatements are exactly three, and their treatment is fixed. Global IME Bank FY 2076/77 reported EPS 17.99, restated 15.33. NMB Bank FY 2077/78 reported 16.66, restated 14.76. Himalayan Bank FY 2077/78 reported 28.07, restated 27.60. Baselines and all robustness variants except R8 use the own-current reported values. R8 substitutes the restated values. Because the Himalayan Bank row is window-excluded from the estimation sample, only the two in-sample substitutions affect the R8 estimates. Dividend data are complete for all 30 bank-years: 18 proposed cash dividends and 12 documented nil decisions, and every announcement date precedes its $\mathit{MPS}^{RD}$ price date (Table~\ref{tab:app_dps_dates}).
 
@@ -265,8 +265,8 @@ Table~\ref{tab:app_bonus_ratios} prints the bonus ratios used in Specification R
 
 \begin{table}[!htbp]
 \centering
-\small
-\setlength{\tabcolsep}{4pt}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
 \caption{Bonus Ratios by Bank-Year (R7 Inputs, Percent of Paid-Up Capital)}
 \label{tab:app_bonus_ratios}
 \begin{tabular}{lcccccc}
@@ -289,7 +289,7 @@ NMB & 13.00 & 12.50 & 0.00 & 0.00 & 0.00 & 5.00 \\
 \end{table}
 
 {\small\setlength{\tabcolsep}{4pt}
-\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.14\textwidth}}
 \caption{DPS Announcement Dates by Bank-Year}
 \label{tab:app_dps_dates}\\
 \toprule
@@ -337,7 +337,7 @@ NMB & FY 2081/82 & 2025-11-23 & Dividend declaration & 2026-04-13 \\
 \end{longtable}}
 
 \vspace{4pt}
-\begin{minipage}{\linewidth}
+\noindent\begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Announcement dates are from the Merolagani announcement check of all 30 bank-years. ``Dividend declaration'' is a dated dividend announcement, while ``AGM detail'' means no separate declaration was found and the date is the annual general meeting date whose published detail carries the dividend (HBL FY 2076/77 and NMB FY 2076/77 show the proposed dividend in the AGM detail, while HBL FY 2081/82 and NIMB FY 2081/82 are documented-nil rows whose nil status comes from the annual report, not from the AGM date alone). NIMB FY 2077/78 uses the corrected declaration of 2021-10-20 (12.611\% bonus, 3.389\% cash), which superseded the first declaration of 2021-10-04 (11.24\% bonus, 4.76\% cash), and the panel uses the corrected values. Every announcement date precedes its $\mathit{MPS}^{RD}$ price date. For the two window-excluded rows (HBL and NIMB, FY 2077/78) the date shown is the target deadline of 13 April 2022. Trading in fact resumed on 6 June 2022 (HBL) and 30 May 2022 (NIMB), as recorded in Appendix A, Table~\ref{tab:app_price_verification}.
 \end{minipage}
@@ -393,11 +393,14 @@ The two baseline models are the two-way fixed-effects panel regressions specifie
 \end{equation}
 and Model 2 adds the regime-shift interactions,
 \begin{equation}
-\mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} + \delta_E (\mathit{EPS}_{it} \times \mathit{Post}_t) + \delta_B (\mathit{BVPS}_{it} \times \mathit{Post}_t) + \varepsilon_{it}.
+\begin{split}
+\mathit{MPS}^{RD}_{it} = \alpha + \mu_i + \lambda_t + \beta_E \mathit{EPS}_{it} + \beta_B \mathit{BVPS}_{it} \\
++ \delta_E (\mathit{EPS}_{it} \times \mathit{Post}_t) + \delta_B (\mathit{BVPS}_{it} \times \mathit{Post}_t) + \varepsilon_{it}.
+\end{split}
 \end{equation}
 Fixed effects are implemented by dummy variables, not by within-demeaning: one intercept, four bank dummies with Global IME Bank as the omitted reference bank, and five fiscal-year dummies with FY 2076/77 as the omitted reference year. Model 1 therefore estimates $K = 12$ parameters on $N = 28$ observations, leaving $28 - 12 = 16$ residual degrees of freedom, while Model 2 estimates $K = 14$ parameters, leaving $28 - 14 = 14$ residual degrees of freedom. The standalone consolidation indicator $\mathit{Post}_t$ is a deterministic linear combination of the three post-consolidation year dummies, so it is fully absorbed by the fiscal-year fixed effects and is not estimated separately, as attempting to include it alongside the full year dummies would create exact collinearity.
 
-Inference uses ordinary least squares with MacKinnon-White HC3 heteroskedasticity-robust covariance. The HC3 variance estimator scales each squared residual by $1 / (1 - h_{ii})^2$, where $h_{ii} = x_i (X'X)^{-1} x_i'$ is the leverage of observation $i$. All $t$-statistics, $p$-values, and confidence intervals use Student's $t$ distribution on residual degrees of freedom ($t(16)$ for Model 1, $t(14)$ for Model 2), not asymptotic normal approximations. A leverage check on the realized design matrices confirms the estimator is defined: maximum leverage is 0.68 in Model 1 and 0.93 in Model 2, no leverage equals 1, and leverages sum to the parameter count in each model (12 and 14 respectively). Estimation was performed in Python using statsmodels 0.14.6, as pinned in the analysis requirements, while the other analysis dependencies are minimum versions (pandas 2.2 or later, numpy 1.26 or later, scipy 1.11 or later, seaborn 0.13 or later, matplotlib 3.8 or later, PyYAML 6.0 or later). No code is printed in this thesis.
+Inference uses ordinary least squares with MacKinnon-White HC3 heteroskedas\-ticity-robust covariance. The HC3 variance estimator scales each squared residual by $1 / (1 - h_{ii})^2$, where $h_{ii} = x_i (X'X)^{-1} x_i'$ is the leverage of observation $i$. All $t$-statistics, $p$-values, and confidence intervals use Student's $t$ distribution on residual degrees of freedom ($t(16)$ for Model 1, $t(14)$ for Model 2), not asymptotic normal approximations. A leverage check on the realized design matrices confirms the estimator is defined: maximum leverage is 0.68 in Model 1 and 0.93 in Model 2, no leverage equals 1, and leverages sum to the parameter count in each model (12 and 14 respectively). Estimation was performed in Python using statsmodels 0.14.6, as pinned in the analysis requirements, while the other analysis dependencies are minimum versions (pandas 2.2 or later, numpy 1.26 or later, scipy 1.11 or later, seaborn 0.13 or later, matplotlib 3.8 or later, PyYAML 6.0 or later). No code is printed in this thesis.
 
 The joint test of regime shift is the Wald test of $H_0: \delta_E = \delta_B = 0$ under the HC3 covariance matrix, reported as $F(2, 14)$ for Model 2. The nine-specification suite is: R1 (Model 1), R2 (Model 2), R3 (Model 2 with ROA substituted for EPS), R4 (Model 2 augmented with cash DPS, residual degrees of freedom 13), R5 (Model 2 excluding the transition year FY 2079/80, $N = 23$, residual degrees of freedom 10), R6 (Model 2 excluding the entity-timing mismatch year FY 2078/79, $N = 23$, residual degrees of freedom 10), and R7 (Model 2 with bonus-adjusted BVPS, where the bonus ratio is the board-proposed bonus share percentage for that fiscal year as a proportion, values in Table~\ref{tab:app_bonus_ratios}, dividing BVPS by one plus the bonus ratio as a pro-forma forward capitalization adjustment, not a restated year-end book value). Only BVPS is adjusted, so this is a one-sided rescaling of BVPS rather than a full bonus-dilution adjustment of the valuation relation. Next, R8 is Model 2 with restated EPS as defined in Section D.4, and R9 is Model 2 excluding the single Kanchan-mismatched bank-year NMB FY 2076/77 ($N = 27$, residual degrees of freedom 13). Diagnostics (variance inflation factors, Breusch-Pagan heteroskedasticity tests, Cook's distance influence measures, and residual normality) and the specification comparison across pooled OLS, bank fixed effects, and two-way fixed effects are reported in Tables~\ref{tab:t6_diagnostics} and~\ref{tab:spec_comp}, while robustness estimates are reported in Table~\ref{tab:t5_robustness}.
 
