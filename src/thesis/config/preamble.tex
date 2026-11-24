@@ -1,5 +1,5 @@
 % ============================================================================
-% TU FOM MBS dissertation — configuration: packages and format.
+% TU FOM MBS dissertation: configuration: packages and format.
 %
 % This file is the preamble that used to live inside main.tex. It was moved
 % here verbatim on 2026-10-29 (config phase). No value was changed in the
@@ -9,7 +9,7 @@
 % text, no table data, and no front-matter wording. To change how the
 % thesis looks, edit this file (or macros.tex / floats.tex). To change
 % what the thesis says, edit a file under chapters/, front/, or
-% appendices/ — never this file.
+% appendices/, never this file.
 %
 % Load order matters and is preserved exactly: fontspec/geometry first,
 % content packages in the middle, apacite settings after apacite, and
@@ -30,8 +30,7 @@
 \usepackage{enumitem}           % single pitch lists without extra item gap
 \setlist{itemsep=0pt,topsep=0pt,parsep=0pt}
 \setlist[itemize,2]{label=\textopenbullet} % second-level bullet: open circle, not the default en-dash
-% Main-content loop Round 2: extra line-breaking stretch so long
-% unbreakable words do not stick into the margin. No wording changed.
+% Extra line-breaking stretch so long words do not stick into the margin
 \setlength{\emergencystretch}{2em}
 
 \usepackage{titlesec}
@@ -114,7 +113,7 @@
 % pinned to \arabic{chapter} explicitly; a bare \thechapter
 % change alone would renumber them to IV.1.
 % Tables and figures are numbered sequentially through the whole
-% document (1, 2, 3...), as in the reference PDF — not per chapter
+% document (1, 2, 3...), as in the reference PDF, not per chapter
 % (4.1, A.1). \counterwithout stops the chapter reset, and the
 % plain \arabic forms make captions, \ref, and LOT/LOF entries
 % all follow the same sequence. No prose number is hard-coded
@@ -130,7 +129,7 @@
 \titlespacing*{\chapter}{0pt}{10pt}{20pt}
 
 % Front-page titles. Reference: Gurung (2025) dissertation front pages
-% (reference.pdf) — every front-page title is Times New Roman Bold 16pt
+% every front-page title is Times New Roman Bold 16pt
 % (pdftohtml font id 1: 24 units = 16pt, on the title, certification,
 % research committee, approval, acknowledgements, contents, tables,
 % figures, abbreviations, and abstract pages). Defined ONCE here; no
@@ -167,10 +166,7 @@
   {\thesection}{0.5em}{}
 \titlespacing*{\section}{0pt}{14pt}{4pt}
 
-% Subsection titles wrap on the global emergencystretch (2em); no
-% loose-tolerance flag in the before-code (removed 2026-10-29: the flag
-% added in main-content loop Round 2 for the 4.3.2 title overflow is
-% no longer used anywhere in the thesis).
+% Subsection titles wrap on the global emergencystretch (2em)
 \titleformat{\subsection}
   {\normalfont\normalsize\bfseries\setstretch{1}}
   {\thesubsection}{0.5em}{}
@@ -181,20 +177,8 @@
   {\thesubsubsection}{0.5em}{}
 \titlespacing*{\subsubsection}{0pt}{8pt}{2pt}
 
-% TOC formatting (12pt Times New Roman). Front entries use this
-% format: regular, matching Gurung (front entries regular, Title
-% Page entry italic via \itshape in its own \addcontentsline).
-% Numbered chapter entries get bold label + text from the \bfseries
-% in the label code below (it persists through the entry text).
-% Two deliberate deviations from Gurung, both forced by tocloft:
-% chapter dots + page numbers stay regular (not bold) and chapter
-% gaps stay single 20.7 pt (not Gurung's double 41.4 pt), because
-% tocloft gives dots + numbers the format's font and one format
-% must serve front and chapter entries. A mid-stream format switch
-% was tried and rejected: tocloft echoes it as \ttl@change right
-% after the Table of Contents entry, which would turn the four
-% later front entries (List of Tables, List of Figures, List of
-% Abbreviations, Abstract) bold with double spacing.
+% TOC formatting (12pt Times New Roman): front matter entries regular,
+% chapter entries bold, with consistent dot leaders and spacing.
 \titlecontents{chapter}
   [0em]
   {\addvspace{6.2pt}\normalfont\normalsize}
@@ -243,16 +227,13 @@
 }
 
 % ============================================================================
-% Shared assembly commands (NEW, 2026-10-29, config phase).
-% These replace three blocks that used to be written out inline in main.tex.
-% Each command does exactly what its old inline block did, at the same
-% point in main.tex, so the output does not change.
+% Shared assembly commands
 % ============================================================================
 
 % One front-matter list (Contents / Tables / Figures), single-spaced,
 % on its own page, as in the old main.tex.
 % List of Tables / List of Figures entry geometry (titletoc, not
-% tocloft — tocloft is NOT loaded; \titlecontents is titletoc's and
+% tocloft: tocloft is NOT loaded; \titlecontents is titletoc's and
 % the \cft... lengths do not exist here). Reference (Gurung) title
 % column sits 69.3 pt right of her margin; with FOM margins the
 % labels sit at our margin and titles at margin + 69.3 pt.
@@ -260,7 +241,7 @@
 % the 69.3 pt label box holds the word plus the sequential
 % number. titletoc starts the number code at the title column,
 % so the code first backs up the full 69.3 pt (the way
-% \contentslabel does) — a bare \makebox without that back-up
+% \contentslabel does), a bare \makebox without that back-up
 % lands the label at the title column and pushes titles to
 % margin + 138.6 pt (caught by measurement).
 \titlecontents{table}

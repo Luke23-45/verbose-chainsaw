@@ -3,24 +3,6 @@
 \thispagestyle{plain}
 \frontPageTitle{Abbreviations}
 
-% NOTE (2026-10-29, Krishna: match the reference PDF): Gurung's
-% Abbreviations page (p. 10) is a plain colon list, not a table:
-% no header row, no rules, 12 pt regular throughout, abbreviation
-% at the margin, ":" 72 pt right of the margin, description
-% 108 pt right of the margin, 20.7 pt pitch (Word 1.5 grid).
-% Columns below reproduce those offsets with FOM margins
-% (abbreviation 90.28, colon 162.28, description 198.28 pt):
-% the middle column separations are 12 pt each (\tabcolsep
-% both sides), so the column widths are 60 pt and 24 pt, and
-% the table is exactly \textwidth wide, so longtable centring
-% adds no shift. Pitch is 20.7 pt, not the TeX 1.5 pitch of
-% 21.75 pt used on LOT/LOF/body — the reference look was
-% ordered for this page. Row pitch in a longtable is
-% strut-governed (\offinterlineskip), so \arraystretch sets it
-% and the >{\setstretch} cell decls give wrapped description
-% lines the same leading (parboxes otherwise reset to single).
-% \LTpre is zeroed so the heading-to-first-entry gap lands on
-% Gurung's 46.67 pt instead of inheriting the 12 pt table pre-skip.
 \begingroup
 \setlength{\LTpre}{0pt}
 \renewcommand{\arraystretch}{1.4276}
@@ -122,10 +104,5 @@ US & : & United States \\
 VIF & : & Variance Inflation Factor \\
 WAIRS & : & Weighted Average Interest Rate Spread \\
 \end{longtable}
-% longtable steps the table counter when it begins, even with no
-% \caption (unlike the table environment, where \caption steps
-% it). The Abbreviations list is not a numbered table, so undo
-% that step here — otherwise Chapter IV's first table would
-% come out as Table 2, not Table 1.
 \addtocounter{table}{-1}
 \endgroup

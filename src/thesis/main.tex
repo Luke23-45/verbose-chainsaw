@@ -3,13 +3,6 @@
 % Candidate: Asmita Subedi | Triveni International College
 % Format source: Master's Degree Dissertation Guidelines 2019, Office of the Dean, FOM, TU
 % Engine: xelatex + bibtex
-%
-% ARCHITECTURE (2026-10-29, config phase): this file is assembly ONLY.
-% All packages, formatting, notation macros, and float layouts live in
-% config/ (see config/preamble.tex). To change how the thesis looks,
-% edit config/. To change what it says, edit chapters/, front/, or
-% appendices/. This file must never again contain a \usepackage, a
-% margin/font/spacing value, a heading format, or a page-style definition.
 \documentclass[12pt,a4paper,oneside]{report}
 
 \input{config/preamble}
@@ -67,9 +60,7 @@
 % =============================================================================
 % MAIN BODY OF THE DISSERTATION (Chapters I - V)
 % =============================================================================
-% FULL THESIS (2026-10-29, Krishna): all five chapters, References,
-% and Appendices restored. The partial-build state (Chapters II,
-% III, V commented out, with a forced chapter counter) is gone.
+% Main body chapters, References, and Appendices
 
 \clearpage
 \pagestyle{mainbody}
@@ -97,7 +88,6 @@
 % =============================================================================
 % SUPPLEMENTARY MATERIALS SECTION
 % =============================================================================
-% Full thesis (2026-10-29): all chapters, References, and Appendices.
 
 % References (APA 6th edition, single spaced with hanging indent per FOM p. 20)
 \clearpage
@@ -108,7 +98,7 @@
 \appendix
 \thesisAppendixHeadings
 
-% Single TOC entry for the appendices (2026-10-29, Krishna): the
+% Single TOC entry for the appendices: the
 % five appendix chapters keep their body headings (APPENDIX A/B/C/D/E),
 % but the TOC lists one bold "Appendix" entry. The tocdepth line
 % hides the five automatic appendix entries (and any appendix

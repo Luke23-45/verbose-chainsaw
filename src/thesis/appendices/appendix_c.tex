@@ -5,30 +5,38 @@ This appendix presents additional graphical diagnostic evaluations for Model~2 a
 
 Figure~\ref{fig:app_robustness_forest} presents the coefficient forest plot contrasting parameter estimates and 95\% HC3 confidence intervals across the eight plotted EPS-channel specifications (R1, R2, and R4 through R9).
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.88\textwidth]{figures/A2_robustness_forest.pdf}
-\caption[Comparative Coefficient Forest Plot (R1, R2, R4--R9)]{Comparative Coefficient Forest Plot Across Eight Robustness Specifications (R1, R2, R4--R9)}
+\begin{center}
+\includegraphics[width=0.58\textwidth]{figures/A2_robustness_forest.pdf}
+\captionof{figure}[Comparative Coefficient Forest Plot (R1, R2, R4--R9)]{Comparative Coefficient Forest Plot Across Eight Robustness Specifications (R1, R2, R4--R9)}
 \label{fig:app_robustness_forest}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} EPS-channel estimates (level and interaction) with 95\% HC3 confidence intervals across eight specifications: baselines (R1--R2) and variants (R4--R9). R3 is omitted due to scale difference ($N = 28, 27, \text{ or } 23$).
 \end{minipage}
-\end{figure}
+\end{center}
+
+\vspace{2pt}
+\subsection{Comparative Robustness Forest Interpretation}
+
+The comparative coefficient forest plot illustrates the empirical stability of the earnings valuation parameter across alternative econometric specifications. Across all eight plotted specifications, the baseline earnings per share coefficient $\hat{\beta}_E$ remains positive, centered between 4.34 and 6.18, with mutually overlapping 95\% HC3 confidence intervals. This stability indicates that the pre-consolidation earnings-price relationship is not artifactual to particular sample inclusions or control configurations.
+
+Conversely, the post-consolidation interaction coefficient $\hat{\delta}_E$ consistently exhibits negative point estimates across all eight models, ranging from $-2.44$ to $-4.07$. With the sole exception of specification R6, the 95\% confidence intervals cross zero, confirming that the post-merger change in earnings relevance is statistically indistinguishable from zero. Specification R3 is omitted because ROA is measured in percentage points instead of currency.
 
 \clearpage
 
 Figure~\ref{fig:app_model2_diagnostics} illustrates the four-panel econometric diagnostic suite evaluated on Model~2 residuals, examining linearity, residual normality, heteroskedasticity, and influential observations.
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.82\textwidth]{figures/A3_model2_diagnostics.pdf}
-\caption{Econometric Diagnostic Panel for Model 2 Residuals}
+\begin{center}
+\includegraphics[width=0.74\textwidth]{figures/A3_model2_diagnostics.pdf}
+\captionof{figure}{Econometric Diagnostic Panel for Model 2 Residuals}
 \label{fig:app_model2_diagnostics}
 \begin{minipage}{\linewidth}
 \footnotesize
 \textit{Note.} Four-panel diagnostic suite for Model~2 residuals ($N = 28$): Normal Q-Q plot, Residuals vs.\ Fitted, Scale-Location plot, and Cook's distance against $4/N = 0.143$ threshold.
 \end{minipage}
-\end{figure}
+\end{center}
+
+\vspace{4pt}
+\subsection{Model 2 Residual Diagnostic Inferences}
 
 The four diagnostic panels confirm the empirical suitability of the two-way fixed-effects specification under HC3 covariance estimation. The Normal Q-Q plot displays mild departures in the lower tail while remaining linear through the central quantiles, consistent with the formal Shapiro-Wilk test result reported in Chapter IV. The Residuals versus Fitted plot exhibits an even dispersion around the zero-residual line without systematic curvature, confirming that the linear functional form adequately captures the valuation relation. The Scale-Location plot reveals a stable vertical spread of standardized residuals across the range of fitted values, and the Cook's distance panel confirms that while five bank-years show elevated leverage, no single observation exerts undue influence that alters parameter signs.
