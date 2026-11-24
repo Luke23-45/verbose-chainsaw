@@ -6,7 +6,7 @@ This appendix presents additional graphical diagnostic evaluations for Model~2 a
 Figure~\ref{fig:app_robustness_forest} presents the coefficient forest plot contrasting parameter estimates and 95\% HC3 confidence intervals across the eight plotted EPS-channel specifications (R1, R2, and R4 through R9).
 
 \begin{center}
-\includegraphics[width=0.58\textwidth]{figures/A2_robustness_forest.pdf}
+\includegraphics[width=0.68\textwidth]{figures/A2_robustness_forest.pdf}
 \captionof{figure}[Comparative Coefficient Forest Plot (R1, R2, R4--R9)]{Comparative Coefficient Forest Plot Across Eight Robustness Specifications (R1, R2, R4--R9)}
 \label{fig:app_robustness_forest}
 \begin{minipage}{\linewidth}
@@ -15,19 +15,19 @@ Figure~\ref{fig:app_robustness_forest} presents the coefficient forest plot cont
 \end{minipage}
 \end{center}
 
-\vspace{2pt}
+\vspace{0pt}
 \subsection{Comparative Robustness Forest Interpretation}
 
-The comparative coefficient forest plot illustrates the empirical stability of the earnings valuation parameter across alternative econometric specifications. Across all eight plotted specifications, the baseline earnings per share coefficient $\hat{\beta}_E$ remains positive, centered between 4.34 and 6.18, with mutually overlapping 95\% HC3 confidence intervals. This stability indicates that the pre-consolidation earnings-price relationship is not artifactual to particular sample inclusions or control configurations.
+The comparative coefficient forest plot illustrates the empirical stability of the earnings valuation parameter across alternative econometric specifications. Across the seven regime specifications (R2 and R4--R9), the pre-consolidation earnings slope $\hat{\beta}_E$ remains positive, centered between 4.34 and 6.18, with mutually overlapping 95\% HC3 confidence intervals (R1 baseline is 2.09). This stability indicates that the pre-consolidation earnings-price relationship is not artifactual to particular sample inclusions or control configurations.
 
-Conversely, the post-consolidation interaction coefficient $\hat{\delta}_E$ consistently exhibits negative point estimates across all eight models, ranging from $-2.44$ to $-4.07$. With the sole exception of specification R6, the 95\% confidence intervals cross zero, confirming that the post-merger change in earnings relevance is statistically indistinguishable from zero. Specification R3 is omitted because ROA is measured in percentage points instead of currency.
+Conversely, the post-consolidation interaction coefficient $\hat{\delta}_E$ consistently exhibits negative point estimates across the seven regime specifications, ranging from $-2.44$ to $-4.07$. All seven 95\% confidence intervals cross zero, confirming that the individual post-merger change in the earnings slope is statistically indistinguishable from zero. The joint Wald test rejects parameter stability at the 5\% level in specification R6 ($F(2, 10) = 5.818, p = 0.021$), but that is a composite test of both valuation slopes, whereas $\hat{\delta}_E$ itself remains statistically insignificant ($p = 0.620$). Specification R3 is omitted because ROA is measured in percentage points instead of currency.
 
 \clearpage
 
 Figure~\ref{fig:app_model2_diagnostics} illustrates the four-panel econometric diagnostic suite evaluated on Model~2 residuals, examining linearity, residual normality, heteroskedasticity, and influential observations.
 
 \begin{center}
-\includegraphics[width=0.74\textwidth]{figures/A3_model2_diagnostics.pdf}
+\includegraphics[width=0.78\textwidth]{figures/A3_model2_diagnostics.pdf}
 \captionof{figure}{Econometric Diagnostic Panel for Model 2 Residuals}
 \label{fig:app_model2_diagnostics}
 \begin{minipage}{\linewidth}
