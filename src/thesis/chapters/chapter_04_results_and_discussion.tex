@@ -446,33 +446,41 @@ Table~\ref{tab:t5_robustness} summarizes the estimation results across the robus
 \small
 \caption{Joint Regime-Shift Tests Under Alternative Covariance Estimators}
 \label{tab:cov_sensitivity}
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}ccccc>{\raggedright\arraybackslash}p{0.05\textwidth}}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}} l ccccc c @{}}
 \toprule
 \textbf{Specification} & \textbf{Classical} & \textbf{HC0} & \textbf{HC1} & \textbf{HC2} & \textbf{HC3} & \textbf{$n$} \\
 \midrule
-\textbf{R2:} Model 2 Baseline & 9.573 (0.002)\textsuperscript{*} & 12.654 (0.001)\textsuperscript{*} & 6.327 (0.011)\textsuperscript{*} & 6.243 (0.012)\textsuperscript{*} & 2.954 (0.085) & 28 \\
+\textbf{R2:} Model 2 Baseline & 9.573\textsuperscript{*} & 12.654\textsuperscript{*} & 6.327\textsuperscript{*} & 6.243\textsuperscript{*} & 2.954 & 28 \\
+ & (0.002) & (0.001) & (0.011) & (0.012) & (0.085) & \\
 \addlinespace
-\textbf{R3:} ROA Replaces EPS & 9.111 (0.003)\textsuperscript{*} & 11.520 (0.001)\textsuperscript{*} & 5.760 (0.015)\textsuperscript{*} & 5.405 (0.018)\textsuperscript{*} & 2.463 (0.121) & 28 \\
+\textbf{R3:} ROA Replaces EPS & 9.111\textsuperscript{*} & 11.520\textsuperscript{*} & 5.760\textsuperscript{*} & 5.405\textsuperscript{*} & 2.463 & 28 \\
+ & (0.003) & (0.001) & (0.015) & (0.018) & (0.121) & \\
 \addlinespace
-\textbf{R4:} Model 2 + DPS & 12.997 (0.001)\textsuperscript{*} & 17.401 ($<0.001$)\textsuperscript{*} & 8.079 (0.005)\textsuperscript{*} & 7.691 (0.006)\textsuperscript{*} & 2.767 (0.100) & 28 \\
+\textbf{R4:} Model 2 + DPS & 12.997\textsuperscript{*} & 17.401\textsuperscript{*} & 8.079\textsuperscript{*} & 7.691\textsuperscript{*} & 2.767 & 28 \\
+ & (0.001) & ($<0.001$) & (0.005) & (0.006) & (0.100) & \\
 \addlinespace
-\textbf{R5:} Excl.\ Transition & 7.170 (0.012)\textsuperscript{*} & 12.245 (0.002)\textsuperscript{*} & 5.324 (0.027)\textsuperscript{*} & 5.700 (0.022)\textsuperscript{*} & 2.414 (0.139) & 23 \\
+\textbf{R5:} Excl.\ Transition & 7.170\textsuperscript{*} & 12.245\textsuperscript{*} & 5.324\textsuperscript{*} & 5.700\textsuperscript{*} & 2.414 & 23 \\
+ & (0.012) & (0.002) & (0.027) & (0.022) & (0.139) & \\
 \addlinespace
-\textbf{R6:} Excl.\ Mismatch & 28.949 ($<0.001$)\textsuperscript{*} & 49.113 ($<0.001$)\textsuperscript{*} & 21.353 ($<0.001$)\textsuperscript{*} & 17.411 (0.001)\textsuperscript{*} & \textbf{5.818 (0.021)\textsuperscript{*}} & 23 \\
+\textbf{R6:} Excl.\ Mismatch & 28.949\textsuperscript{*} & 49.113\textsuperscript{*} & 21.353\textsuperscript{*} & 17.411\textsuperscript{*} & \textbf{5.818\textsuperscript{*}} & 23 \\
+ & ($<0.001$) & ($<0.001$) & ($<0.001$) & (0.001) & \textbf{(0.021)} & \\
 \addlinespace
-\textbf{R7:} Bonus-Adjusted & 8.271 (0.004)\textsuperscript{*} & 10.634 (0.002)\textsuperscript{*} & 5.317 (0.019)\textsuperscript{*} & 5.220 (0.020)\textsuperscript{*} & 2.365 (0.130) & 28 \\
+\textbf{R7:} Bonus-Adjusted & 8.271\textsuperscript{*} & 10.634\textsuperscript{*} & 5.317\textsuperscript{*} & 5.220\textsuperscript{*} & 2.365 & 28 \\
+ & (0.004) & (0.002) & (0.019) & (0.020) & (0.130) & \\
 \addlinespace
-\textbf{R8:} Restated EPS & 8.868 (0.003)\textsuperscript{*} & 11.801 (0.001)\textsuperscript{*} & 5.901 (0.014)\textsuperscript{*} & 5.932 (0.014)\textsuperscript{*} & 2.915 (0.087) & 28 \\
+\textbf{R8:} Restated EPS & 8.868\textsuperscript{*} & 11.801\textsuperscript{*} & 5.901\textsuperscript{*} & 5.932\textsuperscript{*} & 2.915 & 28 \\
+ & (0.003) & (0.001) & (0.014) & (0.014) & (0.087) & \\
 \addlinespace
-\textbf{R9:} Excl.\ NMB FY2076/77 & 9.108 (0.003)\textsuperscript{*} & 12.291 (0.001)\textsuperscript{*} & 5.918 (0.015)\textsuperscript{*} & 4.998 (0.025)\textsuperscript{*} & 1.794 (0.205) & 27 \\
+\textbf{R9:} Excl.\ NMB FY2076/77 & 9.108\textsuperscript{*} & 12.291\textsuperscript{*} & 5.918\textsuperscript{*} & 4.998\textsuperscript{*} & 1.794 & 27 \\
+ & (0.003) & (0.001) & (0.015) & (0.025) & (0.205) & \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 
 \vspace{4pt}
 \begin{minipage}{\linewidth}
 \footnotesize
-\textit{Note.} \textsuperscript{*} Significant at $p < 0.05$. Each cell reports the joint Wald $F$-statistic for $H_0: \delta_E = \delta_B = 0$ with its $p$-value in parentheses, under the named covariance estimator. The HC3 column reproduces the Wald $F$ column of Table~\ref{tab:t5_robustness}. Under the classical, HC0, HC1 and HC2 covariances, all eight tabulated joint tests R2--R9 reject at 5\%, whereas under HC3 only R6 rejects. R6 is significant only at the unadjusted 5\% level, with Holm-adjusted $p = 0.190$ across the full nine-test family R2--R10 ($p = 0.169$ across R2--R9). The thesis reports HC3 as the designated estimator because it was pre-specified in the proposal and is the conventional small-sample recommendation, not because the alternative estimators agree. Residual degrees of freedom: 14 for R2, R3, R7, and R8, 13 for R4 and R9, and 10 for R5 and R6. Reported $p$-values are rounded to three decimal places (R6 under HC0 is $p = 0.000007$). \\
+\textit{Note.} \textsuperscript{*} Significant at $p < 0.05$. Each cell reports the joint Wald $F$-statistic for $H_0: \delta_E = \delta_B = 0$ on the upper line with its $p$-value in parentheses beneath, under the named covariance estimator. The HC3 column reproduces the Wald $F$ column of Table~\ref{tab:t5_robustness}. Under the classical, HC0, HC1 and HC2 covariances, all eight tabulated joint tests R2--R9 reject at 5\%, whereas under HC3 only R6 rejects. R6 is significant only at the unadjusted 5\% level, with Holm-adjusted $p = 0.190$ across the full nine-test family R2--R10 ($p = 0.169$ across R2--R9). The thesis reports HC3 as the designated estimator because it was pre-specified in the proposal and is the conventional small-sample recommendation, not because the alternative estimators agree. Residual degrees of freedom: 14 for R2, R3, R7, and R8, 13 for R4 and R9, and 10 for R5 and R6. Reported $p$-values are rounded to three decimal places (R6 under HC0 is $p = 0.000007$). \\
 \textit{Abbreviations:} HC0, HC1, HC2, and HC3 (heteroskedasticity-consistent covariance estimators), df (degrees of freedom).
 \end{minipage}
 \end{table}

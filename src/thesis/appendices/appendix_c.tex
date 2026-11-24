@@ -7,7 +7,7 @@ Figure~\ref{fig:app_robustness_forest} presents the coefficient forest plot cont
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.84\textwidth]{figures/A2_robustness_forest.pdf}
+\includegraphics[width=0.88\textwidth]{figures/A2_robustness_forest.pdf}
 \caption[Comparative Coefficient Forest Plot (R1, R2, R4--R9)]{Comparative Coefficient Forest Plot Across Eight Robustness Specifications (R1, R2, R4--R9)}
 \label{fig:app_robustness_forest}
 \begin{minipage}{\linewidth}
@@ -16,11 +16,13 @@ Figure~\ref{fig:app_robustness_forest} presents the coefficient forest plot cont
 \end{minipage}
 \end{figure}
 
+\clearpage
+
 Figure~\ref{fig:app_model2_diagnostics} illustrates the four-panel econometric diagnostic suite evaluated on Model~2 residuals, examining linearity, residual normality, heteroskedasticity, and influential observations.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.80\textwidth]{figures/A3_model2_diagnostics.pdf}
+\includegraphics[width=0.82\textwidth]{figures/A3_model2_diagnostics.pdf}
 \caption{Econometric Diagnostic Panel for Model 2 Residuals}
 \label{fig:app_model2_diagnostics}
 \begin{minipage}{\linewidth}
@@ -28,3 +30,5 @@ Figure~\ref{fig:app_model2_diagnostics} illustrates the four-panel econometric d
 \textit{Note.} Four-panel diagnostic suite for Model~2 residuals ($N = 28$): Normal Q-Q plot, Residuals vs.\ Fitted, Scale-Location plot, and Cook's distance against $4/N = 0.143$ threshold.
 \end{minipage}
 \end{figure}
+
+The four diagnostic panels confirm the empirical suitability of the two-way fixed-effects specification under HC3 covariance estimation. The Normal Q-Q plot displays mild departures in the lower tail while remaining linear through the central quantiles, consistent with the formal Shapiro-Wilk test result reported in Chapter IV. The Residuals versus Fitted plot exhibits an even dispersion around the zero-residual line without systematic curvature, confirming that the linear functional form adequately captures the valuation relation. The Scale-Location plot reveals a stable vertical spread of standardized residuals across the range of fitted values, and the Cook's distance panel confirms that while five bank-years show elevated leverage, no single observation exerts undue influence that alters parameter signs.

@@ -45,8 +45,8 @@
 % in floats.tex. Not yet used by any chapter, so it changes no output.
 \usepackage{threeparttable}
 \usepackage{etoolbox}
-\AtBeginEnvironment{tabular}{\singlespacing}
-\AtBeginEnvironment{longtable}{\singlespacing}
+\AtBeginEnvironment{tabular}{\singlespacing\renewcommand{\arraystretch}{1.2}}
+\AtBeginEnvironment{longtable}{\singlespacing\renewcommand{\arraystretch}{1.2}}
 % FOM 2019 p. 20 lists quotations among the single-spaced elements.
 \AtBeginEnvironment{quote}{\singlespacing}
 \usepackage{needspace}
@@ -265,13 +265,13 @@
 % margin + 138.6 pt (caught by measurement).
 \titlecontents{table}
   [69.3pt]
-  {\normalfont\normalsize}
+  {\addvspace{5pt}\normalfont\normalsize}
   {\hspace*{-69.3pt}\makebox[69.3pt][l]{Table~\thecontentslabel}}
   {}
   {\enspace\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{figure}
   [69.3pt]
-  {\normalfont\normalsize}
+  {\addvspace{5pt}\normalfont\normalsize}
   {\hspace*{-69.3pt}\makebox[69.3pt][l]{Figure~\thecontentslabel}}
   {}
   {\enspace\titlerule*[0.5pc]{.}\contentspage}

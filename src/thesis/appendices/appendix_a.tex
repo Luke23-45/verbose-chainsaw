@@ -3,7 +3,17 @@
 
 This appendix provides the complete price audit and trading freshness verification for all 30 planned bank-year observations across the five sampled Nepalese commercial bank series from FY 2076/77 through FY 2081/82. 
 
+Figure~\ref{fig:app_coverage_map} displays the coverage of the analysis panel across bank series and fiscal years, highlighting the 28 realized observations alongside the two window-excluded bank-years (HBL and NIMB, FY 2077/78).
+
+\begin{center}
+\includegraphics[width=0.82\textwidth]{figures/A1_coverage_map.pdf}
+\captionof{figure}{Panel Data Coverage Map across Bank Series and Fiscal Years}
+\label{fig:app_coverage_map}
+\end{center}
+
 To reduce temporal mismatch and apply a consistent rule, share prices were observed on or after the nine-month reporting deadline mandated by Section 59(2) of the Banks and Financial Institutions Act, 2017 (BAFIA), operationalized at the end of Chaitra (mid-April). Table~\ref{tab:app_price_verification} compares the secondary market closing price recorded in the analysis dataset against the Last Traded Price (LTP) archived by the Merolagani aggregator.
+
+\clearpage
 
 {\small
 \setlength{\tabcolsep}{4pt}
@@ -57,6 +67,7 @@ NIMB  & FY 2079/80 & 2024-04-14 & 156.00 & 156.00 & Match$^d$ \\
 \addlinespace
 NMB   & FY 2079/80 & 2024-04-14 & 176.00 & 176.00 & Match$^d$ \\
 \midrule
+\pagebreak
 GBIME & FY 2080/81 & 2025-04-13 & 218.69 & 218.69 & Match \\
 \addlinespace
 HBL   & FY 2080/81 & 2025-04-13 & 231.07 & 231.07 & Match \\
@@ -85,12 +96,8 @@ NMB   & FY 2081/82 & 2026-04-13 & 248.40 & 248.40 & Match \\
 \textit{Note.} Dataset close and Merolagani LTP agree on 29 of 30 bank-years. $^a$NMB FY 2076/77 price: dataset (ShareSansar) recorded closing price of NPR 437.00, whereas Merolagani reported Last Traded Price (LTP) of NPR 436.00. The NPR 437.00 value was retained on the basis of ShareSansar's full daily record (open 432, high 439, low 428, close 437.00). Because ShareSansar is the dataset's primary source, this does not represent independent verification, and the official NEPSE closing price remains unverified against primary exchange floor archives. $^b$HBL and NIMB FY 2077/78 prices occurred outside the 5-day freshness window due to prolonged merger-related trading halts, and both observations were dropped and never imputed. $^c$Entity-timing transition year: audited accounts represent standalone pre-merger operations, while April 2023 prices reflect merged entities. $^d$Chaitra-end fell on Friday, 12 April 2024, and Sunday, 14 April 2024 was the first trading session. Realized clean sample $N = 28$.
 \end{minipage}
 
-Figure~\ref{fig:app_coverage_map} displays the coverage of the analysis panel across bank series and fiscal years, with the 28 realized observations and the two window-excluded bank-years (HBL and NIMB, FY 2077/78).
+\vspace{8pt}
+\subsection{Price Audit Findings and Freshness Summary}
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/A1_coverage_map.pdf}
-\caption{Panel Data Coverage Map across Bank Series and Fiscal Years}
-\label{fig:app_coverage_map}
-\end{figure}
+The price verification confirms exact alignment between the primary ShareSansar trading records and the secondary Merolagani archives across 29 of the 30 sampled bank-years. The single discrepancy of NPR 1.00 for NMB in FY 2076/77 reflects a minor intraday reporting variance, which was resolved in favor of the primary exchange closing record. Furthermore, the two excluded observations, Himalayan Bank Limited and Nepal Investment Mega Bank Limited in FY 2077/78, were verified to have had secondary market trading halted for 54 and 47 days respectively following post-merger regulatory procedures. These trading halts placed the earliest observable transactions well outside the five-day statutory freshness window, validating their exclusion to prevent temporal aggregation bias in the panel estimation.
 
