@@ -135,7 +135,7 @@ spec_inf = {
     "R9": ("R9: Excl. NMB FY2076/77",
            [("EPS", "EPS"), ("BVPS", "BVPS"), ("d_E", "$\\delta_E$"),
             ("d_B", "$\\delta_B$")]),
-    "R10": ("R10: Excl. NMB & KBL FY76",
+    "R10": ("R10: Excl. NMB \\& KBL FY76",
             [("EPS", "EPS"), ("BVPS", "BVPS"), ("d_E", "$\\delta_E$"),
              ("d_B", "$\\delta_B$")]),
 }
@@ -194,7 +194,7 @@ for label, caption, group in [
               "R5": "R5: Excl. Transition", "R6": "R6: Excl. Mismatch",
               "R7": "R7: Bonus-Adjusted", "R8": "R8: Restated EPS",
               "R9": "R9: Excl. NMB FY2076/77",
-              "R10": "R10: Excl. NMB & KBL FY76"}
+              "R10": "R10: Excl. NMB \\& KBL FY76"}
     sub_end = "\\\\*" if is_long else "\\\\"
     for k in group:
         L.append(f"\\multicolumn{{6}}{{l}}{{\\textbf{{{titles[k]}}}}} {sub_end}")
